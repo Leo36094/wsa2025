@@ -1,0 +1,62 @@
+/* media query */
+$queryLG: 1920; // PC
+$queryMD: 1334; // Mobile(landscape)
+$querySM: 750; // Mobile(portrait)
+$desktopBreakingPoint: 768; // desktop breaking point
+$container-width: 1440px;
+
+$default-color: #242424;
+
+$teko-fonts: 'Teko', sans-serif;
+$df-fonts: 'ProjectDType', 'Noto Sans TC', Roboto, Arial, 'Droid Sans', sans-serif;
+$df-fonts-curve: 'ProjectDTypeCurve';
+// for es/pt
+$df-fonts-espt: 'Noto Sans TC', Kanit, Arial, 'Droid Sans', sans-serif;
+
+$z-index-map: (
+  layer: 1,
+  dropdowns: 5,
+  topbar: 15,
+  sidePanel: 15,
+  modal: 20,
+);
+
+$topbar-bg: #1a1918;
+$store-hint-text: #d1d1d1;
+$social-name-text: #a5a5a5;
+$side-panel-text: #ffffff;
+$scroll-bar-thumb: #828282;
+$scroll-bar-track: #484848;
+
+$main-account: #cbcbcb;
+$main-sub-title-text: #fff;
+$main-participant-text: #fff;
+$main-participant-number-text: #fff;
+
+$register-step-title: #fff;
+$register-field-text: #f5f5f5;
+$register-field-placeholder: #666666;
+$register-field-bg: #000000;
+$register-field-border: #717171;
+$register-field-error-border: #d34b44;
+$register-field-error-text: #ba2929;
+$register-field-dropdown-arrow: #ffffff;
+$register-checkbox-label-text: #818181;
+$register-checkbox-link-text: #f4cf67;
+
+$milestone-reward-text: #999999;
+$milestone-target-text: #999999;
+$milestone-reward-finish-text: #c3c3c3;
+$milestone-target-finish-text: #ffffff;
+$milestone-progress-bg: #ffffff;
+$milestone-progress-finish-bg: #d6fa11;
+
+$modal-text-primary-text: #f2f2f2;
+$modal-text-secondary-text: #a5a5a5;
+$modal-text-highlight-text: #fc8a8a;
+$modal-text-link: #0ff696;
+$modal-error-code-text: #525252;
+
+$feature-description-text: #cbcbcb;
+
+$error-page-text: #ffffff;

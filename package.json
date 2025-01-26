@@ -11,15 +11,15 @@
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build",
+    "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "delploy-gh-pages": "num run build && node ./.ghpages.js"
+    "deploy-gh-pages": "yarn run build && node ./.ghpages.js"
   },
   "dependencies": {
     "pinia": "^2.3.1",
     "vue": "^3.5.13",
-    "vue-i18n": "10",
+    "vue-i18n": "9",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {

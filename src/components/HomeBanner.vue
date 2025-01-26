@@ -68,11 +68,11 @@ function switchView() {
 function manualSwitch() {
   if (slideInterval.value) clearInterval(slideInterval.value)
   switchView()
-  slideInterval.value = setInterval(switchView, 50000)
+  slideInterval.value = setInterval(switchView, 10000)
 }
 
 onMounted(() => {
-  slideInterval.value = setInterval(switchView, 50000)
+  slideInterval.value = setInterval(switchView, 10000)
 })
 </script>
 <style lang="scss" scoped>

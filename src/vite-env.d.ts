@@ -1,17 +1,16 @@
 /// <reference types="vite/client" />
+import type { DefineComponent } from 'vue'
+import type { I18n } from 'vue-i18n'
 
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue';
-  const component: DefineComponent<{}, {}, any>;
-  export default component;
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $t: (key: string) => string
+  }
 }
 
-declare module 'virtual:node-i18n' {
-  const messages: {
-    [region: string]: {
-      [key: string]: string;
-    };
-  };
-
-  export const messages;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+declare module '*.vue' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  const component: DefineComponent<{}, {}, any>;
+  export default component;
 }

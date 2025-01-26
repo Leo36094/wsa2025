@@ -1,5 +1,10 @@
 import path from 'path'
+import { fileURLToPath } from 'url'
 import ghpages from 'gh-pages'
+
+// Get the directory name
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const options = {
   branch: 'gh-pages',
@@ -14,4 +19,4 @@ const callback = (err) => {
 /**
  * This task pushes to the `master` branch of the configured `repo`.
  */
-ghpages.publish(path.resolve(__dirname, '../dist'), options, callback)
+ghpages.publish(path.resolve(__dirname, 'dist'), options, callback)

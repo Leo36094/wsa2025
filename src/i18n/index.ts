@@ -8,6 +8,7 @@ export const localeMessages = {
 }
 
 export const i18n = createI18n({
+  legacy: false, // Set legacy to false to use the Composition API
   locale: 'en',
   fallbackLocale: 'en',
   messages: localeMessages,

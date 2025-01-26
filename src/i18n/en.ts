@@ -20,6 +20,7 @@ export default {
     news_title: 'News',
     news_more: 'More',
     sponsors_title: 'Sponsors',
+    banner_desc: 'This is Description. WorldSkills Asia (WSA) is a regional organization dedicated to promoting excellence in technical and vocational education and training (TVET) across Asia. As part of the global WorldSkills movement.',
   },
   host: {
     title: 'Host',

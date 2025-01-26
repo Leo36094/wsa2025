@@ -8,6 +8,12 @@ export default {
     lang_en: 'English',
     lang_tw: 'Chinese',
   },
+  footer: {
+    address: 'Nangang Exhibition Center location map',
+    announcement_schedule: 'Announcement of Schedule',
+    registration: 'Registration method',
+    copyrights: 'Copyright © 2025 Worldskills Asia',
+  },
   home: {
     title: 'WorldSkills Asia Taipei',
     year: '2025',

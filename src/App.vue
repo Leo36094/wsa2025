@@ -6,9 +6,7 @@ import PageHeader from '@/components/PageHeader.vue'
 <template>
   <div class="wsa">
     <PageHeader />
-    <div class="container">
-      <RouterView />
-    </div>
+    <RouterView />
   </div>
 </template>
 <style lang="scss" scoped>

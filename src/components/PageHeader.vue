@@ -34,7 +34,7 @@ const currentLangs = ref('en')
 const { t, locale, setLocaleMessage } = useI18n({ useScope: 'global' })
 
 const nav = computed(() => [
-  { name: t('header.host'), path: '/' },
+  { name: t('header.host'), path: '/host' },
   { name: t('header.competition'), path: '/competition' },
   { name: t('header.skill'), path: '/skill' },
   { name: t('header.involved'), path: '/involved' },
@@ -70,10 +70,13 @@ $langs-bg: #112c36;
     max-width: $container-width;
     margin: auto;
     min-height: 0.76rem;
+    padding-left: 1.04rem;
+    padding-right: 1.06rem;
     font-size: 0.16rem;
     .logo {
       width: 1.1rem;
       height: 0.63rem;
+      @include flexCenter;
     }
     nav {
       @include flexCenter;

@@ -262,3 +262,8 @@
   left: 50%;
   top: 50%;
 }
+
+@mixin withContainer() {
+  max-width: 14.4rem;
+  margin: 0 auto;
+}

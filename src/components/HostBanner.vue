@@ -5,26 +5,24 @@
         <h1>{{ $t('host.title') }}</h1>
       </div>
       <div class="first-slide__photos">
-        <div
-          class="photo-item"
-          :style="{ backgroundImage: `url('/images/host-banner1.png')` }"
-        ></div>
-        <div
-          class="photo-item"
-          :style="{ backgroundImage: `url('/images/host-banner2.png')` }"
-        ></div>
+        <div class="photo-item" :style="{ backgroundImage: `url(${hostBanner1})` }"></div>
+        <div class="photo-item" :style="{ backgroundImage: `url(${hostBanner2})` }"></div>
       </div>
       <p v-html="$t('host.content')"></p>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import hostBanner1 from '/images/host-banner1.png'
+import hostBanner2 from '/images/host-banner2.png'
+</script>
 <style lang="scss" scoped>
 .host-banner {
   @include withContainer;
   padding-top: 0.64rem;
   margin-bottom: 4rem;
+  height: 9.5rem;
   .first-slide {
     &__title {
       text-align: center;
@@ -36,6 +34,7 @@
         font-size: 0.88rem;
         font-weight: 700;
         margin-bottom: 1rem;
+        /* animation: fadedown 0.5s ease-out; */
       }
     }
     p {
@@ -58,6 +57,16 @@
         }
       }
     }
+  }
+}
+@keyframes fadedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

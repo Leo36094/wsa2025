@@ -13,28 +13,24 @@
         <div class="banner">
           <Transition name="fade" mode="out-in">
             <div v-if="scrollNow >= 20" class="banner-img"></div>
-            <div
-              v-else
-              class="banner-img"
-              :style="{ backgroundImage: `url(/images/wsa_banner.jpg)` }"
-            ></div>
+            <div v-else class="banner-img"></div>
           </Transition>
         </div>
       </div>
     </main>
 
-    <HomeBannerTitle v-if="scrollNow < 15" class="banner__title" />
+    <HomeBannerTitle v-if="scrollNow < 5" class="banner__title" />
   </div>
 
   <div class="home-banner__slide">
     <header ref="header" class="slide-header">
-      <div class="split-titles title" data-aos="fade-down-left">
+      <div class="split-titles title">
         <span>{{ $t('home.split_title1') }}</span>
         <span>{{ $t('home.split_title2') }}</span>
         <span>{{ $t('home.split_title3') }}</span>
         <span class="year">{{ $t('home.year') }}</span>
       </div>
-      <p data-aos="fade-down-right" class="slide-desc">
+      <p data-aos="fade-down" class="slide-desc">
         {{ $t('home.banner_desc') }}
       </p>
     </header>
@@ -138,6 +134,7 @@ onUnmounted(() => {
       height: 100%;
       width: 100%;
       background-color: $main-bg;
+      background-image: url('/images/wsa_banner.jpg');
     }
     .title-container {
       @include withContainer;

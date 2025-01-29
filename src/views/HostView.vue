@@ -10,6 +10,7 @@ import HostBanner from '@/components/HostBanner.vue'
 </script>
 <style lang="scss" scoped>
 .host {
+  padding-top: 0.76rem;
   .host-currency {
     @include withContainer;
   }

@@ -11,7 +11,4 @@ import HomeBanner from '@/components/HomeBanner.vue'
 import HomeNews from '@/components/HomeNews.vue'
 import HomeSponsors from '@/components/HomeSponsors.vue'
 </script>
-<style lang="scss" scoped>
-.home {
-}
-</style>
+<style lang="scss" scoped></style>

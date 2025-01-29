@@ -13,12 +13,15 @@ onMounted(() => {
 <template>
   <div class="wsa">
     <PageHeader />
-    <RouterView />
+    <div class="container">
+      <RouterView />
+    </div>
     <PageFooter />
   </div>
 </template>
 <style lang="scss" scoped>
 .container {
+  min-height: 100svh;
   max-width: 1440px;
   margin: 0 auto;
 }

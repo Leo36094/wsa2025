@@ -68,6 +68,7 @@
   @include withContainer;
 }
 .page-footer {
+  font-size: 0.16rem;
   .icon {
     width: 0.24rem;
     height: 0.24rem;

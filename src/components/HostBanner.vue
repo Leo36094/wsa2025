@@ -28,7 +28,11 @@
   .first-slide {
     &__title {
       text-align: center;
+
       h1 {
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 14.29%, #ffffff 80.52%);
         font-size: 0.88rem;
         font-weight: 700;
         margin-bottom: 1rem;

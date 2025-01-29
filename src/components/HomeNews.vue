@@ -75,6 +75,7 @@ const twoNewsARow = Array(numsLength / 2)
       @include withContainer;
       @include flexCenter;
       justify-content: space-between;
+      padding: 0 0.4rem;
     }
     .news-item {
       margin-bottom: 0.48rem;

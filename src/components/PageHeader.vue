@@ -62,7 +62,10 @@ function changeLang(lang: LangBtn) {
 $header-bg: #07100e;
 $langs-bg: #112c36;
 .page-header {
-  background-color: $header-bg;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   .wrapper {
     display: flex;
     align-items: center;
@@ -81,8 +84,8 @@ $langs-bg: #112c36;
     nav {
       @include flexCenter;
       font-weight: bold;
-      > * {
-        margin: 0 0.16rem;
+      > a:not(:last-child) {
+        margin-right: 0.4rem;
       }
     }
     .langs {
@@ -99,8 +102,9 @@ $langs-bg: #112c36;
         background: transparent;
         border-radius: 1rem;
         padding: 0.08rem;
-        margin: 0 0.08rem;
+        color: #899ca4;
         &--active {
+          color: #fff;
           border: 1px solid #fff;
         }
       }

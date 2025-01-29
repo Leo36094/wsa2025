@@ -1,16 +1,19 @@
 @import './reset.scss';
-
+@import './fonts.scss';
 * {
   @include disableDefaultAction();
 }
-
+:root {
+  --scroll: 0;
+}
 /* setup viewport */
 html {
   @include setHTML;
-  background: #18475b;
+  background: $main-bg;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  font-family: 'Inter', Arial, Helvetica, sans-serif, serif;
   body {
     width: 100%;
     font-size: 0.2rem;
@@ -18,7 +21,7 @@ html {
   }
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.1s ease-in;
   }
 
   .fade-enter-from,

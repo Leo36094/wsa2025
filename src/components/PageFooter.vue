@@ -72,7 +72,7 @@
   .icon {
     width: 0.24rem;
     height: 0.24rem;
-    margin: 0 0.08rem;
+    margin-right: 0.08rem;
   }
   .row {
     @include flexCenter(column);

@@ -1,8 +1,8 @@
 <template>
-  <div class="host-banner">
+  <div class="competition-banner">
     <div class="first-slide">
       <div data-aos="fade-down" class="first-slide__title">
-        <h1>{{ $t('host.title') }}</h1>
+        <h1>{{ $t('competition.title') }}</h1>
       </div>
       <div class="first-slide__photos">
         <div data-aos="fade-down-right" class="photo-item" :style="{ backgroundImage: `url(${hostBanner1})` }"></div>
@@ -19,10 +19,10 @@
     <div class="host-copy">
       <div class="welcome-img"></div>
       <div class="welcome-title">
-        <h4 class="title">{{ $t('host.welcome') }}</h4>
-        <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
+        <h4 class="title">{{ $t('competition.title_tag') }}</h4>
+        <h2 class="subtitle">{{ $t('competition.title_competition') }}</h2>
       </div>
-      <p class="welcome-desc">{{ $t('host.content') }}</p>
+      <p class="welcome-desc">{{ $t('competition.content') }}</p>
     </div>
     <div class="image-row">
       <img class="image-item":src="hostBanner4" alt="banner4"></img>
@@ -42,7 +42,7 @@ import hostBanner6 from '/images/host/host-banner6.png'
 
 </script>
 <style lang="scss" scoped>
-.host-banner {
+.competition-banner {
   @include withContainer;
   max-width: 19.2rem;
   padding-top: 0.64rem;
@@ -108,6 +108,7 @@ import hostBanner6 from '/images/host/host-banner6.png'
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
+    text-align: justify;
   }
 }
 .second-slide {

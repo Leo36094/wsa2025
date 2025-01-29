@@ -5,12 +5,17 @@
         <h1>{{ $t('home.news_title') }}</h1>
       </div>
       <div class="news-list">
-        <div class="news-item" v-for="newsItem in news" :key="newsItem.id">
-          <div class="news-item__img"></div>
-          <h4 class="news-item__title">
-            {{ newsItem.title }}
-          </h4>
-          <p class="news-item__date">17 Mar 2025</p>
+        <div class="news-vertical-divider"></div>
+        <div class="news-row" v-for="rowNews in twoNewsARow">
+          <div class="news-row-container">
+            <div class="news-item" v-for="(newsItem, index) in rowNews" :key="newsItem.id">
+              <div class="news-item__img"></div>
+              <h4 class="news-item__title">
+                {{ newsItem.title }}
+              </h4>
+              <p class="news-item__date">17 Mar 2025</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="more-button">
@@ -33,13 +38,17 @@ const news = ref(
       id: index,
     })),
 )
+const numsLength = news.value.length
+const twoNewsARow = Array(numsLength / 2)
+  .fill(0)
+  .map((_, idx) => {
+    return news.value.slice(idx * 2, idx * 2 + 2)
+  })
 </script>
 <style lang="scss" scoped>
 .news {
-  .news-container {
-    @include withContainer;
-  }
   .news-title {
+    @include withContainer;
     padding-top: 1.47rem;
     padding-left: 1.1rem;
     font-size: 0.48rem;
@@ -47,21 +56,33 @@ const news = ref(
     margin-bottom: 0.45rem;
   }
   .news-list {
-    @include flexCenter;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    border: 1px solid #fff;
-    border-right: 0;
-    border-left: 0;
-    padding-top: 0.5rem;
+    border-top: 0.01rem solid #fff;
+    position: relative;
+    .news-vertical-divider {
+      width: 0.01rem;
+      height: 100%;
+      position: absolute;
+      background-color: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .news-row {
+      padding-top: 0.5rem;
+      width: 100%;
+      border-bottom: 0.01rem solid #fff;
+    }
+    .news-row-container {
+      @include withContainer;
+      @include flexCenter;
+      justify-content: space-between;
+    }
     .news-item {
       margin-bottom: 0.48rem;
       width: 6.4rem;
       &__img {
         width: 6.4rem;
         border-radius: 0.08rem;
-        height: 3.04rem;
+        height: 2.97rem;
         background-color: #586566;
         margin-bottom: 0.23rem;
       }
@@ -73,6 +94,13 @@ const news = ref(
       &__date {
         font-size: 0.16rem;
         color: #9fa7a7;
+      }
+      .divider {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 0.01rem;
+        background-color: #e0e0e0;
       }
     }
   }

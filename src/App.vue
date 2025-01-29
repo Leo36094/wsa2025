@@ -22,7 +22,6 @@ onMounted(() => {
 <style lang="scss" scoped>
 .container {
   min-height: 100svh;
-  max-width: 1440px;
   margin: 0 auto;
 }
 </style>

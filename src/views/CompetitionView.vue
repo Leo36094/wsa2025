@@ -70,6 +70,7 @@ function switchSlide() {
 </script>
 <style lang="scss" scoped>
 .competition {
+  padding-top: 0.76rem;
   .slide {
     height: 11.6rem;
   }

@@ -23,6 +23,13 @@ const router = createRouter({
       component: () => import('../views/CompetitionView.vue'),
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0, behavior: 'instant' }
+    }
+  }
 })
 
 export default router

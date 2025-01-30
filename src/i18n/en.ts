@@ -114,5 +114,15 @@ We warmly welcome participants and friends from all over the world and look forw
     location_hall2_floor3_list1: 'Social and Personal Services 7 skills',
     location_hall2_floor3_list2: 'Creative Arts and Fashion 7 skills',
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
+  },
+  skills: {
+    skill_category_title: 'Skills',
+    category_manufacturing: 'Manufacturing and Engineering Technology',
+    category_construction: 'Construction and Building Technology',
+    category_it: 'Information and Communication Technology',
+    category_logistics: 'Transportation and Logistics',
+    category_social: 'Social and Personal Services',
+    category_art: 'Creative Arts and Fashion',
+    category_juniors: 'Skills for Junior',
   }
 }

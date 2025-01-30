@@ -36,7 +36,7 @@ const { t, locale, setLocaleMessage } = useI18n({ useScope: 'global' })
 const nav = computed(() => [
   { name: t('header.host'), path: '/host' },
   { name: t('header.competition'), path: '/competition' },
-  { name: t('header.skill'), path: '/skill' },
+  { name: t('header.skill'), path: '/skills' },
   { name: t('header.involved'), path: '/involved' },
   { name: t('header.news'), path: '/news' },
 ])

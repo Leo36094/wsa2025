@@ -1,1 +1,0 @@
-import{_ as c,c as n,o as e}from"./index-CqghRRn9.js";const s={},t={class:"skills-manufacturing"};function a(r,o){return e(),n("div",t,"Manufacturing")}const _=c(s,[["render",a]]);export{_ as default};

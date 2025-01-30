@@ -1,0 +1,1 @@
+/* empty css                                                                             */import{d as o,o as s,c as t,g as c,l as n,_}from"./index-CqghRRn9.js";const a={class:"skill"},r=o({__name:"SkillsView",setup(i){return(l,p)=>{const e=n("RouterView");return s(),t("div",a,[c(e)])}}}),f=_(r,[["__scopeId","data-v-17b0f7fd"]]);export{f as default};

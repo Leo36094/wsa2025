@@ -1,0 +1,1 @@
+import{_ as c,c as n,a as s,o as t}from"./index-CqghRRn9.js";const e={},r={class:"construction"};function a(i,o){return t(),n("div",r,o[0]||(o[0]=[s("div",{class:"container"},[s("div",{class:"row"},[s("div",{class:"col"},[s("h1",null,"Under Construction")])])],-1)]))}const d=c(e,[["render",a]]);export{d as default};

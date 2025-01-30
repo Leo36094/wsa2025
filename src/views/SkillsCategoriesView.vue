@@ -5,15 +5,22 @@
         {{ $t('skills.skill_category_title') }}
       </h2>
       <div class="skill-list">
-        <SkillPanel class="skill-item" v-for="skill in skills" :key="skill" :skill-type="skill" />
+        <SkillPanel
+          class="skill-item"
+          v-for="skill in skills"
+          :key="skill"
+          :skill-type="skill"
+          @click="() => goSkillDetail(skill)"
+        />
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import SkillPanel from '@/components/SkillPanel.vue'
-
 import { SkillIconEnum } from '@/components/icons/enum'
+import { SkillsRouteEnum } from '@/router'
+import { useRouter } from 'vue-router'
 
 const skills = [
   SkillIconEnum.Manufacturing,
@@ -24,6 +31,22 @@ const skills = [
   SkillIconEnum.Art,
   SkillIconEnum.Juniors,
 ]
+
+const routeMap = {
+  [SkillIconEnum.Manufacturing]: SkillsRouteEnum.Manufacturing,
+  [SkillIconEnum.Construction]: SkillsRouteEnum.Construction,
+  [SkillIconEnum.IT]: SkillsRouteEnum.IT,
+  [SkillIconEnum.Logistics]: SkillsRouteEnum.Logistics,
+  [SkillIconEnum.Social]: SkillsRouteEnum.Social,
+  [SkillIconEnum.Art]: SkillsRouteEnum.Art,
+  [SkillIconEnum.Juniors]: SkillsRouteEnum.Juniors,
+}
+
+const router = useRouter()
+
+const goSkillDetail = (skill: SkillIconEnum) => {
+  router.push({ name: routeMap[skill] })
+}
 </script>
 <style lang="scss" scoped>
 .category {

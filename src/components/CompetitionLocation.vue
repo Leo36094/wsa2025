@@ -148,10 +148,10 @@ $pin-color: #c8e14b;
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 0.32rem;
+        font-size: 0.16rem;
         &__pin {
           margin-right: 0.08rem;
         }
-        font-size: 0.16rem;
       }
     }
     .location-row {

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-export enum SkillsEnum {
+export enum SkillsRouteEnum {
   Catrgories = 'categories',
   Manufacturing = 'manufacturing_and_engineering_technology',
   Construction = 'construction_and_building_technology',
@@ -36,47 +36,47 @@ const router = createRouter({
     {
       path: '/skills',
       name: 'skills',
-      redirect: { name: SkillsEnum.Catrgories },
+      redirect: { name: SkillsRouteEnum.Catrgories },
       component: () => import('../views/SkillsView.vue'),
       children: [
         {
           path: 'categories',
-          name: SkillsEnum.Catrgories,
+          name: SkillsRouteEnum.Catrgories,
           component: () => import('../views/SkillsCategoriesView.vue'),
         },
         {
           path: 'manufacturing_and_engineering_technology',
-          name: SkillsEnum.Manufacturing,
+          name: SkillsRouteEnum.Manufacturing,
           component: () => import('../views/SkillsManufacturingView.vue'),
         },
         {
           path: 'construction_and_building_technology',
-          name: SkillsEnum.Construction,
+          name: SkillsRouteEnum.Construction,
           component: () => import('../views/SkillsConstructionView.vue'),
         },
         {
           path: 'information_technology',
-          name: SkillsEnum.IT,
+          name: SkillsRouteEnum.IT,
           component: () => import('../views/SkillsInformationView.vue'),
         },
         {
           path: 'logistics',
-          name: SkillsEnum.Logistics,
+          name: SkillsRouteEnum.Logistics,
           component: () => import('../views/SkillsLogisticView.vue'),
         },
         {
           path: 'social_and_personal_services',
-          name: SkillsEnum.Social,
+          name: SkillsRouteEnum.Social,
           component: () => import('../views/SkillsSocialView.vue'),
         },
         {
           path: 'arts',
-          name: SkillsEnum.Art,
+          name: SkillsRouteEnum.Art,
           component: () => import('../views/SkillsArtView.vue'),
         },
         {
           path: 'juniors',
-          name: SkillsEnum.Juniors,
+          name: SkillsRouteEnum.Juniors,
           component: () => import('../views/SkillsJuniorsView.vue'),
         },
 

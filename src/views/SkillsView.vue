@@ -3,9 +3,7 @@
     <RouterView />
   </div>
 </template>
-<script lang="ts" setup>
-import SkillsCategoryView from './SkillsCategoriesView.vue'
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped>
 .skill {

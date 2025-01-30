@@ -124,5 +124,32 @@ We warmly welcome participants and friends from all over the world and look forw
     category_social: 'Social and Personal Services',
     category_art: 'Creative Arts and Fashion',
     category_juniors: 'Skills for Junior',
+    manufacturing_Mechatronics: 'Mechatronics',
+    manufacturing_Mechatronics_copy: 'Taipei is the center of Taiwan’s finance, economy, politics, technology, education, and culture. It hosts numerous multinational corporations and international financial institutions and serves as the location for various consulates and trade organizations. Taipei blends the vibrancy of a modern metropolis with rich historical culture, creating a city full of energy and diversity. One of Taipei’s landmarks is Taipei 101, a skyscraper that was once the tallest building in the world. The city is filled with modern shopping centers, high-tech industrial zones, and various creative industries, while also preserving many historic cultural areas, such as Dadaocheng and Bangka, allowing people to experience Taiwan’s history and traditions.',
+    manufacturing_MechanicalEngineeringCAD: 'Mechanical Engineering CAD',
+
+    // TODO update copy below
+    manufacturing_MechanicalEngineeringCAD_copy: '...',
+    manufacturing_CNCTurning: 'CNCTurning',
+    manufacturing_CNCTurning_copy: '...',
+    manufacturing_CNCMilling: 'CNCMilling',
+    manufacturing_CNCMilling_copy: '...',
+    manufacturing_Welding: 'Welding',
+    manufacturing_Welding_copy: '...',
+    manufacturing_Electronics: 'Electronics',
+    manufacturing_Electronics_copy: '...',
+    manufacturing_IndustrialControl: 'Industrial Control',
+    manufacturing_IndustrialControl_copy: '...',
+    manufacturing_AutonomousMobileRobotics: 'Autonomous Mobile Robotics',
+    manufacturing_AutonomousMobileRobotics_copy: '...',
+    manufacturing_PlasticDieEngineering: 'Plastic Die Engineering',
+    manufacturing_PlasticDieEngineering_copy: '...',
+    manufacturing_PrototypeModelling: 'Prototype Modelling',
+    manufacturing_PrototypeModelling_copy: '...',
+    manufacturing_IndustrialDesign: 'Industrial Design Technology',
+    manufacturing_IndustrialDesign_copy: '...',
+    manufacturing_RobotSystemsIntegration: 'Robot Systems Integration',
+    manufacturing_RobotSystemsIntegration_copy: '...',
   }
 }
+

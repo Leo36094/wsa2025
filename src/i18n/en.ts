@@ -125,31 +125,42 @@ We warmly welcome participants and friends from all over the world and look forw
     category_art: 'Creative Arts and Fashion',
     category_juniors: 'Skills for Junior',
     manufacturing_Mechatronics: 'Mechatronics',
-    manufacturing_Mechatronics_copy: 'Taipei is the center of Taiwan’s finance, economy, politics, technology, education, and culture. It hosts numerous multinational corporations and international financial institutions and serves as the location for various consulates and trade organizations. Taipei blends the vibrancy of a modern metropolis with rich historical culture, creating a city full of energy and diversity. One of Taipei’s landmarks is Taipei 101, a skyscraper that was once the tallest building in the world. The city is filled with modern shopping centers, high-tech industrial zones, and various creative industries, while also preserving many historic cultural areas, such as Dadaocheng and Bangka, allowing people to experience Taiwan’s history and traditions.',
-    manufacturing_MechanicalEngineeringCAD: 'Mechanical Engineering CAD',
-
+    manufacturing_Mechatronics_copy: `Mechatronics, often referred to as "automation" in the industry, forms the foundation of "smart production systems" and "Industry 4.0". Mechatronics integrates expertise in mechanics, electrics, communications, and informatics, etc. It represents a fusion of modern technology and traditional craftsmanship, with applications spanning across all industries.`,
     // TODO update copy below
-    manufacturing_MechanicalEngineeringCAD_copy: '...',
+    manufacturing_MechanicalEngineeringCAD: 'Mechanical Engineering CAD',
+    manufacturing_MechanicalEngineeringCAD_copy: `Mechanical engineering CAD involves utilizing CAD software to create 2D or 3D technical and engineering drawings essential for the manufacturing process. These drawings play a pivotal role as the foundation for R&D, manufacturing, quality control and sales. They serve as a universal language across various industries.`,
     manufacturing_CNCTurning: 'CNCTurning',
-    manufacturing_CNCTurning_copy: '...',
+    manufacturing_CNCTurning_copy: `The CNC Turning machinist operates a computer to control the lathe's tool movements, shaping the part to exact specifications. CNC turning harnesses advanced machines and computer systems for analysis, simulation, design, visualization, and supporting manufacturing processes. It leverages computer numerical data to efficiently develop production plans and sequence, and define machine tools and operating parameters. CNC turning technology significantly enhances industrial productivity and ensures high-quality output`,
     manufacturing_CNCMilling: 'CNCMilling',
-    manufacturing_CNCMilling_copy: '...',
+    manufacturing_CNCMilling_copy: `CNC milling machines are pivotal machine tools used for shaping metal and other solid materials. The CNC milling machinist engages in a series of crucial tasks, including process planning, selecting appropriate cutting tools, generating programs using CAD/CAM systems, and operating both conventional and CNC milling machines.`,
     manufacturing_Welding: 'Welding',
-    manufacturing_Welding_copy: '...',
+    manufacturing_Welding_copy: `aerospace, and semiconductor industries. Additionally, welders play a pivotal role in advancing independent national defense capabilities and in the construction of offshore wind power infrastructurWelding stands as a cornerstone technology across numerous industries, facilitating the joining of materials through heating or fusion at their interface. Often dubbed the ""tailors of metallic materials,"" welders possess the expertise to work with a wide array of metallic materials.
+
+<br><br>Their skills find application in diverse sectors such as mechanical, electromechanical, civil, chemical, and marine engineering, as well as in transportation, construction, etc.`,
     manufacturing_Electronics: 'Electronics',
-    manufacturing_Electronics_copy: '...',
+    manufacturing_Electronics_copy: `Electronics technicians use hand tools and instruments to facilitate the design, assembly, adjustment, testing, measurement, and diagnosis of electronic circuits and equipment. The scope of electronics skills encompasses sensors, analog and digital circuits, microcontrollers, microelectronics, fundamental principles of electricity, electronic components and instruments, as well as motor control.`,
     manufacturing_IndustrialControl: 'Industrial Control',
-    manufacturing_IndustrialControl_copy: '...',
+    manufacturing_IndustrialControl_copy: `The competition encompasses tasks such as electrical installations, automation installations and communication systems. The industrial control practitioners require a wide range of technical skills and capabilities, such as making of the automation control panels/centers, field installation (electrical and automation), programming, fault-finding, etc. The focus is particularly on constructing the relevant component assembly and process control functionalities of production facilities in the field of industrial automation, integrated through information and communication networks.`,
     manufacturing_AutonomousMobileRobotics: 'Autonomous Mobile Robotics',
-    manufacturing_AutonomousMobileRobotics_copy: '...',
+    manufacturing_AutonomousMobileRobotics_copy: `Autonomous Mobile Robotics is a skill that integrates information technology, mechatronics, and mechanical engineering in real-time. The competition aims to foster talents in AI and intelligent automation technology. It is a team skill competition with 2 Competitors per team. Competitors are tasked with various responsibilities, including robot design, assembly, programming, troubleshooting, maintenance, performance evaluation, and commissioning.`,
     manufacturing_PlasticDieEngineering: 'Plastic Die Engineering',
-    manufacturing_PlasticDieEngineering_copy: '...',
+    manufacturing_PlasticDieEngineering_copy: `Plastic Die engineering is the mass production of plastic products of high quality at low cost. It exerts a significant influence on a nation's industrial competitiveness, particularly vital in industries ranging from manufacturing to home appliances and electronics. It's a profession that requires a diverse range of skills. It involves a blend of the design concepts of plastic products and moulds, computer-aided drawing, operation and processing of computer numerical control machines, as well as tasks like polishing, assembly and adjusting components, try out of moulds, and automated production.`,
     manufacturing_PrototypeModelling: 'Prototype Modelling',
-    manufacturing_PrototypeModelling_copy: '...',
+    manufacturing_PrototypeModelling_copy: `The prototype modelling practitioner is involved with the design, creation, testing, and modification of prototypes. Prototypes play a crucial role in the product design process, enabling engineers and designers to explore design variations, validate theories, and assess performance before mass production begins. Prototyping engineering technicians must possess a range of skills including 2D and 3D visualization, CAD drafting, traditional mechanical machining, CAM machining, as well as design creation of appearance and functionality by hand tools and machines, and spray painting and finishing`,
     manufacturing_IndustrialDesign: 'Industrial Design Technology',
-    manufacturing_IndustrialDesign_copy: '...',
+    manufacturing_IndustrialDesign_copy: `According to WorldSkills Occupation Standards, the skilled industrial design technicians should possess the following skills, covering all steps in the process of creating products for mass consumption:
+<br><br>
+1. Market research and idea generation: Understand their organization’s brand, market position, product range, business strategies, and plans.<br><br>
+2. Design process: Generate and develop design ideas based on specifications. Assess the feasibility of design ideas in terms of safety, functionality, serviceability, and budget.<br><br>
+3. Drawing, illustration, and graphics: Visualize design ideas through sketches, detailed drawings, illustrations, or blueprints. Utilize CAD software (Fusion 360 as required by WorldSkills Competition) to produce 2D and 3D drawings aligned with engineering and manufacturing requirements. Operate 3D printers and fabricate models or samples.<br><br>
+4. Material science and engineering: Apply engineering science, technology, production procedures, and materials knowledge practically in design proposals`,
     manufacturing_RobotSystemsIntegration: 'Robot Systems Integration',
-    manufacturing_RobotSystemsIntegration_copy: '...',
+    manufacturing_RobotSystemsIntegration_copy: `The competition assumes Competitors to be robot system integrators, capable of:
+<br><br>
+1. Conducting installation, programming, adjustment, and operation of robotic arms.<br><br>
+2. Integrating arms and peripherals according to industrial standards to accomplish designated tasks and accurately simulate them.<br><br>
+3. Developing Human-Machine-Interface (HMI) applications.<br><br>
+4. Writing operational and maintenance manuals.`,
   }
 }
 

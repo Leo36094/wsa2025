@@ -19,7 +19,7 @@
               <IconManufacturing :name="displayIcon" />
             </div>
             <h2 class="title">{{ selectedSkill.label }}</h2>
-            <p class="copy">{{ copyAndImages.copy }}</p>
+            <p class="copy" v-html="copyAndImages.copy"></p>
           </div>
           <div class="gallery-image">
             <div

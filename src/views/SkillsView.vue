@@ -8,6 +8,11 @@
 <style lang="scss" scoped>
 .skill {
   padding-top: 0.76rem;
-  min-height: 100vh;
+  /* min-height: 100svh; */
+  display: flex;
+  flex-direction: column;
+  > * {
+    align-self: stretch;
+  }
 }
 </style>

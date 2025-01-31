@@ -81,6 +81,8 @@ function onTabClick(skill: TSkillTab) {
 .skills-manufacturing {
   padding-top: 0.76rem;
   .skills-manufacturing-container {
+    background: linear-gradient(180deg, #18475b 0%, #180161 89.74%);
+    min-height: 100svh;
     .skills-manufacturing-title {
       @include withContainer;
       font-size: 0.48rem;
@@ -89,8 +91,6 @@ function onTabClick(skill: TSkillTab) {
       margin-bottom: 0.4rem;
     }
     .skill-manufacturing-gallery {
-      background: linear-gradient(180deg, #18475b 0%, #180161 89.74%);
-
       .gallery-container {
         display: flex;
         align-items: center;

@@ -4,7 +4,7 @@
       <h2 class="category-title">
         {{ $t('skills.skill_category_title') }}
       </h2>
-      <div class="skill-list">
+      <div class="skill-list" data-aos="fade-down">
         <SkillPanel
           class="skill-item"
           v-for="skill in skills"

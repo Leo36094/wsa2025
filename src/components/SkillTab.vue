@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-tab">
+  <div class="skill-tab" data-aos="fade-in">
     <div class="skill-tab-container">
       <div class="skill-row" v-for="(skillRow, idx) in props.skillList" :key="idx">
         <div

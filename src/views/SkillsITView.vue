@@ -1,27 +1,27 @@
 <template>
   <div class="skills-manufacturing">
     <div class="skills-manufacturing-container">
-      <h2 class="skills-manufacturing-title">
+      <h2 class="skills-manufacturing-title" data-aos="fade-down">
         {{ $t('skills.category_it') }}
       </h2>
       <SkillTab :skill-list="skillListCols" :selected-skill="selectedSkill" @click="onTabClick" />
       <div class="skill-manufacturing-gallery">
         <div class="gallery-container">
-          <div class="gallery-image">
+          <div class="gallery-image" data-aos="fade-down">
             <div
               class="image-item"
               v-for="img in copyAndImages.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
-          <div class="gallery-copy">
+          <div class="gallery-copy" data-aos="fade-down">
             <div class="icon-button">
               <IconIT :name="displayIcon" />
             </div>
             <h2 class="title">{{ selectedSkill.label }}</h2>
             <p class="copy" v-html="copyAndImages.copy"></p>
           </div>
-          <div class="gallery-image">
+          <div class="gallery-image" data-aos="fade-down">
             <div
               class="image-item"
               v-for="img in copyAndImages.images"

@@ -7,21 +7,21 @@
       <SkillTab :skill-list="skillListCols" :selected-skill="selectedSkill" @click="onTabClick" />
       <div class="skill-manufacturing-gallery">
         <div class="gallery-container">
-          <div class="gallery-image">
+          <div class="gallery-image" data-aos="fade-down">
             <div
               class="image-item"
               v-for="img in copyText.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
-          <div class="gallery-copy">
+          <div class="gallery-copy" data-aos="fade-down">
             <div class="icon-button">
               <IconManufacturing :name="displayIcon" />
             </div>
             <h2 class="title">{{ copyText.title }}</h2>
             <p class="copy" v-html="copyText.copy"></p>
           </div>
-          <div class="gallery-image">
+          <div class="gallery-image" data-aos="fade-down">
             <div
               class="image-item"
               v-for="img in copyText.images"

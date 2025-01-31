@@ -23,3 +23,15 @@ export enum ManufacturingIconEnum {
   IndustrialDesign = 'Industrial Design Technology',
   RobotSystemsIntegration = 'Robot Systems Integration',
 }
+
+export enum ConstructionIconEnum {
+  WallAndFloorTiling = 'Wall and Floor Tiling',
+  ElectricalInstallation = 'Electrical Installation',
+  Bricklaying = 'Bricklaying',
+  PlasteringAndDrywall = 'Plastering and Drywall Systems',
+  PaintingAndDecorating = 'Painting and Decorating',
+  Cabinetmaking = 'Cabinetmaking',
+  Joinery = 'Joinery',
+  RefrigerationAndAirConditioning = 'Refrigeration and Air Conditioning',
+  DigitalConstruction = 'Digital Construction',
+}

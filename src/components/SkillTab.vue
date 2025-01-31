@@ -67,6 +67,9 @@ function handleClick(skill: TSkillTab) {
       &:not(:last-child) {
         border-right: 1px solid #ffffff1a;
       }
+      &:not(:nth-child(4n)) {
+        border-right: 1px solid #ffffff1a;
+      }
       &:hover,
       &:focus {
         background: #ffffff1a;

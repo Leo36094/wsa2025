@@ -35,3 +35,9 @@ export enum ConstructionIconEnum {
   RefrigerationAndAirConditioning = 'Refrigeration and Air Conditioning',
   DigitalConstruction = 'Digital Construction',
 }
+
+export enum LogisticsIconEnum {
+  AutobodyRepair = 'Autobody Repair',
+  AutomobileTechnology = 'Automobile Technology',
+  CarPainting = 'Car Painting',
+}

@@ -65,6 +65,11 @@ const goSkillDetail = (skill: SkillIconEnum) => {
       align-items: center;
       flex-wrap: wrap;
       .skill-item {
+        cursor: pointer;
+        &:hover {
+          filter: brightness(1.5);
+          transition: all 0.3s linear;
+        }
         &:nth-child(2n) {
           margin-left: 0.16rem;
         }

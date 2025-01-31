@@ -57,7 +57,7 @@ const router = createRouter({
         {
           path: 'information_technology',
           name: SkillsRouteEnum.IT,
-          component: () => import('../views/SkillsInformationView.vue'),
+          component: () => import('../views/SkillsITView.vue'),
         },
         {
           path: 'logistics',

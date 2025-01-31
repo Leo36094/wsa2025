@@ -10,7 +10,7 @@
           <div class="gallery-image">
             <div
               class="image-item"
-              v-for="img in copyAndImages.images"
+              v-for="img in copyText.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
@@ -18,13 +18,13 @@
             <div class="icon-button">
               <IconLogistics :name="displayIcon" />
             </div>
-            <h2 class="title">{{ selectedSkill.label }}</h2>
-            <p class="copy" v-html="copyAndImages.copy"></p>
+            <h2 class="title">{{ copyText.title }}</h2>
+            <p class="copy" v-html="copyText.copy"></p>
           </div>
           <div class="gallery-image">
             <div
               class="image-item"
-              v-for="img in copyAndImages.images"
+              v-for="img in copyText.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
@@ -44,31 +44,33 @@ import IconLogistics from '@/components/icons/IconLogistics.vue'
 const COLS = 4
 const { t } = useI18n()
 
-const skillI18n = Object.entries(LogisticsIconEnum).reduce(
-  (acc: Record<string, string>, [key, value]) => {
+const skillI18n = computed(() =>
+  Object.entries(LogisticsIconEnum).reduce((acc: Record<string, string>, [key, value]) => {
     acc[value] = t(`skills.logistics_${key}`)
     return acc
-  },
-  {},
+  }, {}),
 )
-const skillList = Object.entries(LogisticsIconEnum).map(([key, value]) => ({
-  label: skillI18n[value],
-  icon: value,
-  id: key,
-}))
+const skillList = computed(() =>
+  Object.entries(LogisticsIconEnum).map(([key, value]) => ({
+    label: skillI18n.value[value],
+    icon: value,
+    id: key,
+  })),
+)
 
 const skillListCols = computed(() => {
-  const rows = Math.ceil(skillList.length / COLS)
-  return Array.from({ length: rows }, (_, i) => skillList.slice(i * COLS, (i + 1) * COLS))
+  const rows = Math.ceil(skillList.value.length / COLS)
+  return Array.from({ length: rows }, (_, i) => skillList.value.slice(i * COLS, (i + 1) * COLS))
 })
 
 const selectedSkill = ref<TSkillTab>(skillListCols.value[0][0])
 const displayIcon = computed(() => selectedSkill.value.icon as LogisticsIconEnum)
 
-const copyAndImages = computed(() => {
+const copyText = computed(() => {
   const copy = t(`skills.logistics_${selectedSkill.value.id}_copy`)
+  const title = t(`skills.logistics_${selectedSkill.value.id}`)
   const images = Array.from({ length: 3 }, (_, i) => 'https://fakeimg.pl/443x250/')
-  return { copy, images }
+  return { copy, images, title }
 })
 
 function onTabClick(skill: TSkillTab) {

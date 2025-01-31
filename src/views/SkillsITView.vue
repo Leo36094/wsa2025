@@ -2,7 +2,7 @@
   <div class="skills-manufacturing">
     <div class="skills-manufacturing-container">
       <h2 class="skills-manufacturing-title">
-        {{ $t('skills.category_manufacturing') }}
+        {{ $t('skills.category_it') }}
       </h2>
       <SkillTab :skill-list="skillListCols" :selected-skill="selectedSkill" @click="onTabClick" />
       <div class="skill-manufacturing-gallery">
@@ -10,21 +10,21 @@
           <div class="gallery-image">
             <div
               class="image-item"
-              v-for="img in copyText.images"
+              v-for="img in copyAndImages.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
           <div class="gallery-copy">
             <div class="icon-button">
-              <IconManufacturing :name="displayIcon" />
+              <IconIT :name="displayIcon" />
             </div>
-            <h2 class="title">{{ copyText.title }}</h2>
-            <p class="copy" v-html="copyText.copy"></p>
+            <h2 class="title">{{ selectedSkill.label }}</h2>
+            <p class="copy" v-html="copyAndImages.copy"></p>
           </div>
           <div class="gallery-image">
             <div
               class="image-item"
-              v-for="img in copyText.images"
+              v-for="img in copyAndImages.images"
               :style="{ backgroundImage: `url(${img})` }"
             ></div>
           </div>
@@ -38,20 +38,20 @@ import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import SkillTab from '@/components/SkillTab.vue'
 import type { TSkillTab } from '@/types/skills'
-import { ManufacturingIconEnum } from '@/components/icons/enum'
-import IconManufacturing from '@/components/icons/IconManufacturing.vue'
+import { ITIconEnum } from '@/components/icons/enum'
+import IconIT from '@/components/icons/IconIT.vue'
 
 const COLS = 4
 const { t } = useI18n()
 
 const skillI18n = computed(() =>
-  Object.entries(ManufacturingIconEnum).reduce((acc: Record<string, string>, [key, value]) => {
-    acc[value] = t(`skills.manufacturing_${key}`)
+  Object.entries(ITIconEnum).reduce((acc: Record<string, string>, [key, value]) => {
+    acc[value] = t(`skills.it_${key}`)
     return acc
   }, {}),
 )
 const skillList = computed(() =>
-  Object.entries(ManufacturingIconEnum).map(([key, value]) => ({
+  Object.entries(ITIconEnum).map(([key, value]) => ({
     label: skillI18n.value[value],
     icon: value,
     id: key,
@@ -64,13 +64,12 @@ const skillListCols = computed(() => {
 })
 
 const selectedSkill = ref<TSkillTab>(skillListCols.value[0][0])
-const displayIcon = computed(() => selectedSkill.value.icon as ManufacturingIconEnum)
+const displayIcon = computed(() => selectedSkill.value.icon as ITIconEnum)
 
-const copyText = computed(() => {
-  const copy = t(`skills.manufacturing_${selectedSkill.value.id}_copy`)
-  const title = t(`skills.manufacturing_${selectedSkill.value.id}`)
+const copyAndImages = computed(() => {
+  const copy = t(`skills.it_${selectedSkill.value.id}_copy`)
   const images = Array.from({ length: 3 }, (_, i) => 'https://fakeimg.pl/443x250/')
-  return { copy, images, title }
+  return { copy, images }
 })
 
 function onTabClick(skill: TSkillTab) {

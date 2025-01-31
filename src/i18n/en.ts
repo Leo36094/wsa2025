@@ -161,6 +161,41 @@ We warmly welcome participants and friends from all over the world and look forw
 2. Integrating arms and peripherals according to industrial standards to accomplish designated tasks and accurately simulate them.<br><br>
 3. Developing Human-Machine-Interface (HMI) applications.<br><br>
 4. Writing operational and maintenance manuals.`,
+    // IT
+    it_InformationNetworkCabling: 'Information Network Cabling',
+    it_InformationNetworkCabling_copy: `Information Network Cabling is a crucial element in advancing smart cities. With the rapid expansion of the ICT (Information and Communications Technology) sector, in addition to the development of hardware and software solutions that complies with both domestic and international standards, the establishment and planning of Information Network Cabling are even more critical. Technologies such as FTTx-enabled IoT (Internet of Things) and AIoT are also pivotal areas for future development.`,
+    it_MobileApplicationDevelopment: 'Mobile Applications Development',
+    it_MobileApplicationDevelopment_copy: `Based on the Technical Description of the WorldSkills Competition, the Skill encompasses the techniques and tasks that includes:
+<br><br>
+Work organization and management: Organizing and maintaining a safe and efficient workspace; meeting or exceeding client satisfaction through self-awareness, expectation management, and personal efficiency and effectiveness.
+Communication and interpersonal skills required to fulfill project requirements: Ability to gather, clarify, and confirm client requirements, as well as discuss time, costs, and fees with clients to achieve mutual acceptance.
+Initial planning, design, and testing framework: Utilizing UI application specifications for iOS or Android systems; Using UI design software; planning test cases and design specifications for writing test reports.`,
+    it_SoftwareDevelopment: 'IT Software Solutions for Business',
+    it_SoftwareDevelopment_copy: `Software Applications Development often work as part of a team of software professionals responsible for the requirement specification, writing algorithms, system analysis and design, construction, testing, training, and implementation, as well as maintenance of a business software system.
+<br><br>
+The design deliverables include project design presentations, system analysis reports, databases, business application softwares, websites, digital dashboards, Web APIs, mobile apps, etc.`,
+    it_WebDevelopment: 'Web Technologies',
+    it_WebDevelopment_copy: `The Skill primarily involves using programming software, art editing software, animation software and website design software to design both static and dynamic web pages. On the server side, designers employ suitable server language to integrate with database, dynamically generate markup languages, and transmit various forms of information - such as text, images, animation, and video - to client browsers.`,
+    it_ITNetworkSystems: 'IT Network Systems Administration',
+    it_ITNetworkSystems_copy: `IT Network Systems Administration encompasses a range of skills vital for supporting organizations in establishing system platforms, network frameworks, and storage services. These foundational elements are then extended to accommodate the infrastructure requirements of emerging technologies such as cloud computing, AI, and blockchain applications. Key responsibilities of IT Network Systems Administrators include:
+    <br><br>
+    1. Managing network systems and configuring services<br>
+    2. Setting up and maintaining routing and switching networks<br>
+    3. Ensuring system and network security<br>
+    4. Integrating services across multiple platforms<br>
+    5. Monitoring networks and troubleshooting`,
+    it_CloudComputing: 'Cloud Computing',
+    it_CloudComputing_copy: `Cloud computing is revolutionizing the way businesses operate today. It's not just an extension of the data center; it's a transformative force that leverages shared software and hardware resources over the ubiquitous internet. Cloud computing empowers businesses with flexible, efficient, and innovative computing services tailored to their specific needs. Businesses only pay for what they use, eliminating the need for time-consuming and expensive infrastructure investments and maintenance manpower.
+<br><br>
+Skilled Systems Administrators aren't just adept in specific services. They can dynamically utilize resources on demand, rather than waiting for allocations from other departments. This adaptability enables them to handle the ever-changing world of cloud services and respond well to changing market demands and challenges.`,
+    it_CyberSecurity: 'Cyber Security',
+    it_CyberSecurity_copy: `"Cybersecurity aims to protect systems and users from both intentional and unintentional breaches to the security of data and entire systems. It also works to prevent hackers from accessing and/or stealing sensitive information and data. It encompasses the following aspects:
+<br><br>
+1. Enhancing computer and network security systems.<br>
+2. Collecting and analyzing intelligence to identify network abnormalities.<br>
+3. Conducting investigations and digital forensics in response to information security incidents.<br>
+4. Keeping up with the latest methods attackers use to infiltrate computer systems."`,
+
     // Construction
     construction_WallAndFloorTiling: 'Wall and Floor Tiling',
     construction_WallAndFloorTiling_copy: `The work of tilers includes the laying of tiles of ceramics, mosaic, and natural stone on walls, floors, and staircases in houses, commercial, industrial, and public buildings, churches, swimming pools, outside installations and façades to provide protective, and decorative finishes. It also includes the construction of small walls and steps from bricks or blocks.`,
@@ -190,6 +225,46 @@ The skilled painter and decorator offers a range of services, from interpreting 
     logistics_AutomobileTechnology_copy: `Automobile technology encompasses a diverse range of skills, spanning from mechanical operations to electrical control systems. Competitors are required to possess knowledge of automobile principles and be proficient in interpreting and extracting technical data and instructions. They must demonstrate abilities in disassembly, assembly, measurement, inspection, maintenance, repair, replacement, troubleshooting, and diagnosis. Additionally, Competitors are expected to adhere to all occupational safety regulations and codes of ethics and conduct.`,
     logistics_CarPainting: 'Car Painting',
     logistics_CarPainting_copy: `Car painting requires a set of professional skills, including work organization and management, communication, paint selection and application, color assessment and matching, as well as expertise in repairing minor damages on painted surfaces. They should be adept in paint preparation, color evaluation and adjustment, and preparing panels or vehicles for painting. They operate in various work environments, ranging from an autobody repair shop to an aircraft hangar, dependent upon what vehicle or transport system they are painting.`,
+
+    // Social
+    social_HairDressing: 'Hairdressing',
+    social_HairDressing_copy: `The trend in the competition is leaning towards hands-on practicality, requiring Competitors to demonstrate their on-site operational skills. The Test Project consists of 7 modules, all directly tied to hands-on practice, which tasks including men's and women's cutting, perming, coloring, and styling are released just before the competition starts. Competitors must replicate the styles 100% accurately based on provided pictures. Competitors demonstrate their professional hairdressing skills throughout the competition, while adhering to international occupational standards, refraining from making unusual or eccentric hairstyling designs.`,
+    social_BeautyTherapy: 'Beauty Therapy',
+    social_BeautyTherapy_copy: `Beauty therapy encompasses theoretical subjects such as physiology of the face, body, hands, feet and nails. Its practical skills include massage, hair removal, eyebrow and eyelash treatments, electrical instrument assistance, and hands and feet care. Additionally, beauty therapists should master make-up products and techniques for both face and body, incorporating artistic hand-drawing. They tailor different themes and aesthetics according to customer preferences and commercial demands.`,
+    social_Cooking: 'Cooking',
+    social_Cooking_copy: `Competitors must possess proficient skills in basic and international culinary techniques. They are required to have advanced skills in menu compilation and a good understanding of English and French culinary terminology. Moreover, Competitors must demonstrate the ability to create French pastries and bakery products in addition to cooking.`,
+    social_RestaurantService: 'Restaurant Service',
+    social_RestaurantService_copy: `A good restaurant is not just about serving delicious and hygienic food; it's about making customers feel the warmth of home and hospitality. Excellent communication and customer care skills are universal attributes of the outstanding practitioners. Professional service processes and personalized treatment ensure each customer feels satisfied, esteemed and valued, thus fostering customer loyalty and bolstering business value and growth.`,
+    social_HealthCare: 'Health and Social Care',
+    social_HealthCare_copy: `The health and social care practitioners are required to have a wide range of skills, including the knowledge relating to illnesses and their treatments, the ability to understand, empathize and work with clients, communication and interpersonal skills, problem solving, innovation and creativity, etc. They also need to strictly adhere to ethical regulations, and respect confidentiality and privacy. Skilled practitioners can offer a range of support to clients through assessing needs and developing care plans to address their holistic well-being`,
+
+    // Art
+    art_Floristry: 'Floristry',
+    art_Floristry_copy: `Floristry refers to the skill that florists use their expertise and knowledge of cut flowers, plants, botanical materials and accessories to produce floral installations and decorations for various spaces in everyday life, events and celebrations. The skilled florists are innovative, creative and able to demonstrate artistic and design knowledge that incorporates aesthetics and practicalities.`,
+    art_FashionTechnology: 'Fashion Technology',
+    art_FashionTechnology_copy: `To adapt to global trends, the skill competition of Fashion Technology has evolved from solely focusing on techniques to encompass a greater diversity of skills, including design, patternmaking, draping, and construction. The competition aims to nurture advanced fashion technology talents capable of mastering both design and construction skills.`,
+    art_GraphicDesignTechnology: 'Graphic Design Technology',
+    art_GraphicDesignTechnology_copy: `Graphic Design Technology encompasses a wide array of skills and disciplines involved in creating graphic designs and outputs, including creative design, operating computer-aided design software for images and layouts, as well as familiarity with computer peripheral equipment. Specialists in this field also need to understand printing principles, practices, and production techniques before finalizing designs for printing. Competitors are tasked with completing the Test Project by effectively and creatively expressing visual communication designs.`,
+    art_GameArt: 'Game Design',
+    art_GameArt_copy: `3D Digital Game Artists interpret a designer’s vision and, using a blend of creativity, technical expertise, and specialized skills, fulfill the brief to meet client expectations. Their skill set encompasses various areas including concept art for 3D characters, 3D modeling and UV unwrapping, PBR texturing, sculpting, rigging, animation, as well as exporting 3D characters to a game engine.`,
+
+    // Juniors
+    juniors_Electronics: 'Electronics for Junior',
+    juniors_Electronics_copy: `The Competition aims to cultivate students' understanding and skills in electronic circuit design. Starting learning from basic electronic components and progressing to explore microcomputer control, students are capable of creating various simple control circuits such as news tickers, remote controllers, digital clocks, and motor controls through hands-on practice to solidify their skills comprehension.`,
+    juniors_AutonomousMobileRobotics: 'Autonomous Mobile Robotics for Junior',
+    juniors_AutonomousMobileRobotics_copy: `Autonomous Mobile Robotics is the skill that integrates mechanical, electronic, electrical, information, and mechatronics automation technology. The competition aims to nurture talents in AI and automation technology. It is a team skill competition with two Competitors per team. Competitors are tasked with various assignments, including robot design, assembly, programming, troubleshooting, maintenance, performance evaluation, and commissioning.`,
+    juniors_ElectricalInstallation: 'Electrical Installations for Junior',
+    juniors_ElectricalInstallation_copy: `The skills in electrical installations encompass a range of indoor electrical construction techniques. Electricians are involved in diverse projects spanning domestic, educational, healthcare, commercial, and industrial projects. The tasks include electrical installation, circuit design, plumbing, piping, wiring, circuit checking, parameter setting, programming, testing, and commissioning.`,
+    juniors_PaintingAndDecorating: 'Painting and Decorating for Junior',
+    juniors_PaintingAndDecorating_copy: `With professional foundational painting skills, innovative techniques, and aesthetic creativity, a painter and decorator designs unique works of art to blend into the products and construction, and to create visual comfort and psychological satisfaction and then to improve life quality. A skilled painter and decorator provides a range of services, from interpreting client requirements to considering environmental sustainability in material choices and designs.They are not just labors but practitioners of professionalism and aesthetics.`,
+    juniors_Web: 'Web Technologies for Junior',
+    juniors_Web_copy: `A web developer is tasked with creating innovative and unique websites, considering visual aesthetics, page layouts, color choices, and the utilization of images and visual elements to set up overall style and design. They also need to ensure the functionality and user-friendliness of websites while ensuring compatibility across different devices and browsers, enabling clients to easily find the information they need.`,
+    juniors_HairDressing: 'Hairdressing for Junior',
+    juniors_HairDressing_copy: `Hairdressers provide a wide range of services, such as cutting, coloring, styling, chemical reformation, and special hair treatments. The Test Project consists of a series of modules: lady’s salon haircuts with coloring, lady’s hairstyles including hair extensions, lady’s catwalk hairstyles featuring braiding with live model, lady’s long hairstyles featuring braiding with live model.`,
+    juniors_RestaurantService: 'Restaurant Service for Junior',
+    juniors_RestaurantService_copy: `To be considered a top-tier restaurant, it's not just about serving delicious and hygienic food; it's about making customers feel the warmth of home and experiencing impeccable service. Professional restaurant service practitioners play a crucial role in achieving this goal. Excellent communication and customer care skills are universal attributes of the outstanding practitioners. Professional service processes and personalized treatment ensure each customer feels esteemed and valued, thus fostering customer loyalty and bolstering business growth.`,
+    juniors_GraphicDesign: 'Graphic Design Technology for Junior',
+    juniors_GraphicDesign_copy: `Graphic Design Technology practitioners utilize a diverse range of creative design techniques alongside technical proficiency in computer drawing, image manipulation, layout software, and peripheral equipment. They also need to possess an understanding and techniques of prepress and printing so as to effectively convey creative visual designs that appropriately represent the given contents.`,
   }
 
 }

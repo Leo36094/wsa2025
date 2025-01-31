@@ -37,7 +37,7 @@ function handleClick(skill: TSkillTab) {
     border: 1px solid #ffffff1a;
     .skill-row {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       &:not(:last-child) {
         border-bottom: 1px solid #ffffff1a;
       }
@@ -48,7 +48,6 @@ function handleClick(skill: TSkillTab) {
       font-size: 0.16rem;
       font-weight: 400;
       width: 3.2rem;
-      height: 0.35rem;
       display: flex;
       align-items: center;
       position: relative;

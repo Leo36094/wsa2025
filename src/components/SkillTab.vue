@@ -1,5 +1,10 @@
 <template>
-  <div class="skill-tab" data-aos="fade-in">
+  <div
+    class="skill-tab"
+    data-aos="fade-up"
+    data-aos-delay="500"
+    data-aos-anchor-placement="top-bottom"
+  >
     <div class="skill-tab-container">
       <div class="skill-row" v-for="(skillRow, idx) in props.skillList" :key="idx">
         <div

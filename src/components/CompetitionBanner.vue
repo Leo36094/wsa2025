@@ -1,12 +1,12 @@
 <template>
   <div class="competition-banner">
+    <div class="first-slide__title">
+      <h1>{{ $t('competition.title') }}</h1>
+    </div>
     <div class="first-slide">
-      <div data-aos="fade-down" class="first-slide__title">
-        <h1>{{ $t('competition.title') }}</h1>
-      </div>
       <div class="first-slide__photos">
-        <div data-aos="fade-down-right" class="photo-item" :style="{ backgroundImage: `url(${hostBanner1})` }"></div>
-        <div data-aos="fade-down-left" class="photo-item" :style="{ backgroundImage: `url(${hostBanner2})` }"></div>
+        <div data-aos="fade-down-right" data-aos-delay="500" class="photo-item" :style="{ backgroundImage: `url(${hostBanner1})` }"></div>
+        <div data-aos="fade-down-left" data-aos-delay="500" class="photo-item" :style="{ backgroundImage: `url(${hostBanner2})` }"></div>
       </div>
     </div>
   </div>
@@ -49,16 +49,17 @@ import hostBanner6 from '/images/host/host-banner6.png'
   margin-bottom: 1.38rem;
   .first-slide {
     &__title {
+      overflow: hidden;
       text-align: center;
-
+      height: 1.07rem;
+      margin: 1.44rem auto;
       h1 {
         color: transparent;
         background-clip: text;
         background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 14.29%, #ffffff 80.52%);
         font-size: 0.88rem;
         font-weight: 700;
-        margin-bottom: 1rem;
-        /* animation: fadedown 0.5s ease-out; */
+        animation: title-slide-up 0.5s forwards;
       }
     }
     p {

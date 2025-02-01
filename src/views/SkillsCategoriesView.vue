@@ -1,10 +1,12 @@
 <template>
   <div class="category">
     <div class="category-container">
-      <h2 class="category-title">
-        {{ $t('skills.skill_category_title') }}
-      </h2>
-      <div class="skill-list" data-aos="fade-down">
+      <div class="category-title-container">
+        <h2 class="category-title">
+          {{ $t('skills.skill_category_title') }}
+        </h2>
+      </div>
+      <div class="skill-list" data-aos="fade-up" data-aos-delay="500">
         <SkillPanel
           class="skill-item"
           v-for="skill in skills"
@@ -53,11 +55,15 @@ const goSkillDetail = (skill: SkillIconEnum) => {
   padding-top: 0.76rem;
   .category-container {
     @include withContainer;
+    .category-title-container {
+      overflow: hidden;
+      margin-bottom: 0.4rem;
+    }
     .category-title {
       font-size: 0.48rem;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 0.4rem;
+      animation: title-slide-up 0.5s forwards;
     }
     .skill-list {
       padding: 0 0.8rem 0.72rem 0.8rem;

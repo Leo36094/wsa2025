@@ -1,0 +1,255 @@
+<template>
+  <div class="skills-innerview">
+    <div class="skills-innerview-container">
+      <h2 class="skills-innerview-title title-animation">
+        <span>{{ $t(`skills.category_${viewName}`) }}</span>
+      </h2>
+      <SkillTab :skill-list="skillListCols" :selected-skill="selectedSkill" @click="onTabClick" />
+      <div class="skill-innerview-gallery">
+        <div class="gallery-container">
+          <div class="gallery-image" data-aos="fade-up" data-aos-delay="500">
+            <div
+              class="image-item"
+              v-for="img in imagesMap[selectedSkill.id].slice(0, 3)"
+              :style="{ backgroundImage: `url(${img})` }"
+            ></div>
+          </div>
+          <div
+            class="gallery-copy"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <div class="icon-button">
+              <component :is="IconComponentMap[props.viewName]" :name="displayIcon" />
+            </div>
+            <h2 class="title">{{ copyText.title }}</h2>
+            <p class="copy" v-html="copyText.copy"></p>
+          </div>
+          <div
+            class="gallery-image"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-anchor-placement="top-bottom"
+          >
+            <div
+              class="image-item"
+              v-for="img in imagesMap[selectedSkill.id].slice(3)"
+              :style="{ backgroundImage: `url(${img})` }"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script lang="ts" setup>
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import SkillTab from '@/components/SkillTab.vue'
+import type { TSkillTab } from '@/types/skills'
+import {
+  ManufacturingIconEnum,
+  ConstructionIconEnum,
+  ITIconEnum,
+  LogisticsIconEnum,
+  SocialIconEnum,
+  ArtIconEnum,
+  JuniorsIconEnum,
+} from '@/components/icons/enum'
+import { InnerViewEnum } from '@/types/skills'
+import IconManufacturing from '@/components/icons/IconManufacturing.vue'
+import IconConstruction from '@/components/icons/IconConstruction.vue'
+import IconIT from '@/components/icons/IconIT.vue'
+import IconLogistics from '@/components/icons/IconLogistics.vue'
+import IconSocial from '@/components/icons/IconSocial.vue'
+import IconArt from '@/components/icons/IconArt.vue'
+import IconJuniors from '@/components/icons/IconJuniors.vue'
+
+const COLS = 4
+const { t } = useI18n()
+const props = defineProps<{
+  viewName: InnerViewEnum
+}>()
+
+const SkillImagePrefixMap = {
+  [InnerViewEnum.Manufacturing]: '01',
+  [InnerViewEnum.Construction]: '02',
+  [InnerViewEnum.IT]: '03',
+  [InnerViewEnum.Logistics]: '04',
+  [InnerViewEnum.Social]: '05',
+  [InnerViewEnum.Art]: '06',
+  [InnerViewEnum.Juniors]: '07',
+}
+
+const IconComponentMap = {
+  [InnerViewEnum.Manufacturing]: IconManufacturing,
+  [InnerViewEnum.Construction]: IconConstruction,
+  [InnerViewEnum.IT]: IconIT,
+  [InnerViewEnum.Logistics]: IconLogistics,
+  [InnerViewEnum.Social]: IconSocial,
+  [InnerViewEnum.Art]: IconArt,
+  [InnerViewEnum.Juniors]: IconJuniors,
+}
+
+const InnerViewEnumMap = {
+  [InnerViewEnum.Manufacturing]: ManufacturingIconEnum,
+  [InnerViewEnum.Construction]: ConstructionIconEnum,
+  [InnerViewEnum.IT]: ITIconEnum,
+  [InnerViewEnum.Logistics]: LogisticsIconEnum,
+  [InnerViewEnum.Social]: SocialIconEnum,
+  [InnerViewEnum.Art]: ArtIconEnum,
+  [InnerViewEnum.Juniors]: JuniorsIconEnum,
+}
+
+const skillI18n = computed(() =>
+  Object.entries(InnerViewEnumMap[props.viewName]).reduce(
+    (acc: Record<string, string>, [key, value]) => {
+      acc[value] = t(`skills.${props.viewName}_${key}`)
+      return acc
+    },
+    {},
+  ),
+)
+const skillList = computed(() =>
+  Object.entries(InnerViewEnumMap[props.viewName]).map(([key, value]) => ({
+    label: skillI18n.value[value],
+    icon: value,
+    id: key,
+  })),
+)
+
+const skillListCols = computed(() => {
+  const rows = Math.ceil(skillList.value.length / COLS)
+  return Array.from({ length: rows }, (_, i) => skillList.value.slice(i * COLS, (i + 1) * COLS))
+})
+
+const selectedSkill = ref<TSkillTab>(skillListCols.value[0][0])
+const displayIcon = computed(() => {
+  const viewName = props.viewName as keyof typeof InnerViewEnumMap
+  return selectedSkill.value
+    .icon as (typeof InnerViewEnumMap)[typeof viewName][keyof (typeof InnerViewEnumMap)[typeof viewName]]
+})
+
+const copyText = computed(() => {
+  const copy = t(`skills.${props.viewName}_${selectedSkill.value.id}_copy`)
+  const title = t(`skills.${props.viewName}_${selectedSkill.value.id}`)
+  const images = Array.from({ length: 3 }, (_, i) => 'https://fakeimg.pl/443x250/')
+  return { copy, images, title }
+})
+
+// According doc. https://www.figma.com/design/cLQzYBkzjmJUGHFUAgTuZ9/WSA?node-id=126-3375&m=dev
+const juniorsImagePrefix = ['01_09', '01_11', '02_05', '02_08', '03_07', '05_04', '05_07', '06_06']
+const juniorsImages = Object.keys(JuniorsIconEnum).reduce(
+  (acc, curr, keyIdx) => {
+    const prefix = juniorsImagePrefix[keyIdx]
+    acc[curr] = Array(6)
+      .fill('')
+      .map((_, idx) => {
+        const imageIndex = (idx + 1).toString().padStart(2, '0')
+        return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_${prefix}_${imageIndex}.jpg`
+      })
+    return acc
+  },
+  {} as Record<string, string[]>,
+)
+
+const imagesMap = computed(() => {
+  if (props.viewName === InnerViewEnum.Juniors) {
+    return { ...juniorsImages }
+  }
+  return skillList.value.reduce(
+    (acc, curr, skillIndex) => {
+      acc[curr.id] = Array(6)
+        .fill('')
+        .map((_, idx) => {
+          // +4 because image number name start from 4
+          const prefixName = SkillImagePrefixMap[props.viewName]
+          const subSkillIndex = (skillIndex + 4).toString().padStart(2, '0')
+          const imageIndex = (idx + 1).toString().padStart(2, '0')
+          const imageUrl = `${import.meta.env.BASE_URL}images/wsa/Skills/skills_${prefixName}_${subSkillIndex}_${imageIndex}.jpg`
+          return imageUrl
+        })
+      return acc
+    },
+    {} as Record<string, string[]>,
+  )
+})
+function onTabClick(skill: TSkillTab) {
+  selectedSkill.value = skill
+}
+</script>
+<style lang="scss" scoped>
+.skills-innerview {
+  padding-top: 0.76rem;
+  .skills-innerview-container {
+    background: linear-gradient(180deg, #18475b 0%, #180161 89.74%);
+    min-height: 100svh;
+    .skills-innerview-title {
+      @include withContainer;
+      font-size: 0.48rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    .skill-innerview-gallery {
+      .gallery-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 19.2rem;
+        margin: 0.4rem auto 0 auto;
+        padding-bottom: 0.4rem;
+      }
+      .gallery-copy {
+        @include flexCenter(column);
+        justify-content: flex-start;
+        align-self: stretch;
+        padding-top: 1.2rem;
+        width: 4.43rem;
+        margin: 0 0.56rem;
+        .icon-button {
+          width: 0.95rem;
+          height: 0.95rem;
+          margin-bottom: 0.4rem;
+          @include bgCenter(contain);
+          @include flexCenter;
+          background-image: url('/images/host/square-blue.png');
+        }
+        .title {
+          font-size: 0.36rem;
+          font-weight: 700;
+          margin-bottom: 0.4rem;
+          text-align: center;
+        }
+        .copy {
+          font-size: 0.16rem;
+          font-weight: 400;
+        }
+      }
+      .gallery-image {
+        /* flex: 1; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .image-item {
+          width: 4.43rem;
+          height: 2.5rem;
+          @include bgCenter(contain);
+          &:not(:last-child) {
+            margin-bottom: 0.16rem;
+          }
+        }
+      }
+    }
+  }
+  .title-animation {
+    position: relative;
+    overflow: hidden;
+    @include flexCenter;
+    span {
+      animation: title-slide-up 0.5s forwards;
+    }
+  }
+}
+</style>

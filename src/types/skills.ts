@@ -3,3 +3,13 @@ export type TSkillTab = {
   icon: string;
   id: string;
 }
+
+export enum InnerViewEnum {
+  Manufacturing = 'manufacturing',
+  Construction = 'construction',
+  IT = 'it',
+  Logistics = 'logistics',
+  Social = 'social',
+  Art = 'art',
+  Juniors = 'juniors',
+}

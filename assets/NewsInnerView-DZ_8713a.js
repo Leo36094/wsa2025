@@ -1,4 +1,4 @@
-import{d as r,b as c,e as l,o as d,c as u,a as t,t as h,M as p,_ as f}from"./index-BaZxZqxE.js";const w={class:"news-inner-container"},m={class:"news-inner"},g={class:"news-inner-title"},y=["innerHTML"],_=r({__name:"NewsInnerView",setup(v){p().params.id;const e={en:{title:"WorldSkills Museum celebrates a WorldSkills Museum celebrates a successful first year",content:`
+import{d as r,b as c,e as l,o as d,c as u,a as t,t as h,M as p,_ as f}from"./index-DqQ_b47M.js";const w={class:"news-inner-container"},m={class:"news-inner"},g={class:"news-inner-title"},y=["innerHTML"],_=r({__name:"NewsInnerView",setup(v){p().params.id;const e={en:{title:"WorldSkills Museum celebrates a WorldSkills Museum celebrates a successful first year",content:`
   <br>
   <img src="https://fakeimg.pl/888x455" alt="news" />
   <br><br>

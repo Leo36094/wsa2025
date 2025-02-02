@@ -1,6 +1,5 @@
 /// <reference types="vite/client" />
 import type { DefineComponent } from 'vue'
-import type { I18n } from 'vue-i18n'
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {

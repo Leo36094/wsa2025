@@ -265,6 +265,9 @@ The skilled painter and decorator offers a range of services, from interpreting 
     juniors_RestaurantService_copy: `To be considered a top-tier restaurant, it's not just about serving delicious and hygienic food; it's about making customers feel the warmth of home and experiencing impeccable service. Professional restaurant service practitioners play a crucial role in achieving this goal. Excellent communication and customer care skills are universal attributes of the outstanding practitioners. Professional service processes and personalized treatment ensure each customer feels esteemed and valued, thus fostering customer loyalty and bolstering business growth.`,
     juniors_GraphicDesign: 'Graphic Design Technology for Junior',
     juniors_GraphicDesign_copy: `Graphic Design Technology practitioners utilize a diverse range of creative design techniques alongside technical proficiency in computer drawing, image manipulation, layout software, and peripheral equipment. They also need to possess an understanding and techniques of prepress and printing so as to effectively convey creative visual designs that appropriately represent the given contents.`,
+  },
+  news: {
+    title: 'News',
   }
 
 }

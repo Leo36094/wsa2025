@@ -34,6 +34,17 @@ const router = createRouter({
       component: () => import('../views/CompetitionView.vue'),
     },
     {
+      path: '/news',
+      name: 'news',
+      component: () => import('../views/NewsView.vue'),
+
+    },
+    {
+      path: '/news/:id',
+      name: 'news-detail',
+      component: () => import('../views/NewsInnerView.vue'),
+    },
+    {
       path: '/skills',
       name: 'skills',
       redirect: { name: SkillsRouteEnum.Catrgories },

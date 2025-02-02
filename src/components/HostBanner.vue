@@ -5,16 +5,25 @@
     </div>
     <div class="first-slide">
       <div class="first-slide__photos">
-        <div data-aos="fade-down-right" data-aos-delay="500" class="photo-item" :style="{ backgroundImage: `url(${hostBanner1})` }"></div>
-        <div data-aos="fade-down-left" data-aos-delay="500" class="photo-item" :style="{ backgroundImage: `url(${hostBanner2})` }"></div>
+        <div
+          data-aos="fade-down-right"
+          data-aos-delay="500"
+          class="photo-item"
+          :style="{ backgroundImage: `url(${hostBanner1})` }"
+        ></div>
+        <div
+          data-aos="fade-down-left"
+          class="photo-item"
+          :style="{ backgroundImage: `url(${hostBanner2})` }"
+        ></div>
       </div>
     </div>
   </div>
   <div class="second-slide">
     <div class="image-row">
-      <img class="image-item":src="hostBanner1" alt="banner1"></img>
-      <img class="image-item":src="hostBanner2" alt="banner2"></img>
-      <img class="image-item":src="hostBanner3" alt="banner3"></img>
+      <img class="image-item" :src="hostBanner1" alt="banner1" />
+      <img class="image-item" :src="hostBanner2" alt="banner2" />
+      <img class="image-item" :src="hostBanner3" alt="banner3" />
     </div>
     <div class="host-copy">
       <div class="welcome-img"></div>
@@ -25,9 +34,9 @@
       <p class="welcome-desc">{{ $t('host.content') }}</p>
     </div>
     <div class="image-row">
-      <img class="image-item":src="hostBanner4" alt="banner4"></img>
-      <img class="image-item":src="hostBanner5" alt="banner5"></img>
-      <img class="image-item":src="hostBanner6" alt="banner6"></img>
+      <img class="image-item" :src="hostBanner4" alt="banner4" />
+      <img class="image-item" :src="hostBanner5" alt="banner5" />
+      <img class="image-item" :src="hostBanner6" alt="banner6" />
     </div>
   </div>
 </template>
@@ -39,7 +48,6 @@ import hostBanner3 from '/images/host/host-banner3.png'
 import hostBanner4 from '/images/host/host-banner4.png'
 import hostBanner5 from '/images/host/host-banner5.png'
 import hostBanner6 from '/images/host/host-banner6.png'
-
 </script>
 <style lang="scss" scoped>
 .host-banner {
@@ -136,5 +144,4 @@ import hostBanner6 from '/images/host/host-banner6.png'
     transform: translateY(0);
   }
 }
-
 </style>

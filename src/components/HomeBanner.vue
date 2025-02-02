@@ -113,6 +113,7 @@ onUnmounted(() => {
 .home-banner {
   position: sticky;
   top: 0;
+  pointer-events: none;
   .filter {
     position: absolute;
     top: 0;

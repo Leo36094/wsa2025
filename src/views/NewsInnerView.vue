@@ -34,7 +34,6 @@ const newsDetail = {
 }
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 async function fetchNewsInfo(newsId: string) {
-  console.log(`fetching with newsId: ${newsId}`)
   await delay(1000)
   return newsDetail
 }

@@ -43,7 +43,6 @@ const twoNewsARow = computed(() =>
 const router = useRouter()
 
 function goToNewsDetail(id: number) {
-  console.log('go to news detail with id:', id)
   router.push({ name: 'news-detail', params: { id: id.toString() } })
 }
 </script>

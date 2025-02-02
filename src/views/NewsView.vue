@@ -10,7 +10,9 @@
           <Pagination
             v-show="newsInfo.total > 10"
             v-slot="{ page }"
+            @update:page="onPageUpdate"
             :total="newsInfo.total"
+            :page="newsInfo.page"
             :sibling-count="1"
             show-edges
             :default-page="1"
@@ -65,11 +67,11 @@ import {
 import NewsList from '@/components/NewsList.vue'
 import BaseLoading from '@/components/BaseLoading.vue'
 
-const mockNewsResponse = () => {
+const mockNewsResponse = (page: number) => {
   return {
     news: Array(6)
       .fill({
-        title: 'Title',
+        title: `page ${page} Title`,
         image: 'https://fakeimg.pl/640x297',
         date: '17 Mar 2025',
       })
@@ -77,16 +79,24 @@ const mockNewsResponse = () => {
         ...newsItem,
         id: index,
       })),
-    total: 6,
+    total: 150,
     page: 1,
   }
 }
 const isNewsFetching = ref(false)
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
-async function fetchNews() {
+async function fetchNews(page: number) {
+  isNewsFetching.value = true
   await delay(1000)
-  return mockNewsResponse()
+  isNewsFetching.value = false
+  return mockNewsResponse(page)
+}
+
+async function onPageUpdate(page: number) {
+  await delay(1000)
+  const { news, total } = await fetchNews(page)
+  newsInfo.value = { news, total, page }
 }
 
 const newsInfo = ref<{
@@ -97,7 +107,7 @@ const newsInfo = ref<{
 
 onMounted(async () => {
   isNewsFetching.value = true
-  const { news, total, page } = await fetchNews()
+  const { news, total, page } = await fetchNews(1)
   isNewsFetching.value = false
   newsInfo.value = { news, total, page }
 })
@@ -124,6 +134,7 @@ onMounted(async () => {
   }
   .news-list {
     margin-bottom: 0.4rem;
+    min-height: 10rem;
   }
   .news-pagination {
     @include flexCenter;

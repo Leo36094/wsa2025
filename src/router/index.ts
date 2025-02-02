@@ -92,6 +92,11 @@ const router = createRouter({
         },
 
       ]
+    },
+    {
+      path: '/get-involved',
+      name: 'get-involved',
+      component: () => import('../views/GetInvolvedView.vue'),
     }
   ],
   scrollBehavior(to, from, savedPosition) {

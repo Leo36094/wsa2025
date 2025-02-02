@@ -268,6 +268,9 @@ The skilled painter and decorator offers a range of services, from interpreting 
   },
   news: {
     title: 'News',
+  },
+  involved: {
+    title: 'Get involved',
+    comming_soon: 'Coming soon',
   }
-
 }

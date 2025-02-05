@@ -13,36 +13,21 @@
           <div class="currency-table">
             <div class="row">
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin1')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencyCoin :label="$t('host.coin50')" :imgs="[coinImages[4]]" />
               </div>
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin2')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencyCoin :label="$t('host.coin20')" :imgs="[coinImages[3]]" />
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin1')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencyCoin :label="$t('host.coin10')" :imgs="[coinImages[2]]" />
               </div>
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin1')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencyCoin :label="$t('host.coin5')" :imgs="[coinImages[1]]" />
               </div>
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin1')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencyCoin :label="$t('host.coin1')" :imgs="[coinImages[0]]" />
               </div>
             </div>
           </div>
@@ -51,26 +36,23 @@
           <div class="currency-table">
             <div class="row">
               <div class="col">
-                <HostCurrencyCoin
-                  :label="$t('host.coin1')"
-                  :imgs="['https://fakeimg.pl/78x78/', 'https://fakeimg.pl/78x78/']"
-                />
+                <HostCurrencBill :label="$t('host.banknote2000')" :img="billImages[4]" />
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <HostCurrencBill :label="$t('host.banknote2')" img="https://fakeimg.pl/78x78/" />
+                <HostCurrencBill :label="$t('host.banknote1000')" :img="billImages[3]" />
               </div>
               <div class="col">
-                <HostCurrencBill :label="$t('host.banknote3')" img="https://fakeimg.pl/78x78/" />
+                <HostCurrencBill :label="$t('host.banknote500')" :img="billImages[2]" />
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <HostCurrencBill :label="$t('host.banknote4')" img="https://fakeimg.pl/78x78/" />
+                <HostCurrencBill :label="$t('host.banknote200')" :img="billImages[1]" />
               </div>
               <div class="col">
-                <HostCurrencBill :label="$t('host.banknote5')" img="https://fakeimg.pl/78x78/" />
+                <HostCurrencBill :label="$t('host.banknote100')" :img="billImages[0]" />
               </div>
             </div>
           </div>
@@ -86,6 +68,21 @@ import HostCurrencBill from './HostCurrencBill.vue'
 
 const lastCurrency = ref<HTMLElement | null>(null)
 const cancelSticky = ref(false)
+
+const coinImages = [
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_1.png`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_5.png`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_10.png`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_20.png`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_50.png`,
+]
+const billImages = [
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_100.jpg`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_200.jpg`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_500.jpg`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_1000.jpg`,
+  `${import.meta.env.BASE_URL}images/wsa/host_section02_2000.jpg`,
+]
 
 function handleScroll() {
   if (lastCurrency.value) {
@@ -160,7 +157,7 @@ $border-color: #18475b;
       .col {
         padding: 0.24rem;
         flex: 1;
-        height: 1.6rem;
+        min-height: 1.6rem;
         background-color: #f5f5f5;
         @include flexCenter;
         &:not(:last-child) {

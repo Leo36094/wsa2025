@@ -29,6 +29,8 @@ const props = defineProps<{
     @include flexCenter;
   }
   &__copy {
+    @include flexCenter(column);
+    align-items: flex-start;
     margin-left: 0.24rem;
     h4 {
       font-size: 0.28rem;

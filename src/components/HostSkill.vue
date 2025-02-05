@@ -4,9 +4,9 @@
       <div class="image-col">
         <div
           class="image-item"
-          v-for="item in 3"
+          v-for="item in images.slice(0, 3)"
           :key="item"
-          :style="{ backgroundImage: `url(${'https://fakeimg.pl/443x287/'})` }"
+          :style="{ backgroundImage: `url(${item})` }"
         ></div>
       </div>
       <div class="copy-col">
@@ -19,15 +19,23 @@
       <div class="image-col">
         <div
           class="image-item"
-          v-for="item in 3"
+          v-for="item in images.slice(3)"
           :key="item"
-          :style="{ backgroundImage: `url(${'https://fakeimg.pl/443x287/'})` }"
+          :style="{ backgroundImage: `url(${item})` }"
         ></div>
       </div>
     </div>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const images = Array(6)
+  .fill(0)
+  .map((_, i) => {
+    const suffix = (i + 1).toString().padStart(2, '0')
+    return `${import.meta.env.VITE_BASE_URL}images/wsa/host_section04_${suffix}.jpg`
+  })
+console.log(images)
+</script>
 <style lang="scss" scoped>
 .host-skill {
   background: linear-gradient(180deg, #4f1787 0%, #180161 89.74%);

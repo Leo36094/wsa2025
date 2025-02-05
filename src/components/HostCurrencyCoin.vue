@@ -30,12 +30,10 @@ const props = defineProps<{
     margin-bottom: 0.24rem;
   }
   .coin-img {
-    width: 0.78rem;
+    width: 1.72rem;
     height: 0.78rem;
+    flex: 1;
     @include bgCenter(100%);
-    &:not(:last-child) {
-      margin-right: 0.16rem;
-    }
   }
   .coin-label {
     background-color: #f0f0f0;

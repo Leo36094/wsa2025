@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col">
             <HostClimateItem
-              icon="https://fakeimg.pl/32x32/"
+              :icon="icons.temperature"
               :title="$t('host.climate_title1')"
               :desc="$t('host.climate_desc1')"
             />
@@ -18,14 +18,14 @@
         <div class="row">
           <div class="col">
             <HostClimateItem
-              icon="https://fakeimg.pl/32x32/"
+              :icon="icons.rain"
               :title="$t('host.climate_title2')"
               :desc="$t('host.climate_desc2')"
             />
           </div>
           <div class="col">
             <HostClimateItem
-              icon="https://fakeimg.pl/32x32/"
+              :icon="icons.sun"
               :title="$t('host.climate_title3')"
               :desc="$t('host.climate_desc3')"
             />
@@ -34,14 +34,14 @@
         <div class="row">
           <div class="col">
             <HostClimateItem
-              icon="https://fakeimg.pl/32x32/"
+              :icon="icons.humidity"
               :title="$t('host.climate_title4')"
               :desc="$t('host.climate_desc4')"
             />
           </div>
           <div class="col">
             <HostClimateItem
-              icon="https://fakeimg.pl/32x32/"
+              :icon="icons.wind"
               :title="$t('host.climate_title5')"
               :desc="$t('host.climate_desc5')"
             />
@@ -53,6 +53,14 @@
 </template>
 <script lang="ts" setup>
 import HostClimateItem from '@/components/HostClimateItem.vue'
+
+const icons = {
+  temperature: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_temperature.svg`,
+  rain: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_weather-heavy-rain.svg`,
+  sun: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_weather-sunny.svg`,
+  humidity: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_humidity-alert.svg`,
+  wind: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_weather-windy.svg`,
+}
 </script>
 <style lang="scss" scoped>
 .climate {

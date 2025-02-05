@@ -18,7 +18,7 @@ const props = defineProps<{
   @include flexCenter(column);
   .bill-img {
     width: 2.18rem;
-    height: 0.91rem;
+    height: 1.03rem;
     margin-bottom: 0.24rem;
     @include bgCenter(100%);
   }

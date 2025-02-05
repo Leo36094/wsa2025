@@ -10,7 +10,7 @@
             ref="leftPhoto"
             id="leftphoto"
             class="photo-item photo-item--left"
-            :style="{ backgroundImage: `url(${hostBanner1})` }"
+            :style="{ backgroundImage: `url(${hostImages[0]})` }"
           ></div>
         </div>
         <div class="right-photo-container">
@@ -18,7 +18,7 @@
             ref="rightPhoto"
             id="rightPhoto"
             class="photo-item photo-item--right"
-            :style="{ backgroundImage: `url(${hostBanner2})` }"
+            :style="{ backgroundImage: `url(${hostImages[1]})` }"
           ></div>
         </div>
       </div>
@@ -26,26 +26,26 @@
   </div>
   <div class="second-slide" id="secondSlide">
     <div class="image-row" ref="topRow" id="topRow">
-      <img ref="topFirst" id="topFirst" class="image-item" :src="hostBanner1" alt="banner2" />
-      <div class="top-first-rest" ref="topFirstRest">
-        <img class="image-item" :src="hostBanner2" alt="banner2" />
-        <img class="image-item" :src="hostBanner3" alt="banner3" />
+      <img ref="topFirst" id="topFirst" class="image-item" :src="hostImages[0]" alt="banner2" />
+      <div data-aos="fade-up" data-aos-delay="500" class="top-first-rest" ref="topFirstRest">
+        <img class="image-item" :src="hostImages[2]" alt="banner2" />
+        <img class="image-item" :src="hostImages[3]" alt="banner3" />
       </div>
     </div>
-    <div data-aos="fade-right" data-aos-delay="500" class="host-copy">
-      <div class="welcome-img"></div>
-      <div class="welcome-title">
+    <div class="host-copy">
+      <div data-aos="example-anim1" data-aos-delay="500" class="welcome-img"></div>
+      <div class="welcome-title" data-aos="fade-right" data-aos-delay="500">
         <h4 class="title">{{ $t('host.welcome') }}</h4>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
       <p class="welcome-desc">{{ $t('host.content') }}</p>
     </div>
     <div class="image-row" ref="bottomRow">
-      <div class="bottom-rest" ref="bottomRest">
-        <img class="image-item" :src="hostBanner4" alt="banner4" />
-        <img class="image-item" :src="hostBanner5" alt="banner5" />
+      <div data-aos="fade-up" data-aos-offset="100" class="bottom-rest" ref="bottomRest">
+        <img class="image-item" :src="hostImages[4]" alt="banner4" />
+        <img class="image-item" :src="hostImages[5]" alt="banner5" />
       </div>
-      <img id="secondLast" ref="secondLast" class="image-item" :src="hostBanner6" alt="banner5" />
+      <img id="secondLast" ref="secondLast" class="image-item" :src="hostImages[1]" alt="banner5" />
     </div>
   </div>
 </template>
@@ -54,13 +54,6 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-import hostBanner1 from '/images/host/host-banner1.png'
-import hostBanner2 from '/images/host/host-banner2.png'
-import hostBanner3 from '/images/host/host-banner3.png'
-import hostBanner4 from '/images/host/host-banner4.png'
-import hostBanner5 from '/images/host/host-banner5.png'
-import hostBanner6 from '/images/host/host-banner6.png'
 
 const leftPhoto = ref<null | HTMLElement>(null)
 const rightPhoto = ref<null | HTMLElement>(null)
@@ -72,6 +65,12 @@ const secondLast = ref<null | HTMLElement>(null)
 const topFirstRest = ref<null | HTMLElement>(null)
 const bottomRest = ref<null | HTMLElement>(null)
 
+const hostImages = Array.from(
+  { length: 6 },
+  (_, i) =>
+    `${import.meta.env.BASE_URL}images/wsa/host_section01_${(i + 1).toString().padStart(2, '0')}.jpg`,
+)
+console.log(hostImages)
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
 
@@ -88,7 +87,6 @@ onMounted(() => {
           end: '50% 50%',
           scrub: true,
           toggleActions: 'play reverse play reverse',
-          // markers: true
         },
       })
       tl.to(
@@ -123,15 +121,6 @@ onMounted(() => {
         },
         '#rightPhoto',
       )
-      // const t2 = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: bottomRow.value,
-      //     start: 'top top',
-      //     end: '80% 80%',
-      //     scrub: true,
-      //     // markers: true
-      //   },
-      // })
       gsap.to(topFirst.value, {
         scrollTrigger: {
           trigger: topFirst.value,
@@ -145,42 +134,16 @@ onMounted(() => {
         scale: 1,
         duration: 2,
       })
-      gsap.to(topFirstRest.value, {
-        scrollTrigger: {
-          trigger: topFirstRest.value,
-          start: 'top 50%',
-          end: '100% 60%',
-          scrub: 1,
-        },
-        y: 0,
-        opacity: 1,
-        duration: 1,
-      })
       if (secondLast.value) {
         gsap.from(secondLast.value, {
-          y: -200,
+          y: -500,
           scale: 1.2,
           opacity: 0,
           duration: 1,
           scrollTrigger: {
             trigger: secondLast.value,
             start: 'top 80%',
-            end: 'top 60%',
-            scrub: true,
-            toggleActions: 'play none none reverse',
-          },
-        })
-      }
-      if (bottomRest.value) {
-        gsap.from(bottomRest.value, {
-          y: -100,
-          scale: 1,
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: bottomRest.value,
-            start: 'top 80%',
-            end: 'top 60%',
+            end: 'center center',
             scrub: true,
             toggleActions: 'play none none reverse',
           },
@@ -194,7 +157,6 @@ onMounted(() => {
 .host-banner {
   @include withContainer;
   max-width: 19.2rem;
-  padding-top: 0.64rem;
   margin-bottom: 3rem;
   .first-slide {
     margin: auto;
@@ -252,6 +214,7 @@ onMounted(() => {
   max-width: 14.4rem;
   margin: auto;
   @include flexCenter;
+  overflow: hidden;
   .welcome-img {
     width: 4.8rem;
     height: 3.66rem;
@@ -300,8 +263,6 @@ onMounted(() => {
   .top-first-rest {
     display: flex;
     justify-content: space-between;
-    transform: translateY(20%);
-    opacity: 0;
   }
   .bottom-rest {
     display: flex;
@@ -316,6 +277,23 @@ onMounted(() => {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+[data-aos='example-anim1'] {
+  transform: translateX(-100%);
+  &.aos-animate {
+    animation: SpinFadeInFromLeft 1s ease forwards;
+  }
+}
+
+@keyframes SpinFadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
   }
 }
 </style>

@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-nicwOc9r.js";import{d as a,a as i,q as s,u as o}from"./index-CMszVguA.js";import"./enum-CA_ituI8.js";const u=a({__name:"SkillsLogisticView",setup(r){return(t,m)=>(i(),s(e,{"view-name":o(n).Logistics},null,8,["view-name"]))}});export{u as default};

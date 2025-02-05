@@ -103,12 +103,13 @@ onMounted(() => {
           scale: 0.5,
           duration: 0.15,
           opacity: 0,
-          y: 100,
+          y: 1000,
           onComplete: () => {
             leftPhoto.value!.style.opacity = '0'
           },
           onReverseComplete: () => {
             leftPhoto.value!.style.opacity = '1'
+            leftPhoto.value!.style.transform = 'translate(0, 0)'
           },
         },
         '#leftphoto',
@@ -119,15 +120,16 @@ onMounted(() => {
           scale: 0.5,
           duration: 0.15,
           opacity: 0,
-          y: 1000,
+          y: 800,
           onComplete: () => {
-            leftPhoto.value!.style.opacity = '0'
+            rightPhoto.value!.style.opacity = '0'
           },
           onReverseComplete: () => {
-            leftPhoto.value!.style.opacity = '1'
+            rightPhoto.value!.style.opacity = '1'
+            rightPhoto.value!.style.transform = 'translate(0, 0)'
           },
         },
-        '#rightPhoto',
+        rightPhoto.value?.clientTop,
       )
       gsap.to(topFirst.value, {
         scrollTrigger: {
@@ -169,7 +171,7 @@ onUnmounted(() => {
 .competition-banner {
   @include withContainer;
   max-width: 19.2rem;
-  margin-bottom: 3rem;
+  height: 100svh;
   .first-slide {
     margin: auto;
     max-width: 14.4rem;

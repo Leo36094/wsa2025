@@ -80,7 +80,7 @@ onMounted(() => {
         scrollTrigger: {
           trigger: '.second-slide',
           start: '20% 100%',
-          end: '50% 50%',
+          end: 'center center',
           scrub: true,
           toggleActions: 'play reverse play reverse',
         },
@@ -91,12 +91,13 @@ onMounted(() => {
           scale: 0.5,
           duration: 0.15,
           opacity: 0,
-          y: 100,
+          y: 1000,
           onComplete: () => {
             leftPhoto.value!.style.opacity = '0'
           },
           onReverseComplete: () => {
             leftPhoto.value!.style.opacity = '1'
+            leftPhoto.value!.style.transform = 'translate(0, 0)'
           },
         },
         '#leftphoto',
@@ -107,21 +108,24 @@ onMounted(() => {
           scale: 0.5,
           duration: 0.15,
           opacity: 0,
-          y: 1000,
+          y: 800,
           onComplete: () => {
-            leftPhoto.value!.style.opacity = '0'
+            rightPhoto.value!.style.opacity = '0'
           },
           onReverseComplete: () => {
-            leftPhoto.value!.style.opacity = '1'
+            rightPhoto.value!.style.opacity = '1'
+            rightPhoto.value!.style.transform = 'translate(0, 0)'
           },
         },
-        '#rightPhoto',
+        rightPhoto.value?.clientTop,
       )
+
       gsap.to(topFirst.value, {
         scrollTrigger: {
           trigger: topFirst.value,
-          start: 'top top',
-          end: '100% 50%',
+
+          start: 'top 10',
+          end: 'bottom center',
           scrub: 1,
         },
         x: 0,
@@ -130,21 +134,18 @@ onMounted(() => {
         scale: 1,
         duration: 2,
       })
-      if (secondLast.value) {
-        gsap.from(secondLast.value, {
-          y: -500,
-          scale: 1.2,
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: secondLast.value,
-            start: 'top 80%',
-            end: 'center center',
-            scrub: true,
-            toggleActions: 'play none none reverse',
-          },
-        })
-      }
+      gsap.to(secondLast.value, {
+        scrollTrigger: {
+          trigger: '.second-slide',
+          start: 'top center',
+          end: 'bottom bottom',
+          scrub: true,
+        },
+        y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+      })
     },
   })
 })
@@ -157,10 +158,10 @@ onUnmounted(() => {
 .host-banner {
   @include withContainer;
   max-width: 19.2rem;
-  margin-bottom: 3rem;
   .first-slide {
     margin: auto;
     max-width: 14.4rem;
+    height: 100svh;
     &__title {
       overflow: hidden;
       text-align: center;
@@ -256,6 +257,11 @@ onUnmounted(() => {
     transform: translate(30%, -100%);
     opacity: 0;
     scale: 1.2;
+  }
+  #secondLast {
+    transform: translate(0, -300%);
+    opacity: 0;
+    scale: 0.5;
   }
 
   .top-first-rest {

@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="info-bar">
-        <div class="info-bar__img"></div>
+        <div class="info-bar__img info-bar__img--hall1"></div>
         <div class="info-bar__detail">
           <div class="hall-info">
             <img class="hall-info__pin" src="/images/ri_map-pin-fill.svg" alt="map-pin" />
@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="info-bar">
-        <div class="info-bar__img"></div>
-        <p class="info-bar__detail">
+        <div class="info-bar__img info-bar__img--hall2"></div>
+        <div class="info-bar__detail">
           <div class="hall-info">
             <img class="hall-info__pin" src="/images/ri_map-pin-fill.svg" alt="map-pin" />
             <span>{{ $t('competition.location_hall2') }}</span>
@@ -82,7 +82,7 @@
               </ul>
             </div>
           </div>
-        </p>
+        </div>
       </div>
     </div>
   </div>
@@ -137,6 +137,12 @@ $pin-color: #c8e14b;
         height: 3.56rem;
         @include bgCenter;
         background-image: url('https://fakeimg.pl/600x356/');
+        &--hall1 {
+          background-image: url('/images/wsa/host_section01_02.jpg');
+        }
+        &--hall2 {
+          background-image: url('/images/wsa/competition_section01_07.jpg');
+        }
       }
       .info-bar__detail {
         width: 5.04rem;

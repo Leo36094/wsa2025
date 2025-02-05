@@ -51,26 +51,22 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const leftPhoto = ref<null | HTMLElement>(null)
 const rightPhoto = ref<null | HTMLElement>(null)
-const topRow = ref<null | HTMLElement>(null)
-const bottomRow = ref<null | HTMLElement>(null)
 
 const topFirst = ref<null | HTMLElement>(null)
 const secondLast = ref<null | HTMLElement>(null)
-const topFirstRest = ref<null | HTMLElement>(null)
-const bottomRest = ref<null | HTMLElement>(null)
 
 const hostImages = Array.from(
   { length: 6 },
   (_, i) =>
     `${import.meta.env.BASE_URL}images/wsa/host_section01_${(i + 1).toString().padStart(2, '0')}.jpg`,
 )
-console.log(hostImages)
+
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
 
@@ -152,6 +148,10 @@ onMounted(() => {
     },
   })
 })
+
+onUnmounted(() => {
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+})
 </script>
 <style lang="scss" scoped>
 .host-banner {
@@ -191,7 +191,6 @@ onMounted(() => {
         @include bgCenter;
         width: 6.25rem;
         height: 3.5rem;
-        max-width: 19.2rem;
       }
       .right-photo-container {
         position: relative;
@@ -245,11 +244,10 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     @include withContainer;
-    max-width: 14.4rem;
-    /* opacity: 0; */
     .image-item {
-      width: 33.33%;
-      height: 3.6rem;
+      width: 4.8rem;
+      height: 2.9rem;
+      object-fit: cover;
       flex: 1;
       aspect-ratio: 16/9;
     }

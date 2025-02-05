@@ -36,52 +36,12 @@
     </header>
     <div class="slide-container">
       <div class="photos">
-        <div
-          class="photo-item"
-          data-aos="fade-down"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
-        <div
-          class="photo-item photo-item-1"
-          data-aos="fade-up-left"
-          data-aos-offset="100"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
-        <div
-          class="photo-item photo-item-2"
-          data-aos="fade-up-right"
-          data-aos-offset="100"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
-        <div
-          class="photo-item photo-item-3"
-          data-aos="fade-up"
-          data-aos-offset="100"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
-        <div
-          class="photo-item photo-item-4"
-          data-aos="fade-up"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
-        <div
-          class="photo-item photo-item-5"
-          data-aos="fade-up-left"
-          ref="lastPhoto"
-          :style="{
-            backgroundImage: `url(${'https://fakeimg.pl/400x243/'})`,
-          }"
-        ></div>
+        <div class="photo-item" data-aos="fade-down"></div>
+        <div class="photo-item photo-item-1" data-aos="fade-up-left" data-aos-offset="100"></div>
+        <div class="photo-item photo-item-2" data-aos="fade-up-right" data-aos-offset="100"></div>
+        <div class="photo-item photo-item-3" data-aos="fade-up" data-aos-offset="100"></div>
+        <div class="photo-item photo-item-4" data-aos="fade-up"></div>
+        <div class="photo-item photo-item-5" data-aos="fade-up-left" ref="lastPhoto"></div>
       </div>
     </div>
   </div>
@@ -134,7 +94,7 @@ onUnmounted(() => {
       height: 100%;
       width: 100%;
       background-color: $main-bg;
-      background-image: url('/images/wsa_banner.jpg');
+      background-image: url('/images/wsa/homepage_s01_01.jpg');
     }
     .title-container {
       @include withContainer;
@@ -203,11 +163,12 @@ onUnmounted(() => {
     position: absolute;
     top: 0.32rem;
     left: 0.64rem;
-    translate: 0 calc(-1% * (max(var(--scroll), 1) - 25) * 100 / 50);
     translate: 0 calc(-1% * (max(var(--scroll), 1) - 25) * 100 / 150);
+    background-image: url('/images/wsa/homepage_s01_02.jpg');
     @for $i from 1 through 5 {
       &-#{$i} {
         translate: 0 calc(-1% * (max(var(--scroll), 1) - 25) * 100 / 200);
+        background-image: url('/images/wsa/homepage_s01_0#{$i + 2}.jpg');
       }
     }
     &-1 {

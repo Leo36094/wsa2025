@@ -34,7 +34,7 @@ const images = computed(() =>
     .fill(0)
     .map((_, i) => {
       const suffix = (i + 1).toString().padStart(2, '0')
-      return `${import.meta.env.VITE_BASE_URL}images/wsa/host_section04_${suffix}.jpg`
+      return `${import.meta.env.BASE_URL}images/wsa/host_section04_${suffix}.jpg`
     }),
 )
 </script>

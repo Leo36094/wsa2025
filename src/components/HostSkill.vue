@@ -28,13 +28,15 @@
   </div>
 </template>
 <script lang="ts" setup>
-const images = Array(6)
-  .fill(0)
-  .map((_, i) => {
-    const suffix = (i + 1).toString().padStart(2, '0')
-    return `${import.meta.env.VITE_BASE_URL}images/wsa/host_section04_${suffix}.jpg`
-  })
-console.log(images)
+import { computed } from 'vue'
+const images = computed(() =>
+  Array(6)
+    .fill(0)
+    .map((_, i) => {
+      const suffix = (i + 1).toString().padStart(2, '0')
+      return `${import.meta.env.VITE_BASE_URL}images/wsa/host_section04_${suffix}.jpg`
+    }),
+)
 </script>
 <style lang="scss" scoped>
 .host-skill {

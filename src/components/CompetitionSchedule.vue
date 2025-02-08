@@ -60,7 +60,7 @@ const schedules = computed(() => {
     min-height: 12rem;
     padding-top: 0.94rem;
     background: #00000033;
-    border-radius: 1.37rem;
+    border-radius: 0.4rem;
     &__title {
       font-size: 0.48rem;
       font-weight: 700;

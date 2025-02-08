@@ -78,6 +78,7 @@ function goToNewsDetail(id: number) {
       height: 2.97rem;
       background-color: #586566;
       margin-bottom: 0.23rem;
+      @include bgCenter(cover);
     }
     &__title {
       font-size: 0.28rem;

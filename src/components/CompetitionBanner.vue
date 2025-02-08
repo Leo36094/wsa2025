@@ -4,6 +4,7 @@
       <h1>{{ $t('competition.title') }}</h1>
     </div>
     <div class="first-slide" id="firstSlide">
+      <div class="bloom-bg"></div>
       <div class="first-slide__photos">
         <div class="left-photo-container">
           <div
@@ -171,10 +172,22 @@ onUnmounted(() => {
 .competition-banner {
   @include withContainer;
   max-width: 19.2rem;
-  height: 100svh;
+  height: 100vh;
   .first-slide {
     margin: auto;
     max-width: 14.4rem;
+    position: relative;
+    .bloom-bg {
+      position: absolute;
+      @include bgCenter(100% 100%);
+      width: 6.3rem;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      height: 6.3rem;
+      background-image: url('images/host/circle-blue.png');
+    }
     &__title {
       overflow: hidden;
       text-align: center;

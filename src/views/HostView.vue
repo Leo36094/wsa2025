@@ -18,6 +18,7 @@ import HostSkill from '@/components/HostSkill.vue'
 <style lang="scss" scoped>
 .host {
   padding-top: 0.76rem;
+  background: linear-gradient(0deg, #18475b 1.87%, #002635 100%);
   .host-currency {
     @include withContainer;
   }

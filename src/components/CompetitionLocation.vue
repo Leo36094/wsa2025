@@ -179,6 +179,7 @@ $pin-color: #c8e14b;
         font-weight: 700;
         color: #101e24;
         margin-right: 0.16rem;
+        flex-shrink: 0;
       }
       .floor-name__list {
         display: flex;

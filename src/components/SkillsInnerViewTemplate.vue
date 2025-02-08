@@ -10,8 +10,9 @@
           <div class="gallery-image" data-aos="fade-up" data-aos-delay="500">
             <div
               class="image-item"
-              v-for="img in imagesMap[selectedSkill.id].slice(0, 3)"
+              v-for="(img, imgIdx) in imagesMap[selectedSkill.id].slice(0, 3)"
               :style="{ backgroundImage: `url(${img})` }"
+              :key="imgIdx"
             ></div>
           </div>
           <div
@@ -34,8 +35,9 @@
           >
             <div
               class="image-item"
-              v-for="img in imagesMap[selectedSkill.id].slice(3)"
+              v-for="(img, index) in imagesMap[selectedSkill.id].slice(3)"
               :style="{ backgroundImage: `url(${img})` }"
+              :key="index"
             ></div>
           </div>
         </div>
@@ -183,7 +185,7 @@ function onTabClick(skill: TSkillTab) {
 .skills-innerview {
   padding-top: 0.76rem;
   .skills-innerview-container {
-    background: linear-gradient(180deg, #18475b 0%, #180161 89.74%);
+    background: linear-gradient(180deg, #18475b 30%, #180161 89.74%);
     min-height: 100svh;
     .skills-innerview-title {
       @include withContainer;
@@ -197,6 +199,7 @@ function onTabClick(skill: TSkillTab) {
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 14.4rem;
         max-width: 19.2rem;
         margin: 0.4rem auto 0 auto;
         padding-bottom: 0.4rem;
@@ -235,7 +238,7 @@ function onTabClick(skill: TSkillTab) {
         .image-item {
           width: 4.43rem;
           height: 2.5rem;
-          @include bgCenter(contain);
+          @include bgCenter(100% auto);
           &:not(:last-child) {
             margin-bottom: 0.16rem;
           }

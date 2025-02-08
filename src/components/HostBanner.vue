@@ -4,6 +4,7 @@
       <h1>{{ $t('host.title') }}</h1>
     </div>
     <div class="first-slide" id="firstSlide">
+      <div class="bloom-bg"></div>
       <div class="first-slide__photos">
         <div class="left-photo-container">
           <div
@@ -162,6 +163,18 @@ onUnmounted(() => {
     margin: auto;
     max-width: 14.4rem;
     height: 100svh;
+    position: relative;
+    .bloom-bg {
+      position: absolute;
+      @include bgCenter(100% 100%);
+      width: 6.3rem;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      height: 6.3rem;
+      background-image: url('images/host/circle-blue.png');
+    }
     &__title {
       overflow: hidden;
       text-align: center;
@@ -236,6 +249,7 @@ onUnmounted(() => {
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
+    text-align: justify;
   }
 }
 .second-slide {

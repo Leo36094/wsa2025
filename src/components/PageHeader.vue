@@ -60,7 +60,7 @@ function changeLang(lang: LangBtn) {
 </script>
 <style lang="scss" scoped>
 $header-bg: #07100e;
-$langs-bg: #112c36;
+$langs-bg: #00000033;
 .page-header {
   background-color: transparent;
   position: fixed;

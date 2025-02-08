@@ -1,25 +1,15 @@
 <template>
   <div class="home-banner">
-    <main
-      class="home-banner-container"
-      :style="
-        scrollNow >= 10 && {
-          opacity: 0,
-        }
-      "
-    >
-      <div class="main-banner-container">
+    <main class="home-banner-container">
+      <div :class="['main-banner-container', { hide: scrollNow > 5 }]">
         <div class="filter"></div>
+
         <div class="banner">
-          <Transition name="fade" mode="out-in">
-            <div v-if="scrollNow >= 20" class="banner-img"></div>
-            <div v-else class="banner-img"></div>
-          </Transition>
+          <div class="banner-img"></div>
         </div>
+        <HomeBannerTitle v-if="scrollNow < 5" class="banner__title" />
       </div>
     </main>
-
-    <HomeBannerTitle v-if="scrollNow < 5" class="banner__title" />
   </div>
 
   <div class="home-banner__slide">
@@ -84,6 +74,11 @@ onUnmounted(() => {
   }
   .main-banner-container {
     height: 100vh;
+    transition: opacity 0.5s ease;
+    position: relative;
+    &.hide {
+      opacity: 0;
+    }
   }
   .banner {
     @include flexCenter;
@@ -106,7 +101,7 @@ onUnmounted(() => {
       text-align: center;
       z-index: 2;
       left: 50%;
-      top: 8.01rem;
+      bottom: 1.16rem;
       transform: translate(-50%);
       white-space: nowrap;
     }
@@ -144,6 +139,7 @@ onUnmounted(() => {
     line-height: 0.193rem;
     backdrop-filter: blur(0.4rem);
     padding: 0.56rem;
+    text-align: justify;
   }
 }
 .home-banner__slide {

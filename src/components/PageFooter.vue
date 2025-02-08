@@ -99,6 +99,10 @@
       a:not(:last-child) {
         margin-bottom: 0.16rem;
       }
+      .icon {
+        margin-left: 0.08rem;
+        margin-right: 0;
+      }
     }
     .social-media {
       margin-left: auto;

@@ -143,7 +143,7 @@ $border-color: #18475b;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   .currency-table {
     width: 100%;
     min-height: 3.38rem;

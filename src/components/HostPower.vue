@@ -10,11 +10,12 @@
         <div class="power-desc"></div>
       </aside>
       <div class="power-content">
-        <img src="https://fakeimg.pl/410x140/" alt="power" />
+        <div class="power-img"></div>
       </div>
     </div>
   </div>
 </template>
+<script lang="ts" setup></script>
 <style lang="scss" scoped>
 .power {
   position: relative;
@@ -53,6 +54,12 @@
     background-color: #fff;
     overflow: hidden;
     @include flexCenter;
+    .power-img {
+      @include bgCenter(100% 100%);
+      width: 5.775rem;
+      height: 2.655rem;
+      background-image: url('/images/wsa/host_section02_plug.png');
+    }
   }
 }
 </style>

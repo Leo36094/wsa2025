@@ -74,8 +74,8 @@ onMounted(() => {
   ScrollTrigger.matchMedia({
     // desktop
     '(min-width: 1024px)': function () {
-      gsap.from(leftPhoto.value, { duration: 1, opacity: 0, y: 150 })
-      gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150 })
+      gsap.from(leftPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
+      gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
       // second section
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -173,7 +173,7 @@ onUnmounted(() => {
       transform: translate(-50%, -50%);
       pointer-events: none;
       height: 6.3rem;
-      background-image: url('images/host/circle-blue.png');
+      background-image: url('/images/host/circle-blue.png');
     }
     &__title {
       overflow: hidden;

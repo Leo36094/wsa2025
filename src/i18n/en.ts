@@ -28,7 +28,7 @@ This competition is expected to attract more than 500 participants from 28 membe
 We warmly welcome participants and friends from all over the world and look forward to share this exciting competition with everyone. This is not only a stage to showcase skills and talents, but also an opportunity to promote cultural exchanges and build friendship between countries.`,
   },
   host: {
-    title: 'TAIPEI',
+    title: 'Taipei',
     welcome: 'Welcome to',
     welcome_sub: 'Taipei',
     content: `

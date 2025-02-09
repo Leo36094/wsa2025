@@ -136,11 +136,11 @@ $border-color: #18475b;
 
 .right-panel {
   width: 8.21rem;
-  height: 300vh;
 }
 
 .content {
-  height: 100vh;
+  height: 100%;
+  margin-bottom: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -158,7 +158,7 @@ $border-color: #18475b;
         padding: 0.24rem;
         flex: 1;
         min-height: 1.6rem;
-        background-color: #f5f5f5;
+        background-color: #fff;
         @include flexCenter;
         &:not(:last-child) {
           border-right: 0.01rem solid $border-color;

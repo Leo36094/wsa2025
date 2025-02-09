@@ -23,7 +23,6 @@ const props = defineProps<{
     @include bgCenter(100%);
   }
   .bill-label {
-    background-color: #f0f0f0;
     font-size: 0.16rem;
     color: #000;
     line-height: 0.19rem;

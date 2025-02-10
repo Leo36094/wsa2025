@@ -72,6 +72,7 @@ onMounted(async () => {
       font-size: 0.48rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
+      padding: 0 0.8rem;
     }
     .news-inner-content {
       max-width: 8.88rem;
@@ -109,6 +110,18 @@ onMounted(async () => {
           aspect-ratio: 16/9;
           width: 100%;
         }
+      }
+    }
+  }
+}
+@include tablet {
+  .news-inner-container {
+    .news-inner {
+      .news-inner-title {
+        padding: 0 0.4rem;
+      }
+      .news-inner-content {
+        padding: 0 0.4rem;
       }
     }
   }

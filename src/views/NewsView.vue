@@ -30,13 +30,13 @@
                   as-child
                 >
                   <Button
-                    class="w-10 h-10 p-0"
+                    class="display-page w-10 h-10 p-0"
                     :variant="item.value === page ? 'default' : 'outline'"
                   >
                     {{ item.value }}
                   </Button>
                 </PaginationListItem>
-                <PaginationEllipsis v-else :key="item.type" :index="index" />
+                <PaginationEllipsis class="page-ellipsis" v-else :key="item.type" :index="index" />
               </template>
 
               <PaginationNext class="pagination-action-button" />
@@ -146,6 +146,15 @@ onMounted(async () => {
 
   .pagination-action-button {
     margin: 0 0.08rem;
+  }
+  .display-page {
+    &[data-selected] {
+      background-color: #c8e14b;
+      color: #000;
+    }
+  }
+  .page-ellipsis {
+    color: #fff;
   }
 }
 </style>

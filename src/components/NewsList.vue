@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div class="news-list news-list--mb">
+  <!-- <div class="news-list news-list--mb">
     <div class="news-row-container">
       <div
         class="news-item-container"
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'

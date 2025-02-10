@@ -13,4 +13,12 @@
     color: #c8e14b;
   }
 }
+@include mobile {
+  .banner-title {
+    width: 2.08rem;
+    white-space: normal;
+    font-size: 0.36rem;
+    line-height: 0.43rem;
+  }
+}
 </style>

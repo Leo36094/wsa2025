@@ -57,4 +57,19 @@ function goToNews() {
     }
   }
 }
+@include mobile {
+  .news {
+    padding-top: 0.76rem;
+    .news-title {
+      padding-left: 0.24rem;
+      padding-bottom: 0.24rem;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+    .more-button {
+      margin-top: 0.16rem;
+      margin-bottom: 0rem;
+    }
+  }
+}
 </style>

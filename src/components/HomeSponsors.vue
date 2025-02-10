@@ -9,13 +9,13 @@
           <div class="sponsors-list">
             <div
               class="sponsors-item"
-              v-for="(item, idx) in sponsors"
+              v-for="item in sponsors"
               :key="item"
               :style="{ backgroundImage: `url(${item})` }"
             ></div>
             <div
               class="sponsors-item"
-              v-for="(item, idx) in sponsors"
+              v-for="item in sponsors"
               :key="item"
               :style="{ backgroundImage: `url(${item})` }"
             ></div>
@@ -100,6 +100,35 @@ const sponsors = Array(8)
       color: #000;
       width: 1.76rem;
       height: 1.44rem;
+    }
+  }
+}
+@include mobile {
+  .home-sponsors {
+    padding-top: 0.76rem;
+    margin-bottom: 0.72rem;
+    .sponsors {
+      width: 100%;
+      padding: 0.24rem 0;
+      border-radius: 0;
+    }
+    .sponsors__title {
+      font-size: 0.32rem;
+      padding: 0;
+      padding-left: 0.24rem;
+      margin-bottom: 0.24rem;
+    }
+    .sponsors-row {
+      &:not(:last-child) {
+        margin-bottom: 0.24rem;
+      }
+    }
+    .sponsors-list {
+      gap: 0.08rem;
+      .sponsors-item {
+        width: 1.27rem;
+        height: 1.05rem;
+      }
     }
   }
 }

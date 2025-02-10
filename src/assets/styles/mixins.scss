@@ -31,10 +31,18 @@
   @media only screen and (max-width: #{$querySM}px) and (orientation: portrait) {
     font-size: calc(100vw / #{$querySM} * 100);
   }
+  @media only screen and (max-width: 500px) and (orientation: portrait) {
+    font-size: 100px;
+  }
 }
 
-@mixin mobile() {
+@mixin tablet() {
   @media only screen and (max-width: #{$querySM}px) and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media only screen and (max-width: 500px) and (orientation: portrait) {
     @content;
   }
 }

@@ -42,6 +42,7 @@ import HomeBannerTitle from './HomeBannerTitle.vue'
 const scrollNow = ref(0)
 
 function setScrollVar() {
+  console.log('trigger', window.innerWidth)
   const htmlElement = document.documentElement
   const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight
   htmlElement.style.setProperty(
@@ -50,12 +51,24 @@ function setScrollVar() {
   )
   scrollNow.value = Math.min(100, percentOfScreenHeightScrolled * 100)
 }
+function checkMobile() {
+  if (window.innerWidth < 750) {
+    window.removeEventListener('scroll', setScrollVar)
+  } else {
+    window.addEventListener('scroll', setScrollVar)
+  }
+}
 
 onMounted(() => {
-  window.addEventListener('scroll', setScrollVar)
+  console.log(window.innerWidth)
+  if (window.innerWidth > 750) {
+    window.addEventListener('scroll', setScrollVar)
+  }
+  window.addEventListener('resize', checkMobile)
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', setScrollVar)
+  window.removeEventListener('resize', checkMobile)
 })
 </script>
 <style lang="scss" scoped>
@@ -186,6 +199,56 @@ onUnmounted(() => {
     &-5 {
       top: 7.66rem;
       left: 7.58rem;
+    }
+  }
+}
+
+@include mobile() {
+  .home-banner {
+    position: relative;
+    top: 0;
+    pointer-events: none;
+    scroll-snap-align: start;
+    .banner {
+      @include flexCenter;
+      height: 100%;
+      position: relative;
+      &__title {
+        white-space: normal;
+        text-align: left;
+        left: 0.24rem;
+
+        transform: translate(0);
+      }
+    }
+  }
+  .slide-header {
+    @include flexCenter(column);
+    padding: 0 0.24rem;
+    .title {
+      width: 100%;
+      font-size: 0.36rem;
+      margin-right: 0;
+      margin-bottom: 0.16rem;
+      span {
+        line-height: 0.43rem;
+      }
+    }
+    .slide-desc {
+      width: 100%;
+      line-height: 0.2rem;
+      text-align: justify;
+      padding: 0;
+      background: transparent;
+    }
+  }
+  .home-banner__slide {
+    padding-top: 0.16rem;
+    .slide-container {
+      display: none;
+    }
+    .photo-item {
+      display: none;
     }
   }
 }

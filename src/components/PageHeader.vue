@@ -111,4 +111,15 @@ $langs-bg: #00000033;
     }
   }
 }
+@include mobile {
+  .page-header {
+    .wrapper {
+      width: 100%;
+      nav,
+      .langs {
+        display: none;
+      }
+    }
+  }
+}
 </style>

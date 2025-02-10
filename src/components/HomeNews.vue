@@ -57,7 +57,7 @@ function goToNews() {
     }
   }
 }
-@include mobile {
+@include tablet {
   .news {
     padding-top: 0.76rem;
     .news-title {

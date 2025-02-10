@@ -39,6 +39,8 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import HomeBannerTitle from './HomeBannerTitle.vue'
+
+const SCROLL_WIDTH = 743
 const scrollNow = ref(0)
 
 function setScrollVar() {
@@ -52,7 +54,7 @@ function setScrollVar() {
   scrollNow.value = Math.min(100, percentOfScreenHeightScrolled * 100)
 }
 function checkMobile() {
-  if (window.innerWidth < 750) {
+  if (window.innerWidth < SCROLL_WIDTH) {
     window.removeEventListener('scroll', setScrollVar)
   } else {
     window.addEventListener('scroll', setScrollVar)
@@ -61,7 +63,7 @@ function checkMobile() {
 
 onMounted(() => {
   console.log(window.innerWidth)
-  if (window.innerWidth > 750) {
+  if (window.innerWidth > SCROLL_WIDTH) {
     window.addEventListener('scroll', setScrollVar)
   }
   window.addEventListener('resize', checkMobile)
@@ -203,12 +205,11 @@ onUnmounted(() => {
   }
 }
 
-@include mobile() {
+@include tablet() {
   .home-banner {
     position: relative;
     top: 0;
     pointer-events: none;
-    scroll-snap-align: start;
     .banner {
       @include flexCenter;
       height: 100%;
@@ -216,39 +217,65 @@ onUnmounted(() => {
       &__title {
         white-space: normal;
         text-align: left;
-        left: 0.24rem;
-
-        transform: translate(0);
+        left: 0.56rem;
+        bottom: 0.56rem;
+        transform: none;
       }
-    }
-  }
-  .slide-header {
-    @include flexCenter(column);
-    padding: 0 0.24rem;
-    .title {
-      width: 100%;
-      font-size: 0.36rem;
-      margin-right: 0;
-      margin-bottom: 0.16rem;
-      span {
-        line-height: 0.43rem;
-      }
-    }
-    .slide-desc {
-      width: 100%;
-      line-height: 0.2rem;
-      text-align: justify;
-      padding: 0;
-      background: transparent;
     }
   }
   .home-banner__slide {
-    padding-top: 0.16rem;
-    .slide-container {
-      display: none;
+    padding-top: 0;
+    overflow: hidden;
+    .slide-header {
+      padding: 0;
+      translate: 0 calc(1% * (max(var(--scroll), 50) - 0) * 120 / 100);
+      .title {
+        width: 2.66rem;
+        font-size: 0.48rem;
+        margin-right: 0.16rem;
+        span {
+          line-height: 0.58rem;
+        }
+      }
+      .slide-desc {
+        width: 3.98rem;
+        height: 4.12rem;
+        line-height: 0.19rem;
+        font-size: 0.16rem;
+        padding: 0.16rem;
+      }
     }
     .photo-item {
-      display: none;
+      width: 2.96rem;
+      height: 1.8rem;
+      top: 2.02rem;
+      left: -0.14rem;
+      translate: 0 calc(-1% * (max(var(--scroll), 25)) * 100 / 100);
+      @for $i from 1 through 5 {
+        &-#{$i} {
+          translate: 0 calc(-1% * (max(var(--scroll), 25)) * 100 / 100);
+        }
+      }
+      &-1 {
+        top: 5.22rem;
+        left: 0.7rem;
+      }
+      &-2 {
+        top: 7.31rem;
+        left: -0.32rem;
+      }
+      &-3 {
+        top: 2.81rem;
+        left: 5.33rem;
+      }
+      &-4 {
+        top: 6.4rem;
+        left: 5.51rem;
+      }
+      &-5 {
+        top: 7.51rem;
+        left: 3.72rem;
+      }
     }
   }
 }

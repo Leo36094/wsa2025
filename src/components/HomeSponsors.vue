@@ -103,31 +103,30 @@ const sponsors = Array(8)
     }
   }
 }
-@include mobile {
+@include tablet {
   .home-sponsors {
-    padding-top: 0.76rem;
-    margin-bottom: 0.72rem;
+    padding-top: 0.96rem;
+    margin-bottom: 0.96rem;
     .sponsors {
-      width: 100%;
-      padding: 0.24rem 0;
-      border-radius: 0;
+      width: 6.64rem;
+      padding: 0.4rem 0;
     }
     .sponsors__title {
-      font-size: 0.32rem;
+      font-size: 0.48rem;
       padding: 0;
-      padding-left: 0.24rem;
-      margin-bottom: 0.24rem;
+      padding-left: 0.4rem;
+      margin-bottom: 0.4rem;
     }
     .sponsors-row {
       &:not(:last-child) {
-        margin-bottom: 0.24rem;
+        margin-bottom: 0.16rem;
       }
     }
     .sponsors-list {
-      gap: 0.08rem;
+      gap: 0.25rem;
       .sponsors-item {
-        width: 1.27rem;
-        height: 1.05rem;
+        width: 1.72rem;
+        height: 1.43rem;
       }
     }
   }

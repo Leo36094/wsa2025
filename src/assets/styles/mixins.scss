@@ -28,21 +28,21 @@
   @media only screen and (max-width: #{$queryLG}px) {
     font-size: calc(100vw / #{$queryLG} * 100);
   }
-  @media only screen and (max-width: #{$querySM}px) and (orientation: portrait) {
+  @media only screen and (max-width: #{$queryMD}px) {
     font-size: calc(100vw / #{$querySM} * 100);
   }
-  @media only screen and (max-width: 500px) and (orientation: portrait) {
-    font-size: 100px;
+  @media only screen and (max-width: #{$querySM}) and (orientation: portrait) {
+    font-size: calc(100vw / #{$queryXS} * 100);
   }
 }
 
 @mixin tablet() {
-  @media only screen and (max-width: #{$querySM}px) and (orientation: portrait) {
+  @media only screen and (max-width: #{$queryMD}px) {
     @content;
   }
 }
 @mixin mobile() {
-  @media only screen and (max-width: 500px) and (orientation: portrait) {
+  @media only screen and (max-width: 744px) and (orientation: portrait) {
     @content;
   }
 }

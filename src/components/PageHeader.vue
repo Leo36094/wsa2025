@@ -4,35 +4,45 @@
       <router-link to="/" class="logo">
         <IconLogo />
       </router-link>
-      <nav>
+      <nav class="nav-links-pc">
         <router-link v-for="navItem in nav" :key="navItem.name" :to="navItem.path">{{
           navItem.name
         }}</router-link>
       </nav>
-      <div class="langs">
-        <button
-          :class="['langs-btn', { 'langs-btn--active': currentLangs === lang.lang }]"
-          @click.prevent="changeLang(lang)"
-          :key="lang.lang"
-          v-for="lang in langBtns"
-        >
-          {{ lang.text }}
-        </button>
+      <LangButton class="langs-pc" />
+      <div :class="['hamburger-btn', { active: isMenuOpen }]" @click="toggleMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div :class="['sidebar-menu', { active: isMenuOpen }]">
+        <div class="sidebar-menu-inner">
+          <div class="sidebar-links">
+            <a
+              class="link-item"
+              v-for="navItem in nav"
+              :key="navItem.name"
+              @click="goRouteLink(navItem.path)"
+            >
+              {{ navItem.name }}
+            </a>
+          </div>
+          <LangButton class="sidebar-langs" />
+        </div>
       </div>
     </div>
   </header>
 </template>
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import { localeMessages } from '@/i18n'
+import { useRouter } from 'vue-router'
+import LangButton from './LangButton.vue'
 import IconLogo from '@/components/icons/IconLogo.vue'
 
 import { useI18n } from 'vue-i18n'
 
-const currentLangs = ref('en')
-
-const { t, locale, setLocaleMessage } = useI18n({ useScope: 'global' })
-
+const { t } = useI18n({ useScope: 'global' })
+const router = useRouter()
 const nav = computed(() => [
   { name: t('header.host'), path: '/host' },
   { name: t('header.competition'), path: '/competition' },
@@ -41,30 +51,24 @@ const nav = computed(() => [
   { name: t('header.news'), path: '/news' },
 ])
 
-type LangBtn = {
-  lang: string
-  text: string
-  message: (typeof localeMessages)[keyof typeof localeMessages]
+const isMenuOpen = ref(false)
+
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value
 }
-
-const langBtns = computed(() => [
-  { lang: 'en', text: t('header.lang_en'), message: localeMessages.en },
-  { lang: 'tw', text: t('header.lang_tw'), message: localeMessages.tw },
-])
-
-function changeLang(lang: LangBtn) {
-  currentLangs.value = lang.lang
-  setLocaleMessage(lang.lang, lang.message)
-  locale.value = lang.lang
+function goRouteLink(path: string) {
+  isMenuOpen.value = false
+  router.push(path)
 }
 </script>
 <style lang="scss" scoped>
 $header-bg: #07100e;
-$langs-bg: #00000033;
+
 .page-header {
   background-color: transparent;
   position: fixed;
   width: 100%;
+  overflow: hidden;
   z-index: 100;
   .wrapper {
     display: flex;
@@ -88,36 +92,86 @@ $langs-bg: #00000033;
         margin-right: 0.4rem;
       }
     }
-    .langs {
-      min-width: 1.65rem;
-      height: 0.5rem;
-      border-radius: 1rem;
-      background-color: $langs-bg;
-      @include flexCenter;
-      .langs-btn {
-        @include flexCenter;
-        color: #fff;
-        width: auto;
-        height: 0.35rem;
-        background: transparent;
-        border-radius: 1rem;
-        padding: 0.08rem;
-        color: #899ca4;
-        &--active {
-          color: #fff;
-          border: 1px solid #fff;
-        }
-      }
+    .sidebar-menu {
+      display: none;
+    }
+    .hamburger-btn {
+      display: none;
     }
   }
 }
-@include mobile {
+@include tablet {
   .page-header {
+    height: 0.76rem;
+    max-width: 7.44rem;
     .wrapper {
-      width: 100%;
-      nav,
-      .langs {
+      padding: 0.06rem 0.16rem;
+      .nav-links-pc,
+      .langs-pc {
         display: none;
+      }
+      .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 5;
+        height: 0.2rem;
+        .bar {
+          transition: all 0.3s ease;
+          width: 0.24rem;
+          height: 0.02rem;
+          background-color: #fff;
+        }
+        &.active {
+          .bar {
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(0.075rem, 0.08rem);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(0.05rem, -0.05rem);
+            }
+          }
+        }
+      }
+      .sidebar-menu {
+        width: 6.8rem;
+        top: 0;
+        overflow: auto;
+        background-color: #18475b;
+        position: absolute;
+        right: -100%;
+        transition: all 0.3s ease;
+        display: block;
+        height: 100svh;
+        &.active {
+          right: 0;
+        }
+        .sidebar-menu-inner {
+          padding-top: 0.76rem;
+          height: 99.9%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 0.4rem;
+          .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            .link-item {
+              padding: 0.16rem 0.4rem;
+              font-size: 0.28rem;
+              font-weight: 700;
+              line-height: 0.33rem;
+            }
+          }
+          .sidebar-langs {
+            width: 1.65rem;
+            margin: 0 auto;
+          }
+        }
       }
     }
   }

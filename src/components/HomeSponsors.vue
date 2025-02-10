@@ -131,6 +131,37 @@ const sponsors = Array(8)
     }
   }
 }
+
+@include mobile {
+  .home-sponsors {
+    padding-top: 0.72rem;
+    margin-bottom: 0.72rem;
+    .sponsors {
+      width: 100%;
+      border-radius: 0;
+      padding: 0.24rem 0;
+    }
+    .sponsors__title {
+      padding-left: 0.24rem;
+      font-size: 0.36rem;
+      line-height: 0.43rem;
+      margin-bottom: 0.24rem;
+    }
+    .sponsors-row {
+      &:not(:last-child) {
+        margin-bottom: 0.24rem;
+      }
+    }
+    .sponsors-list {
+      gap: 0.08rem;
+      .sponsors-item {
+        width: 1.27rem;
+        height: 1.05rem;
+      }
+    }
+  }
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

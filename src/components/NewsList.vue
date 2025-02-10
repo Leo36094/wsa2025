@@ -18,24 +18,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="news-list news-list--mb">
-    <div class="news-row-container">
-      <div
-        class="news-item-container"
-        v-for="newsItem in props.news"
-        :key="newsItem.id"
-        @click="goToNewsDetail(newsItem.id)"
-      >
-        <div class="news-item">
-          <div class="news-item__img" :style="{ backgroundImage: `url(${newsItem.image})` }"></div>
-          <h4 class="news-item__title">
-            {{ newsItem.title }}
-          </h4>
-          <p class="news-item__date">{{ newsItem.date }}</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
@@ -148,6 +130,28 @@ function goToNewsDetail(id: number) {
       }
       &__date {
         padding: 0 0.4rem;
+      }
+    }
+  }
+}
+@include mobile {
+  .news-list {
+    .news-item {
+      &__img {
+        width: 2.72rem;
+        height: 1.5rem;
+        margin-bottom: 0.16rem;
+      }
+      &__title {
+        font-size: 0.24rem;
+        line-height: normal;
+        margin-bottom: 0.08rem;
+        padding: 0 0.24rem;
+      }
+      &__date {
+        padding: 0 0.24rem;
+        font-size: 0.12rem;
+        line-height: normal;
       }
     }
   }

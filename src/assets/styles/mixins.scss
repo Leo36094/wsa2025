@@ -31,7 +31,7 @@
   @media only screen and (max-width: #{$queryMD}px) {
     font-size: calc(100vw / #{$querySM} * 100);
   }
-  @media only screen and (max-width: #{$querySM}) and (orientation: portrait) {
+  @media only screen and (max-width: #{$querySM}px) and (orientation: portrait) {
     font-size: calc(100vw / #{$queryXS} * 100);
   }
 }

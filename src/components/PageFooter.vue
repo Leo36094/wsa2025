@@ -124,4 +124,59 @@
     margin-top: 0.74rem;
   }
 }
+@include tablet {
+  .page-footer-wrapper {
+    padding: 0.4rem 0 0.21rem 0.48rem;
+  }
+  .page-footer {
+    &__row {
+      flex-direction: column;
+    }
+    .col {
+      margin-bottom: 0.21rem;
+    }
+    .row.address {
+      margin-bottom: 0.56rem;
+      margin-right: 0;
+    }
+    .social-media {
+      width: 100%;
+      .col {
+        margin-bottom: 0;
+        img {
+          width: 0.36rem;
+          height: 0.36rem;
+          object-fit: cover;
+        }
+      }
+    }
+    .copyrights {
+      margin-top: 0.16rem;
+    }
+  }
+}
+@include mobile {
+  .page-footer-wrapper {
+    padding-left: 0.24rem;
+    padding-right: 0.24rem;
+  }
+  .page-footer {
+    .contact-info {
+      .col {
+        margin-bottom: 0.16rem;
+      }
+    }
+    .row.address {
+      margin-bottom: 0.4rem;
+      .col {
+        margin-bottom: 0;
+      }
+    }
+    .external-links {
+      .col {
+        margin-bottom: 0.16rem;
+      }
+    }
+  }
+}
 </style>

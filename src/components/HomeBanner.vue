@@ -34,6 +34,10 @@
         <div class="photo-item photo-item-5" data-aos="fade-up-left" ref="lastPhoto"></div>
       </div>
     </div>
+    <div class="mb-photo-list" data-aos="fade-down">
+      <div class="photo-item" data-aos="fade"></div>
+      <div class="photo-item photo-item-3" data-aos="fade-up" data-aos-offset="100"></div>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
@@ -44,7 +48,6 @@ const SCROLL_WIDTH = 743
 const scrollNow = ref(0)
 
 function setScrollVar() {
-  console.log('trigger', window.innerWidth)
   const htmlElement = document.documentElement
   const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight
   htmlElement.style.setProperty(
@@ -61,15 +64,26 @@ function checkMobile() {
   }
 }
 
+function getScrollPosition() {
+  if (window.innerWidth < SCROLL_WIDTH) {
+    scrollNow.value = document.documentElement.scrollTop
+  }
+}
+
 onMounted(() => {
-  console.log(window.innerWidth)
   if (window.innerWidth > SCROLL_WIDTH) {
     window.addEventListener('scroll', setScrollVar)
+  } else {
+    window.addEventListener('scroll', getScrollPosition)
   }
   window.addEventListener('resize', checkMobile)
 })
 onUnmounted(() => {
-  window.removeEventListener('scroll', setScrollVar)
+  if (window.innerWidth > SCROLL_WIDTH) {
+    window.removeEventListener('scroll', setScrollVar)
+  } else {
+    window.removeEventListener('scroll', getScrollPosition)
+  }
   window.removeEventListener('resize', checkMobile)
 })
 </script>
@@ -203,6 +217,9 @@ onUnmounted(() => {
       left: 7.58rem;
     }
   }
+  .mb-photo-list {
+    display: none;
+  }
 }
 
 @include tablet() {
@@ -276,6 +293,62 @@ onUnmounted(() => {
         top: 7.51rem;
         left: 3.72rem;
       }
+    }
+  }
+}
+@include mobile {
+  .home-banner {
+    .banner {
+      &__title {
+        left: 0.24rem;
+        bottom: 0.68rem;
+      }
+    }
+  }
+  .home-banner__slide {
+    padding-top: 0.76rem;
+    .slide-container {
+      display: none;
+    }
+    .slide-header {
+      translate: 0;
+      flex-direction: column;
+      padding: 0 0.24rem;
+      height: 100%;
+      .title {
+        width: 100%;
+        font-size: 0.36rem;
+        margin-right: 0rem;
+        margin-bottom: 0.16rem;
+        span {
+          line-height: 0.43rem;
+        }
+      }
+      .slide-desc {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: none;
+      }
+    }
+    .mb-photo-list {
+      @include flexCenter;
+      height: 1.1rem;
+      position: relative;
+      margin-top: 0.32rem;
+      margin-bottom: 0.99rem;
+      .photo-item {
+        position: relative;
+        translate: 0;
+        top: 0;
+        left: 0;
+        width: 1.62rem;
+        height: 1.1rem;
+        @include bgCenter(cover);
+      }
+    }
+    .photos {
+      display: none;
     }
   }
 }

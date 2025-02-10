@@ -72,4 +72,15 @@ function goToNews() {
     }
   }
 }
+@include mobile {
+  .news {
+    .more-button {
+      font-size: 0.16rem;
+      img {
+        margin-left: 0.08rem;
+        width: 0.28rem;
+      }
+    }
+  }
+}
 </style>

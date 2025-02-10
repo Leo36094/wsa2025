@@ -68,7 +68,6 @@ $header-bg: #07100e;
   background-color: transparent;
   position: fixed;
   width: 100%;
-  overflow: hidden;
   z-index: 100;
   .wrapper {
     display: flex;
@@ -139,20 +138,21 @@ $header-bg: #07100e;
       }
       .sidebar-menu {
         width: 6.8rem;
-        top: 0;
         overflow: auto;
         background-color: #18475b;
         position: absolute;
-        right: -100%;
-        transition: all 0.3s ease;
-        display: block;
+        top: 0;
         height: 100svh;
+        transition: all 0.3s ease;
+        transform: translateX(100%);
+        right: 0;
+        display: block;
         &.active {
-          right: 0;
+          transform: translateX(0%);
         }
         .sidebar-menu-inner {
           padding-top: 0.76rem;
-          height: 99.9%;
+          height: 100svh;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -172,6 +172,15 @@ $header-bg: #07100e;
             margin: 0 auto;
           }
         }
+      }
+    }
+  }
+}
+@include mobile {
+  .page-header {
+    .wrapper {
+      .sidebar-menu {
+        width: 2.96rem;
       }
     }
   }

@@ -43,4 +43,16 @@
     }
   }
 }
+@include mobile {
+  .banner-title {
+    .splits {
+      font-size: 0.36rem;
+      width: 2.08rem;
+      line-height: 0.43rem;
+    }
+    .banner-year {
+      line-height: 0.43rem;
+    }
+  }
+}
 </style>

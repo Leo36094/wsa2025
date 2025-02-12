@@ -43,4 +43,35 @@ const props = defineProps<{
     }
   }
 }
+@include tablet {
+  .climate-item {
+    &__icon {
+      width: 0.68rem;
+      height: 0.68rem;
+    }
+    &__copy {
+      h4 {
+        margin-bottom: 0.16rem;
+      }
+      p {
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+@include mobile {
+  .climate-item {
+    &__icon {
+      width: 0.44rem;
+      height: 0.44rem;
+    }
+    &__copy {
+      margin-left: 0.16rem;
+      h4 {
+        font-size: 0.16rem;
+      }
+    }
+  }
+}
 </style>

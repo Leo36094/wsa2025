@@ -41,4 +41,9 @@ const props = defineProps<{
     font-weight: 700;
   }
 }
+@include mobile {
+  .coin-group .imgs {
+    margin-bottom: 0.16rem;
+  }
+}
 </style>

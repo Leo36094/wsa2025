@@ -178,7 +178,10 @@ $header-bg: #07100e;
 }
 @include mobile {
   .page-header {
+    width: 100%;
+    max-width: 100%;
     .wrapper {
+      /* width: 100%; */
       .sidebar-menu {
         width: 2.96rem;
       }

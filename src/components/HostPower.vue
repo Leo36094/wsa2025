@@ -62,4 +62,61 @@
     }
   }
 }
+@include tablet {
+  .power {
+    .power-container {
+      flex-direction: column;
+      padding: 0 0.4rem;
+    }
+    .power-title {
+      width: 100%;
+      margin-right: 0;
+      h4 {
+        margin-bottom: 0;
+      }
+      p {
+        margin: 0.32rem 0;
+      }
+    }
+    .sitebar-light {
+      width: 3rem;
+      height: 3rem;
+    }
+    .power-content {
+      width: 100%;
+      .power-img {
+        width: 4.6rem;
+        height: 2.12rem;
+      }
+    }
+  }
+}
+@include mobile {
+  .power {
+    margin: 0.56rem auto;
+    .power-title {
+      h4 {
+        font-size: 0.24rem;
+        line-height: normal;
+      }
+      p {
+        font-size: 0.16rem;
+        line-height: normal;
+      }
+    }
+    .sitebar-light {
+      display: none;
+    }
+    .power-content {
+      width: 100%;
+      height: 1.43rem;
+      @include flexCenter;
+      padding: 0.2rem;
+      .power-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
 </style>

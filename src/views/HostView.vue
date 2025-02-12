@@ -1,10 +1,10 @@
 <template>
   <div class="host">
     <HostBanner />
-    <!-- <HostCurrency />
+    <HostCurrency />
     <HostPower />
     <HostClimate />
-    <HostSkill /> -->
+    <HostSkill />
   </div>
 </template>
 

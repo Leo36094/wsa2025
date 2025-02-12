@@ -29,4 +29,9 @@ const props = defineProps<{
     font-weight: 700;
   }
 }
+@include mobile {
+  .bill-group .bill-img {
+    margin-bottom: 0.16rem;
+  }
+}
 </style>

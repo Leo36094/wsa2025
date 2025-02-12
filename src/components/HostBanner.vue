@@ -42,7 +42,7 @@
       <p class="welcome-desc">{{ $t('host.content') }}</p>
     </div>
     <div class="image-row" ref="bottomRow">
-      <div data-aos="fade-up" data-aos-offset="100" class="bottom-rest" ref="bottomRest">
+      <div data-aos="fade-up" data-aos-offset="0" class="bottom-rest" ref="bottomRest">
         <img class="image-item" :src="hostImages[4]" alt="banner4" />
         <img class="image-item" :src="hostImages[5]" alt="banner5" />
       </div>
@@ -178,7 +178,6 @@ onUnmounted(() => {
     &__title {
       overflow: hidden;
       text-align: center;
-      height: 1.07rem;
       margin: 1.44rem auto;
       h1 {
         color: transparent;
@@ -188,12 +187,6 @@ onUnmounted(() => {
         font-weight: 700;
         animation: title-slide-up 0.5s forwards;
       }
-    }
-    p {
-      margin: auto;
-      width: 6.7rem;
-      font-size: 0.16rem;
-      line-height: 0.2rem;
     }
     &__photos {
       padding: 0 0.6rem;
@@ -288,9 +281,16 @@ onUnmounted(() => {
     width: 100%;
     .first-slide {
       width: 7.5rem;
+      max-width: 100%;
       &__photos {
         padding: 0 0.4rem;
         flex-direction: column;
+      }
+      &__title {
+        margin: 1.1rem auto 0.32rem auto;
+        h1 {
+          font-size: 0.48rem;
+        }
       }
       .left-photo-container,
       .right-photo-container {
@@ -342,7 +342,8 @@ onUnmounted(() => {
     .image-row {
       display: flex;
       justify-content: space-between;
-      @include withContainer;
+      max-width: 100%;
+      overflow: hidden;
       .image-item {
         width: 2.48rem;
         height: 1.7rem;
@@ -350,6 +351,83 @@ onUnmounted(() => {
         flex: 1;
         aspect-ratio: 16/9;
       }
+    }
+  }
+}
+
+@include mobile {
+  .host-banner {
+    .bloom-bg {
+      display: none;
+    }
+    .first-slide {
+      height: 100%;
+      width: 100%;
+      margin-bottom: 1rem;
+      &__photos {
+        padding: 0 0.24rem;
+      }
+      &__title {
+        height: auto;
+        margin: 0.32rem auto;
+        h1 {
+          font-size: 0.36rem;
+        }
+      }
+      .left-photo-container,
+      .right-photo-container {
+        height: auto;
+      }
+      .photo-item {
+        width: 2.16rem;
+        height: 1.22rem;
+        &--right {
+          margin-top: 0.3rem;
+        }
+      }
+    }
+  }
+  .host-copy {
+    max-width: 100%;
+    padding: 0 0.24rem 0.24rem 0.24rem;
+    .welcome-title {
+      margin-bottom: 0.164em;
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+        margin-right: 0.05rem;
+      }
+      .title,
+      .subtitle {
+        font-size: 0.36rem;
+        font-weight: 700;
+      }
+    }
+    .welcome-desc {
+      font-size: 0.16rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .second-slide {
+    .image-row {
+      .image-item {
+        width: 1.61rem;
+        height: 0.97rem;
+      }
+    }
+    #topRow {
+      .image-item:last-child {
+        display: none;
+      }
+    }
+    #secondLast {
+      display: none;
+    }
+    #topFirst {
+      transform: translate(0, 0);
+      opacity: 1;
+      scale: 1;
     }
   }
 }

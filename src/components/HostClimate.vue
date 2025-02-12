@@ -5,7 +5,7 @@
       <div class="climate-title">
         {{ $t('host.climate_title') }}
       </div>
-      <div class="climate-content">
+      <div v-if="isDesktop" class="climate-content">
         <div class="row">
           <div class="col">
             <HostClimateItem
@@ -48,10 +48,22 @@
           </div>
         </div>
       </div>
+      <div v-else class="climate-content">
+        <div class="row" v-for="(item, index) in Object.keys(icons)" :key="item">
+          <div class="col">
+            <HostClimateItem
+              :icon="icons[item as keyof typeof icons]"
+              :title="$t(`host.climate_title${index + 1}`)"
+              :desc="$t(`host.climate_desc${index + 1}`)"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
+import { type Ref, inject } from 'vue'
 import HostClimateItem from '@/components/HostClimateItem.vue'
 
 const icons = {
@@ -61,6 +73,8 @@ const icons = {
   humidity: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_humidity-alert.svg`,
   wind: `${import.meta.env.BASE_URL}images/wsa/icon/host/mdi_weather-windy.svg`,
 }
+
+const isDesktop = inject<Ref<boolean>>('isDesktop')
 </script>
 <style lang="scss" scoped>
 .climate {
@@ -103,6 +117,62 @@ const icons = {
         &:not(:last-child) {
           margin-right: 0.56rem;
         }
+      }
+    }
+  }
+}
+@include tablet {
+  .climate {
+    margin-bottom: 0.6rem;
+    .climate-container {
+      padding: 0 0.4rem;
+      .title-light {
+        display: none;
+      }
+      .climate-title {
+        font-size: 0.36rem;
+        padding-top: 0;
+        text-align: left;
+        margin-bottom: 0.32rem;
+      }
+      .climate-content {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .row {
+        &:not(:last-child) {
+          margin-bottom: 0.32rem;
+        }
+        .col {
+          margin: 0 auto;
+        }
+      }
+      .climate-item__copy {
+        h4 {
+          line-height: 0.28rem;
+          margin-bottom: 0.16rem;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .climate {
+    .climate-container {
+      padding: 0 0.24rem;
+      .title-light {
+        width: 2.6rem;
+        height: 2.6rem;
+        display: block;
+        top: -0.5rem;
+      }
+      .row:not(:last-child) {
+        margin-bottom: 0.24rem;
+      }
+      .climate-title {
+        font-size: 0.24rem;
+        text-align: center;
+        margin-bottom: 0.24rem;
       }
     }
   }

@@ -10,7 +10,7 @@
       <div class="column right-panel">
         <!-- 右邊的內容 -->
         <div class="content">
-          <div class="currency-table">
+          <div v-if="isDesktop" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencyCoin :label="$t('host.coin50')" :imgs="[coinImages[4]]" />
@@ -31,9 +31,28 @@
               </div>
             </div>
           </div>
+          <div v-else class="currency-table currency-table--mb">
+            <div class="row">
+              <div class="col">
+                <HostCurrencyCoin :label="$t('host.coin50')" :imgs="[coinImages[4]]" />
+              </div>
+              <div class="col">
+                <HostCurrencyCoin :label="$t('host.coin20')" :imgs="[coinImages[3]]" />
+              </div>
+              <div class="col">
+                <HostCurrencyCoin :label="$t('host.coin10')" :imgs="[coinImages[2]]" />
+              </div>
+              <div class="col">
+                <HostCurrencyCoin :label="$t('host.coin5')" :imgs="[coinImages[1]]" />
+              </div>
+              <div class="col">
+                <HostCurrencyCoin :label="$t('host.coin1')" :imgs="[coinImages[0]]" />
+              </div>
+            </div>
+          </div>
         </div>
         <div ref="lastCurrency" class="content">
-          <div class="currency-table">
+          <div v-if="isDesktop" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencBill :label="$t('host.banknote2000')" :img="billImages[4]" />
@@ -56,18 +75,39 @@
               </div>
             </div>
           </div>
+          <div v-else class="currency-table currency-table--mb">
+            <div class="row">
+              <div class="col">
+                <HostCurrencBill :label="$t('host.banknote2000')" :img="billImages[4]" />
+              </div>
+              <div class="col">
+                <HostCurrencBill :label="$t('host.banknote1000')" :img="billImages[3]" />
+              </div>
+              <div class="col">
+                <HostCurrencBill :label="$t('host.banknote500')" :img="billImages[2]" />
+              </div>
+              <div class="col">
+                <HostCurrencBill :label="$t('host.banknote200')" :img="billImages[1]" />
+              </div>
+              <div class="col">
+                <HostCurrencBill :label="$t('host.banknote100')" :img="billImages[0]" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="container container--mb"></div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { type Ref, ref, inject, onMounted, onUnmounted } from 'vue'
 import HostCurrencyCoin from './HostCurrencyCoin.vue'
 import HostCurrencBill from './HostCurrencBill.vue'
 
 const lastCurrency = ref<HTMLElement | null>(null)
 const cancelSticky = ref(false)
+const isDesktop = inject<Ref<boolean>>('isDesktop')
 
 const coinImages = [
   `${import.meta.env.BASE_URL}images/wsa/host_section02_1.png`,
@@ -85,6 +125,11 @@ const billImages = [
 ]
 
 function handleScroll() {
+  console.log(isDesktop?.value)
+  if (!isDesktop?.value) {
+    cancelSticky.value = true
+    return
+  }
   if (lastCurrency.value) {
     const { top } = lastCurrency.value.getBoundingClientRect()
     cancelSticky.value = top < 0
@@ -171,6 +216,58 @@ $border-color: #18475b;
   }
   &--3 {
     background-color: blue;
+  }
+}
+@include tablet {
+  .container {
+    flex-direction: column;
+    padding: 0 0.4rem;
+    .column.sidebar {
+      width: 100%;
+      margin: 0 auto;
+      .currency-title {
+        font-size: 0.24rem;
+        line-height: normal;
+      }
+      .currency-desc {
+        font-size: 0.16rem;
+        line-height: normal;
+      }
+      .sitebar-light {
+        width: 3rem;
+        height: 3rem;
+      }
+      .currency-title {
+        margin: 0;
+      }
+      .currency-desc {
+        margin: 0.24rem 0;
+      }
+    }
+    .column.right-panel {
+      width: 100%;
+      .content {
+        margin-bottom: 0.32rem;
+      }
+    }
+  }
+}
+@include mobile {
+  .container {
+    .column.right-panel .content {
+      margin-bottom: 0.08rem;
+    }
+    .content {
+      .currency-table.currency-table--mb {
+        .row {
+          flex-direction: column;
+          .col {
+            padding: 0.16rem;
+            border-bottom: 1px solid #000;
+          }
+        }
+      }
+    }
   }
 }
 </style>

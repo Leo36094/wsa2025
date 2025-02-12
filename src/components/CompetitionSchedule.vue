@@ -137,4 +137,59 @@ const schedules = computed(() => {
     }
   }
 }
+@include tablet {
+  .competition-schedule {
+    margin-bottom: 1.6rem;
+    .schedule {
+      padding: 0.4rem;
+      .schedule__title {
+        font-size: 0.36rem;
+      }
+      .bar--item {
+        height: auto;
+      }
+      .date {
+        line-height: normal;
+      }
+      .activity {
+        line-height: normal;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@include mobile {
+  .competition-schedule {
+    .schedule {
+      padding: 0.4rem 0.24rem;
+      min-height: 100%;
+      .schedule__title {
+        font-size: 0.28rem;
+        margin-bottom: 0.16rem;
+      }
+      .bar.bar--header {
+        font-size: 0.12rem;
+        padding: 0.08rem;
+      }
+      .bar--item {
+        padding: 0.08rem;
+      }
+      .date {
+        &__month {
+          font-size: 0.12rem;
+        }
+        &__num {
+          font-size: 0.16rem;
+        }
+        &__day {
+          font-size: 0.12rem;
+        }
+      }
+      .code,
+      .activity {
+        font-size: 0.16rem;
+      }
+    }
+  }
+}
 </style>

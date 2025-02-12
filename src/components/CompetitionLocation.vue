@@ -5,9 +5,9 @@
         <h4 class="location-subtitle">
           {{ $t('competition.location_subtitle') }}
         </h4>
-        <h2 class="location-title">
+        <h4 class="location-title">
           {{ $t('competition.location_title') }}
-        </h2>
+        </h4>
       </header>
       <div class="info-bar">
         <iframe
@@ -194,6 +194,99 @@ $pin-color: #c8e14b;
         > * {
           font-size: 0.12rem;
           color: #899ca4;
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .location {
+    .location-container {
+      padding: 0 0.4rem;
+      header {
+        margin-bottom: 0.32rem;
+        line-height: normal;
+        .location-title {
+          font-size: 0.36rem;
+          margin-top: 0.08rem;
+        }
+        .location-subtitle {
+          color: $title-color;
+          font-size: 0.16rem;
+        }
+      }
+      .info-bar {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        &__map {
+          width: 5.84rem;
+          height: 3.56rem;
+          margin-bottom: 0.24rem;
+        }
+        .info-bar__desc {
+          margin-left: 0;
+        }
+        .info-bar__detail {
+          margin-top: 0.32rem;
+          width: 100%;
+          padding: 0;
+          min-height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .location {
+    .location-container {
+      padding: 0;
+      header {
+        padding: 0 0.24rem;
+        margin-bottom: 0.24rem;
+        .location-title {
+          font-size: 0.24rem;
+          margin-top: 0.08rem;
+        }
+        .location-subtitle {
+          color: $title-color;
+          font-size: 0.16rem;
+        }
+      }
+      .info-bar {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 0.24rem;
+        &:last-child {
+          margin-bottom: 0.8rem;
+        }
+        &__map {
+          width: 2.72rem;
+          height: 1.53rem;
+          margin-bottom: 0.16rem;
+        }
+        .info-bar__img {
+          width: 2.72rem;
+          height: 1.53rem;
+        }
+        .info-bar__detail {
+          margin-top: 0.16rem;
+        }
+      }
+      .location-row {
+        &:not(:last-child) {
+          margin-bottom: 0.16rem;
+        }
+        .floor {
+          width: 0.45rem;
+          height: 0.27rem;
+          font-size: 0.16rem;
+          margin-right: 0.16rem;
+        }
+        .floor-name {
+          font-size: 0.16rem;
         }
       }
     }

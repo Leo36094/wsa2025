@@ -42,7 +42,7 @@
     <div class="host-copy">
       <div data-aos="example-anim1" data-aos-delay="500" class="welcome-img"></div>
       <div class="welcome-title" data-aos="fade-right" data-aos-delay="500">
-        <h4 class="title">{{ $t('competition.title_tag') }}</h4>
+        <h2 class="title">{{ $t('competition.title_tag') }}</h2>
         <h2 class="subtitle">{{ $t('competition.title_competition') }}</h2>
       </div>
       <p class="welcome-desc">{{ $t('competition.content') }}</p>
@@ -85,7 +85,7 @@ onMounted(() => {
 
   ScrollTrigger.matchMedia({
     // desktop
-    '(min-width: 1024px)': function () {
+    '(min-width: 750px)': function () {
       gsap.from(leftPhoto.value, { duration: 0.5, opacity: 0, y: 150, delay: 0.5 })
       gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
       // second section
@@ -297,6 +297,170 @@ onUnmounted(() => {
     justify-content: space-between;
   }
 }
+
+@include tablet {
+  .competition-banner {
+    width: 100%;
+    .first-slide {
+      width: 7.5rem;
+      max-width: 100%;
+      &__photos {
+        padding: 0 0.4rem;
+        flex-direction: column;
+      }
+      &__title {
+        margin: 1.1rem auto 0.32rem auto;
+        h1 {
+          font-size: 0.48rem;
+        }
+      }
+      .left-photo-container,
+      .right-photo-container {
+        width: 100%;
+        height: 2.7rem;
+        display: flex;
+      }
+      .right-photo-container {
+        justify-content: flex-end;
+      }
+      .photo-item {
+        width: 4.8rem;
+        height: 2.7rem;
+      }
+    }
+  }
+  .host-copy {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 6.16rem;
+    padding: 0.32rem 0;
+    margin: 0 auto;
+    .welcome-img {
+      display: none;
+    }
+    .welcome-title {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 0.24rem;
+      .title {
+        margin-right: 0.05rem;
+      }
+      .title,
+      .subtitle {
+        font-size: 0.36rem;
+        font-weight: 700;
+      }
+    }
+    .welcome-desc {
+      font-size: 0.16rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .second-slide {
+    width: 100%;
+    margin-bottom: 1.6rem;
+    .image-row {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      overflow: hidden;
+      .image-item {
+        width: 2.48rem;
+        height: 1.7rem;
+        object-fit: cover;
+        flex: 1;
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .competition-banner {
+    height: auto;
+    .bloom-bg {
+      display: none;
+    }
+    .first-slide {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      &__photos {
+        padding: 0 0.24rem;
+      }
+      &__title {
+        height: auto;
+        margin: 0.32rem auto;
+        h1 {
+          font-size: 0.36rem;
+        }
+      }
+      .left-photo-container,
+      .right-photo-container {
+        height: auto;
+      }
+      .photo-item {
+        width: 2.16rem;
+        height: 1.22rem;
+        &--right {
+          margin-top: 0.3rem;
+        }
+      }
+    }
+  }
+  .host-copy {
+    max-width: 100%;
+    padding: 0 0.24rem 0.24rem 0.24rem;
+    .welcome-title {
+      margin-top: 0.24rem;
+      margin-bottom: 0.16rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+        margin-right: 0.05rem;
+      }
+      .title,
+      .subtitle {
+        font-size: 0.36rem;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    .welcome-desc {
+      font-size: 0.16rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .second-slide {
+    .image-row {
+      border: 1px solid #fff;
+      border-left: none;
+      border-right: none;
+      .image-item {
+        border-radius: 0.1rem;
+        width: 1.61rem;
+        height: 0.97rem;
+      }
+    }
+    #topRow {
+      .image-item:last-child {
+        display: none;
+      }
+    }
+    #secondLast {
+      display: none;
+    }
+    #topFirst {
+      transform: translate(0, 0);
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
 @keyframes fadedown {
   0% {
     opacity: 0;

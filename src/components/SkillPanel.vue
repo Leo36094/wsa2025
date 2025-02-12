@@ -1,6 +1,6 @@
 <template>
   <div class="skill-panel">
-    <IconSkills :name="props.skillType" />
+    <IconSkills class="skill-icon" :name="props.skillType" />
     <p class="skill-name">
       {{ skillName }}
     </p>
@@ -34,7 +34,7 @@ const skillName = computed(() => SkillNameMap[props.skillType])
 .skill-panel {
   width: 6.27rem;
   height: 1.32rem;
-  @include bgCenter(contain);
+  @include bgCenter(100% 100%);
   border-radius: 0.1rem;
   padding: 0.32rem;
 
@@ -45,6 +45,26 @@ const skillName = computed(() => SkillNameMap[props.skillType])
     margin-left: 0.32rem;
     font-size: 0.28rem;
     font-weight: 700;
+  }
+}
+@include tablet {
+  .skill-panel {
+    width: 100%;
+    height: 1.12rem;
+    .skill-name {
+      line-height: normal;
+    }
+  }
+}
+@include mobile {
+  .skill-panel {
+    height: 1.05rem;
+    padding: 0.24rem;
+    .skill-name {
+      font-size: 0.16rem;
+      margin-left: 0.24rem;
+      line-height: normal;
+    }
   }
 }
 </style>

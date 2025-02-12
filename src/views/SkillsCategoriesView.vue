@@ -86,4 +86,37 @@ const goSkillDetail = (skill: SkillIconEnum) => {
     }
   }
 }
+@include tablet {
+  .category {
+    .category-container {
+      margin-bottom: 1.6rem;
+      .skill-list {
+        padding: 0 0.4rem;
+        flex-direction: column;
+        .skill-item {
+          width: 100%;
+          &:nth-child(2n) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .category {
+    padding-top: 0;
+    .category-container {
+      .skill-list {
+        padding: 0 0.24rem;
+      }
+      .category-title-container {
+        margin: 0.32rem auto 0.16rem auto;
+      }
+      .category-title {
+        font-size: 0.36rem;
+      }
+    }
+  }
+}
 </style>

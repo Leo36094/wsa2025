@@ -12,9 +12,7 @@
       <div class="copy-col">
         <h2 class="title" v-html="$t('host.skill_title')"></h2>
         <p class="desc">{{ $t('host.skill_desc') }}</p>
-        <a :href="$t('host.skill_link')" target="_blank" class="desc">
-          {{ $t('host.skill_link_text') }}
-        </a>
+        <p class="desc link" v-html="$t('host.skill_link_text')"></p>
       </div>
       <div class="image-col">
         <div
@@ -24,11 +22,29 @@
           :style="{ backgroundImage: `url(${item})` }"
         ></div>
       </div>
+      <div v-if="!isDesktop" class="skill-swiper">
+        <Swiper v-bind="swiperConfig">
+          <SwiperSlide v-for="(slide, slideIdx) in images" :key="slideIdx" class="slide">
+            <div
+              :style="{ backgroundImage: `url(${slide})` }"
+              class="img-slide"
+              alt="skill image decoration"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { type Ref, computed, inject } from 'vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
+import 'swiper/css/effect-fade'
+import { Autoplay, FreeMode } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
 const images = computed(() =>
   Array(6)
     .fill(0)
@@ -37,6 +53,24 @@ const images = computed(() =>
       return `${import.meta.env.BASE_URL}images/wsa/host_section04_${suffix}.jpg`
     }),
 )
+const isDesktop = inject<Ref<boolean>>('isDesktop')
+
+const swiperConfig = {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  freemode: true,
+  spaceBetween: 8,
+  slidesPerView: 1.5,
+  breakpoints: {
+    750: {
+      slidesPerView: 3,
+    },
+  },
+  modules: [Autoplay, FreeMode],
+}
 </script>
 <style lang="scss" scoped>
 .host-skill {
@@ -73,12 +107,63 @@ const images = computed(() =>
       .desc {
         font-size: 0.16rem;
         text-align: justify;
+
         &:not(:last-child) {
           margin-bottom: 0.16rem;
         }
+        &.link {
+          text-align: left;
+        }
+        :deep(a) {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
-      a.desc {
-        text-align: left;
+    }
+  }
+}
+@include tablet {
+  .host-skill .host-skill-container {
+    height: auto;
+    flex-direction: column;
+    .image-col {
+      display: none;
+    }
+    .copy-col {
+      margin: 0;
+      padding: 0 0.4rem;
+      .title {
+        font-size: 0.36rem;
+        margin: 0.49rem auto 0.32rem auto;
+      }
+      .desc {
+        font-size: 0.16rem;
+        margin-bottom: 0.32rem;
+      }
+    }
+    .skill-swiper {
+      width: 100%;
+      margin-bottom: 0.48rem;
+      .img-slide {
+        height: 1.64rem;
+        @include bgCenter(cover);
+      }
+    }
+  }
+}
+@include mobile {
+  .host-skill {
+    .host-skill-container {
+      .copy-col {
+        padding: 0 0.24rem;
+        .desc {
+          word-break: break-all;
+        }
+      }
+      .skill-swiper {
+        .img-slide {
+          height: 1.64rem;
+        }
       }
     }
   }

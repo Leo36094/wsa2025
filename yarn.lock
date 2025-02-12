@@ -6847,6 +6847,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swiper@npm:11.1.4":
+  version: 11.1.4
+  resolution: "swiper@npm:11.1.4"
+  checksum: 10c0/a1e4b87f414f67f5da6a07b33d5ee20e54062d21f8bed88195d5d56decff6afddf683e130118b7fa12668de221f794ae63f6c073761b683a4b90bbd5eb585202
+  languageName: node
+  linkType: hard
+
 "symbol-tree@npm:^3.2.4":
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
@@ -7778,6 +7785,7 @@ __metadata:
     sass: "npm:^1.83.4"
     sass-loader: "npm:^16.0.4"
     start-server-and-test: "npm:^2.0.10"
+    swiper: "npm:11.1.4"
     tailwind-merge: "npm:^3.0.1"
     tailwindcss: "npm:^3.4.17"
     tailwindcss-animate: "npm:^1.0.7"

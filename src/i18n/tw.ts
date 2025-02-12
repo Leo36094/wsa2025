@@ -62,7 +62,7 @@ export default {
     climate_desc4: '平均相對濕度約為70%至80%，濕度適中，整體天氣宜人。',
     climate_title5: '季風',
     climate_desc5: '東北季風增強，帶來涼爽的微風。當冷鋒來襲時，風勢可能較強，建議攜帶保暖衣物。',
-    skill_title: '關於<br>亞洲技能競賽',
+    skill_title: '關於亞洲技能競賽',
     skill_desc: `亞洲技能（WSA）是一個致力於促進亞洲地區技術與職業教育訓練（TVET）的區域性組織。作為全球世界技能運動的一部分，WSA旨在通過舉辦區域性技能競賽、促進能力建立和國際合作，提升技術職業標準。其活動範疇包括支持培訓者和專家的發展、促進青年就業，以及倡導TVET政策改革。透過為成員國、產業夥伴和TVET機構提供合作平台，WSA在縮短教育與就業之間的差距、提升勞動力發展以及推動區域經濟增長方面發揮著重要作用。`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
     skill_link_text: '更多相關資訊請見: https://www.worldskillsasia.net/en/Pages/default.aspx'

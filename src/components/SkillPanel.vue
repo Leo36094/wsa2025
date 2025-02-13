@@ -18,7 +18,7 @@ const props = defineProps<{
   skillType: SkillIconEnum
 }>()
 
-const SkillNameMap = {
+const SkillNameMap = computed(() => ({
   [SkillIconEnum.Manufacturing]: t('skills.category_manufacturing'),
   [SkillIconEnum.Construction]: t('skills.category_construction'),
   [SkillIconEnum.IT]: t('skills.category_it'),
@@ -26,9 +26,9 @@ const SkillNameMap = {
   [SkillIconEnum.Social]: t('skills.category_social'),
   [SkillIconEnum.Art]: t('skills.category_art'),
   [SkillIconEnum.Juniors]: t('skills.category_juniors'),
-}
+}))
 
-const skillName = computed(() => SkillNameMap[props.skillType])
+const skillName = computed(() => SkillNameMap.value[props.skillType])
 </script>
 <style lang="scss" scoped>
 .skill-panel {

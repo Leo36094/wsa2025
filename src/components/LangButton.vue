@@ -48,9 +48,10 @@ $langs-bg: #00000033;
     @include flexCenter;
     color: #fff;
     width: auto;
-    height: 0.35rem;
+    height: auto;
     background: transparent;
     border-radius: 1rem;
+    line-height: normal;
     padding: 0.08rem;
     color: #899ca4;
     &--active {

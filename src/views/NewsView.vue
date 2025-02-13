@@ -13,13 +13,13 @@
             @update:page="onPageUpdate"
             :total="newsInfo.total"
             :page="newsInfo.page"
-            :sibling-count="1"
-            show-edges
+            :sibling-count="isDesktop ? 1 : 0"
+            :show-edges="true"
             :default-page="1"
           >
             <PaginationList v-slot="{ items }" class="news-pagination">
-              <PaginationFirst class="pagination-action-button" />
-              <PaginationPrev class="pagination-action-button" />
+              <PaginationFirst v-if="isDesktop" class="pagination-action-button" />
+              <PaginationPrev v-if="isDesktop" class="pagination-action-button" />
 
               <template v-for="(item, index) in items">
                 <PaginationListItem
@@ -39,8 +39,8 @@
                 <PaginationEllipsis class="page-ellipsis" v-else :key="item.type" :index="index" />
               </template>
 
-              <PaginationNext class="pagination-action-button" />
-              <PaginationLast class="pagination-action-button" />
+              <PaginationNext v-if="isDesktop" class="pagination-action-button" />
+              <PaginationLast v-if="isDesktop" class="pagination-action-button" />
             </PaginationList>
           </Pagination>
         </template>
@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { type Ref, ref, onMounted, inject } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   Pagination,
@@ -66,6 +66,7 @@ import {
 } from '@/components/ui/pagination'
 import NewsList from '@/components/NewsList.vue'
 import BaseLoading from '@/components/BaseLoading.vue'
+const isDesktop = inject<Ref<boolean>>('isDesktop')
 
 const mockNewsResponse = (page: number) => {
   return {
@@ -155,6 +156,25 @@ onMounted(async () => {
   }
   .page-ellipsis {
     color: #fff;
+  }
+}
+@include tablet {
+  .news {
+    .first-slide {
+      &__title {
+        height: auto;
+        margin: 0.4rem auto;
+        h1 {
+          font-size: 0.48rem;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .display-page {
+    /* width: 0.48rem;
+    height: 0.48rem; */
   }
 }
 </style>

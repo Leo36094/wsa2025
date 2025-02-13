@@ -34,6 +34,7 @@ const newsDetail = {
 }
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 async function fetchNewsInfo(newsId: string) {
+  console.log('fetchNewsInfo', newsId)
   await delay(1000)
   return newsDetail
 }
@@ -117,11 +118,28 @@ onMounted(async () => {
 @include tablet {
   .news-inner-container {
     .news-inner {
+      margin-top: 0.16rem;
       .news-inner-title {
         padding: 0 0.4rem;
+        line-height: normal;
       }
       .news-inner-content {
         padding: 0 0.4rem;
+        line-height: normal;
+      }
+    }
+  }
+}
+@include mobile {
+  .news-inner-container {
+    .news-inner {
+      .news-inner-title {
+        font-size: 0.24rem;
+        margin-bottom: 0.16rem;
+        padding: 0 0.24rem;
+      }
+      .news-inner-content {
+        padding: 0 0.24rem;
       }
     }
   }

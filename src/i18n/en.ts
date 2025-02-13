@@ -7,14 +7,26 @@ export default {
     news: 'News',
     lang_en: 'English',
     lang_tw: 'Chinese',
+    // --- 0214 updated
+    host_welcome: 'Welcome',
+    host_currency: 'Currency',
+    host_electricity: 'Electricity',
+    host_climate: 'Climate',
+    host_skill: 'About World Skills Asia',
+    competition_schedule: 'Schedule',
+    competition_location: 'Location',
   },
   footer: {
     address: 'Nangang Exhibition Center location map',
-    announcement_schedule: 'Announcement of Schedule',
-    registration: 'Registration method',
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    // --- 0214 updated
+    quick_fact_title: 'Quick Facts',
+    quick_fact_cube_title_1: 'Skills',
+    quick_fact_cube_title_2: 'Countries',
+    quick_fact_cube_title_3: 'Competitors & Experts',
+    //---
     title: 'WorldSkills Asia Taipei',
     split_title1: 'WorldSkills',
     split_title2: 'Asia',
@@ -22,7 +34,7 @@ export default {
     year: '2025',
     news_title: 'News',
     news_more: 'More',
-    sponsors_title: 'Sponsors',
+    sponsors_title: 'Sponsors & Partners',
     banner_desc: `Taipei will host the 3rd WorldSkills Asia Competition from November 27 to November 29, 2025 at Nangang Exhibition Center. This event will provide valuable opportunities to promote local education, economy, tourism and international exchanges.
 This competition is expected to attract more than 500 participants from 28 member and guest countries across Asia, including Experts, Competitors, and professionals. They will compete in multiple technical and vocational skill categories and promote technical exchanges.
 We warmly welcome participants and friends from all over the world and look forward to share this exciting competition with everyone. This is not only a stage to showcase skills and talents, but also an opportunity to promote cultural exchanges and build friendship between countries.`,
@@ -93,7 +105,7 @@ We warmly welcome participants and friends from all over the world and look forw
     schedule_date7: 'Nov. 20 Mon',
     schedule_code7: 'C+1',
     schedule_activity7: 'City Tour, Closing Ceremony, Farewell Party',
-    schedule_date8: 'Nov. 01 Mon',
+    schedule_date8: 'Dec. 01 Mon',
     schedule_code8: 'C+2',
     schedule_activity8: 'Breakdown, Departure for all Delegates',
     location_title: 'Taipei Nangang Exhibition Center',

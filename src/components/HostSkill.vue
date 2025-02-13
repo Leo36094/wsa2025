@@ -1,5 +1,5 @@
 <template>
-  <div class="host-skill">
+  <div class="host-skill" id="skill">
     <div class="host-skill-container">
       <div class="image-col">
         <div

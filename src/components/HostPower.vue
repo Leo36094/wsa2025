@@ -1,5 +1,5 @@
 <template>
-  <div class="power">
+  <div class="power" id="electricity">
     <div class="power-container">
       <aside>
         <div class="sitebar-light"></div>

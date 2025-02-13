@@ -17,8 +17,7 @@ const props = defineProps<{
     height: 1.07rem;
     h1 {
       color: transparent;
-      background-clip: text;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 14.29%, #ffffff 80.52%);
+      color: #fff;
       font-size: 0.88rem;
       font-weight: 700;
       animation: title-slide-up 0.5s forwards;

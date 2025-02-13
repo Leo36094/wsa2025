@@ -1,8 +1,10 @@
 <template>
   <div class="banner-title">
+    <p class="date">27-29 November 2025</p>
     <div class="pc">
-      {{ $t('home.title') }}
-      <span class="banner-year">{{ $t('home.year') }}</span>
+      <h1>
+        {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
+      </h1>
     </div>
     <div class="splits">
       <span>{{ $t('home.split_title1') }}</span>
@@ -15,6 +17,9 @@
 <style lang="scss" scoped>
 .banner-title {
   font-weight: 700;
+  .date {
+    font-size: 0.28rem;
+  }
   .pc {
     font-size: 0.88rem;
     line-height: 1.06rem;

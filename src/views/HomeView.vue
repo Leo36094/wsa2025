@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <HomeBanner />
+    <HomeQuickFact />
     <HomeNews />
     <HomeSponsors />
   </div>
@@ -10,5 +11,6 @@
 import HomeBanner from '@/components/HomeBanner.vue'
 import HomeNews from '@/components/HomeNews.vue'
 import HomeSponsors from '@/components/HomeSponsors.vue'
+import HomeQuickFact from '@/components/HomeQuickFact.vue'
 </script>
 <style lang="scss" scoped></style>

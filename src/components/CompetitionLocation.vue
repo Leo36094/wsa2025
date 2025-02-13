@@ -1,5 +1,5 @@
 <template>
-  <div class="location">
+  <div class="location" id="location">
     <div class="location-container">
       <header>
         <h4 class="location-subtitle">
@@ -110,7 +110,7 @@ $pin-color: #c8e14b;
     .info-bar {
       padding: 0.4rem;
       width: 12rem;
-      height: 4.36rem;
+      min-height: 4.36rem;
       background: #00000033;
       border-radius: 0.4rem;
       margin: 0 auto;
@@ -192,7 +192,7 @@ $pin-color: #c8e14b;
           list-style-type: circle;
         }
         > * {
-          font-size: 0.12rem;
+          font-size: 0.16rem;
           color: #899ca4;
         }
       }

@@ -1,5 +1,5 @@
 <template>
-  <div class="competition-schedule">
+  <div class="competition-schedule" id="schedule">
     <div class="schedule-container">
       <div class="schedule">
         <h2 class="schedule__title">
@@ -75,7 +75,8 @@ const schedules = computed(() => {
       }
       &--header {
         font-size: 0.16rem;
-        color: #9fa7a7;
+        /* color: #9fa7a7; */
+        color: #fff;
         @include flexCenter;
         justify-content: flex-start;
         background-color: #1f4352;

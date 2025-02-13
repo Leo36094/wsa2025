@@ -1,13 +1,17 @@
 <template>
   <header class="page-header">
     <div class="wrapper">
-      <router-link to="/" class="logo">
-        <IconLogo />
-      </router-link>
+      <div class="icons">
+        <router-link to="/" class="logo">
+          <IconLogo />
+        </router-link>
+        <div class="wda"></div>
+      </div>
       <nav class="nav-links-pc">
-        <router-link v-for="navItem in nav" :key="navItem.name" :to="navItem.path">{{
+        <NavigationMenu :nav="nav" />
+        <!-- <router-link v-for="navItem in nav" :key="navItem.name" :to="navItem.path">{{
           navItem.name
-        }}</router-link>
+        }}</router-link> -->
       </nav>
       <LangButton class="langs-pc" />
       <div :class="['hamburger-btn', { active: isMenuOpen }]" @click="toggleMenu">
@@ -38,17 +42,37 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import LangButton from './LangButton.vue'
 import IconLogo from '@/components/icons/IconLogo.vue'
+import NavigationMenu from './NavigationMenu.vue'
 
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 const router = useRouter()
+
 const nav = computed(() => [
-  { name: t('header.host'), path: '/host' },
-  { name: t('header.competition'), path: '/competition' },
-  { name: t('header.skill'), path: '/skills' },
-  { name: t('header.involved'), path: '/get-involved' },
-  { name: t('header.news'), path: '/news' },
+  {
+    name: t('header.host'),
+    path: '/host',
+    subNav: [
+      { name: t('header.host_welcome'), path: '/' },
+      { name: t('header.host_currency'), path: '#currency' },
+      { name: t('header.host_electricity'), path: '#electricity' },
+      { name: t('header.host_climate'), path: '#climate' },
+      { name: t('header.host_skill'), path: '#skill' },
+    ],
+  },
+  {
+    name: t('header.competition'),
+    path: '/competition',
+    subNav: [
+      { name: t('header.competition'), path: '/' },
+      { name: t('header.competition_schedule'), path: '#schedule' },
+      { name: t('header.competition_location'), path: '#location' },
+    ],
+  },
+  { name: t('header.skill'), path: '/skills', subNav: [] },
+  { name: t('header.involved'), path: '/get-involved', subNav: [] },
+  { name: t('header.news'), path: '/news', subNav: [] },
 ])
 
 const isMenuOpen = ref(false)
@@ -78,11 +102,20 @@ $header-bg: #07100e;
     min-height: 0.76rem;
     padding-left: 1.04rem;
     padding-right: 1.06rem;
-    font-size: 0.16rem;
+    font-size: 0.18rem;
+    .icons {
+      @include flexCenter;
+    }
     .logo {
       width: 1.1rem;
       height: 0.63rem;
       @include flexCenter;
+    }
+    .wda {
+      width: 2rem;
+      height: 0.42rem;
+      @include bgCenter(contain);
+      background-image: url('/images/wda.png');
     }
     nav {
       @include flexCenter;

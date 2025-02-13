@@ -6,36 +6,19 @@
           {{ $t('home.sponsors_title') }}
         </div>
         <div class="sponsors-row">
-          <div class="sponsors-list">
+          <Swiper class="sponsors-list" v-bind="swiperConfig">
+            <SwiperSlide v-for="(slide, slideIdx) in sponsors" :key="slideIdx" class="slide">
+              <div class="sponsors-item" :style="{ backgroundImage: `url(${slide})` }"></div>
+            </SwiperSlide>
+          </Swiper>
+          <!-- <div class="sponsors-list">
             <div
               class="sponsors-item"
               v-for="item in sponsors"
               :key="item"
               :style="{ backgroundImage: `url(${item})` }"
             ></div>
-            <div
-              class="sponsors-item"
-              v-for="item in sponsors"
-              :key="item"
-              :style="{ backgroundImage: `url(${item})` }"
-            ></div>
-          </div>
-        </div>
-        <div class="sponsors-row">
-          <div class="sponsors-list sponsors-list--reverse">
-            <div
-              class="sponsors-item"
-              v-for="item in sponsors"
-              :key="item"
-              :style="{ backgroundImage: `url(${item})` }"
-            ></div>
-            <div
-              class="sponsors-item"
-              v-for="item in sponsors"
-              :key="item"
-              :style="{ backgroundImage: `url(${item})` }"
-            ></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -43,11 +26,34 @@
 </template>
 
 <script lang="ts" setup>
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 const sponsors = Array(8)
   .fill(0)
   .map(() => {
     return `https://fakeimg.pl/176x144/`
   })
+
+const swiperConfig = {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  spaceBetween: 8,
+  slidesPerView: 2,
+  breakpoints: {
+    750: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 7,
+    },
+  },
+  modules: [Autoplay],
+}
 </script>
 <style lang="scss" scoped>
 .home-sponsors {
@@ -61,12 +67,12 @@ const sponsors = Array(8)
     background-color: #fff;
   }
   .sponsors__title {
+    @include withContainer;
     padding: 0 0.64rem;
     color: #000;
     font-size: 0.48rem;
     font-weight: 700;
-    margin-bottom: 0.32rem;
-    @include withContainer;
+    margin-bottom: 0.4rem;
   }
   .sponsors-row {
     overflow: hidden;
@@ -83,7 +89,6 @@ const sponsors = Array(8)
     white-space: nowrap;
     @include flexCenter;
     gap: 0.32rem;
-    animation: marquee 15s linear infinite;
     &:hover {
       animation-play-state: paused;
     }

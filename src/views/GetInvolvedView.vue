@@ -23,6 +23,7 @@ import BaseTitle from '@/components/BaseTitle.vue'
     font-weight: 700;
     color: #899ca4;
     text-align: center;
+    @include flexCenter;
   }
 }
 @include tablet {

@@ -12,22 +12,10 @@
               <img class="icon" src="/images/ri_mail-fill.svg" alt="mail-icon" />
               <a href="tel:1234567890">E-mail Address</a>
             </div>
-          </div>
-          <div class="row info address">
             <div class="col address__street">
               <img class="icon" src="/images/ri_map-pin-fill.svg" alt="map-icon" />
               <span>{{ $t('footer.address') }}</span>
             </div>
-          </div>
-          <div class="external-links">
-            <a class="col" href="#"
-              >{{ $t('footer.announcement_schedule') }}
-              <img class="icon" src="/images/ri_external-link-line.svg" />
-            </a>
-            <a class="col" href="#"
-              >{{ $t('footer.registration') }}
-              <img class="icon" src="/images/ri_external-link-line.svg" />
-            </a>
           </div>
           <div class="social-media">
             <a class="col" href="#">
@@ -76,6 +64,7 @@
   }
   .row {
     @include flexCenter(column);
+    align-items: flex-start;
     > * {
       &:not(:last-child) {
         margin-bottom: 0.16rem;
@@ -92,18 +81,7 @@
     .info {
       margin-right: 0.72rem;
     }
-    .external-links {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      a:not(:last-child) {
-        margin-bottom: 0.16rem;
-      }
-      .icon {
-        margin-left: 0.08rem;
-        margin-right: 0;
-      }
-    }
+
     .social-media {
       margin-left: auto;
       @include flexCenter;

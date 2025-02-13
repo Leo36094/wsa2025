@@ -1,5 +1,5 @@
 <template>
-  <div class="climate">
+  <div class="climate" id="climate">
     <div class="climate-container">
       <div class="title-light"></div>
       <div class="climate-title">

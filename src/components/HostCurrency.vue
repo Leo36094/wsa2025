@@ -1,5 +1,5 @@
 <template>
-  <div class="host-currency">
+  <div class="host-currency" id="currency">
     <div class="container">
       <aside class="column sidebar" :style="{ position: cancelSticky ? 'static' : 'sticky' }">
         <div class="sitebar-light"></div>

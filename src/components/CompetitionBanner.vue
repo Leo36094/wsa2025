@@ -1,5 +1,5 @@
 <template>
-  <div class="competition-banner">
+  <!-- <div class="competition-banner">
     <div class="first-slide__title">
       <h1>{{ $t('competition.title') }}</h1>
     </div>
@@ -24,23 +24,24 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="second-slide">
     <div class="image-row" ref="topRow" id="topRow">
-      <img
+      <!-- <img
         ref="topFirst"
         id="topFirst"
         class="image-item"
         :src="competitionImages[0]"
         alt="banner2"
-      />
-      <div data-aos="fade-up" data-aos-delay="500" class="top-first-rest" ref="topFirstRest">
+      /> -->
+      <div data-aos="fade-up" class="top-first-rest" ref="topFirstRest">
+        <img class="image-item" :src="competitionImages[0]" alt="banner0" />
         <img class="image-item" :src="competitionImages[2]" alt="banner2" />
         <img class="image-item" :src="competitionImages[3]" alt="banner3" />
       </div>
     </div>
     <div class="host-copy">
-      <div data-aos="example-anim1" data-aos-delay="500" class="welcome-img"></div>
+      <div data-aos="example-anim1" class="welcome-img"></div>
       <div class="welcome-title" data-aos="fade-right" data-aos-delay="500">
         <h2 class="title">{{ $t('competition.title_tag') }}</h2>
         <h2 class="subtitle">{{ $t('competition.title_competition') }}</h2>
@@ -48,31 +49,32 @@
       <p class="welcome-desc">{{ $t('competition.content') }}</p>
     </div>
     <div class="image-row" ref="bottomRow">
-      <div data-aos="fade-up" data-aos-offset="100" class="bottom-rest" ref="bottomRest">
+      <div data-aos="fade-up" class="bottom-rest" ref="bottomRest">
         <img class="image-item" :src="competitionImages[4]" alt="banner4" />
         <img class="image-item" :src="competitionImages[5]" alt="banner5" />
+        <img class="image-item" :src="competitionImages[1]" alt="banner6" />
       </div>
-      <img
+      <!-- <img
         id="secondLast"
         ref="secondLast"
         class="image-item"
         :src="competitionImages[1]"
         alt="banner5"
-      />
+      /> -->
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// import { ref } from 'vue'
+// import { gsap } from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const leftPhoto = ref<null | HTMLElement>(null)
-const rightPhoto = ref<null | HTMLElement>(null)
+// const leftPhoto = ref<null | HTMLElement>(null)
+// const rightPhoto = ref<null | HTMLElement>(null)
 
-const topFirst = ref<null | HTMLElement>(null)
-const secondLast = ref<null | HTMLElement>(null)
+// const topFirst = ref<null | HTMLElement>(null)
+// const secondLast = ref<null | HTMLElement>(null)
 
 const competitionImages = Array.from(
   { length: 6 },
@@ -80,99 +82,99 @@ const competitionImages = Array.from(
     `${import.meta.env.BASE_URL}images/wsa/competition_section01_${(i + 1).toString().padStart(2, '0')}.jpg`,
 )
 
-onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger)
+// onMounted(() => {
+//   gsap.registerPlugin(ScrollTrigger)
 
-  ScrollTrigger.matchMedia({
-    // desktop
-    '(min-width: 750px)': function () {
-      gsap.from(leftPhoto.value, { duration: 0.5, opacity: 0, y: 150, delay: 0.5 })
-      gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
-      // second section
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.second-slide',
-          start: '20% 100%',
-          end: '50% 50%',
-          scrub: true,
-          toggleActions: 'play reverse play reverse',
-        },
-      })
-      tl.to(
-        leftPhoto.value,
-        {
-          scale: 0.5,
-          duration: 0.15,
-          opacity: 0,
-          y: 1000,
-          onComplete: () => {
-            leftPhoto.value!.style.opacity = '0'
-          },
-          onReverseComplete: () => {
-            leftPhoto.value!.style.opacity = '1'
-            leftPhoto.value!.style.transform = 'translate(0, 0)'
-          },
-        },
-        '#leftphoto',
-      )
-      tl.to(
-        rightPhoto.value,
-        {
-          scale: 0.5,
-          duration: 0.15,
-          opacity: 0,
-          y: 800,
-          onComplete: () => {
-            rightPhoto.value!.style.opacity = '0'
-          },
-          onReverseComplete: () => {
-            rightPhoto.value!.style.opacity = '1'
-            rightPhoto.value!.style.transform = 'translate(0, 0)'
-          },
-        },
-        rightPhoto.value?.clientTop,
-      )
-      gsap.to(topFirst.value, {
-        scrollTrigger: {
-          trigger: topFirst.value,
-          start: 'top top',
-          end: '100% 50%',
-          scrub: 1,
-        },
-        x: 0,
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 2,
-      })
-      if (secondLast.value) {
-        gsap.from(secondLast.value, {
-          y: -500,
-          scale: 1.2,
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: secondLast.value,
-            start: 'top 80%',
-            end: 'center center',
-            scrub: true,
-            toggleActions: 'play none none reverse',
-          },
-        })
-      }
-    },
-  })
-})
+//   ScrollTrigger.matchMedia({
+//     // desktop
+//     '(min-width: 750px)': function () {
+//       gsap.from(leftPhoto.value, { duration: 0.5, opacity: 0, y: 150, delay: 0.5 })
+//       gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
+//       // second section
+//       const tl = gsap.timeline({
+//         scrollTrigger: {
+//           trigger: '.second-slide',
+//           start: '20% 100%',
+//           end: '50% 50%',
+//           scrub: true,
+//           toggleActions: 'play reverse play reverse',
+//         },
+//       })
+//       tl.to(
+//         leftPhoto.value,
+//         {
+//           scale: 0.5,
+//           duration: 0.15,
+//           opacity: 0,
+//           y: 1000,
+//           onComplete: () => {
+//             leftPhoto.value!.style.opacity = '0'
+//           },
+//           onReverseComplete: () => {
+//             leftPhoto.value!.style.opacity = '1'
+//             leftPhoto.value!.style.transform = 'translate(0, 0)'
+//           },
+//         },
+//         '#leftphoto',
+//       )
+//       tl.to(
+//         rightPhoto.value,
+//         {
+//           scale: 0.5,
+//           duration: 0.15,
+//           opacity: 0,
+//           y: 800,
+//           onComplete: () => {
+//             rightPhoto.value!.style.opacity = '0'
+//           },
+//           onReverseComplete: () => {
+//             rightPhoto.value!.style.opacity = '1'
+//             rightPhoto.value!.style.transform = 'translate(0, 0)'
+//           },
+//         },
+//         rightPhoto.value?.clientTop,
+//       )
+//       gsap.to(topFirst.value, {
+//         scrollTrigger: {
+//           trigger: topFirst.value,
+//           start: 'top top',
+//           end: '100% 50%',
+//           scrub: 1,
+//         },
+//         x: 0,
+//         y: 0,
+//         opacity: 1,
+//         scale: 1,
+//         duration: 2,
+//       })
+//       if (secondLast.value) {
+//         gsap.from(secondLast.value, {
+//           y: -500,
+//           scale: 1.2,
+//           opacity: 0,
+//           duration: 1,
+//           scrollTrigger: {
+//             trigger: secondLast.value,
+//             start: 'top 80%',
+//             end: 'center center',
+//             scrub: true,
+//             toggleActions: 'play none none reverse',
+//           },
+//         })
+//       }
+//     },
+//   })
+// })
 
-onUnmounted(() => {
-  ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-})
+// onUnmounted(() => {
+//   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+// })
 </script>
 <style lang="scss" scoped>
 .competition-banner {
   @include withContainer;
   max-width: 19.2rem;
-  height: 100vh;
+  /* height: 55svh; */
   .first-slide {
     margin: auto;
     max-width: 14.4rem;
@@ -267,6 +269,7 @@ onUnmounted(() => {
 }
 .second-slide {
   width: 100%;
+  padding-top: 0.76rem;
   @include withContainer;
   margin-bottom: 1.6rem;
   .image-row {

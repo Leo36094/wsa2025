@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { nextTick } from 'vue'
 
 export enum SkillsRouteEnum {
   Catrgories = 'categories',
@@ -100,9 +101,17 @@ const router = createRouter({
       component: () => import('../views/GetInvolvedView.vue'),
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  async scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
+    } else if (to.hash) {
+      console.log('to.hash', to.hash)
+      await nextTick()
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+        top: 20,
+      }
     } else {
       return { top: 0, behavior: 'instant' }
     }

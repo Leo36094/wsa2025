@@ -16,6 +16,6 @@ import CompetitionLocation from '@/components/CompetitionLocation.vue'
 <style lang="scss" scoped>
 .competition {
   padding-top: 0.76rem;
-  background: linear-gradient(0deg, #18475b 1.87%, #002635 100%);
+  background: #18475b;
 }
 </style>

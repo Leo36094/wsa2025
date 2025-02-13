@@ -25,4 +25,24 @@ import BaseTitle from '@/components/BaseTitle.vue'
     text-align: center;
   }
 }
+@include tablet {
+  .get-involved {
+    padding-top: 0.4rem;
+    &__title {
+      margin-top: 0.48rem;
+      margin-bottom: 0.48rem;
+    }
+  }
+}
+@include mobile {
+  .get-involved {
+    padding-top: 0.66rem;
+    &__title {
+      margin-top: 0.24rem;
+    }
+    &__desc {
+      font-size: 0.16rem;
+    }
+  }
+}
 </style>

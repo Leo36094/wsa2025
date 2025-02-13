@@ -6111,9 +6111,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"radix-vue@npm:^1.9.13":
-  version: 1.9.13
-  resolution: "radix-vue@npm:1.9.13"
+"radix-vue@npm:^1.9.14":
+  version: 1.9.14
+  resolution: "radix-vue@npm:1.9.14"
   dependencies:
     "@floating-ui/dom": "npm:^1.6.7"
     "@floating-ui/vue": "npm:^1.1.0"
@@ -6128,7 +6128,7 @@ __metadata:
     nanoid: "npm:^5.0.7"
   peerDependencies:
     vue: ">= 3.2.0"
-  checksum: 10c0/f0ea5decbc3dd74feb56d04da5dbd66734c716a8bff808322821d833800e4c4845025b256ddb9a18dcb4b485e958134affee9f1007bf93d43cd1d5d8d997110b
+  checksum: 10c0/d5edef7108d3635d2b41b2a69fdb06a2a3772093e8e577de21f6c9231ef007e0dd38d223879ddc31b39c772e44320a98a61b0f4f39d82015d3eac4b5acb9d4a4
   languageName: node
   linkType: hard
 
@@ -7781,7 +7781,7 @@ __metadata:
     npm-run-all2: "npm:^7.0.2"
     pinia: "npm:^2.3.1"
     prettier: "npm:^3.4.2"
-    radix-vue: "npm:^1.9.13"
+    radix-vue: "npm:^1.9.14"
     sass: "npm:^1.83.4"
     sass-loader: "npm:^16.0.4"
     start-server-and-test: "npm:^2.0.10"

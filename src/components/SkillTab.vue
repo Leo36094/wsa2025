@@ -5,8 +5,8 @@
     data-aos-delay="500"
     data-aos-anchor-placement="top-bottom"
   >
-    <div class="skill-tab-container">
-      <div class="skill-row" v-for="(skillRow, idx) in props.skillList" :key="idx">
+    <div v-if="!props.showSelect" class="skill-tab-container">
+      <div class="skill-row" v-for="(skillRow, idx) in skillListCols" :key="idx">
         <div
           :class="['skill-col', { 'skill-col--selected': props.selectedSkill.id === skill.id }]"
           v-for="skill in skillRow"
@@ -17,14 +17,35 @@
         </div>
       </div>
     </div>
+    <div v-else class="skill-select">
+      <FilterDropdown
+        :value="selectedSkill.id"
+        :options="skillList"
+        :placeholder="selectedSkill.label"
+        valueKey="id"
+        labelKey="label"
+        :selectedValue="selectedSkill.id"
+        @update:modelValue="onSelectUpdate"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
+import { computed } from 'vue'
 import type { TSkillTab } from '@/types/skills'
+import FilterDropdown from './FilterDropdown.vue'
+
+const COLS = 4
 const props = defineProps<{
-  skillList: Array<TSkillTab[]>
+  skillList: TSkillTab[]
   selectedSkill: TSkillTab
+  showSelect: boolean
 }>()
+
+const skillListCols = computed(() => {
+  const rows = Math.ceil(props.skillList.length / COLS)
+  return Array.from({ length: rows }, (_, i) => props.skillList.slice(i * COLS, (i + 1) * COLS))
+})
 
 const emits = defineEmits<{
   (e: 'click', skill: TSkillTab): void
@@ -32,6 +53,13 @@ const emits = defineEmits<{
 
 function handleClick(skill: TSkillTab) {
   emits('click', skill)
+}
+function onSelectUpdate(id: string) {
+  const skill = props.skillList.find((skillItem) => skillItem.id === id)
+  if (skill) emits('click', skill)
+  else {
+    throw new Error(`Skill id ${id} not found`)
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -85,6 +113,31 @@ function handleClick(skill: TSkillTab) {
         }
       }
     }
+  }
+}
+@include tablet {
+  .skill-tab {
+    .skill-tab-container {
+      max-width: 6.64rem;
+      width: 100%;
+      overflow: hidden;
+      .skill-col {
+        padding: 0.08rem 0.08rem 0.08rem 0.3rem;
+        font-size: 0.16rem;
+        line-height: normal;
+        width: 1.66rem;
+        &:before {
+          width: 0.06rem;
+          height: 0.2rem;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .skill-select {
+    width: 2.77rem;
+    margin: 0 auto;
   }
 }
 </style>

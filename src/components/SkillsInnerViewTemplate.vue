@@ -1,11 +1,16 @@
 <template>
-  <div class="skills-innerview">
-    <div class="skills-innerview-container">
-      <h2 class="skills-innerview-title title-animation">
+  <div class="skills-inner-view">
+    <div class="skills-inner-view-container">
+      <h1 class="skills-inner-view-title title-animation">
         <span>{{ $t(`skills.category_${viewName}`) }}</span>
-      </h2>
-      <SkillTab :skill-list="skillListCols" :selected-skill="selectedSkill" @click="onTabClick" />
-      <div class="skill-innerview-gallery">
+      </h1>
+      <SkillTab
+        :skill-list="skillList"
+        :selected-skill="selectedSkill"
+        @click="onTabClick"
+        :show-select="!!isMobile"
+      />
+      <div class="skill-inner-view-gallery">
         <div class="gallery-container">
           <div class="gallery-image" data-aos="fade-up" data-aos-delay="500">
             <div
@@ -40,14 +45,34 @@
               :key="index"
             ></div>
           </div>
+          <div v-if="!isDesktop" class="skill-swiper">
+            <Swiper v-bind="swiperConfig">
+              <SwiperSlide
+                v-for="(slide, slideIdx) in imagesMap[selectedSkill.id]"
+                :key="slideIdx"
+                class="slide"
+              >
+                <div
+                  :style="{ backgroundImage: `url(${slide})` }"
+                  class="img-slide"
+                  alt="skill image decoration"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { type Ref, ref, computed, inject } from 'vue'
 import { useI18n } from 'vue-i18n'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import { Autoplay, FreeMode } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
 import SkillTab from '@/components/SkillTab.vue'
 import type { TSkillTab } from '@/types/skills'
 import {
@@ -68,11 +93,14 @@ import IconSocial from '@/components/icons/IconSocial.vue'
 import IconArt from '@/components/icons/IconArt.vue'
 import IconJuniors from '@/components/icons/IconJuniors.vue'
 
-const COLS = 4
+// const COLS = 4
 const { t } = useI18n()
 const props = defineProps<{
   viewName: InnerViewEnum
 }>()
+
+const isMobile = inject<Ref<boolean>>('isMobile')
+const isDesktop = inject<Ref<boolean>>('isDesktop')
 
 const SkillImagePrefixMap = {
   [InnerViewEnum.Manufacturing]: '01',
@@ -121,23 +149,21 @@ const skillList = computed(() =>
   })),
 )
 
-const skillListCols = computed(() => {
-  const rows = Math.ceil(skillList.value.length / COLS)
-  return Array.from({ length: rows }, (_, i) => skillList.value.slice(i * COLS, (i + 1) * COLS))
-})
+// const skillListCols = computed(() => {
+//   const rows = Math.ceil(skillList.value.length / COLS)
+//   return Array.from({ length: rows }, (_, i) => skillList.value.slice(i * COLS, (i + 1) * COLS))
+// })
 
-const selectedSkill = ref<TSkillTab>(skillListCols.value[0][0])
+const selectedSkill = ref<TSkillTab>(skillList.value[0])
 const displayIcon = computed(() => {
-  const viewName = props.viewName as keyof typeof InnerViewEnumMap
   return selectedSkill.value
-    .icon as (typeof InnerViewEnumMap)[typeof viewName][keyof (typeof InnerViewEnumMap)[typeof viewName]]
+    .icon as (typeof InnerViewEnumMap)[InnerViewEnum][keyof (typeof InnerViewEnumMap)[InnerViewEnum]]
 })
 
 const copyText = computed(() => {
   const copy = t(`skills.${props.viewName}_${selectedSkill.value.id}_copy`)
   const title = t(`skills.${props.viewName}_${selectedSkill.value.id}`)
-  const images = Array.from({ length: 3 }, (_, i) => 'https://fakeimg.pl/443x250/')
-  return { copy, images, title }
+  return { copy, title }
 })
 
 // According doc. https://www.figma.com/design/cLQzYBkzjmJUGHFUAgTuZ9/WSA?node-id=126-3375&m=dev
@@ -180,21 +206,38 @@ const imagesMap = computed(() => {
 function onTabClick(skill: TSkillTab) {
   selectedSkill.value = skill
 }
+
+const swiperConfig = {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  freemode: true,
+  spaceBetween: 8,
+  slidesPerView: 1,
+  breakpoints: {
+    750: {
+      slidesPerView: 3,
+    },
+  },
+  modules: [Autoplay, FreeMode],
+}
 </script>
 <style lang="scss" scoped>
-.skills-innerview {
+.skills-inner-view {
   padding-top: 0.76rem;
-  .skills-innerview-container {
+  .skills-inner-view-container {
     background: linear-gradient(180deg, #18475b 30%, #180161 89.74%);
     min-height: 100svh;
-    .skills-innerview-title {
+    .skills-inner-view-title {
       @include withContainer;
       font-size: 0.48rem;
       font-weight: 700;
       text-align: center;
       margin-bottom: 0.4rem;
     }
-    .skill-innerview-gallery {
+    .skill-inner-view-gallery {
       .gallery-container {
         display: flex;
         align-items: center;
@@ -252,6 +295,77 @@ function onTabClick(skill: TSkillTab) {
     @include flexCenter;
     span {
       animation: title-slide-up 0.5s forwards;
+    }
+  }
+}
+@include tablet {
+  .skills-inner-view {
+    padding-top: 0.4rem;
+    .skills-inner-view-container {
+      .skills-inner-view-title {
+        font-size: 0.48rem;
+        margin-bottom: 0.32rem;
+      }
+      .skill-inner-view-gallery {
+        .gallery-container {
+          max-width: 100%;
+          flex-direction: column;
+        }
+        .gallery-copy {
+          width: 6.64rem;
+          margin-bottom: 0.24rem;
+          .icon-button {
+            width: 0.72rem;
+            height: 0.72rem;
+            margin-bottom: 0.24rem;
+          }
+          .title {
+            margin-bottom: 0.24rem;
+          }
+        }
+        .gallery-image {
+          display: none;
+        }
+        .skill-swiper {
+          width: 100%;
+          margin-bottom: 0.48rem;
+          .img-slide {
+            height: 1.64rem;
+            @include bgCenter(cover);
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .skills-inner-view {
+    .skills-inner-view-container {
+      .skills-inner-view-title {
+        font-size: 0.24rem;
+      }
+      .skill-inner-view-gallery {
+        .gallery-copy {
+          width: 100%;
+          margin: 0 auto 0.16rem auto;
+          padding: 0 0.24rem;
+          .icon-button {
+            width: 0.56rem;
+            height: 0.56rem;
+            margin-bottom: 0.16rem;
+          }
+          .title {
+            font-size: 0.24rem;
+            margin-bottom: 0.16rem;
+          }
+          .copy {
+            text-align: justify;
+          }
+        }
+        .skill-swiper {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

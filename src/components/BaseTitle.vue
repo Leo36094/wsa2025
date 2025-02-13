@@ -25,4 +25,14 @@ const props = defineProps<{
     }
   }
 }
+@include tablet {
+  .first-slide {
+    &__title {
+      height: auto;
+      h1 {
+        font-size: 0.48rem;
+      }
+    }
+  }
+}
 </style>

@@ -125,7 +125,6 @@ const billImages = [
 ]
 
 function handleScroll() {
-  console.log(isDesktop?.value)
   if (!isDesktop?.value) {
     cancelSticky.value = true
     return

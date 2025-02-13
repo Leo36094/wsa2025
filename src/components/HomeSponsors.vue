@@ -61,12 +61,12 @@ const sponsors = Array(8)
     background-color: #fff;
   }
   .sponsors__title {
-    @include withContainer;
     padding: 0 0.64rem;
     color: #000;
     font-size: 0.48rem;
     font-weight: 700;
     margin-bottom: 0.32rem;
+    @include withContainer;
   }
   .sponsors-row {
     overflow: hidden;

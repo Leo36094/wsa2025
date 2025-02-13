@@ -8,15 +8,18 @@ import PageHeader from '@/components/PageHeader.vue'
 import PageFooter from '@/components/PageFooter.vue'
 
 const isDesktop = ref(false)
+const isMobile = ref(false)
 
 function checkIsDesktop() {
   isDesktop.value = window.innerWidth >= 1024
+  isMobile.value = Boolean(window.innerWidth < 750)
 }
 
 provide('isDesktop', isDesktop)
-
+provide('isMobile', isMobile)
 onMounted(() => {
   AOS.init()
+  checkIsDesktop()
   window.addEventListener('resize', checkIsDesktop)
 })
 onUnmounted(() => {

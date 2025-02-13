@@ -39,9 +39,7 @@
 <script lang="ts" setup>
 import { type Ref, computed, inject } from 'vue'
 import 'swiper/css'
-import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
-import 'swiper/css/effect-fade'
 import { Autoplay, FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 

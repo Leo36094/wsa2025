@@ -16,18 +16,27 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import NewsList from '@/components/NewsList.vue'
-const news = ref(
-  Array(6)
+const newsPlaceholder = [
+  {
+    title: 'The 3rd WorldSkills Asia Competition Skills',
+    image: 'https://fakeimg.pl/640x297',
+    date: '21 Jan 2025',
+    id: 99,
+  },
+].concat(
+  ...Array(5)
     .fill({
       title: 'Title',
       image: 'https://fakeimg.pl/640x297',
-      date: '17 Mar 2025',
+      date: '21 Jan. 2025',
     })
     .map((newsItem, index) => ({
       ...newsItem,
       id: index,
     })),
 )
+const news = ref(newsPlaceholder)
+console.log(newsPlaceholder)
 
 const router = useRouter()
 function goToNews() {

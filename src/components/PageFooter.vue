@@ -20,7 +20,7 @@
           <div class="social-media">
             <a class="col" href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr">
               <img
-                class="social-media__icon"
+                class="social-media__icon facebook"
                 src="/images/ri_facebook-circle-fill.svg"
                 alt="facebook-icon"
               />
@@ -33,7 +33,7 @@
               />
             </a>
             <a class="col" href="twitter.com/WorldSkillsAsia/">
-              <img class="social-media__icon" src="/images/ri_global-fill.svg" alt="twitter-icon" />
+              <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
             </a>
             <a class="col" href="https://line.me/R/ti/p/@153dnycq">
               <img class="social-media__icon" src="/images/LINE 1.png" alt="line-icon" />
@@ -93,6 +93,10 @@
       &__icon {
         width: 0.32rem;
         height: 0.32rem;
+        &.facebook {
+          width: 0.4rem;
+          height: 0.4rem;
+        }
       }
     }
   }

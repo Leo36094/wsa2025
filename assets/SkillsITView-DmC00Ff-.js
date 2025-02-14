@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-DbF1vOgb.js";import{d as r,o as a,m as o,u as m}from"./index-CmXLWWd1.js";import"./free-mode-Q57ZbKPy.js";import"./enum-CA_ituI8.js";const _=r({__name:"SkillsITView",setup(t){return(i,s)=>(a(),o(e,{"view-name":m(n).IT},null,8,["view-name"]))}});export{_ as default};

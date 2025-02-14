@@ -1,0 +1,1 @@
+import{S as e,I as n}from"./SkillsInnerViewTemplate-KI7eyUZ7.js";import{d as a,o as r,m as t,u as i}from"./index-C9w2_d1-.js";import"./free-mode-BH3pzt8J.js";import"./enum-CA_ituI8.js";const f=a({__name:"SkillsManufacturingView",setup(o){return(m,s)=>(r(),t(e,{"view-name":i(n).Manufacturing},null,8,["view-name"]))}});export{f as default};

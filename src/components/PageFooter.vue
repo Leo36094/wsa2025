@@ -6,11 +6,11 @@
           <div class="row info contact-info">
             <div class="col contact-info__phone">
               <img class="icon" src="/images/ri_phone-fill.svg" alt="phone-icon" />
-              <a href="tel:1234567890">123-456-7890</a>
+              <a href="tel:1234567890">+971 2 613 2000</a>
             </div>
             <div class="col contact-info__email">
               <img class="icon" src="/images/ri_mail-fill.svg" alt="mail-icon" />
-              <a href="tel:1234567890">E-mail Address</a>
+              <a href="tel:1234567890">info@worldskillsasia.ae</a>
             </div>
             <div class="col address__street">
               <img class="icon" src="/images/ri_map-pin-fill.svg" alt="map-icon" />
@@ -18,24 +18,24 @@
             </div>
           </div>
           <div class="social-media">
-            <a class="col" href="#">
+            <a class="col" href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr">
               <img
                 class="social-media__icon"
                 src="/images/ri_facebook-circle-fill.svg"
                 alt="facebook-icon"
               />
             </a>
-            <a class="col" href="#">
+            <a class="col" href="https://www.instagram.com/wdagovtw/">
               <img
                 class="social-media__icon"
                 src="/images/Instagram_Glyph_White 1.svg"
                 alt="instagram-icon"
               />
             </a>
-            <a class="col" href="#">
+            <a class="col" href="twitter.com/WorldSkillsAsia/">
               <img class="social-media__icon" src="/images/ri_global-fill.svg" alt="twitter-icon" />
             </a>
-            <a class="col" href="#">
+            <a class="col" href="https://line.me/R/ti/p/@153dnycq">
               <img class="social-media__icon" src="/images/LINE 1.png" alt="line-icon" />
             </a>
           </div>

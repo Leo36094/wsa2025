@@ -32,13 +32,14 @@ const props = defineProps<{
 }>()
 
 const numsLength = computed(() => props.news.length)
-const twoNewsARow = computed(() =>
-  Array(numsLength.value / 2)
+const twoNewsARow = computed(() => {
+  if (!props.news.length) return []
+  return Array(Math.ceil(numsLength.value / 2))
     .fill(0)
     .map((_, idx) => {
       return props.news.slice(idx * 2, idx * 2 + 2)
-    }),
-)
+    })
+})
 
 const router = useRouter()
 

@@ -70,17 +70,17 @@ const isDesktop = inject<Ref<boolean>>('isDesktop')
 
 const mockNewsResponse = (page: number) => {
   return {
-    news: Array(6)
+    news: Array(1)
       .fill({
-        title: `page ${page} Title`,
-        image: 'https://fakeimg.pl/640x297',
-        date: '17 Mar 2025',
+        title: `The 3rd WorldSkills Asia Competition Skills`,
+        image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
+        date: '21 Jan 2025',
       })
       .map((newsItem, index) => ({
         ...newsItem,
         id: index,
       })),
-    total: 150,
+    total: 1,
     page: 1,
   }
 }
@@ -133,7 +133,6 @@ onMounted(async () => {
   }
   .news-list {
     margin-bottom: 0.4rem;
-    min-height: 10rem;
   }
   .news-pagination {
     @include flexCenter;

@@ -18,6 +18,7 @@ const newsDetail = {
     content: `
 <p>
 The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center from November 27 to 29, 2025. The event will feature 36 official skills, 8 junior skills, and 4 exhibition skills, attracting thousands of experts and competitors from all over Asia.</p>
+<img src="${import.meta.env.BASE_URL}images/news/news_01.jpg" alt="The 3rd WorldSkills Asia Competition Skills" style="width: 100%;">
 <p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">
 Official Skills (36 skills in total) :
 </p>
@@ -79,8 +80,6 @@ Official Skills (36 skills in total) :
 <li>Autonomous Mobile Robotics</li>
 <li>Electronics</li>
 <li>Floristry</li>
-<li>The skills to be held are as per the announcement by WSA.</li>
-<li>WorldSkills Asia</li>
 </ul>
 <p>The skills to be held are as per the announcement by WSA.</p>
 <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>

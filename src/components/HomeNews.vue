@@ -19,22 +19,12 @@ import NewsList from '@/components/NewsList.vue'
 const newsPlaceholder = [
   {
     title: 'The 3rd WorldSkills Asia Competition Skills',
-    image: 'https://fakeimg.pl/640x297',
+    image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
     date: '21 Jan 2025',
     id: 99,
   },
-].concat(
-  ...Array(5)
-    .fill({
-      title: 'Title',
-      image: 'https://fakeimg.pl/640x297',
-      date: '21 Jan. 2025',
-    })
-    .map((newsItem, index) => ({
-      ...newsItem,
-      id: index,
-    })),
-)
+]
+
 const news = ref(newsPlaceholder)
 console.log(newsPlaceholder)
 

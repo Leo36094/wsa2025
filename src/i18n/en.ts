@@ -17,7 +17,7 @@ export default {
     competition_location: 'Location',
   },
   footer: {
-    address: 'Nangang Exhibition Center location map',
+    address: 'WorldSkills Asia IPIC Building – 15th Floor Sultan Bin Zayed the First Street',
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {

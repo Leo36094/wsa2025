@@ -9,9 +9,10 @@
           {{ $t('competition.location_title') }}
         </h4>
       </header>
+
       <div class="info-bar">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3358992883273!2d121.61554097708489!3d25.056601877801867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab57f02092dd%3A0x87862fa2121f7e46!2z5Y-w5YyX5Y2X5riv5bGV6Ka96aSoMemkqA!5e0!3m2!1szh-TW!2stw!4v1738190342523!5m2!1szh-TW!2stw"
+          :src="currentMap"
           width="600"
           height="356"
           style="border: 0"
@@ -87,7 +88,20 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
+
+const twMap =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3358992883273!2d121.61554097708489!3d25.056601877801867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab57f02092dd%3A0x87862fa2121f7e46!2z5Y-w5YyX5Y2X5riv5bGV6Ka96aSoMemkqA!5e0!3m2!1szh-TW!2stw!4v1738190342523!5m2!1szh-TW!2stw'
+const enMap =
+  'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7228.671791369028!2d121.618116!3d25.056602!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab57f02092dd%3A0x87862fa2121f7e46!2sTaipei%20Nangang%20Exhibition%20Center%20Hall%201!5e0!3m2!1sen!2stw!4v1739504746300!5m2!1sen!2stw'
+
+const currentMap = computed(() => {
+  return locale.value === 'en' ? enMap : twMap
+})
+</script>
 <style lang="scss" scoped>
 $title-color: #ebd63b;
 $pin-color: #c8e14b;

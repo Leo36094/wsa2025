@@ -22,7 +22,7 @@ const { t } = useI18n()
 const cubes = computed(() => {
   return [
     {
-      number: '28',
+      number: '44',
       title: t('home.quick_fact_cube_title_1'),
     },
     {

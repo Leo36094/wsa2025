@@ -54,7 +54,7 @@ const nav = computed(() => [
     name: t('header.host'),
     path: '/host',
     subNav: [
-      { name: t('header.host_welcome'), path: '/' },
+      { name: t('header.host_welcome'), path: '' },
       { name: t('header.host_currency'), path: '#currency' },
       { name: t('header.host_electricity'), path: '#electricity' },
       { name: t('header.host_climate'), path: '#climate' },
@@ -65,7 +65,7 @@ const nav = computed(() => [
     name: t('header.competition'),
     path: '/competition',
     subNav: [
-      { name: t('header.competition'), path: '/' },
+      { name: t('header.competition'), path: '' },
       { name: t('header.competition_schedule'), path: '#schedule' },
       { name: t('header.competition_location'), path: '#location' },
     ],

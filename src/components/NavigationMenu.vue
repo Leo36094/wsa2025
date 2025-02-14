@@ -59,8 +59,7 @@ function goPage(path: string) {
   router.push(path)
 }
 function handleHashRoute(link: { name: string; path: string }, pageName: string) {
-  console.log({ link, pageName })
-  router.push({ name: pageName.toLowerCase(), hash: link.path })
+  router.push({ name: pageName.toLowerCase(), hash: link.path || '' })
 }
 </script>
 

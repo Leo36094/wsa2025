@@ -155,10 +155,13 @@ import HomeBannerTitle from './HomeBannerTitle.vue'
       margin-right: 0.8rem;
     }
 
-    background-image: url('/images/wsa/homepage_s01_00.png');
+    background-image: url('/images/wsa/homepage_s01_02.jpg');
     @for $i from 1 through 5 {
       &-#{$i} {
         background-image: url('/images/wsa/homepage_s01_0#{$i + 2}.jpg');
+      }
+      &-3 {
+        background-image: url('/images/wsa/homepage_s01_00.png');
       }
     }
   }

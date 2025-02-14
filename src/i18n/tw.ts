@@ -3,7 +3,7 @@ export default {
     host: '關於主辦',
     competition: '關於競賽',
     skill: '職類介紹',
-    involved: '加入我們',
+    involved: '參與活動',
     news: '新聞',
     lang_en: '英文',
     lang_tw: '繁體中文',
@@ -31,7 +31,7 @@ export default {
   },
   host: {
     title: '台北',
-    welcome: '歡迎',
+    welcome: '歡迎來到',
     welcome_sub: '台北',
     content: `
     台北是台灣的金融、經濟、政治、科技、教育與文化中心。這座城市匯聚了眾多跨國企業與國際金融機構，同時也是多個領事館與貿易組織的所在地。台北將現代都市的活力與豐富的歷史文化相融合，展現出多元且充滿能量的城市風貌。
@@ -70,7 +70,7 @@ export default {
   competition: {
     title: '關於競賽',
     title_tag: '關於',
-    title_competition: '關於競賽',
+    title_competition: '競賽',
     content: '亞洲技能競賽是備受推崇的區域性活動，年輕專業人才在各種職業技術領域展示他們的技能和專業知識。競賽旨在設立技能卓越標準、促進技術與職業教育訓練（TVET），並為參賽者參加世界技能國際競賽等全球性賽事做準備。選手們在多個技能類別中展示他們的能力，評審由業界專家和TVET專業人士擔任。這些賽事加強了TVET體系，解決技能短缺問題，並為參賽者提供個人成長、職業發展及國際認可的機會。透過促進政府、產業與教育機構之間的合作，這些競賽有助於未來發展高技能勞動力，並推動亞洲地區的整體發展。',
     schedule_title: '競賽日程',
     schedule_date: '時間',
@@ -262,7 +262,7 @@ export default {
     title: '最新消息',
   },
   involved: {
-    title: '加入我們',
+    title: '參與活動',
     comming_soon: '敬請期待',
   }
 }

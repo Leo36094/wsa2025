@@ -1,6 +1,7 @@
-import{d as r,b as c,e as d,o as g,c as h,a as e,t as u,M as p,_ as f}from"./index-CV9ur29a.js";const w={class:"news-inner-container"},m={class:"news-inner"},y={class:"news-inner-title"},k=["innerHTML"],b=r({__name:"NewsInnerView",setup(T){const n=p().params.id,l={en:{title:"The 3rd WorldSkills Asia Competition Skills",content:`
+import{d as r,b as c,e as g,o as d,c as h,a as e,t as u,M as p,_ as w}from"./index-CmXLWWd1.js";const f={class:"news-inner-container"},m={class:"news-inner"},y={class:"news-inner-title"},k=["innerHTML"],_=r({__name:"NewsInnerView",setup(b){const n=p().params.id,l={en:{title:"The 3rd WorldSkills Asia Competition Skills",content:`
 <p>
 The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center from November 27 to 29, 2025. The event will feature 36 official skills, 8 junior skills, and 4 exhibition skills, attracting thousands of experts and competitors from all over Asia.</p>
+<img src="/wsa2025/images/news/news_01.jpg" alt="The 3rd WorldSkills Asia Competition Skills" style="width: 100%;">
 <p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">
 Official Skills (36 skills in total) :
 </p>
@@ -62,10 +63,8 @@ Official Skills (36 skills in total) :
 <li>Autonomous Mobile Robotics</li>
 <li>Electronics</li>
 <li>Floristry</li>
-<li>The skills to be held are as per the announcement by WSA.</li>
-<li>WorldSkills Asia</li>
 </ul>
 <p>The skills to be held are as per the announcement by WSA.</p>
 <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>
 
-  `},zh:{title:"Title",content:""}},o=i=>new Promise(t=>setTimeout(t,i));async function s(i){return console.log("fetchNewsInfo",i),await o(1e3),l}const a=c({en:{title:"",content:""},zh:{title:"",content:""}});return d(async()=>{a.value=await s(n)}),(i,t)=>(g(),h("div",w,[e("div",m,[e("h1",y,u(l.en.title),1),e("div",{class:"news-inner-content",innerHTML:l.en.content},null,8,k)])]))}}),S=f(b,[["__scopeId","data-v-5f33a128"]]);export{S as default};
+  `},zh:{title:"Title",content:""}},o=i=>new Promise(t=>setTimeout(t,i));async function s(i){return console.log("fetchNewsInfo",i),await o(1e3),l}const a=c({en:{title:"",content:""},zh:{title:"",content:""}});return g(async()=>{a.value=await s(n)}),(i,t)=>(d(),h("div",f,[e("div",m,[e("h1",y,u(l.en.title),1),e("div",{class:"news-inner-content",innerHTML:l.en.content},null,8,k)])]))}}),S=w(_,[["__scopeId","data-v-e3b9d791"]]);export{S as default};

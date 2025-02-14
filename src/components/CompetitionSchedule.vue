@@ -22,9 +22,7 @@
             <p class="code">{{ schedule.code }}</p>
           </div>
           <div class="bar__col">
-            <p class="activity">
-              {{ schedule.activity }}
-            </p>
+            <p class="activity" v-html="schedule.activity"></p>
           </div>
         </div>
       </div>
@@ -39,7 +37,7 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const schedules = computed(() => {
-  return Array.from({ length: 8 }, (_, i) => {
+  return Array.from({ length: 7 }, (_, i) => {
     return {
       date: t('competition.schedule_date' + (i + 1)).split(' '),
       code: t('competition.schedule_code' + (i + 1)),

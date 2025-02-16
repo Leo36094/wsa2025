@@ -26,7 +26,6 @@ const newsPlaceholder = [
 ]
 
 const news = ref(newsPlaceholder)
-console.log(newsPlaceholder)
 
 const router = useRouter()
 function goToNews() {

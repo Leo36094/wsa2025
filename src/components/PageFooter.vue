@@ -18,24 +18,29 @@
             </div>
           </div>
           <div class="social-media">
-            <a class="col" href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr">
+            <a
+              class="col"
+              href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr"
+              target="_blank"
+            >
               <img
                 class="social-media__icon facebook"
                 src="/images/ri_facebook-circle-fill.svg"
                 alt="facebook-icon"
               />
             </a>
-            <a class="col" href="https://www.instagram.com/wdagovtw/">
+            <a class="col" href="https://www.instagram.com/wdagovtw/" target="_blank">
               <img
                 class="social-media__icon"
                 src="/images/Instagram_Glyph_White 1.svg"
                 alt="instagram-icon"
+                target="_blank"
               />
             </a>
-            <a class="col" href="twitter.com/WorldSkillsAsia/">
+            <a class="col" href="twitter.com/WorldSkillsAsia/" target="_blank">
               <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
             </a>
-            <a class="col" href="https://line.me/R/ti/p/@153dnycq">
+            <a class="col" href="https://line.me/R/ti/p/@153dnycq" target="_blank">
               <img class="social-media__icon" src="/images/LINE 1.png" alt="line-icon" />
             </a>
           </div>
@@ -57,6 +62,7 @@
 }
 .page-footer {
   font-size: 0.16rem;
+  color: #fff;
   .icon {
     width: 0.24rem;
     height: 0.24rem;
@@ -113,6 +119,9 @@
   .page-footer {
     &__row {
       flex-direction: column;
+      .info {
+        margin-right: 0;
+      }
     }
     .col {
       margin-bottom: 0.21rem;
@@ -125,11 +134,6 @@
       width: 100%;
       .col {
         margin-bottom: 0;
-        img {
-          width: 0.36rem;
-          height: 0.36rem;
-          object-fit: cover;
-        }
       }
     }
     .copyrights {

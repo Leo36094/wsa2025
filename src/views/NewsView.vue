@@ -147,7 +147,7 @@ onMounted(async () => {
   }
   .display-page {
     &[data-selected] {
-      background-color: #c8e14b;
+      background-color: $green-primary;
       color: #000;
     }
   }

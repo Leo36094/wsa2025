@@ -104,7 +104,7 @@ const currentMap = computed(() => {
 </script>
 <style lang="scss" scoped>
 $title-color: #ebd63b;
-$pin-color: #c8e14b;
+$pin-color: $green-primary;
 .location {
   .location-container {
     @include withContainer;

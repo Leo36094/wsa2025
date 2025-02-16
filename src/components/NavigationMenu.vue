@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
+// import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
 import {
   NavigationMenuContent,
@@ -75,10 +75,9 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
           <NavigationMenuTrigger
             :ref="(node) => onNodeUpdate(node, item)"
             class="NavigationMenuTrigger"
-            @click="goPage(item.path)"
           >
             {{ item.name }}
-            <Icon icon="radix-icons:caret-down" class="CaretDown" v-if="item.subNav.length > 0" />
+            <!-- <Icon icon="radix-icons:caret-down" class="CaretDown" v-if="item.subNav.length > 0" /> -->
           </NavigationMenuTrigger>
         </template>
         <template v-else>
@@ -110,11 +109,9 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
   </NavigationMenuRoot>
 </template>
 <style lang="scss">
-/* @import '@radix-ui/colors/black-alpha.css';
-@import '@radix-ui/colors/indigo.css';
-@import '@radix-ui/colors/mauve.css';
-@import '@radix-ui/colors/green.css';
-@import '@radix-ui/colors/grass.css'; */
+$hover-bg: #ffffff33;
+$text-color: #101e24;
+$dropdown-border-color: #899ca4;
 
 /* reset */
 button,
@@ -149,16 +146,16 @@ p {
   font-weight: 500;
   line-height: 1;
   border-radius: 4px;
-  color: #fff;
+  color: $text-color;
 }
 .NavigationMenuTrigger:focus,
 .NavigationMenuLink:focus {
-  background-color: rgba(#fff, 0.1);
+  background-color: $hover-bg;
   border-radius: 0.04rem;
 }
 .NavigationMenuTrigger:hover,
 .NavigationMenuLink:hover {
-  background-color: rgba(#fff, 0.1);
+  background-color: $hover-bg;
 }
 
 .NavigationMenuTrigger {
@@ -166,6 +163,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 2px;
+  cursor: pointer;
 }
 
 .NavigationMenuLink {
@@ -210,14 +208,13 @@ p {
 
 .NavigationMenuViewport {
   position: relative;
-  /* transform-origin: top center; */
   margin-top: 10px;
   width: 100%;
   height: var(--radix-navigation-menu-viewport-height);
   border-radius: 6px;
   overflow: hidden;
-  background-color: #101e24;
-  outline: 1px solid #fff;
+  background-color: #fff;
+  outline: 1px solid #899ca4;
   box-shadow:
     hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
     hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
@@ -228,7 +225,7 @@ p {
 }
 .NavigationMenuViewport[data-state='open'] {
   animation: scaleIn 200ms ease;
-  border: 1px solid #fff;
+  border: 1px solid $dropdown-border-color;
 }
 .NavigationMenuViewport[data-state='closed'] {
   animation: scaleOut 200ms ease;
@@ -247,6 +244,7 @@ p {
   li {
     width: 100%;
     font-size: 0.18rem;
+    cursor: pointer;
     @include flexCenter;
   }
 }
@@ -260,13 +258,13 @@ p {
   padding: 0.16rem;
   line-height: 1;
   width: 100%;
-  color: #fff;
+  color: $black-primary;
   &:focus {
-    box-shadow: 0 0 0 2px #c8e14b;
-    background-color: #c8e14b;
+    box-shadow: 0 0 0 2px $white-bg;
+    background-color: $white-bg;
   }
   &:hover {
-    background-color: #c8e14b;
+    background-color: $white-bg;
     color: #101e24;
   }
 }

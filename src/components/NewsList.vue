@@ -48,22 +48,24 @@ function goToNewsDetail(id: number) {
 }
 </script>
 <style lang="scss" scoped>
+$border-color: $black-primary;
+$text-date-color: #899ca4;
 .news-list {
-  border-top: 0.01rem solid #fff;
+  border-top: 0.01rem solid $border-color;
   position: relative;
 
   .news-vertical-divider {
     width: 0.01rem;
     height: 100%;
     position: absolute;
-    background-color: #fff;
+    background-color: $border-color;
     left: 50%;
     transform: translateX(-50%);
   }
   .news-row {
     padding-top: 0.5rem;
     width: 100%;
-    border-bottom: 0.01rem solid #fff;
+    border-bottom: 0.01rem solid $border-color;
   }
   .news-row-container {
     @include withContainer;
@@ -89,14 +91,14 @@ function goToNewsDetail(id: number) {
     }
     &__date {
       font-size: 0.16rem;
-      color: #9fa7a7;
+      color: $text-date-color;
     }
     .divider {
       width: 100%;
       position: absolute;
       bottom: 0;
       height: 0.01rem;
-      background-color: #e0e0e0;
+      background-color: $border-color;
     }
   }
 }
@@ -117,7 +119,7 @@ function goToNewsDetail(id: number) {
     }
     .news-item {
       width: 100%;
-      border-bottom: #fff 1px solid;
+      border-bottom: $border-color 1px solid;
       padding: 0.4rem 0 0.24rem 0;
       margin-bottom: 0;
       &__img {

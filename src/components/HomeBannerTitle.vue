@@ -17,6 +17,7 @@
 <style lang="scss" scoped>
 .banner-title {
   font-weight: 700;
+  color: #fff;
   .date {
     font-size: 0.28rem;
   }
@@ -25,7 +26,7 @@
     line-height: 1.06rem;
   }
   .banner-year {
-    color: #c8e14b;
+    color: $green-primary;
   }
   .splits {
     display: none;
@@ -33,6 +34,7 @@
 }
 @include tablet {
   .banner-title {
+    width: 4.15rem;
     .pc {
       display: none;
     }
@@ -40,9 +42,7 @@
       line-height: 1.06rem;
     }
     .splits {
-      width: 5.07rem;
-      font-size: 0.88rem;
-      line-height: 1.06rem;
+      font-size: 0.72rem;
       display: flex;
       flex-direction: column;
     }
@@ -50,6 +50,10 @@
 }
 @include mobile {
   .banner-title {
+    width: 2.08rem;
+    .date {
+      font-size: 0.16rem;
+    }
     .splits {
       font-size: 0.36rem;
       width: 2.08rem;

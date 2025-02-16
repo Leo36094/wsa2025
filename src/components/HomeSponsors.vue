@@ -11,14 +11,6 @@
               <div class="sponsors-item" :style="{ backgroundImage: `url(${slide})` }"></div>
             </SwiperSlide>
           </Swiper>
-          <!-- <div class="sponsors-list">
-            <div
-              class="sponsors-item"
-              v-for="item in sponsors"
-              :key="item"
-              :style="{ backgroundImage: `url(${item})` }"
-            ></div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -30,23 +22,23 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-const sponsors = Array(8)
+const sponsors = Array(10)
   .fill(0)
   .map(() => {
     return `https://fakeimg.pl/176x144/`
   })
 
 const swiperConfig = {
-  loop: true,
+  // loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
   },
   spaceBetween: 8,
-  slidesPerView: 2,
+  slidesPerView: 2.3,
   breakpoints: {
     750: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     1024: {
       slidesPerView: 7,
@@ -60,16 +52,14 @@ const swiperConfig = {
   margin: auto;
   margin-bottom: 2.16rem;
   .sponsors {
-    width: 13.6rem;
-    padding: 0.64rem 0;
+    max-width: 14.4rem;
     margin: 0 auto;
     border-radius: 0.1rem;
-    background-color: #fff;
   }
   .sponsors__title {
     @include withContainer;
-    padding: 0 0.64rem;
     color: #000;
+    padding-left: 0.94rem;
     font-size: 0.48rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
@@ -89,6 +79,7 @@ const swiperConfig = {
     white-space: nowrap;
     @include flexCenter;
     gap: 0.32rem;
+    padding-left: 0.94rem;
     &:hover {
       animation-play-state: paused;
     }
@@ -113,12 +104,11 @@ const swiperConfig = {
     padding-top: 0.96rem;
     margin-bottom: 0.96rem;
     .sponsors {
-      width: 6.64rem;
+      max-width: 7.44rem;
       padding: 0.4rem 0;
     }
     .sponsors__title {
       font-size: 0.48rem;
-      padding: 0;
       padding-left: 0.4rem;
       margin-bottom: 0.4rem;
     }
@@ -128,7 +118,8 @@ const swiperConfig = {
       }
     }
     .sponsors-list {
-      gap: 0.25rem;
+      gap: 0.32rem;
+      padding-left: 0.4rem;
       .sponsors-item {
         width: 1.72rem;
         height: 1.43rem;
@@ -159,6 +150,7 @@ const swiperConfig = {
     }
     .sponsors-list {
       gap: 0.08rem;
+      padding-left: 0.24rem;
       .sponsors-item {
         width: 1.27rem;
         height: 1.05rem;

@@ -9,7 +9,7 @@
 /* setup viewport */
 html {
   @include setHTML;
-  background: $main-bg;
+  background: $white-bg;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -17,7 +17,7 @@ html {
   body {
     width: 100%;
     font-size: 0.2rem;
-    color: #fff;
+    color: $black-primary;
   }
   .fade-enter-active,
   .fade-leave-active {

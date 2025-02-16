@@ -37,26 +37,25 @@ function changeLang(lang: LangBtn) {
 }
 </script>
 <style lang="scss" scoped>
-$langs-bg: #00000033;
+$langs-bg: $green-primary;
+$wrapper-bg: #fafcf2;
 .langs {
   min-width: 1.65rem;
   height: 0.5rem;
   border-radius: 1rem;
-  background-color: $langs-bg;
+  background: $wrapper-bg;
+  font-size: 0.16rem;
   @include flexCenter;
   .langs-btn {
     @include flexCenter;
-    color: #fff;
+    color: #000;
     width: auto;
     height: auto;
-    background: transparent;
     border-radius: 1rem;
     line-height: normal;
     padding: 0.08rem;
-    color: #899ca4;
     &--active {
-      color: #fff;
-      border: 1px solid #fff;
+      background-color: $langs-bg;
     }
   }
 }

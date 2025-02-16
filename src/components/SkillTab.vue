@@ -92,7 +92,7 @@ function onSelectUpdate(id: string) {
         left: 0.16rem;
         width: 0.06rem;
         height: 0.2rem;
-        background: #c8e14b;
+        background: $green-primary;
         visibility: hidden;
       }
 

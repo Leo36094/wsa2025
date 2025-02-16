@@ -37,14 +37,17 @@ const cubes = computed(() => {
 })
 </script>
 <style lang="scss" scoped>
+$cube-bg: #b8cf45;
 .quick-fact {
   margin: 1.6rem auto;
-  background: #00000033;
+  background: $green-primary;
   padding: 0.48rem 0.64rem;
   @include flexCenter(column);
+  color: $black-primary;
   &__title {
     font-size: 0.48rem;
     margin-bottom: 0.24rem;
+    font-weight: 700;
     text-align: center;
   }
   .cubes {
@@ -52,7 +55,7 @@ const cubes = computed(() => {
     @include withContainer;
     .cube {
       @include flexCenter(column);
-      background: #eb367826;
+      background: $cube-bg;
       width: 2.72rem;
       border-radius: 0.08rem;
       padding: 0.24rem;
@@ -62,11 +65,57 @@ const cubes = computed(() => {
       &__number {
         font-size: 0.48rem;
         font-weight: 700;
-        color: #fff;
       }
       &__title {
-        color: #eb3678;
         font-size: 0.18rem;
+      }
+    }
+  }
+}
+@include tablet {
+  .quick-fact {
+    padding: 0.2rem;
+    margin: 0.96rem auto;
+
+    &__title {
+      font-size: 0.36rem;
+    }
+    .cubes {
+      .cube {
+        width: 2.28rem;
+        height: 1.22rem;
+        padding: 0.24rem;
+        height: auto;
+        &:not(:last-child) {
+          margin-right: 0.04rem;
+        }
+        &__title {
+          font-weight: 400;
+          font-size: 0.17rem;
+        }
+        &__number {
+          font-size: 0.36rem;
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .quick-fact {
+    padding: 0.16rem;
+    margin: 0.72rem auto;
+    .cubes {
+      flex-direction: column;
+      .cube {
+        width: 2.88rem;
+        height: 1.2rem;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 0.04rem;
+        }
+        &__title {
+          font-size: 0.18rem;
+        }
       }
     }
   }

@@ -9,9 +9,6 @@
       </div>
       <nav class="nav-links-pc">
         <NavigationMenu :nav="nav" />
-        <!-- <router-link v-for="navItem in nav" :key="navItem.name" :to="navItem.path">{{
-          navItem.name
-        }}</router-link> -->
       </nav>
       <LangButton class="langs-pc" />
       <div :class="['hamburger-btn', { active: isMenuOpen }]" @click="toggleMenu">
@@ -102,7 +99,7 @@ $header-bg: #07100e;
     min-height: 0.76rem;
     padding-left: 1.04rem;
     padding-right: 1.06rem;
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     .icons {
       @include flexCenter;
     }
@@ -153,10 +150,11 @@ $header-bg: #07100e;
           transition: all 0.3s ease;
           width: 0.24rem;
           height: 0.02rem;
-          background-color: #fff;
+          background-color: #000;
         }
         &.active {
           .bar {
+            background-color: #fff;
             &:nth-child(1) {
               transform: rotate(45deg) translate(0.075rem, 0.08rem);
             }
@@ -190,6 +188,7 @@ $header-bg: #07100e;
           flex-direction: column;
           justify-content: space-between;
           padding-bottom: 0.4rem;
+          color: #fff;
           .sidebar-links {
             display: flex;
             flex-direction: column;
@@ -214,6 +213,12 @@ $header-bg: #07100e;
     width: 100%;
     max-width: 100%;
     .wrapper {
+      .wda {
+        width: 1.38rem;
+      }
+      .logo {
+        width: 0.76rem;
+      }
       /* width: 100%; */
       .sidebar-menu {
         width: 2.96rem;

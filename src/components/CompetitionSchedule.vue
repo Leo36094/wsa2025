@@ -25,6 +25,9 @@
             <p class="activity" v-html="schedule.activity"></p>
           </div>
         </div>
+        <ul class="schedule__note">
+          <li v-for="(note, idx) in notes" :key="idx" v-html="note"></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -45,19 +48,22 @@ const schedules = computed(() => {
     }
   })
 })
+const notes = computed(() => {
+  return [t('competition.schedule_note1'), t('competition.schedule_note2')]
+})
 </script>
 <style lang="scss" scoped>
 .competition-schedule {
-  margin-bottom: 2.17rem;
   .schedule-container {
     @include withContainer;
+    padding-bottom: 1.2rem;
   }
   .schedule {
     padding: 1.2rem;
     width: 100%;
     min-height: 12rem;
     padding-top: 0.94rem;
-    background: #00000033;
+    background: #fafcf2;
     border-radius: 0.4rem;
     &__title {
       font-size: 0.48rem;
@@ -73,20 +79,18 @@ const schedules = computed(() => {
       }
       &--header {
         font-size: 0.16rem;
-        /* color: #9fa7a7; */
-        color: #fff;
+        color: $black-primary;
         @include flexCenter;
         justify-content: flex-start;
-        background-color: #1f4352;
-        border-top-left-radius: 0.1rem;
-        border-top-right-radius: 0.1rem;
-        border-bottom: 1px solid #586566;
+        border-radius: 0.1rem;
+        margin-bottom: 0.08rem;
+        border: 1px solid #899ca4;
       }
       &--item {
         height: 0.95rem;
-
+        backdrop-filter: blur(0.6rem);
+        background-color: rgba(0, 0, 0, 0.03);
         border-radius: 0.1rem;
-        border: 1px solid rgba(#fff, 0.2);
         display: flex;
         align-items: center;
         &:nth-child(6),
@@ -94,12 +98,13 @@ const schedules = computed(() => {
         &:nth-child(8) {
           background: linear-gradient(
             90deg,
-            rgba(200, 225, 75, 0.15) 0%,
-            rgba(235, 54, 120, 0.15) 100%
+            rgba(251, 119, 60, 0.2) 0%,
+            rgba(0, 145, 229, 0.2) 100%
           );
         }
       }
       &__col {
+        line-height: normal;
         &:first-child {
           flex: 0.2;
         }
@@ -114,18 +119,17 @@ const schedules = computed(() => {
     .date {
       @include flexCenter(column);
       align-items: flex-start;
-      color: #fff;
+      color: $black-primary;
+      line-height: normal;
       &__month {
         font-size: 0.16rem;
       }
       &__num {
         font-size: 0.36rem;
-
         font-weight: 600;
       }
       &__day {
-        color: #899ca4;
-        font-size: 0.12rem;
+        font-size: 0.16rem;
       }
     }
     .code {
@@ -134,11 +138,20 @@ const schedules = computed(() => {
     .activity {
       font-size: 0.28rem;
     }
+    .schedule__note {
+      font-size: 0.16rem;
+      color: $black-primary;
+      list-style: disc;
+      padding-left: 0.2rem;
+      margin-top: 0.4rem;
+      li {
+        list-style-type: disc;
+      }
+    }
   }
 }
 @include tablet {
   .competition-schedule {
-    margin-bottom: 1.6rem;
     .schedule {
       padding: 0.4rem;
       .schedule__title {
@@ -159,6 +172,9 @@ const schedules = computed(() => {
 }
 @include mobile {
   .competition-schedule {
+    .schedule-container {
+      padding-bottom: 0.8rem;
+    }
     .schedule {
       padding: 0.4rem 0.24rem;
       min-height: 100%;

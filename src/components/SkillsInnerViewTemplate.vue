@@ -15,7 +15,7 @@
           <div class="gallery-image" data-aos="fade-up" data-aos-delay="500">
             <div
               class="image-item"
-              v-for="(img, imgIdx) in imagesMap[selectedSkill.id].slice(0, 3)"
+              v-for="(img, imgIdx) in imageList.slice(0, 3)"
               :style="{ backgroundImage: `url(${img})` }"
               :key="imgIdx"
             ></div>
@@ -26,9 +26,10 @@
             data-aos-delay="500"
             data-aos-anchor-placement="top-bottom"
           >
-            <div class="icon-button">
-              <component :is="IconComponentMap[props.viewName]" :name="displayIcon" />
-            </div>
+            <div
+              class="skill-image"
+              :style="{ backgroundImage: `url(${displaySkillImage})` }"
+            ></div>
             <h2 class="title">{{ copyText.title }}</h2>
             <p class="copy" v-html="copyText.copy"></p>
           </div>
@@ -40,26 +41,22 @@
           >
             <div
               class="image-item"
-              v-for="(img, index) in imagesMap[selectedSkill.id].slice(3)"
+              v-for="(img, index) in imageList.slice(3)"
               :style="{ backgroundImage: `url(${img})` }"
               :key="index"
             ></div>
           </div>
-          <div v-if="!isDesktop" class="skill-swiper">
-            <Swiper v-bind="swiperConfig">
-              <SwiperSlide
-                v-for="(slide, slideIdx) in imagesMap[selectedSkill.id]"
-                :key="slideIdx"
-                class="slide"
-              >
-                <div
-                  :style="{ backgroundImage: `url(${slide})` }"
-                  class="img-slide"
-                  alt="skill image decoration"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+        </div>
+        <div v-if="!isDesktop" class="skill-swiper">
+          <Swiper v-bind="swiperConfig">
+            <SwiperSlide v-for="(slide, slideIdx) in imageList" :key="slideIdx" class="slide">
+              <div
+                :style="{ backgroundImage: `url(${slide})` }"
+                class="img-slide"
+                alt="skill image decoration"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>
@@ -74,6 +71,7 @@ import { Autoplay, FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import SkillTab from '@/components/SkillTab.vue'
+
 import type { TSkillTab } from '@/types/skills'
 import {
   ManufacturingIconEnum,
@@ -85,13 +83,6 @@ import {
   JuniorsIconEnum,
 } from '@/components/icons/enum'
 import { InnerViewEnum } from '@/types/skills'
-import IconManufacturing from '@/components/icons/IconManufacturing.vue'
-import IconConstruction from '@/components/icons/IconConstruction.vue'
-import IconIT from '@/components/icons/IconIT.vue'
-import IconLogistics from '@/components/icons/IconLogistics.vue'
-import IconSocial from '@/components/icons/IconSocial.vue'
-import IconArt from '@/components/icons/IconArt.vue'
-import IconJuniors from '@/components/icons/IconJuniors.vue'
 
 // const COLS = 4
 const { t } = useI18n()
@@ -110,16 +101,6 @@ const SkillImagePrefixMap = {
   [InnerViewEnum.Social]: '05',
   [InnerViewEnum.Art]: '06',
   [InnerViewEnum.Juniors]: '07',
-}
-
-const IconComponentMap = {
-  [InnerViewEnum.Manufacturing]: IconManufacturing,
-  [InnerViewEnum.Construction]: IconConstruction,
-  [InnerViewEnum.IT]: IconIT,
-  [InnerViewEnum.Logistics]: IconLogistics,
-  [InnerViewEnum.Social]: IconSocial,
-  [InnerViewEnum.Art]: IconArt,
-  [InnerViewEnum.Juniors]: IconJuniors,
 }
 
 const InnerViewEnumMap = {
@@ -148,16 +129,23 @@ const skillList = computed(() =>
     id: key,
   })),
 )
-
-// const skillListCols = computed(() => {
-//   const rows = Math.ceil(skillList.value.length / COLS)
-//   return Array.from({ length: rows }, (_, i) => skillList.value.slice(i * COLS, (i + 1) * COLS))
-// })
-
 const selectedSkill = ref<TSkillTab>(skillList.value[0])
-const displayIcon = computed(() => {
-  return selectedSkill.value
-    .icon as (typeof InnerViewEnumMap)[InnerViewEnum][keyof (typeof InnerViewEnumMap)[InnerViewEnum]]
+const displaySkillImageList = computed(() => {
+  const prefix = SkillImagePrefixMap[props.viewName]
+  const length = skillList.value.length
+
+  return Array(length)
+    .fill('')
+    .map((_, index) => {
+      const indexSuffix = `${index + 1}`.padStart(2, '0')
+      return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_${prefix}_${indexSuffix}.jpg`
+    })
+})
+const displaySkillImage = computed(() => {
+  const index = skillList.value.findIndex((item) => {
+    return item.id === selectedSkill.value.id
+  })
+  return displaySkillImageList.value[index]
 })
 
 const copyText = computed(() => {
@@ -166,43 +154,14 @@ const copyText = computed(() => {
   return { copy, title }
 })
 
-// According doc. https://www.figma.com/design/cLQzYBkzjmJUGHFUAgTuZ9/WSA?node-id=126-3375&m=dev
-const juniorsImagePrefix = ['01_09', '01_11', '02_05', '02_08', '03_07', '05_04', '05_07', '06_06']
-const juniorsImages = Object.keys(JuniorsIconEnum).reduce(
-  (acc, curr, keyIdx) => {
-    const prefix = juniorsImagePrefix[keyIdx]
-    acc[curr] = Array(6)
-      .fill('')
-      .map((_, idx) => {
-        const imageIndex = (idx + 1).toString().padStart(2, '0')
-        return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_${prefix}_${imageIndex}.jpg`
-      })
-    return acc
-  },
-  {} as Record<string, string[]>,
-)
-
-const imagesMap = computed(() => {
-  if (props.viewName === InnerViewEnum.Juniors) {
-    return { ...juniorsImages }
-  }
-  return skillList.value.reduce(
-    (acc, curr, skillIndex) => {
-      acc[curr.id] = Array(6)
-        .fill('')
-        .map((_, idx) => {
-          // +4 because image number name start from 4
-          const prefixName = SkillImagePrefixMap[props.viewName]
-          const subSkillIndex = (skillIndex + 4).toString().padStart(2, '0')
-          const imageIndex = (idx + 1).toString().padStart(2, '0')
-          const imageUrl = `${import.meta.env.BASE_URL}images/wsa/Skills/skills_${prefixName}_${subSkillIndex}_${imageIndex}.jpg`
-          return imageUrl
-        })
-      return acc
-    },
-    {} as Record<string, string[]>,
-  )
+const imageList = computed(() => {
+  return Array(6)
+    .fill('')
+    .map((_, index) => {
+      return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_group_0${index + 1}.jpg`
+    })
 })
+
 function onTabClick(skill: TSkillTab) {
   selectedSkill.value = skill
 }
@@ -228,7 +187,7 @@ const swiperConfig = {
 .skills-inner-view {
   padding-top: 0.76rem;
   .skills-inner-view-container {
-    background: linear-gradient(180deg, #18475b 30%, #180161 89.74%);
+    background-color: #fff;
     min-height: 100svh;
     .skills-inner-view-title {
       @include withContainer;
@@ -249,23 +208,22 @@ const swiperConfig = {
       }
       .gallery-copy {
         @include flexCenter(column);
+        box-shadow: 0px 0.3rem 1rem 0px #cbe14b80;
+        background: #ffffff;
         justify-content: flex-start;
-        align-self: stretch;
-        padding-top: 1.2rem;
+        border-radius: 0.2rem;
         width: 4.43rem;
+        padding: 0.24rem;
         margin: 0 0.56rem;
-        .icon-button {
-          width: 0.95rem;
-          height: 0.95rem;
-          margin-bottom: 0.4rem;
-          @include bgCenter(contain);
-          @include flexCenter;
-          background-image: url('/images/host/square-blue.png');
+        .skill-image {
+          width: 3.95rem;
+          height: 2.22rem;
+          @include bgCenter(cover);
         }
         .title {
           font-size: 0.36rem;
           font-weight: 700;
-          margin-bottom: 0.4rem;
+          margin: 0.24rem auto;
           text-align: center;
         }
         .copy {
@@ -314,13 +272,12 @@ const swiperConfig = {
         .gallery-copy {
           width: 6.64rem;
           margin-bottom: 0.24rem;
-          .icon-button {
-            width: 0.72rem;
-            height: 0.72rem;
-            margin-bottom: 0.24rem;
+          .skill-image {
+            width: 2rem;
+            height: 1.12rem;
           }
           .title {
-            margin-bottom: 0.24rem;
+            margin: 0.16rem auto;
           }
         }
         .gallery-image {
@@ -345,14 +302,18 @@ const swiperConfig = {
         font-size: 0.24rem;
       }
       .skill-inner-view-gallery {
+        .gallery-container {
+          padding: 0 0.16rem;
+        }
         .gallery-copy {
           width: 100%;
           margin: 0 auto 0.16rem auto;
-          padding: 0 0.24rem;
-          .icon-button {
-            width: 0.56rem;
-            height: 0.56rem;
-            margin-bottom: 0.16rem;
+          padding: 0.16rem;
+          box-shadow: 0px 0.1rem 0.3rem 0px #cbe14b80;
+
+          .skill-image {
+            width: 2.55rem;
+            height: 1.43rem;
           }
           .title {
             font-size: 0.24rem;
@@ -363,7 +324,7 @@ const swiperConfig = {
           }
         }
         .skill-swiper {
-          margin-bottom: 0;
+          margin-bottom: 0.6rem;
         }
       }
     }

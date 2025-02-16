@@ -124,7 +124,6 @@ onMounted(async () => {
       height: 1.07rem;
       margin: 0.72rem auto 0.4rem auto;
       h1 {
-        color: #fff;
         font-size: 0.88rem;
         font-weight: 700;
         animation: title-slide-up 0.5s forwards;

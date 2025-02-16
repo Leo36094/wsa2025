@@ -12,9 +12,9 @@ export default {
     host_tab_01: 'WorldSkills Asia',
     host_tab_02: '中華台北',
     host_tab_03: '關於WDA',
+    host_tab_04: '競賽場地',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
-    competition_tab_03: '地點',
   },
   footer: {
     address: '展館地圖',

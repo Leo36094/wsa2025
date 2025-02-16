@@ -8,9 +8,10 @@
 <style lang="scss" scoped>
 .skill {
   padding-top: 0.76rem;
-  /* min-height: 100svh; */
+  background-color: #fff;
   display: flex;
   flex-direction: column;
+  min-height: 100svh;
   > * {
     align-self: stretch;
   }

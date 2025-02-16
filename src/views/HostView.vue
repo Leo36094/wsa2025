@@ -23,7 +23,7 @@ import HostClimate from '@/components/HostClimate.vue'
 import HostSkill from '@/components/HostSkill.vue'
 import HostWDA from '@/components/HostWDA.vue'
 import HostLocation from '@/components/HostLocation.vue'
-import { PageSectionEnum } from '@/types/page_section'
+import { PageSectionEnum, type PageValue } from '@/types/page_section'
 
 const { t } = useI18n()
 
@@ -40,11 +40,15 @@ const tabs = computed(() => [
     label: t('page_tabs.host_tab_03'),
     value: PageSectionEnum.WDA,
   },
+  {
+    label: t('page_tabs.host_tab_04'),
+    value: PageSectionEnum.Location,
+  },
 ])
 const router = useRouter()
 const activeTab = ref(tabs.value[0].value)
 
-const handleActiveTabChange = (value: PageSectionEnum) => {
+const handleActiveTabChange = (value: PageValue) => {
   // 似乎不需要處理，因為只有第一個 active 會被顯示
   // activeTab.value = value
   router.push({

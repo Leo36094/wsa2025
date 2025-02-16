@@ -40,6 +40,7 @@ import { useRouter } from 'vue-router'
 import LangButton from './LangButton.vue'
 import IconLogo from '@/components/icons/IconLogo.vue'
 import NavigationMenu from './NavigationMenu.vue'
+import { SECTION_ID } from '@/types/page_section'
 
 import { useI18n } from 'vue-i18n'
 
@@ -52,8 +53,9 @@ const nav = computed(() => [
     path: '/host',
     subNav: [
       { name: t('page_tabs.host_tab_01'), path: '' },
-      { name: t('page_tabs.host_tab_02'), path: '#currency' },
-      { name: t('page_tabs.host_tab_03'), path: '#skill' },
+      { name: t('page_tabs.host_tab_02'), path: `#${SECTION_ID.Taipei}` },
+      { name: t('page_tabs.host_tab_03'), path: `#${SECTION_ID.WDA}` },
+      { name: t('page_tabs.host_tab_04'), path: `#${SECTION_ID.Location}` },
     ],
   },
   {
@@ -61,8 +63,7 @@ const nav = computed(() => [
     path: '/competition',
     subNav: [
       { name: t('page_tabs.competition_tab_01'), path: '' },
-      { name: t('page_tabs.competition_tab_02'), path: '#schedule' },
-      { name: t('page_tabs.competition_tab_03'), path: '#location' },
+      { name: t('page_tabs.competition_tab_02'), path: `#${SECTION_ID.Schedule}` },
     ],
   },
   { name: t('header.skill'), path: '/skills', subNav: [] },

@@ -40,7 +40,7 @@ const skillName = computed(() => SkillNameMap.value[props.skillType])
 
   @include flexCenter;
   justify-content: flex-start;
-  background-image: url('/images/host/rectangle.png');
+  background: #f3f4f5;
   .skill-name {
     margin-left: 0.32rem;
     font-size: 0.28rem;

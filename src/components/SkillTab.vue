@@ -63,17 +63,17 @@ function onSelectUpdate(id: string) {
 }
 </script>
 <style lang="scss" scoped>
+$border-color: #899ca4;
 .skill-tab {
   .skill-tab-container {
     @include withContainer;
     width: 12.8rem;
-    border: 1px solid #ffffff1a;
+    border: 1px solid $border-color;
+    border-radius: 0.04rem;
+    background: #f3f4f5;
     .skill-row {
       display: flex;
       align-items: stretch;
-      &:not(:last-child) {
-        border-bottom: 1px solid #ffffff1a;
-      }
     }
     .skill-col {
       cursor: pointer;
@@ -96,17 +96,8 @@ function onSelectUpdate(id: string) {
         visibility: hidden;
       }
 
-      &:not(:last-child) {
-        border-right: 1px solid #ffffff1a;
-      }
-      &:not(:nth-child(4n)) {
-        border-right: 1px solid #ffffff1a;
-      }
-      &:hover,
-      &:focus {
-        background: #ffffff1a;
-      }
-      &--selected {
+      &--selected,
+      &:hover {
         background: #ffffff1a;
         &::before {
           visibility: visible;

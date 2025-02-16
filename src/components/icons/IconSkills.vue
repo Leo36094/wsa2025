@@ -34,7 +34,7 @@ $types: (
 
   @each $type, $value in $types {
     &.icon-#{$value} {
-      background-image: url('/images/wsa/icon/ic_skill-#{$value}.svg');
+      background-image: url('/images/wsa/icon/ic_skill-#{$value}.png');
     }
   }
 }

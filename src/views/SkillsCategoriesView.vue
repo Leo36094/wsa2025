@@ -73,7 +73,7 @@ const goSkillDetail = (skill: SkillIconEnum) => {
       .skill-item {
         cursor: pointer;
         &:hover {
-          filter: brightness(1.5);
+          filter: brightness(0.9);
           transition: all 0.3s linear;
         }
         &:nth-child(2n) {

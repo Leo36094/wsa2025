@@ -13,7 +13,7 @@
               <a href="tel:1234567890">info@worldskillsasia.ae</a>
             </div>
             <div class="col address__street">
-              <img class="icon" src="/images/ri_map-pin-fill.svg" alt="map-icon" />
+              <img class="icon" src="/images/ri_map-pin-fill-white.svg" alt="map-icon" />
               <span>{{ $t('footer.address') }}</span>
             </div>
           </div>

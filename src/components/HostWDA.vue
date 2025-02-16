@@ -1,5 +1,5 @@
 <template>
-  <div class="host-wda">
+  <div class="host-wda" :id="SECTION_ID.WDA">
     <div class="host-wda-container">
       <div class="host-wda-title">
         <h1>{{ $t('host.wda_title') }}</h1>
@@ -11,7 +11,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { SECTION_ID } from '@/types/page_section'
+</script>
 
 <style lang="scss" scoped>
 .host-wda {

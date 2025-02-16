@@ -19,21 +19,21 @@
 </template>
 
 <script setup lang="ts">
-import { PageSectionEnum } from '@/types/page_section'
+import { type PageValue } from '@/types/page_section'
 
 defineProps<{
   tabs: {
     label: string
-    value: PageSectionEnum
+    value: PageValue
   }[]
-  activeTab: PageSectionEnum
+  activeTab: PageValue
 }>()
 
 const emit = defineEmits<{
-  (e: 'update:activeTab', value: PageSectionEnum): void
+  (e: 'update:activeTab', value: PageValue): void
 }>()
 
-const handleTabClick = (value: PageSectionEnum) => {
+const handleTabClick = (value: PageValue) => {
   emit('update:activeTab', value)
 }
 </script>
@@ -48,17 +48,19 @@ $tab-text-color: #455861;
   margin: 0.4rem auto;
   @include flexCenter;
   border-bottom: 0.01rem solid rgba(#101e24, 0.1);
-  overflow: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 .page-tab {
   display: flex;
   width: 100%;
   align-items: center;
-  z-index: 100;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  z-index: 5;
   &__item {
+    flex-shrink: 0;
+    cursor: pointer;
     padding: 0.16rem;
     text-align: center;
     min-width: 1.8rem;
@@ -86,6 +88,12 @@ $tab-text-color: #455861;
 @include mobile {
   .page-tab-container {
     width: auto;
+    .page-tab {
+      &__item {
+        min-width: unset;
+        width: 50%;
+      }
+    }
   }
 }
 </style>

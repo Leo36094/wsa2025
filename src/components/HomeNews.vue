@@ -45,9 +45,20 @@ function goToNews() {
   .more-button {
     font-size: 0.28rem;
     @include flexCenter;
-    margin-top: 0.47rem;
-    margin-bottom: 2.3rem;
     cursor: pointer;
+    width: 1.6rem;
+    height: 0.64rem;
+    margin: 0.48rem auto 2.3rem auto;
+    border-radius: 0.08rem;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid $black-primary;
+      background-color: #c8e14b;
+    }
+    &:focus {
+      border: 1px solid $black-primary;
+      background-color: #fff;
+    }
     img {
       width: 0.28rem;
       height: 0.28rem;

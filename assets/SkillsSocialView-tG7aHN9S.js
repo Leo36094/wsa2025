@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-l1D0-AiY.js";import{d as a,o,m as r,u as i}from"./index-DUdy5LvN.js";import"./free-mode-DST113sl.js";import"./enum-CA_ituI8.js";const _=a({__name:"SkillsSocialView",setup(m){return(t,s)=>(o(),r(e,{"view-name":i(n).Social},null,8,["view-name"]))}});export{_ as default};

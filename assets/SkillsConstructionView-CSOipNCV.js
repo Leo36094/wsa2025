@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-CcGLQpO_.js";import{d as o,o as r,m as t,u as a}from"./index-BT-J2Fjq.js";import"./free-mode-B-BN4T18.js";import"./enum-CA_ituI8.js";const _=o({__name:"SkillsConstructionView",setup(i){return(s,m)=>(r(),t(e,{"view-name":a(n).Construction},null,8,["view-name"]))}});export{_ as default};

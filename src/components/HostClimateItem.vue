@@ -39,7 +39,6 @@ const props = defineProps<{
     }
     p {
       font-size: 0.16rem;
-      color: #fff;
     }
   }
 }

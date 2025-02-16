@@ -8,6 +8,14 @@ export default {
     lang_en: '英文',
     lang_tw: '繁體中文',
   },
+  page_tabs: {
+    host_tab_01: 'WorldSkills Asia',
+    host_tab_02: '中華台北',
+    host_tab_03: '關於WDA',
+    competition_tab_01: '競賽',
+    competition_tab_02: '日程',
+    competition_tab_03: '地點',
+  },
   footer: {
     address: '展館地圖',
     announcement_schedule: '官方資訊與日程',
@@ -65,7 +73,14 @@ export default {
     skill_title: '關於亞洲技能競賽',
     skill_desc: `亞洲技能（WSA）是一個致力於促進亞洲地區技術與職業教育訓練（TVET）的區域性組織。作為全球世界技能運動的一部分，WSA旨在通過舉辦區域性技能競賽、促進能力建立和國際合作，提升技術職業標準。其活動範疇包括支持培訓者和專家的發展、促進青年就業，以及倡導TVET政策改革。透過為成員國、產業夥伴和TVET機構提供合作平台，WSA在縮短教育與就業之間的差距、提升勞動力發展以及推動區域經濟增長方面發揮著重要作用。`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: '更多相關資訊請見: https://www.worldskillsasia.net/en/Pages/default.aspx'
+    skill_link_text: '更多相關資訊請見: https://www.worldskillsasia.net/en/Pages/default.aspx',
+    wda_title: 'About WDA',
+    wda_content: `
+    勞動力發展署致力於協助國人穩定就業並提升勞動力素質，根據國家重點產業發展與勞動市場需求，培育所需人才，並提供職前訓練與就業媒合服務。同時，該署透過多元的在職訓練課程，提升勞工專業技能，進而增強整體勞動力的競爭力。<br><br>
+    為有效推動各項業務，勞動力發展署設有多個專責單位，包括職能標準及技能檢定組；轄下涵蓋5 個分署（機關）及 1 個中心（機構）。其中，職能標準及技能檢定組負責研擬技能競賽政策並推動國際技能合作與交流，而各分署及技能檢定中心則負責競賽推廣與選手培訓等相關業務。<br><br>
+技能競賽是該署的重要推動項目之一，旨在建立技能價值觀，鼓勵青年積極參與職業教育與訓練，並提升社會對技職教育的重視。競賽不僅為年輕人提供展示技能的舞台，也促進各行業間的技術交流與合作，進一步提升國家勞動力的國際競爭力。透過這些努力，勞動力發展署不僅提升國內勞動力素質，也為國家經濟發展提供穩定的技術人才支援。
+`,
+    location_visit_website: '訪問網站',
   },
   competition: {
     title: '關於競賽',

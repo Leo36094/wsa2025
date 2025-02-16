@@ -20,9 +20,15 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <p class="info-bar__desc">
-          {{ $t('competition.location_map_desc') }}
-        </p>
+        <div class="info-bar__desc-container">
+          <p class="info-bar__desc">
+            {{ $t('competition.location_map_desc') }}
+          </p>
+          <a class="info-bar__link" href="https://www.tainex.com.tw/" target="_blank">
+            <img src="/images/ri_global-fill.svg" alt="map-pin" />
+            {{ $t('host.location_visit_website') }}
+          </a>
+        </div>
       </div>
       <div class="info-bar">
         <div class="info-bar__img info-bar__img--hall1"></div>
@@ -103,11 +109,13 @@ const currentMap = computed(() => {
 })
 </script>
 <style lang="scss" scoped>
-$title-color: #ebd63b;
+$title-color: #fb773c;
 $pin-color: $green-primary;
 .location {
+  background: #fff;
   .location-container {
     @include withContainer;
+    padding: 1.6rem 0;
     header {
       font-weight: 700;
       margin: auto;
@@ -125,7 +133,7 @@ $pin-color: $green-primary;
       padding: 0.4rem;
       width: 12rem;
       min-height: 4.36rem;
-      background: #00000033;
+      background: #f3f4f5;
       border-radius: 0.4rem;
       margin: 0 auto;
       display: flex;
@@ -133,18 +141,31 @@ $pin-color: $green-primary;
       &:not(:last-child) {
         margin-bottom: 0.16rem;
       }
-      &:last-child {
-        margin-bottom: 1.2rem;
-      }
       .info-bar__map {
         max-width: 6rem;
         height: 3.56rem;
         @include bgCenter;
         flex-shrink: 0;
       }
+      .info-bar__link {
+        display: flex;
+        align-items: center;
+        margin-top: 0.16rem;
+        font-size: 0.16rem;
+        cursor: pointer;
+        img {
+          width: 0.24rem;
+          height: 0.24rem;
+          margin-right: 0.08rem;
+        }
+      }
+      .info-bar__desc-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.3rem;
+      }
       .info-bar__desc {
         font-size: 0.16rem;
-        margin-left: 0.3rem;
       }
       .info-bar__img {
         width: 6rem;
@@ -194,6 +215,10 @@ $pin-color: $green-primary;
         color: #101e24;
         margin-right: 0.16rem;
         flex-shrink: 0;
+        line-height: normal;
+      }
+      .floor-name {
+        line-height: normal;
       }
       .floor-name__list {
         display: flex;
@@ -202,12 +227,13 @@ $pin-color: $green-primary;
         list-style-type: circle;
         padding-left: 0.16rem;
         margin-top: 0.04rem;
+        color: $black-primary;
+        line-height: normal;
         li {
-          list-style-type: circle;
+          list-style-type: disc;
         }
         > * {
           font-size: 0.16rem;
-          color: #899ca4;
         }
       }
     }
@@ -216,7 +242,7 @@ $pin-color: $green-primary;
 @include tablet {
   .location {
     .location-container {
-      padding: 0 0.4rem;
+      padding: 1.6rem 0.4rem;
       header {
         margin-bottom: 0.32rem;
         line-height: normal;
@@ -255,7 +281,7 @@ $pin-color: $green-primary;
 @include mobile {
   .location {
     .location-container {
-      padding: 0;
+      padding: 0.8rem 0;
       header {
         padding: 0 0.24rem;
         margin-bottom: 0.24rem;
@@ -273,13 +299,14 @@ $pin-color: $green-primary;
         flex-direction: column;
         height: auto;
         padding: 0.24rem;
-        &:last-child {
-          margin-bottom: 0.8rem;
-        }
         &__map {
           width: 2.72rem;
           height: 1.53rem;
           margin-bottom: 0.16rem;
+        }
+        .info-bar__desc-container {
+          margin-left: 0;
+          text-align: justify;
         }
         .info-bar__img {
           width: 2.72rem;
@@ -301,6 +328,11 @@ $pin-color: $green-primary;
         }
         .floor-name {
           font-size: 0.16rem;
+        }
+        .floor-name__list {
+          li {
+            font-size: 0.12rem;
+          }
         }
       }
     }

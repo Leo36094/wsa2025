@@ -105,7 +105,6 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     } else if (to.hash) {
-      console.log('to.hash', to.hash)
       await nextTick()
       return {
         el: to.hash,

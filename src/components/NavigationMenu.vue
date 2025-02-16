@@ -56,10 +56,17 @@ function updateTrigger(value: string) {
 }
 const router = useRouter()
 function goPage(path: string) {
-  router.push(path)
+  const baseUrl = window.location.origin
+  const fullPath = router.resolve(path).href
+  window.open(`${baseUrl}${fullPath}`, '_blank')
 }
 function handleHashRoute(link: { name: string; path: string }, pageName: string) {
-  router.push({ name: pageName.toLowerCase(), hash: link.path || '' })
+  const baseUrl = window.location.origin
+  const fullPath = router.resolve(pageName.toLowerCase()).href
+  const newTab = `${baseUrl}${fullPath}${link.path || ''}`
+
+  console.log({ newTab })
+  window.open(newTab, '_blank')
 }
 </script>
 
@@ -75,13 +82,14 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
           <NavigationMenuTrigger
             :ref="(node) => onNodeUpdate(node, item)"
             class="NavigationMenuTrigger"
+            :aria-label="item.name"
           >
             {{ item.name }}
             <!-- <Icon icon="radix-icons:caret-down" class="CaretDown" v-if="item.subNav.length > 0" /> -->
           </NavigationMenuTrigger>
         </template>
         <template v-else>
-          <NavigationMenuLink class="NavigationMenuLink" @click="goPage(item.path)">
+          <NavigationMenuLink as="div" class="NavigationMenuLink" @click="goPage(item.path)">
             {{ item.name }}
           </NavigationMenuLink>
         </template>
@@ -91,7 +99,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
               v-for="link in item.subNav"
               :title="link.name"
               :key="link.name"
-              @click="handleHashRoute(link, item.name)"
+              @click="handleHashRoute(link, item.path)"
             >
             </NavigationMenuListItem>
           </ul>

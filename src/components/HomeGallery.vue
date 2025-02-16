@@ -1,7 +1,7 @@
 <template>
   <div class="home-banner__slide">
     <div class="gallery-bg"></div>
-    <div class="photo-row" data-aos="fade-up">
+    <div class="photo-row first-row" data-aos="fade-up">
       <div class="photo-item"></div>
       <div class="photo-item photo-item-1"></div>
       <div class="photo-item photo-item-2"></div>
@@ -22,23 +22,19 @@
       <div class="photo-item photo-item-4"></div>
       <div class="photo-item photo-item-5"></div>
     </div>
-    <div class="mb-photo-list" data-aos="fade-up">
-      <div class="photo-item"></div>
-      <div class="photo-item photo-item-3"></div>
-    </div>
   </div>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss" scoped>
 .home-banner__slide {
   background: $white-bg;
-  padding-top: 1.6rem;
+  height: 100%;
   position: relative;
   .gallery-bg {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     background-image: url('/images/wsa/line.png');
@@ -78,6 +74,9 @@
     @include withContainer;
     @include flexCenter;
     margin: auto;
+    &.first-row {
+      padding-top: 1.6rem;
+    }
   }
 
   .photo-item {
@@ -99,14 +98,14 @@
       }
     }
   }
-  .mb-photo-list {
-    display: none;
-  }
 }
 @include tablet() {
   .home-banner__slide {
-    padding-top: 0.72rem;
     overflow: hidden;
+    .gallery-bg {
+      background-position: 0% 85%;
+      background-size: 100% auto;
+    }
     .slide-header {
       padding: 0;
       .title {
@@ -130,21 +129,31 @@
         padding: 0.16rem;
       }
     }
+    .photo-row {
+      width: 100%;
+      &.first-row {
+        padding-top: 0.72rem;
+      }
+    }
     .photo-item {
-      width: 33%;
+      width: 33.33%;
       background-size: cover;
       height: 1.8rem;
       &:not(:last-child) {
-        margin-right: 0.1rem;
+        margin-right: 0rem;
       }
     }
   }
 }
 @include mobile {
   .home-banner__slide {
-    padding-top: 0.76rem;
     .slide-container {
       display: none;
+    }
+    .gallery-bg {
+      background-position: top;
+      top: 1.9rem;
+      height: 7.56rem;
     }
     .slide-header {
       flex-direction: column;
@@ -166,24 +175,15 @@
         background: none;
       }
     }
-    .mb-photo-list {
-      @include flexCenter;
-      height: 1.1rem;
-      position: relative;
-      margin-top: 0.32rem;
-      margin-bottom: 0.99rem;
-      .photo-item {
-        position: relative;
-        translate: 0;
-        top: 0;
-        left: 0;
-        width: 1.62rem;
-        height: 1.1rem;
-        @include bgCenter(cover);
-      }
-    }
     .photo-row {
-      display: none;
+      .photo-item {
+        height: 1rem;
+        width: 50%;
+        &.photo-item-2,
+        &.photo-item-5 {
+          display: none;
+        }
+      }
     }
   }
 }

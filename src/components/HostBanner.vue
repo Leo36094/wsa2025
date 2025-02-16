@@ -1,32 +1,6 @@
 <template>
-  <!-- <div class="host-banner">
-    <div class="first-slide__title">
-      <h1>{{ $t('host.title') }}</h1>
-    </div>
-    <div class="first-slide" id="firstSlide">
-      <div class="bloom-bg"></div>
-      <div class="first-slide__photos">
-        <div class="left-photo-container">
-          <div
-            ref="leftPhoto"
-            id="leftphoto"
-            class="photo-item photo-item--left"
-            :style="{ backgroundImage: `url(${hostImages[0]})` }"
-          ></div>
-        </div>
-        <div class="right-photo-container">
-          <div
-            ref="rightPhoto"
-            id="rightPhoto"
-            class="photo-item photo-item--right"
-            :style="{ backgroundImage: `url(${hostImages[1]})` }"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <div class="second-slide" id="secondSlide">
-    <div class="image-row" ref="topRow" id="topRow">
+  <div class="second-slide" id="host">
+    <div class="image-row" ref="topRow">
       <!-- <img ref="topFirst" id="topFirst" class="image-item" :src="hostImages[0]" alt="banner2" /> -->
       <div data-aos="fade-up" class="top-first-rest" ref="topFirstRest">
         <img class="image-item" :src="hostImages[0]" alt="banner2" />
@@ -158,61 +132,6 @@ const hostImages = Array.from(
 // })
 </script>
 <style lang="scss" scoped>
-.host-banner {
-  @include withContainer;
-  max-width: 19.2rem;
-  .first-slide {
-    margin: auto;
-    max-width: 14.4rem;
-    height: 55svh;
-    position: relative;
-    .bloom-bg {
-      position: absolute;
-      @include bgCenter(100% 100%);
-      width: 6.3rem;
-      top: 0%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      height: 6.3rem;
-      background-image: url('/images/host/circle-blue.png');
-    }
-    &__title {
-      overflow: hidden;
-      text-align: center;
-      margin: 1.44rem auto;
-      h1 {
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 14.29%, #ffffff 80.52%);
-        font-size: 0.88rem;
-        font-weight: 700;
-        animation: title-slide-up 0.5s forwards;
-      }
-    }
-    &__photos {
-      padding: 0 0.6rem;
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      .left-photo-container,
-      .right-photo-container {
-        position: relative;
-        @include bgCenter;
-        width: 6.25rem;
-        height: 3.5rem;
-      }
-      .photo-item {
-        @include bgCenter(cover);
-        width: 6.25rem;
-        height: 3.5rem;
-        &--right {
-          margin-top: 0.64rem;
-        }
-      }
-    }
-  }
-}
 .host-copy {
   max-width: 14.4rem;
   margin: auto;
@@ -245,7 +164,6 @@ const hostImages = Array.from(
 .second-slide {
   width: 100%;
   margin-bottom: 1.6rem;
-  padding-top: 0.76rem;
   .image-row {
     display: flex;
     justify-content: space-between;

@@ -63,7 +63,7 @@ const swiperConfig = {
   spaceBetween: 8,
   slidesPerView: 1.5,
   breakpoints: {
-    750: {
+    744: {
       slidesPerView: 3,
     },
   },
@@ -72,14 +72,15 @@ const swiperConfig = {
 </script>
 <style lang="scss" scoped>
 .host-skill {
-  background: linear-gradient(180deg, #4f1787 0%, #180161 89.74%);
-
   .host-skill-container {
+    background: linear-gradient(180deg, #185974 0%, #0a384b 100%);
     max-width: 19.2rem;
-    margin: auto;
+    margin: 0 auto 1.6rem auto;
     height: 9.14rem;
     display: flex;
     justify-content: center;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
     .image-col {
       display: flex;
       flex-direction: column;
@@ -103,6 +104,7 @@ const swiperConfig = {
         text-align: center;
       }
       .desc {
+        color: #fff;
         font-size: 0.16rem;
         text-align: justify;
 
@@ -123,6 +125,8 @@ const swiperConfig = {
 @include tablet {
   .host-skill .host-skill-container {
     height: auto;
+    max-width: 100%;
+    border-radius: 0;
     flex-direction: column;
     .image-col {
       display: none;

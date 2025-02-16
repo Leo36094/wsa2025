@@ -29,7 +29,7 @@
     width: 5rem;
     height: 5rem;
     @include bgCenter(100%);
-    background-image: url('/images/host/circle-blue.png');
+    background-image: url('/images/host/circle-yellow.png');
     position: absolute;
     top: -1.5rem;
     left: 0rem;
@@ -52,6 +52,7 @@
     height: 2.85rem;
     border-radius: 0.08rem;
     background-color: #fff;
+    border: 0.01rem solid #18475b;
     overflow: hidden;
     @include flexCenter;
     .power-img {

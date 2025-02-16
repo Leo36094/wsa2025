@@ -10,7 +10,7 @@
       <div class="column right-panel">
         <!-- 右邊的內容 -->
         <div class="content">
-          <div v-if="isDesktop" class="currency-table">
+          <div v-if="!isMobile" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencyCoin :label="$t('host.coin50')" :imgs="[coinImages[4]]" />
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div ref="lastCurrency" class="content">
-          <div v-if="isDesktop" class="currency-table">
+          <div v-if="!isMobile" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencBill :label="$t('host.banknote2000')" :img="billImages[4]" />
@@ -108,6 +108,7 @@ import HostCurrencBill from './HostCurrencBill.vue'
 const lastCurrency = ref<HTMLElement | null>(null)
 const cancelSticky = ref(false)
 const isDesktop = inject<Ref<boolean>>('isDesktop')
+const isMobile = inject<Ref<boolean>>('isMobile')
 
 const coinImages = [
   `${import.meta.env.BASE_URL}images/wsa/host_section02_1.png`,
@@ -157,7 +158,7 @@ $border-color: #18475b;
   width: 5rem;
   height: 5rem;
   @include bgCenter(100%);
-  background-image: url('/images/host/circle-blue.png');
+  background-image: url('/images/host/circle-yellow.png');
   position: absolute;
   top: -1.5rem;
   left: -0.9rem;
@@ -167,7 +168,6 @@ $border-color: #18475b;
   color: #000;
   position: sticky;
   top: 2rem;
-  color: #fff;
   margin-right: 0.32rem;
   h4 {
     font-size: 0.36rem;
@@ -192,6 +192,7 @@ $border-color: #18475b;
     width: 100%;
     min-height: 3.38rem;
     border-radius: 0.08rem;
+    border: 0.01rem solid $border-color;
     overflow: hidden;
     .row {
       display: flex;

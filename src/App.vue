@@ -11,8 +11,8 @@ const isDesktop = ref(false)
 const isMobile = ref(false)
 
 function checkIsDesktop() {
-  isDesktop.value = window.innerWidth >= 1024
-  isMobile.value = Boolean(window.innerWidth < 750)
+  isDesktop.value = window.innerWidth > 1024
+  isMobile.value = Boolean(window.innerWidth < 745)
 }
 
 provide('isDesktop', isDesktop)

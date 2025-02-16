@@ -98,7 +98,6 @@ const isDesktop = inject<Ref<boolean>>('isDesktop')
       font-size: 0.36rem;
       padding-top: 1.75rem;
       font-weight: 700;
-      color: #fff;
       text-align: center;
     }
     .climate-content {

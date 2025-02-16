@@ -7,14 +7,14 @@ export default {
     news: 'News',
     lang_en: 'English',
     lang_tw: 'Chinese',
-    // --- 0214 updated
-    host_welcome: 'Welcome',
-    host_currency: 'Currency',
-    host_electricity: 'Electricity',
-    host_climate: 'Climate',
-    host_skill: 'About World Skills Asia',
-    competition_schedule: 'Schedule',
-    competition_location: 'Location',
+  },
+  page_tabs: {
+    host_tab_01: 'WorldSkills Asia',
+    host_tab_02: 'Chinese Taipei',
+    host_tab_03: 'About WDA',
+    competition_tab_01: 'Competition',
+    competition_tab_02: 'Schedule',
+    competition_tab_03: 'Location',
   },
   footer: {
     address: 'WorldSkills Asia IPIC Building – 15th Floor Sultan Bin Zayed the First Street',
@@ -73,7 +73,17 @@ We warmly welcome participants and friends from all over the world and look forw
     skill_title: 'About World Skills Asia',
     skill_desc: `WorldSkills Asia (WSA) is a regional organization dedicated to promoting excellence in technical and vocational education and training (TVET) across Asia. As part of the global WorldSkills movement, WSA aims to raise the standards of skilled professions by organizing regional skills competitions, fostering capacity building, and facilitating international cooperation. Its key activities include supporting the development of trainers and experts, promoting youth employment, and advocating for TVET policy reforms. By providing a platform for collaboration among member countries, industry partners, and TVET institutions, WSA plays a vital role in bridging the gap between education and employment, enhancing workforce development, and driving economic growth in the region.`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: 'For more information: <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>'
+    skill_link_text: 'For more information: <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
+    wda_title: 'About WDA',
+    wda_content: `
+    The Workforce Development Agency (WDA) is dedicated to assisting citizens in achieving stable employment and improving the quality of the workforce. Based on the development of key national industries and labor market demands, it trains the necessary talent, while also providing pre-employment training and job matching services. At the same time, the agency enhances the professional skills of workers through diverse on-the-job training programs, thereby strengthening the overall competitiveness of the workforce.
+<br><br>
+To effectively promote its various operations, the Workforce Development Agency has set up multiple specialized units, including the Competency Standards and Skill Assessment Division, and covers 5 regional branches (agencies) and 1 center (institution). Among these, the Competency Standards and Skills Assessment Division is responsible for formulating skills competition policies and promoting international skills cooperation and exchange, while the regional branches and Skill Evaluation Center handle the promotion of competitions and training of competitors.
+<br><br>
+Skills competitions are one of the agency’s key initiatives, aimed at establishing the value of skills, encouraging young people to actively participate in vocational education and training, and raising societal awareness of technical and vocational education. The competitions not only provide a platform for young people to showcase their skills, but also promote technical exchange and cooperation across industries, further enhancing the international competitiveness of the nation's workforce. Through these efforts, the Workforce Development Agency (WDA) not only improves the quality of the domestic workforce but also provides stable technical talent support for the country's economic development.
+
+    `,
+    location_visit_website: 'Visit Website',
   },
   competition: {
     title: 'Competition',

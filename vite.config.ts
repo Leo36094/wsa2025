@@ -32,5 +32,6 @@ export default defineConfig({
       }
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/wsa2025/' : '/',
+  // base: process.env.NODE_ENV === 'production' ? '/wsa2025/' : '/',
+  base: '/wsa2025/',
 })

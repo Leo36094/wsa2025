@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import { Icon } from '@iconify/vue'
 import { ref } from 'vue'
 import {
   NavigationMenuContent,
@@ -56,16 +55,15 @@ function updateTrigger(value: string) {
 }
 const router = useRouter()
 function goPage(path: string) {
-  const baseUrl = window.location.origin
+  const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
   const fullPath = router.resolve(path).href
   window.open(`${baseUrl}${fullPath}`, '_blank')
 }
 function handleHashRoute(link: { name: string; path: string }, pageName: string) {
-  const baseUrl = window.location.origin
+  const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
   const fullPath = router.resolve(pageName.toLowerCase()).href
   const newTab = `${baseUrl}${fullPath}${link.path || ''}`
 
-  console.log({ newTab })
   window.open(newTab, '_blank')
 }
 </script>

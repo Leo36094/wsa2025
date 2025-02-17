@@ -17,6 +17,7 @@ import BaseTitle from '@/components/BaseTitle.vue'
   &__title {
     margin-top: 0.72rem;
     margin-bottom: 0.72rem;
+    color: #000;
   }
   &__desc {
     font-size: 0.28rem;

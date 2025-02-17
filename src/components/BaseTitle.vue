@@ -17,7 +17,7 @@ const props = defineProps<{
     height: 1.07rem;
     h1 {
       color: transparent;
-      color: #fff;
+      color: $black-primary;
       font-size: 0.88rem;
       font-weight: 700;
       animation: title-slide-up 0.5s forwards;

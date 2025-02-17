@@ -4,7 +4,7 @@ export default {
     competition: '關於競賽',
     skill: '職類介紹',
     involved: '參與活動',
-    news: '新聞',
+    news: '最新消息',
     lang_en: '英文',
     lang_tw: '繁體中文',
   },

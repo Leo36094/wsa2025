@@ -63,7 +63,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
   const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
   const fullPath = router.resolve(pageName.toLowerCase()).href
   const newTab = `${baseUrl}${fullPath}${link.path || ''}`
-
+  console.log('trigger')
   window.open(newTab, '_blank')
 }
 </script>
@@ -87,7 +87,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
           </NavigationMenuTrigger>
         </template>
         <template v-else>
-          <NavigationMenuLink as="div" class="NavigationMenuLink" @click="goPage(item.path)">
+          <NavigationMenuLink as="div" class="NavigationMenuLink" @click.stop="goPage(item.path)">
             {{ item.name }}
           </NavigationMenuLink>
         </template>
@@ -97,7 +97,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
               v-for="link in item.subNav"
               :title="link.name"
               :key="link.name"
-              @click="handleHashRoute(link, item.path)"
+              @click.stop="handleHashRoute(link, item.path)"
             >
             </NavigationMenuListItem>
           </ul>

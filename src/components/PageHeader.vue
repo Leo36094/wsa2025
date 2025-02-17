@@ -85,7 +85,7 @@ function goRouteLink(path: string) {
 $header-bg: #07100e;
 
 .page-header {
-  background-color: transparent;
+  background-color: #fff;
   position: fixed;
   width: 100%;
   z-index: 100;

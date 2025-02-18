@@ -14,22 +14,19 @@ const props = defineProps<{
   &__title {
     overflow: hidden;
     text-align: center;
-    height: 1.07rem;
     h1 {
       color: transparent;
       color: $black-primary;
-      font-size: 0.88rem;
+      font-size: 0.36rem;
       font-weight: 700;
-      animation: title-slide-up 0.5s forwards;
     }
   }
 }
-@include tablet {
+@include mobile {
   .first-slide {
     &__title {
-      height: auto;
       h1 {
-        font-size: 0.48rem;
+        font-size: 0.24rem;
       }
     }
   }

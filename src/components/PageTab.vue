@@ -89,9 +89,11 @@ $tab-text-color: #455861;
   .page-tab-container {
     width: auto;
     .page-tab {
+      align-items: stretch;
       &__item {
         min-width: unset;
-        width: 50%;
+        width: 40%;
+        @include flexCenter;
       }
     }
   }

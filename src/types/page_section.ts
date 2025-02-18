@@ -5,6 +5,9 @@ export const SECTION_ID = {
   Location: 'location',
   Schedule: 'schedule',
   Competition: 'competition',
+  Sponsorship: 'sponsorship',
+  ThemeExhibition: 'theme-exhibition',
+  TryOut: 'try-out',
 } as const;
 
 export const PageSectionEnum = {
@@ -14,6 +17,9 @@ export const PageSectionEnum = {
   Location: `#${SECTION_ID.Location}`,
   Schedule: `#${SECTION_ID.Schedule}`,
   Competition: `#${SECTION_ID.Competition}`,
+  Sponsorship: `#${SECTION_ID.Sponsorship}`,
+  ThemeExhibition: `#${SECTION_ID.ThemeExhibition}`,
+  TryOut: `#${SECTION_ID.TryOut}`,
 } as const;
 
 export type PageSection = keyof typeof PageSectionEnum;

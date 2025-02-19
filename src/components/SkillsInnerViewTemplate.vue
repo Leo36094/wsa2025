@@ -229,6 +229,8 @@ const swiperConfig = {
         .copy {
           font-size: 0.16rem;
           font-weight: 400;
+          max-height: 4rem;
+          overflow: auto;
         }
       }
       .gallery-image {
@@ -321,6 +323,7 @@ const swiperConfig = {
           }
           .copy {
             text-align: justify;
+            max-height: 100%;
           }
         }
         .skill-swiper {

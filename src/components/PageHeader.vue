@@ -67,7 +67,24 @@ const nav = computed(() => [
     ],
   },
   { name: t('header.skill'), path: '/skills', subNav: [] },
-  { name: t('header.involved'), path: '/get-involved', subNav: [] },
+  {
+    name: t('header.involved'),
+    path: '/get-involved',
+    subNav: [
+      {
+        name: t('page_tabs.involved_tab_01'),
+        path: `#${SECTION_ID.Sponsorship}`,
+      },
+      {
+        name: t('page_tabs.involved_tab_02'),
+        path: `#${SECTION_ID.ThemeExhibition}`,
+      },
+      {
+        name: t('page_tabs.involved_tab_03'),
+        path: `#${SECTION_ID.TryOut}`,
+      },
+    ],
+  },
   { name: t('header.news'), path: '/news', subNav: [] },
 ])
 

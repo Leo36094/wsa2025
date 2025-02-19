@@ -31,6 +31,7 @@ const triggerMap = {
   [props.nav[0].name]: 'radix-v-1',
   [props.nav[1].name]: 'radix-v-2',
   [props.nav[2].name]: 'radix-v-3',
+  [props.nav[3].name]: 'radix-v-4',
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -63,7 +64,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
   const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
   const fullPath = router.resolve(pageName.toLowerCase()).href
   const newTab = `${baseUrl}${fullPath}${link.path || ''}`
-  console.log('trigger')
+
   window.open(newTab, '_blank')
 }
 </script>

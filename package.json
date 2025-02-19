@@ -14,7 +14,8 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "deploy-gh-pages": "yarn run build && node ./.ghpages.js"
+    "deploy-gh-pages": "yarn run build && node ./.ghpages.js",
+    "build-live": "BUILD_ENV=live yarn run build"
   },
   "dependencies": {
     "@radix-ui/themes": "^3.2.0",

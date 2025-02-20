@@ -41,7 +41,7 @@
               <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
             </a>
             <a class="col" href="https://line.me/R/ti/p/@153dnycq" target="_blank">
-              <img class="social-media__icon" src="/images/LINE 1.png" alt="line-icon" />
+              <img class="social-media__icon" src="/images/line-icon.png" alt="line-icon" />
             </a>
           </div>
         </div>

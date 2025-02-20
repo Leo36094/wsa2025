@@ -75,14 +75,14 @@ const nav = computed(() => [
         name: t('page_tabs.involved_tab_01'),
         path: `#${SECTION_ID.Sponsorship}`,
       },
-      {
-        name: t('page_tabs.involved_tab_02'),
-        path: `#${SECTION_ID.ThemeExhibition}`,
-      },
-      {
-        name: t('page_tabs.involved_tab_03'),
-        path: `#${SECTION_ID.TryOut}`,
-      },
+      // {
+      //   name: t('page_tabs.involved_tab_02'),
+      //   path: `#${SECTION_ID.ThemeExhibition}`,
+      // },
+      // {
+      //   name: t('page_tabs.involved_tab_03'),
+      //   path: `#${SECTION_ID.TryOut}`,
+      // },
     ],
   },
   { name: t('header.news'), path: '/news', subNav: [] },

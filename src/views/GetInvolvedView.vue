@@ -34,7 +34,8 @@
         </div>
       </div>
 
-      <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
+      <!-- Temp Hide -->
+      <!-- <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
         <BaseTitle class="get-involved__title" :title="$t('involved.theme_exhibition')" />
         <p class="get-involved__coming-soon" data-aos="fade-up">
           {{ $t('involved.coming_soon') }}
@@ -46,7 +47,7 @@
         <p class="get-involved__coming-soon" data-aos="fade-up">
           {{ $t('involved.coming_soon') }}
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -65,14 +66,14 @@ const tabs = computed(() => [
     label: t('page_tabs.involved_tab_01'),
     value: PageSectionEnum.Sponsorship,
   },
-  {
-    label: t('page_tabs.involved_tab_02'),
-    value: PageSectionEnum.ThemeExhibition,
-  },
-  {
-    label: t('page_tabs.involved_tab_03'),
-    value: PageSectionEnum.TryOut,
-  },
+  // {
+  //   label: t('page_tabs.involved_tab_02'),
+  //   value: PageSectionEnum.ThemeExhibition,
+  // },
+  // {
+  //   label: t('page_tabs.involved_tab_03'),
+  //   value: PageSectionEnum.TryOut,
+  // },
 ])
 const router = useRouter()
 const activeTab = ref(tabs.value[0].value)

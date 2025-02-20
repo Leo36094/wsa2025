@@ -37,7 +37,7 @@
                 target="_blank"
               />
             </a>
-            <a class="col" href="twitter.com/WorldSkillsAsia/" target="_blank">
+            <a class="col" href="https://twitter.com/WorldSkillsAsia/" target="_blank">
               <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
             </a>
             <a class="col" href="https://line.me/R/ti/p/@153dnycq" target="_blank">

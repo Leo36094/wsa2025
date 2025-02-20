@@ -1,8 +1,8 @@
 <template>
   <div class="langs">
     <button
-      :class="['langs-btn', { 'langs-btn--active': currentLangs === lang.lang }]"
-      @click.prevent="changeLang(lang)"
+      :class="['langs-btn', { 'langs-btn--active': currentLang === lang.lang }]"
+      @click.prevent="headerChangeLang(lang)"
       :key="lang.lang"
       v-for="lang in langBtns"
     >
@@ -11,29 +11,27 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { localeMessages } from '@/i18n'
-
+import generalStore from '@/stores/general'
 import { useI18n } from 'vue-i18n'
+import { storeToRefs } from 'pinia'
 
-const currentLangs = ref('en')
-
-const { t, locale, setLocaleMessage } = useI18n({ useScope: 'global' })
-type LangBtn = {
-  lang: string
-  text: string
-  message: (typeof localeMessages)[keyof typeof localeMessages]
-}
+const { currentLang } = storeToRefs(generalStore())
+const { locale, setLocaleMessage } = useI18n({ useScope: 'global' })
+const { changeLang } = generalStore()
+const { t } = useI18n({ useScope: 'global' })
 
 const langBtns = computed(() => [
   { lang: 'en', text: t('header.lang_en'), message: localeMessages.en },
   { lang: 'tw', text: t('header.lang_tw'), message: localeMessages.tw },
 ])
 
-function changeLang(lang: LangBtn) {
-  currentLangs.value = lang.lang
-  setLocaleMessage(lang.lang, lang.message)
-  locale.value = lang.lang
+function headerChangeLang(lang: {
+  lang: string
+  message: (typeof localeMessages)[keyof typeof localeMessages]
+}) {
+  changeLang(lang, { locale, setLocaleMessage })
 }
 </script>
 <style lang="scss" scoped>

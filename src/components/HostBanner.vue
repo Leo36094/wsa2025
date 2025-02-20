@@ -14,7 +14,12 @@
         <h4 class="title">{{ $t('host.welcome') }}</h4>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
-      <p class="welcome-desc">{{ $t('host.content') }}</p>
+      <p class="welcome-desc">
+        {{ $t('host.content') }}
+        <a class="welcome-desc__link" href="https://eng.taiwan.net.tw/" target="_blank"
+          >https://eng.taiwan.net.tw/</a
+        >
+      </p>
     </div>
     <div class="image-row" ref="bottomRow">
       <div data-aos="fade-up" data-aos-offset="0" class="bottom-rest" ref="bottomRest">
@@ -159,6 +164,10 @@ const hostImages = Array.from(
     font-weight: 400;
     margin-right: auto;
     text-align: justify;
+    .welcome-desc__link {
+      display: block;
+      text-decoration: underline;
+    }
   }
 }
 .second-slide {

@@ -23,6 +23,12 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    // --- 0214 updated
+    quick_fact_title: 'Quick Facts',
+    quick_fact_cube_title_1: '職類',
+    quick_fact_cube_title_2: '國家',
+    quick_fact_cube_title_3: '選手與裁判',
+    //---
     title: 'WorldSkills Asia Taipei',
     split_title1: 'WorldSkills',
     split_title2: 'Asia',
@@ -278,6 +284,16 @@ export default {
   },
   involved: {
     title: '參與活動',
-    comming_soon: '敬請期待',
+    coming_soon: '敬請期待',
+    // sponsorship: 'Sponsorship',
+    // sponsorship_desc: 'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
+    // sponsorship_reach: 'You Can Reach',
+    // sponsorship_visitor: 'Expected Visitors',
+    // sponsorship_government: 'Industry and Government Partners',
+    // sponsorship_educational: 'Participating Educational Institutions',
+    // sponsorship_contact: 'Contact information',
+    // theme_exhibition: 'Theme Exhibition',
+    // try_out: 'Try A Skill',
+    // coming_soon: 'Coming soon',
   }
 }

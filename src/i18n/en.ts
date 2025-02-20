@@ -269,7 +269,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     art_FashionTechnology_copy: `To adapt to global trends, the skill competition of Fashion Technology has evolved from solely focusing on techniques to encompass a greater diversity of skills, including design, patternmaking, draping, and construction. The competition aims to nurture advanced fashion technology talents capable of mastering both design and construction skills.`,
     art_GraphicDesignTechnology: 'Graphic Design Technology',
     art_GraphicDesignTechnology_copy: `Graphic Design Technology encompasses a wide array of skills and disciplines involved in creating graphic designs and outputs, including creative design, operating computer-aided design software for images and layouts, as well as familiarity with computer peripheral equipment. Specialists in this field also need to understand printing principles, practices, and production techniques before finalizing designs for printing. Competitors are tasked with completing the Test Project by effectively and creatively expressing visual communication designs.`,
-    art_GameArt: 'Game Design',
+    art_GameArt: '3D Digital Game Art',
     art_GameArt_copy: `3D Digital Game Artists interpret a designer’s vision and, using a blend of creativity, technical expertise, and specialized skills, fulfill the brief to meet client expectations. Their skill set encompasses various areas including concept art for 3D characters, 3D modeling and UV unwrapping, PBR texturing, sculpting, rigging, animation, as well as exporting 3D characters to a game engine.`,
 
     // Juniors

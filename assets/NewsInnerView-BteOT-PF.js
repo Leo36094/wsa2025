@@ -1,4 +1,4 @@
-import{d as h,v as d,j as g,e as u,f as m,o as w,c as f,a as l,t as k,R as y,_ as C}from"./index-CihyDIII.js";const S=[{en:{title:"The 3rd WorldSkills Asia Competition Skills",content:`
+import{d as h,v as d,j as g,e as u,f as m,o as w,c as f,a as l,t as k,R as y,_ as C}from"./index-CqrKnFXg.js";const S=[{en:{title:"The 3rd WorldSkills Asia Competition Skills",content:`
 <p>
 The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center from November 27 to 29, 2025. The event will feature 36 official skills, 8 junior skills, and 4 exhibition skills, attracting thousands of experts and competitors from all over Asia.</p>
 <img src="/wsa2025/images/news/news_01.jpg" alt="The 3rd WorldSkills Asia Competition Skills" style="width: 100%;">

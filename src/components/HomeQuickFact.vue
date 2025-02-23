@@ -40,10 +40,10 @@ const cubes = computed(() => {
 $cube-bg: #b8cf45;
 .quick-fact {
   margin: 1.6rem auto;
-  background: $green-primary;
+  background: radial-gradient(106.36% 487.42% at 50% 50%, #161a02 0%, #9db528 100%);
   padding: 0.48rem 0.64rem;
   @include flexCenter(column);
-  color: $black-primary;
+  color: #fff;
   &__title {
     font-size: 0.48rem;
     margin-bottom: 0.24rem;
@@ -56,6 +56,11 @@ $cube-bg: #b8cf45;
     .cube {
       @include flexCenter(column);
       background: $cube-bg;
+      background: radial-gradient(
+        100% 210.25% at 0% 0%,
+        rgba(255, 255, 255, 0.28) 0%,
+        rgba(255, 255, 255, 0.04) 100%
+      );
       width: 2.72rem;
       border-radius: 0.08rem;
       padding: 0.24rem;

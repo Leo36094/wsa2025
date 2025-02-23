@@ -132,7 +132,7 @@
     .photo-row {
       width: 100%;
       &.first-row {
-        padding-top: 0.72rem;
+        padding-top: 0;
       }
     }
     .photo-item {

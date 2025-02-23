@@ -24,6 +24,9 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    countdown_title: 'Countdown to the WorldSkills Asia Taipei 2025',
+    countdown_hours: 'Days',
+    countdown_days: 'Hours',
     // --- 0214 updated
     quick_fact_title: 'Quick Facts',
     quick_fact_cube_title_1: 'Skills',

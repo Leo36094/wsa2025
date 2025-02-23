@@ -23,6 +23,9 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    countdown_title: '距離 WorldSkills Asia Taipei 2025 競賽剩下',
+    countdown_hours: '小時',
+    countdown_days: '天',
     // --- 0214 updated
     quick_fact_title: 'Quick Facts',
     quick_fact_cube_title_1: '職類',

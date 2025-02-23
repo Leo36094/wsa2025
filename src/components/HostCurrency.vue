@@ -148,6 +148,7 @@ $border-color: #18475b;
   display: flex;
   @include withContainer;
   padding: 0 0.8rem;
+  padding-top: 1.6rem;
   .column {
     display: flex;
     flex-direction: column;
@@ -222,6 +223,7 @@ $border-color: #18475b;
   .container {
     flex-direction: column;
     padding: 0 0.4rem;
+    padding-top: 1.6rem;
     .column.sidebar {
       width: 100%;
       margin: 0 auto;
@@ -254,6 +256,8 @@ $border-color: #18475b;
 }
 @include mobile {
   .container {
+    padding: 0.8rem 0.4rem;
+    padding-top: 0.8rem;
     .column.right-panel .content {
       margin-bottom: 0.08rem;
     }

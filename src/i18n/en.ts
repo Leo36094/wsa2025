@@ -44,12 +44,31 @@ We warmly welcome participants and friends from all over the world and look forw
   },
   host: {
     title: 'Taipei',
-    welcome: 'Welcome to',
-    welcome_sub: 'Taipei',
+    welcome: 'Discover Taipei: ',
+    welcome_sub: 'The Vibrant Heart of Asia',
     content: `
     Taipei is the center of Taiwan’s finance, economy, politics, technology, education, and culture. It hosts numerous multinational corporations and international financial institutions and serves as the location for various consulates and trade organizations. Taipei blends the vibrancy of a modern metropolis with rich historical culture, creating a city full of energy and diversity. One of Taipei’s landmarks is Taipei 101, a skyscraper that was once the tallest building in the world. The city is filled with modern shopping centers, high-tech industrial zones, and various creative industries, while also preserving many historic cultural areas, such as Dadaocheng and Bangka, allowing people to experience Taiwan’s history and traditions.`,
     currency_title: 'Currency',
     currency_desc: 'The currency in circulation in Taiwan is the New Taiwan Dollar (NT$)',
+    host_introduction_landmarks: 'A City of Iconic Landmarks',
+    host_introduction_landmarks_desc: `Taipei, the capital of Taiwan, is a dynamic metropolis where modern innovation meets rich cultural heritage. The city's skyline is dominated by Taipei 101, a world-renowned skyscraper that was once the tallest building in the world. Visitors can ascend to its observatory for breathtaking panoramic views of the city. Another must-visit landmark is the historic Chiang Kai-shek Memorial Hall, a grand monument surrounded by beautiful gardens and cultural institutions.
+For a touch of history, Longshan Temple, one of Taipei’s oldest and most revered temples, showcases traditional Taiwanese religious practices and intricate architecture. Meanwhile, the futuristic Ximending district is a vibrant hub of youth culture, shopping, and entertainment, often compared to Tokyo’s Shibuya.`,
+    host_introduction_tradition: 'A Fusion of Tradition and Innovation',
+    host_introduction_tradition_desc: `Taipei seamlessly blends the old with the new. Stroll through Dadaocheng, where historic buildings and traditional tea houses coexist with trendy boutiques and art galleries. The city’s creative spirit is also evident in places like Huashan 1914 Creative Park and Songshan Cultural and Creative Park, repurposed industrial sites that now serve as hubs for contemporary art, design, and innovation.
+Taipei is also a global leader in technology and smart city initiatives, boasting one of the world's most efficient public transportation systems. The Taipei Metro (MRT) makes exploring the city effortless, connecting visitors to key attractions in minutes.`,
+    host_introduction_food: 'A Food Lover’s Paradise',
+    host_introduction_food_desc: `Taipei is synonymous with incredible street food. Shilin Night Market, the largest and most famous night market, offers a sensory feast, from stinky tofu and oyster omelets to the iconic Taiwanese bubble tea. For a more refined experience, the city is home to numerous Michelin-starred restaurants, serving everything from traditional Taiwanese cuisine to innovative fusion dishes.
+One of the most famous culinary experiences in Taipei is the legendary Din Tai Fung, a world-renowned restaurant specializing in xiao long bao (soup dumplings). No visit to Taipei is complete without indulging in these delicate, flavorful dumplings.`,
+    host_introduction_nature: 'Nature at Your Doorstep',
+    host_introduction_nature_desc: `Despite being a bustling city, Taipei is surrounded by lush mountains and natural hot springs. Yangmingshan National Park is just a short drive away, offering stunning hiking trails, cherry blossoms in spring, and steaming geothermal landscapes. Another popular retreat is Beitou Hot Springs, where visitors can relax in natural thermal waters, a tradition dating back to the Japanese colonial era.
+For those seeking adventure, Elephant Mountain provides an accessible yet rewarding hike with one of the best views of Taipei 101, especially at sunset.`,
+    host_introduction_shopping: 'A City That Never Sleeps',
+    host_introduction_shopping_desc: `Taipei comes alive at night with its bustling night markets, trendy bars, and cultural performances. The city is known for its thriving live music scene, from indie bands in underground clubs to large-scale concerts featuring international artists. The Taipei Lantern Festival and New Year's Eve fireworks at Taipei 101 are just some of the city’s dazzling annual events that attract visitors from around the world.`,
+    host_introduction_reason: 'Why Taipei?',
+    host_introduction_reason_desc: `Taipei is more than just a travel destination—it’s a city that captivates visitors with its warm hospitality, rich history, modern conveniences, and endless culinary delights. Whether you're a foodie, an adventurer, a history enthusiast, or a tech lover, Taipei offers something for everyone.
+Come and experience Taipei: The Vibrant Heart of Asia!`,
+
+
     coin50: 'NT$50',
     coin20: 'NT$20',
     coin10: 'NT$10',
@@ -122,7 +141,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     schedule_note2: 'Competition (11/27-11/29) will open to the public for visiting.',
     location_title: 'Taipei Nangang Exhibition Center',
     location_subtitle: 'Competition Venue',
-    location_map_desc: `The Taipei Nangang Exhibition Center, located in Taipei Nangang District, is one of Asia's most important exhibition venues. It is conveniently accessible via MRT, High-Speed Rail, Taiwan Railways, and national highway bus stations, with two nearby highways and just a 30-minute drive from Taoyuan International Airport. The exhibition center offers over 46,000 square meters of exhibition space and is equipped with advanced facilities, making it an ideal venue for hosting large-scale global exhibitions and international conferences.`,
+    location_map_desc: `The Taipei Nangang Exhibition Center, located in Taipei Nangang District, is one of Asia's most important exhibition venues. It is conveniently accessible via MRT, High-Speed Rail, Taiwan Railways, and national highway bus stations, with two nearby highways and just a 30-minute drive from Taoyuan International Airport.<br><br> The exhibition center offers over 46,000 square meters of exhibition space and is equipped with advanced facilities, making it an ideal venue for hosting large-scale global exhibitions and international conferences.`,
     location_hall1: 'Hall 1',
     location_hall1_floor1: 'Skill Out / Catering Area',
     location_hall1_floor2: 'Skills / Theme Exhibition',

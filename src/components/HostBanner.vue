@@ -9,9 +9,8 @@
       </div>
     </div>
     <div class="host-copy">
-      <div data-aos="example-anim1" class="welcome-img"></div>
       <div class="welcome-title" data-aos="fade-right">
-        <h4 class="title">{{ $t('host.welcome') }}</h4>
+        <h2 class="title">{{ $t('host.welcome') }}</h2>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
       <p class="welcome-desc">
@@ -141,6 +140,7 @@ const hostImages = Array.from(
   max-width: 14.4rem;
   margin: auto;
   @include flexCenter;
+  padding: 0.4rem 0.75rem 0.4rem 0.81rem;
   overflow: hidden;
   .welcome-img {
     width: 4.8rem;
@@ -151,15 +151,11 @@ const hostImages = Array.from(
   .welcome-title {
     font-weight: 700;
     margin-right: 0.4rem;
-    .title {
-      font-size: 0.28rem;
-    }
-    .subtitle {
-      font-size: 0.48rem;
-    }
+    flex-shrink: 0;
+    font-size: 0.48rem;
   }
   .welcome-desc {
-    width: 5.2rem;
+    /* width: 5.2rem; */
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
@@ -172,7 +168,6 @@ const hostImages = Array.from(
 }
 .second-slide {
   width: 100%;
-  margin-bottom: 1.6rem;
   .image-row {
     display: flex;
     justify-content: space-between;
@@ -240,8 +235,7 @@ const hostImages = Array.from(
   .host-copy {
     flex-direction: column;
     align-items: flex-start;
-    width: 6.16rem;
-    padding: 0.32rem 0;
+    padding: 0.32rem 0.64rem;
     margin: 0 auto;
     .welcome-img {
       display: none;
@@ -249,6 +243,8 @@ const hostImages = Array.from(
     .welcome-title {
       display: flex;
       align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       margin-right: 0;
       margin-bottom: 0.24rem;
       .title {
@@ -268,7 +264,6 @@ const hostImages = Array.from(
   }
   .second-slide {
     width: 100%;
-    margin-bottom: 1.6rem;
     .image-row {
       display: flex;
       justify-content: space-between;

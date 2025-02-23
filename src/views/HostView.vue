@@ -3,6 +3,7 @@
     <PageTab :tabs="tabs" :active-tab="activeTab" @update:active-tab="handleActiveTabChange" />
     <HostSkill />
     <HostBanner />
+    <HostIntroduction />
     <HostCurrency />
     <HostPower />
     <HostClimate />
@@ -17,6 +18,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import PageTab from '@/components/PageTab.vue'
 import HostBanner from '@/components/HostBanner.vue'
+import HostIntroduction from '@/components/HostIntroduction.vue'
 import HostCurrency from '@/components/HostCurrency.vue'
 import HostPower from '@/components/HostPower.vue'
 import HostClimate from '@/components/HostClimate.vue'

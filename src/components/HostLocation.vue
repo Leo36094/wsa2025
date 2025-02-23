@@ -21,9 +21,8 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div class="info-bar__desc-container">
-          <p class="info-bar__desc">
-            {{ $t('competition.location_map_desc') }}
-          </p>
+          <div class="info-bar__desc" v-html="$t('competition.location_map_desc')"></div>
+
           <a class="info-bar__link" href="https://www.tainex.com.tw/" target="_blank">
             <img src="/images/ri_global-fill.svg" alt="map-pin" />
             {{ $t('host.location_visit_website') }}

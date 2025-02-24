@@ -8,16 +8,17 @@
       <div class="countdown-cubes">
         <div class="days">
           <div class="cubes">
-            <div class="cube">1</div>
-            <div class="cube">2</div>
-            <div class="cube">2</div>
+            <div class="cube" v-for="(day, idx) in remainDays" :key="idx">
+              {{ day }}
+            </div>
           </div>
           <p>{{ $t('home.countdown_hours') }}</p>
         </div>
         <div class="hours">
           <div class="cubes">
-            <div class="cube">1</div>
-            <div class="cube">2</div>
+            <div class="cube" v-for="(hour, idx) in remainHours" :key="idx">
+              {{ hour }}
+            </div>
           </div>
           <p>{{ $t('home.countdown_days') }}</p>
         </div>
@@ -25,7 +26,33 @@
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+import dayjs from 'dayjs'
+
+const remainDays = ref(['0'])
+const remainHours = ref(['0'])
+const timeInterval = ref<null | ReturnType<typeof setInterval>>(null)
+
+function updateTimeRemaining() {
+  const target = dayjs('2025-11-27')
+  const now = dayjs()
+  const diff = target.diff(now, 'day')
+  const hours = target.diff(now, 'hour') % 24
+  remainDays.value = diff.toString().split('')
+  remainHours.value = hours.toString().split('')
+}
+updateTimeRemaining()
+onMounted(() => {
+  timeInterval.value = setInterval(updateTimeRemaining, 1000 * 60 * 60)
+})
+
+onUnmounted(() => {
+  if (timeInterval.value) {
+    clearInterval(timeInterval.value)
+  }
+})
+</script>
 <style lang="scss" scoped>
 .home-countdown {
   padding: 1.6rem 0;

@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-xqafRqUE.js";import{d as r,o,p as a,u as i}from"./index-CqrKnFXg.js";import"./free-mode-CudTcpBP.js";import"./enum-CA_ituI8.js";const _=r({__name:"SkillsJuniorsView",setup(s){return(t,m)=>(o(),a(e,{"view-name":i(n).Juniors},null,8,["view-name"]))}});export{_ as default};

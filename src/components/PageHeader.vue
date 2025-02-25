@@ -8,7 +8,7 @@
         <div class="wda"></div>
       </div>
       <nav class="nav-links-pc">
-        <NavigationMenu :nav="nav" />
+        <NavMenubar :nav="nav" />
       </nav>
       <LangButton class="langs-pc" />
       <div :class="['hamburger-btn', { active: isMenuOpen }]" @click="toggleMenu">
@@ -39,7 +39,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import LangButton from './LangButton.vue'
 import IconLogo from '@/components/icons/IconLogo.vue'
-import NavigationMenu from './NavigationMenu.vue'
+import NavMenubar from './NavMenubar.vue'
 import { SECTION_ID } from '@/types/page_section'
 
 import { useI18n } from 'vue-i18n'

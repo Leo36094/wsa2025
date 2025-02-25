@@ -1,13 +1,29 @@
 <template>
-  <div class="home-banner__slide">
-    <div class="gallery-bg"></div>
+  <section
+    class="home-banner__slide"
+    role="gallery"
+    :aria-label="$t('home.gallery_section')"
+    tabindex="0"
+  >
+    <div class="gallery-bg" aria-hidden="true"></div>
     <div class="photo-row first-row" data-aos="fade-up">
-      <div class="photo-item"></div>
-      <div class="photo-item photo-item-1"></div>
-      <div class="photo-item photo-item-2"></div>
+      <figure
+        v-for="i in 3"
+        :key="`first-${i}`"
+        class="photo-item"
+        :class="`photo-item-${i}`"
+        :aria-label="$t(`home.gallery_photo`, { index: i })"
+        tabindex="0"
+      >
+        <img
+          :src="`${baseURL}images/wsa/homepage_s01_${i}.jpg`"
+          :alt="$t(`home.gallery_photo_alt`, { index: i })"
+          loading="lazy"
+        />
+      </figure>
     </div>
-    <div class="slide-header">
-      <div :class="['split-titles title', { tw: locale === 'tw' }]">
+    <div class="slide-header" tabindex="0">
+      <h2 tabindex="0" :class="['split-titles title', { tw: locale === 'tw' }]">
         <div v-if="locale === 'tw'">
           <span>{{ $t('home.split_title1') }}</span>
           <span>{{ $t('home.split_title2') }}</span>
@@ -19,19 +35,37 @@
           <span>{{ $t('home.split_title3') }}</span>
         </template>
         <span class="year">{{ $t('home.year') }}</span>
-      </div>
-      <p data-aos="fade-down" class="slide-desc" v-html="$t('home.banner_desc')"></p>
+      </h2>
+      <p
+        data-aos="fade-down"
+        class="slide-desc"
+        :aria-label="$t('home.banner_desc_aria')"
+        v-html="$t('home.banner_desc')"
+        tabindex="0"
+      ></p>
     </div>
     <div class="photo-row" data-aos="fade-up">
-      <div class="photo-item photo-item-3"></div>
-      <div class="photo-item photo-item-4"></div>
-      <div class="photo-item photo-item-5"></div>
+      <figure
+        v-for="i in 3"
+        :key="`second-${i}`"
+        class="photo-item"
+        :class="`photo-item-${i + 3}`"
+        tabindex="0"
+        :aria-label="$t(`home.gallery_photo`, { index: i + 2 })"
+      >
+        <img
+          :src="`${baseURL}images/wsa/homepage_s01_${i + 3}.${i === 1 ? 'png' : 'jpg'}`"
+          :alt="$t(`home.gallery_photo_alt`, { index: i + 3 })"
+          loading="lazy"
+        />
+      </figure>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n({ useScope: 'global' })
+const baseURL = import.meta.env.BASE_URL
 </script>
 <style lang="scss" scoped>
 .home-banner__slide {
@@ -98,15 +132,13 @@ const { locale } = useI18n({ useScope: 'global' })
     &:not(:last-child) {
       margin-right: 0.8rem;
     }
-
-    background-image: url('/images/wsa/homepage_s01_02.jpg');
-    @for $i from 1 through 5 {
-      &-#{$i} {
-        background-image: url('/images/wsa/homepage_s01_0#{$i + 2}.jpg');
-      }
-      &-3 {
-        background-image: url('/images/wsa/homepage_s01_00.png');
-      }
+    img {
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+    &:focus-within {
+      outline: 0.03rem solid #4a90e2;
+      outline-offset: 0.03rem;
     }
   }
 }

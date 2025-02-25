@@ -1,30 +1,53 @@
 <template>
-  <div class="home-countdown">
+  <section
+    class="home-countdown"
+    role="status"
+    :aria-label="$t('home.countdown_title')"
+    tabindex="0"
+  >
     <div class="countdown-container">
-      <div class="countdown-title">
+      <h2 class="countdown-title">
         {{ $t('home.countdown_title') }}
+      </h2>
+      <div class="countdown-date" :aria-label="$t('home.banner_date')">
+        {{ $t('home.banner_date') }}
       </div>
-      <div class="countdown-date">{{ $t('home.banner_date') }}</div>
-      <div class="countdown-cubes">
+      <div class="countdown-cubes" aria-live="polite" tabindex="0">
         <div class="days">
-          <div class="cubes">
-            <div class="cube" v-for="(day, idx) in remainDays" :key="idx">
+          <div class="cubes" role="group" :aria-label="$t('home.countdown_days')" tabindex="0">
+            <div
+              class="cube"
+              v-for="(day, idx) in remainDays"
+              :key="idx"
+              aria-hidden="true"
+              tabindex="0"
+            >
               {{ day }}
             </div>
           </div>
-          <p>{{ $t('home.countdown_days') }}</p>
+          <p id="days-label">{{ $t('home.countdown_days') }}</p>
         </div>
         <div class="hours">
-          <div class="cubes">
-            <div class="cube" v-for="(hour, idx) in remainHours" :key="idx">
+          <div class="cubes" role="group" :aria-label="$t('home.countdown_hours')" tabindex="0">
+            <div
+              class="cube"
+              v-for="(hour, idx) in remainHours"
+              :key="idx"
+              aria-hidden="true"
+              tabindex="0"
+            >
               {{ hour }}
             </div>
           </div>
-          <p>{{ $t('home.countdown_hours') }}</p>
+          <p id="hours-label">{{ $t('home.countdown_hours') }}</p>
         </div>
       </div>
+      <div class="visually-hidden" role="status">
+        {{ $t('home.countdown_title') }}: {{ remainDays.join('') }} {{ $t('home.countdown_days') }}
+        {{ remainHours.join('') }} {{ $t('home.countdown_hours') }}
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
@@ -58,6 +81,17 @@ onUnmounted(() => {
   padding: 1.6rem 0;
   @include flexCenter;
   border-radius: 0.18rem;
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
   .countdown-container {
     border-radius: 0.1rem;
     background: radial-gradient(59.83% 274.2% at 50% 50%, #ffffff 0%, #c8e14b 100%);

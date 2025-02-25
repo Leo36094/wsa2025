@@ -1,16 +1,14 @@
 <template>
-  <div class="news">
+  <section class="news" role="complementary" :aria-label="$t('home.news_title')">
     <div class="news-container">
-      <div class="news-title">
-        <h1>{{ $t('home.news_title') }}</h1>
-      </div>
+      <h2 class="news-title" tabindex="0">{{ $t('home.news_title') }}</h2>
       <NewsList :news="news" />
-      <div class="more-button" @click="goToNews">
+      <div class="more-button" @click="goToNews" tabindex="0" :aria-label="$t('home.news_more')">
         <span>{{ $t('home.news_more') }}</span>
         <img src="/images/uil_arrow-right.svg" alt="right-arrow-icon" />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

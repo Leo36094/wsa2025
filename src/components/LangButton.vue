@@ -1,10 +1,13 @@
 <template>
-  <div class="langs">
+  <div class="langs" role="group" aria-label="Language">
     <button
       :class="['langs-btn', { 'langs-btn--active': currentLang === lang.lang }]"
       @click.prevent="headerChangeLang(lang)"
       :key="lang.lang"
       v-for="lang in langBtns"
+      :aria-label="$t('header.switch_to_lang', { lang: lang.text })"
+      :aria-current="currentLang === lang.lang ? 'true' : undefined"
+      tabindex="0"
     >
       {{ lang.text }}
     </button>

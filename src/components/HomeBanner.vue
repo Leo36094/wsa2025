@@ -1,13 +1,23 @@
 <template>
-  <div class="home-banner">
+  <div class="home-banner" role="banner">
     <main class="home-banner-container">
       <div :class="['main-banner-container']">
-        <Swiper class="banner" v-bind="swiperConfig">
-          <SwiperSlide v-for="index in 3" :key="index" class="slide">
-            <div :class="['banner-img', `banner-img-${index}`]"></div>
+        <Swiper class="banner" v-bind="swiperConfig" :aria-label="$t('home.aria_banner_swiper')">
+          <SwiperSlide
+            v-for="index in 3"
+            :key="index"
+            class="slide"
+            role="group"
+            :aria-label="$t('home.aria_banner_swiper_slide', { index })"
+          >
+            <div
+              :class="['banner-img', `banner-img-${index}`]"
+              role="img"
+              :aria-label="$t('home.aria_banner_swiper_slide', { index })"
+            ></div>
           </SwiperSlide>
-          <div class="banner-pagination"></div>
-          <div class="filter"></div>
+          <div class="banner-pagination" aria-hidden="true"></div>
+          <div class="filter" aria-hidden="true"></div>
         </Swiper>
         <HomeBannerTitle class="banner__title" />
       </div>
@@ -15,12 +25,15 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
 import HomeBannerTitle from './HomeBannerTitle.vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
-import { Autoplay, Pagination } from 'swiper/modules'
+import { A11y, Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+
+const { t } = useI18n()
 
 const swiperConfig = {
   loop: true,
@@ -28,8 +41,23 @@ const swiperConfig = {
     delay: 3000,
     disableOnInteraction: true,
   },
-  pagination: true,
-  modules: [Autoplay, Pagination],
+  pagination: {
+    el: '.banner-pagination',
+    clickable: true,
+    horizontalClass: 'swiper-pagination-horizontal', // 添加這行
+    renderBullet: function (index: number, className: string) {
+      return `<button class="${className}" aria-label="${t('home.aria_banner_swiper_pagination', { index })}"></button>`
+    },
+  },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: t('home.aria_banner_swiper_prev'),
+    nextSlideMessage: t('home.aria_banner_swiper_next'),
+    firstSlideMessage: t('home.aria_banner_swiper_first'),
+    lastSlideMessage: t('home.aria_banner_swiper_last'),
+    paginationBulletMessage: t('home.aria_banner_swiper_pagination', { index: '{index}' }),
+  },
+  modules: [Autoplay, Pagination, A11y],
 }
 </script>
 <style lang="scss" scoped>
@@ -85,11 +113,13 @@ $swiper-bullet-active-color: #455861;
         white-space: nowrap;
         pointer-events: none;
       }
-
-      :deep(.swiper-pagination) {
+      .banner-pagination {
         position: absolute;
         bottom: 0.32rem;
-        .swiper-pagination-bullet {
+        top: unset;
+        @include flexCenter;
+        z-index: 5;
+        :deep(.swiper-pagination-bullet) {
           opacity: 1;
           width: 0.12rem;
           height: 0.12rem;
@@ -98,6 +128,8 @@ $swiper-bullet-active-color: #455861;
             background: $swiper-bullet-active-color;
           }
         }
+      }
+      :deep(.swiper-pagination) {
       }
     }
   }

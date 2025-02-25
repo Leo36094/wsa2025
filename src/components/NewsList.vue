@@ -1,6 +1,6 @@
 <template>
-  <div class="news-list">
-    <div class="news-vertical-divider"></div>
+  <div class="news-list" role="group" :aria-label="$t('news.title')">
+    <div class="news-vertical-divider" aria-hidden="true"></div>
     <div class="news-row" v-for="(rowNews, idx) in twoNewsARow" :key="idx">
       <div class="news-row-container">
         <div
@@ -8,12 +8,14 @@
           v-for="newsItem in rowNews"
           :key="newsItem.id"
           @click="goToNewsDetail(newsItem.id)"
+          tabindex="0"
+          :aria-label="newsItem.title"
         >
           <div class="news-item__img" :style="{ backgroundImage: `url(${newsItem.image})` }"></div>
-          <h4 class="news-item__title">
+          <h3 class="news-item__title" tabindex="0">
             {{ newsItem.title }}
-          </h4>
-          <p class="news-item__date">{{ newsItem.date }}</p>
+          </h3>
+          <p class="news-item__date" tabindex="0">{{ newsItem.date }}</p>
         </div>
       </div>
     </div>

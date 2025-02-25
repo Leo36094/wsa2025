@@ -1,18 +1,21 @@
 <template>
-  <div class="banner-title">
+  <header class="banner-title" role="complementary">
     <p class="date">{{ $t('home.banner_date') }}</p>
     <div class="pc">
-      <h1 :class="['slogan', { tw: locale === 'tw' }]">
+      <h1
+        :class="['slogan', { tw: locale === 'tw' }]"
+        :aria-label="`${$t('home.title')} ${$t('home.year')}`"
+      >
         {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
       </h1>
     </div>
-    <div class="splits">
+    <div class="splits" aria-hidden="true">
       <span>{{ $t('home.split_title1') }}</span>
       <span>{{ $t('home.split_title2') }}</span>
       <span>{{ $t('home.split_title3') }}</span>
       <span class="banner-year">{{ $t('home.year') }}</span>
     </div>
-  </div>
+  </header>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'

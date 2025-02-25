@@ -2,7 +2,7 @@
   <header class="page-header">
     <div class="wrapper">
       <div class="icons">
-        <router-link to="/" class="logo">
+        <router-link to="/" class="logo" aria-label="Home">
           <IconLogo />
         </router-link>
         <div class="wda"></div>
@@ -11,12 +11,17 @@
         <NavMenubar :nav="nav" />
       </nav>
       <LangButton class="langs-pc" />
-      <div :class="['hamburger-btn', { active: isMenuOpen }]" @click="toggleMenu">
+      <div
+        :class="['hamburger-btn', { active: isMenuOpen }]"
+        @click="toggleMenu"
+        aria-label="button"
+        aria-controls="sidebar-menu"
+      >
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <div :class="['sidebar-menu', { active: isMenuOpen }]">
+      <div role="navigation" :class="['sidebar-menu', { active: isMenuOpen }]">
         <div class="sidebar-menu-inner">
           <div class="sidebar-links">
             <a
@@ -24,6 +29,8 @@
               v-for="navItem in nav"
               :key="navItem.name"
               @click="goRouteLink(navItem.path)"
+              tabindex="0"
+              :aria-label="navItem.name"
             >
               {{ navItem.name }}
             </a>

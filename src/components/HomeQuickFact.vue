@@ -1,11 +1,11 @@
 <template>
-  <div class="quick-fact">
+  <section class="quick-fact" role="complementary" :aria-label="$t('home.quick_fact_title')">
     <div class="quick-fact__container">
-      <div class="quick-fact__title">
+      <h2 class="quick-fact__title" tabindex="0">
         {{ $t('home.quick_fact_title') }}
-      </div>
-      <div class="cubes">
-        <div class="cube" v-for="cube in cubes" :key="cube.title">
+      </h2>
+      <div class="cubes" tabindex="0">
+        <div class="cube" tabindex="0" v-for="cube in cubes" :key="cube.title">
           <div class="cube__number">{{ cube.number }}</div>
           <div class="cube__title">
             {{ cube.title }}
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'

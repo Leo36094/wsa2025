@@ -7,6 +7,7 @@ export default {
     news: 'News',
     lang_en: 'English',
     lang_tw: 'Chinese',
+    switch_to_lang: 'Switch to {lang} language',
   },
   page_tabs: {
     host_tab_01: 'WorldSkills Asia',
@@ -24,9 +25,19 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    aria_banner_swiper: 'Swiper for home banner',
+    aria_banner_swiper_slide: 'Slide {index} of home banner',
+    aria_banner_swiper_prev: 'Previous slide',
+    aria_banner_swiper_next: 'Next slide',
+    aria_banner_swiper_first: 'First slide',
+    aria_banner_swiper_last: 'Last slide',
+    aria_banner_swiper_pagination: 'Go to slide {index}',
+    gallery_section: 'Gallery section',
+    gallery_photo_alt: 'Photo {index}',
+    gallery_photo: 'Photo {index} description',
     countdown_title: 'Countdown to the WorldSkills Asia Taipei 2025',
-    countdown_hours: 'Days',
-    countdown_days: 'Hours',
+    countdown_hours: 'Hours',
+    countdown_days: 'Days',
     // --- 0214 updated
     quick_fact_title: 'Quick Facts',
     quick_fact_cube_title_1: 'Skills',
@@ -42,6 +53,7 @@ export default {
     news_title: 'News',
     news_more: 'More',
     sponsors_title: 'Sponsors & Partners',
+    banner_desc_aria: 'Banner description',
     banner_desc: `Taipei will host the 3rd WorldSkills Asia Competition from November 27 to November 29, 2025 at Nangang Exhibition Center. This event will provide valuable opportunities to promote local education, economy, tourism and international exchanges.
     <br><br>
 This competition is expected to attract more than 500 participants from 28 member and guest countries across Asia, including Experts, Competitors, and professionals. <br><br>They will compete in multiple technical and vocational skill categories and promote technical exchanges.

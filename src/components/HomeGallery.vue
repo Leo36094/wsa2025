@@ -20,9 +20,7 @@
         </template>
         <span class="year">{{ $t('home.year') }}</span>
       </div>
-      <p data-aos="fade-down" class="slide-desc">
-        {{ $t('home.banner_desc') }}
-      </p>
+      <p data-aos="fade-down" class="slide-desc" v-html="$t('home.banner_desc')"></p>
     </div>
     <div class="photo-row" data-aos="fade-up">
       <div class="photo-item photo-item-3"></div>

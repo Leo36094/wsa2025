@@ -45,6 +45,7 @@ $wrapper-bg: #fafcf2;
   font-size: 0.16rem;
   @include flexCenter;
   .langs-btn {
+    cursor: pointer;
     @include flexCenter;
     color: #000;
     width: auto;

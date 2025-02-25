@@ -88,7 +88,7 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
           </NavigationMenuTrigger>
         </template>
         <template v-else>
-          <NavigationMenuLink as="div" class="NavigationMenuLink" @click.stop="goPage(item.path)">
+          <NavigationMenuLink as="li" class="NavigationMenuLink" @click.stop="goPage(item.path)">
             {{ item.name }}
           </NavigationMenuLink>
         </template>
@@ -154,6 +154,7 @@ p {
   line-height: 1;
   border-radius: 4px;
   color: $text-color;
+  cursor: pointer;
 }
 .NavigationMenuTrigger:focus,
 .NavigationMenuLink:focus {

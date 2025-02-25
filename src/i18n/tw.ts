@@ -9,12 +9,15 @@ export default {
     lang_tw: '繁體中文',
   },
   page_tabs: {
-    host_tab_01: 'WorldSkills Asia',
+    host_tab_01: '亞洲技能競賽',
     host_tab_02: '中華台北',
     host_tab_03: '關於勞動力發展署',
     host_tab_04: '競賽場地',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
+    involved_tab_01: '贊助商',
+    involved_tab_02: 'Theme Exhibition',
+    involved_tab_03: 'Try A Skill',
   },
   footer: {
     address: '展館地圖',

@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <li>
+  <li class="nav-list-item">
     <NavigationMenuLink as-child>
       <div v-bind="$attrs" class="ListItemLink">
         <div class="ListItemHeading">
@@ -17,3 +17,9 @@ const props = defineProps<{
     </NavigationMenuLink>
   </li>
 </template>
+
+<style lang="scss" scoped>
+.nav-list-item {
+  cursor: pointer;
+}
+</style>

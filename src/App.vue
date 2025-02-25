@@ -29,6 +29,8 @@ onMounted(() => {
   } else {
     changeLang({ lang: 'en', message: localeMessages.en }, { locale, setLocaleMessage })
   }
+  // set HTML lang
+  document.documentElement.lang = locale.value === 'tw' ? 'zh-TW' : 'en-US'
   AOS.init()
   checkIsDesktop()
   window.addEventListener('resize', checkIsDesktop)

@@ -4,7 +4,7 @@
       <div class="countdown-title">
         {{ $t('home.countdown_title') }}
       </div>
-      <div class="countdown-date">27-29 November 2025</div>
+      <div class="countdown-date">{{ $t('home.banner_date') }}</div>
       <div class="countdown-cubes">
         <div class="days">
           <div class="cubes">
@@ -12,7 +12,7 @@
               {{ day }}
             </div>
           </div>
-          <p>{{ $t('home.countdown_hours') }}</p>
+          <p>{{ $t('home.countdown_days') }}</p>
         </div>
         <div class="hours">
           <div class="cubes">
@@ -20,7 +20,7 @@
               {{ hour }}
             </div>
           </div>
-          <p>{{ $t('home.countdown_days') }}</p>
+          <p>{{ $t('home.countdown_hours') }}</p>
         </div>
       </div>
     </div>

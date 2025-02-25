@@ -1,7 +1,7 @@
 export const mockNewsDetail = [
   {
     en: {
-      title: 'The 3rd WorldSkills Asia Competition Skills',
+      title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
       content: `
 <p>
 The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center from November 27 to 29, 2025. The event will feature 36 official skills, 8 junior skills, and 4 exhibition skills, attracting thousands of experts and competitors from all over Asia.</p>

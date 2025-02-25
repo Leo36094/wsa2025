@@ -1,8 +1,8 @@
 <template>
   <div class="banner-title">
-    <p class="date">27-29 November 2025</p>
+    <p class="date">{{ $t('home.banner_date') }}</p>
     <div class="pc">
-      <h1>
+      <h1 :class="['slogan', { tw: locale === 'tw' }]">
         {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
       </h1>
     </div>
@@ -14,10 +14,19 @@
     </div>
   </div>
 </template>
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
+</script>
 <style lang="scss" scoped>
 .banner-title {
   font-weight: 700;
   color: #fff;
+  .slogan {
+    &.tw {
+      @include flexCenter(row-reverse);
+    }
+  }
   .date {
     font-size: 0.28rem;
   }

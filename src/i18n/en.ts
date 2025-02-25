@@ -11,7 +11,7 @@ export default {
   page_tabs: {
     host_tab_01: 'WorldSkills Asia',
     host_tab_02: 'Chinese Taipei',
-    host_tab_03: 'About WDA',
+    host_tab_03: 'About Workforce Development Agency(WDA)',
     host_tab_04: 'The Venue',
     competition_tab_01: 'Competition',
     competition_tab_02: 'Schedule',
@@ -34,6 +34,7 @@ export default {
     quick_fact_cube_title_3: 'Competitors & Experts',
     //---
     title: 'WorldSkills Asia Taipei',
+    banner_date: '27-29 November 2025',
     split_title1: 'WorldSkills',
     split_title2: 'Asia',
     split_title3: 'Taipei',
@@ -140,8 +141,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     schedule_date7: 'Dec. 01 Mon',
     schedule_code7: 'C+2',
     schedule_activity7: 'Breakdown, Departure for all Delegates',
-    schedule_note1: 'Welcome party, opening ceremony, closing ceremony and farewell party only open to accredited participants.',
-    schedule_note2: 'Competition (11/27-11/29) will open to the public for visiting.',
+    schedule_note1: 'Welcome party, opening party, closing ceremony and farewell party only to accredited participants.',
+    schedule_note2: 'Competition(11/27-11/29)will open to the public for visiting.',
     location_title: 'Taipei Nangang Exhibition Center',
     location_subtitle: 'Competition Venue',
     location_map_desc: `The Taipei Nangang Exhibition Center, located in Taipei Nangang District, is one of Asia's most important exhibition venues. It is conveniently accessible via MRT, High-Speed Rail, Taiwan Railways, and national highway bus stations, with two nearby highways and just a 30-minute drive from Taoyuan International Airport.<br><br> The exhibition center offers over 46,000 square meters of exhibition space and is equipped with advanced facilities, making it an ideal venue for hosting large-scale global exhibitions and international conferences.`,

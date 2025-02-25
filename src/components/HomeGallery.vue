@@ -7,10 +7,17 @@
       <div class="photo-item photo-item-2"></div>
     </div>
     <div class="slide-header">
-      <div class="split-titles title">
-        <span>{{ $t('home.split_title1') }}</span>
-        <span>{{ $t('home.split_title2') }}</span>
-        <span>{{ $t('home.split_title3') }}</span>
+      <div :class="['split-titles title', { tw: locale === 'tw' }]">
+        <div v-if="locale === 'tw'">
+          <span>{{ $t('home.split_title1') }}</span>
+          <span>{{ $t('home.split_title2') }}</span>
+          <span>{{ $t('home.split_title3') }}</span>
+        </div>
+        <template v-else>
+          <span>{{ $t('home.split_title1') }}</span>
+          <span>{{ $t('home.split_title2') }}</span>
+          <span>{{ $t('home.split_title3') }}</span>
+        </template>
         <span class="year">{{ $t('home.year') }}</span>
       </div>
       <p data-aos="fade-down" class="slide-desc">
@@ -24,7 +31,10 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
+</script>
 <style lang="scss" scoped>
 .home-banner__slide {
   background: $white-bg;
@@ -58,6 +68,9 @@
       margin-right: 0.92rem;
       span {
         line-height: 1.06rem;
+      }
+      &.tw {
+        flex-direction: column-reverse;
       }
     }
     .slide-desc {

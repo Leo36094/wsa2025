@@ -10,7 +10,7 @@
             </div>
             <div class="col contact-info__email">
               <img class="icon" src="/images/ri_mail-fill.svg" alt="mail-icon" />
-              <a href="tel:1234567890">info@worldskillsasia.ae</a>
+              <a href="tel:1234567890">secretariat@worldskillsasia.ae</a>
             </div>
             <div class="col address__street">
               <img class="icon" src="/images/ri_map-pin-fill-white.svg" alt="map-icon" />
@@ -29,7 +29,7 @@
                 alt="facebook-icon"
               />
             </a>
-            <a class="col" href="https://www.instagram.com/wdagovtw/" target="_blank">
+            <a class="col" href="https://www.instagram.com/worldskillsasia/" target="_blank">
               <img
                 class="social-media__icon"
                 src="/images/Instagram_Glyph_White 1.svg"

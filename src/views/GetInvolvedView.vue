@@ -81,7 +81,7 @@ const activeTab = ref(tabs.value[0].value)
 const sponsorList = computed(() => {
   return [
     {
-      number: '28',
+      number: '28+',
       title: t('involved.sponsorship_visitor'),
     },
     {

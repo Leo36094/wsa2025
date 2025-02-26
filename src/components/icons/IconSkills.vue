@@ -19,13 +19,12 @@ const iconClassNameMap = {
 </script>
 <style lang="scss" scoped>
 $types: (
-  art: 'art',
-  construction: 'construction',
-  it: 'it',
-  juniors: 'juniors',
-  logistics: 'logistics',
-  manufacturing: 'manufacturing',
-  social: 'social',
+  art: '06',
+  construction: '02',
+  it: '03',
+  logistics: '04',
+  manufacturing: '01',
+  social: '05' /* juniors: 'juniors', */,
 );
 .skill-icon {
   @include bgCenter(contain);
@@ -33,9 +32,12 @@ $types: (
   height: 0.48rem;
 
   @each $type, $value in $types {
-    &.icon-#{$value} {
-      background-image: url('/images/wsa/icon/ic_skill-#{$value}.png');
+    &.icon-#{$type} {
+      background-image: url('/images/wsa/icon/skills_#{$value}.svg');
     }
+  }
+  &.icon-juniors {
+    background-image: url('/images/wsa/icon/ic_skill-juniors.png');
   }
 }
 </style>

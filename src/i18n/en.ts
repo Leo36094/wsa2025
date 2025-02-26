@@ -22,7 +22,7 @@ export default {
     involved_tab_03: 'Try A Skill',
   },
   footer: {
-    address: 'WorldSkills Asia IPIC Building – 15th Floor Sultan Bin Zayed the First Street',
+    address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
@@ -339,7 +339,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     sponsorship: 'Sponsorship',
     sponsorship_desc: 'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
     sponsorship_reach: 'You Can Reach',
-    sponsorship_visitor: 'Expected Visitors',
+    sponsorship_visitor: 'Countries Expected Visitors',
     sponsorship_government: 'Industry and Government Partners',
     sponsorship_educational: 'Participating Educational Institutions',
     sponsorship_contact: 'Contact information',

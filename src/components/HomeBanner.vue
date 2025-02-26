@@ -4,7 +4,7 @@
       <div :class="['main-banner-container']">
         <Swiper class="banner" v-bind="swiperConfig" :aria-label="$t('home.aria_banner_swiper')">
           <SwiperSlide
-            v-for="index in 3"
+            v-for="index in 7"
             :key="index"
             class="slide"
             role="group"
@@ -93,7 +93,7 @@ $swiper-bullet-active-color: #455861;
         @include bgCenter(cover);
         height: 100%;
         width: 100%;
-        @for $i from 1 through 3 {
+        @for $i from 1 through 7 {
           &-#{$i} {
             background-image: url('/images/wsa/homepage_herosection_0#{$i}.jpg');
           }

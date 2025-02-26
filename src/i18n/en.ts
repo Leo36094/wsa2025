@@ -194,9 +194,9 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     // TODO update copy below
     manufacturing_MechanicalEngineeringCAD: 'Mechanical Engineering CAD',
     manufacturing_MechanicalEngineeringCAD_copy: `Mechanical engineering CAD involves utilizing CAD software to create 2D or 3D technical and engineering drawings essential for the manufacturing process. These drawings play a pivotal role as the foundation for R&D, manufacturing, quality control and sales. They serve as a universal language across various industries.`,
-    manufacturing_CNCTurning: 'CNCTurning',
+    manufacturing_CNCTurning: 'CNC Turning',
     manufacturing_CNCTurning_copy: `The CNC Turning machinist operates a computer to control the lathe's tool movements, shaping the part to exact specifications. CNC turning harnesses advanced machines and computer systems for analysis, simulation, design, visualization, and supporting manufacturing processes. It leverages computer numerical data to efficiently develop production plans and sequence, and define machine tools and operating parameters. CNC turning technology significantly enhances industrial productivity and ensures high-quality output`,
-    manufacturing_CNCMilling: 'CNCMilling',
+    manufacturing_CNCMilling: 'CNC Milling',
     manufacturing_CNCMilling_copy: `CNC milling machines are pivotal machine tools used for shaping metal and other solid materials. The CNC milling machinist engages in a series of crucial tasks, including process planning, selecting appropriate cutting tools, generating programs using CAD/CAM systems, and operating both conventional and CNC milling machines.`,
     manufacturing_Welding: 'Welding',
     manufacturing_Welding_copy: `aerospace, and semiconductor industries. Additionally, welders play a pivotal role in advancing independent national defense capabilities and in the construction of offshore wind power infrastructurWelding stands as a cornerstone technology across numerous industries, facilitating the joining of materials through heating or fusion at their interface. Often dubbed the ""tailors of metallic materials,"" welders possess the expertise to work with a wide array of metallic materials.

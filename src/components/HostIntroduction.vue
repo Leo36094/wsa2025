@@ -1,12 +1,12 @@
 <template>
-  <div class="host-introduction">
+  <section class="host-introduction" role="article">
     <div class="panel">
       <div class="section" v-for="section in sections" :key="section.title">
         <div class="section-title">{{ section.title }}</div>
         <div class="section-content">{{ section.content }}</div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

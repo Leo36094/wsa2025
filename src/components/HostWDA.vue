@@ -1,14 +1,14 @@
 <template>
-  <div class="host-wda" :id="SECTION_ID.WDA">
+  <section class="host-wda" :id="SECTION_ID.WDA" :aria-labelledby="$t('host.wda_title')">
     <div class="host-wda-container">
       <div class="host-wda-title">
-        <h1>{{ $t('host.wda_title') }}</h1>
+        <h2 :id="`${SECTION_ID.WDA}-title`">{{ $t('host.wda_title') }}</h2>
       </div>
       <div class="host-wda-content">
-        <p v-html="$t('host.wda_content')"></p>
+        <div role="article" v-html="$t('host.wda_content')"></div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

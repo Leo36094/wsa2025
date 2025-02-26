@@ -1,13 +1,17 @@
 <template>
   <div class="page-wrapper">
     <div class="page-tab-container">
-      <div class="page-tab">
+      <div class="page-tab" role="tablist" :aria-label="$t('page_tab_aria_label')">
         <div
           v-for="tab in tabs"
           :key="tab.value"
           class="page-tab__item"
           :class="{ active: tab.value === activeTab }"
           @click="handleTabClick(tab.value)"
+          @keydown="handleKeyDown($event, tab.value)"
+          role="tab"
+          tabindex="0"
+          :aria-label="tab.label"
         >
           <span>
             {{ tab.label }}
@@ -35,6 +39,12 @@ const emit = defineEmits<{
 
 const handleTabClick = (value: PageValue) => {
   emit('update:activeTab', value)
+}
+const handleKeyDown = (event: KeyboardEvent, value: PageValue) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault()
+    emit('update:activeTab', value)
+  }
 }
 </script>
 

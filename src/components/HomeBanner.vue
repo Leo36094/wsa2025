@@ -130,8 +130,6 @@ $swiper-bullet-active-color: #455861;
           }
         }
       }
-      :deep(.swiper-pagination) {
-      }
     }
   }
 }

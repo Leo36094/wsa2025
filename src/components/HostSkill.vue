@@ -1,7 +1,7 @@
 <template>
-  <div class="host-skill" id="skill">
+  <section class="host-skill" id="skill" :aria-labelledby="`${$t('host.skill_title')}`">
     <div class="host-skill-container">
-      <div class="image-col">
+      <div class="image-col" aria-hidden="true">
         <div
           class="image-item"
           v-for="item in images.slice(0, 3)"
@@ -9,12 +9,12 @@
           :style="{ backgroundImage: `url(${item})` }"
         ></div>
       </div>
-      <div class="copy-col">
-        <h2 class="title" v-html="$t('host.skill_title')"></h2>
+      <div class="copy-col" tabindex="0">
+        <h2 id="skill-title" class="title" v-html="$t('host.skill_title')"></h2>
         <p class="desc">{{ $t('host.skill_desc') }}</p>
         <p class="desc link" v-html="$t('host.skill_link_text')"></p>
       </div>
-      <div class="image-col">
+      <div class="image-col" aria-hidden="true">
         <div
           class="image-item"
           v-for="item in images.slice(3)"
@@ -22,19 +22,25 @@
           :style="{ backgroundImage: `url(${item})` }"
         ></div>
       </div>
-      <div v-if="!isDesktop" class="skill-swiper">
+      <div
+        v-if="!isDesktop"
+        class="skill-swiper"
+        role="region"
+        :aria-label="$t('host.skill_swiper_label')"
+      >
         <Swiper v-bind="swiperConfig">
           <SwiperSlide v-for="(slide, slideIdx) in images" :key="slideIdx" class="slide">
             <div
               :style="{ backgroundImage: `url(${slide})` }"
               class="img-slide"
+              :aria-label="$t('host.skill_swiper_slide', { index: slideIdx + 1 })"
               alt="skill image decoration"
             />
           </SwiperSlide>
         </Swiper>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { type Ref, computed, inject } from 'vue'

@@ -10,6 +10,7 @@ export default {
     switch_to_lang: '切換到 {lang} 語言',
   },
   page_tabs: {
+    page_tab_aria_label: '頁面導航選項卡',
     host_tab_01: '亞洲技能競賽',
     host_tab_02: '中華台北',
     host_tab_03: '關於勞動力發展署',
@@ -64,6 +65,9 @@ export default {
 我們誠摯地歡迎來自世界各地的參賽者與朋友，共同見證這場精彩的競賽。這不僅是一個展現技術與才能的舞台，更是促進文化交流、加深國際友誼的重要契機。`,
   },
   host: {
+    visit_website: 'Visit Taiwan Tourism Bureau Website (Open in new window)',
+    skill_swiper_label: '技能輪播',
+    skill_swiper_slide: '技能輪播第 {index} 張',
     title: '台北',
     welcome: '探索台北：',
     welcome_sub: '亞洲充滿活力的心臟',
@@ -117,7 +121,7 @@ export default {
     skill_title: '關於亞洲技能競賽',
     skill_desc: `亞洲技能（WSA）是一個致力於促進亞洲地區技術與職業教育訓練（TVET）的區域性組織。作為全球世界技能運動的一部分，WSA旨在通過舉辦區域性技能競賽、促進能力建立和國際合作，提升技術職業標準。其活動範疇包括支持培訓者和專家的發展、促進青年就業，以及倡導TVET政策改革。透過為成員國、產業夥伴和TVET機構提供合作平台，WSA在縮短教育與就業之間的差距、提升勞動力發展以及推動區域經濟增長方面發揮著重要作用。`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: '更多相關資訊請見: https://www.worldskillsasia.net/en/Pages/default.aspx',
+    skill_link_text: '更多相關資訊請見: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
     wda_title: 'About WDA',
     wda_content: `
     勞動力發展署致力於協助國人穩定就業並提升勞動力素質，根據國家重點產業發展與勞動市場需求，培育所需人才，並提供職前訓練與就業媒合服務。同時，該署透過多元的在職訓練課程，提升勞工專業技能，進而增強整體勞動力的競爭力。<br><br>

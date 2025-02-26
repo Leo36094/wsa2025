@@ -4,7 +4,7 @@
       <img :src="props.icon" alt="icon" />
     </div>
     <div class="climate-item__copy">
-      <h4>{{ props.title }}</h4>
+      <h2>{{ props.title }}</h2>
       <p>{{ props.desc }}</p>
     </div>
   </div>

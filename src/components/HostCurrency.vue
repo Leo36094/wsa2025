@@ -1,15 +1,20 @@
 <template>
-  <div class="host-currency" id="currency">
+  <div class="host-currency" id="currency" :aria-labelledby="$t('host.currency_title')">
     <div class="container">
-      <aside class="column sidebar" :style="{ position: cancelSticky ? 'static' : 'sticky' }">
+      <aside
+        class="column sidebar"
+        :style="{ position: cancelSticky ? 'static' : 'sticky' }"
+        role="region"
+        :aria-label="$t('host.currency_desc')"
+      >
         <div class="sitebar-light"></div>
         <!-- 左邊的內容 -->
-        <h4 class="currency-title">{{ $t('host.currency_title') }}</h4>
+        <h2 class="currency-title">{{ $t('host.currency_title') }}</h2>
         <p class="currency-desc">{{ $t('host.currency_desc') }}</p>
       </aside>
-      <div class="column right-panel">
+      <div class="column right-pansel">
         <!-- 右邊的內容 -->
-        <div class="content">
+        <section class="content" aria-label="Coins">
           <div v-if="!isMobile" class="currency-table">
             <div class="row">
               <div class="col">
@@ -50,8 +55,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div ref="lastCurrency" class="content">
+        </section>
+        <section ref="lastCurrency" class="content" aria-label="Bills">
           <div v-if="!isMobile" class="currency-table">
             <div class="row">
               <div class="col">
@@ -94,7 +99,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
     <div class="container container--mb"></div>
@@ -170,9 +175,10 @@ $border-color: #18475b;
   position: sticky;
   top: 2rem;
   margin-right: 0.32rem;
-  h4 {
+  h2 {
     font-size: 0.36rem;
     margin-bottom: 0.32rem;
+    font-weight: 700;
   }
   p {
     font-size: 0.16rem;

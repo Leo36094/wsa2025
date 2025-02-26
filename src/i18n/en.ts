@@ -10,6 +10,7 @@ export default {
     switch_to_lang: 'Switch to {lang} language',
   },
   page_tabs: {
+    page_tab_aria_label: 'Page tabs',
     host_tab_01: 'WorldSkills Asia',
     host_tab_02: 'Chinese Taipei',
     host_tab_03: 'About Workforce Development Agency(WDA)',
@@ -61,6 +62,9 @@ This competition is expected to attract more than 500 participants from 28 membe
 We warmly welcome participants and friends from all over the world and look forward to share this exciting competition with everyone. <br><br>This is not only a stage to showcase skills and talents, but also an opportunity to promote cultural exchanges and build friendship between countries.`,
   },
   host: {
+    visit_website: 'Visit Taiwan Tourism Bureau Website (Open in new window)',
+    skill_swiper_label: 'Skill Swiper',
+    skill_swiper_slide: 'Skill Swiper Slide {index}',
     title: 'Taipei',
     welcome: 'Discover Taipei: ',
     welcome_sub: 'The Vibrant Heart of Asia',
@@ -113,7 +117,7 @@ Come and experience Taipei: The Vibrant Heart of Asia!`,
     skill_title: 'About World Skills Asia',
     skill_desc: `WorldSkills Asia (WSA) is a regional organization dedicated to promoting excellence in technical and vocational education and training (TVET) across Asia. As part of the global WorldSkills movement, WSA aims to raise the standards of skilled professions by organizing regional skills competitions, fostering capacity building, and facilitating international cooperation. Its key activities include supporting the development of trainers and experts, promoting youth employment, and advocating for TVET policy reforms. By providing a platform for collaboration among member countries, industry partners, and TVET institutions, WSA plays a vital role in bridging the gap between education and employment, enhancing workforce development, and driving economic growth in the region.`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: 'For more information: <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
+    skill_link_text: 'For more information: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
     wda_title: 'About WDA',
     wda_content: `
     The Workforce Development Agency (WDA) is dedicated to assisting citizens in achieving stable employment and improving the quality of the workforce. Based on the development of key national industries and labor market demands, it trains the necessary talent, while also providing pre-employment training and job matching services. At the same time, the agency enhances the professional skills of workers through diverse on-the-job training programs, thereby strengthening the overall competitiveness of the workforce.

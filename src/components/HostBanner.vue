@@ -1,139 +1,49 @@
 <template>
-  <div class="second-slide" id="host">
-    <div class="image-row" ref="topRow">
-      <!-- <img ref="topFirst" id="topFirst" class="image-item" :src="hostImages[0]" alt="banner2" /> -->
+  <section
+    class="second-slide"
+    id="host"
+    :aria-labelledby="`${$t('host.welcome')}${$t('host.welcome_sub')}`"
+  >
+    <div class="image-row" ref="topRow" role="region" aria-label="Top Row Images">
       <div data-aos="fade-up" class="top-first-rest" ref="topFirstRest">
-        <img class="image-item" :src="hostImages[0]" alt="banner2" />
-        <img class="image-item" :src="hostImages[2]" alt="banner2" />
-        <img class="image-item" :src="hostImages[3]" alt="banner3" />
+        <img class="image-item" :src="hostImages[0]" alt="banner2" loading="lazy" />
+        <img class="image-item" :src="hostImages[2]" alt="banner2" loading="lazy" />
+        <img class="image-item" :src="hostImages[3]" alt="banner3" loading="lazy" />
       </div>
     </div>
-    <div class="host-copy">
+    <div class="host-copy" role="region" :aria-label="$t('host.welcome')">
       <div class="welcome-title" data-aos="fade-right">
-        <h2 class="title">{{ $t('host.welcome') }}</h2>
+        <h1 class="title">{{ $t('host.welcome') }}</h1>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
       <p class="welcome-desc">
         {{ $t('host.content') }}
-        <a class="welcome-desc__link" href="https://eng.taiwan.net.tw/" target="_blank"
+        <a
+          class="welcome-desc__link"
+          href="https://eng.taiwan.net.tw/"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="$t('host.visit_website')"
           >https://eng.taiwan.net.tw/</a
         >
       </p>
     </div>
-    <div class="image-row" ref="bottomRow">
+    <div class="image-row" ref="bottomRow" role="region" aria-label="Bottom Row Images">
       <div data-aos="fade-up" data-aos-offset="0" class="bottom-rest" ref="bottomRest">
-        <img class="image-item" :src="hostImages[4]" alt="banner4" />
-        <img class="image-item" :src="hostImages[5]" alt="banner5" />
-        <img class="image-item" :src="hostImages[1]" alt="banner6" />
+        <img class="image-item" :src="hostImages[4]" alt="banner4" loading="lazy" />
+        <img class="image-item" :src="hostImages[5]" alt="banner5" loading="lazy" />
+        <img class="image-item" :src="hostImages[1]" alt="banner6" loading="lazy" />
       </div>
-      <!-- <img id="secondLast" ref="secondLast" class="image-item" :src="hostImages[1]" alt="banner5" /> -->
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
-// import { ref, onMounted, onUnmounted } from 'vue'
-// import { gsap } from 'gsap'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-// const leftPhoto = ref<null | HTMLElement>(null)
-// const rightPhoto = ref<null | HTMLElement>(null)
-
-// const topFirst = ref<null | HTMLElement>(null)
-// const secondLast = ref<null | HTMLElement>(null)
-
 const hostImages = Array.from(
   { length: 6 },
   (_, i) =>
     `${import.meta.env.BASE_URL}images/wsa/host_section01_${(i + 1).toString().padStart(2, '0')}.jpg`,
 )
-
-// onMounted(() => {
-//   gsap.registerPlugin(ScrollTrigger)
-
-//   ScrollTrigger.matchMedia({
-//     // desktop
-//     '(min-width: 750px)': function () {
-//       gsap.from(leftPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
-//       gsap.from(rightPhoto.value, { duration: 1, opacity: 0, y: 150, delay: 0.5 })
-//       // second section
-//       const tl = gsap.timeline({
-//         scrollTrigger: {
-//           trigger: '.second-slide',
-//           start: '20% 100%',
-//           end: 'center center',
-//           scrub: true,
-//           toggleActions: 'play reverse play reverse',
-//         },
-//       })
-//       tl.to(
-//         leftPhoto.value,
-//         {
-//           scale: 0.5,
-//           duration: 0.15,
-//           opacity: 0,
-//           y: 1000,
-//           onComplete: () => {
-//             leftPhoto.value!.style.opacity = '0'
-//           },
-//           onReverseComplete: () => {
-//             leftPhoto.value!.style.opacity = '1'
-//             leftPhoto.value!.style.transform = 'translate(0, 0)'
-//           },
-//         },
-//         '#leftphoto',
-//       )
-//       tl.to(
-//         rightPhoto.value,
-//         {
-//           scale: 0.5,
-//           duration: 0.15,
-//           opacity: 0,
-//           y: 800,
-//           onComplete: () => {
-//             rightPhoto.value!.style.opacity = '0'
-//           },
-//           onReverseComplete: () => {
-//             rightPhoto.value!.style.opacity = '1'
-//             rightPhoto.value!.style.transform = 'translate(0, 0)'
-//           },
-//         },
-//         rightPhoto.value?.clientTop,
-//       )
-
-//       gsap.to(topFirst.value, {
-//         scrollTrigger: {
-//           trigger: topFirst.value,
-
-//           start: 'top 10',
-//           end: 'bottom center',
-//           scrub: 1,
-//         },
-//         x: 0,
-//         y: 0,
-//         opacity: 1,
-//         scale: 1,
-//         duration: 2,
-//       })
-//       gsap.to(secondLast.value, {
-//         scrollTrigger: {
-//           trigger: '.second-slide',
-//           start: 'top center',
-//           end: 'bottom bottom',
-//           scrub: true,
-//         },
-//         y: 0,
-//         scale: 1,
-//         opacity: 1,
-//         duration: 1,
-//       })
-//     },
-//   })
-// })
-
-// onUnmounted(() => {
-//   ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
-// })
 </script>
 <style lang="scss" scoped>
 .host-copy {

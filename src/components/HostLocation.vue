@@ -1,16 +1,16 @@
 <template>
-  <div class="location" id="location">
-    <div class="location-container">
-      <header>
-        <h4 class="location-subtitle">
+  <main class="location" id="location" :aria-labelledby="`${$t('competition.location_title')}`">
+    <article class="location-container" aria-labelledby="location-title">
+      <div class="location-header">
+        <h2 class="location-subtitle">
           {{ $t('competition.location_subtitle') }}
-        </h4>
-        <h4 class="location-title">
+        </h2>
+        <h3 class="location-title">
           {{ $t('competition.location_title') }}
-        </h4>
-      </header>
+        </h3>
+      </div>
 
-      <div class="info-bar">
+      <section class="info-bar" aria-label="Location Map">
         <iframe
           :src="currentMap"
           width="600"
@@ -19,17 +19,27 @@
           class="info-bar__map"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          aria-label="WorldSkills Asia Location Map"
+          :title="$t('competition.location_title')"
         ></iframe>
         <div class="info-bar__desc-container">
           <div class="info-bar__desc" v-html="$t('competition.location_map_desc')"></div>
 
-          <a class="info-bar__link" href="https://www.tainex.com.tw/" target="_blank">
+          <a
+            class="info-bar__link"
+            rel="noopener noreferrer"
+            href="https://www.tainex.com.tw/"
+            target="_blank"
+            :aria-label="$t('host.location_visit_website')"
+          >
             <img src="/images/ri_global-fill.svg" alt="map-pin" />
             {{ $t('host.location_visit_website') }}
           </a>
         </div>
-      </div>
-      <div class="info-bar">
+      </section>
+
+      <section class="info-bar" role="region" :aria-label="$t('competition.location_hall1')">
+        <h3 id="halls-title" class="visually-hidden">{{ $t('competition.location_hall1') }}</h3>
         <div class="info-bar__img info-bar__img--hall1"></div>
         <div class="info-bar__detail">
           <div class="hall-info">
@@ -54,8 +64,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="info-bar">
+      </section>
+      <section class="info-bar" role="region" :aria-label="$t('competition.location_hall2')">
         <div class="info-bar__img info-bar__img--hall2"></div>
         <div class="info-bar__detail">
           <div class="hall-info">
@@ -89,9 +99,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+    </article>
+  </main>
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
@@ -112,10 +122,21 @@ $title-color: #fb773c;
 $pin-color: $green-primary;
 .location {
   background: #fff;
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
   .location-container {
     @include withContainer;
     padding: 1.6rem 0;
-    header {
+    .location-header {
       font-weight: 700;
       margin: auto;
       text-align: center;
@@ -242,7 +263,7 @@ $pin-color: $green-primary;
   .location {
     .location-container {
       padding: 1.6rem 0.4rem;
-      header {
+      .location-header {
         margin-bottom: 0.32rem;
         line-height: normal;
         .location-title {
@@ -281,7 +302,7 @@ $pin-color: $green-primary;
   .location {
     .location-container {
       padding: 0.8rem 0;
-      header {
+      .location-header {
         padding: 0 0.24rem;
         margin-bottom: 0.24rem;
         .location-title {

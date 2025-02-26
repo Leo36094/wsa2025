@@ -4,7 +4,7 @@
       <aside>
         <div class="sitebar-light"></div>
         <div class="power-title">
-          <h4>{{ $t('host.power_title') }}</h4>
+          <h2>{{ $t('host.power_title') }}</h2>
           <p>{{ $t('host.power_desc') }}</p>
         </div>
         <div class="power-desc"></div>
@@ -37,7 +37,7 @@
   .power-title {
     width: 4.26rem;
     margin-right: 0.32rem;
-    h4 {
+    h2 {
       font-size: 0.36rem;
       font-weight: 700;
       margin-bottom: 0.32rem;
@@ -72,7 +72,7 @@
     .power-title {
       width: 100%;
       margin-right: 0;
-      h4 {
+      h2 {
         margin-bottom: 0;
       }
       p {
@@ -96,7 +96,7 @@
   .power {
     margin: 0.56rem auto;
     .power-title {
-      h4 {
+      h2 {
         font-size: 0.24rem;
         line-height: normal;
       }

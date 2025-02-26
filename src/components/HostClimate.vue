@@ -1,11 +1,11 @@
 <template>
-  <div class="climate" id="climate">
+  <section class="climate" id="climate" :aria-labelledby="$t('host.climate_title')">
     <div class="climate-container">
-      <div class="title-light"></div>
-      <div class="climate-title">
+      <div class="title-light" aria-hidden="true"></div>
+      <h2 id="climate-title" class="climate-title">
         {{ $t('host.climate_title') }}
-      </div>
-      <div v-if="isDesktop" class="climate-content">
+      </h2>
+      <div v-if="isDesktop" class="climate-content" :aria-label="$t('host.climate_desc')">
         <div class="row">
           <div class="col">
             <HostClimateItem
@@ -48,9 +48,9 @@
           </div>
         </div>
       </div>
-      <div v-else class="climate-content">
-        <div class="row" v-for="(item, index) in Object.keys(icons)" :key="item">
-          <div class="col">
+      <div v-else class="climate-content" :aria-label="$t('host.climate_desc') + 'mobile'">
+        <div class="row" v-for="(item, index) in Object.keys(icons)" :key="item" role="list">
+          <div class="col" role="listitem">
             <HostClimateItem
               :icon="icons[item as keyof typeof icons]"
               :title="$t(`host.climate_title${index + 1}`)"
@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { type Ref, inject } from 'vue'

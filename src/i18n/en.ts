@@ -25,6 +25,7 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    aria_banner_region: 'Home banner region',
     aria_banner_swiper: 'Swiper for home banner',
     aria_banner_swiper_slide: 'Slide {index} of home banner',
     aria_banner_swiper_prev: 'Previous slide',

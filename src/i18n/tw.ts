@@ -27,6 +27,7 @@ export default {
     copyrights: 'Copyright © 2025 Worldskills Asia',
   },
   home: {
+    aria_banner_region: '首頁橫幅區域',
     aria_banner_swiper: '輪播圖',
     aria_banner_swiper_slide: '輪播圖第 {index} 張',
     aria_banner_swiper_prev: '上一張',

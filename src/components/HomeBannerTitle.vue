@@ -1,8 +1,9 @@
 <template>
-  <header class="banner-title" role="complementary">
+  <header class="banner-title">
     <p class="date">{{ $t('home.banner_date') }}</p>
     <div class="pc">
       <h1
+        tabindex="0"
         :class="['slogan', { tw: locale === 'tw' }]"
         :aria-label="`${$t('home.title')} ${$t('home.year')}`"
       >

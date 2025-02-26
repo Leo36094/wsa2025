@@ -1,7 +1,7 @@
 <template>
   <section
     class="home-banner__slide"
-    role="gallery"
+    role="region"
     :aria-label="$t('home.gallery_section')"
     tabindex="0"
   >

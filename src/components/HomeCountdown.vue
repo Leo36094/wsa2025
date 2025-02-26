@@ -15,13 +15,7 @@
       <div class="countdown-cubes" aria-live="polite" tabindex="0">
         <div class="days">
           <div class="cubes" role="group" :aria-label="$t('home.countdown_days')" tabindex="0">
-            <div
-              class="cube"
-              v-for="(day, idx) in remainDays"
-              :key="idx"
-              aria-hidden="true"
-              tabindex="0"
-            >
+            <div class="cube" v-for="(day, idx) in remainDays" :key="idx" tabindex="0">
               {{ day }}
             </div>
           </div>
@@ -29,13 +23,7 @@
         </div>
         <div class="hours">
           <div class="cubes" role="group" :aria-label="$t('home.countdown_hours')" tabindex="0">
-            <div
-              class="cube"
-              v-for="(hour, idx) in remainHours"
-              :key="idx"
-              aria-hidden="true"
-              tabindex="0"
-            >
+            <div class="cube" v-for="(hour, idx) in remainHours" :key="idx" tabindex="0">
               {{ hour }}
             </div>
           </div>

@@ -1,6 +1,6 @@
 <template>
-  <div class="home-banner" role="banner">
-    <main class="home-banner-container">
+  <main class="home-banner" :aria-label="$t('home.aria_banner_region')">
+    <div class="home-banner-container">
       <div :class="['main-banner-container']">
         <Swiper class="banner" v-bind="swiperConfig" :aria-label="$t('home.aria_banner_swiper')">
           <SwiperSlide
@@ -9,6 +9,7 @@
             class="slide"
             role="group"
             :aria-label="$t('home.aria_banner_swiper_slide', { index })"
+            tabindex="0"
           >
             <div
               :class="['banner-img', `banner-img-${index}`]"
@@ -16,13 +17,13 @@
               :aria-label="$t('home.aria_banner_swiper_slide', { index })"
             ></div>
           </SwiperSlide>
-          <div class="banner-pagination" aria-hidden="true"></div>
+          <div class="banner-pagination" tabindex="0"></div>
           <div class="filter" aria-hidden="true"></div>
         </Swiper>
         <HomeBannerTitle class="banner__title" />
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'

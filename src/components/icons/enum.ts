@@ -18,8 +18,6 @@ export enum ManufacturingIconEnum {
   Electronics = 'Electronics',
   IndustrialControl = 'Industrial Control',
   AutonomousMobileRobotics = 'Autonomous Mobile Robotics',
-  PlasticDieEngineering = 'Plastic Die Engineering',
-  PrototypeModelling = 'Prototype Modelling',
   IndustrialDesign = 'Industrial Design Technology',
   RobotSystemsIntegration = 'Robot Systems Integration',
 }

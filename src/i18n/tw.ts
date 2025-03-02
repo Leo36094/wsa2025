@@ -185,6 +185,8 @@ export default {
     location_hall2_floor4: '資訊與通訊技術',
   },
   skills: {
+    category_image: '技能圖片 {index}',
+    aria_label_skills_navigation: '技能導覽',
     skill_category_title: '技能類別',
     category_manufacturing: '製造工程技術',
     category_construction: '營建技術',
@@ -338,5 +340,9 @@ export default {
     sponsorship_contact: '聯繫窗口',
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
+  },
+  swiper: {
+    aria_label_swiper_image: 'Swiper Image {index}',
+    aria_label_group: 'Swiper Group',
   }
 }

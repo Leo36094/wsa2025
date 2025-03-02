@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-panel">
+  <div class="skill-panel" :aria-label="skillName">
     <IconSkills class="skill-icon" :name="props.skillType" />
     <p class="skill-name">
       {{ skillName }}

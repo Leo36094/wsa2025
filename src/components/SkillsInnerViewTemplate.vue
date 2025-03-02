@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-inner-view">
+  <div class="skills-inner-view" role="main">
     <div class="skills-inner-view-container">
       <h1 class="skills-inner-view-title title-animation">
         <span>{{ $t(`skills.category_${viewName}`) }}</span>
@@ -18,9 +18,10 @@
               v-for="(img, imgIdx) in imageList.slice(0, 3)"
               :style="{ backgroundImage: `url(${img})` }"
               :key="imgIdx"
+              aria-hidden="true"
             ></div>
           </div>
-          <div
+          <article
             class="gallery-copy"
             data-aos="fade-up"
             data-aos-delay="500"
@@ -29,31 +30,41 @@
             <div
               class="skill-image"
               :style="{ backgroundImage: `url(${displaySkillImage})` }"
+              :aria-label="copyText.title"
+              role="img"
             ></div>
             <h2 class="title">{{ copyText.title }}</h2>
-            <p class="copy" v-html="copyText.copy"></p>
-          </div>
+            <p class="copy" role="article" v-html="copyText.copy"></p>
+          </article>
           <div
             class="gallery-image"
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-anchor-placement="top-bottom"
+            role="group"
           >
             <div
               class="image-item"
               v-for="(img, index) in imageList.slice(3)"
               :style="{ backgroundImage: `url(${img})` }"
               :key="index"
+              aria-hidden="true"
             ></div>
           </div>
         </div>
         <div v-if="!isDesktop" class="skill-swiper">
-          <Swiper v-bind="swiperConfig">
-            <SwiperSlide v-for="(slide, slideIdx) in imageList" :key="slideIdx" class="slide">
+          <Swiper v-bind="swiperConfig" :aria-label="$t('swiper.aria_label_group')">
+            <SwiperSlide
+              v-for="(slide, slideIdx) in imageList"
+              :key="slideIdx"
+              class="slide"
+              :aria-label="`${$t(`swiper.aria_label_swiper_image`, { index: slideIdx + 1 })}`"
+            >
               <div
                 :style="{ backgroundImage: `url(${slide})` }"
                 class="img-slide"
                 alt="skill image decoration"
+                aria-hidden="true"
               />
             </SwiperSlide>
           </Swiper>

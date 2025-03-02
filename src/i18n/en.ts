@@ -181,6 +181,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
   },
   skills: {
+    category_image: 'Skill Image {index}',
+    aria_label_skills_navigation: 'Skills Navigation',
     skill_category_title: 'Skills',
     category_manufacturing: 'Manufacturing and Engineering Technology',
     category_construction: 'Construction and Building Technology',
@@ -346,5 +348,9 @@ The skilled painter and decorator offers a range of services, from interpreting 
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     coming_soon: 'Coming soon',
+  },
+  swiper: {
+    aria_label_swiper_image: 'Swiper Image {index}',
+    aria_label_group: 'Swiper Group',
   }
 }

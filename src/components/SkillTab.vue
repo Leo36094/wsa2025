@@ -5,16 +5,21 @@
     data-aos-delay="500"
     data-aos-anchor-placement="top-bottom"
   >
-    <div v-if="!props.showSelect" class="skill-tab-container">
+    <div v-if="!props.showSelect" class="skill-tab-container" role="tablist">
       <div class="skill-row" v-for="(skillRow, idx) in skillListCols" :key="idx">
-        <div
+        <button
           :class="['skill-col', { 'skill-col--selected': props.selectedSkill.id === skill.id }]"
           v-for="skill in skillRow"
           :key="skill.id"
           @click="handleClick(skill)"
+          tabindex="0"
+          :aria-selected="props.selectedSkill.id === skill.id"
+          :aria-controls="`${skill.id}-tab`"
+          :id="`${skill.id}-tab`"
+          role="tab"
         >
           {{ skill.label }}
-        </div>
+        </button>
       </div>
     </div>
     <div v-else class="skill-select">
@@ -26,6 +31,7 @@
         labelKey="label"
         :selectedValue="selectedSkill.id"
         @update:modelValue="onSelectUpdate"
+        :aria-label="$t('skills.aria_label_skills_navigation')"
       />
     </div>
   </div>
@@ -75,7 +81,8 @@ $border-color: #899ca4;
       display: flex;
       align-items: stretch;
     }
-    .skill-col {
+    button.skill-col {
+      all: inherit;
       cursor: pointer;
       padding: 0.08rem 0.16rem 0.08rem 0.3rem;
       font-size: 0.16rem;
@@ -97,7 +104,8 @@ $border-color: #899ca4;
       }
 
       &--selected,
-      &:hover {
+      &:hover,
+      &:focus {
         background: #ffffff1a;
         &::before {
           visibility: visible;
@@ -112,7 +120,7 @@ $border-color: #899ca4;
       max-width: 6.64rem;
       width: 100%;
       overflow: hidden;
-      .skill-col {
+      button.skill-col {
         padding: 0.08rem 0.08rem 0.08rem 0.3rem;
         font-size: 0.16rem;
         line-height: normal;

@@ -1,12 +1,17 @@
 <template>
-  <div class="category">
+  <div class="category" role="main">
     <div class="category-container">
       <div class="category-title-container">
-        <h2 class="category-title">
+        <h1 class="category-title">
           {{ $t('skills.skill_category_title') }}
-        </h2>
+        </h1>
       </div>
-      <div class="skill-list" data-aos="fade-up" data-aos-delay="500">
+      <div
+        class="skill-list"
+        data-aos="fade-up"
+        data-aos-delay="500"
+        :aria-label="$t('skills.aria_label_skills_navigation')"
+      >
         <SkillPanel
           class="skill-item"
           v-for="skill in skills"

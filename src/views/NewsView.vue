@@ -1,5 +1,5 @@
 <template>
-  <div class="news">
+  <main class="news" role="main">
     <div class="first-slide__title">
       <h1>{{ $t('news.title') }}</h1>
     </div>
@@ -47,7 +47,7 @@
         <BaseLoading v-else />
       </TransitionGroup>
     </div>
-  </div>
+  </main>
   <RouterView></RouterView>
 </template>
 

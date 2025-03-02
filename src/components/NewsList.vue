@@ -12,9 +12,9 @@
           :aria-label="newsItem.title"
         >
           <div class="news-item__img" :style="{ backgroundImage: `url(${newsItem.image})` }"></div>
-          <h3 class="news-item__title" tabindex="0">
+          <h2 class="news-item__title" tabindex="0">
             {{ newsItem.title }}
-          </h3>
+          </h2>
           <p class="news-item__date" tabindex="0">{{ newsItem.date }}</p>
         </div>
       </div>

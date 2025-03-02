@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { MenubarContent, MenubarItem, MenubarMenu, MenubarRoot, MenubarTrigger } from 'radix-vue'
-import { useRouter } from 'vue-router'
 
 const currentMenu = ref('')
 type NavItem = {
@@ -16,20 +15,22 @@ const props = defineProps<{
   nav: NavItem[]
 }>()
 
-const router = useRouter()
-
 const openMenu = ref(false)
 
-function goPage(path: string) {
+const createFullPath = (path: string) => {
   const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
-  const fullPath = router.resolve(path).href
-  window.open(`${baseUrl}${fullPath}`, '_blank')
+  return `${baseUrl.replace(/\/$/, '')}${path}`
+}
+
+function goPage(path: string) {
+  const pageURL = createFullPath(path)
+  window.open(pageURL, '_blank')
 }
 function handleHashRoute(link: { name: string; path: string }, pageName: string) {
-  const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
-  const fullPath = router.resolve(pageName.toLowerCase()).href
-  const newTab = `${baseUrl}${fullPath}${link.path || ''}`
-
+  const hashPath = pageName.toLowerCase()
+  const pageURL = createFullPath(hashPath)
+  const newTab = `${pageURL}${link.path || ''}`
+  console.log({ newTab })
   window.open(newTab, '_blank')
 }
 function handleTriggerClick(item: NavItem) {

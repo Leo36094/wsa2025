@@ -3,6 +3,7 @@ export const mockNewsDetail = [
     en: {
       title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
       content: `
+      <h1>The 3rd WorldSkills Asia Competition skills</h1>
 <p>
 The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center from November 27 to 29, 2025. The event will feature 36 official skills, 8 junior skills, and 4 exhibition skills, attracting thousands of experts and competitors from all over Asia.</p>
 <img src="${import.meta.env.BASE_URL}images/news/news_01.jpg" alt="The 3rd WorldSkills Asia Competition Skills" style="width: 100%;">
@@ -76,6 +77,7 @@ Official Skills (36 skills in total) :
     zh: {
       title: '第三屆亞洲技能競賽職類公布',
       content: `
+      <h1>第三屆亞洲技能競賽職類公布</h1>
 <p>
 第三屆亞洲技能競賽將於2025年11月27日至29日在<strong>台北南港展覽館</strong>舉行。本次賽事將包含<strong>36項正式職類、8項青少年職類及4項示範職類</strong>，吸引來自亞洲各地的專家與選手參與。</p>
 <img src="${import.meta.env.BASE_URL}images/news/news_01.jpg" alt="The 3rd WorldSkills Asia Competition Skills" style="width: 100%;">
@@ -146,6 +148,7 @@ Official Skills (36 skills in total) :
     en: {
       title: 'Taiwan to host WorldSkills Asia Competition 2025',
       content: `
+      <h1>Taiwan to host WorldSkills Asia Competition 2025</h1>
 <p style="font-weight: 400; font-size: 0.16rem;">
 Date of inspection 2023-12-19
 </p>
@@ -162,6 +165,7 @@ With tremendous efforts made by the Ministry of Labor (MOL), WorldSkills Asia (W
     zh: {
       title: '台灣將主辦2025年亞洲技能競賽',
       content: `
+      <h1>台灣將主辦2025年亞洲技能競賽</h1>
       <p style="font-weight: 400; font-size: 0.16rem;">發布日期：2023-12-19</p>
 <p>經過勞動部（MOL）的大力爭取，亞洲技能組織（WSA）於2022年6月1日正式宣布，台灣將主辦2025年亞洲技能競賽（WSAC 2025）。這將是繼1993年後，台灣時隔30年再次舉辦國際技能競賽，充分證明台灣長期在職業技能培訓方面的努力，並再次獲得亞洲各國的認可。</p>
 <p>勞動部部長表示，台灣重視技能領域的國際交流與合作，並已設立全球第二座世界技能能力建構中心（WorldSkills Capacity Building Centre），藉由舉辦技能工作坊、支持全球專家與選手培訓等方式，提供國際技能交流的平台。我們由衷感謝所有WSA會員國的支持，讓台灣有機會主辦WSAC 2025。此外，勞動部將致力於政府、企業與學校的合作，凝聚各界力量，為區域技能發展做出具體貢獻，進一步促進亞洲各國技能發展的共榮與互惠。</p>

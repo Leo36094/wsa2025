@@ -29,7 +29,7 @@
               :aria-label="$t('home.aria_banner_swiper_slide', { index })"
             ></div>
           </SwiperSlide>
-          <div class="banner-pagination" tabindex="0"></div>
+          <div class="banner-pagination"></div>
           <div class="filter" aria-hidden="true"></div>
         </Swiper>
         <HomeBannerTitle class="banner__title" />
@@ -59,7 +59,7 @@ const swiperConfig = {
     clickable: true,
     horizontalClass: 'swiper-pagination-horizontal', // 添加這行
     renderBullet: function (index: number, className: string) {
-      return `<button class="${className}" aria-label="${t('home.aria_banner_swiper_pagination', { index })}"></button>`
+      return `<div class="${className}"></div>`
     },
   },
   a11y: {

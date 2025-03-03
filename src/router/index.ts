@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import FrontStage from '../views/FrontStage.vue'
+import HomeView from '../views/HomeView.vue'
 import { nextTick } from 'vue'
 
 export enum SkillsRouteEnum {
@@ -24,7 +25,7 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
-          component: async () => await import('../views/HomeView.vue'),
+          component: HomeView,
         },
         {
           path: '/host',

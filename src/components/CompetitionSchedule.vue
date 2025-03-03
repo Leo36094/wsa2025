@@ -93,9 +93,9 @@ const notes = computed(() => {
         border-radius: 0.1rem;
         display: flex;
         align-items: center;
+        &:nth-child(5),
         &:nth-child(6),
-        &:nth-child(7),
-        &:nth-child(8) {
+        &:nth-child(7) {
           background: linear-gradient(
             90deg,
             rgba(251, 119, 60, 0.2) 0%,

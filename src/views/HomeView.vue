@@ -17,4 +17,3 @@ import HomeCountdown from '@/components/HomeCountdown.vue'
 // import HomeSponsors from '@/components/HomeSponsors.vue'
 import HomeQuickFact from '@/components/HomeQuickFact.vue'
 </script>
-<style lang="scss" scoped></style>

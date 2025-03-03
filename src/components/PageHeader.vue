@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header">
+  <nav class="page-header" id="universal-header">
     <div class="wrapper">
       <div class="icons">
         <router-link to="/" class="logo" aria-label="Home">
@@ -7,9 +7,9 @@
         </router-link>
         <div class="wda"></div>
       </div>
-      <nav class="nav-links-pc">
+      <div class="nav-links-pc">
         <NavMenubar :nav="nav" />
-      </nav>
+      </div>
       <LangButton class="langs-pc" />
       <div
         :class="['hamburger-btn', { active: isMenuOpen }]"
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 </template>
 <script lang="ts" setup>
 import { ref, computed } from 'vue'

@@ -103,6 +103,7 @@ $swiper-bullet-active-color: #455861;
       position: relative;
       .banner-img {
         @include bgCenter(cover);
+        background-position: center 15%;
         height: 100%;
         width: 100%;
         &-0 {
@@ -153,6 +154,7 @@ $swiper-bullet-active-color: #455861;
   .home-banner {
     position: relative;
     top: 0;
+
     .main-banner-container {
       .filter {
         height: 50%;

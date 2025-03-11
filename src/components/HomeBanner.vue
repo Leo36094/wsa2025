@@ -106,10 +106,7 @@ $swiper-bullet-active-color: #455861;
         background-position: center 15%;
         height: 100%;
         width: 100%;
-        &-0 {
-          background-image: url('/images/wsa/homepage_herosection_01.png');
-        }
-        @for $i from 1 through 7 {
+        @for $i from 0 through 7 {
           &-#{$i} {
             background-image: url('/images/wsa/homepage_herosection_0#{$i}.jpg');
           }

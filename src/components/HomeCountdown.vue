@@ -82,8 +82,9 @@ onUnmounted(() => {
   }
   .countdown-container {
     border-radius: 0.1rem;
-    background: radial-gradient(59.83% 274.2% at 50% 50%, #ffffff 0%, #c8e14b 100%);
-    width: 11.2rem;
+    @include bgCenter(cover);
+    background-image: url('/images/wsa/home_green_desktop.jpg');
+    width: 11.8rem;
     margin: 0 auto;
     padding: 0.48rem 0.96rem;
     .countdown-title {
@@ -91,6 +92,7 @@ onUnmounted(() => {
       font-weight: 700;
       color: #000;
       margin-bottom: 0.16rem;
+      text-align: center;
       @include flexCenter(row);
     }
     .countdown-date {
@@ -132,8 +134,9 @@ onUnmounted(() => {
   .home-countdown {
     padding: 0.8rem 0;
     .countdown-container {
-      width: 6rem;
+      width: 6.64rem;
       padding: 0.32rem;
+      background-image: url('/images/wsa/home_green_tablet.jpg');
     }
   }
 }
@@ -141,8 +144,9 @@ onUnmounted(() => {
   .home-countdown {
     padding: 0.4rem 0;
     .countdown-container {
-      width: 2.72rem;
+      width: 3.04rem;
       padding: 0.16rem;
+      background-image: url('/images/wsa/home_green_mobile.jpg');
       .countdown-title {
         font-size: 0.32rem;
       }

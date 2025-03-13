@@ -1,6 +1,7 @@
 <template>
   <section class="host-wda" :id="SECTION_ID.WDA" :aria-labelledby="$t('host.wda_title')">
     <div class="host-wda-container">
+      <img src="/images/host/wda_logo.png" alt="wda-logo" class="host-logo" />
       <div class="host-wda-title">
         <h2 :id="`${SECTION_ID.WDA}-title`">{{ $t('host.wda_title') }}</h2>
       </div>
@@ -22,11 +23,16 @@ import { SECTION_ID } from '@/types/page_section'
     width: 14.4rem;
     height: 100%;
     margin: 1.6rem auto;
-    @include bgCenter(cover);
-    background-image: url('/images/host/host_background.jpg');
+    @include bgCenter(14.4rem 8.46rem);
+    background-image: url('/images/wsa/host_wda_desktop.png');
     padding: 0.8rem 3.2rem;
-    border-radius: 0.4rem;
-    color: #fff;
+    border-radius: 0rem;
+    color: $black-primary;
+    .host-logo {
+      width: 2rem;
+      height: 0.42rem;
+      margin: 0 auto 0.4rem auto;
+    }
     .host-wda-title {
       margin-bottom: 0.4rem;
       font-size: 0.48rem;
@@ -46,7 +52,13 @@ import { SECTION_ID } from '@/types/page_section'
     width: 100%;
     .host-wda-container {
       width: 100%;
-      padding: 0.32rem 0.64rem;
+      padding: 0.64rem;
+      border-radius: 0.64rem;
+      background-image: url('/images/wsa/host_wda_tablet.png');
+      @include bgCenter(100% 100%);
+      .host-logo {
+        margin-bottom: 0.16rem;
+      }
       .host-wda-title {
         font-size: 0.36rem;
         margin-bottom: 0.16rem;
@@ -60,6 +72,11 @@ import { SECTION_ID } from '@/types/page_section'
     .host-wda-container {
       padding: 0.24rem;
       margin: 0.8rem auto;
+      background-image: url('/images/wsa/host_wda_mobile.png');
+      border-radius: 0.2rem;
+      .host-logo {
+        margin-bottom: 0.08rem;
+      }
       .host-wda-title {
         font-size: 0.24rem;
       }

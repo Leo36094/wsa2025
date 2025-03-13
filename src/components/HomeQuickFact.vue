@@ -54,7 +54,7 @@ const cubes = computed(() => {
     font-size: 0.48rem;
     margin-bottom: 0.24rem;
     font-weight: 700;
-    width: 5.32rem;
+    width: 5.18rem;
     text-align: center;
   }
   .cubes {
@@ -63,13 +63,13 @@ const cubes = computed(() => {
     .cube {
       display: flex;
       align-items: center;
-      width: 5.32rem;
+      width: 4.26rem;
       height: 1.06rem;
       border-radius: 0.08rem;
       border: 1px solid #ffffff66;
       padding: 0.24rem 0.4rem;
       &:not(:last-child) {
-        margin-bottom: 0.06rem;
+        margin-bottom: 0.08rem;
       }
       &__number {
         font-size: 0.48rem;
@@ -104,7 +104,7 @@ const cubes = computed(() => {
     .cubes {
       .cube {
         width: 3.3rem;
-        height: 1.19rem;
+        height: 1.22rem;
         padding: 0.24rem;
         @include flexCenter(column);
         &:not(:last-child) {

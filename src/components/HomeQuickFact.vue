@@ -37,39 +37,46 @@ const cubes = computed(() => {
 })
 </script>
 <style lang="scss" scoped>
-$cube-bg: #b8cf45;
 .quick-fact {
   margin: 1.6rem auto;
-  background: radial-gradient(106.36% 487.42% at 50% 50%, #161a02 0%, #9db528 100%);
-  padding: 0.48rem 0.64rem;
   @include flexCenter(column);
   color: #fff;
+  .quick-fact__container {
+    width: 12.32rem;
+    height: 4.46rem;
+    @include bgCenter(cover);
+    background-image: url('/images/wsa/home_purple_desktop.jpg');
+    padding: 0.56rem;
+    border-radius: 0.4rem;
+    @include flexCenter;
+  }
   &__title {
     font-size: 0.48rem;
     margin-bottom: 0.24rem;
     font-weight: 700;
+    width: 5.32rem;
     text-align: center;
   }
   .cubes {
-    @include flexCenter(row);
+    @include flexCenter(column);
     @include withContainer;
     .cube {
-      @include flexCenter(column);
-      background: $cube-bg;
-      background: radial-gradient(
-        100% 210.25% at 0% 0%,
-        rgba(255, 255, 255, 0.28) 0%,
-        rgba(255, 255, 255, 0.04) 100%
-      );
-      width: 2.72rem;
+      display: flex;
+      align-items: center;
+      width: 5.32rem;
+      height: 1.06rem;
       border-radius: 0.08rem;
-      padding: 0.24rem;
+      border: 1px solid #ffffff66;
+      padding: 0.24rem 0.4rem;
       &:not(:last-child) {
-        margin-right: 0.16rem;
+        margin-bottom: 0.06rem;
       }
       &__number {
         font-size: 0.48rem;
+        width: 1.3rem;
         font-weight: 700;
+        text-align: right;
+        margin-right: 0.24rem;
       }
       &__title {
         font-size: 0.18rem;
@@ -79,26 +86,38 @@ $cube-bg: #b8cf45;
 }
 @include tablet {
   .quick-fact {
-    padding: 0.2rem;
-    margin: 0.96rem auto;
+    padding: 0rem;
+    margin: 0.96rem auto 0 auto;
+    .quick-fact__container {
+      width: 100%;
+      border-radius: 0;
+      padding: 0.24rem;
+      height: auto;
+    }
 
     &__title {
+      width: 3.3rem;
+      height: 0.44rem;
+      margin-bottom: 0.16rem;
       font-size: 0.36rem;
     }
     .cubes {
       .cube {
-        width: 2.28rem;
-        height: 1.22rem;
+        width: 3.3rem;
+        height: 1.19rem;
         padding: 0.24rem;
-        height: auto;
+        @include flexCenter(column);
         &:not(:last-child) {
-          margin-right: 0.04rem;
+          margin-bottom: 0.04rem;
         }
         &__title {
           font-weight: 400;
           font-size: 0.17rem;
         }
         &__number {
+          text-align: center;
+          margin-right: 0;
+          width: auto;
           font-size: 0.36rem;
         }
       }
@@ -107,8 +126,14 @@ $cube-bg: #b8cf45;
 }
 @include mobile {
   .quick-fact {
-    padding: 0.16rem;
-    margin: 0.72rem auto;
+    margin: 0.72rem auto 0 auto;
+    .quick-fact__container {
+      @include flexCenter(column);
+      padding: 0.16rem;
+    }
+    &__title {
+      width: auto;
+    }
     .cubes {
       flex-direction: column;
       .cube {

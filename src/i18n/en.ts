@@ -24,6 +24,7 @@ export default {
   footer: {
     address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
     copyrights: 'Copyright © 2025 Worldskills Asia',
+    download_brandbook: 'Download brandbook',
   },
   home: {
     aria_banner_region: 'Home banner region',

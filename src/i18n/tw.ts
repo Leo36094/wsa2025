@@ -26,6 +26,7 @@ export default {
     announcement_schedule: '官方資訊與日程',
     registration: 'Registration method',
     copyrights: 'Copyright © 2025 Worldskills Asia',
+    download_brandbook: '下載品牌指南',
   },
   home: {
     aria_banner_region: '首頁橫幅區域',

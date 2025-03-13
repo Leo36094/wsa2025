@@ -17,31 +17,46 @@
               <span>{{ $t('footer.address') }}</span>
             </div>
           </div>
-          <div class="social-media">
+          <div class="social-media-group">
+            <div class="social-media">
+              <a
+                class="col"
+                href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr"
+                target="_blank"
+              >
+                <img
+                  class="social-media__icon facebook"
+                  src="/images/ri_facebook-circle-fill.svg"
+                  alt="facebook-icon"
+                />
+              </a>
+              <a class="col" href="https://www.instagram.com/worldskillsasia/" target="_blank">
+                <img
+                  class="social-media__icon"
+                  src="/images/Instagram_Glyph_White 1.svg"
+                  alt="instagram-icon"
+                  target="_blank"
+                />
+              </a>
+              <a class="col" href="https://twitter.com/WorldSkillsAsia/" target="_blank">
+                <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
+              </a>
+              <a class="col" href="https://line.me/R/ti/p/@153dnycq" target="_blank">
+                <img class="social-media__icon" src="/images/line-icon.png" alt="line-icon" />
+              </a>
+            </div>
+            <!-- PDF DOWNLOAD LINK -->
             <a
-              class="col"
-              href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr"
+              class="pdf-download-link"
+              href="/files/WSATaipei2025_Brand Guideline_V2.pdf"
               target="_blank"
             >
               <img
-                class="social-media__icon facebook"
-                src="/images/ri_facebook-circle-fill.svg"
-                alt="facebook-icon"
-              />
-            </a>
-            <a class="col" href="https://www.instagram.com/worldskillsasia/" target="_blank">
-              <img
                 class="social-media__icon"
-                src="/images/Instagram_Glyph_White 1.svg"
-                alt="instagram-icon"
-                target="_blank"
+                src="/images/ic_outline-file-download.png"
+                alt="pdf-icon"
               />
-            </a>
-            <a class="col" href="https://twitter.com/WorldSkillsAsia/" target="_blank">
-              <img class="social-media__icon" src="/images/twitter.svg" alt="twitter-icon" />
-            </a>
-            <a class="col" href="https://line.me/R/ti/p/@153dnycq" target="_blank">
-              <img class="social-media__icon" src="/images/line-icon.png" alt="line-icon" />
+              {{ $t('footer.download_brandbook') }}
             </a>
           </div>
         </div>
@@ -52,6 +67,7 @@
     </div>
   </footer>
 </template>
+<script setup lang="ts"></script>
 <style lang="scss" scoped>
 .page-footer-wrapper {
   background-color: #180161;
@@ -87,9 +103,20 @@
     .info {
       margin-right: 0.72rem;
     }
-
-    .social-media {
+    .social-media-group {
       margin-left: auto;
+      .pdf-download-link {
+        display: flex;
+        align-items: center;
+        margin-top: 0.24rem;
+        img {
+          margin-right: 0.08rem;
+          width: 0.24rem;
+          height: 0.24rem;
+        }
+      }
+    }
+    .social-media {
       @include flexCenter;
       .col {
         &:not(:last-child) {
@@ -129,6 +156,15 @@
     .row.address {
       margin-bottom: 0.56rem;
       margin-right: 0;
+    }
+    .social-media-group {
+      margin: 0;
+      width: 100%;
+      .pdf-download-link {
+        justify-content: center;
+        margin-top: 0.16rem;
+        width: 100%;
+      }
     }
     .social-media {
       width: 100%;

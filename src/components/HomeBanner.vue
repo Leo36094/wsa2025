@@ -2,8 +2,13 @@
   <main class="home-banner" :aria-label="$t('home.aria_banner_region')">
     <div class="home-banner-container">
       <div :class="['main-banner-container']">
-        <Swiper class="banner" v-bind="swiperConfig" :aria-label="$t('home.aria_banner_swiper')">
-          <SwiperSlide
+        <Swiper
+          class="banner"
+          v-bind="swiperConfig"
+          @slideChange="handleSlideChange"
+          :aria-label="$t('home.aria_banner_swiper')"
+        >
+          <!-- <SwiperSlide
             class="slide"
             role="group"
             :aria-label="$t('home.aria_banner_swiper_slide', { index: 0 })"
@@ -14,30 +19,33 @@
               role="img"
               :aria-label="$t('home.aria_banner_swiper_slide', { index: 0 })"
             ></div>
-          </SwiperSlide>
+          </SwiperSlide> -->
           <SwiperSlide
-            v-for="index in 7"
+            v-for="index in 8"
             :key="index"
             class="slide"
             role="group"
-            :aria-label="$t('home.aria_banner_swiper_slide', { index })"
+            :aria-label="$t('home.aria_banner_swiper_slide', { index: index - 1 })"
             tabindex="0"
           >
             <div
-              :class="['banner-img', `banner-img-${index}`]"
+              :class="['banner-img', `banner-img-${index - 1}`]"
               role="img"
-              :aria-label="$t('home.aria_banner_swiper_slide', { index })"
+              :aria-label="$t('home.aria_banner_swiper_slide', { index: index - 1 })"
             ></div>
           </SwiperSlide>
           <div class="banner-pagination" tabindex="0"></div>
           <div class="filter" aria-hidden="true"></div>
         </Swiper>
-        <HomeBannerTitle class="banner__title" />
+        <Transition name="fade">
+          <HomeBannerTitle v-if="activeIndex !== 0" class="banner__title" />
+        </Transition>
       </div>
     </div>
   </main>
 </template>
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HomeBannerTitle from './HomeBannerTitle.vue'
 import 'swiper/css'
@@ -45,7 +53,7 @@ import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-
+import type { Swiper as SwiperType } from 'swiper'
 const { t } = useI18n()
 
 const swiperConfig = {
@@ -71,6 +79,10 @@ const swiperConfig = {
     paginationBulletMessage: t('home.aria_banner_swiper_pagination', { index: '{index}' }),
   },
   modules: [Autoplay, Pagination, A11y],
+}
+const activeIndex = ref(0)
+const handleSlideChange = (swiper: SwiperType) => {
+  activeIndex.value = swiper.realIndex
 }
 </script>
 <style lang="scss" scoped>
@@ -168,6 +180,16 @@ $swiper-bullet-active-color: #455861;
           line-height: normal;
           left: 0.56rem;
           bottom: 0.56rem;
+        }
+        .banner-img {
+          @include bgCenter(cover);
+          background-position: center 15%;
+          height: 100%;
+          width: 100%;
+
+          &-0 {
+            background-image: url('/images/wsa/homepage_herosection_00_m.jpg');
+          }
         }
       }
     }

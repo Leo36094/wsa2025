@@ -1,6 +1,6 @@
 <template>
   <div class="first-slide__title">
-    <h1>{{ props.title }}</h1>
+    <h2>{{ props.title }}</h2>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ const props = defineProps<{
   &__title {
     overflow: hidden;
     text-align: center;
-    h1 {
+    h2 {
       color: transparent;
       color: $black-primary;
       font-size: 0.36rem;
@@ -25,7 +25,7 @@ const props = defineProps<{
 @include mobile {
   .first-slide {
     &__title {
-      h1 {
+      h2 {
         font-size: 0.24rem;
       }
     }

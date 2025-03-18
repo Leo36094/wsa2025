@@ -8,6 +8,9 @@ export default {
     lang_en: '英文',
     lang_tw: '繁體中文',
     switch_to_lang: '切換到 {lang} 語言',
+    wsa_logo: '亞洲技能競賽台北2025 Logo',
+    wda_logo: '勞動力發展署 Logo',
+    title: '亞洲技能競賽台北2025',
   },
   page_tabs: {
     page_tab_aria_label: '頁面導航選項卡',

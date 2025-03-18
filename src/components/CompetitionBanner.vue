@@ -109,7 +109,7 @@ const competitionImages = Array.from(
       }
       &__title {
         margin: 1.1rem auto 0.32rem auto;
-        h1 {
+        h2 {
           font-size: 0.48rem;
         }
       }

@@ -13,7 +13,7 @@
     </div>
     <div class="host-copy" role="region" :aria-label="$t('host.welcome')">
       <div class="welcome-title" data-aos="fade-right">
-        <h1 class="title">{{ $t('host.welcome') }}</h1>
+        <h2 class="title">{{ $t('host.welcome') }}</h2>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
       <p class="welcome-desc">
@@ -123,7 +123,7 @@ const hostImages = Array.from(
       }
       &__title {
         margin: 1.1rem auto 0.32rem auto;
-        h1 {
+        h2 {
           font-size: 0.48rem;
         }
       }
@@ -205,7 +205,7 @@ const hostImages = Array.from(
       &__title {
         height: auto;
         margin: 0.32rem auto;
-        h1 {
+        h2 {
           font-size: 0.36rem;
         }
       }

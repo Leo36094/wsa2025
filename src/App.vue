@@ -41,13 +41,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="wsa">
-    <PageHeader />
-    <div class="container">
-      <RouterView />
-    </div>
-    <PageFooter />
+  <PageHeader />
+  <div class="container">
+    <RouterView />
   </div>
+  <PageFooter />
 </template>
 <style lang="scss" scoped>
 .container {

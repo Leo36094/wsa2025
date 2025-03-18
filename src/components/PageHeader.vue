@@ -1,12 +1,16 @@
 <template>
-  <header class="page-header">
+  <div class="page-header">
     <div class="wrapper">
-      <h1 class="icons">
-        <router-link to="/" class="logo" aria-label="Home">
-          <IconLogo />
-        </router-link>
-        <div class="wda"></div>
-      </h1>
+      <div class="icons">
+        <h1>
+          <router-link to="/" class="logo" :title="$t('home.title')">
+            <IconLogo />
+          </router-link>
+        </h1>
+        <div class="wda">
+          <img src="/images/wda.png" :alt="$t('header.wda_logo')" />
+        </div>
+      </div>
       <nav class="nav-links-pc">
         <NavMenubar :nav="nav" />
       </nav>
@@ -39,7 +43,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
@@ -134,8 +138,11 @@ $header-bg: #07100e;
     .wda {
       width: 2rem;
       height: 0.42rem;
-      @include bgCenter(contain);
-      background-image: url('/images/wda.png');
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
     nav {
       @include flexCenter;

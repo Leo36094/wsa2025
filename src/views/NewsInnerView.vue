@@ -1,7 +1,7 @@
 <template>
   <div class="news-inner-container">
     <div class="news-inner">
-      <h1 class="news-inner-title" v-html="displayNews.title"></h1>
+      <h2 class="news-inner-title" v-html="displayNews.title"></h2>
       <div class="news-inner-content" v-html="displayNews.content"></div>
     </div>
   </div>

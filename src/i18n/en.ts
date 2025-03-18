@@ -8,6 +8,9 @@ export default {
     lang_en: 'English',
     lang_tw: 'Chinese',
     switch_to_lang: 'Switch to {lang} language',
+    wsa_logo: 'WorldSkills Asia Taipei 2025 Logo',
+    wda_logo: 'Workforce Development Agency Logo',
+    title: 'WorldSkills Asia Taipei 2025',
   },
   page_tabs: {
     page_tab_aria_label: 'Page tabs',

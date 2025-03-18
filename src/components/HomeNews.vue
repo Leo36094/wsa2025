@@ -47,7 +47,7 @@ function goToNews() {
     margin-bottom: 0.4rem;
   }
   .more-button {
-    font-size: 0.28rem;
+    font-size: 0.2rem;
     @include flexCenter;
     cursor: pointer;
     width: 1.6rem;
@@ -80,6 +80,7 @@ function goToNews() {
       margin-bottom: 0;
     }
     .more-button {
+      font-size: 0.18rem;
       margin-top: 0.16rem;
       margin-bottom: 0rem;
     }

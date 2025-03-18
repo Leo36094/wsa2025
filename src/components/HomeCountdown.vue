@@ -32,34 +32,34 @@
               {{ day }}
             </div>
           </div>
-          <p id="days-label">{{ $t('home.countdown_days') }}</p>
+          <p class="cube-label" id="days-label">{{ $t('home.countdown_days') }}</p>
         </div>
-        <div class="semicolon"></div>
+        <div class="semicolon">:</div>
         <div class="hours">
           <div class="cubes" role="group" :aria-label="$t('home.countdown_hours')" tabindex="0">
             <div class="cube" v-for="(hour, idx) in remainHours" :key="idx" tabindex="0">
               {{ hour }}
             </div>
           </div>
-          <p id="hours-label">{{ $t('home.countdown_hours') }}</p>
+          <p class="cube-label" id="hours-label">{{ $t('home.countdown_hours') }}</p>
         </div>
-        <div class="semicolon"></div>
+        <div class="semicolon">:</div>
         <div class="mins">
           <div class="cubes" role="group" :aria-label="$t('home.countdown_mins')" tabindex="0">
             <div class="cube" v-for="(min, idx) in remainMins" :key="idx" tabindex="0">
               {{ min }}
             </div>
           </div>
-          <p id="mins-label">{{ $t('home.countdown_mins') }}</p>
+          <p class="cube-label" id="mins-label">{{ $t('home.countdown_mins') }}</p>
         </div>
-        <div class="semicolon"></div>
+        <div class="semicolon">:</div>
         <div class="secs">
           <div class="cubes" role="group" :aria-label="$t('home.countdown_secs')" tabindex="0">
             <div class="cube" v-for="(sec, idx) in remainSecs" :key="idx" tabindex="0">
               {{ sec }}
             </div>
           </div>
-          <p id="secs-label">{{ $t('home.countdown_secs') }}</p>
+          <p class="cube-label" id="secs-label">{{ $t('home.countdown_secs') }}</p>
         </div>
       </div>
       <div class="visually-hidden" role="status">
@@ -179,6 +179,9 @@ onUnmounted(() => {
       align-items: flex-start;
       font-weight: 700;
     }
+    .cube-label {
+      font-size: $desc-font-size;
+    }
     .hours,
     .days,
     .mins,
@@ -188,7 +191,9 @@ onUnmounted(() => {
     .semicolon {
       margin-left: 0.16rem;
       margin-right: 0.16rem;
-      font-size: 0.48rem;
+      height: 0.9rem;
+      font-size: $title-font-size;
+      @include flexCenter;
       font-weight: 700;
       color: #000;
     }
@@ -198,7 +203,7 @@ onUnmounted(() => {
         @include flexCenter(column);
         width: 0.64rem;
         height: 0.9rem;
-        font-size: 0.48rem;
+        font-size: $title-font-size;
         background: linear-gradient(180deg, #484b3b 0%, #1c1e15 100%);
         border-radius: 0.08rem;
         margin-right: 0.04rem;
@@ -271,8 +276,11 @@ onUnmounted(() => {
           font-size: $title-font-size-m;
           height: 0.76rem;
         }
-        p {
+        .cube-label {
           font-size: $desc-font-size-m;
+        }
+        .semicolon {
+          display: none;
         }
 
         .mins,

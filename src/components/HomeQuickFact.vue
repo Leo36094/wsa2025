@@ -75,7 +75,7 @@ const cubes = computed(() => {
         margin-bottom: 0.08rem;
       }
       &__number {
-        font-size: 0.48rem;
+        font-size: 0.88rem;
         font-weight: 700;
       }
       &__title {
@@ -118,7 +118,7 @@ const cubes = computed(() => {
           text-align: center;
           margin-right: 0;
           width: auto;
-          font-size: 0.36rem;
+          font-size: $title-font-size;
         }
       }
     }
@@ -146,6 +146,9 @@ const cubes = computed(() => {
         }
         &__title {
           font-size: $desc-font-size-m;
+        }
+        &__number {
+          font-size: $title-font-size-m;
         }
       }
     }

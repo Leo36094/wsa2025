@@ -89,17 +89,17 @@ const baseURL = import.meta.env.BASE_URL
     justify-content: center;
     position: relative;
     color: $black-primary;
+    margin: 0.32rem auto;
 
     .title,
     .split-titles {
       display: flex;
       flex-direction: column;
-      font-size: 0.88rem;
+      font-size: $title-font-size;
       font-weight: 700;
-      width: 4.87rem;
-      margin-right: 0.92rem;
+      width: 4.67rem;
       span {
-        line-height: 1.06rem;
+        line-height: 100%;
       }
       &.tw {
         flex-direction: column-reverse;
@@ -123,7 +123,6 @@ const baseURL = import.meta.env.BASE_URL
     @include bgCenter(cover);
     flex-shrink: 0;
     width: 4rem;
-    height: 2.43rem;
     &:not(:last-child) {
       margin-right: 0.8rem;
     }
@@ -148,10 +147,6 @@ const baseURL = import.meta.env.BASE_URL
       .title {
         width: 2.66rem;
         font-size: 0.48rem;
-        margin-right: 0.16rem;
-        span {
-          line-height: 0.58rem;
-        }
         .title-light {
           width: 5rem;
           height: 5rem;
@@ -175,7 +170,6 @@ const baseURL = import.meta.env.BASE_URL
     .photo-item {
       width: 33.33%;
       background-size: cover;
-      height: 1.8rem;
       &:not(:last-child) {
         margin-right: 0rem;
       }
@@ -196,15 +190,12 @@ const baseURL = import.meta.env.BASE_URL
     .slide-header {
       flex-direction: column;
       padding: 0.16rem 0.24rem;
+      margin: 0 auto;
       height: 100%;
       .title {
         width: 100%;
         font-size: 0.36rem;
-        margin-right: 0rem;
         margin-bottom: 0.16rem;
-        span {
-          line-height: 0.43rem;
-        }
       }
       .slide-desc {
         width: 100%;

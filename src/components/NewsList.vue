@@ -1,6 +1,5 @@
 <template>
   <div class="news-list" role="group" :aria-label="$t('news.title')">
-    <div class="news-vertical-divider" aria-hidden="true"></div>
     <div class="news-row" v-for="(rowNews, idx) in twoNewsARow" :key="idx">
       <div class="news-row-container">
         <div
@@ -12,9 +11,8 @@
           :aria-label="newsItem.title"
         >
           <div class="news-item__img" :style="{ backgroundImage: `url(${newsItem.image})` }"></div>
-          <h2 class="news-item__title" tabindex="0">
-            {{ newsItem.title }}
-          </h2>
+          <h2 class="news-item__title" tabindex="0" v-html="newsItem.title"></h2>
+
           <p class="news-item__date" tabindex="0">{{ newsItem.date }}</p>
         </div>
       </div>
@@ -53,21 +51,10 @@ function goToNewsDetail(id: number) {
 $border-color: $black-primary;
 $text-date-color: #899ca4;
 .news-list {
-  border-top: 0.01rem solid $border-color;
+  border-bottom: 0.01rem solid $border-color;
   position: relative;
-
-  .news-vertical-divider {
-    width: 0.01rem;
-    height: 100%;
-    position: absolute;
-    background-color: $border-color;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .news-row {
-    padding-top: 0.5rem;
     width: 100%;
-    border-bottom: 0.01rem solid $border-color;
   }
   .news-row-container {
     @include withContainer;
@@ -90,6 +77,7 @@ $text-date-color: #899ca4;
       font-size: 0.28rem;
       font-weight: 700;
       line-height: 0.33rem;
+      @include ellipsis(e);
     }
     &__date {
       font-size: 0.16rem;

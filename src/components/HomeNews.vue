@@ -21,6 +21,12 @@ const newsPlaceholder = [
     date: '21 Jan 2025',
     id: 99,
   },
+  {
+    title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
+    image: '',
+    date: '21 Jan 2025',
+    id: 100,
+  },
 ]
 
 const news = ref(newsPlaceholder)
@@ -32,12 +38,13 @@ function goToNews() {
 </script>
 <style lang="scss" scoped>
 .news {
+  margin-bottom: 0.48rem;
   .news-title {
     @include withContainer;
     padding-left: 1.1rem;
     font-size: $title-font-size;
     font-weight: 700;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.4rem;
   }
   .more-button {
     font-size: 0.28rem;
@@ -45,7 +52,7 @@ function goToNews() {
     cursor: pointer;
     width: 1.6rem;
     height: 0.64rem;
-    margin: 0.48rem auto 2.3rem auto;
+    margin: 0.48rem auto 0 auto;
     border-radius: 0.08rem;
     transition: all 0.3s ease;
     &:hover {
@@ -66,6 +73,7 @@ function goToNews() {
 @include tablet {
   .news {
     padding-top: 0.76rem;
+    margin-bottom: 0.72rem;
     .news-title {
       padding-left: 0.24rem;
       padding-bottom: 0.24rem;

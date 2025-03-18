@@ -2,6 +2,17 @@
   <div class="page-header">
     <div class="wrapper">
       <div class="icons">
+        <a
+          href="/"
+          tabindex="0"
+          title="跳到主要內容"
+          class="accessKeyU"
+          style="position: absolute; top: 1px; left: 1px"
+          >跳到主要內容</a
+        >
+        <a href="/" id="AH" tabindex="0" name="H" accesskey="H" title="回首頁" class="accessKeyU"
+          >:::</a
+        >
         <h1>
           <router-link to="/" class="logo" :title="$t('home.title')">
             <img src="/images/wsa_logo.png" :alt="$t('header.wsa_logo')" />
@@ -117,6 +128,9 @@ $header-bg: #07100e;
   position: fixed;
   width: 100%;
   z-index: 100;
+  .accessKeyU {
+    color: #fff;
+  }
   .wrapper {
     display: flex;
     align-items: center;

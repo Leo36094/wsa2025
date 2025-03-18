@@ -18,6 +18,10 @@ html {
     width: 100%;
     font-size: 0.2rem;
     color: $black-primary;
+    #app {
+      min-height: 100svh;
+      margin: 0 auto;
+    }
   }
   .fade-enter-active,
   .fade-leave-active {

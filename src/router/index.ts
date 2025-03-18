@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import HostView from '@/views/HostView.vue'
+import CompetitionView from '@/views/CompetitionView.vue'
+import NewsView from '@/views/NewsView.vue'
+import NewsInnerView from '@/views/NewsInnerView.vue'
+import SkillsView from '@/views/SkillsView.vue'
+import GetInvolvedView from '@/views/GetInvolvedView.vue'
+import SkillsCategoriesView from '@/views/SkillsCategoriesView.vue'
 import { nextTick } from 'vue'
 
 export enum SkillsRouteEnum {
@@ -27,34 +34,34 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('@/views/HostView.vue'),
+      component: HostView,
     },
     {
       path: '/competition',
       name: 'competition',
-      component: () => import('../views/CompetitionView.vue'),
+      component: CompetitionView,
     },
     {
       path: '/news',
       name: 'news',
-      component: () => import('../views/NewsView.vue'),
+      component: NewsView,
 
     },
     {
       path: '/news/:id',
       name: 'news-detail',
-      component: () => import('../views/NewsInnerView.vue'),
+        component: NewsInnerView,
     },
     {
       path: '/skills',
       name: 'skills',
       redirect: { name: SkillsRouteEnum.Catrgories },
-      component: () => import('../views/SkillsView.vue'),
+      component: SkillsView,
       children: [
         {
           path: 'categories',
           name: SkillsRouteEnum.Catrgories,
-          component: () => import('../views/SkillsCategoriesView.vue'),
+          component: SkillsCategoriesView,
         },
         {
           path: 'manufacturing_and_engineering_technology',
@@ -97,7 +104,7 @@ const router = createRouter({
     {
       path: '/get-involved',
       name: 'get-involved',
-      component: () => import('../views/GetInvolvedView.vue'),
+      component: GetInvolvedView,
     }
   ],
   async scrollBehavior(to, from, savedPosition) {

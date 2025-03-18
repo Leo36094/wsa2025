@@ -2,13 +2,13 @@
   <header class="banner-title">
     <p class="date">{{ $t('home.banner_date') }}</p>
     <div class="pc">
-      <h1
+      <h2
         tabindex="0"
         :class="['slogan', { tw: locale === 'tw' }]"
         :aria-label="`${$t('home.title')} ${$t('home.year')}`"
       >
         {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
-      </h1>
+      </h2>
     </div>
     <div class="splits" aria-hidden="true">
       <span>{{ $t('home.split_title1') }}</span>

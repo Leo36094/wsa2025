@@ -1,12 +1,12 @@
 <template>
   <header class="page-header">
     <div class="wrapper">
-      <div class="icons">
+      <h1 class="icons">
         <router-link to="/" class="logo" aria-label="Home">
           <IconLogo />
         </router-link>
         <div class="wda"></div>
-      </div>
+      </h1>
       <nav class="nav-links-pc">
         <NavMenubar :nav="nav" />
       </nav>

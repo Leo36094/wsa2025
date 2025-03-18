@@ -146,12 +146,6 @@ const isDesktop = inject<Ref<boolean>>('isDesktop')
           margin: 0 auto;
         }
       }
-      .climate-item__copy {
-        h4 {
-          line-height: 0.28rem;
-          margin-bottom: 0.16rem;
-        }
-      }
     }
   }
 }

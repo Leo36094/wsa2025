@@ -4,7 +4,7 @@
       <div class="icons">
         <h1>
           <router-link to="/" class="logo" :title="$t('home.title')">
-            <IconLogo />
+            <img src="/images/wsa_logo.png" :alt="$t('header.wsa_logo')" />
           </router-link>
         </h1>
         <div class="wda">

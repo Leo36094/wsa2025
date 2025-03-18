@@ -14,7 +14,7 @@
           v-for="(cube, index) in cubes"
           :key="cube.title"
         >
-          <div class="cube__number">{{ cube.number }}</div>
+          <div :class="['cube__number', { 'plus-sign': cube.plusSign }]">{{ cube.number }}</div>
           <div class="cube__title">
             {{ cube.title }}
           </div>
@@ -32,14 +32,17 @@ const cubes = computed(() => {
     {
       number: '44',
       title: t('home.quick_fact_cube_title_1'),
+      plusSign: false,
     },
     {
-      number: '30+',
+      number: '30',
       title: t('home.quick_fact_cube_title_2'),
+      plusSign: true,
     },
     {
-      number: '500+',
+      number: '500',
       title: t('home.quick_fact_cube_title_3'),
+      plusSign: true,
     },
   ]
 })
@@ -78,6 +81,16 @@ const cubes = computed(() => {
       &__number {
         font-size: 0.88rem;
         font-weight: 700;
+        position: relative;
+        &.plus-sign {
+          &::before {
+            content: '+';
+            position: absolute;
+            top: -0.1rem;
+            right: -0.3rem;
+            font-size: 0.48rem;
+          }
+        }
       }
       &__title {
         font-weight: 700;

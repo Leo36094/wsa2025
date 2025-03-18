@@ -99,7 +99,7 @@ const baseURL = import.meta.env.BASE_URL
       font-weight: 700;
       width: 4.67rem;
       span {
-        line-height: 100%;
+        line-height: 1.5;
       }
       &.tw {
         flex-direction: column-reverse;

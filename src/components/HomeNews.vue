@@ -21,12 +21,12 @@ const newsPlaceholder = [
     date: '21 Jan 2025',
     id: 99,
   },
-  {
-    title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
-    image: '',
-    date: '21 Jan 2025',
-    id: 100,
-  },
+  // {
+  //   title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
+  //   image: '',
+  //   date: '21 Jan 2025',
+  //   id: 100,
+  // },
 ]
 
 const news = ref(newsPlaceholder)

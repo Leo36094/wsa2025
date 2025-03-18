@@ -163,7 +163,7 @@ onUnmounted(() => {
         }
         .count-supplement {
           margin-top: 0.16rem;
-          font-size: $supplement-font-size;
+          font-size: $desc-font-size;
         }
       }
     }
@@ -264,7 +264,7 @@ onUnmounted(() => {
             font-size: $desc-font-size-m;
           }
           .count-supplement {
-            font-size: $supplement-font-size-m;
+            font-size: $desc-font-size-m;
           }
         }
       }

@@ -1,5 +1,5 @@
 <template>
-  <main class="home-banner" :aria-label="$t('home.aria_banner_region')">
+  <div class="home-banner" :aria-label="$t('home.aria_banner_region')">
     <div class="home-banner-container">
       <div :class="['main-banner-container']">
         <Swiper
@@ -30,7 +30,7 @@
         </Transition>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

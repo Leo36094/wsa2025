@@ -62,6 +62,8 @@ const handleActiveTabChange = (value: PageValue) => {
 <style lang="scss" scoped>
 .host {
   padding-top: 0.76rem;
+  min-height: 100svh;
+  margin: 0 auto;
   .host-currency {
     @include withContainer;
   }

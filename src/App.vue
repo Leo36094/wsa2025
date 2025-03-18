@@ -42,14 +42,7 @@ onUnmounted(() => {
 
 <template>
   <PageHeader />
-  <div class="container">
-    <RouterView />
-  </div>
+  <RouterView />
   <PageFooter />
 </template>
-<style lang="scss" scoped>
-.container {
-  min-height: 100svh;
-  margin: 0 auto;
-}
-</style>
+<style lang="scss" scoped></style>

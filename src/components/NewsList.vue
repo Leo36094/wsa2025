@@ -11,7 +11,7 @@
           :aria-label="newsItem.title"
         >
           <div class="news-item__img" :style="{ backgroundImage: `url(${newsItem.image})` }"></div>
-          <h2 class="news-item__title" tabindex="0" v-html="newsItem.title"></h2>
+          <p class="news-item__title" tabindex="0" v-html="newsItem.title"></p>
 
           <p class="news-item__date" tabindex="0">{{ newsItem.date }}</p>
         </div>

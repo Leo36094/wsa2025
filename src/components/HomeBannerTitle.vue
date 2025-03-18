@@ -1,14 +1,14 @@
 <template>
-  <header class="banner-title">
+  <div class="banner-title">
     <p class="date">{{ $t('home.banner_date') }}</p>
     <div class="pc">
-      <h2
+      <div
         tabindex="0"
         :class="['slogan', { tw: locale === 'tw' }]"
         :aria-label="`${$t('home.title')} ${$t('home.year')}`"
       >
         {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
-      </h2>
+    </div>
     </div>
     <div class="splits" aria-hidden="true">
       <span>{{ $t('home.split_title1') }}</span>
@@ -16,7 +16,7 @@
       <span>{{ $t('home.split_title3') }}</span>
       <span class="banner-year">{{ $t('home.year') }}</span>
     </div>
-  </header>
+  </div>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'

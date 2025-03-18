@@ -47,7 +47,6 @@ const { locale } = useI18n({ useScope: 'global' })
 }
 @include tablet {
   .banner-title {
-    width: 4.15rem;
     .pc {
       display: none;
     }
@@ -64,13 +63,15 @@ const { locale } = useI18n({ useScope: 'global' })
 @include mobile {
   .banner-title {
     width: 2.08rem;
+
     .date {
       font-size: 0.16rem;
     }
     .splits {
       font-size: 0.36rem;
       width: 2.08rem;
-      line-height: 0.43rem;
+      line-height: 100%;
+      font-size: $title-font-size-m;
     }
     .banner-year {
       line-height: 0.43rem;

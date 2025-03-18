@@ -74,18 +74,18 @@ const baseURL = import.meta.env.BASE_URL
   position: relative;
   .gallery-bg {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/wsa/line.png');
-    @include bgCenter(cover);
+    bottom: -25%;
+    left: -25%;
+    @include bgCenter(contain);
+    background-image: url('/images/club_fill_white.png');
+    filter: grayscale(0.9);
+    width: 7rem;
+    height: 7rem;
+    animation: rotate 10s linear infinite;
   }
   .slide-header {
     @include flexCenter;
     @include withContainer;
-    margin: 0.32rem auto;
     justify-content: center;
     position: relative;
     color: $black-primary;
@@ -108,8 +108,6 @@ const baseURL = import.meta.env.BASE_URL
     .slide-desc {
       width: 4.8rem;
       font-size: 0.16rem;
-      background: #0000000d;
-      backdrop-filter: blur(0.4rem);
       padding: 0.56rem;
       text-align: justify;
     }
@@ -119,9 +117,6 @@ const baseURL = import.meta.env.BASE_URL
     @include withContainer;
     @include flexCenter;
     margin: auto;
-    &.first-row {
-      padding-top: 1.6rem;
-    }
   }
 
   .photo-item {
@@ -144,7 +139,6 @@ const baseURL = import.meta.env.BASE_URL
 }
 @include tablet() {
   .home-banner__slide {
-    overflow: hidden;
     .gallery-bg {
       background-position: 0% 85%;
       background-size: 100% auto;
@@ -194,13 +188,14 @@ const baseURL = import.meta.env.BASE_URL
       display: none;
     }
     .gallery-bg {
-      background-position: top;
-      top: 1.9rem;
-      height: 7.56rem;
+      width: 3rem;
+      height: 3rem;
+      bottom: -15%;
+      left: -60%;
     }
     .slide-header {
       flex-direction: column;
-      padding: 0 0.24rem;
+      padding: 0.16rem 0.24rem;
       height: 100%;
       .title {
         width: 100%;
@@ -220,7 +215,7 @@ const baseURL = import.meta.env.BASE_URL
     }
     .photo-row {
       .photo-item {
-        height: 1rem;
+        height: 100%;
         width: 50%;
         &.photo-item-2,
         &.photo-item-5 {

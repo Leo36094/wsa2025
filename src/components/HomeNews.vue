@@ -34,9 +34,8 @@ function goToNews() {
 .news {
   .news-title {
     @include withContainer;
-    padding-top: 1.47rem;
     padding-left: 1.1rem;
-    font-size: 0.48rem;
+    font-size: $title-font-size;
     font-weight: 700;
     margin-bottom: 0.45rem;
   }
@@ -70,7 +69,6 @@ function goToNews() {
     .news-title {
       padding-left: 0.24rem;
       padding-bottom: 0.24rem;
-      padding-top: 0;
       margin-bottom: 0;
     }
     .more-button {
@@ -81,6 +79,9 @@ function goToNews() {
 }
 @include mobile {
   .news {
+    .news-title {
+      font-size: $title-font-size-m;
+    }
     .more-button {
       font-size: 0.16rem;
       img {

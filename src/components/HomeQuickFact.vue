@@ -5,7 +5,15 @@
         {{ $t('home.quick_fact_title') }}
       </h2>
       <div class="cubes" tabindex="0">
-        <div class="cube" tabindex="0" v-for="cube in cubes" :key="cube.title">
+        <div
+          data-aos="fade-right"
+          :data-aos-delay="index * 200"
+          data-aos-duration="500"
+          class="cube"
+          tabindex="0"
+          v-for="(cube, index) in cubes"
+          :key="cube.title"
+        >
           <div class="cube__number">{{ cube.number }}</div>
           <div class="cube__title">
             {{ cube.title }}
@@ -40,43 +48,35 @@ const cubes = computed(() => {
 .quick-fact {
   margin: 1.6rem auto;
   @include flexCenter(column);
-  color: #fff;
+  position: relative;
+  color: $black-primary;
   .quick-fact__container {
     width: 12.32rem;
-    height: 4.46rem;
-    @include bgCenter(cover);
-    background-image: url('/images/wsa/home_purple_desktop.jpg');
-    padding: 0.56rem;
+    padding: 0 0.96rem;
     border-radius: 0.4rem;
-    @include flexCenter;
+    @include flexCenter(column);
   }
   &__title {
-    font-size: 0.48rem;
+    font-size: $title-font-size;
     margin-bottom: 0.24rem;
     font-weight: 700;
     width: 5.18rem;
     text-align: center;
   }
   .cubes {
-    @include flexCenter(column);
-    @include withContainer;
+    @include flexCenter();
     .cube {
-      display: flex;
-      align-items: center;
-      width: 4.26rem;
-      height: 1.06rem;
+      @include flexCenter(column);
+      width: 3.6rem;
+      height: 1.5rem;
       border-radius: 0.08rem;
-      border: 1px solid #ffffff66;
       padding: 0.24rem 0.4rem;
       &:not(:last-child) {
         margin-bottom: 0.08rem;
       }
       &__number {
         font-size: 0.48rem;
-        width: 1.3rem;
         font-weight: 700;
-        text-align: right;
-        margin-right: 0.24rem;
       }
       &__title {
         font-size: 0.18rem;
@@ -89,7 +89,7 @@ const cubes = computed(() => {
     padding: 0rem;
     margin: 0.96rem auto 0 auto;
     .quick-fact__container {
-      width: 100%;
+      width: 6.88rem;
       border-radius: 0;
       padding: 0.24rem;
       height: auto;
@@ -98,14 +98,14 @@ const cubes = computed(() => {
     &__title {
       width: 3.3rem;
       height: 0.44rem;
+      font-size: $title-font-size-m;
       margin-bottom: 0.16rem;
-      font-size: 0.36rem;
     }
     .cubes {
       .cube {
-        width: 3.3rem;
-        height: 1.22rem;
-        padding: 0.24rem;
+        width: 2.24rem;
+        height: 1.34rem;
+        padding: 0 0.24rem;
         @include flexCenter(column);
         &:not(:last-child) {
           margin-bottom: 0.04rem;
@@ -130,6 +130,7 @@ const cubes = computed(() => {
     .quick-fact__container {
       @include flexCenter(column);
       padding: 0.16rem;
+      width: 100%;
     }
     &__title {
       width: auto;
@@ -137,14 +138,14 @@ const cubes = computed(() => {
     .cubes {
       flex-direction: column;
       .cube {
-        width: 2.88rem;
-        height: 1.2rem;
+        width: 100%;
+        height: auto;
         &:not(:last-child) {
           margin-right: 0;
           margin-bottom: 0.04rem;
         }
         &__title {
-          font-size: 0.18rem;
+          font-size: $desc-font-size-m;
         }
       }
     }

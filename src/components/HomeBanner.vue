@@ -8,18 +8,6 @@
           @slideChange="handleSlideChange"
           :aria-label="$t('home.aria_banner_swiper')"
         >
-          <!-- <SwiperSlide
-            class="slide"
-            role="group"
-            :aria-label="$t('home.aria_banner_swiper_slide', { index: 0 })"
-            tabindex="0"
-          >
-            <div
-              :class="['banner-img', `banner-img-0`]"
-              role="img"
-              :aria-label="$t('home.aria_banner_swiper_slide', { index: 0 })"
-            ></div>
-          </SwiperSlide> -->
           <SwiperSlide
             v-for="index in 8"
             :key="index"

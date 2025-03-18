@@ -58,19 +58,20 @@ const cubes = computed(() => {
   }
   &__title {
     font-size: $title-font-size;
-    margin-bottom: 0.24rem;
+    margin-bottom: 0.56rem;
     font-weight: 700;
     width: 5.18rem;
     text-align: center;
   }
   .cubes {
     @include flexCenter();
+    align-items: flex-start;
     .cube {
       @include flexCenter(column);
       width: 3.6rem;
       height: 1.5rem;
       border-radius: 0.08rem;
-      padding: 0.24rem 0.4rem;
+      padding: 0.24rem 0rem;
       &:not(:last-child) {
         margin-bottom: 0.08rem;
       }
@@ -79,7 +80,8 @@ const cubes = computed(() => {
         font-weight: 700;
       }
       &__title {
-        font-size: 0.18rem;
+        font-weight: 700;
+        font-size: $desc-font-size;
       }
     }
   }
@@ -99,20 +101,20 @@ const cubes = computed(() => {
       width: 3.3rem;
       height: 0.44rem;
       font-size: $title-font-size-m;
-      margin-bottom: 0.16rem;
+      margin-bottom: 0.24rem;
     }
     .cubes {
       .cube {
         width: 2.24rem;
         height: 1.34rem;
         padding: 0 0.24rem;
-        @include flexCenter(column);
+        justify-content: flex-start;
         &:not(:last-child) {
           margin-bottom: 0.04rem;
         }
         &__title {
-          font-weight: 400;
-          font-size: 0.17rem;
+          font-size: $desc-font-size;
+          text-align: center;
         }
         &__number {
           text-align: center;

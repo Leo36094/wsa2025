@@ -35,7 +35,7 @@ Official Skills (36 skills in total) :
 <li>Fashion Technology</li>
 <li>Graphic Design Technology</li>
 <li>3D Digital Game Art</li>
-<li>Floristry</li>
+<li>Painting and Decorating</li>
 <li>Web Technologies</li>
   <li>Cloud Computing</li>
   <li>Cybersecurity</li>
@@ -48,12 +48,10 @@ Official Skills (36 skills in total) :
   <li>Electronics</li>
   </ul>
   <p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">
-  Exhibition Skills (4 skills in total) :
+  Exhibition Skills (2 skills in total) :
   </p>
   <ul>
 
-  <li>Prototype Modelling</li>
-  <li>Plastic Die Engineering</li>
   <li>Wall and Floor Tiling</li>
   <li>Painting and Decorating</li>
   </ul>
@@ -66,7 +64,7 @@ Official Skills (36 skills in total) :
 <li>Web Technologies</li>
 <li>Autonomous Mobile Robotics</li>
 <li>Electronics</li>
-<li>Floristry</li>
+<li>Painting and Decorating</li>
 </ul>
 <p>The skills to be held are as per the announcement by WSA.</p>
 <a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>
@@ -106,7 +104,7 @@ Official Skills (36 skills in total) :
 <li>服裝創作</li>
 <li>平面設計技術</li>
 <li>3D數位遊戲藝術</li>
-<li>花藝</li>
+<li>漆作裝潢</li>
 <li>網頁技術</li>
 <li>雲端運算</li>
 <li>網路安全</li>
@@ -118,10 +116,8 @@ Official Skills (36 skills in total) :
 <li>焊接</li>
 <li>電子</li>
 </ul>
-<p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">示範職類（共4項）</p>
+<p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">示範職類（共2項）</p>
 <ul>
-<li>外觀模型</li>
-<li>模具</li>
 <li>建築舖面</li>
 <li>漆作裝潢</li>
 </ul>
@@ -134,7 +130,7 @@ Official Skills (36 skills in total) :
 <li>網頁技術</li>
 <li>自主移動機器人</li>
 <li>電子</li>
-<li>花藝</li>
+<li>漆作裝潢</li>
 <p>
 所有競賽職類均依據亞洲技能組織（WSA）公告為準。</p>
 🔗 官方網站：<a href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">WorldSkills Asia</a>

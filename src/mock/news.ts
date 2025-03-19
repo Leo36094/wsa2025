@@ -35,7 +35,7 @@ Official Skills (36 skills in total) :
 <li>Fashion Technology</li>
 <li>Graphic Design Technology</li>
 <li>3D Digital Game Art</li>
-<li>Painting and Decorating</li>
+<li>Floristry</li>
 <li>Web Technologies</li>
   <li>Cloud Computing</li>
   <li>Cybersecurity</li>

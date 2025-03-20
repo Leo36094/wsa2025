@@ -46,16 +46,10 @@
             <img class="hall-info__pin" src="/images/ri_map-pin-fill.svg" alt="map-pin" />
             <span>{{ $t('competition.location_hall1') }}</span>
           </div>
-          <div class="location-row">
-            <div class="floor">4F</div>
-            <div class="floor-name">
-              {{ $t('competition.location_hall1_floor1') }}
-            </div>
-          </div>
           <div class="location-row location-row--with-list">
             <div class="floor">1F</div>
             <div class="floor-name">
-              {{ $t('competition.location_hall1_floor2') }}
+              {{ $t('competition.location_hall1_floor1') }}
               <ul class="floor-name__list">
                 <li>{{ $t('competition.location_hall1_floor2_list1') }}</li>
                 <li>{{ $t('competition.location_hall1_floor2_list2') }}</li>
@@ -94,7 +88,6 @@
               {{ $t('competition.location_hall2_floor3') }}
               <ul class="floor-name__list">
                 <li>{{ $t('competition.location_hall2_floor3_list1') }}</li>
-                <li>{{ $t('competition.location_hall2_floor3_list2') }}</li>
               </ul>
             </div>
           </div>

@@ -58,7 +58,8 @@ $text-date-color: #899ca4;
   }
   .news-row-container {
     @include withContainer;
-    @include flexCenter;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0 0.4rem;
   }

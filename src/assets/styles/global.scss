@@ -1,19 +1,17 @@
-@import './reset.scss';
-@import './fonts.scss';
-* {
-  @include disableDefaultAction();
-}
+@use './reset.scss';
+@use './fonts.scss';
+
 :root {
   --scroll: 0;
 }
 /* setup viewport */
 html {
-  @include setHTML;
   background: $white-bg;
-  overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   font-family: 'Inter', Arial, Helvetica, sans-serif, serif;
+  overflow-x: hidden;
+  @include setHTML;
   body {
     width: 100%;
     font-size: 0.2rem;

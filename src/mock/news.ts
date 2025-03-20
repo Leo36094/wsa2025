@@ -94,7 +94,7 @@ Official Skills (36 skills in total) :
 <li>汽車噴漆</li>
 <li>汽車板金</li>
 <li>砌磚</li>
-<li>電器裝配</li>
+<li>電氣裝配</li>
 <li>粉刷技術與乾牆系統</li>
 <li>冷凍空調</li>
 <li>數位建築BIM</li>
@@ -113,7 +113,7 @@ Official Skills (36 skills in total) :
 <li>行動應用開發</li>
 <li>CAD機械設計製圖</li>
 <li>自主移動機器人</li>
-<li>焊接</li>
+<li>銲接</li>
 <li>電子</li>
 </ul>
 <p style="font-weight: 700; font-size: 0.24rem; text-align: left; width: 100%;">示範職類（共2項）</p>

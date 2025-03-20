@@ -66,7 +66,7 @@ export default {
     banner_desc_aria: 'Banner description',
     banner_desc: `Taipei will host the 3rd WorldSkills Asia Competition from November 27 to November 29, 2025 at Nangang Exhibition Center. This event will provide valuable opportunities to promote local education, economy, tourism and international exchanges.
     <br>
-This competition is expected to attract more than 500 participants from 28 member and guest countries across Asia, including Experts, Competitors, and professionals. <br>
+This competition is expected to attract more than 500 participants from 28 members and guest countries across Asia, including Experts, Competitors, and professionals. <br>
 They will compete in multiple technical and vocational skill categories and promote technical exchanges.
 We warmly welcome participants and friends from all over the world and look forward to share this exciting competition with everyone.<br>
 This is not only a stage to showcase skills and talents, but also an opportunity to promote cultural exchanges and build friendship between countries.`,
@@ -175,19 +175,18 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_subtitle: 'Competition Venue',
     location_map_desc: `The Taipei Nangang Exhibition Center, located in Taipei Nangang District, is one of Asia's most important exhibition venues. It is conveniently accessible via MRT, High-Speed Rail, Taiwan Railways, and national highway bus stations, with two nearby highways and just a 30-minute drive from Taoyuan International Airport.<br><br> The exhibition center offers over 46,000 square meters of exhibition space and is equipped with advanced facilities, making it an ideal venue for hosting large-scale global exhibitions and international conferences.`,
     location_hall1: 'Hall 1',
-    location_hall1_floor1: 'Skill Out / Catering Area',
-    location_hall1_floor2: 'Skills / Theme Exhibition',
-    location_hall1_floor2_list1: 'Theme Exhibition',
-    location_hall1_floor2_list2: 'Manufacturing and Engineering Technology 16 skills',
-    location_hall1_floor2_list3: 'Transportation and Logistics 3 skills',
+    location_hall1_floor1: 'Skills',
+    location_hall1_floor2_list1: 'Transportation and Logistics 3 skills',
+    location_hall1_floor2_list2: 'Information and Communication Technology 8 skills',
+    location_hall1_floor2_list3: 'Construction and Building Technology 11 skills',
     location_hall2: 'Hall 2',
     location_hall2_floor1: 'Opening and Closing Ceremony',
-    location_hall2_floor2: 'Skills Categories',
-    location_hall2_floor2_list1: 'Information and Communication Technology 4 skills',
-    location_hall2_floor2_list2: 'Construction and Building Technology 9 skills',
-    location_hall2_floor3: 'Skills Categories',
-    location_hall2_floor3_list1: 'Social and Personal Services 7 skills',
-    location_hall2_floor3_list2: 'Creative Arts and Fashion 7 skills',
+    location_hall2_floor2: 'Skill / Skill Out',
+    location_hall2_floor2_list1: 'Social and Personal Services 7 skills',
+    location_hall2_floor2_list2: 'Creative Arts and Fashion 5 skills',
+    location_hall2_floor3: 'Skill / Theme Exhibition',
+    location_hall2_floor3_list1: 'Manufacturing and Engineering Technology 12 skills',
+    location_hall2_floor3_list2: '',
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
   },
   skills: {
@@ -210,7 +209,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     manufacturing_CNCMilling: 'CNC Milling',
     manufacturing_CNCMilling_copy: `CNC Milling machines are pivotal machine tools used for shaping metal and other solid materials. The CNC Milling machinist engages in a series of crucial tasks, including process planning, selecting appropriate cutting tools, generating programs using CAD/CAM systems, and operating both conventional and CNC Milling machines.`,
     manufacturing_Welding: 'Welding',
-    manufacturing_Welding_copy: `aerospace, and semiconductor industries. Additionally, welders play a pivotal role in advancing independent national defense capabilities and in the construction of offshore wind power infrastructurWelding stands as a cornerstone technology across numerous industries, facilitating the joining of materials through heating or fusion at their interface. Often dubbed the ""tailors of metallic materials,"" welders possess the expertise to work with a wide array of metallic materials.
+    manufacturing_Welding_copy: `Aerospace, and semiconductor industries. Additionally, welders play a pivotal role in advancing independent national defense capabilities and in the construction of offshore wind power infrastructure. Welding stands as a cornerstone technology across numerous industries, facilitating the joining of materials through heating or fusion at their interface. Often dubbed the "Tailors of metallic materials" welders possess the expertise to work with a wide array of metallic materials.
 
 <br><br>Their skills find application in diverse sectors such as mechanical, electromechanical, civil, chemical, and marine engineering, as well as in transportation, construction, etc.`,
     manufacturing_Electronics: 'Electronics',
@@ -265,12 +264,12 @@ The design deliverables include project design presentations, system analysis re
 <br><br>
 Skilled Systems Administrators aren't just adept in specific services. They can dynamically utilize resources on demand, rather than waiting for allocations from other departments. This adaptability enables them to handle the ever-changing world of cloud services and respond well to changing market demands and challenges.`,
     it_CyberSecurity: 'Cyber Security',
-    it_CyberSecurity_copy: `"Cybersecurity aims to protect systems and users from both intentional and unintentional breaches to the security of data and entire systems. It also works to prevent hackers from accessing and/or stealing sensitive information and data. It encompasses the following aspects:
+    it_CyberSecurity_copy: `Cybersecurity aims to protect systems and users from both intentional and unintentional breaches to the security of data and entire systems. It also works to prevent hackers from accessing and/or stealing sensitive information and data. It encompasses the following aspects:
 <br><br>
 1. Enhancing computer and network security systems.<br>
 2. Collecting and analyzing intelligence to identify network abnormalities.<br>
 3. Conducting investigations and digital forensics in response to information security incidents.<br>
-4. Keeping up with the latest methods attackers use to infiltrate computer systems."`,
+4. Keeping up with the latest methods attackers use to infiltrate computer systems.`,
 
     // Construction
     construction_WallAndFloorTiling: 'Wall and Floor Tiling',
@@ -282,9 +281,9 @@ Skilled Systems Administrators aren't just adept in specific services. They can 
     construction_PlasteringAndDrywall: 'Plastering and Drywall Systems',
     construction_PlasteringAndDrywall_copy: `Competitors use the main material, plaster, to make construction. They shall be able to cut metal profiles and plasterboard sheets, prepare plasterboards to receive finishes, cut beads and trims, finish plasterboard joints, apply full surface coatings and finish plasterboards.  `,
     construction_PaintingAndDecorating: 'Painting and Decorating',
-    construction_PaintingAndDecorating_copy: `"Utilizing professional foundational painting skills, innovative techniques, and a keen eye for aesthetics, the painter and decorator designs unique works of art integrating with products and space. This not only fosters visual comfort and psychological satisfaction but also enhances overall quality of life.<br><br>
+    construction_PaintingAndDecorating_copy: `Utilizing professional foundational painting skills, innovative techniques, and a keen eye for aesthetics, the painter and decorator designs unique works of art integrating with products and space. This not only fosters visual comfort and psychological satisfaction but also enhances overall quality of life.<br><br>
 
-The skilled painter and decorator offers a range of services, from interpreting client needs to considering environmental sustainability in material selection and design. They transcend mere labor, embodying the essence of professionalism and aesthetic mastery."`,
+The skilled painter and decorator offers a range of services, from interpreting client needs to considering environmental sustainability in material selection and design. They transcend mere labor, embodying the essence of professionalism and aesthetic mastery.`,
     construction_Cabinetmaking: 'Cabinetmaking',
     construction_Cabinetmaking_copy: `Cabinetmaking involves crafting furniture and units primarily in small to medium-sized factories, utilizing hardwood, wood materials, and related substances. The competition project and tasks encompass the creation of shelves, carcasses, drawers, doors, as well as joining and assembly techniques. Exceptional Competitors will showcase their technical proficiency, manufacturing speed, and precision in operating equipment and tools, while applying cabinetmaking knowledge, principles, and regulations.`,
     construction_Joinery: 'Joinery',

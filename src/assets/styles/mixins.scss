@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 /* region query */
 @mixin withRegion($specificRegion) {
   &:lang(#{$specificRegion}) {
@@ -172,10 +174,10 @@
 }
 
 @mixin flexCenter($direction: null) {
+  flex-direction: $direction;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: $direction;
 }
 
 @mixin bgCenter($size: 100% auto) {

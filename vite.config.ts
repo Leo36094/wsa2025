@@ -5,6 +5,9 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 
 
@@ -14,6 +17,12 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
   ],
   resolve: {
     alias: {

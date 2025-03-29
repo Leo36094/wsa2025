@@ -1,7 +1,7 @@
 <template>
   <el-container class="admin-container">
     <!-- Sidebar -->
-    <el-aside width="200px" class="sidebar">
+    <el-aside :width="isCollapse ? '0px' : '200px'" class="sidebar" >
       <el-menu
         :default-active="activeMenu"
         class="sidebar-menu"
@@ -16,10 +16,9 @@
         <el-sub-menu index="news">
           <template #title>
             <el-icon><Document /></el-icon>
-            <span>News Management</span>
+            <span>News</span>
           </template>
-          <el-menu-item index="/admin/news-list">News List</el-menu-item>
-          <el-menu-item index="/admin/news/create">Create News</el-menu-item>
+          <el-menu-item index="/admin/news">News List</el-menu-item>
         </el-sub-menu>
       </el-menu>
     </el-aside>

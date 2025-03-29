@@ -32,7 +32,7 @@
           <el-input
             v-model="formData.summary"
             type="textarea"
-            rows="3"
+            :rows="3"
             placeholder="Enter news summary"
           />
         </el-form-item>
@@ -80,6 +80,7 @@ import { Plus } from '@element-plus/icons-vue'
 import '@wangeditor/editor/dist/css/style.css'
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 
+const mode = ref('default')
 const route = useRoute()
 const router = useRouter()
 const formRef = ref()

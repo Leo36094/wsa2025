@@ -242,6 +242,7 @@ const swiperConfig = {
           font-weight: 400;
           max-height: 4rem;
           overflow: auto;
+          text-align: justify;
         }
       }
       .gallery-image {

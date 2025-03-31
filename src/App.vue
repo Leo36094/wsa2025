@@ -45,4 +45,3 @@ onUnmounted(() => {
   <RouterView />
   <PageFooter />
 </template>
-<style lang="scss" scoped></style>

@@ -94,7 +94,7 @@ function updateTimeRemaining() {
   remainMins.value = mins.toString().padStart(2, '0').split('')
   remainSecs.value = secs.toString().padStart(2, '0').split('')
 }
-updateTimeRemaining()
+
 onMounted(() => {
   timeInterval.value = setInterval(updateTimeRemaining, 1000)
 })

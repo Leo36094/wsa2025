@@ -30,7 +30,11 @@
         <div class="contact-info">
           <h2 class="contact-info__title">{{ $t('involved.sponsorship_contact') }}</h2>
           <p class="contact-info__desc">李宜霖 Yiling Li 小姐</p>
-          <p class="contact-info__desc">yiling_li@nasme.org.tw</p>
+          <a class="contact-info__desc" href="mailto:yiling_li@nasme.org.tw"
+            >yiling_li@nasme.org.tw</a
+          >
+          <p class="contact-info__desc">巫承穎 Sandy Wu 小姐</p>
+          <a class="contact-info__desc" href="mailto:sandy_wu@wda.gov.tw">sandy_wu@wda.gov.tw</a>
         </div>
       </div>
 
@@ -135,7 +139,6 @@ const handleActiveTabChange = (value: PageValue) => {
       font-size: 0.18rem;
       color: $black-primary;
       margin-bottom: 0.16rem;
-      display: block;
       text-align: justify;
     }
     &__reach {
@@ -184,7 +187,6 @@ const handleActiveTabChange = (value: PageValue) => {
       &__desc {
         font-size: 0.16rem;
         color: $black-primary;
-        width: 100%;
         &:not(:last-child) {
           margin-bottom: 0.08rem;
         }

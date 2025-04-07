@@ -23,7 +23,6 @@
             ></div>
           </SwiperSlide>
           <div class="banner-pagination" tabindex="0"></div>
-          <div class="filter" aria-hidden="true"></div>
         </Swiper>
         <Transition name="fade">
           <HomeBannerTitle v-if="activeIndex !== 0" class="banner__title" />
@@ -80,16 +79,6 @@ $swiper-bullet-active-color: #455861;
 .home-banner {
   position: relative;
   top: 0;
-  .filter {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 89.74%);
-    z-index: 1;
-  }
   .main-banner-container {
     height: 100vh;
     transition: opacity 0.5s ease;
@@ -153,10 +142,6 @@ $swiper-bullet-active-color: #455861;
     top: 0;
 
     .main-banner-container {
-      .filter {
-        height: 50%;
-        pointer-events: none;
-      }
       .banner {
         @include flexCenter;
         height: 100%;

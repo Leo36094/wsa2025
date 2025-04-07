@@ -340,7 +340,7 @@ export default {
     sponsorship: '贊助商',
     sponsorship_desc: '成為亞洲最大技術與職業技能競賽的贊助商，與來自 30 多個亞洲國家的多元群眾建立聯繫，包括當地參觀者、學生、家長、政府與私人機構、產業夥伴及社群。您的贊助將帶來無與倫比的曝光機會，並支持下一代技術專業人才的培育。',
     sponsorship_reach: '觸及範圍',
-    sponsorship_visitor: '國參觀者',
+    sponsorship_visitor: '國際參賽者',
     sponsorship_government: '以上產業及政府協力夥伴',
     sponsorship_educational: '以上教育機構/單位',
     sponsorship_contact: '聯繫窗口',

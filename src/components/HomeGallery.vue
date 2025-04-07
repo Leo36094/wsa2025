@@ -74,11 +74,10 @@ const baseURL = import.meta.env.BASE_URL
   position: relative;
   .gallery-bg {
     position: absolute;
-    bottom: -25%;
+    bottom: -55%;
     left: -25%;
     @include bgCenter(contain);
-    background-image: url('/images/club_fill_white.png');
-    filter: grayscale(0.9);
+    background-image: url('/images/club_fill_green.png');
     width: 7rem;
     height: 7rem;
     animation: rotate 10s linear infinite;
@@ -141,6 +140,9 @@ const baseURL = import.meta.env.BASE_URL
     .gallery-bg {
       background-position: 0% 85%;
       background-size: 100% auto;
+      width: 4rem;
+      height: 4rem;
+      bottom: -30%;
     }
     .slide-header {
       padding: 0;

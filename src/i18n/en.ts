@@ -349,7 +349,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     sponsorship: 'Sponsorship',
     sponsorship_desc: 'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
     sponsorship_reach: 'You Can Reach',
-    sponsorship_visitor: 'Countries Expected Visitors',
+    sponsorship_visitor: 'Competitors',
     sponsorship_government: 'Industry and Government Partners',
     sponsorship_educational: 'Participating Educational Institutions',
     sponsorship_contact: 'Contact information',

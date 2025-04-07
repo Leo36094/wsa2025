@@ -204,7 +204,7 @@ onUnmounted(() => {
         width: 0.64rem;
         height: 0.9rem;
         font-size: $title-font-size;
-        background: linear-gradient(180deg, #484b3b 0%, #1c1e15 100%);
+        background: #0091e5;
         border-radius: 0.08rem;
         margin-right: 0.04rem;
         margin-bottom: 0.08rem;

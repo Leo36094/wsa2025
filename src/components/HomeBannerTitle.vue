@@ -8,7 +8,7 @@
         :aria-label="`${$t('home.title')} ${$t('home.year')}`"
       >
         {{ $t('home.title') }} <span class="banner-year">{{ $t('home.year') }}</span>
-    </div>
+      </div>
     </div>
     <div class="splits" aria-hidden="true">
       <span>{{ $t('home.split_title1') }}</span>
@@ -26,6 +26,7 @@ const { locale } = useI18n({ useScope: 'global' })
 .banner-title {
   font-weight: 700;
   color: #fff;
+  text-shadow: 0 0 0.1rem #000;
   .slogan {
     &.tw {
       @include flexCenter(row-reverse);

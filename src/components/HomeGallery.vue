@@ -75,7 +75,7 @@ const baseURL = import.meta.env.BASE_URL
   .gallery-bg {
     position: absolute;
     bottom: -55%;
-    left: -25%;
+    left: -20%;
     @include bgCenter(contain);
     background-image: url('/images/club_fill_green.png');
     width: 7rem;
@@ -142,7 +142,8 @@ const baseURL = import.meta.env.BASE_URL
       background-size: 100% auto;
       width: 4rem;
       height: 4rem;
-      bottom: -30%;
+      bottom: -45%;
+      left: -30%;
     }
     .slide-header {
       padding: 0;
@@ -186,7 +187,7 @@ const baseURL = import.meta.env.BASE_URL
     .gallery-bg {
       width: 3rem;
       height: 3rem;
-      bottom: -15%;
+      bottom: -25%;
       left: -60%;
     }
     .slide-header {

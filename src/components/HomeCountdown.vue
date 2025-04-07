@@ -114,8 +114,8 @@ onUnmounted(() => {
   overflow: hidden;
   .club-decoration {
     position: absolute;
-    top: -1.5rem;
-    right: -2rem;
+    top: -1rem;
+    right: -1rem;
     @include bgCenter(contain);
     background-image: url('/images/club_empty_green.png');
     width: 3.5rem;
@@ -251,7 +251,7 @@ onUnmounted(() => {
       width: 1.5rem;
       height: 1.5rem;
       top: -0.5rem;
-      right: -1rem;
+      right: -0.5rem;
     }
     .countdown-container {
       width: 3.04rem;

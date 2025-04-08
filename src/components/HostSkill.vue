@@ -40,6 +40,18 @@
         </Swiper>
       </div>
     </div>
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        :src="videoURL"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
   </section>
 </template>
 <script lang="ts" setup>
@@ -48,6 +60,8 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Autoplay, FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
 
 const images = computed(() =>
   Array(6)
@@ -75,18 +89,35 @@ const swiperConfig = {
   },
   modules: [Autoplay, FreeMode],
 }
+
+const videoURL = computed(() =>
+  locale.value === 'tw'
+    ? 'https://www.youtube.com/embed/IjSBGqhIsJY?si=53WhsRtmRe1om1Z1'
+    : 'https://www.youtube.com/embed/WspkUccKIdA?si=tS7XRKwtGsKV5jdz',
+)
 </script>
 <style lang="scss" scoped>
 .host-skill {
+  background: linear-gradient(180deg, #185974 0%, #0a384b 100%);
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.4rem;
+  .video-container {
+    width: 12.8rem;
+    height: 7.2rem;
+    margin: 0 auto;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
   .host-skill-container {
-    background: linear-gradient(180deg, #185974 0%, #0a384b 100%);
     max-width: 19.2rem;
-    margin: 0 auto 1.6rem auto;
-    height: 9.14rem;
+    margin: 0 auto 1.4rem auto;
+    min-height: 9.14rem;
     display: flex;
     justify-content: center;
-    border-bottom-left-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
     .image-col {
       display: flex;
       flex-direction: column;
@@ -129,39 +160,49 @@ const swiperConfig = {
   }
 }
 @include tablet {
-  .host-skill .host-skill-container {
-    height: auto;
-    max-width: 100%;
-    border-radius: 0;
-    flex-direction: column;
-    .image-col {
-      display: none;
+  .host-skill {
+    padding-bottom: 0.45rem;
+    margin-bottom: 1.4rem;
+    .host-skill-container {
+      height: auto;
+      max-width: 100%;
+      border-radius: 0;
+      margin-bottom: 0.72rem;
+      flex-direction: column;
+      .image-col {
+        display: none;
+      }
+      .copy-col {
+        margin: 0;
+        padding: 0 0.4rem;
+        .title {
+          font-size: 0.36rem;
+          margin: 0.49rem auto 0.32rem auto;
+        }
+        .desc {
+          font-size: 0.16rem;
+          margin-bottom: 0.32rem;
+        }
+      }
+      .skill-swiper {
+        width: 100%;
+        margin-bottom: 0.48rem;
+        .img-slide {
+          height: 1.64rem;
+          @include bgCenter(cover);
+        }
+      }
     }
-    .copy-col {
-      margin: 0;
-      padding: 0 0.4rem;
-      .title {
-        font-size: 0.36rem;
-        margin: 0.49rem auto 0.32rem auto;
-      }
-      .desc {
-        font-size: 0.16rem;
-        margin-bottom: 0.32rem;
-      }
-    }
-    .skill-swiper {
-      width: 100%;
-      margin-bottom: 0.48rem;
-      .img-slide {
-        height: 1.64rem;
-        @include bgCenter(cover);
-      }
+    .video-container {
+      width: 6.6rem;
+      height: 3.75rem;
     }
   }
 }
 @include mobile {
   .host-skill {
     .host-skill-container {
+      margin-bottom: 0rem;
       .copy-col {
         padding: 0 0.24rem;
         .desc {
@@ -173,6 +214,10 @@ const swiperConfig = {
           height: 1.64rem;
         }
       }
+    }
+    .video-container {
+      width: 2.8rem;
+      height: 1.62rem;
     }
   }
 }

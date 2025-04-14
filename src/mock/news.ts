@@ -104,7 +104,7 @@ Official Skills (36 skills in total) :
 <li>服裝創作</li>
 <li>平面設計技術</li>
 <li>3D數位遊戲藝術</li>
-<li>漆作裝潢</li>
+<li>花藝</li>
 <li>網頁技術</li>
 <li>雲端運算</li>
 <li>網路安全</li>
@@ -125,7 +125,7 @@ Official Skills (36 skills in total) :
 <ul>
 <li>餐飲服務</li>
 <li>美髮</li>
-<li>電器裝配</li>
+<li>電氣裝配</li>
 <li>平面設計技術</li>
 <li>網頁技術</li>
 <li>自主移動機器人</li>

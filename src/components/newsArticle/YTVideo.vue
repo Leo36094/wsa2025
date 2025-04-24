@@ -22,3 +22,11 @@ const src = computed(() => {
   return `https://www.youtube.com/embed/${props.embedId}`
 })
 </script>
+
+<style scoped>
+iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+</style>

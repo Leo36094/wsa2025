@@ -10,7 +10,7 @@
             </div>
             <div class="col contact-info__email">
               <img class="icon" src="/images/ri_mail-fill.svg" alt="mail-icon" />
-              <a href="tel:1234567890">secretariat@worldskillsasia.ae</a>
+              <a href="mailto:secretariat@worldskillsasia.ae">secretariat@worldskillsasia.ae</a>
             </div>
             <div class="col address__street">
               <img class="icon" src="/images/ri_map-pin-fill-white.svg" alt="map-icon" />

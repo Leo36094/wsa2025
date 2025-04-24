@@ -1,50 +1,21 @@
 <template>
   <div class="news-inner-container">
     <div class="news-inner">
-      <h2 class="news-inner-title" v-html="displayNews.title"></h2>
-      <div class="news-inner-content" v-html="displayNews.content"></div>
+      <component :is="components[newsId]"></component>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { mockNewsDetail } from '@/mock/news'
+import News01 from '@/components/newsArticle/News01.vue'
+import News02 from '@/components/newsArticle/News02.vue'
 const route = useRoute()
-const { locale } = useI18n()
-const newsId = route.params.id
-const newsDetail = mockNewsDetail
-const displayNews = computed(() => {
-  const content = newsDetail[0]
-  if (locale.value === 'en') {
-    return content.en
-  }
-  return content.zh
-})
+const newsId = Number(route.params.id)
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
-async function fetchNewsInfo(newsId: string) {
-  console.log('fetchNewsInfo', newsId)
-  await delay(1000)
-  return newsDetail
+const components: Record<number, any> = {
+  1: News01,
+  2: News02,
 }
-const newsInfo = ref<
-  {
-    en: {
-      title: string
-      content: string
-    }
-    zh: {
-      title: string
-      content: string
-    }
-  }[]
->([])
-onMounted(async () => {
-  // Fetch news info
-  newsInfo.value = await fetchNewsInfo(newsId as string)
-})
 </script>
 <style lang="scss" scoped>
 .news-inner-container {
@@ -72,53 +43,69 @@ onMounted(async () => {
         margin-left: 0.2rem;
       }
     }
-    .news-inner-title {
+    :deep(.news-inner-title) {
       font-size: 0.48rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
       padding: 0 0.8rem;
       text-align: center;
     }
-    .news-inner-content {
+    :deep(.news-inner-content) {
       max-width: 8.88rem;
       margin: 0 auto;
       @include flexCenter(column);
       justify-content: flex-start;
       align-items: flex-start;
-      :deep {
-        a {
-          word-break: break-all;
+      a {
+        text-decoration: underline;
+        font-size: 0.18rem;
+      }
+      ul {
+        list-style: disc;
+        margin-left: 0.2rem;
+        margin-bottom: 0.2rem;
+        li {
+          font-size: 0.18rem;
+          list-style: disc;
         }
-        h1 {
-          font-size: 0.48rem;
-          font-weight: 700;
-          margin-bottom: 0.4rem;
-        }
-        h2 {
-          font-size: 0.32rem;
-          font-weight: 700;
-          margin-bottom: 0.4rem;
-        }
-        h3 {
-          font-size: 0.24rem;
-          font-weight: 700;
-          margin-bottom: 0.4rem;
-        }
-        h4 {
-          font-size: 0.16rem;
-          font-weight: 700;
-          margin-bottom: 0.4rem;
-        }
+      }
+      ol {
+        list-style: decimal;
+        margin-left: 0.2rem;
+      }
 
-        p {
-          font-size: 0.16rem;
-          margin: 0.2rem 0;
-        }
-        img {
-          border-radius: 0.08rem;
-          aspect-ratio: 16/9;
-          width: 100%;
-        }
+      a {
+        word-break: break-all;
+      }
+      h1 {
+        font-size: 0.48rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      h2 {
+        font-size: 0.32rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      h3 {
+        font-size: 0.24rem;
+        font-weight: 700;
+        margin: 0.2rem 0;
+      }
+      h4 {
+        font-size: 0.16rem;
+        font-weight: 700;
+        margin: 0.2rem 0;
+      }
+
+      p {
+        font-size: 0.16rem;
+        margin: 0.2rem 0;
+      }
+      img {
+        border-radius: 0.08rem;
+        aspect-ratio: 16/9;
+        width: 100%;
       }
     }
   }
@@ -127,13 +114,14 @@ onMounted(async () => {
   .news-inner-container {
     .news-inner {
       margin-top: 0.16rem;
-      .news-inner-title {
+      :deep(.news-inner-title) {
         padding: 0 0.4rem;
         line-height: normal;
       }
-      .news-inner-content {
+      :deep(.news-inner-content) {
         padding: 0 0.4rem;
         line-height: normal;
+        max-width: 100%;
       }
     }
   }
@@ -141,12 +129,12 @@ onMounted(async () => {
 @include mobile {
   .news-inner-container {
     .news-inner {
-      .news-inner-title {
+      :deep(.news-inner-title) {
         font-size: 0.24rem;
         margin-bottom: 0.16rem;
         padding: 0 0.24rem;
       }
-      .news-inner-content {
+      :deep(.news-inner-content) {
         padding: 0 0.24rem;
       }
     }

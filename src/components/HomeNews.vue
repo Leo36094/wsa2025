@@ -2,7 +2,7 @@
   <section class="news" role="complementary" :aria-label="$t('home.news_title')">
     <div class="news-container">
       <h2 class="news-title" tabindex="0">{{ $t('home.news_title') }}</h2>
-      <NewsList :news="news" />
+      <NewsList :news="displayNews" />
       <div class="more-button" @click="goToNews" tabindex="0" :aria-label="$t('home.news_more')">
         <span>{{ $t('home.news_more') }}</span>
         <img src="/images/uil_arrow-right.svg" alt="right-arrow-icon" />
@@ -11,25 +11,21 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import NewsList from '@/components/NewsList.vue'
-const newsPlaceholder = [
-  {
-    title: 'The 3rd WorldSkills Asia Competition Skills',
-    image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
-    date: '21 Jan 2025',
-    id: 99,
-  },
-  // {
-  //   title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
-  //   image: '',
-  //   date: '21 Jan 2025',
-  //   id: 100,
-  // },
-]
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
+import newsTitles from '@/components/newsArticle/newsTitle'
+const { zh, en } = newsTitles
 
-const news = ref(newsPlaceholder)
+const displayNews = computed(() => {
+  if (locale.value !== 'en') {
+    return zh
+  }
+  return en
+})
+
 
 const router = useRouter()
 function goToNews() {

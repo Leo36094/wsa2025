@@ -51,12 +51,12 @@
         embedId="BRtL4F45eVY"
         title="Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert LAI, JUNG CHIU"
       />
-      <p>Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HOU SHIH KUANG</p>
+      <p>Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HOU, SHIH KUANG</p>
       <YTVideo
         embedId="-bJpmPdfoGQ"
         title="Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HOU SHIH KUANG"
       />
-      <p>Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HSU YUNG CHANG</p>
+      <p>Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HSU, YUNG CHANG</p>
       <YTVideo
         embedId="opbotYemWSc"
         title="Invitation to WorldSkills Asia Competition 2025 in Taipei! Expert HSU YUNG CHANG"
@@ -74,7 +74,7 @@
       <p>
         本次競賽預計於 2025 年 11 月 27 日至 29 日舉行，將匯聚數百位技能選手同場競技，涵蓋 36
         項正式職類與 8
-        項青少年職類。競賽地點選定於臺灣規模最大的展覽場館―南港展覽館，場地鄰近多間飯店旅宿，步行即可抵達。賽會期間亦將舉辦一系列周邊活動，包括技能展示、國際會議等，進一步促進專業對話與技術交流。
+        項青少年職類。競賽地點選定於臺灣規模最大的展覽場館 —— 南港展覽館，場地鄰近多間飯店旅宿，步行即可抵達。賽會期間亦將舉辦一系列周邊活動，包括技能展示、國際會議等，進一步促進專業對話與技術交流。
       </p>
       <p>
         台北為一座兼容傳統文化與現代創新之國際都市，歷史悠久，亦為臺灣政治、經濟與文化之重鎮。城市交通便捷，捷運與公車系統四通八達，利於國際賓客往返各大景點。此外，台北亦以多元美食聞名，從世界知名的珍珠奶茶到各式在地小吃，皆令人流連忘返，必能為與會者留下難忘回憶。
@@ -107,3 +107,11 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 import YTVideo from '@/components/newsArticle/YTVideo.vue'
 </script>
+
+<style lang="scss" scoped>
+.news-inner-content {
+  :deep(iframe) {
+    margin-bottom: 0.4rem;
+  }
+}
+</style>

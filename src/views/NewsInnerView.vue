@@ -44,7 +44,7 @@ const components: Record<number, any> = {
       }
     }
     :deep(.news-inner-title) {
-      font-size: 0.48rem;
+      font-size: 0.4rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
       padding: 0 0.8rem;

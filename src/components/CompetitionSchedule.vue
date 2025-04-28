@@ -164,6 +164,7 @@ const notes = computed(() => {
         line-height: normal;
       }
       .activity {
+        font-size: 0.2rem;
         line-height: normal;
         font-weight: bold;
       }
@@ -202,7 +203,7 @@ const notes = computed(() => {
       }
       .code,
       .activity {
-        font-size: 0.16rem;
+        font-size: 0.12rem;
       }
     }
   }

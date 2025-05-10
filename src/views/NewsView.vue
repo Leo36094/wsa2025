@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type Ref, ref, onMounted, inject } from 'vue'
+import { type Ref, ref, onMounted, inject, watch } from 'vue'
 import { Button } from '@/components/ui/button'
 import {
   Pagination,
@@ -66,22 +66,18 @@ import {
 } from '@/components/ui/pagination'
 import NewsList from '@/components/NewsList.vue'
 import BaseLoading from '@/components/BaseLoading.vue'
-const isDesktop = inject<Ref<boolean>>('isDesktop')
+import { useI18n } from 'vue-i18n'
+import useNews from '@/composables/useNews'
 
-const mockNewsResponse = (page: number) => {
+const { locale } = useI18n()
+const isDesktop = inject<Ref<boolean>>('isDesktop')
+const displayNews = useNews(locale)
+
+const mockNewsResponse = (page: number = 1) => {
   return {
-    news: Array(1)
-      .fill({
-        title: `The 3rd WorldSkills Asia Competition Skills`,
-        image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
-        date: '21 Jan 2025',
-      })
-      .map((newsItem, index) => ({
-        ...newsItem,
-        id: index,
-      })),
+    news: displayNews.value,
     total: 1,
-    page: 1,
+    page: page,
   }
 }
 const isNewsFetching = ref(false)
@@ -105,6 +101,11 @@ const newsInfo = ref<{
   total: number
   page: number
 }>({ news: [], total: 0, page: 1 })
+
+watch(locale, () => {
+  const localeNews = useNews(locale)
+  newsInfo.value = { news: localeNews.value, total: 1, page: 1 }
+})
 
 onMounted(async () => {
   isNewsFetching.value = true

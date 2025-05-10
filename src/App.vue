@@ -31,7 +31,12 @@ onMounted(() => {
   }
   // set HTML lang
   document.documentElement.lang = locale.value === 'tw' ? 'zh-TW' : 'en'
-  AOS.init()
+  AOS.init({
+    duration: 500,
+    once: true,
+    startEvent: 'DOMContentLoaded',
+    offset: 100,
+  })
   checkIsDesktop()
   window.addEventListener('resize', checkIsDesktop)
 })

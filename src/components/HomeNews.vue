@@ -11,21 +11,14 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import NewsList from '@/components/NewsList.vue'
+import useNews from '@/composables/useNews'
 import { useI18n } from 'vue-i18n'
+
 const { locale } = useI18n()
-import newsTitles from '@/components/newsArticle/newsTitle'
-const { zh, en } = newsTitles
 
-const displayNews = computed(() => {
-  if (locale.value !== 'en') {
-    return zh
-  }
-  return en
-})
-
+const displayNews = useNews(locale)
 
 const router = useRouter()
 function goToNews() {

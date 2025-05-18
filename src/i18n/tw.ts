@@ -21,8 +21,7 @@ export default {
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
     involved_tab_01: '贊助商',
-    involved_tab_02: 'Theme Exhibition',
-    involved_tab_03: 'Try A Skill',
+    involved_tab_02: '簽證',
   },
   footer: {
     address: '展館地圖',
@@ -114,12 +113,14 @@ export default {
     banknote200: 'NT$200',
     banknote100: 'NT$100',
     power_title: '電力供應',
-    power_desc: '台灣的電壓為110V，頻率為60Hz。若您攜帶來自海外的電器，請務必確認其電壓與頻率是否相容。',
+    power_desc:
+      '台灣的電壓為110V，頻率為60Hz。若您攜帶來自海外的電器，請務必確認其電壓與頻率是否相容。',
     climate_title: '氣候',
     climate_title1: '溫度',
     climate_desc1: '11月的平均氣溫通常介於17°C至26°C之間，白天溫暖，夜晚涼爽。',
     climate_title2: '降雨',
-    climate_desc2: '11月的降雨量減少，但偶爾會有冷鋒帶來短暫降雨。大多為小雨或毛毛雨，雨天氣溫較低，建議攜帶雨具。',
+    climate_desc2:
+      '11月的降雨量減少，但偶爾會有冷鋒帶來短暫降雨。大多為小雨或毛毛雨，雨天氣溫較低，建議攜帶雨具。',
     climate_title3: '日照',
     climate_desc3: '11月的日照溫和，白晝舒適，非常適合戶外活動。晴天時陽光柔和，不會過於刺眼。',
     climate_title4: '濕度',
@@ -129,7 +130,8 @@ export default {
     skill_title: '關於亞洲技能競賽',
     skill_desc: `亞洲技能（WSA）是一個致力於促進亞洲地區技術與職業教育訓練（TVET）的區域性組織。作為全球世界技能運動的一部分，WSA旨在通過舉辦區域性技能競賽、促進能力建立和國際合作，提升技術職業標準。其活動範疇包括支持培訓者和專家的發展、促進青年就業，以及倡導TVET政策改革。透過為成員國、產業夥伴和TVET機構提供合作平台，WSA在縮短教育與就業之間的差距、提升勞動力發展以及推動區域經濟增長方面發揮著重要作用。`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: '更多相關資訊請見: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
+    skill_link_text:
+      '更多相關資訊請見: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
     wda_title: 'About WDA',
     wda_content: `
     勞動力發展署致力於協助國人穩定就業並提升勞動力素質，根據國家重點產業發展與勞動市場需求，培育所需人才，並提供職前訓練與就業媒合服務。同時，該署透過多元的在職訓練課程，提升勞工專業技能，進而增強整體勞動力的競爭力。<br><br>
@@ -142,7 +144,8 @@ export default {
     title: '關於競賽',
     title_tag: '關於',
     title_competition: '競賽',
-    content: '亞洲技能競賽是備受推崇的區域性活動，年輕專業人才在各種職業技術領域展示他們的技能和專業知識。競賽旨在設立技能卓越標準、促進技術與職業教育訓練（TVET），並為參賽者參加世界技能國際競賽等全球性賽事做準備。選手們在多個技能類別中展示他們的能力，評審由業界專家和TVET專業人士擔任。這些賽事加強了TVET體系，解決技能短缺問題，並為參賽者提供個人成長、職業發展及國際認可的機會。透過促進政府、產業與教育機構之間的合作，這些競賽有助於未來發展高技能勞動力，並推動亞洲地區的整體發展。',
+    content:
+      '亞洲技能競賽是備受推崇的區域性活動，年輕專業人才在各種職業技術領域展示他們的技能和專業知識。競賽旨在設立技能卓越標準、促進技術與職業教育訓練（TVET），並為參賽者參加世界技能國際競賽等全球性賽事做準備。選手們在多個技能類別中展示他們的能力，評審由業界專家和TVET專業人士擔任。這些賽事加強了TVET體系，解決技能短缺問題，並為參賽者提供個人成長、職業發展及國際認可的機會。透過促進政府、產業與教育機構之間的合作，這些競賽有助於未來發展高技能勞動力，並推動亞洲地區的整體發展。',
     schedule_title: '競賽日程',
     schedule_date: '時間',
     schedule_code: '代稱',
@@ -338,17 +341,43 @@ export default {
     title: '參與活動',
     coming_soon: '敬請期待',
     sponsorship: '贊助商',
-    sponsorship_desc: '成為亞洲最大技術與職業技能競賽的贊助商，與來自 30 多個亞洲國家的多元群眾建立聯繫，包括當地參觀者、學生、家長、政府與私人機構、產業夥伴及社群。您的贊助將帶來無與倫比的曝光機會，並支持下一代技術專業人才的培育。',
+    sponsorship_desc:
+      '成為亞洲最大技術與職業技能競賽的贊助商，與來自 30 多個亞洲國家的多元群眾建立聯繫，包括當地參觀者、學生、家長、政府與私人機構、產業夥伴及社群。您的贊助將帶來無與倫比的曝光機會，並支持下一代技術專業人才的培育。',
     sponsorship_reach: '觸及範圍',
     sponsorship_visitor: '國際參賽者',
     sponsorship_government: '以上產業及政府協力夥伴',
     sponsorship_educational: '以上教育機構/單位',
     sponsorship_contact: '聯繫窗口',
+    visa_title: '代表團入境申請方式分類說明',
+    visa_desc: '競賽前各國代表團入境申請分為三大類，詳如以下說明：',
+    visa_exemption: '免簽國家',
+    visa_exemption_desc: `<p>可直接持護照入境，須留意護照效期，與免簽效期，詳如【簽證資訊】之免簽證國家名單; 14天免簽國家，如需停留超過14天，請比照（專案）電子簽證申請流程辦理。</p>
+      <p>免簽證相關問題請參閱<a href="https://www.boca.gov.tw/cp-384-4485-149c7-1.html" target="_blank">外交部領事事務局官方網站</a></p>
+      `,
+    visa_e_visa: '一般電子簽證國家',
+    visa_e_visa_desc: `<p>可自行上網申請簽證國家詳如【簽證資訊】之一般電子簽證國家，請留意電子簽證時效3個月（申請時護照效期需滿6個月以上），須於簽證時效內完成入境。建議代表團於2025年9月起上網申請電子簽證，保障簽證時效。填寫申請時請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費。</p>
+      <p>電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/cp-10-7203-54e31-1.html" target="_blank">外交部領事事務局官方網站</a></p>
+      `,
+    visa_visa_assistance: '（專案）電子簽證國家',
+    visa_visa_assistance_desc: `<p>適用於不符合免簽證入境或一般電子簽證資格之國家國民。<br>
+      ▲申請（專案）電子簽證程序如下：</p>
+      <ol>
+        <li>（專案）電子簽證國家代表團需於受理期限內（7月底前）回覆該國代表團是否需申請電子簽證協辦專案。（若不需要，也可自行至中華民國駐外館處申請簽證）</li>
+        <li>通過審查後代表團預計於2025年10月起陸續收到由主辦單位所發出之邀請函，代表團可憑邀請函內提供之Ecode，自行<a href="https://visawebapp.boca.gov.tw" target="_blank">線上申請電子簽證</a>。電子簽證時效為3個月（申請時護照效期需滿6個月以上）由於電子簽證申請有時效性，建議申請人於有效期限內儘早完成申請程序</li>
+        <li>代表團線上填寫申請時需繳費，簽證相關費用請參閱<a href="https://www.boca.gov.tw/cp-390-4490-dce26-1.html" target="_blank">外交部領事事務局官方網站</a>。請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費；申請核准後，將收到審核結果電郵及列印電子簽證之連結，得據以列印電子簽證。代表團務必於辦理登機手續時出示紙本電子簽證及主辦單位核發之邀請函。辦理登機手續時，電子簽證持有人須出示列印之電子簽證及主辦單位核發之正式邀請函，以供查驗。電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/lp-390-1.html" target="_blank">外交部領事事務局官方網站</a>。</li>
+      </ol>
+      `,
+    visa_arrival_procedures: '抵達手續',
+    visa_arrival_entry: '',
+    visa_arrival_TPE: '桃園機場',
+    visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=ch',
+    visa_arrival_TSA: '松山機場',
+    visa_arrival_TSA_link: 'https://www.tsa.gov.tw/layout?id=421f4be9-cb97-4993-a181-520cf59de332',
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',
-  }
+  },
 }

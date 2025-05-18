@@ -73,7 +73,7 @@ $tab-text-color: #455861;
     cursor: pointer;
     padding: 0.16rem;
     text-align: center;
-    min-width: 1.8rem;
+    width: auto;
     font-size: 0.18rem;
     color: $tab-text-color;
     transition: all 0.3s ease;
@@ -102,7 +102,7 @@ $tab-text-color: #455861;
       align-items: stretch;
       &__item {
         min-width: unset;
-        width: 40%;
+        font-size: 0.16rem;
         @include flexCenter;
       }
     }

@@ -21,7 +21,7 @@ export default {
     competition_tab_01: 'Competition',
     competition_tab_02: 'Schedule',
     involved_tab_01: 'Sponsorship',
-    involved_tab_02: 'Theme Exhibition',
+    involved_tab_02: 'VISA',
     involved_tab_03: 'Try A Skill',
   },
   footer: {
@@ -100,7 +100,6 @@ For those seeking adventure, Elephant Mountain provides an accessible yet reward
     host_introduction_reason_desc: `Taipei is more than just a travel destination—it’s a city that captivates visitors with its warm hospitality, rich history, modern conveniences, and endless culinary delights. Whether you're a foodie, an adventurer, a history enthusiast, or a tech lover, Taipei offers something for everyone.
 Come and experience Taipei: The Vibrant Heart of Asia!`,
 
-
     coin50: 'NT$50',
     coin20: 'NT$20',
     coin10: 'NT$10',
@@ -112,22 +111,29 @@ Come and experience Taipei: The Vibrant Heart of Asia!`,
     banknote200: 'NT$200',
     banknote100: 'NT$100',
     power_title: 'Electricity/Power',
-    power_desc: 'The voltage in Taiwan is 110V with a frequency of 60Hz. If you are bringing electrical appliances from abroad, please be sure to check whether the voltage and frequency are compatible.',
+    power_desc:
+      'The voltage in Taiwan is 110V with a frequency of 60Hz. If you are bringing electrical appliances from abroad, please be sure to check whether the voltage and frequency are compatible.',
     climate_title: 'Climate',
     climate_title1: 'Temperature',
-    climate_desc1: 'The average temperature in November typically ranges between 17°C and 26°C, with warm days contrasting with cool nights.',
+    climate_desc1:
+      'The average temperature in November typically ranges between 17°C and 26°C, with warm days contrasting with cool nights.',
     climate_title2: 'Rain',
-    climate_desc2: 'Rainfall decreases in November, with occasional cold fronts bringing brief showers. Most rain is light or drizzly, and temperatures are cooler on rainy days, so please bring rain gear.',
+    climate_desc2:
+      'Rainfall decreases in November, with occasional cold fronts bringing brief showers. Most rain is light or drizzly, and temperatures are cooler on rainy days, so please bring rain gear.',
     climate_title3: 'Sun',
-    climate_desc3: 'November offers mild sunlight and comfortable daylight, making it ideal for outdoor activities. On clear days, the sunlight is gentle and not harsh.',
+    climate_desc3:
+      'November offers mild sunlight and comfortable daylight, making it ideal for outdoor activities. On clear days, the sunlight is gentle and not harsh.',
     climate_title4: 'Humidity',
-    climate_desc4: 'The average relative humidity is around 70% to 80%, providing a moderate level of humidity and pleasant weather overall.',
+    climate_desc4:
+      'The average relative humidity is around 70% to 80%, providing a moderate level of humidity and pleasant weather overall.',
     climate_title5: 'Wind',
-    climate_desc5: 'The northeast monsoon strengthens, bringing cool breezes. When a cold front passes, winds can be stronger, so warm clothing is recommended.',
+    climate_desc5:
+      'The northeast monsoon strengthens, bringing cool breezes. When a cold front passes, winds can be stronger, so warm clothing is recommended.',
     skill_title: 'About WorldSkills Asia',
     skill_desc: `WorldSkills Asia (WSA) is a regional organization dedicated to promoting excellence in technical and vocational education and training (TVET) across Asia. As part of the global WorldSkills movement, WSA aims to raise the standards of skilled professions by organizing regional skills competitions, fostering capacity building, and facilitating international cooperation. Its key activities include supporting the development of trainers and experts, promoting youth employment, and advocating for TVET policy reforms. By providing a platform for collaboration among member countries, industry partners, and TVET institutions, WSA plays a vital role in bridging the gap between education and employment, enhancing workforce development, and driving economic growth in the region.`,
     skill_link: 'https://www.worldskillsasia.net/en/Pages/default.aspx',
-    skill_link_text: 'For more information: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
+    skill_link_text:
+      'For more information: <a tabindex="0" href="https://www.worldskillsasia.net/en/Pages/default.aspx" target="_blank">https://www.worldskillsasia.net/en/Pages/default.aspx</a>',
     wda_title: 'About WDA',
     wda_content: `
     The Workforce Development Agency (WDA) is dedicated to assisting citizens in achieving stable employment and improving the quality of the workforce. Based on the development of key national industries and labor market demands, it trains the necessary talent, while also providing pre-employment training and job matching services. At the same time, the agency enhances the professional skills of workers through diverse on-the-job training programs, thereby strengthening the overall competitiveness of the workforce.
@@ -143,7 +149,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     title: 'Competition',
     title_tag: 'About',
     title_competition: 'Competition',
-    content: 'WorldSkills Asia Competitions are prestigious regional events where young professionals demonstrate their skills and technical expertise in various vocational trades. The competitions aim to benchmark skills excellence, promote technical and vocational education and training (TVET), and prepare participants for global events like WorldSkills International. Competitors showcase their abilities in diverse skill categories with assessments conducted by industry experts and TVET professionals. These events strengthen TVET systems, address skills shortages, and provide participants with personal growth, career advancement, and international recognition. By fostering collaboration among governments, industry, and educational institutions, the competitions contribute to developing a future-ready, skilled workforce across Asia.',
+    content:
+      'WorldSkills Asia Competitions are prestigious regional events where young professionals demonstrate their skills and technical expertise in various vocational trades. The competitions aim to benchmark skills excellence, promote technical and vocational education and training (TVET), and prepare participants for global events like WorldSkills International. Competitors showcase their abilities in diverse skill categories with assessments conducted by industry experts and TVET professionals. These events strengthen TVET systems, address skills shortages, and provide participants with personal growth, career advancement, and international recognition. By fostering collaboration among governments, industry, and educational institutions, the competitions contribute to developing a future-ready, skilled workforce across Asia.',
     schedule_title: 'Competition Main Schedule',
     schedule_date: 'Date',
     schedule_code: 'Code',
@@ -169,7 +176,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     schedule_date7: 'Dec. 01 Mon',
     schedule_code7: 'C+2',
     schedule_activity7: 'Breakdown, Departure for all Delegates',
-    schedule_note1: 'Welcome party, opening party, closing ceremony and farewell party only to accredited participants.',
+    schedule_note1:
+      'Welcome party, opening party, closing ceremony and farewell party only to accredited participants.',
     schedule_note2: 'Competition(11/27-11/29)will open to the public for visiting.',
     location_title: 'Taipei Nangang Exhibition Center',
     location_subtitle: 'Competition Venue',
@@ -347,12 +355,55 @@ The skilled painter and decorator offers a range of services, from interpreting 
   involved: {
     title: 'Get Involved',
     sponsorship: 'Sponsorship',
-    sponsorship_desc: 'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
+    sponsorship_desc:
+      'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
     sponsorship_reach: 'You Can Reach',
     sponsorship_visitor: 'Competitors',
     sponsorship_government: 'Industry and Government Partners',
     sponsorship_educational: 'Participating Educational Institutions',
     sponsorship_contact: 'Contact information',
+    visa_title: 'Entry Application Categories for delegations',
+    visa_desc:
+      'Before the competition, the entry application process for delegations is classified into three categories, as outlined below:',
+    visa_exemption: 'Visa-Exempt Entry',
+    visa_exemption_desc: `<p>Competitors from visa-free countries may enter with a valid passport. Please ensure that the passport is valid for the required period and check the visa-free duration. Refer to the VISA information for entry categories of visa-exempt countries. For countries with a 14-day visa-free entry, if the stay exceeds 14 days, please follow the (project) e-visa application process.</p>
+      <p>For more details for Visa-Exempt Entry, please visit the <a href="https://www.boca.gov.tw/cp-149-4486-7785a-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
+      `,
+    visa_e_visa: 'e-Visa',
+    visa_e_visa_desc: `<p>Participants from these countries can apply for an e-visa online. The list of eligible countries can be found in the VISA Information for entry categories of e-Visa countries.</p>
+    <ol>
+      <li>The e-Visa is valid for 3 months, and applicants must ensure their passport is valid for at least 6 months at the time of application.</li>
+      <li>Entry must be completed within the e-visa validity period.</li>
+      <li>It is recommended that delegations apply for an e-visa starting September 2025 to ensure sufficient validity.</li>
+      <li>Carefully read the instructions on the official website of the Ministry of Foreign Affairs to avoid application errors that could result in rejection. Rejected applications are non-refundable.</li>
+    </ol>
+      <p>For more details on e-visas, please visit the <a href="https://www.boca.gov.tw/cp-181-4493-881cd-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
+      `,
+    visa_visa_assistance: 'e-Visa (with e-Visa assistance)',
+    visa_visa_assistance_desc: `<p>Available to nationals who do not qualify for Visa-Exempt Entry or the standard e-Visa categories.</p>
+    <p>Application Procedure for e-Visa Assistance:</p>
+      <ol>
+        <li>By the end of July, delegations must confirm whether they require the e-Visa assistance for e-Visa application. (Instead, delegations may apply for the appropriate visa at Chinese Taipei overseas missions)</li>
+        <li>Upon approval, delegations will receive an invitation letter from the organizer starting October 2025. Using the E-code provided in the invitation letter, delegations should then complete and submit <a href="https://visawebapp.boca.gov.tw" target="_blank">the eVisa application form online</a>.
+          <ul style="margin: 0;">
+          <li>The e-Visa is valid for 3 months, and applicants must ensure their passport is valid for at least 6 months at the time of application.</li>
+          </ul>
+        </li>
+        <li>Applicants must pay the required visa fees during the online application process. Please refer to the <a href="https://www.boca.gov.tw/cp-160-7204-78395-2.html" target="_blank">Bureau of Consular Affairs website</a> for visa fees. Please read the official application instructions carefully to avoid errors that may result in rejection. Rejected applications are non-refundable. Once the application is approved, applicants will receive an email with the visa approval notice and a link to print the e-visa.
+          <ul style="margin: 0;">
+            <li>When checking in for the flight, the eVisa holder is required to present a printed e-visa and the official invitation letter issued by the organizer for verification.</li>
+          </ul>
+        </li>
+      </ol>
+      <p>For further details, visit the <a href="https://www.boca.gov.tw/lp-181-2-xCat-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
+      `,
+    visa_arrival_procedures: 'Arrival Procedures',
+    visa_arrival_entry: 'For entry procedures at ',
+    visa_arrival_TPE: 'Taiwan Taoyuan International Airport',
+    visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=en',
+    visa_arrival_TSA: 'Taiwan Songshan Airport',
+    visa_arrival_TSA_link: 'https://www.tsa.gov.tw/layout?id=35b0e83f-7d97-47ef-a076-b360b589c1b5&culture=2',
+
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     coming_soon: 'Coming soon',
@@ -360,5 +411,5 @@ The skilled painter and decorator offers a range of services, from interpreting 
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',
-  }
+  },
 }

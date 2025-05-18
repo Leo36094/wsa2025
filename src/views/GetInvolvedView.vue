@@ -1,5 +1,8 @@
 <template>
-  <div class="get-involved">
+  <div
+    class="get-involved"
+    :id="activeTab === PageSectionEnum.Sponsorship ? SECTION_ID.Sponsorship : SECTION_ID.Visa"
+  >
     <PageTab
       class="get-involved__tab"
       :tabs="tabs"
@@ -7,14 +10,14 @@
       @update:active-tab="handleActiveTabChange"
     />
     <div class="section-container">
-      <div class="section-sponsor" :id="SECTION_ID.Sponsorship">
+      <div v-if="activeTab === PageSectionEnum.Sponsorship" class="section-sponsor">
         <BaseTitle class="get-involved__title" :title="$t('involved.sponsorship')" />
         <p class="section-sponsor__desc" data-aos="fade-up">
           {{ $t('involved.sponsorship_desc') }}
         </p>
 
-        <div class="section-sponsor__reach">
-          <h1 class="section-sponsor__reach-title">{{ $t('involved.sponsorship_reach') }}</h1>
+        <div class="section-sponsor__reach" data-aos="fade-up">
+          <h3 class="section-sponsor__reach-title">{{ $t('involved.sponsorship_reach') }}</h3>
           <div
             v-for="sponsor in sponsorList"
             :key="sponsor.title"
@@ -27,16 +30,22 @@
           </div>
         </div>
 
-        <div class="contact-info">
-          <h2 class="contact-info__title">{{ $t('involved.sponsorship_contact') }}</h2>
-          <p class="contact-info__desc">李宜霖 Yiling Li 小姐</p>
-          <a class="contact-info__desc" href="mailto:yiling_li@nasme.org.tw"
-            >yiling_li@nasme.org.tw</a
-          >
-          <p class="contact-info__desc">巫承穎 Sandy Wu 小姐</p>
-          <a class="contact-info__desc" href="mailto:sandy_wu@wda.gov.tw">sandy_wu@wda.gov.tw</a>
+        <div class="contact-info" data-aos="fade-up">
+          <h3 class="contact-info__title">{{ $t('involved.sponsorship_contact') }}</h3>
+          <p class="contact-info__desc">
+            李宜霖 Yiling Li 小姐
+            <br />
+            <a href="mailto:yiling_li@nasme.org.tw">yiling_li@nasme.org.tw</a>
+          </p>
+
+          <p class="contact-info__desc">
+            巫承穎 Sandy Wu 小姐
+            <br />
+            <a href="mailto:sandy_wu@wda.gov.tw">sandy_wu@wda.gov.tw</a>
+          </p>
         </div>
       </div>
+      <GetInvolvedVisa v-if="activeTab === PageSectionEnum.Visa" />
 
       <!-- Temp Hide -->
       <!-- <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
@@ -57,11 +66,12 @@
 </template>
 <script lang="ts" setup>
 import { PageSectionEnum, type PageValue, SECTION_ID } from '@/types/page_section'
-import { ref, computed } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import BaseTitle from '@/components/BaseTitle.vue'
 import PageTab from '@/components/PageTab.vue'
+import GetInvolvedVisa from '@/components/GetInvolvedVisa.vue'
 
 const { t } = useI18n()
 
@@ -70,17 +80,14 @@ const tabs = computed(() => [
     label: t('page_tabs.involved_tab_01'),
     value: PageSectionEnum.Sponsorship,
   },
-  // {
-  //   label: t('page_tabs.involved_tab_02'),
-  //   value: PageSectionEnum.ThemeExhibition,
-  // },
-  // {
-  //   label: t('page_tabs.involved_tab_03'),
-  //   value: PageSectionEnum.TryOut,
-  // },
+  {
+    label: t('page_tabs.involved_tab_02'),
+    value: PageSectionEnum.Visa,
+  },
 ])
 const router = useRouter()
-const activeTab = ref(tabs.value[0].value)
+const routeHash = computed(() => router.currentRoute.value.hash)
+const activeTab = ref<PageValue>(tabs.value[0].value)
 
 const sponsorList = computed(() => {
   return [
@@ -99,14 +106,19 @@ const sponsorList = computed(() => {
   ]
 })
 
-const handleActiveTabChange = (value: PageValue) => {
-  // 似乎不需要處理，因為只有第一個 active 會被顯示
-  // activeTab.value = value
-  router.push({
-    name: 'get-involved',
-    hash: value,
-  })
+const handleActiveTabChange = (pageValue: PageValue) => {
+  activeTab.value = pageValue
+  router.push({ hash: pageValue })
 }
+
+onMounted(() => {
+  if (routeHash.value) {
+    const tab = tabs.value.find((tab) => tab.value === routeHash.value)
+    if (tab) {
+      activeTab.value = tab.value
+    }
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -188,7 +200,7 @@ const handleActiveTabChange = (value: PageValue) => {
         font-size: 0.16rem;
         color: $black-primary;
         &:not(:last-child) {
-          margin-bottom: 0.08rem;
+          margin-bottom: 0.16rem;
         }
       }
     }

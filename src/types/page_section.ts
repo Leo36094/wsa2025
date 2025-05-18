@@ -6,7 +6,7 @@ export const SECTION_ID = {
   Schedule: 'schedule',
   Competition: 'competition',
   Sponsorship: 'sponsorship',
-  ThemeExhibition: 'theme-exhibition',
+  Visa: 'visa',
   TryOut: 'try-out',
 } as const;
 
@@ -18,7 +18,7 @@ export const PageSectionEnum = {
   Schedule: `#${SECTION_ID.Schedule}`,
   Competition: `#${SECTION_ID.Competition}`,
   Sponsorship: `#${SECTION_ID.Sponsorship}`,
-  ThemeExhibition: `#${SECTION_ID.ThemeExhibition}`,
+  Visa: `#${SECTION_ID.Visa}`,
   TryOut: `#${SECTION_ID.TryOut}`,
 } as const;
 

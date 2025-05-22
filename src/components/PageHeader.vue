@@ -60,7 +60,6 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import LangButton from './LangButton.vue'
-import IconLogo from '@/components/icons/IconLogo.vue'
 import NavMenubar from './NavMenubar.vue'
 import { SECTION_ID } from '@/types/page_section'
 
@@ -101,10 +100,10 @@ const nav = computed(() => [
         name: t('page_tabs.involved_tab_02'),
         path: `#${SECTION_ID.Visa}`,
       },
-      // {
-      //   name: t('page_tabs.involved_tab_03'),
-      //   path: `#${SECTION_ID.TryOut}`,
-      // },
+      {
+        name: t('page_tabs.involved_tab_03'),
+        path: `#${SECTION_ID.Forum}`,
+      },
     ],
   },
   { name: t('header.news'), path: '/news', subNav: [] },

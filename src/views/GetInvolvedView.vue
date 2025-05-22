@@ -46,6 +46,7 @@
         </div>
       </div>
       <GetInvolvedVisa v-if="activeTab === PageSectionEnum.Visa" />
+      <GetInvolvedForum v-if="activeTab === PageSectionEnum.Forum" />
 
       <!-- Temp Hide -->
       <!-- <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
@@ -66,13 +67,13 @@
 </template>
 <script lang="ts" setup>
 import { PageSectionEnum, type PageValue, SECTION_ID } from '@/types/page_section'
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import BaseTitle from '@/components/BaseTitle.vue'
 import PageTab from '@/components/PageTab.vue'
 import GetInvolvedVisa from '@/components/GetInvolvedVisa.vue'
-
+import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
 const { t } = useI18n()
 
 const tabs = computed(() => [
@@ -83,6 +84,10 @@ const tabs = computed(() => [
   {
     label: t('page_tabs.involved_tab_02'),
     value: PageSectionEnum.Visa,
+  },
+  {
+    label: t('page_tabs.involved_tab_03'),
+    value: PageSectionEnum.Forum,
   },
 ])
 const router = useRouter()

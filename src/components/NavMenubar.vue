@@ -30,7 +30,6 @@ function handleHashRoute(link: { name: string; path: string }, pageName: string)
   const hashPath = pageName.toLowerCase()
   const pageURL = createFullPath(hashPath)
   const newTab = `${pageURL}${link.path || ''}`
-  console.log({ newTab })
   window.open(newTab, '_blank')
 }
 function handleTriggerClick(item: NavItem) {

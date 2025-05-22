@@ -22,6 +22,7 @@ export default {
     competition_tab_02: '日程',
     involved_tab_01: '贊助商',
     involved_tab_02: '簽證',
+    involved_tab_03: '論壇',
   },
   footer: {
     address: '展館地圖',
@@ -373,6 +374,29 @@ export default {
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=ch',
     visa_arrival_TSA: '松山機場',
     visa_arrival_TSA_link: 'https://www.tsa.gov.tw/layout?id=421f4be9-cb97-4993-a181-520cf59de332',
+    visa_attachment_title: '簽證資訊檔案',
+    visa_attachment_link: '下載',
+    forum_title: '2025國際技職教育及培訓研討會',
+    forum_desc: `<p>誠摯邀請各界先進踴躍參與</p><br>
+    <p>為促進職業技術教育和訓練之發展與國際交流，誠摯邀請您參與即將於2025年11月27日（星期四）下午13:30至17:00在臺北南港展覽館一館舉行的「2025國際技職教育及培訓研討會」！</p>
+    <p>本次「2025國際技職教育及培訓研討會」特別邀請重量級講者：亞太經合會（APEC）人力資源發展工作小組（HRDWG）美國籍總主席 Zhao Li，分享國際職業訓練現況趨勢及產業發展。同時，我們邀請國內專家學者一同進行交流對談。</p>`,
+    forum_desc_aria_label: '2025國際技職教育及培訓研討會',
+    forum_conference_capacity: '參加者名額',
+    forum_conference_capacity_value:
+      '正取100位，候補20位 (依報名先後順序錄取，額滿將提前截止報名。)',
+    forum_conference_date: '報名日期',
+    forum_conference_date_value: '2025年6月27日',
+    forum_conference_application: '報名方式',
+    forum_conference_application_value: '線上報名',
+    forum_conference_contact: '聯絡人',
+    forum_conference_contact_value: `陳慧玲 (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+    forum_notice_title: '注意事項：',
+    forum_notice_desc: `
+    <ul>
+    <li>本活動時間、地點或講者安排如有異動，將依最新公告為準。</li>
+    <li>懇請有意參與者留意後續發布之詳細資訊。</li>
+    </ul>
+    `,
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
   },

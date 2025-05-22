@@ -280,3 +280,50 @@
     max-width: 100%;
   }
 }
+
+@mixin listStyle() {
+  :deep(a) {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  :deep(p) {
+    line-height: normal;
+    font-size: 0.18rem;
+    text-align: justify;
+    &:not(:last-child) {
+      margin-bottom: 0.08rem;
+    }
+  }
+  :deep(ol),
+  :deep(ul) {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 2em;
+    font-size: 0.18rem;
+    margin: 0.5em 0;
+  }
+
+  :deep(ol li),
+  :deep(ul li) {
+    list-style: decimal;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  :deep(ul li) {
+    list-style: disc;
+  }
+  @include mobile {
+    :deep(ol),
+    :deep(ul) {
+      li {
+        font-size: 0.16rem;
+      }
+    }
+    :deep(p) {
+      font-size: 0.16rem;
+    }
+  }
+}

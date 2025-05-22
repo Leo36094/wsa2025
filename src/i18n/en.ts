@@ -22,7 +22,7 @@ export default {
     competition_tab_02: 'Schedule',
     involved_tab_01: 'Sponsorship',
     involved_tab_02: 'VISA',
-    involved_tab_03: 'Try A Skill',
+    involved_tab_03: 'Forum',
   },
   footer: {
     address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
@@ -402,11 +402,32 @@ The skilled painter and decorator offers a range of services, from interpreting 
     visa_arrival_TPE: 'Taiwan Taoyuan International Airport',
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=en',
     visa_arrival_TSA: 'Taiwan Songshan Airport',
-    visa_arrival_TSA_link: 'https://www.tsa.gov.tw/layout?id=35b0e83f-7d97-47ef-a076-b360b589c1b5&culture=2',
-
-    theme_exhibition: 'Theme Exhibition',
-    try_out: 'Try A Skill',
-    coming_soon: 'Coming soon',
+    visa_arrival_TSA_link:
+      'https://www.tsa.gov.tw/layout?id=35b0e83f-7d97-47ef-a076-b360b589c1b5&culture=2',
+    visa_attachment_title: 'Visa Information File',
+    visa_attachment_link: 'Download',
+    forum_title: 'International TVET Conference 2025',
+    forum_desc: `<p><strong>We extend a warm invitation to esteemed professionals across sectors to join us.</strong></p><br>
+    <p>To promote the development of Technical and Vocational Education and Training (TVET) and enhance international exchange, we sincerely invite you to join the upcoming <strong>“International TVET Conference 2025”</strong>, to be held on <strong>Thursday, 27 November 2025</strong>, from <strong>13:30 to 17:00</strong> at <strong>TaiNEX 1 (Taipei Nangang Exhibition Center, Hall 1)</strong>, Taipei, Taiwan.</p>
+    <p>This conference proudly features a keynote speech by <strong>Zhao Li</strong>, the U.S.-based <strong>Lead Shepherd of the APEC Human Resources Development Working Group (HRDWG)</strong>, who will share insights into global trends in vocational training and industrial development. In addition, prominent domestic experts and scholars will be invited to join an engaging panel discussion.</p>`,
+    forum_desc_aria_label: 'International TVET Conference 2025',
+    forum_conference_capacity: 'Participant Quota',
+    forum_conference_capacity_value:
+      '100 confirmed spots, plus 20 on the waiting list. (Registration is on a first-come, first-served basis and will close once capacity is reached.)',
+    forum_conference_date: 'Registration Opens',
+    forum_conference_date_value: '27 June 2025',
+    forum_conference_application: 'Registration Method',
+    forum_conference_application_value: 'Online registration',
+    forum_conference_contact: 'Contact Person',
+    forum_conference_contact_value:
+      `Ms. Gabi Chan (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+    forum_notice_title: 'Important Notes',
+    forum_notice_desc: `
+    <ul>
+    <li>The event’s schedule, venue, and speaker lineup are subject to change. Please refer to the latest official announcements for updates.</li>
+    <li>Interested participants are encouraged to monitor forthcoming updates for complete details.</li>
+    </ul>
+    `,
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

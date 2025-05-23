@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="section-forum"
-    aria-labelledby="forum-title"
-    data-aos="fade-up"
-  >
+  <div class="section-forum" aria-labelledby="forum-title" data-aos="fade-up">
     <BaseTitle class="section-forum__title" :title="$t('involved.forum_title')" />
     <p
       class="section-forum__desc"
@@ -17,6 +13,7 @@
         <div class="value" v-if="!item.insertHTML">{{ item.value }}</div>
         <div class="value" v-if="item.insertHTML" v-html="item.value" />
       </div>
+      <p class="section-forum__conference-note">{{ $t('involved.forum_conference_note') }}</p>
     </div>
     <div class="section-forum__notice">
       <h3>{{ $t('involved.forum_notice_title') }}</h3>
@@ -27,7 +24,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
-import { SECTION_ID } from '@/types/page_section'
 
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
@@ -82,7 +78,7 @@ $label-bg: #c8e14b;
         padding: 0.06rem 0.12rem;
         font-weight: 700;
         border-radius: 1rem;
-        flex-basis: 1.85rem;
+        flex-basis: 1.9rem;
         flex-shrink: 0;
         text-align: center;
         margin-right: 0.16rem;
@@ -96,7 +92,6 @@ $label-bg: #c8e14b;
         :deep(a) {
           cursor: pointer;
           margin-left: 0.04rem;
-          text-decoration: none;
         }
       }
     }

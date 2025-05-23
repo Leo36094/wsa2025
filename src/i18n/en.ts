@@ -357,6 +357,8 @@ The skilled painter and decorator offers a range of services, from interpreting 
     sponsorship: 'Sponsorship',
     sponsorship_desc:
       'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
+    sponsorship_desc_appendix:
+      'To involved, please visit<br> <a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank">https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802</a>',
     sponsorship_reach: 'You Can Reach',
     sponsorship_visitor: 'Competitors',
     sponsorship_government: 'Industry and Government Partners',
@@ -421,6 +423,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     forum_conference_contact: 'Contact Person',
     forum_conference_contact_value:
       `Ms. Gabi Chan (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+    forum_conference_note: 'Agenda & Full Registration Details: To be announced—please stay tuned!',
     forum_notice_title: 'Important Notes',
     forum_notice_desc: `
     <ul>

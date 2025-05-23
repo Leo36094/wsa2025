@@ -344,6 +344,7 @@ export default {
     sponsorship: '贊助商',
     sponsorship_desc:
       '成為亞洲最大技術與職業技能競賽的贊助商，與來自 30 多個亞洲國家的多元群眾建立聯繫，包括當地參觀者、學生、家長、政府與私人機構、產業夥伴及社群。您的贊助將帶來無與倫比的曝光機會，並支持下一代技術專業人才的培育。',
+    sponsorship_desc_appendix: '更多贊助計劃說明請參考<a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank">【2025亞洲技能競賽廠商贊助原則修正版】</a>',
     sponsorship_reach: '觸及範圍',
     sponsorship_visitor: '國際參賽者',
     sponsorship_government: '以上產業及政府協力夥伴',
@@ -379,7 +380,8 @@ export default {
     forum_title: '2025國際技職教育及培訓研討會',
     forum_desc: `<p>誠摯邀請各界先進踴躍參與</p><br>
     <p>為促進職業技術教育和訓練之發展與國際交流，誠摯邀請您參與即將於2025年11月27日（星期四）下午13:30至17:00在臺北南港展覽館一館舉行的「2025國際技職教育及培訓研討會」！</p>
-    <p>本次「2025國際技職教育及培訓研討會」特別邀請重量級講者：亞太經合會（APEC）人力資源發展工作小組（HRDWG）美國籍總主席 Zhao Li，分享國際職業訓練現況趨勢及產業發展。同時，我們邀請國內專家學者一同進行交流對談。</p>`,
+    <p>本次「2025國際技職教育及培訓研討會」特別邀請重量級講者：亞太經合會（APEC）人力資源發展工作小組（HRDWG）美國籍總主席 Zhao Li，分享國際職業訓練現況趨勢及產業發展。同時，我們邀請國內專家學者一同進行交流對談。</p>
+    `,
     forum_desc_aria_label: '2025國際技職教育及培訓研討會',
     forum_conference_capacity: '參加者名額',
     forum_conference_capacity_value:
@@ -390,6 +392,7 @@ export default {
     forum_conference_application_value: '線上報名',
     forum_conference_contact: '聯絡人',
     forum_conference_contact_value: `陳慧玲 (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+    forum_conference_note: '詳細議程與報名資訊將另行公告，敬請密切留意。',
     forum_notice_title: '注意事項：',
     forum_notice_desc: `
     <ul>

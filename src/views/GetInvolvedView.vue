@@ -15,6 +15,11 @@
         <p class="section-sponsor__desc" data-aos="fade-up">
           {{ $t('involved.sponsorship_desc') }}
         </p>
+        <p
+          class="section-sponsor__desc"
+          data-aos="fade-up"
+          v-html="$t('involved.sponsorship_desc_appendix')"
+        ></p>
 
         <div class="section-sponsor__reach" data-aos="fade-up">
           <h3 class="section-sponsor__reach-title">{{ $t('involved.sponsorship_reach') }}</h3>
@@ -145,6 +150,9 @@ onMounted(() => {
     :deep(.page-tab-container) {
       margin: 0.16rem auto;
     }
+  }
+  :deep(a) {
+    text-decoration: underline;
   }
   .section-container {
     @include flexCenter(column);

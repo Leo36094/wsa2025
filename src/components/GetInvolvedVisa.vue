@@ -140,7 +140,6 @@ $block-bg-color: #fafcf2;
       background-color: #c8e14b;
       color: $black-primary;
       border: 1px solid $black-primary;
-      text-decoration: none;
     }
   }
 }

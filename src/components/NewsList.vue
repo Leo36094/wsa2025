@@ -69,10 +69,10 @@ $text-date-color: #899ca4;
     &__img {
       width: 6.4rem;
       border-radius: 0.08rem;
-      height: 2.97rem;
+      height: 3.6rem;
       background-color: #586566;
       margin-bottom: 0.23rem;
-      @include bgCenter(cover);
+      @include bgCenter(100% auto);
     }
     &__title {
       font-size: 0.28rem;
@@ -115,7 +115,6 @@ $text-date-color: #899ca4;
       margin-bottom: 0;
       &__img {
         width: 6.64rem;
-        height: 2.97rem;
         margin: 0 auto 0.23rem auto;
       }
       &__title {

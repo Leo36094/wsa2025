@@ -21,7 +21,7 @@ const titles = {
       id: 2,
     },
     {
-      title: 'The 3<sup>rd </sup>  Worldskills Asia Competition skills ',
+      title: 'The 3<sup>rd </sup>  Worldskills Asia Competition Skills ',
       image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
       date: '21 Jan 2025',
       id: 1,

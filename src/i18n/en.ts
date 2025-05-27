@@ -358,13 +358,13 @@ The skilled painter and decorator offers a range of services, from interpreting 
     sponsorship_desc:
       'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
     sponsorship_desc_appendix:
-      'To involved, please visit<br> <a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank">https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802</a>',
+      'To involved, please vist <br> <a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank"><strong>Workforce Development Agency, Ministry of Labor</strong></a>',
     sponsorship_reach: 'You Can Reach',
     sponsorship_visitor: 'Competitors',
     sponsorship_government: 'Industry and Government Partners',
     sponsorship_educational: 'Participating Educational Institutions',
     sponsorship_contact: 'Contact information',
-    visa_title: 'Entry Application Categories for delegations',
+    visa_title: 'Entry Application Categories for Delegations',
     visa_desc:
       'Before the competition, the entry application process for delegations is classified into three categories, as outlined below:',
     visa_exemption: 'Visa-Exempt Entry',
@@ -407,7 +407,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     visa_arrival_TSA_link:
       'https://www.tsa.gov.tw/layout?id=35b0e83f-7d97-47ef-a076-b360b589c1b5&culture=2',
     visa_attachment_title: 'Visa Information File',
-    visa_attachment_link: 'Download',
+    visa_attachment_link: 'DOWNLOAD',
     forum_title: 'International TVET Conference 2025',
     forum_desc: `<p><strong>We extend a warm invitation to esteemed professionals across sectors to join us.</strong></p><br>
     <p>To promote the development of Technical and Vocational Education and Training (TVET) and enhance international exchange, we sincerely invite you to join the upcoming <strong>“International TVET Conference 2025”</strong>, to be held on <strong>Thursday, 27 November 2025</strong>, from <strong>13:30 to 17:00</strong> at <strong>TaiNEX 1 (Taipei Nangang Exhibition Center, Hall 1)</strong>, Taipei, Taiwan.</p>

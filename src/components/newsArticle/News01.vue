@@ -1,6 +1,6 @@
 <template>
   <template v-if="locale === 'en'">
-    <h2 class="news-inner-title">The 3<sup>rd </sup> Worldskills Asia Competition skills</h2>
+    <h2 class="news-inner-title">The 3<sup>rd </sup> Worldskills Asia Competition Skills</h2>
     <div class="news-inner-content">
       <p>
         The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibition Center

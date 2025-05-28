@@ -368,15 +368,15 @@ The skilled painter and decorator offers a range of services, from interpreting 
     visa_desc:
       'Before the competition, the entry application process for delegations is classified into three categories, as outlined below:',
     visa_exemption: 'Visa-Exempt Entry',
-    visa_exemption_desc: `<p>Competitors from visa-free countries may enter with a valid passport. Please ensure that the passport is valid for the required period and check the visa-free duration. Refer to the VISA information for entry categories of visa-exempt countries. For countries with a 14-day visa-free entry, if the stay exceeds 14 days, please follow the (project) e-visa application process.</p>
+    visa_exemption_desc: `<p>Competitors from visa-free countries may enter with a valid passport. Please ensure that the passport is valid for the required period and check the visa-free duration. Refer to the VISA information for entry categories of visa-exempt countries. For countries with a 14-day visa-free entry, if the stay exceeds 14 days, please follow the (project) e-Visa application process.</p>
       <p>For more details for Visa-Exempt Entry, please visit the <a href="https://www.boca.gov.tw/cp-149-4486-7785a-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
       `,
     visa_e_visa: 'e-Visa',
-    visa_e_visa_desc: `<p>Participants from these countries can apply for an e-visa online. The list of eligible countries can be found in the VISA Information for entry categories of e-Visa countries.</p>
+    visa_e_visa_desc: `<p>Participants from these countries can apply for an e-Visa online. The list of eligible countries can be found in the VISA Information for entry categories of e-Visa countries.</p>
     <ol>
       <li>The e-Visa is valid for 3 months, and applicants must ensure their passport is valid for at least 6 months at the time of application.</li>
-      <li>Entry must be completed within the e-visa validity period.</li>
-      <li>It is recommended that delegations apply for an e-visa starting September 2025 to ensure sufficient validity.</li>
+      <li>Entry must be completed within the e-Visa validity period.</li>
+      <li>It is recommended that delegations apply for an e-Visa starting September 2025 to ensure sufficient validity.</li>
       <li>Carefully read the instructions on the official website of the Ministry of Foreign Affairs to avoid application errors that could result in rejection. Rejected applications are non-refundable.</li>
     </ol>
       <p>For more details on e-visas, please visit the <a href="https://www.boca.gov.tw/cp-181-4493-881cd-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
@@ -386,14 +386,14 @@ The skilled painter and decorator offers a range of services, from interpreting 
     <p>Application Procedure for e-Visa Assistance:</p>
       <ol>
         <li>By the end of July, delegations must confirm whether they require the e-Visa assistance for e-Visa application. (Instead, delegations may apply for the appropriate visa at Chinese Taipei overseas missions)</li>
-        <li>Upon approval, delegations will receive an invitation letter from the organizer starting October 2025. Using the E-code provided in the invitation letter, delegations should then complete and submit <a href="https://visawebapp.boca.gov.tw" target="_blank">the eVisa application form online</a>.
+        <li>Upon approval, delegations will receive an invitation letter from the organizer starting October 2025. Using the E-code provided in the invitation letter, delegations should then complete and submit <a href="https://visawebapp.boca.gov.tw" target="_blank">the e-Visa application form online</a>.
           <ul style="margin: 0;">
           <li>The e-Visa is valid for 3 months, and applicants must ensure their passport is valid for at least 6 months at the time of application.</li>
           </ul>
         </li>
-        <li>Applicants must pay the required visa fees during the online application process. Please refer to the <a href="https://www.boca.gov.tw/cp-160-7204-78395-2.html" target="_blank">Bureau of Consular Affairs website</a> for visa fees. Please read the official application instructions carefully to avoid errors that may result in rejection. Rejected applications are non-refundable. Once the application is approved, applicants will receive an email with the visa approval notice and a link to print the e-visa.
+        <li>Applicants must pay the required visa fees during the online application process. Please refer to the <a href="https://www.boca.gov.tw/cp-160-7204-78395-2.html" target="_blank">Bureau of Consular Affairs website</a> for visa fees. Please read the official application instructions carefully to avoid errors that may result in rejection. Rejected applications are non-refundable. Once the application is approved, applicants will receive an email with the visa approval notice and a link to print the e-Visa.
           <ul style="margin: 0;">
-            <li>When checking in for the flight, the eVisa holder is required to present a printed e-visa and the official invitation letter issued by the organizer for verification.</li>
+            <li>When checking in for the flight, the e-Visa holder is required to present a printed e-Visa and the official invitation letter issued by the organizer for verification.</li>
           </ul>
         </li>
       </ol>

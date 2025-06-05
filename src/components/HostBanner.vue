@@ -69,7 +69,7 @@ const hostImages = Array.from(
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
-    text-align: justify;
+    text-align: left;
     .welcome-desc__link {
       display: block;
       text-decoration: underline;

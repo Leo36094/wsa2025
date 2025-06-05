@@ -61,7 +61,7 @@ const competitionImages = Array.from(
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
-    text-align: justify;
+    text-align: left;
   }
 }
 .second-slide {

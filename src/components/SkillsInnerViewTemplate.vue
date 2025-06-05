@@ -242,7 +242,7 @@ const swiperConfig = {
           font-weight: 400;
           max-height: 4rem;
           overflow: auto;
-          text-align: justify;
+          text-align: left;
         }
       }
       .gallery-image {
@@ -334,7 +334,7 @@ const swiperConfig = {
             margin-bottom: 0.16rem;
           }
           .copy {
-            text-align: justify;
+            text-align: left;
             max-height: 100%;
           }
         }

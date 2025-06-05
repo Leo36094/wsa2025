@@ -108,7 +108,8 @@ const baseURL = import.meta.env.BASE_URL
       width: 4.8rem;
       font-size: 0.16rem;
       padding: 0.56rem;
-      text-align: justify;
+      text-align: left;
+      letter-spacing: 0.5px;
     }
   }
   .photo-row {

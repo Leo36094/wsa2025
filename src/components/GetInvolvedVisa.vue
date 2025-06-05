@@ -102,7 +102,7 @@ $block-bg-color: #fafcf2;
     :deep(p) {
       line-height: normal;
       font-size: 0.18rem;
-      text-align: justify;
+      text-align: left;
       &:not(:last-child) {
         margin-bottom: 0.08rem;
       }

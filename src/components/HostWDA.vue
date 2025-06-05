@@ -43,7 +43,7 @@ import { SECTION_ID } from '@/types/page_section'
       width: 100%;
       height: 100%;
       font-size: 0.16rem;
-      text-align: justify;
+      text-align: left;
     }
   }
 }

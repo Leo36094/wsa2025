@@ -319,7 +319,7 @@ $pin-color: $green-primary;
         }
         .info-bar__desc-container {
           margin-left: 0;
-          text-align: justify;
+          text-align: left;
         }
         .info-bar__img {
           width: 2.72rem;

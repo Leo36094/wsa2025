@@ -51,7 +51,7 @@ const sections = computed(() => [
     border-radius: 0.1rem;
     .section {
       color: $black-primary;
-      text-align: justify;
+      text-align: left;
       &:not(:last-child) {
         margin-bottom: 0.4rem;
       }

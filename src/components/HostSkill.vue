@@ -143,7 +143,7 @@ const videoURL = computed(() =>
       .desc {
         color: #fff;
         font-size: 0.16rem;
-        text-align: justify;
+        text-align: left;
 
         &:not(:last-child) {
           margin-bottom: 0.16rem;

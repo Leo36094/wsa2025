@@ -164,7 +164,7 @@ onMounted(() => {
       font-size: 0.18rem;
       color: $black-primary;
       margin-bottom: 0.16rem;
-      text-align: justify;
+      text-align: left;
     }
     &__reach {
       @include flexCenter(column);

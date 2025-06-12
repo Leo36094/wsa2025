@@ -157,7 +157,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     schedule_activity: 'Activity',
     schedule_date1: 'Nov. 25 Tue',
     schedule_code1: 'C-2',
-    schedule_activity1: 'Arrival of all Delegates, Welcome Party',
+    schedule_activity1: 'Arrival of all Delegates, Gala Dinner',
     schedule_date2: 'Nov. 26 Wed',
     schedule_code2: 'C-1',
     schedule_activity2: 'Familiarization Day, Opening Ceremony',

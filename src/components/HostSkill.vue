@@ -11,7 +11,7 @@
       </div>
       <div class="copy-col" tabindex="0">
         <h2 id="skill-title" class="title" v-html="$t('host.skill_title')"></h2>
-        <p class="desc">{{ $t('host.skill_desc') }}</p>
+        <p class="desc" v-html="$t('host.skill_desc')"></p>
         <p class="desc link" v-html="$t('host.skill_link_text')"></p>
       </div>
       <div class="image-col" aria-hidden="true">

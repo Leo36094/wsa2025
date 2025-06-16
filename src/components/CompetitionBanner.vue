@@ -13,7 +13,7 @@
         <h2 class="title">{{ $t('competition.title_tag') }}</h2>
         <h2 class="subtitle">{{ $t('competition.title_competition') }}</h2>
       </div>
-      <p class="welcome-desc">{{ $t('competition.content') }}</p>
+      <p class="welcome-desc" v-html="$t('competition.content')"></p>
     </div>
     <div class="image-row" ref="bottomRow">
       <div data-aos="fade-up" class="bottom-rest" ref="bottomRest">
@@ -42,6 +42,7 @@ const competitionImages = Array.from(
   .welcome-img {
     width: 4.8rem;
     height: 3.66rem;
+    align-self: flex-end;
     @include bgCenter(100% 100%);
     background-image: url('/images/host/wsa.png');
   }
@@ -56,12 +57,13 @@ const competitionImages = Array.from(
       font-size: 0.48rem;
     }
   }
-  .welcome-desc {
+  :deep(.welcome-desc) {
     width: 5.2rem;
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
     text-align: left;
+    line-height: 1.5;
   }
 }
 .second-slide {
@@ -140,7 +142,7 @@ const competitionImages = Array.from(
     .welcome-title {
       display: flex;
       align-items: center;
-      margin-right: 0;
+      margin-left: 0;
       margin-bottom: 0.24rem;
       .title {
         margin-right: 0.05rem;
@@ -151,7 +153,7 @@ const competitionImages = Array.from(
         font-weight: 700;
       }
     }
-    .welcome-desc {
+    :deep(.welcome-desc) {
       font-size: 0.16rem;
       width: 100%;
       margin: 0 auto;

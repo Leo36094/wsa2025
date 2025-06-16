@@ -16,17 +16,18 @@
         <h2 class="title">{{ $t('host.welcome') }}</h2>
         <h2 class="subtitle">{{ $t('host.welcome_sub') }}</h2>
       </div>
-      <p class="welcome-desc">
-        {{ $t('host.content') }}
+      <div class="welcome-desc">
+        <p v-html="$t('host.content')"></p>
         <a
           class="welcome-desc__link"
           href="https://eng.taiwan.net.tw/"
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="$t('host.visit_website')"
-          >https://eng.taiwan.net.tw/</a
         >
-      </p>
+          https://eng.taiwan.net.tw/</a
+        >
+      </div>
     </div>
     <div class="image-row" ref="bottomRow" role="region" aria-label="Bottom Row Images">
       <div data-aos="fade-up" data-aos-offset="0" class="bottom-rest" ref="bottomRest">
@@ -65,13 +66,14 @@ const hostImages = Array.from(
     font-size: 0.48rem;
   }
   .welcome-desc {
-    /* width: 5.2rem; */
     font-size: 0.16rem;
     font-weight: 400;
     margin-right: auto;
     text-align: left;
+    > p {
+      display: inline;
+    }
     .welcome-desc__link {
-      display: block;
       text-decoration: underline;
     }
   }
@@ -242,6 +244,9 @@ const hostImages = Array.from(
       font-size: 0.16rem;
       width: 100%;
       margin: 0 auto;
+      > p {
+        display: block;
+      }
     }
   }
   .second-slide {

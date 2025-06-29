@@ -78,7 +78,7 @@ $label-bg: #c8e14b;
         padding: 0.06rem 0.12rem;
         font-weight: 700;
         border-radius: 1rem;
-        flex-basis: 1.9rem;
+        flex-basis: 1.95rem;
         flex-shrink: 0;
         text-align: center;
         margin-right: 0.16rem;

@@ -1,7 +1,7 @@
 const titles = {
   zh: [
     {
-      title: '2025亞洲技能競賽在台北',
+      title: '2025亞洲技能競賽在臺北',
       image: `${import.meta.env.BASE_URL}images/news/news_02.jpg`,
       date: '2025年4月26日',
       id: 2,

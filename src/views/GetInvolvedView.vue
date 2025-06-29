@@ -52,7 +52,7 @@
       </div>
       <GetInvolvedVisa v-if="activeTab === PageSectionEnum.Visa" />
       <GetInvolvedForum v-if="activeTab === PageSectionEnum.Forum" />
-
+      <GetInvolvedTour v-if="activeTab === PageSectionEnum.Toruisum" />
       <!-- Temp Hide -->
       <!-- <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
         <BaseTitle class="get-involved__title" :title="$t('involved.theme_exhibition')" />
@@ -79,6 +79,7 @@ import BaseTitle from '@/components/BaseTitle.vue'
 import PageTab from '@/components/PageTab.vue'
 import GetInvolvedVisa from '@/components/GetInvolvedVisa.vue'
 import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
+import GetInvolvedTour from '@/components/GetInvolvedTour.vue'
 const { t } = useI18n()
 
 const tabs = computed(() => [
@@ -93,6 +94,10 @@ const tabs = computed(() => [
   {
     label: t('page_tabs.involved_tab_03'),
     value: PageSectionEnum.Forum,
+  },
+  {
+    label: t('page_tabs.involved_tab_04'),
+    value: PageSectionEnum.Toruisum,
   },
 ])
 const router = useRouter()

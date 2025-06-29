@@ -23,6 +23,7 @@ export default {
     involved_tab_01: '贊助商',
     involved_tab_02: '簽證',
     involved_tab_03: '論壇',
+    involved_tab_04: '參加/團體導覽資訊',
   },
   footer: {
     address: '展館地圖',
@@ -344,7 +345,8 @@ export default {
     sponsorship: '贊助商',
     sponsorship_desc:
       '成為亞洲最大技術與職業技能競賽的贊助商，與來自 30 多個亞洲國家的多元群眾建立聯繫，包括當地參觀者、學生、家長、政府與私人機構、產業夥伴及社群。您的贊助將帶來無與倫比的曝光機會，並支持下一代技術專業人才的培育。',
-    sponsorship_desc_appendix: '更多贊助計劃說明請參考<a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank">【2025亞洲技能競賽廠商贊助原則修正版】</a>',
+    sponsorship_desc_appendix:
+      '更多贊助計劃說明請參考<a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank">【2025亞洲技能競賽廠商贊助原則修正版】</a>',
     sponsorship_reach: '觸及範圍',
     sponsorship_visitor: '國際參賽者',
     sponsorship_government: '以上產業及政府協力夥伴',
@@ -391,7 +393,7 @@ export default {
     forum_conference_application: '報名方式',
     forum_conference_application_value: '線上報名',
     forum_conference_contact: '聯絡人',
-    forum_conference_contact_value: `陳慧玲 (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+    forum_conference_contact_value: `黃靜雅 <a href="mailto:(amy_huang{'@'}nasme.org.tw" target="_blank">(amy_huang{'@'}nasme.org.tw</a>)`,
     forum_conference_note: '詳細議程與報名資訊將另行公告，敬請密切留意。',
     forum_notice_title: '注意事項：',
     forum_notice_desc: `
@@ -402,6 +404,29 @@ export default {
     `,
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
+    tour_title: '參加/團體導覽資訊',
+    tour_article_main_title: '🎉 2025亞洲技能競賽 WorldSkills Asia Taipei 2025 團體導覽熱烈開放報名！',
+    tour_article_main_desc: `
+    <div class='group'>
+    <p>亞洲最大技能競技盛事即將登場！</p>
+    <p>來自全亞洲的頂尖選手🔥超越極限🔥齊聚一堂。</p>
+    <p>邀請您親身感受國際級賽事緊張熱鬧的氣氛，</p>
+    <p>一同為國手加油打氣，做伙挺台灣！</p>
+    </div>
+    <p class='group'>立即卡位享有精彩賽事、團體導覽、接駁服務、技能探索，還有闖關活動拿好禮！</p>
+    <div class="group">
+    <p>📍 活動地點：南港展覽館1館及2館</p>
+    <p>📅 導覽期間：11/27（四）至11/29（六）</p>
+    <p>💰 免費參觀．限時開放！</p>
+    </div>
+    <p>團體導覽亮點：</p>
+    <p> 🔸 國際級技能賽事現場直擊</p>
+    <p> 🔸 免費接駁服務</p>
+    <p> 🔸 雙語導覽服務</p>
+    <p> 🔸 限量版宣導品</p>
+    <p> 🔸 美味輕食餐盒</p>
+    <p> 👉 手刀預約報名：<a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">連結</a></p>
+    `,
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

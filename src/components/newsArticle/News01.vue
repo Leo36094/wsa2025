@@ -77,7 +77,7 @@
     <h2 class="news-inner-title">第三屆亞洲技能競賽職類公布</h2>
     <div class="news-inner-content">
       <p>
-        第三屆亞洲技能競賽將於2025年11月27日至29日在<strong>台北南港展覽館</strong>舉行。本次賽事將包含<strong>36項正式職類、8項青少年職類及4項示範職類</strong>，吸引來自亞洲各地的專家與選手參與。
+        第三屆亞洲技能競賽將於2025年11月27日至29日在<strong>臺北南港展覽館</strong>舉行。本次賽事將包含<strong>36項正式職類、8項青少年職類及4項示範職類</strong>，吸引來自亞洲各地的專家與選手參與。
       </p>
       <img
         src="/images/news/news_01.jpg"

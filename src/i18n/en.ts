@@ -23,6 +23,7 @@ export default {
     involved_tab_01: 'Sponsorship',
     involved_tab_02: 'VISA',
     involved_tab_03: 'Forum',
+    involved_tab_04: 'Guided Group Tours Registration',
   },
   footer: {
     address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
@@ -358,7 +359,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     title: 'Get Involved',
     sponsorship: 'Sponsorship',
     sponsorship_desc:
-      'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor & connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government & private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
+      'Be part of the largest Technical and Vocational Skills Competition in Asia as a sponsor and connect with diverse audiences from 30+ countries across Asia, including local visitors, students, parents, government and private entities, industry partners, and communities. Your sponsorship offers unmatched exposure and a chance to support the next generation of skilled professionals.',
     sponsorship_desc_appendix:
       'To involved, please vist <br> <a href="https://www.wda.gov.tw/News_Content.aspx?n=67&s=17802" target="_blank"><strong>Workforce Development Agency, Ministry of Labor</strong></a>',
     sponsorship_reach: 'You Can Reach',
@@ -412,7 +413,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     visa_attachment_link: 'DOWNLOAD',
     forum_title: 'International TVET Conference 2025',
     forum_desc: `<p><strong>We extend a warm invitation to esteemed professionals across sectors to join us.</strong></p><br>
-    <p>To promote the development of Technical and Vocational Education and Training (TVET) and enhance international exchange, we sincerely invite you to join the upcoming <strong>“International TVET Conference 2025”</strong>, to be held on <strong>Thursday, 27 November 2025</strong>, from <strong>13:30 to 17:00</strong> at <strong>TaiNEX 1 (Taipei Nangang Exhibition Center, Hall 1)</strong>, Taipei, Taiwan.</p>
+    <p>To promote the development of Technical and Vocational Education and Training (TVET) and enhance international exchange, we sincerely invite you to join the upcoming <strong>“International TVET Conference 2025”</strong>, to be held on <strong>Thursday, 27 November 2025</strong>, from <strong>13:30 to 17:00</strong> at <strong>TaiNEX 1 (Taipei Nangang Exhibition Center, Hall 1), Taipei, Taiwan.</strong></p>
     <p>This conference proudly features a keynote speech by <strong>Zhao Li</strong>, the U.S.-based <strong>Lead Shepherd of the APEC Human Resources Development Working Group (HRDWG)</strong>, who will share insights into global trends in vocational training and industrial development. In addition, prominent domestic experts and scholars will be invited to join an engaging panel discussion.</p>`,
     forum_desc_aria_label: 'International TVET Conference 2025',
     forum_conference_capacity: 'Participant Quota',
@@ -424,7 +425,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     forum_conference_application_value: 'Online registration',
     forum_conference_contact: 'Contact Person',
     forum_conference_contact_value:
-      `Ms. Gabi Chan (<a href="mailto:gabi_chan{'@'}nasme.org.tw" target="_blank">gabi_chan{'@'}nasme.org.tw</a>)`,
+      `Ms. Amy Huang (<a href="mailto:amy_huang{'@'}nasme.org.tw" target="_blank">amy_huang{'@'}nasme.org.tw</a>)`,
     forum_conference_note: 'Agenda & Full Registration Details: To be announced—please stay tuned!',
     forum_notice_title: 'Important Notes',
     forum_notice_desc: `
@@ -432,6 +433,28 @@ The skilled painter and decorator offers a range of services, from interpreting 
     <li>The event’s schedule, venue, and speaker lineup are subject to change. Please refer to the latest official announcements for updates.</li>
     <li>Interested participants are encouraged to monitor forthcoming updates for complete details.</li>
     </ul>
+    `,
+    tour_title: 'Guided Group Tours Registration',
+    tour_article_main_title: '🎉 WorldSkills Asia Taipei 2025 – Guided Group Tours Registration Now Open!',
+    tour_article_main_desc: `
+    <p class="group">Asia’s largest skills competition is coming soon! </p>
+    <div class="group">
+    <p>Asia’s top competitors are gathering in one place to🔥 break boundaries and push their limits. 🔥</p>
+    <p>We warmly invite you to experience the intense and exciting atmosphere of this international event firsthand—come cheer on Team Taiwan and be part of the action!</p>
+    </div>
+    <p class="group">Register now to enjoy exciting competitions, guided group tours, shuttle services, skill exploration activities, and Mission-based Challenge!</p>
+    <div class="group">
+    <p>📍 Venue: Taipei Nangang Exhibition Center, Halls 1 & 2</p>
+    <p>📅 Tour Dates: November 27 (Thu) – November 29 (Sat)</p>
+    <p>💰 Free Admission · Limited-Time Offer!</p>
+    </div>
+    <p>Group Tour Highlights:</p>
+    <p> 🔸 Live access to world-class skills competitions</p>
+    <p> 🔸 Complimentary shuttle service</p>
+    <p> 🔸 Bilingual (Chinese-English) guided tours</p>
+    <p> 🔸 Exclusive giveaways</p>
+    <p> 🔸 Tasty meal boxes</p>
+    <p> 👉 Register Now: <a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">Link</a></p>
     `,
   },
   swiper: {

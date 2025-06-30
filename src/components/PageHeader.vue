@@ -104,6 +104,10 @@ const nav = computed(() => [
         name: t('page_tabs.involved_tab_03'),
         path: `#${SECTION_ID.Forum}`,
       },
+      {
+        name: t('page_tabs.involved_tab_04'),
+        path: `#${SECTION_ID.Toruisum}`,
+      },
     ],
   },
   { name: t('header.news'), path: '/news', subNav: [] },

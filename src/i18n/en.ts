@@ -460,7 +460,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     <p>📞 Contact Information</p>
     <p>Taipei Computer Association – Ms. Chen</p>
     <p>Tel: +886-4-2259-5700 ext. 519</p>
-    <p>Email: Sunny_chen@wda.gov.tw</p>
+    <p>Email: Sunny_chen{'@'}wda.gov.tw</p>
     <p> 👉 Register Now: <a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">Link</a></p>
     `,
     notice_title: 'Notice for Inbound Travelers',

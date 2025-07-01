@@ -24,6 +24,7 @@ export default {
     involved_tab_02: '簽證',
     involved_tab_03: '論壇',
     involved_tab_04: '參加/團體導覽資訊',
+    involved_tab_05: '入境須知',
   },
   footer: {
     address: '展館地圖',
@@ -427,6 +428,19 @@ export default {
     <p> 🔸 美味輕食餐盒</p>
     <p> 👉 手刀預約報名：<a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">連結</a></p>
     `,
+    notice_title: '入境須知',
+    notice_desc: ' 入境旅客攜帶動植物或其產品，請於事先洽詢臺灣農業部動植物防疫檢疫署相關檢疫規定，並於入境時誠實向海關或本署申請檢疫，以免受罰。',
+    notice_detail_block: `
+    <div class='group'>
+    請注意，旅客（含託運行李）以下種類均不得攜帶：
+    </div>
+    <p>鮮果實（如水果類、瓜果類、檳榔等）。</p>
+    <p>土壤、附著土壤之植物、植物產品或其他物品。</p>
+    <p>有害生物或活昆蟲：如病原微生物、蚱蜢、甲蟲、兜蟲(獨角仙)、鍬形蟲等。</p>
+    <p>列屬禁止輸入疫區之寄主植物或其產品。</p>
+    <p>列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
+    `,
+    notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。'
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

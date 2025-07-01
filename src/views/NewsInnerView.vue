@@ -9,12 +9,15 @@
 import { useRoute } from 'vue-router'
 import News01 from '@/components/newsArticle/News01.vue'
 import News02 from '@/components/newsArticle/News02.vue'
+import News03 from '@/components/newsArticle/News03.vue'
+
 const route = useRoute()
 const newsId = Number(route.params.id)
 
 const components: Record<number, any> = {
   1: News01,
   2: News02,
+  3: News03,
 }
 </script>
 <style lang="scss" scoped>

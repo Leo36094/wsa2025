@@ -1,10 +1,30 @@
 <template>
-  <div class="section-tour" aria-labelledby="tour-title" data-aos="fade-up">
-    <BaseTitle class="section-tour__title" :title="$t('involved.tour_title')" />
-    <img class="section-tour__dm" :src="dmImg" alt="dm" />
-    <div class="step-block" v-for="item in visaMethodList" :key="item.title">
-      <h2 class="step-block__title">{{ item.title }}</h2>
-      <div class="step-block__desc" v-html="item.desc" role="region" :aria-label="item.title"></div>
+  <div class="section-notice" aria-labelledby="notice-title" data-aos="fade-up">
+    <BaseTitle class="section-notice__title" :title="$t('involved.notice_title')" />
+    <img class="section-notice__dm" :src="dmImg.front" alt="immigration front" />
+    <img class="section-notice__dm" :src="dmImg.back" alt="immigration back" />
+    <div
+      class="section-notice__desc"
+      v-html="$t('involved.notice_desc')"
+      role="region"
+      :aria-label="$t('involved.notice_title')"
+    ></div>
+    <div class="notice-block">
+      <div
+        class="notice-block__desc"
+        v-html="noticeDetail"
+        role="region"
+        :aria-label="$t('involved.notice_title')"
+      ></div>
+    </div>
+    <div
+      class="section-notice__desc"
+      v-html="$t('involved.notice_detail_source')"
+      role="region"
+      :aria-label="$t('involved.notice_title')"
+    ></div>
+    <div class="qr-code">
+      <img src="/images/getInvolved/notice/qrcode.png" alt="qr code" />
     </div>
   </div>
 </template>
@@ -19,22 +39,25 @@ const { locale } = useI18n()
 
 const dmImg = computed(() => {
   if (locale.value === 'en') {
-    return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_en.jpg'
+    return {
+      front: import.meta.env.BASE_URL + 'images/getInvolved/notice/immigration_en_front.jpg',
+      back: import.meta.env.BASE_URL + 'images/getInvolved/notice/immigration_en_back.jpg',
+    }
   }
-  return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_zh.jpg'
+  return {
+    front: import.meta.env.BASE_URL + 'images/getInvolved/notice/immigration_zh_front.jpg',
+    back: import.meta.env.BASE_URL + 'images/getInvolved/notice/immigration_zh_back.jpg',
+  }
 })
-const visaMethodList = computed(() => [
-  {
-    title: t('involved.tour_article_main_title'),
-    desc: t('involved.tour_article_main_desc'),
-  },
-])
+const noticeDetail = computed(() => {
+  return t('involved.notice_detail_block')
+})
 </script>
 
 <style lang="scss" scoped>
 $block-bg-color: #fafcf2;
 
-.section-tour {
+.section-notice {
   width: 100%;
   a {
     text-decoration: underline;
@@ -51,7 +74,7 @@ $block-bg-color: #fafcf2;
     height: auto;
     margin-bottom: 0.24rem;
   }
-  .step-block {
+  .notice-block {
     padding: 0.24rem;
     border-radius: 0.08rem;
     background-color: $block-bg-color;
@@ -76,10 +99,16 @@ $block-bg-color: #fafcf2;
     :deep(.group) {
       margin-bottom: 0.08rem;
     }
+    .qr-code {
+      width: 136px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 @include tablet {
-  .section-tour {
+  .section-notice {
     &__title {
       margin: 0.24rem auto;
     }
@@ -92,7 +121,7 @@ $block-bg-color: #fafcf2;
   }
 }
 @include mobile {
-  .section-tour {
+  .section-notice {
     &__title {
       margin: 0 auto 0.16rem auto;
       font-size: 0.24rem;
@@ -100,7 +129,7 @@ $block-bg-color: #fafcf2;
     &__desc {
       font-size: 0.16rem;
     }
-    .step-block {
+    .notice-block {
       padding: 0.16rem;
       &__title {
         font-size: 0.16rem;

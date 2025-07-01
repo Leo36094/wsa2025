@@ -24,6 +24,7 @@ export default {
     involved_tab_02: 'VISA',
     involved_tab_03: 'Forum',
     involved_tab_04: 'Guided Group Tours Registration',
+    involved_tab_05: 'Notice for Inbound Travelers',
   },
   footer: {
     address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
@@ -448,14 +449,34 @@ The skilled painter and decorator offers a range of services, from interpreting 
     <p>📅 Tour Dates: November 27 (Thu) – November 29 (Sat)</p>
     <p>💰 Free Admission · Limited-Time Offer!</p>
     </div>
+    <div class='group'>
     <p>Group Tour Highlights:</p>
     <p> 🔸 Live access to world-class skills competitions</p>
     <p> 🔸 Complimentary shuttle service</p>
     <p> 🔸 Bilingual (Chinese-English) guided tours</p>
     <p> 🔸 Exclusive giveaways</p>
     <p> 🔸 Tasty meal boxes</p>
+    </div>
+    <p>📞 Contact Information</p>
+    <p>Taipei Computer Association – Ms. Chen</p>
+    <p>Tel: +886-4-2259-5700 ext. 519</p>
+    <p>Email: Sunny_chen@wda.gov.tw</p>
     <p> 👉 Register Now: <a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">Link</a></p>
     `,
+    notice_title: 'Notice for Inbound Travelers',
+    notice_desc: 'If you are carrying animals, plants, or their products into Taiwan, please consult the Animal and Plant Health Inspection Agency (APHIA), Ministry of Agriculture, in advance to understand relevant quarantine regulations. Upon arrival, please truthfully declare these items or apply for quarantine inspection to Customs or APHIA to avoid penalties.',
+    notice_detail_block: `
+    <div class='group'>
+    Please note that travelers (including checked baggage) are strictly prohibited from bringing the following items into Taiwan:
+    </div>
+    <p>1. Fresh fruits (e.g., fruits, melons, betel nuts).</p>
+    <p>2. Soil, plants or plant products with soil attached, or any items containing soil.</p>
+    <p>3. Harmful organisms or live insects (e.g., pathogenic microorganisms, grasshoppers, beetles, rhinoceros beetles, stag beetles).</p>
+    <p>4. Host plants or their products from regions designated as prohibited for import due to quarantine concerns.</p>
+    <p>5. Animals and animal products subject to quarantine that are prohibited from import (e.g., pork and pork products from countries affected by African Swine Fever in the past three years).</p>
+    `,
+    notice_detail_source: `Source of the Promotional Material:<br>
+Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swine Fever Information Section > Promotional Materials > Print Media > "Are you sure? Check again!" <a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">promotional leaflet</a> or scan the QR code.`,
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

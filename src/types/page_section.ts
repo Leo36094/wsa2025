@@ -10,6 +10,7 @@ export const SECTION_ID = {
   TryOut: 'try-out',
   Forum: 'forum',
   Toruisum: 'toruisum',
+  Notice: 'notice',
 } as const;
 
 export const PageSectionEnum = {
@@ -24,6 +25,7 @@ export const PageSectionEnum = {
   TryOut: `#${SECTION_ID.TryOut}`,
   Forum: `#${SECTION_ID.Forum}`,
   Toruisum: `#${SECTION_ID.Toruisum}`,
+  Notice: `#${SECTION_ID.Notice}`,
 } as const;
 
 export type PageSection = keyof typeof PageSectionEnum;

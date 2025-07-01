@@ -66,6 +66,7 @@ $text-date-color: #899ca4;
   .news-item {
     margin-bottom: 0.48rem;
     width: 6.4rem;
+    cursor: pointer;
     &__img {
       width: 6.4rem;
       border-radius: 0.08rem;

@@ -100,6 +100,8 @@ $tab-text-color: #455861;
     width: auto;
     .page-tab {
       align-items: stretch;
+      padding-right: 0.16rem;
+      padding-left: 0.16rem;
       &__item {
         min-width: unset;
         font-size: 0.16rem;

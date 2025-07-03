@@ -74,6 +74,7 @@ $text-date-color: #899ca4;
       background-color: #586566;
       margin-bottom: 0.23rem;
       @include bgCenter(100% auto);
+      @include bgCenter(contain);
     }
     &__title {
       font-size: 0.28rem;

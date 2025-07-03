@@ -390,7 +390,7 @@ export default {
     forum_conference_capacity_value:
       '正取100位，候補20位 (依報名先後順序錄取，額滿將提前截止報名。)',
     forum_conference_date: '報名日期',
-    forum_conference_date_value: '2025年6月27日',
+    forum_conference_date_value: '2025年7月14日',
     forum_conference_application: '報名方式',
     forum_conference_application_value: '線上報名',
     forum_conference_contact: '聯絡人',
@@ -434,11 +434,11 @@ export default {
     <div class='group'>
     請注意，旅客（含託運行李）以下種類均不得攜帶：
     </div>
-    <p>鮮果實（如水果類、瓜果類、檳榔等）。</p>
-    <p>土壤、附著土壤之植物、植物產品或其他物品。</p>
-    <p>有害生物或活昆蟲：如病原微生物、蚱蜢、甲蟲、兜蟲(獨角仙)、鍬形蟲等。</p>
-    <p>列屬禁止輸入疫區之寄主植物或其產品。</p>
-    <p>列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
+    <p>1. 鮮果實（如水果類、瓜果類、檳榔等）。</p>
+    <p>2. 土壤、附著土壤之植物、植物產品或其他物品。</p>
+    <p>3. 有害生物或活昆蟲：如病原微生物、蚱蜢、甲蟲、兜蟲(獨角仙)、鍬形蟲等。</p>
+    <p>4. 列屬禁止輸入疫區之寄主植物或其產品。</p>
+    <p>5. 列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
     `,
     notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。'
   },

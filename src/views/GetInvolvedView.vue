@@ -168,7 +168,7 @@ onMounted(() => {
   }
   .section-container {
     @include flexCenter(column);
-    width: 6.24rem;
+    width: 12rem;
     margin: 0 auto;
   }
   .section-sponsor {

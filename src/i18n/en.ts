@@ -421,7 +421,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     forum_conference_capacity_value:
       '100 confirmed spots, plus 20 on the waiting list. (Registration is on a first-come, first-served basis and will close once capacity is reached.)',
     forum_conference_date: 'Registration Opens',
-    forum_conference_date_value: '14 July 2025',
+    forum_conference_date_value: '28 July 2025',
     forum_conference_application: 'Registration Method',
     forum_conference_application_value: 'Online registration',
     forum_conference_contact: 'Contact Person',

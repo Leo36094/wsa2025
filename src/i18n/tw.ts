@@ -390,7 +390,7 @@ export default {
     forum_conference_capacity_value:
       '正取100位，候補20位 (依報名先後順序錄取，額滿將提前截止報名。)',
     forum_conference_date: '報名日期',
-    forum_conference_date_value: '2025年7月14日',
+    forum_conference_date_value: '2025年7月28日',
     forum_conference_application: '報名方式',
     forum_conference_application_value: '線上報名',
     forum_conference_contact: '聯絡人',

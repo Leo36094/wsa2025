@@ -356,23 +356,25 @@ export default {
     visa_title: '代表團入境申請方式分類說明',
     visa_desc: '競賽前各國代表團入境申請分為三大類，詳如以下說明：',
     visa_exemption: '免簽國家',
-    visa_exemption_desc: `<p>可直接持護照入境，須留意護照效期，與免簽效期，詳如【簽證資訊】之免簽證國家名單; 14天免簽國家，如需停留超過14天，請比照（專案）電子簽證申請流程辦理。</p>
+    visa_exemption_desc: `<p>可直接持護照入境，須留意護照效期，與免簽效期，詳如【簽證資訊】之免簽證國家名單；免簽國家停留期限分為14天、30天或90天，自入境翌日起算，最遲須於期滿當日離境。14天免簽國家，如需停留超過14天，請比照（專案協辦）電子簽證申請流程辦理。</p>
       <p>免簽證相關問題請參閱<a href="https://www.boca.gov.tw/cp-384-4485-149c7-1.html" target="_blank">外交部領事事務局官方網站</a></p>
       `,
     visa_e_visa: '一般電子簽證國家',
-    visa_e_visa_desc: `<p>可自行上網申請簽證國家詳如【簽證資訊】之一般電子簽證國家，請留意電子簽證時效3個月（申請時護照效期需滿6個月以上），須於簽證時效內完成入境。建議代表團於2025年9月起上網申請電子簽證，保障簽證時效。填寫申請時請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費。</p>
-      <p>電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/cp-10-7203-54e31-1.html" target="_blank">外交部領事事務局官方網站</a></p>
+    visa_e_visa_desc: `<p>可自行線上申請簽證國家詳如【簽證資訊】之一般電子簽證國家，請留意電子簽證時效3個月（申請時護照效期需滿6個月以上），須於簽證時效內完成入境（單次入境，最長可在臺灣停留30天，不可延期）。建議代表團於2025年9月起線上申請電子簽證，確保簽證時效。填寫申請時請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費。</p>
+      <p>申請電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/cp-10-7203-54e31-1.html" target="_blank">外交部領事事務局官方網站</a></p>
       `,
-    visa_visa_assistance: '（專案）電子簽證國家',
+    visa_visa_assistance: '（專案協辦）電子簽證國家',
     visa_visa_assistance_desc: `<p>適用於不符合免簽證入境或一般電子簽證資格之國家國民。<br>
-      ▲申請（專案）電子簽證程序如下：</p>
+      ▲申請（專案協辦）電子簽證程序如下：</p>
       <ol>
-        <li>（專案）電子簽證國家代表團需於受理期限內（7月底前）回覆該國代表團是否需申請電子簽證協辦專案。（若不需要，也可自行至中華民國駐外館處申請簽證）</li>
-        <li>通過審查後代表團預計於2025年10月起陸續收到由主辦單位所發出之邀請函，代表團可憑邀請函內提供之Ecode，自行<a href="https://visawebapp.boca.gov.tw" target="_blank">線上申請電子簽證</a>。電子簽證時效為3個月（申請時護照效期需滿6個月以上）由於電子簽證申請有時效性，建議申請人於有效期限內儘早完成申請程序</li>
-        <li>代表團線上填寫申請時需繳費，簽證相關費用請參閱<a href="https://www.boca.gov.tw/cp-390-4490-dce26-1.html" target="_blank">外交部領事事務局官方網站</a>。請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費；申請核准後，將收到審核結果電郵及列印電子簽證之連結，得據以列印電子簽證。代表團務必於辦理登機手續時出示紙本電子簽證及主辦單位核發之邀請函。辦理登機手續時，電子簽證持有人須出示列印之電子簽證及主辦單位核發之正式邀請函，以供查驗。電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/lp-390-1.html" target="_blank">外交部領事事務局官方網站</a>。</li>
+        <li>（專案協辦）電子簽證國家代表團需於受理期限內（7月底前）回覆該國代表團是否需申請電子簽證協辦。若不需要，也可自行至中華民國駐外館處申請簽證。</li>
+        <li>待協辦程序完成，主辦單位預計於2025年10月起陸續以電子郵件通知，代表團可憑郵件內提供之E-code，自行至<a href="https://visawebapp.boca.gov.tw" target="_blank">該連結</a>線上申請電子簽證。請留意電子簽證時效為3個月，申請時護照效期需滿6個月以上。</li>
+        <li>主辦單位預計於11月另行寄發活動邀請函供代表團出入境備查。</li>
+        <li>代表團線上填寫申請時需繳費，簽證相關費用請參閱<a href="https://www.boca.gov.tw/cp-390-4490-dce26-1.html" target="_blank">外交部領事事務局官方網站</a>。請務必詳閱外交部官網文件填寫操作說明，避免填寫錯誤造成拒件，拒件恕不退還規費；申請核准後，將收到審核結果電郵及列印電子簽證之連結，得據以列印電子簽證。辦理登機手續時，電子簽證持有人須出示列印之電子簽證及主辦單位核發之正式邀請函，以供查驗。電子簽證相關問題請參閱<a href="https://www.boca.gov.tw/lp-390-1.html" target="_blank">外交部領事事務局官方網站</a>。</li>
       </ol>
       `,
     visa_arrival_procedures: '抵達手續',
+    visa_arrival_procedures_desc: '外來旅客於抵達臺灣前三天內，須至移民署TWAC網站填寫<a href="https://twac.immigration.gov.tw/" target="_blank">入國登記表</a>。',
     visa_arrival_entry: '',
     visa_arrival_TPE: '桃園機場',
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=ch',
@@ -390,7 +392,7 @@ export default {
     forum_conference_capacity_value:
       '正取100位，候補20位 (依報名先後順序錄取，額滿將提前截止報名。)',
     forum_conference_date: '報名日期',
-    forum_conference_date_value: '2025年7月28日',
+    forum_conference_date_value: '2025年8月4日',
     forum_conference_application: '報名方式',
     forum_conference_application_value: '線上報名',
     forum_conference_contact: '聯絡人',

@@ -7,6 +7,7 @@
       <div class="step-block__desc" v-html="item.desc" role="region" :aria-label="item.title"></div>
     </div>
     <BaseTitle class="section-visa__title" :title="$t('involved.visa_arrival_procedures')" />
+    <p class="section-visa__desc" v-html="$t('involved.visa_arrival_procedures_desc')"></p>
     <ul :class="['arrival-list', { en: locale === 'en' }]" role="list">
       <li v-for="item in visaArrivalList" :key="item.title">
         <span class="arrival-list__title">{{ $t('involved.visa_arrival_entry') }}</span>
@@ -80,6 +81,9 @@ $block-bg-color: #fafcf2;
   &__desc {
     margin-bottom: 0.16rem;
     font-size: 0.18rem;
+    &:lang(zh) {
+      text-align: center;
+    }
   }
   .step-block {
     padding: 0.24rem;

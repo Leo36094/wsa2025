@@ -210,7 +210,6 @@ const swiperConfig = {
     .skill-inner-view-gallery {
       .gallery-container {
         display: flex;
-        align-items: center;
         justify-content: center;
         max-width: 14.4rem;
         max-width: 19.2rem;

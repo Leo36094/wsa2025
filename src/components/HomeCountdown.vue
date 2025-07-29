@@ -140,20 +140,20 @@ onUnmounted(() => {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    flex-direction: column;
     .countdown-title {
       font-size: $title-font-size;
       font-weight: 700;
       color: #000;
-      margin-bottom: 0.16rem;
+      margin-bottom: 0.24rem;
       text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      margin-right: 0.56rem;
+      align-items: center;
       .countdown-event {
         display: flex;
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: center;
         &.tw {
           flex-direction: column;
         }

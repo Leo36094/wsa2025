@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { MenubarContent, MenubarItem, MenubarMenu, MenubarRoot, MenubarTrigger } from 'radix-vue'
+import { useRouter } from 'vue-router'
 
 const currentMenu = ref('')
 type NavItem = {
@@ -16,21 +17,13 @@ const props = defineProps<{
 }>()
 
 const openMenu = ref(false)
-
-const createFullPath = (path: string) => {
-  const baseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
-  return `${baseUrl.replace(/\/$/, '')}${path}`
-}
+const router = useRouter()
 
 function goPage(path: string) {
-  const pageURL = createFullPath(path)
-  window.open(pageURL, '_blank')
+  router.push(path)
 }
 function handleHashRoute(link: { name: string; path: string }, pageName: string) {
-  const hashPath = pageName.toLowerCase()
-  const pageURL = createFullPath(hashPath)
-  const newTab = `${pageURL}${link.path || ''}`
-  window.open(newTab, '_blank')
+  router.push({ path: pageName, hash: link.path || '/' })
 }
 function handleTriggerClick(item: NavItem) {
   if (!item.subNav.length) {

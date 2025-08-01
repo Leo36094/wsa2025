@@ -75,17 +75,12 @@ const goSkillDetail = (skill: SkillIconEnum) => {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      gap: 0.16rem;
       .skill-item {
         cursor: pointer;
         &:hover {
           filter: brightness(0.9);
           transition: all 0.3s linear;
-        }
-        &:nth-child(2n) {
-          margin-left: 0.16rem;
-        }
-        &:not(:last-child) {
-          margin-bottom: 0.16rem;
         }
       }
     }
@@ -100,9 +95,6 @@ const goSkillDetail = (skill: SkillIconEnum) => {
         flex-direction: column;
         .skill-item {
           width: 100%;
-          &:nth-child(2n) {
-            margin-left: 0;
-          }
         }
       }
     }

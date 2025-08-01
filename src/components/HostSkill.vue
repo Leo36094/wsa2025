@@ -103,6 +103,7 @@ const videoURL = computed(() =>
   border-bottom-right-radius: 0.4rem;
   margin-bottom: 1.6rem;
   padding-bottom: 0.4rem;
+  gap: 0.8rem 0.2rem;
   .video-container {
     width: 12.8rem;
     height: 7.2rem;

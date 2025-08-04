@@ -32,7 +32,7 @@ const skillName = computed(() => SkillNameMap.value[props.skillType])
 </script>
 <style lang="scss" scoped>
 .skill-panel {
-  width: 6.27rem;
+  width: 6rem;
   height: 1.32rem;
   @include bgCenter(100% 100%);
   border-radius: 0.1rem;

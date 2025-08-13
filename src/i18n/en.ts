@@ -444,7 +444,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     <p class="group">Asia’s largest skills competition is coming soon! </p>
     <div class="group">
     <p>Asia’s top competitors are gathering in one place to🔥 break boundaries and push their limits. 🔥</p>
-    <p>We warmly invite you to experience the intense and exciting atmosphere of this international event firsthand—come cheer on Team Taiwan and be part of the action!</p>
+    <p>We warmly invite you to experience the intense and exciting atmosphere of this international event firsthand—feel the heat of the arena and cheer on the competitors with us!</p>
     </div>
     <p class="group">Register now to enjoy exciting competitions, guided group tours, shuttle services, skill exploration activities, and Mission-based Challenge!</p>
     <div class="group">

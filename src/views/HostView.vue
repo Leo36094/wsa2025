@@ -4,6 +4,12 @@
     <template v-if="activeTab === PageSectionEnum.Traffic">
       <HostTraffic />
     </template>
+    <template v-if="activeTab === PageSectionEnum.Medic">
+      <HostMedic />
+    </template>
+    <template v-if="activeTab === PageSectionEnum.Tourist">
+      <HostTourist />
+    </template>
     <template v-else>
       <HostSkill />
       <HostBanner />
@@ -18,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import PageTab from '@/components/PageTab.vue'
@@ -31,6 +37,8 @@ import HostSkill from '@/components/HostSkill.vue'
 import HostWDA from '@/components/HostWDA.vue'
 import HostLocation from '@/components/HostLocation.vue'
 // import HostTraffic from '@/components/HostTraffic.vue'
+import HostMedic from '@/components/HostMedic.vue'
+import HostTourist from '@/components/HostTourist.vue'
 
 import { PageSectionEnum, type PageValue } from '@/types/page_section'
 
@@ -57,6 +65,14 @@ const tabs = computed<{ label: string; value: PageValue }[]>(() => [
   //   label: t('page_tabs.host_tab_05'),
   //   value: PageSectionEnum.Traffic,
   // },
+  {
+    label: t('page_tabs.host_tab_06'),
+    value: PageSectionEnum.Medic,
+  },
+  {
+    label: t('page_tabs.host_tab_07'),
+    value: PageSectionEnum.Tourist,
+  },
 ])
 const router = useRouter()
 const activeTab = ref(tabs.value[0].value)
@@ -69,6 +85,12 @@ const handleActiveTabChange = (value: PageValue) => {
     hash: value,
   })
 }
+onMounted(() => {
+  const hash = router.currentRoute.value.hash
+  if (hash && tabs.value.find((tab) => tab.value === hash)) {
+    activeTab.value = hash as PageValue
+  }
+})
 </script>
 <style lang="scss" scoped>
 .host {

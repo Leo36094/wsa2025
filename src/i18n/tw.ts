@@ -19,6 +19,8 @@ export default {
     host_tab_03: '關於勞動力發展署',
     host_tab_04: '競賽場地',
     host_tab_05: '交通資訊',
+    host_tab_06: '醫療地圖',
+    host_tab_07: '觀光景點',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
     involved_tab_01: '贊助商',
@@ -144,6 +146,9 @@ export default {
 `,
     location_visit_website: '訪問網站',
     traffic_title: '展場周邊交通介紹',
+    medic_title: '鄰近醫院',
+    tourist_title: '觀光景點',
+    map_button: '於Google Map查看',
   },
   competition: {
     title: '關於競賽',

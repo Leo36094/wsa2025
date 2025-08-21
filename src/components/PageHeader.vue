@@ -77,6 +77,9 @@ const nav = computed(() => [
       { name: t('page_tabs.host_tab_02'), path: `#${SECTION_ID.Taipei}` },
       { name: t('page_tabs.host_tab_03'), path: `#${SECTION_ID.WDA}` },
       { name: t('page_tabs.host_tab_04'), path: `#${SECTION_ID.Location}` },
+      // { name: t('page_tabs.host_tab_05'), path: `#${SECTION_ID.Traffic}` },
+      // { name: t('page_tabs.host_tab_06'), path: `#${SECTION_ID.Medic}` },
+      // { name: t('page_tabs.host_tab_07'), path: `#${SECTION_ID.Toruisum}` },
     ],
   },
   {
@@ -106,7 +109,7 @@ const nav = computed(() => [
       },
       {
         name: t('page_tabs.involved_tab_04'),
-        path: `#${SECTION_ID.Toruisum}`,
+        path: `#${SECTION_ID.Tourguide}`,
       },
       {
         name: t('page_tabs.involved_tab_05'),

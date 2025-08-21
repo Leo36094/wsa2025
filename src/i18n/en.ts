@@ -18,6 +18,9 @@ export default {
     host_tab_02: 'Chinese Taipei',
     host_tab_03: 'About Workforce Development Agency(WDA)',
     host_tab_04: 'The Venue',
+    host_tab_05: 'Transportation',
+    host_tab_06: 'Medical Map',
+    host_tab_07: 'Tourist Attractions',
     competition_tab_01: 'Competition',
     competition_tab_02: 'Schedule',
     involved_tab_01: 'Sponsorship',
@@ -146,6 +149,10 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
 
     `,
     location_visit_website: 'Visit Website',
+    traffic_title: 'Transportation',
+    medic_title: 'Medical Map',
+    tourist_title: 'Tourist Attractions',
+    map_button: 'View on Google Map',
   },
   competition: {
     title: 'Competition',

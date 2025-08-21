@@ -1,0 +1,254 @@
+<template>
+  <section class="host-medic" :aria-labelledby="$t('host.medic_title')">
+    <div class="host-medic-container">
+      <BaseTitle class="host-medic__title" :title="$t('host.medic_title')" />
+      <div class="host-medic__content">
+        <div class="host-medic__content-item" v-for="item in hostipal" :key="item.name">
+          <h2 class="content-item-title">{{ item.name }}</h2>
+          <div class="item-info">
+            <ul class="info-list">
+              <li>
+                <span class="info-note">{{ item.note }}</span>
+              </li>
+              <li>
+                <img class="icon" src="/images/host/icons/map-icon.svg" alt="map-icon" />
+                {{ item.address }}
+              </li>
+              <li>
+                <img class="icon" src="/images/host/icons/distance-icon.svg" alt="distance-icon" />
+                {{ item.distance }}
+              </li>
+              <li v-for="tel in item.tel" :key="tel.value">
+                <a class="tel-link" :href="`tel:${tel.value}`">
+                  {{ tel.label }}
+                </a>
+              </li>
+            </ul>
+            <button class="map-button">
+              <a :href="item.mapUrl" target="_blank">{{ $t('host.map_button') }}</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import BaseTitle from '@/components/BaseTitle.vue'
+import { useI18n } from 'vue-i18n'
+
+// const { t } = useI18n()
+// const { locale } = useI18n()
+
+const hostipal = [
+  {
+    name: '康寧醫院',
+    address: '台北市內湖區成功路五段420巷26號',
+    distance: '約3公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2634-5500', value: '+886-2-26345500' },
+      { label: '急診電話：(02)2631-2929', value: '+886-2-26312929' },
+    ],
+    note: '大型綜合醫院',
+    mapUrl: 'https://maps.app.goo.gl/6xrcBV3kPeFw5d7F6',
+  },
+  {
+    name: '台北市立聯合醫院(忠孝院區)',
+    address: '台北市南港區同德路87號',
+    distance: '約4公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2786-1288', value: '+886-2-27861288' },
+      { label: '急診電話：(02)2786-1288#6666', value: '+886-2-27861288#6666' },
+    ],
+    note: '區域醫院',
+    mapUrl: 'https://maps.app.goo.gl/P46aZ3PDuvJmoAif8',
+  },
+  {
+    name: '三軍總醫院（內湖院區）',
+    address: '台北市內湖區成功路二段325號',
+    distance: '約5公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)8792-3311', value: '+886-2-87923311' },
+      { label: '急診電話：(02)8792-3311#16616', value: '+886-2-87923311#16616' },
+    ],
+    note: '醫學中心',
+    mapUrl: 'https://maps.app.goo.gl/w1bnEJqk1bk8pVRV7',
+  },
+  {
+    name: '中國醫藥大學附設醫院(臺北分院)',
+    address: '台北市內湖區內湖路二段360號',
+    distance: '約6公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2791-9696', value: '+886-2-27919696' },
+      { label: '急診電話：(02)2791-9696', value: '+886-2-27919696' },
+    ],
+    note: '大型綜合醫院',
+    mapUrl: 'https://maps.app.goo.gl/hvHLMAKV7L9DZ61C6',
+  },
+  {
+    name: '台北市立聯合醫院(仁愛院區)',
+    address: '台北市大安區仁愛路四段10號',
+    distance: '約10公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2709-3600', value: '+886-2-27093600' },
+      { label: '急診電話：(02)2709-3600', value: '+886-2-27093600' },
+    ],
+    note: '大型綜合醫院',
+    mapUrl: 'https://maps.app.goo.gl/jnt2cx3YLFnpQsrB6',
+  },
+  {
+    name: '台北醫學大學附設醫院',
+    address: '台北市信義區吳興街252號',
+    distance: '約10公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2737-2181', value: '+886-2-27372181' },
+      { label: '急診電話：(02)2737-2181#8101~8105', value: '+886-2-27372181#8101' },
+    ],
+    note: '醫學中心',
+    mapUrl: 'https://maps.app.goo.gl/8fmjrawQWjXRQ3627',
+  },
+  {
+    name: '國立台灣大學醫學院附設醫院（台大醫院 / 東址大樓）',
+    address: '台北市中正區中山南路7號',
+    distance: '約13公里(以南港展覽館 1 館為起點估算）',
+    tel: [
+      { label: '服務電話：(02)2312-3456', value: '+886-2-23123456' },
+      { label: '急診電話：(02)2312-3456#65651', value: '+886-2-23123456#65651' },
+    ],
+    note: '大型綜合醫院暨醫學中心',
+    mapUrl: 'https://maps.app.goo.gl/U9HPkVL9zfRLg2Jy7',
+  },
+]
+</script>
+
+<style lang="scss" scoped>
+$block-bg-color: #fff;
+
+$font-size-title: (
+  pc: 0.28rem,
+  tablet: 0.2rem,
+  mobile: 0.16rem,
+);
+
+$font-size-info: (
+  pc: 0.16rem,
+  tablet: 0.14rem,
+  mobile: 0.12rem,
+);
+
+.host-medic {
+  .host-medic-container {
+    width: 14.4rem;
+    margin: 0 auto;
+  }
+  .host-medic__title {
+    margin-bottom: 0.64rem;
+  }
+  .host-medic__content {
+    @include flexCenter(column);
+    gap: 0.08rem;
+    margin-bottom: 0.64rem;
+    .host-medic__content-item {
+      width: 10.4rem;
+      background-color: $block-bg-color;
+      box-shadow: 0 0.08rem 0.16rem 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0.32rem;
+      .content-item-title {
+        margin-bottom: 0.16rem;
+        font-size: map-get($font-size-title, pc);
+        font-weight: 700;
+      }
+      .item-info {
+        display: flex;
+        justify-content: space-between;
+        .info-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: map-get($font-size-info, pc);
+          padding-left: 0;
+          gap: 0.09rem;
+          li {
+            display: flex;
+            align-items: center;
+            flex: 1 1 0;
+            .icon {
+              width: 0.2rem;
+              margin-right: 0.08rem;
+            }
+            .tel-link {
+              &:not(:last-child) {
+                margin-right: 0.08rem;
+              }
+            }
+          }
+        }
+        .map-button {
+          @include flexCenter(row);
+          height: 0.44rem;
+          padding: 0.24rem;
+          border-radius: 0.08rem;
+          border: 0.01rem solid #455861;
+        }
+        .info-note {
+          font-size: map-get($font-size-info, pc);
+          color: #455861;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .host-medic {
+    .host-medic-container {
+      width: 100%;
+    }
+    .host-medic__title {
+      margin-bottom: 0.4rem;
+    }
+    .host-medic__content {
+      margin-bottom: 0.4rem;
+      .host-medic__content-item {
+        width: 6.64rem;
+      }
+    }
+  }
+}
+@include mobile {
+  .host-medic {
+    .host-medic-container {
+      width: 100%;
+    }
+    .host-medic__content {
+      .host-medic__content-item {
+        width: 100%;
+        .content-item-title {
+          text-align: center;
+          font-size: map-get($font-size-title, mobile);
+        }
+        .item-info {
+          @include flexCenter(column);
+          .info-list {
+            @include flexCenter(column);
+            li {
+              font-size: map-get($font-size-info, mobile);
+            }
+          }
+          .map-button {
+            margin: 0 auto;
+            font-size: map-get($font-size-info, mobile);
+            padding: 0.08rem 0.12rem;
+            height: 0.32rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include listStyle();
+</style>

@@ -13,7 +13,7 @@ export const SECTION_ID = {
   Notice: 'notice',
   Traffic: 'traffic',
   Medic: 'medic',
-  Toruisum: 'toruisum',
+  Tourist: 'tourist',
 } as const;
 
 export const PageSectionEnum = {
@@ -32,7 +32,7 @@ export const PageSectionEnum = {
   // TODO
   Traffic: `#${SECTION_ID.Traffic}`,
   Medic: `#${SECTION_ID.Medic}`,
-  Toruisum: `#${SECTION_ID.Toruisum}`,
+  Tourist: `#${SECTION_ID.Tourist}`,
 } as const;
 
 export type PageSection = keyof typeof PageSectionEnum;

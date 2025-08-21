@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import PageTab from '@/components/PageTab.vue'
@@ -85,12 +85,13 @@ const handleActiveTabChange = (value: PageValue) => {
     hash: value,
   })
 }
-onMounted(() => {
-  const hash = router.currentRoute.value.hash
-  if (hash && tabs.value.find((tab) => tab.value === hash)) {
-    activeTab.value = hash as PageValue
+
+const currentHash = computed(() => router.currentRoute.value.hash)
+watch(currentHash, (newVal) => {
+  if (newVal && tabs.value.find((tab) => tab.value === newVal)) {
+    activeTab.value = newVal as PageValue
   }
-})
+}, { immediate: true })
 </script>
 <style lang="scss" scoped>
 .host {

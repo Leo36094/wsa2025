@@ -18,6 +18,7 @@ export default {
     host_tab_02: '中華台北',
     host_tab_03: '關於勞動力發展署',
     host_tab_04: '競賽場地',
+    host_tab_05: '交通資訊',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
     involved_tab_01: '贊助商',
@@ -142,6 +143,7 @@ export default {
 技能競賽是該署的重要推動項目之一，旨在建立技能價值觀，鼓勵青年積極參與職業教育與訓練，並提升社會對技職教育的重視。競賽不僅為年輕人提供展示技能的舞台，也促進各行業間的技術交流與合作，進一步提升國家勞動力的國際競爭力。透過這些努力，勞動力發展署不僅提升國內勞動力素質，也為國家經濟發展提供穩定的技術人才支援。
 `,
     location_visit_website: '訪問網站',
+    traffic_title: '展場周邊交通介紹',
   },
   competition: {
     title: '關於競賽',

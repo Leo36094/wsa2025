@@ -52,7 +52,7 @@
       </div>
       <GetInvolvedVisa v-if="activeTab === PageSectionEnum.Visa" />
       <GetInvolvedForum v-if="activeTab === PageSectionEnum.Forum" />
-      <GetInvolvedTour v-if="activeTab === PageSectionEnum.Toruisum" />
+      <GetInvolvedTour v-if="activeTab === PageSectionEnum.Tourguide" />
       <GetInvolvedNotice v-if="activeTab === PageSectionEnum.Notice" />
       <!-- Temp Hide -->
       <!-- <div class="section-theme-exhibition" :id="SECTION_ID.ThemeExhibition">
@@ -100,7 +100,7 @@ const tabs = computed(() => [
   },
   {
     label: t('page_tabs.involved_tab_04'),
-    value: PageSectionEnum.Toruisum,
+    value: PageSectionEnum.Tourguide,
   },
   {
     label: t('page_tabs.involved_tab_05'),

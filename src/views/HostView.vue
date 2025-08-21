@@ -1,13 +1,13 @@
 <template>
   <div class="host">
     <PageTab :tabs="tabs" :active-tab="activeTab" @update:active-tab="handleActiveTabChange" />
-    <template v-if="activeTab === PageSectionEnum.Traffic">
+    <!-- <template v-if="activeTab === PageSectionEnum.Traffic">
       <HostTraffic />
-    </template>
+    </template> -->
     <template v-if="activeTab === PageSectionEnum.Medic">
       <HostMedic />
     </template>
-    <template v-if="activeTab === PageSectionEnum.Tourist">
+    <template v-else-if="activeTab === PageSectionEnum.Tourist">
       <HostTourist />
     </template>
     <template v-else>
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import PageTab from '@/components/PageTab.vue'

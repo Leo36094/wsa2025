@@ -1,7 +1,17 @@
 <template>
   <div class="section-forum" aria-labelledby="forum-title" data-aos="fade-up">
     <BaseTitle class="section-forum__title" :title="$t('involved.forum_title')" />
-    <p
+    <img src="/images/getInvolved/forum/forum_01.jpg" alt="forum" />
+    <img src="/images/getInvolved/forum/forum_02.jpg" alt="forum" />
+    <div class="section-forum__desc">
+      <p>
+        {{ $t('involved.registration_link') }}
+        <a :href="registrationLink" target="_blank" aria-label="registration-link">{{
+          registrationLink
+        }}</a>
+      </p>
+    </div>
+    <!-- <p
       class="section-forum__desc"
       v-html="$t('involved.forum_desc')"
       role="region"
@@ -18,7 +28,7 @@
     <div class="section-forum__notice">
       <h3>{{ $t('involved.forum_notice_title') }}</h3>
       <div v-html="$t('involved.forum_notice_desc')" />
-    </div>
+    </div> -->
   </div>
 </template>
 <script setup lang="ts">
@@ -26,7 +36,16 @@ import { computed } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+// •中文版面：報名連結: https://forms.gle/GJ5Ty6jZiwFpZVHMA
+// •英文版面： Registration Link:
+
+const registrationLink = computed(() => {
+  return locale.value === 'en'
+    ? 'https://forms.gle/GJ5Ty6jZiwFpZVHMA'
+    : 'https://forms.gle/GJ5Ty6jZiwFpZVHMA'
+})
 
 const conferenceList = computed(() => [
   {

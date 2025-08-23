@@ -24,9 +24,17 @@
                 </a>
               </li>
             </ul>
-            <button class="map-button">
-              <a :href="item.mapUrl" target="_blank">{{ $t('host.map_button') }}</a>
-            </button>
+            <div class="embed-map">
+              <iframe
+                width="420"
+                height="280"
+                style="border: 0"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                :src="`https://www.google.com/maps/${item.iframeKey}`"
+              >
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -35,11 +43,15 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 import { useI18n } from 'vue-i18n'
 
-// const { t } = useI18n()
-// const { locale } = useI18n()
+const { locale } = useI18n()
+
+const lang = computed(() => {
+  return locale.value === 'en' ? 'en' : 'zh-TW'
+})
 
 const hostipal = [
   {
@@ -52,6 +64,8 @@ const hostipal = [
     ],
     note: '大型綜合醫院',
     mapUrl: 'https://maps.app.goo.gl/6xrcBV3kPeFw5d7F6',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3613.7685489164687!2d121.60888519999997!3d25.0758327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442acbef193c44d%3A0x5b14521ca9adbf46!2z5bq35a-n6Yar55mC6LKh5ZyY5rOV5Lq65bq35a-n6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1755971612812!5m2!1szh-TW!2stw',
   },
   {
     name: '台北市立聯合醫院(忠孝院區)',
@@ -63,6 +77,7 @@ const hostipal = [
     ],
     note: '區域醫院',
     mapUrl: 'https://maps.app.goo.gl/P46aZ3PDuvJmoAif8',
+    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.630823961765!2d121.5861422!3d25.046599699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab74382c490b%3A0xfaaf975a3cdac74a!2zMTE15Y-w5YyX5biC5Y2X5riv5Y2A5ZCM5b636LevODfomZ8!5e0!3m2!1szh-TW!2stw!4v1755971887760!5m2!1szh-TW!2stw',
   },
   {
     name: '三軍總醫院（內湖院區）',
@@ -74,6 +89,7 @@ const hostipal = [
     ],
     note: '醫學中心',
     mapUrl: 'https://maps.app.goo.gl/w1bnEJqk1bk8pVRV7',
+    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d3613.9048800489463!2d121.5883293!3d25.0712129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac85b9062427%3A0x91f123e0976ad553!2z5LiJ6LuN57i96Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1755971938572!5m2!1szh-TW!2stw',
   },
   {
     name: '中國醫藥大學附設醫院(臺北分院)',
@@ -85,6 +101,7 @@ const hostipal = [
     ],
     note: '大型綜合醫院',
     mapUrl: 'https://maps.app.goo.gl/hvHLMAKV7L9DZ61C6',
+    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3613.5835946772904!2d121.59072520000001!3d25.0820989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac8ccffe716d%3A0xafe3828a39551310!2z5Lit5ZyL6Yar6Jel5aSn5a246ZmE6Kit6Yar6Zmi6Ie65YyX5YiG6Zmi!5e0!3m2!1szh-TW!2stw!4v1755972275658!5m2!1szh-TW!2stw',
   },
   {
     name: '台北市立聯合醫院(仁愛院區)',
@@ -96,6 +113,7 @@ const hostipal = [
     ],
     note: '大型綜合醫院',
     mapUrl: 'https://maps.app.goo.gl/jnt2cx3YLFnpQsrB6',
+    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.9077155642285!2d121.54522419999999!3d25.0372057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd10b548a99%3A0xfd840bcfff0ed64f!2z6Ie65YyX5biC56uL6IGv5ZCI6Yar6ZmiIOS7geaEm-mZouWNgA!5e0!3m2!1szh-TW!2stw!4v1755972009302!5m2!1szh-TW!2stw',
   },
   {
     name: '台北醫學大學附設醫院',
@@ -107,6 +125,7 @@ const hostipal = [
     ],
     note: '醫學中心',
     mapUrl: 'https://maps.app.goo.gl/8fmjrawQWjXRQ3627',
+    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d14460.026504289619!2d121.5311839!3d25.0338492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb4d144907b%3A0xb7e4efe417f00091!2z6Ie65YyX6Yar5a245aSn5a246ZmE6Kit6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1755972051583!5m2!1szh-TW!2stw',
   },
   {
     name: '國立台灣大學醫學院附設醫院（台大醫院 / 東址大樓）',
@@ -118,6 +137,7 @@ const hostipal = [
     ],
     note: '大型綜合醫院暨醫學中心',
     mapUrl: 'https://maps.app.goo.gl/U9HPkVL9zfRLg2Jy7',
+    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d903.7034898516243!2d121.5194147!3d25.0403869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a973c658b995%3A0xfde0dc33b0bfb0ff!2z5ZyL56uL6Ie654Gj5aSn5a246Yar5a246Zmi6ZmE6Kit6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1755972097358!5m2!1szh-TW!2stw',
   },
 ]
 </script>
@@ -164,6 +184,7 @@ $font-size-info: (
       }
       .item-info {
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
         .info-list {
           display: flex;

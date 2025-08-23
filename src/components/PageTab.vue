@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper">
     <div class="page-tab-container">
-      <div class="page-tab" role="tablist" :aria-label="$t('page_tab_aria_label')">
+      <div class="page-tab" role="tablist" :aria-label="$t('page_tab_aria_label')" ref="tabContainerRef">
         <div
           v-for="tab in tabs"
           :key="tab.value"
@@ -12,6 +12,7 @@
           role="tab"
           tabindex="0"
           :aria-label="tab.label"
+          :ref="el => setTabRef(el as HTMLElement, tab.value)"
         >
           <span>
             {{ tab.label }}
@@ -23,9 +24,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref, nextTick, watch } from 'vue'
 import { type PageValue } from '@/types/page_section'
 
-defineProps<{
+const props = defineProps<{
   tabs: {
     label: string
     value: PageValue
@@ -46,6 +48,46 @@ const handleKeyDown = (event: KeyboardEvent, value: PageValue) => {
     emit('update:activeTab', value)
   }
 }
+
+// Refs for scrolling functionality
+const tabContainerRef = ref<HTMLElement>()
+const tabRefs = ref<Map<PageValue, HTMLElement>>(new Map())
+
+// Set tab refs
+const setTabRef = (el: HTMLElement | null, value: PageValue) => {
+  if (el) {
+    tabRefs.value.set(value, el)
+  }
+}
+
+// Auto scroll to active tab on mobile
+const scrollToActiveTab = async () => {
+  await nextTick()
+
+  const activeTabElement = tabRefs.value.get(props.activeTab)
+  const container = tabContainerRef.value
+
+  if (activeTabElement && container) {
+    // Check if we're on mobile (you can adjust this breakpoint as needed)
+    const isMobile = window.innerWidth <= 768
+
+    if (isMobile) {
+      // Calculate scroll position to center the active tab
+      const scrollLeft = activeTabElement.offsetLeft - (container.offsetWidth / 2) + (activeTabElement.offsetWidth / 2)
+
+      container.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      })
+    }
+  }
+}
+
+// Watch for activeTab changes
+watch(() => props.activeTab, () => {
+  scrollToActiveTab()
+}, { immediate: true })
+
 </script>
 
 <style lang="scss" scoped>

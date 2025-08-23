@@ -35,6 +35,7 @@ function headerChangeLang(lang: {
   message: (typeof localeMessages)[keyof typeof localeMessages]
 }) {
   changeLang(lang, { locale, setLocaleMessage })
+  document.documentElement.lang = lang.lang
 }
 </script>
 <style lang="scss" scoped>

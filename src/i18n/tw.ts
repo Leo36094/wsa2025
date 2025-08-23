@@ -449,7 +449,8 @@ export default {
     <p>4. 列屬禁止輸入疫區之寄主植物或其產品。</p>
     <p>5. 列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
     `,
-    notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。'
+    notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
+    registration_link: '報名連結: ',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

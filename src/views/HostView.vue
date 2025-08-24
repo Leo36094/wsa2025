@@ -1,6 +1,6 @@
 <template>
-  <div class="host">
-    <PageTab :tabs="tabs" :active-tab="activeTab" @update:active-tab="handleActiveTabChange" />
+  <div :class="['host', {'white-bg': tabIndex > 3}]">
+    <PageTab class="host-tab" :tabs="tabs" :active-tab="activeTab" @update:active-tab="handleActiveTabChange" />
     <!-- <template v-if="activeTab === PageSectionEnum.Traffic">
       <HostTraffic />
     </template> -->
@@ -77,6 +77,8 @@ const tabs = computed<{ label: string; value: PageValue }[]>(() => [
 const router = useRouter()
 const activeTab = ref(tabs.value[0].value)
 
+const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === activeTab.value))
+
 const handleActiveTabChange = (value: PageValue) => {
   // 似乎不需要處理，因為只有第一個 active 會被顯示
   activeTab.value = value
@@ -95,11 +97,24 @@ watch(currentHash, (newVal) => {
 </script>
 <style lang="scss" scoped>
 .host {
-  padding-top: 0.76rem;
+  // 0.8 margin
+  padding-top: calc(0.76rem + 1.16rem + 0.8rem);
   min-height: 100svh;
   margin: 0 auto;
+  padding-bottom: 1.44rem;
+  &.white-bg {
+    background-color: #fff;
+  }
   .host-currency {
     @include withContainer;
+  }
+
+  .host-tab {
+    position: fixed;
+    top: 0.76rem;
+    height: 1.44rem;
+    background-color: #fff;
+    @include zIndex(topbar);
   }
 }
 </style>

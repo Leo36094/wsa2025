@@ -1,10 +1,15 @@
 <template>
-  <div :class="['host', {'white-bg': tabIndex > 3}]">
-    <PageTab class="host-tab" :tabs="tabs" :active-tab="activeTab" @update:active-tab="handleActiveTabChange" />
-    <!-- <template v-if="activeTab === PageSectionEnum.Traffic">
+  <div :class="['host', { 'white-bg': tabIndex > 3 }]">
+    <PageTab
+      class="host-tab"
+      :tabs="tabs"
+      :active-tab="activeTab"
+      @update:active-tab="handleActiveTabChange"
+    />
+    <template v-if="activeTab === PageSectionEnum.Traffic">
       <HostTraffic />
-    </template> -->
-    <template v-if="activeTab === PageSectionEnum.Medic">
+    </template>
+    <template v-else-if="activeTab === PageSectionEnum.Medic">
       <HostMedic />
     </template>
     <template v-else-if="activeTab === PageSectionEnum.Tourist">
@@ -36,7 +41,7 @@ import HostClimate from '@/components/HostClimate.vue'
 import HostSkill from '@/components/HostSkill.vue'
 import HostWDA from '@/components/HostWDA.vue'
 import HostLocation from '@/components/HostLocation.vue'
-// import HostTraffic from '@/components/HostTraffic.vue'
+import HostTraffic from '@/components/HostTraffic.vue'
 import HostMedic from '@/components/HostMedic.vue'
 import HostTourist from '@/components/HostTourist.vue'
 
@@ -61,10 +66,10 @@ const tabs = computed<{ label: string; value: PageValue }[]>(() => [
     label: t('page_tabs.host_tab_04'),
     value: PageSectionEnum.Location,
   },
-  // {
-  //   label: t('page_tabs.host_tab_05'),
-  //   value: PageSectionEnum.Traffic,
-  // },
+  {
+    label: t('page_tabs.host_tab_05'),
+    value: PageSectionEnum.Traffic,
+  },
   {
     label: t('page_tabs.host_tab_06'),
     value: PageSectionEnum.Medic,
@@ -89,11 +94,15 @@ const handleActiveTabChange = (value: PageValue) => {
 }
 
 const currentHash = computed(() => router.currentRoute.value.hash)
-watch(currentHash, (newVal) => {
-  if (newVal && tabs.value.find((tab) => tab.value === newVal)) {
-    activeTab.value = newVal as PageValue
-  }
-}, { immediate: true })
+watch(
+  currentHash,
+  (newVal) => {
+    if (newVal && tabs.value.find((tab) => tab.value === newVal)) {
+      activeTab.value = newVal as PageValue
+    }
+  },
+  { immediate: true },
+)
 </script>
 <style lang="scss" scoped>
 .host {

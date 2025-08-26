@@ -24,6 +24,7 @@
       <HostMedic />
       <HostTourist />
       <HostVegan />
+      <HostMuslim />
     </div>
   </div>
 </template>
@@ -47,6 +48,7 @@ import HostTraffic from '@/components/HostTraffic.vue'
 import HostMedic from '@/components/HostMedic.vue'
 import HostTourist from '@/components/HostTourist.vue'
 import HostVegan from '@/components/HostVegan.vue'
+import HostMuslim from '@/components/HostMuslim.vue'
 
 import { PageSectionEnum, type PageValue } from '@/types/page_section'
 
@@ -62,6 +64,7 @@ const tabs = computed(() => [
   { label: t('page_tabs.host_tab_06'), value: PageSectionEnum.Medic },
   { label: t('page_tabs.host_tab_07'), value: PageSectionEnum.Tourist },
   { label: t('page_tabs.host_tab_08'), value: PageSectionEnum.Vegan },
+  { label: t('page_tabs.host_tab_09'), value: PageSectionEnum.Muslim },
 ])
 
 const activeTab = ref<PageValue>(tabs.value[0].value)
@@ -116,6 +119,7 @@ const phase2Content = computed(() => {
     PageSectionEnum.Medic,
     PageSectionEnum.Tourist,
     PageSectionEnum.Vegan,
+    PageSectionEnum.Muslim,
   ]
   return phase2Sections.includes(activeTab.value)
 })

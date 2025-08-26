@@ -1,6 +1,5 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import type { PageValue } from '@/types/page_section'
-import { PageSectionEnum } from '@/types/page_section'
 
 export function useScrollSpy(sections: PageValue[]) {
   const activeSection = ref<PageValue>(sections[0])
@@ -33,17 +32,10 @@ export function useScrollSpy(sections: PageValue[]) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(`Section ${sectionId}:`, {
-            isIntersecting: entry.isIntersecting,
-            isVisible: isVisible(),
-            intersectionRatio: entry.intersectionRatio
-          })
-
           // 只有當元素可見且正在相交時才更新
           if (entry.isIntersecting && isVisible()) {
             const sectionValue = sectionMap.value.get(sectionId)
             if (sectionValue) {
-              console.log(`Setting active section to: ${sectionValue}`)
               activeSection.value = sectionValue
             }
           }
@@ -58,11 +50,9 @@ export function useScrollSpy(sections: PageValue[]) {
 
     observer.observe(element)
     observers.value.push(observer)
-    console.log(`Observing section: ${sectionId}`)
   }
 
   const initializeScrollSpy = () => {
-    console.log('Initializing scroll spy for sections:', sections)
     cleanup()
 
     setTimeout(() => {
@@ -74,7 +64,6 @@ export function useScrollSpy(sections: PageValue[]) {
   }
 
   const cleanup = () => {
-    console.log('Cleaning up observers')
     observers.value.forEach(observer => observer.disconnect())
     observers.value = []
   }

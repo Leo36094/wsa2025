@@ -22,6 +22,7 @@ export default {
     host_tab_06: '醫療地圖',
     host_tab_07: '觀光景點',
     host_tab_08: '素食',
+    host_tab_09: '穆斯林餐廳',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
     involved_tab_01: '贊助商',
@@ -151,6 +152,7 @@ export default {
     tourist_title: '觀光景點',
     map_button: '於Google Map查看',
     vegan_title: '素食',
+    muslim_title: '穆斯林餐廳（具清真認證）',
   },
   competition: {
     title: '關於競賽',

@@ -105,8 +105,8 @@ const tourist = [
     tel: { label: '(02)2786-3757', value: '+886-2-27863757' },
     socialMedia: [
       {
-        label: 'VEGE CREEK 蔬河',
-        value: 'https://www.facebook.com/VEGECREEK',
+        label: 'PRESERVE - LaLaport 南港店',
+        value: 'https://www.facebook.com/preserve.kitchen',
       },
     ],
     address: '台北市南港區經貿二路131號1樓(LaLaport)',

@@ -1,5 +1,5 @@
 <template>
-  <section class="host-traffic" :aria-labelledby="$t('host.traffic_title')">
+  <section class="host-traffic" :aria-labelledby="$t('host.traffic_title')" id="traffic">
     <div class="host-traffic-container">
       <BaseTitle class="host-traffic__title" :title="$t('host.traffic_title')" />
       <HostTrafficMRTSection />
@@ -11,17 +11,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { SECTION_ID } from '@/types/page_section'
 import BaseTitle from '@/components/BaseTitle.vue'
-import { useI18n } from 'vue-i18n'
 import HostTrafficMRTSection from '@/components/HostTraffic/MRTSection.vue'
 import HostTrafficBikeSection from '@/components/HostTraffic/BikeSection.vue'
 import HostTrafficHSRSection from '@/components/HostTraffic/HSRSection.vue'
 import HostTrafficBusSection from '@/components/HostTraffic/BusSection.vue'
 
-const { t } = useI18n()
-const { locale } = useI18n()
 </script>
 
 <style lang="scss" scoped>

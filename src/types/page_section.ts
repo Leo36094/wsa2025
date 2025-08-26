@@ -14,6 +14,7 @@ export const SECTION_ID = {
   Traffic: 'traffic',
   Medic: 'medic',
   Tourist: 'tourist',
+  Vegan: 'vegan',
 } as const;
 
 export const PageSectionEnum = {
@@ -33,6 +34,7 @@ export const PageSectionEnum = {
   Traffic: `#${SECTION_ID.Traffic}`,
   Medic: `#${SECTION_ID.Medic}`,
   Tourist: `#${SECTION_ID.Tourist}`,
+  Vegan: `#${SECTION_ID.Vegan}`,
 } as const;
 
 export type PageSection = keyof typeof PageSectionEnum;

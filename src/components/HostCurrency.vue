@@ -1,5 +1,5 @@
 <template>
-  <div class="host-currency" id="currency" :aria-labelledby="$t('host.currency_title')">
+  <div class="host-currency" :aria-labelledby="$t('host.currency_title')">
     <div class="container">
       <aside
         class="column sidebar"
@@ -173,7 +173,7 @@ $border-color: #18475b;
   width: 4.26rem;
   color: #000;
   position: sticky;
-  top: 2rem;
+  top: 2.4rem;
   margin-right: 0.32rem;
   h2 {
     font-size: 0.36rem;

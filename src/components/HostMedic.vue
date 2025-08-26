@@ -1,5 +1,5 @@
 <template>
-  <section class="host-medic" :aria-labelledby="$t('host.medic_title')">
+  <section class="host-medic" :aria-labelledby="$t('host.medic_title')" id="medic">
     <div class="host-medic-container">
       <BaseTitle class="host-medic__title" :title="$t('host.medic_title')" />
       <div class="host-medic__content">
@@ -185,6 +185,7 @@ $font-size-info: (
 );
 
 .host-medic {
+  margin-top: 2.4rem;
   .host-medic-container {
     width: 14.4rem;
     margin: 0 auto;

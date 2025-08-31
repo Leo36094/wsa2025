@@ -137,14 +137,14 @@ const muslim = [
     certification: '清真認證(Halal Food)',
   },
   {
-    name: '饗印印度巴基斯坦料理餐廳(khana khazana-Halal Food)',
+    name: '饗印印度巴基斯坦料理餐廳（khana khazana-Halal Food）',
     iframeKey: ['embed?pb=!1m18!1m12!1m3!1d3614.962260716576!2d121.55806027600124!3d25.035354777815456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb62bc466df%3A0x4513ce85e0f5db05!2z6aWX5Y2w5Y2w5bqm5paZ55CGS2hhbmFraGF6YW5hIGhhbGFsIHJlc3RhdXJhbnQ!5e0!3m2!1szh-TW!2stw!4v1756232202652!5m2!1szh-TW!2stw'],
     imageUrl: 'https://dummyimage.com/576x346/000/fff',
     tel: [{ label: '(02)8786-9366', value: '+886-2-87869366' }],
     socialMedia: [
       {
-        label: '饗印印度巴基斯坦料理餐廳(khana khazana-Halal Food)',
-        value: 'https://www.facebook.com/KhanaKhazanaTaipei/',
+        label: '饗印印度巴基斯坦料理餐廳（khana khazana-Halal Food）',
+        value: 'https://www.facebook.com/indian.pakistan.halal.veg/?locale=zh_TW',
       },
     ],
     address: ['台北市信義區基隆路一段366號'],

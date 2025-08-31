@@ -105,7 +105,7 @@ const tourist = [
     tel: { label: '(02)2786-3757', value: '+886-2-27863757' },
     socialMedia: [
       {
-        label: 'PRESERVE - LaLaport 南港店',
+        label: 'PRESERVE',
         value: 'https://www.facebook.com/preserve.kitchen',
       },
     ],

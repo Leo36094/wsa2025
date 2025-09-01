@@ -1,5 +1,5 @@
 <template>
-  <div class="competition">
+  <div :class="['competition', { 'phase2': phase2Content }]">
     <PageTab
       class="competition__tab"
       :tabs="tabs"
@@ -50,7 +50,6 @@ const tabs = computed(() => [
   },
 ])
 
-
 const router = useRouter()
 const activeTab = ref<PageValue>(tabs.value[0].value)
 const isManualTabChange = ref(false)
@@ -64,9 +63,9 @@ const handleActiveTabChange = (value: PageValue) => {
 
   const element = document.getElementById(value.slice(1))
   if (element) {
-    element.scrollIntoView({
+    element.scrollTo({
       behavior: 'smooth',
-      block: 'start',
+      top: -500,
     })
   }
 
@@ -90,7 +89,10 @@ watch(activeSection, (newSection) => {
     window.history.replaceState(null, '', newUrl)
   }
 })
-
+const phase2Content = computed(() => {
+  const phase2Sections: PageValue[] = [PageSectionEnum.Member, PageSectionEnum.Competitor]
+  return phase2Sections.includes(activeTab.value)
+})
 // URL hash 同步
 const currentHash = computed(() => router.currentRoute.value.hash)
 watch(
@@ -106,13 +108,14 @@ watch(
   },
   { immediate: true },
 )
-
-
 </script>
 <style lang="scss" scoped>
 .competition {
-  padding-top: calc(0.76rem + 1.16rem + 0.3rem);
+  padding-top: 2.2rem;
   background-color: #fff;
+  &.phase2 {
+    padding-top: 1.8rem;
+  }
   &__tab {
     position: fixed;
     top: 0.76rem;
@@ -123,12 +126,18 @@ watch(
       rgba(255, 255, 255, 0.85) 70% rgba(255, 255, 255, 0) 100%
     );
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    @include zIndex(topbar);
-
-    // 增加 padding 讓漸變效果更自然
     padding-bottom: 0.2rem;
     @include zIndex(topbar);
+  }
+}
+@include tablet {
+  .competition {
+    &__tab {
+      top: 0.76rem;
+      height: 1rem;
+      backdrop-filter: blur(8px);
+      padding-bottom: 0.16rem;
+    }
   }
 }
 </style>

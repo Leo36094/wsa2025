@@ -115,7 +115,7 @@ const router = createRouter({
       return {
         el: to.hash,
         behavior: 'smooth',
-        top: 20,
+        top: 220,
       }
     } else {
       return { top: 0, behavior: 'instant' }

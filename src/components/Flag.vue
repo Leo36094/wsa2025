@@ -1,5 +1,5 @@
 <template>
-  <div class="flag-wrapper">
+  <a class="flag-wrapper" :href="link" target="_blank" :aria-label="name">
     <div class="flag" ref="flagRef" @mouseenter="isWaving = true" @mouseleave="isWaving = false">
       <!-- Waving flag -->
       <div v-if="isWaving && waving" class="flag-container">
@@ -27,15 +27,16 @@
     <div class="flag-name">
       {{ name }}
     </div>
-  </div>
+  </a>
 </template>
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, onUnmounted } from 'vue'
 
 interface Props {
-  country: string
+  flag: string
   waving: boolean
   name: string
+  link: string
 }
 
 const props = defineProps<Props>()
@@ -44,13 +45,32 @@ const isWaving = ref(false)
 const flagWidth = ref(300)
 
 const bgUrl = computed(() => {
-  return `${import.meta.env.BASE_URL}images/flags/${props.country}.svg`
+  if (props.flag === '') return ''
+  return `${import.meta.env.BASE_URL}images/flags/${props.flag}.svg`
 })
+
+function thrttle(fn: () => void, delay: number) {
+  let timer: ReturnType<typeof setTimeout> | null = null
+  return () => {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(fn, delay)
+  }
+}
+
+const resizeHandler = thrttle(() => {
+  if (flagRef.value) {
+    flagWidth.value = flagRef.value.offsetWidth || 300
+  }
+}, 100)
 
 onMounted(() => {
   if (flagRef.value) {
     flagWidth.value = flagRef.value.offsetWidth || 300
   }
+  window.addEventListener('resize', resizeHandler)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', resizeHandler)
 })
 </script>
 
@@ -111,6 +131,9 @@ onMounted(() => {
       animation: none;
       @include bgCenter(1.28rem 100%);
     }
+  }
+  .flag-name {
+    font-size: 0.16rem;
   }
 }
 

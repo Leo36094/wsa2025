@@ -97,7 +97,7 @@ $tab-text-color: #455861;
 }
 .page-tab-container {
   width: 12.8rem;
-  margin: 0.4rem auto;
+  margin: 0.24rem auto;
   @include flexCenter;
   border-bottom: 0.01rem solid rgba(#101e24, 0.1);
 }
@@ -130,6 +130,7 @@ $tab-text-color: #455861;
 @include tablet {
   .page-tab-container {
     width: 6.64rem;
+    margin: 0.2rem auto;
   }
   .page-tab {
     &__item {

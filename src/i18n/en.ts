@@ -157,6 +157,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     medic_title: 'Medical Map',
     tourist_title: 'Tourist Attractions',
     map_button: 'View on Google Map',
+    muslim_title: 'Muslim Restaurants',
+    vegan_title: 'Vegetarian Restaurants',
   },
   competition: {
     title: 'Competition',

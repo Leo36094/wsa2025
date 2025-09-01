@@ -1,5 +1,5 @@
 <template>
-  <div :class="['competition', { 'phase2': phase2Content }]">
+  <div :class="['competition', { phase2: phase2Content }]">
     <PageTab
       class="competition__tab"
       :tabs="tabs"
@@ -8,12 +8,10 @@
     />
     <CompetitionMembers v-if="activeTab === PageSectionEnum.Member" />
     <CompetitionCompetitors v-else-if="activeTab === PageSectionEnum.Competitor" />
-    <template v-else>
-      <div class="competition-banner-container">
-        <CompetitionBanner />
-      </div>
-      <CompetitionSchedule />
-    </template>
+    <CompetitionSchedule v-else-if="activeTab === PageSectionEnum.Schedule" />
+    <div v-else class="competition-banner-container">
+      <CompetitionBanner />
+    </div>
   </div>
 </template>
 
@@ -27,7 +25,6 @@ import CompetitionSchedule from '@/components/CompetitionSchedule.vue'
 import CompetitionMembers from '@/components/CompetitionCountry/Members.vue'
 import CompetitionCompetitors from '@/components/CompetitionCountry/Competitors.vue'
 import { PageSectionEnum, type PageValue } from '@/types/page_section'
-import { useScrollSpy } from '@/composables/useScrollSpy'
 
 const { t } = useI18n()
 
@@ -52,62 +49,20 @@ const tabs = computed(() => [
 
 const router = useRouter()
 const activeTab = ref<PageValue>(tabs.value[0].value)
-const isManualTabChange = ref(false)
-
-const allSections = computed(() => tabs.value.map((tab) => tab.value))
-const { activeSection, initializeScrollSpy } = useScrollSpy(allSections.value)
 
 const handleActiveTabChange = (value: PageValue) => {
-  isManualTabChange.value = true
   activeTab.value = value
-
-  const element = document.getElementById(value.slice(1))
-  if (element) {
-    element.scrollTo({
-      behavior: 'smooth',
-      top: -500,
-    })
-  }
 
   router.push({
     name: 'competition',
     hash: value,
   })
-
-  setTimeout(() => {
-    isManualTabChange.value = false
-  }, 1000)
 }
 
-// Watch scroll spy changes with debugging
-watch(activeSection, (newSection) => {
-  if (!isManualTabChange.value) {
-    activeTab.value = newSection
-
-    // 使用 window.history 直接更新 URL，不觸發滾動
-    const newUrl = `${window.location.pathname}${newSection}`
-    window.history.replaceState(null, '', newUrl)
-  }
-})
 const phase2Content = computed(() => {
   const phase2Sections: PageValue[] = [PageSectionEnum.Member, PageSectionEnum.Competitor]
   return phase2Sections.includes(activeTab.value)
 })
-// URL hash 同步
-const currentHash = computed(() => router.currentRoute.value.hash)
-watch(
-  currentHash,
-  (newVal) => {
-    if (newVal && tabs.value.find((tab) => tab.value === newVal)) {
-      isManualTabChange.value = true
-      activeTab.value = newVal as PageValue
-      setTimeout(() => {
-        isManualTabChange.value = false
-      }, 1000)
-    }
-  },
-  { immediate: true },
-)
 </script>
 <style lang="scss" scoped>
 .competition {

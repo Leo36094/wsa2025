@@ -185,7 +185,6 @@ $font-size-info: (
 );
 
 .host-medic {
-  margin-top: 2.4rem;
   .host-medic-container {
     width: 14.4rem;
     margin: 0 auto;

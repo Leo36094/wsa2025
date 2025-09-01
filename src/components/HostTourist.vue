@@ -222,7 +222,6 @@ $font-size-info: (
 );
 
 .host-tourist {
-  margin-top: 2.4rem;
   .host-tourist-container {
     width: 12.8rem;
     margin: 0 auto;

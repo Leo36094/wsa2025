@@ -3,7 +3,7 @@
     <div class="host-vegan-container">
       <BaseTitle class="host-vegan__title" :title="$t('host.vegan_title')" />
       <div class="host-vegan__content">
-        <div class="card" v-for="item in tourist" :key="item.name">
+        <div class="card" v-for="item in data" :key="item.name">
           <div class="card-image">
             <img :src="item.imageUrl" :alt="item.name" />
           </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="card-footer card-group">
-              <div class="footer-title">交通建議:</div>
+              <div class="footer-title">{{ $t('host.transportation_suggestion') }}</div>
               <div class="footer-content">{{ item.traffic }}</div>
             </div>
           </div>
@@ -72,19 +72,20 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 import BaseTitle from '@/components/BaseTitle.vue'
-// import { useI18n } from 'vue-i18n'
 
-// const { t } = useI18n()
-// const { locale } = useI18n()
+const { locale } = useI18n()
 
-const tourist = [
+const vegan = [
   {
     name: '蔬醒- LaLaport 南港店 (Vege Burger)',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d3614.2567753901244!2d121.61521352708488!3d25.059284677800004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad4379c692c3%3A0x4ed6272bd46b3d74!2z6JSs6YaSbGFsYXBvcnQg5Y2X5riv5bqX!5e0!3m2!1szh-TW!2stw!4v1756224466101!5m2!1szh-TW!2stw',
     // dump image 300 x 400
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_01.jpg',
     tel: { label: '(02)2782-0028', value: '+886-2-27820028' },
     socialMedia: [
       {
@@ -101,11 +102,11 @@ const tourist = [
     name: 'PRESERVE - LaLaport 南港店',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d3614.255001507171!2d121.6127115931259!3d25.059344820559136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad006ef51493%3A0x8885032af80d723a!2zUFJFU0VSVkUgTGFMYXBvcnQg5Y2X5riv5bqX!5e0!3m2!1szh-TW!2stw!4v1756224620926!5m2!1szh-TW!2stw',
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_02.jpg',
     tel: { label: '(02)2786-3757', value: '+886-2-27863757' },
     socialMedia: [
       {
-        label: 'PRESERVE - LaLaport 南港店',
+        label: 'PRESERVE',
         value: 'https://www.facebook.com/preserve.kitchen',
       },
     ],
@@ -118,7 +119,7 @@ const tourist = [
     name: '太陽蕃茄拉麵- LaLaport 南港店',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d3614.254999818876!2d121.61500757708504!3d25.059344877800008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a034a87f09%3A0xdf41d989a697ede1!2z5aSq6Zm96JWD6IyE5ouJ6bq1IOWNl-a4r0xhTGFwb3J0!5e0!3m2!1szh-TW!2stw!4v1756227859099!5m2!1szh-TW!2stw',
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_03.jpg',
     tel: { label: '(02)2653-6786', value: '+886-2-26536786' },
     socialMedia: [
       {
@@ -135,7 +136,7 @@ const tourist = [
     name: '尊上食坊',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d3614.3700868437095!2d121.60959799312532!3d25.05544262056806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab585c30ca6d%3A0xd21073dc5fe5c542!2z5bCK5LiK6aOf5Z2K!5e0!3m2!1szh-TW!2stw!4v1756228066122!5m2!1szh-TW!2stw',
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_04.jpg',
     tel: { label: '(02)2782-5167', value: '+886-2-27825167' },
     socialMedia: [
       {
@@ -153,7 +154,7 @@ const tourist = [
     mapUrl: 'https://maps.app.goo.gl/TuqfKHHtrmTbKB9YA',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d3614.270732067023!2d121.61256977708484!3d25.058811477800482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad2691279027%3A0x6d0f2c2a09656e0f!2zVkVHRSBDUkVFS-iUrOaysyDljZfmuK_kuK3kv6Hlupc!5e0!3m2!1szh-TW!2stw!4v1756228191329!5m2!1szh-TW!2stw',
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_05.jpg',
     tel: { label: '(02)2785-0508', value: '+886-2-27850508' },
     socialMedia: [
       {
@@ -170,7 +171,7 @@ const tourist = [
     name: 'Harbor Market Cafe',
     iframeKey:
       'embed?pb=!1m18!1m12!1m3!1d225.90673971549447!2d121.59409822233884!3d25.050771229289357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab7002140f4d%3A0xf4b5ec7af33b9a97!2zMTE15Y-w5YyX5biC5Y2X5riv5Y2A5b-g5a2d5p2x6Lev5YWt5q61NDY1LTHomZ8!5e0!3m2!1szh-TW!2stw!4v1756228442715!5m2!1szh-TW!2stw',
-    imageUrl: 'https://dummyimage.com/576x346/000/fff',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_06.jpg',
     tel: { label: '(02)2783-1272', value: '+886-2-27831272' },
     socialMedia: [
       {
@@ -185,6 +186,115 @@ const tourist = [
     rating: 'Google Maps 4.5⭐'
   },
 ]
+const veganEn = [
+  {
+    name: 'Vege Burger - LaLaport Nangang Branch',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.2567753901244!2d121.61521352708488!3d25.059284677800004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad4379c692c3%3A0x4ed6272bd46b3d74!2z6JSs6YaSbGFsYXBvcnQg5Y2X5riv5bqX!5e0!3m2!1szh-TW!2stw!4v1756224466101!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_01.jpg',
+    tel: { label: '(02)2782-0028', value: '+886-2-27820028' },
+    socialMedia: [
+      {
+        label: 'Vege Burger',
+        value: 'https://www.facebook.com/profile.php?id=100064126631354',
+      },
+    ],
+    address: 'B1 Food Court, No. 131, Jingmao 2nd Road, Nangang District, Taipei City',
+    traffic: 'Approximately a 3-minute walk from Nangang Exhibition Hall 1.',
+    distance: 'Approximately 0.05 km',
+    rating: 'Google Maps 4.6⭐',
+  },
+  {
+    name: 'PRESERVE - LaLaport Nangang Branch',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.255001507171!2d121.6127115931259!3d25.059344820559136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad006ef51493%3A0x8885032af80d723a!2zUFJFU0VSVkUgTGFMYXBvcnQg5Y2X5riv5bqX!5e0!3m2!1szh-TW!2stw!4v1756224620926!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_02.jpg',
+    tel: { label: '(02)2786-3757', value: '+886-2-27863757' },
+    socialMedia: [
+      {
+        label: 'PRESERVE',
+        value: 'https://www.facebook.com/preserve.kitchen',
+      },
+    ],
+    address: '1st Floor, No. 131, Jingmao 2nd Road, Nangang District, Taipei City',
+    traffic: 'About a 3-minute walk from Nangang Exhibition Hall 1. ',
+    distance: 'Approximately 0.05 km',
+    rating: 'Google Maps 4.7⭐',
+  },
+  {
+    name: 'Taiyotomato- LaLaport Nangang Branch',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.254999818876!2d121.61500757708504!3d25.059344877800008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a034a87f09%3A0xdf41d989a697ede1!2z5aSq6Zm96JWD6IyE5ouJ6bq1IOWNl-a4r0xhTGFwb3J0!5e0!3m2!1szh-TW!2stw!4v1756227859099!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_03.jpg',
+    tel: { label: '(02)2653-6786', value: '+886-2-26536786' },
+    socialMedia: [
+      {
+        label: 'Taiyotomato',
+        value: 'https://www.facebook.com/Taiyotomato.tw',
+      },
+    ],
+    address: '5th Floor, No. 131, Jingmao 2nd Road, Nangang District, Taipei City',
+    traffic: 'About a 3-minute walk from Nangang Exhibition Hall 1.',
+    distance: 'Approximately 0.05 km',
+    rating: 'Google Maps 4.1⭐',
+  },
+  {
+    name: 'Zun Shang Vegetarian Food',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.3700868437095!2d121.60959799312532!3d25.05544262056806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab585c30ca6d%3A0xd21073dc5fe5c542!2z5bCK5LiK6aOf5Z2K!5e0!3m2!1szh-TW!2stw!4v1756228066122!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_04.jpg',
+    tel: { label: '(02)2782-5167', value: '+886-2-27825167' },
+    socialMedia: [
+      {
+        label: 'Zun Shang Vegetarian Food',
+        value: 'https://www.facebook.com/p/%E5%B0%8A%E4%B8%8A%E9%A3%9F%E5%9D%8A-100052003945520/',
+      },
+    ],
+    address: 'No. 84, Section 1, Nangan Road, Nangang District, Taipei City',
+    traffic: 'Approximately a 5-minute walk from Nangang Exhibition Hall 1.',
+    distance: 'Approximately 0.35 km',
+    rating: 'Google Maps 4.4⭐',
+  },
+  {
+    name: 'Café VEGE CREEK—Nangang CTBC Branch',
+    mapUrl: 'https://maps.app.goo.gl/TuqfKHHtrmTbKB9YA',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.270732067023!2d121.61256977708484!3d25.058811477800482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad2691279027%3A0x6d0f2c2a09656e0f!2zVkVHRSBDUkVFS-iUrOaysyDljZfmuK_kuK3kv6Hlupc!5e0!3m2!1szh-TW!2stw!4v1756228191329!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_05.jpg',
+    tel: { label: '(02)2785-0508', value: '+886-2-27850508' },
+    socialMedia: [
+      {
+        label: 'VEGE CREEK',
+        value: 'https://www.facebook.com/VEGECREEK',
+      },
+    ],
+    address: `2nd Floor, Building C, No. 186-1, Jingmao 2nd Road, Nangang District, Taipei City`,
+    traffic: 'Walk along Jingmao 2nd Road, turn left at Lane 106. The total walking time is about 5 minutes.',
+    distance: 'Approximately 1 km',
+    rating: 'Google Maps 4.3⭐',
+  },
+  {
+    name: 'Harbor Market Cafe',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d225.90673971549447!2d121.59409822233884!3d25.050771229289357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab7002140f4d%3A0xf4b5ec7af33b9a97!2zMTE15Y-w5YyX5biC5Y2X5riv5Y2A5b-g5a2d5p2x6Lev5YWt5q61NDY1LTHomZ8!5e0!3m2!1szh-TW!2stw!4v1756228442715!5m2!1szh-TW!2stw',
+    imageUrl: import.meta.env.BASE_URL + 'images/host/vegan/vegetable_06.jpg',
+    tel: { label: '(02)2783-1272', value: '+886-2-27831272' },
+    socialMedia: [
+      {
+        label: 'Harbor Market Cafe',
+        value: 'https://www.facebook.com/harbormarkettw/',
+      },
+    ],
+    address: 'No. 465-1, Zhongxiao East Road, Nangang District, Taipei City',
+    traffic:
+      'Take the Taipei Metro Bannan Line (Blue Line) from Nangang Exhibition Center Station (BL 23) to Kunyang Station (BL 21). Exit via Exit 3, then walk for about 1 minute to reach the destination.',
+    distance: 'Approximately 7 km',
+    rating: 'Google Maps 4.5⭐'
+  },
+]
+const data = computed(() => {
+  return locale.value === 'en' ? veganEn : vegan;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -203,7 +313,6 @@ $font-size-info: (
 );
 
 .host-vegan {
-  margin-top: 2.4rem;
   .host-vegan-container {
     width: 12.8rem;
     margin: 0 auto;

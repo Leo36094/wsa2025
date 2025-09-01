@@ -21,6 +21,17 @@
             <div class="social-media">
               <a
                 class="col"
+                href="https://www.wda.gov.tw/"
+                target="_blank"
+              >
+                <img
+                  class="social-media__icon wda"
+                  src="/images/labor_logo.png"
+                  alt="wda-icon"
+                />
+              </a>
+              <a
+                class="col"
                 href="https://www.facebook.com/share/12EaRgmYZyx/?mibextid=wwXIfr"
                 target="_blank"
               >
@@ -129,6 +140,10 @@
         &.facebook {
           width: 0.4rem;
           height: 0.4rem;
+        }
+        &.wda {
+          width: 0.38rem;
+          height: 0.38rem;
         }
       }
     }

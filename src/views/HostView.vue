@@ -7,33 +7,30 @@
       @update:active-tab="handleActiveTabChange"
     />
 
-    <!-- 所有組件都存在於 DOM 中，用 v-show 控制顯示 -->
-    <div v-show="!phase2Content">
+    <template v-if="activeTab === PageSectionEnum.Skill">
       <HostSkill />
+    </template>
+    <template v-else-if="activeTab === PageSectionEnum.Taipei">
       <HostBanner />
       <HostIntroduction />
       <HostCurrency />
       <HostPower />
       <HostClimate />
-      <HostWDA />
-      <HostLocation />
-    </div>
-
-    <div v-show="phase2Content">
-      <HostTraffic />
-      <HostMedic />
-      <HostTourist />
-      <HostVegan />
-      <HostMuslim />
-    </div>
+    </template>
+    <HostWDA v-else-if="activeTab === PageSectionEnum.WDA" />
+    <HostLocation v-else-if="activeTab === PageSectionEnum.Location" />
+    <HostTraffic v-else-if="activeTab === PageSectionEnum.Traffic" />
+    <HostMedic v-else-if="activeTab === PageSectionEnum.Medic" />
+    <HostTourist v-else-if="activeTab === PageSectionEnum.Tourist" />
+    <HostVegan v-else-if="activeTab === PageSectionEnum.Vegan" />
+    <HostMuslim v-else="activeTab === PageSectionEnum.Muslim" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { useScrollSpy } from '@/composables/useScrollSpy'
 
 import PageTab from '@/components/PageTab.vue'
 import HostBanner from '@/components/HostBanner.vue'
@@ -69,84 +66,16 @@ const tabs = computed(() => [
 
 const activeTab = ref<PageValue>(tabs.value[0].value)
 
-// Initialize scroll spy with all tab sections
-const allSections = computed(() => tabs.value.map((tab) => tab.value))
-const { activeSection, initializeScrollSpy } = useScrollSpy(allSections.value)
-
-// Sync activeTab with scroll spy, but allow manual override
-const isManualTabChange = ref(false)
-
-// Watch scroll spy changes with debugging
-watch(activeSection, (newSection) => {
-  console.log('Scroll spy detected:', newSection) // 調試
-  if (!isManualTabChange.value) {
-    activeTab.value = newSection
-
-    // 使用 window.history 直接更新 URL，不觸發滾動
-    const newUrl = `${window.location.pathname}${newSection}`
-    window.history.replaceState(null, '', newUrl)
-  }
-})
-
 const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === activeTab.value))
 
 const handleActiveTabChange = (value: PageValue) => {
-  isManualTabChange.value = true
   activeTab.value = value
-
-  const element = document.getElementById(value.slice(1))
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
-  }
-
   router.push({
     name: 'host',
     hash: value,
   })
-
-  setTimeout(() => {
-    isManualTabChange.value = false
-  }, 1000)
 }
 
-// 保持 phase2Content 邏輯用於控制顯示
-const phase2Content = computed(() => {
-  const phase2Sections: PageValue[] = [
-    PageSectionEnum.Traffic,
-    PageSectionEnum.Medic,
-    PageSectionEnum.Tourist,
-    PageSectionEnum.Vegan,
-    PageSectionEnum.Muslim,
-  ]
-  return phase2Sections.includes(activeTab.value)
-})
-
-// 當 phase2Content 改變時重新初始化 scroll spy
-watch(phase2Content, () => {
-  console.log('phase2Content changed, reinitializing scroll spy') // 調試
-  setTimeout(() => {
-    initializeScrollSpy()
-  }, 200)
-})
-
-// URL hash 同步
-const currentHash = computed(() => router.currentRoute.value.hash)
-watch(
-  currentHash,
-  (newVal) => {
-    if (newVal && tabs.value.find((tab) => tab.value === newVal)) {
-      isManualTabChange.value = true
-      activeTab.value = newVal as PageValue
-      setTimeout(() => {
-        isManualTabChange.value = false
-      }, 1000)
-    }
-  },
-  { immediate: true },
-)
 </script>
 <style lang="scss">
 .host {
@@ -172,11 +101,6 @@ watch(
   }
 
   .host-tab {
-    /* position: fixed;
-    top: 0.76rem;
-    height: 1.44rem;
-    background-color: #fff;
-    @include zIndex(topbar); */
     position: fixed;
     top: 0.76rem;
     height: 1.44rem;

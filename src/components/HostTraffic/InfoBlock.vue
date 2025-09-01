@@ -52,6 +52,7 @@ $block-bg: #f3f4f5;
       margin-bottom: 0.48rem;
     }
     .banner-title {
+      padding: 0 0.04rem;
       &.leaf {
         margin-top: 0.48rem;
       }

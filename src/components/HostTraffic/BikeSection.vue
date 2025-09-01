@@ -40,10 +40,11 @@
         {{ MRTBlock.methods.title }}
       </Text>
       <ul>
-        <li v-for="item in MRTBlock.methods.list" :key="item">
-          <Text tag="p" variant="p" align="left">
-            {{ item }}
+        <li v-for="item in MRTBlock.methods.list" :key="item.value">
+          <Text v-if="item.type === 'text'" tag="p" variant="p" align="left">
+            {{ item.value }}
           </Text>
+          <Text v-else tag="p" variant="p" align="left" v-html="item.value"> </Text>
         </li>
       </ul>
     </div>
@@ -125,8 +126,16 @@ const MRTBlock = {
   methods: {
     title: '租借方式',
     list: [
-      'YouBike除了使用悠遊卡之外，如果您是外地來的遊客，沒有悠遊卡時，可以利用信用卡（VISA、MASTER或JCB）單次租車。',
-      '需使用YouBike App進行信用卡綁定，租借教學請見：點擊查看。',
+      {
+        type: 'text',
+        value:
+          'YouBike除了使用悠遊卡之外，如果您是外地來的遊客，沒有悠遊卡時，可以利用信用卡（VISA、MASTER或JCB）單次租車。',
+      },
+      {
+        type: 'link',
+        value:
+          `需使用YouBike App進行信用卡綁定，租借教學請見：<a class="link" href="https://en.youbike.com.tw/region/main/" target="_blank">點擊查看</a>。`,
+      },
     ],
   },
   reminder: {
@@ -141,6 +150,9 @@ const MRTBlock = {
 
 .host-traffic__info-block {
   margin-top: 1.04rem;
+  :deep(.link) {
+    text-decoration: underline;
+  }
   .content-section {
     margin-bottom: map.get($traffic, 'section-margin');
     ul {
@@ -159,7 +171,7 @@ const MRTBlock = {
   .map-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.24rem 0.16rem;
+    gap: 0.48rem 0.16rem;
     .map-card {
       width: 3.78rem;
       .text-row {
@@ -180,7 +192,7 @@ const MRTBlock = {
   .host-traffic__info-block {
     margin-top: 0.8rem;
     .map-cards {
-      gap: 0.16rem 0.24rem;
+      gap: 0.4rem 0.24rem;
       justify-content: space-between;
       .map-card {
         width: 2.88rem;

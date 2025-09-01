@@ -128,6 +128,7 @@ const sponsorList = computed(() => {
   ]
 })
 
+
 const handleActiveTabChange = (pageValue: PageValue) => {
   activeTab.value = pageValue
   router.push({ hash: pageValue })
@@ -143,9 +144,19 @@ onMounted(() => {
 })
 </script>
 
+<style lang="scss">
+.get-involved__tab {
+  section,
+  main,
+  div[id] {
+    scroll-margin-top: calc(0.76rem + 1.16rem + 0.3rem + 0.2rem);
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .get-involved {
-  padding-top: 0.76rem;
+  padding-top: calc(0.76rem + 1.16rem + 0.3rem);
   padding-bottom: 1.4rem;
   background-color: #fff;
   &__title {
@@ -159,6 +170,20 @@ onMounted(() => {
     @include flexCenter;
   }
   &__tab {
+    position: fixed;
+    top: 0.76rem;
+    height: 1.44rem;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.85) 70% rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @include zIndex(topbar);
+
+    // 增加 padding 讓漸變效果更自然
+    padding-bottom: 0.2rem;
     :deep(.page-tab-container) {
       margin: 0.16rem auto;
     }
@@ -240,8 +265,11 @@ onMounted(() => {
 }
 @include mobile {
   .get-involved {
-    padding-top: 0.72rem;
+    padding-top: 1.64rem;
     padding-bottom: 0.72rem;
+    &__tab {
+      height: 1rem;
+    }
     &__title {
       margin-top: 0.16rem;
       margin-bottom: 0.16rem;

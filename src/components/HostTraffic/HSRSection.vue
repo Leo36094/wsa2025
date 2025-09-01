@@ -97,11 +97,6 @@ const HSRBlock = {
         iconAlt: '地圖 icon',
       },
       {
-        icon: import.meta.env.BASE_URL + 'images/host/icons/tel-icon.svg',
-        text: '0227868756',
-        iconAlt: '電話 icon',
-      },
-      {
         icon: import.meta.env.BASE_URL + 'images/host/icons/distance-icon.svg',
         text: '「南港高鐵站/南港車站」距離「南港展覽館」約1.8公里',
         iconAlt: '距離 icon',

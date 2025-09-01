@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import PageTab from '@/components/PageTab.vue'
@@ -49,7 +49,7 @@ const tabs = computed(() => [
 
 const router = useRouter()
 const activeTab = ref<PageValue>(tabs.value[0].value)
-
+const routeHash = computed(() => router.currentRoute.value.hash)
 const handleActiveTabChange = (value: PageValue) => {
   activeTab.value = value
 
@@ -62,6 +62,14 @@ const handleActiveTabChange = (value: PageValue) => {
 const phase2Content = computed(() => {
   const phase2Sections: PageValue[] = [PageSectionEnum.Member, PageSectionEnum.Competitor]
   return phase2Sections.includes(activeTab.value)
+})
+onMounted(() => {
+  if (routeHash.value) {
+    const tab = tabs.value.find((tab) => tab.value === routeHash.value)
+    if (tab) {
+      activeTab.value = tab.value
+    }
+  }
 })
 </script>
 <style lang="scss" scoped>

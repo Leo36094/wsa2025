@@ -35,7 +35,6 @@ export const PageSectionEnum = {
   Forum: `#${SECTION_ID.Forum}`,
   Tourguide: `#${SECTION_ID.Tourguide}`,
   Notice: `#${SECTION_ID.Notice}`,
-  // TODO
   Traffic: `#${SECTION_ID.Traffic}`,
   Medic: `#${SECTION_ID.Medic}`,
   Tourist: `#${SECTION_ID.Tourist}`,

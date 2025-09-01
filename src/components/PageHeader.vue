@@ -90,6 +90,8 @@ const nav = computed(() => [
     subNav: [
       { name: t('page_tabs.competition_tab_01'), path: '' },
       { name: t('page_tabs.competition_tab_02'), path: `#${SECTION_ID.Schedule}` },
+      { name: t('page_tabs.competition_tab_03'), path: `#${SECTION_ID.Member}` },
+      { name: t('page_tabs.competition_tab_04'), path: `#${SECTION_ID.Competitor}` },
     ],
   },
   { name: t('header.skill'), path: '/skills', subNav: [] },

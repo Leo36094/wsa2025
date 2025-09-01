@@ -150,6 +150,7 @@ export default {
 `,
     location_visit_website: '訪問網站',
     traffic_title: '交通資訊',
+    transportation_suggestion: '交通建議：',
     medic_title: '鄰近醫院',
     tourist_title: '觀光景點',
     map_button: '於Google Map查看',

@@ -1,24 +1,24 @@
 <template>
   <HostTrafficInfoBlock
     class="host-traffic__info-block"
-    :title="MRTBlock.title"
-    :imageUrl="MRTBlock.imageUrl"
-    :source="MRTBlock.imageSource"
+    :title="data.title"
+    :imageUrl="data.imageUrl"
+    :source="data.imageSource"
   >
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.stop.title }}
+        {{ data.stop.title }}
       </Text>
       <Text tag="p" variant="p" align="left">
-        {{ MRTBlock.stop.name }}
+        {{ data.stop.name }}
       </Text>
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.route.title }}
+        {{ data.route.title }}
       </Text>
       <ul>
-        <li v-for="route in MRTBlock.route.list" :key="route">
+        <li v-for="route in data.route.list" :key="route">
           <Text tag="p" variant="p" align="left">
             {{ route }}
           </Text>
@@ -26,7 +26,7 @@
       </ul>
       <div class="modal-trigger" @click="toggleModal(true)">
         <Text tag="p" variant="p" align="left">
-          {{ MRTBlock.modal.name }}
+          {{ data.modal.name }}
         </Text>
         <Teleport to="body">
           <div v-if="showModal" class="modal">
@@ -35,8 +35,8 @@
               <div class="close-button" @click="showModal = false"></div>
               <img
                 class="modal-image-container"
-                :src="MRTBlock.modal.image"
-                :alt="MRTBlock.modal.name"
+                :src="data.modal.image"
+                :alt="data.modal.name"
               />
               <div class="click-to-close"></div>
             </div>
@@ -46,12 +46,12 @@
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.purchaseMethod.title }}
+        {{ data.purchaseMethod.title }}
       </Text>
       <div class="purchase-method-container">
         <div
           class="purchase-method-item"
-          v-for="method in MRTBlock.purchaseMethod.methods"
+          v-for="method in data.purchaseMethod.methods"
           :key="method.title"
         >
           <img class="purchase-method-item-image" :src="method.image" :alt="method.title" />
@@ -81,10 +81,10 @@
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.reminder.title }}
+        {{ data.reminder.title }}
       </Text>
       <ul>
-        <li v-for="item in MRTBlock.reminder.list" :key="item">
+        <li v-for="item in data.reminder.list" :key="item">
           <Text tag="p" variant="p" align="left">
             {{ item }}
           </Text>
@@ -95,9 +95,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 import HostTrafficInfoBlock from '@/components/HostTraffic/InfoBlock.vue'
 import Text from '@/components/HostTraffic/Text.vue'
+
+const { locale } = useI18n()
 
 const MRTBlock = {
   title: '捷運',
@@ -161,6 +165,72 @@ const MRTBlock = {
     ],
   },
 }
+const MRTBlockEn = {
+  title: 'Taipei Mass Rapid Transit (MRT)',
+  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_01_01.jpg',
+  imageSource: 'Photo by C.L. Kao (eddie5150), licensed under CC BY-SA 3.0',
+  stop: {
+    title: 'Station',
+    name: 'Nangang Exhibition Center Hall',
+  },
+  route: {
+    title: 'Route',
+    list: ['Bannan Line（Blue Line、BL 23）', 'Wenhu Line（Brown Line、BR 24）'],
+  },
+  modal: {
+    name: 'View Station Exit',
+    image: 'https://web.metro.taipei/img/ALL/Route2200/031.jpg',
+  },
+  purchaseMethod: {
+    title: 'Ticketing Information',
+    methods: [
+      {
+        title: 'One-way Ticket',
+        image: import.meta.env.BASE_URL + 'images/host/transportation/transportation_01_02.png',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/clock-icon.svg',
+            iconAlt: 'Time icon',
+            text: 'Valid on the same day, expired and void.',
+          },
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/home-icon.svg',
+            iconAlt: 'Location icon',
+            text: ['Available at automatic ticket machines', 'Information counters in MRT stations.'],
+          },
+        ],
+      },
+      {
+        title: 'EasyCard (Stored-Value Card)',
+        image: import.meta.env.BASE_URL + 'images/host/transportation/transportation_01_03.png',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/clock-icon.svg',
+            iconAlt: 'Time icon',
+            text: 'Rechargeable and reuseable on Taipei MRT, buses, and selected retail stores.',
+          },
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/home-icon.svg',
+            iconAlt: 'Location icon',
+            text: 'Available at convenience stores and MRT station information counters. ',
+          },
+        ],
+      },
+    ],
+  },
+  reminder: {
+    title: 'Helpful Tips：',
+    list: [
+      'This station is an interchange for both the Blue Line and Brown Line, offering convenient transfers.',
+      'During exhibitions, events, or competitions, the station may be crowded. We recommend arriving early and waiting on the platform.',
+      'Taipei MRT fares are distance-based. The minimum fare for a single journey is NT$ 20. Please tap your card when entering and exiting the station.',
+    ],
+  },
+}
+
+const data = computed(() => {
+  return locale.value === 'en' ? MRTBlockEn : MRTBlock;
+});
 
 const showModal = ref(false)
 const toggleModal = (show: boolean) => {

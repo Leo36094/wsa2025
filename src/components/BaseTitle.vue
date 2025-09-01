@@ -1,12 +1,14 @@
 <template>
-  <div class="first-slide__title">
-    <h2>{{ props.title }}</h2>
+  <div :class="['first-slide__title', className]">
+    <h2 :style="style">{{ props.title }}</h2>
   </div>
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
   title: string
+  className?: string
+  style?: Record<string, string>
 }>()
 </script>
 <style lang="scss" scoped>

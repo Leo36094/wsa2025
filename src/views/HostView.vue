@@ -78,7 +78,6 @@ const isManualTabChange = ref(false)
 
 // Watch scroll spy changes with debugging
 watch(activeSection, (newSection) => {
-  console.log('Scroll spy detected:', newSection) // 調試
   if (!isManualTabChange.value) {
     activeTab.value = newSection
 
@@ -126,7 +125,6 @@ const phase2Content = computed(() => {
 
 // 當 phase2Content 改變時重新初始化 scroll spy
 watch(phase2Content, () => {
-  console.log('phase2Content changed, reinitializing scroll spy') // 調試
   setTimeout(() => {
     initializeScrollSpy()
   }, 200)
@@ -172,11 +170,6 @@ watch(
   }
 
   .host-tab {
-    /* position: fixed;
-    top: 0.76rem;
-    height: 1.44rem;
-    background-color: #fff;
-    @include zIndex(topbar); */
     position: fixed;
     top: 0.76rem;
     height: 1.44rem;

@@ -16,15 +16,18 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+// components
 import PageTab from '@/components/PageTab.vue'
 import CompetitionBanner from '@/components/CompetitionBanner.vue'
 import CompetitionSchedule from '@/components/CompetitionSchedule.vue'
 import CompetitionMembers from '@/components/CompetitionCountry/Members.vue'
 import CompetitionCompetitors from '@/components/CompetitionCountry/Competitors.vue'
+
 import { PageSectionEnum, type PageValue } from '@/types/page_section'
+import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
 
@@ -47,29 +50,11 @@ const tabs = computed(() => [
   },
 ])
 
-const router = useRouter()
-const activeTab = ref<PageValue>(tabs.value[0].value)
-const routeHash = computed(() => router.currentRoute.value.hash)
-const handleActiveTabChange = (value: PageValue) => {
-  activeTab.value = value
-
-  router.push({
-    name: 'competition',
-    hash: value,
-  })
-}
+const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'competition')
 
 const phase2Content = computed(() => {
   const phase2Sections: PageValue[] = [PageSectionEnum.Member, PageSectionEnum.Competitor]
   return phase2Sections.includes(activeTab.value)
-})
-onMounted(() => {
-  if (routeHash.value) {
-    const tab = tabs.value.find((tab) => tab.value === routeHash.value)
-    if (tab) {
-      activeTab.value = tab.value
-    }
-  }
 })
 </script>
 <style lang="scss" scoped>

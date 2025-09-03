@@ -55,6 +55,7 @@ const countries = Object.entries(PARTICIPATING_COUNTRIES).map(([code, info]) => 
 </script>
 
 <style lang="scss" scoped>
+@use "sass:map";
 $block-bg-color: #fff;
 $note-bg-color: #c8e14b;
 $title-bg-color: #18475b;
@@ -95,7 +96,7 @@ $font-size-info: (
       }
       .competitors__desc {
         text-align: center;
-        font-size: map-get($font-size-info, pc);
+        font-size: map.get($font-size-info, pc);
         font-weight: 400;
       }
     }
@@ -123,7 +124,7 @@ $font-size-info: (
           margin-bottom: 0.24rem;
         }
         .competitors__desc {
-          font-size: map-get($font-size-info, tablet);
+          font-size: map.get($font-size-info, tablet);
         }
       }
     }
@@ -147,7 +148,7 @@ $font-size-info: (
           margin-bottom: 0.16rem;
         }
         .competitors__desc {
-          font-size: map-get($font-size-info, mobile);
+          font-size: map.get($font-size-info, mobile);
         }
       }
     }

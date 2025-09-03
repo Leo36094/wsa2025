@@ -44,6 +44,7 @@ const textClasses = computed(() => [
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
 // Typography configuration
 $text-config: (
   color: #101E24,
@@ -80,8 +81,8 @@ $text-config: (
 
 // Base component styles
 .text-component {
-  color: map-get($text-config, color);
-  line-height: map-get($text-config, line-height-base);
+  color: map.get($text-config, color);
+  line-height: map.get($text-config, line-height-base);
   letter-spacing: normal;
   word-wrap: break-word;
   hyphens: auto;
@@ -98,20 +99,20 @@ $text-config: (
 }
 
 // Generate variant styles
-@each $variant, $props in map-get($text-config, variants) {
+@each $variant, $props in map.get($text-config, variants) {
   .text-component--#{$variant} {
-    font-size: map-get($props, font-size);
-    font-weight: map-get($props, font-weight);
-    line-height: map-get($props, line-height);
+    font-size: map.get($props, font-size);
+    font-weight: map.get($props, font-weight);
+    line-height: map.get($props, line-height);
 
-    @if map-has-key($props, margin-bottom) {
-      margin-bottom: map-get($props, margin-bottom);
+    @if map.has-key($props, margin-bottom) {
+      margin-bottom: map.get($props, margin-bottom);
     }
   }
 }
 
 // Generate alignment classes
-@each $alignment in map-get($text-config, alignments) {
+@each $alignment in map.get($text-config, alignments) {
   .text-component--align-#{$alignment} {
     text-align: #{$alignment};
   }
@@ -120,9 +121,9 @@ $text-config: (
 // Responsive styles
 @include tablet {
   .text-component--h3 {
-    $h3-props: map-get(map-get($text-config, variants), h3);
-    @if map-has-key($h3-props, margin-bottom-tablet) {
-      margin-bottom: map-get($h3-props, margin-bottom-tablet);
+    $h3-props: map.get(map.get($text-config, variants), h3);
+    @if map.has-key($h3-props, margin-bottom-tablet) {
+      margin-bottom: map.get($h3-props, margin-bottom-tablet);
     }
   }
 }
@@ -141,8 +142,8 @@ $text-config: (
 }
 
 // Color variants (if needed in the future)
-@if map-has-key($text-config, color-variants) {
-  @each $color-name, $color-value in map-get($text-config, color-variants) {
+@if map.has-key($text-config, color-variants) {
+  @each $color-name, $color-value in map.get($text-config, color-variants) {
     .text-component--color-#{$color-name} {
       color: $color-value;
     }

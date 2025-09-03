@@ -1,17 +1,17 @@
 <template>
   <HostTrafficInfoBlock
     class="host-traffic__info-block"
-    :title="MRTBlock.title"
-    :imageUrl="MRTBlock.imageUrl"
+    :title="data.title"
+    :imageUrl="data.imageUrl"
   >
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.location.title }}
+        {{ data.location.title }}
       </Text>
     </div>
     <div class="content-section">
       <div class="map-cards">
-        <div class="map-card" v-for="card in MRTBlock.location.cards" :key="card.title">
+        <div class="map-card" v-for="card in data.location.cards" :key="card.title">
           <Text class="text-row" tag="h4" variant="h4" align="left">
             {{ card.title }}
           </Text>
@@ -37,10 +37,10 @@
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.methods.title }}
+        {{ data.methods.title }}
       </Text>
       <ul>
-        <li v-for="item in MRTBlock.methods.list" :key="item.value">
+        <li v-for="item in data.methods.list" :key="item.value">
           <Text v-if="item.type === 'text'" tag="p" variant="p" align="left">
             {{ item.value }}
           </Text>
@@ -50,10 +50,10 @@
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
-        {{ MRTBlock.reminder.title }}
+        {{ data.reminder.title }}
       </Text>
       <ul>
-        <li v-for="item in MRTBlock.reminder.list" :key="item">
+        <li v-for="item in data.reminder.list" :key="item">
           <Text tag="p" variant="p" align="left">
             {{ item }}
           </Text>
@@ -64,10 +64,15 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
 import HostTrafficInfoBlock from '@/components/HostTraffic/InfoBlock.vue'
 import Text from '@/components/HostTraffic/Text.vue'
 
-const MRTBlock = {
+const { locale } = useI18n()
+
+const BikeBlock = {
   title: 'YouBike',
   imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
   location: {
@@ -143,6 +148,84 @@ const MRTBlock = {
     list: ['展覽、活動或比賽期間可能較難租到車，建議提前規劃取、還車點。'],
   },
 }
+const BikeBlockEn = {
+  title: 'YouBike',
+  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
+  location: {
+    title: 'Station Information',
+    cards: [
+      {
+        title: 'Nangang Exhibition Center Hall 2',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/map-icon.svg',
+            iconAlt: '地圖 icon',
+            text: 'Jingmao 2nd Rd./Section 1, Nangang Rd. (Northwest side)',
+          },
+        ],
+        iframeKey:
+          'embed?pb=!1m17!1m12!1m3!1d3614.3698692221965!2d121.61645999999999!3d25.05545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE5LjYiTiAxMjHCsDM2JzU5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1756143321633!5m2!1szh-TW!2stw',
+      },
+      {
+        title: 'Exhibition Center Hall 1 (Exit 5)',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/map-icon.svg',
+            iconAlt: '地圖 icon',
+            text: 'No. 1, Section 1, Academia Rd. (Exit 5)',
+          },
+        ],
+        iframeKey:
+          'embed?pb=!1m17!1m12!1m3!1d3614.392281520031!2d121.61668999999998!3d25.054689999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjkiTiAxMjHCsDM3JzAwLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1756143815731!5m2!1szh-TW!2stw',
+      },
+      {
+        title: 'Exhibition Center Hall (Exit 4)',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/map-icon.svg',
+            iconAlt: '地圖 icon',
+            text: 'No. 32, Section 1, Nangang Rd. (Exit 4)',
+          },
+        ],
+        iframeKey:
+          'embed?pb=!1m17!1m12!1m3!1d3614.3728182450864!2d121.61838!3d25.055349999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE5LjMiTiAxMjHCsDM3JzA2LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1756143945753!5m2!1szh-TW!2stw',
+      },
+      {
+        title: 'Exhibition Center Hall (Exit 6)',
+        list: [
+          {
+            icon: import.meta.env.BASE_URL + 'images/host/icons/map-icon.svg',
+            iconAlt: '地圖 icon',
+            text: 'No. 28, Section 1, Nangang Rd. (Exit 6)',
+          },
+        ],
+        iframeKey:
+          'embed?pb=!1m17!1m12!1m3!1d3614.3934610970377!2d121.61849999999998!3d25.054650000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjciTiAxMjHCsDM3JzA2LjYiRQ!5e0!3m2!1szh-TW!2stw!4v1756144003272!5m2!1szh-TW!2stw',
+      },
+    ],
+  },
+  methods: {
+    title: 'Bike Rental Instructions',
+    list: [
+      {
+        type: 'text',
+        value:
+          'In addition to using an EasyCard, YouBike also allows single-use rentals with credit cards (Visa, MasterCard, or JCB) perfect for out-of-town visitors without an EasyCard.',
+      },
+      {
+        type: 'link',
+        value: `To use a credit card, you must bind it through the YouBike APP. For rental instructions, please refer to: <a class="link" href="https://en.youbike.com.tw/region/main/" target="_blank">Click to view</a>.`,
+      },
+    ],
+  },
+  reminder: {
+    title: 'Friendly Reminder',
+    list: ['During exhibitions, events, or competitions, bikes may be in short supply. We recommend planning your pick-up and return locations in advance. '],
+  },
+}
+const data = computed(() => {
+  return locale.value === 'en' ? BikeBlockEn : BikeBlock;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -167,6 +250,7 @@ const MRTBlock = {
     width: 0.2rem;
     height: 0.2rem;
     margin-right: 0.08rem;
+    margin-top: 0.03rem;
   }
   .map-cards {
     display: flex;
@@ -182,7 +266,6 @@ const MRTBlock = {
         flex-direction: column;
         .map-card-content-item {
           display: flex;
-          align-items: center;
         }
       }
     }

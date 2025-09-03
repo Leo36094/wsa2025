@@ -298,6 +298,7 @@ const data = computed(() => {
 </script>
 
 <style lang="scss" scoped>
+@use "sass:map";
 $block-bg-color: #fff;
 
 $font-size-title: (
@@ -352,7 +353,7 @@ $font-size-info: (
       .card-content {
         flex: 1;
         .card-title {
-          font-size: map-get($font-size-title, pc);
+          font-size: map.get($font-size-title, pc);
           font-weight: 700;
         }
         .card-info {
@@ -365,7 +366,7 @@ $font-size-info: (
           }
         }
         .card-media {
-          font-size: map-get($font-size-info, pc);
+          font-size: map.get($font-size-info, pc);
           color: #455861;
           font-weight: 700;
         }
@@ -432,11 +433,11 @@ $font-size-info: (
         .card-content {
           .card-title {
             text-align: center;
-            font-size: map-get($font-size-title, mobile);
+            font-size: map.get($font-size-title, mobile);
             margin: 0.04rem 0;
           }
           .card-info {
-            font-size: map-get($font-size-info, mobile);
+            font-size: map.get($font-size-info, mobile);
             flex-direction: column;
           }
           .card-map {

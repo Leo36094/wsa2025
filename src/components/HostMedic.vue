@@ -268,6 +268,8 @@ const data = computed(() => {
 </script>
 
 <style lang="scss" scoped>
+@use "sass:map";
+
 $block-bg-color: #fff;
 $note-bg-color: #c8e14b;
 /* $note-color: #101E24; */
@@ -307,7 +309,7 @@ $font-size-info: (
       border-radius: 0.1rem;
       .content-item-title {
         margin-bottom: 0.16rem;
-        font-size: map-get($font-size-title, pc);
+        font-size: map.get($font-size-title, pc);
         font-weight: 700;
       }
       .item-info {
@@ -318,7 +320,7 @@ $font-size-info: (
           display: flex;
           flex-direction: column;
           justify-content: center;
-          font-size: map-get($font-size-info, pc);
+          font-size: map.get($font-size-info, pc);
           padding-left: 0;
           gap: 0.09rem;
           li {
@@ -342,7 +344,7 @@ $font-size-info: (
           }
         }
         .info-note {
-          font-size: map-get($font-size-info, pc);
+          font-size: map.get($font-size-info, pc);
           background-color: $note-bg-color;
           padding: 0 0.04rem;
           border-radius: 0.02rem;
@@ -386,19 +388,19 @@ $font-size-info: (
         width: 100%;
         padding: 0.16rem 0.08rem;
         .content-item-title {
-          font-size: map-get($font-size-title, mobile);
+          font-size: map.get($font-size-title, mobile);
         }
         .item-info {
           @include flexCenter(column);
-          font-size: map-get($font-size-info, mobile);
+          font-size: map.get($font-size-info, mobile);
           .info-list {
             @include flexCenter(column);
             li {
-              font-size: map-get($font-size-info, mobile);
+              font-size: map.get($font-size-info, mobile);
             }
           }
           .info-note {
-            font-size: map-get($font-size-info, mobile);
+            font-size: map.get($font-size-info, mobile);
           }
         }
       }

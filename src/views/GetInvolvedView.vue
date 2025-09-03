@@ -72,16 +72,17 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { PageSectionEnum, type PageValue, SECTION_ID } from '@/types/page_section'
-import { ref, computed, onMounted } from 'vue'
+import { PageSectionEnum, SECTION_ID } from '@/types/page_section'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
 import BaseTitle from '@/components/BaseTitle.vue'
 import PageTab from '@/components/PageTab.vue'
 import GetInvolvedVisa from '@/components/GetInvolvedVisa.vue'
 import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
 import GetInvolvedTour from '@/components/GetInvolvedTour.vue'
 import GetInvolvedNotice from '@/components/GetInvolvedNotice.vue'
+
+import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
 
@@ -107,9 +108,6 @@ const tabs = computed(() => [
     value: PageSectionEnum.Notice,
   },
 ])
-const router = useRouter()
-const routeHash = computed(() => router.currentRoute.value.hash)
-const activeTab = ref<PageValue>(tabs.value[0].value)
 
 const sponsorList = computed(() => {
   return [
@@ -128,20 +126,7 @@ const sponsorList = computed(() => {
   ]
 })
 
-
-const handleActiveTabChange = (pageValue: PageValue) => {
-  activeTab.value = pageValue
-  router.push({ hash: pageValue })
-}
-
-onMounted(() => {
-  if (routeHash.value) {
-    const tab = tabs.value.find((tab) => tab.value === routeHash.value)
-    if (tab) {
-      activeTab.value = tab.value
-    }
-  }
-})
+const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'get-involved')
 </script>
 
 <style lang="scss">

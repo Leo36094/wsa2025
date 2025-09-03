@@ -28,9 +28,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
 
 import PageTab from '@/components/PageTab.vue'
 import HostBanner from '@/components/HostBanner.vue'
@@ -47,10 +46,10 @@ import HostTourist from '@/components/HostTourist.vue'
 import HostVegan from '@/components/HostVegan.vue'
 import HostMuslim from '@/components/HostMuslim.vue'
 
-import { PageSectionEnum, type PageValue } from '@/types/page_section'
+import { PageSectionEnum } from '@/types/page_section'
+import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
-const router = useRouter()
 
 const tabs = computed(() => [
   { label: t('page_tabs.host_tab_01'), value: PageSectionEnum.Skill },
@@ -64,18 +63,9 @@ const tabs = computed(() => [
   { label: t('page_tabs.host_tab_09'), value: PageSectionEnum.Muslim },
 ])
 
-const activeTab = ref<PageValue>(tabs.value[0].value)
+const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'host')
 
 const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === activeTab.value))
-
-const handleActiveTabChange = (value: PageValue) => {
-  activeTab.value = value
-  router.push({
-    name: 'host',
-    hash: value,
-  })
-}
-
 </script>
 <style lang="scss">
 .host {

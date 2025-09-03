@@ -42,6 +42,9 @@
 <script setup lang="ts">
 import { ref, nextTick, watch, onMounted, onUnmounted } from 'vue'
 import { type PageValue } from '@/types/page_section'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
 
 const props = defineProps<{
   tabs: {
@@ -154,6 +157,12 @@ const scrollToActiveTab = async () => {
 watch(() => props.activeTab, () => {
   scrollToActiveTab()
 }, { immediate: true })
+
+watch(() => locale.value, () => {
+  nextTick(() => {
+    updateArrowVisibility()
+  })
+})
 
 // Initialize arrow visibility and event listeners
 onMounted(() => {

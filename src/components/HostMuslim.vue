@@ -231,7 +231,7 @@ const muslim = [
         value: 'https://www.facebook.com/gustopizzatw/?locale=zh_TW',
       },
     ],
-    address: ['台北市中正區延平南路23號'],
+    address: ['台北市中正區連雲街74之1號'],
     traffic:
       '從「捷運南港展覽館站(BL23)」搭乘捷運板南線(藍線)至「忠孝新生(BL14)」，轉乘中和新蘆線(橘線)至「東門站O06」，6號出口出站後步行約2分鐘。',
     distance: '約15公里',
@@ -375,7 +375,7 @@ Road—it’s about a 7-minute walk.`,
         value: 'https://www.facebook.com/gustopizzatw/?locale=zh_TW',
       },
     ],
-    address: ['No. 23, Yanping South Road, Zhongzheng District, Taipei City'],
+    address: ['No. 74-1, Lianyun Street, Zhongzheng District, Taipei City'],
     traffic:
       'Take the Taipei Metro Bannan Line (Blue Line) from Nangang Exhibition Center Station (BL 23) to Zhongxiao Xinsheng Station (BL 14). Transfer to Zhonghe-Xinlu Line (Orange Line) and ride to Dongmen Station (O 06), Exit via Exit 6 and walk for about 2 minutes.',
     distance: 'Approximately 15 km',

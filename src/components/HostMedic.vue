@@ -300,7 +300,7 @@ $font-size-info: (
   .host-medic__desc {
     font-size: map.get($font-size-info, pc);
     padding: 0 0.5rem;
-    width: 12rem;
+    width: 100%;
     text-align: center;
   }
   .host-medic__content {

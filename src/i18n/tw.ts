@@ -152,6 +152,8 @@ export default {
     traffic_title: '交通資訊',
     transportation_suggestion: '交通建議：',
     medic_title: '鄰近醫院',
+    medic_desc:
+      '以下醫院分為「大型綜合醫院」及「最高等級醫學中心」，皆具備急診與多科別完整醫療服務。距離與車程為預估值，實際狀況可能因交通影響而異。',
     tourist_title: '觀光景點',
     map_button: '於Google Map查看',
     vegan_title: '素食',
@@ -392,7 +394,8 @@ export default {
       </ol>
       `,
     visa_arrival_procedures: '抵達手續',
-    visa_arrival_procedures_desc: '外來旅客於抵達臺灣前三天內，須至移民署TWAC網站填寫<a href="https://twac.immigration.gov.tw/" target="_blank">入國登記表</a>。',
+    visa_arrival_procedures_desc:
+      '外來旅客於抵達臺灣前三天內，須至移民署TWAC網站填寫<a href="https://twac.immigration.gov.tw/" target="_blank">入國登記表</a>。',
     visa_arrival_entry: '',
     visa_arrival_TPE: '桃園機場',
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=ch',
@@ -426,7 +429,8 @@ export default {
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     tour_title: '參加/團體導覽資訊',
-    tour_article_main_title: '🎉 2025亞洲技能競賽 WorldSkills Asia Taipei 2025 團體導覽熱烈開放報名！',
+    tour_article_main_title:
+      '🎉 2025亞洲技能競賽 WorldSkills Asia Taipei 2025 團體導覽熱烈開放報名！',
     tour_article_main_desc: `
     <div class='group'>
     <p>亞洲最大技能競技盛事即將登場！</p>
@@ -449,7 +453,8 @@ export default {
     <p> 👉 手刀預約報名：<a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">連結</a></p>
     `,
     notice_title: '入境須知',
-    notice_desc: ' 入境旅客攜帶動植物或其產品，請於事先洽詢臺灣農業部動植物防疫檢疫署相關檢疫規定，並於入境時誠實向海關或本署申請檢疫，以免受罰。',
+    notice_desc:
+      ' 入境旅客攜帶動植物或其產品，請於事先洽詢臺灣農業部動植物防疫檢疫署相關檢疫規定，並於入境時誠實向海關或本署申請檢疫，以免受罰。',
     notice_detail_block: `
     <div class='group'>
     請注意，旅客（含託運行李）以下種類均不得攜帶：
@@ -460,7 +465,8 @@ export default {
     <p>4. 列屬禁止輸入疫區之寄主植物或其產品。</p>
     <p>5. 列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
     `,
-    notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。'
+    notice_detail_source:
+      '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

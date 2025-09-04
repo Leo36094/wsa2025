@@ -158,6 +158,7 @@ export default {
     map_button: '於Google Map查看',
     vegan_title: '素食',
     muslim_title: '穆斯林餐廳（具清真認證）',
+    illustration_title: '僅供示意圖',
   },
   competition: {
     title: '關於競賽',

@@ -5,6 +5,7 @@
       <div class="host-vegan__content">
         <div class="card" v-for="item in data" :key="item.name">
           <div class="card-image">
+            <p class="illustration-title">{{ $t('host.illustration_title') }}</p>
             <img :src="item.imageUrl" :alt="item.name" />
           </div>
           <div class="card-content">
@@ -183,7 +184,7 @@ const vegan = [
     traffic:
       '從「捷運南港展覽館站(BL23)」搭乘捷運板南線(藍線)至「昆陽站(BL21)」，3號出口出站步行約1分鐘即可抵達。',
     distance: '約7公里',
-    rating: 'Google Maps 4.5⭐'
+    rating: 'Google Maps 4.5⭐',
   },
 ]
 const veganEn = [
@@ -269,7 +270,8 @@ const veganEn = [
       },
     ],
     address: `2nd Floor, Building C, No. 186-1, Jingmao 2nd Road, Nangang District, Taipei City`,
-    traffic: 'Walk along Jingmao 2nd Road, turn left at Lane 106. The total walking time is about 5 minutes.',
+    traffic:
+      'Walk along Jingmao 2nd Road, turn left at Lane 106. The total walking time is about 5 minutes.',
     distance: 'Approximately 1 km',
     rating: 'Google Maps 4.3⭐',
   },
@@ -289,16 +291,16 @@ const veganEn = [
     traffic:
       'Take the Taipei Metro Bannan Line (Blue Line) from Nangang Exhibition Center Station (BL 23) to Kunyang Station (BL 21). Exit via Exit 3, then walk for about 1 minute to reach the destination.',
     distance: 'Approximately 7 km',
-    rating: 'Google Maps 4.5⭐'
+    rating: 'Google Maps 4.5⭐',
   },
 ]
 const data = computed(() => {
-  return locale.value === 'en' ? veganEn : vegan;
-});
+  return locale.value === 'en' ? veganEn : vegan
+})
 </script>
 
 <style lang="scss" scoped>
-@use "sass:map";
+@use 'sass:map';
 $block-bg-color: #fff;
 
 $font-size-title: (
@@ -341,6 +343,21 @@ $font-size-info: (
         margin-right: 0.32rem;
         overflow: hidden;
         flex-shrink: 0;
+        position: relative;
+        .illustration-title {
+          position: absolute;
+          width: 4.5rem;
+          padding: 0.16rem;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          font-size: map.get($font-size-title, pc);
+          border-radius: 0.04rem;
+          color: #fff;
+          font-weight: 700;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -430,6 +447,12 @@ $font-size-info: (
       gap: 0.2rem;
       .card {
         width: 100%;
+        .card-image {
+          .illustration-title {
+            width: 80%;
+            font-size: map.get($font-size-title, mobile);
+          }
+        }
         .card-content {
           .card-title {
             text-align: center;

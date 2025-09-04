@@ -3,6 +3,9 @@
     <div class="host-medic-container">
       <BaseTitle class="host-medic__title" :title="$t('host.medic_title')" />
       <div class="host-medic__content">
+        <p class="host-medic__desc">
+          {{ $t('host.medic_desc') }}
+        </p>
         <div class="host-medic__content-item" v-for="item in data" :key="item.name">
           <h2 class="content-item-title">{{ item.name }}</h2>
           <div class="item-info">
@@ -288,11 +291,17 @@ $font-size-info: (
 
 .host-medic {
   .host-medic-container {
-    width: 14.4rem;
+    width: 12rem;
     margin: 0 auto;
   }
   .host-medic__title {
     margin-bottom: 0.64rem;
+  }
+  .host-medic__desc {
+    font-size: map.get($font-size-info, pc);
+    padding: 0 0.5rem;
+    width: 12rem;
+    text-align: center;
   }
   .host-medic__content {
     @include flexCenter(column);

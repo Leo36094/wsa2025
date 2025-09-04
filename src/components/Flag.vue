@@ -42,7 +42,7 @@ interface Props {
 const props = defineProps<Props>()
 const flagRef = ref<HTMLElement | null>(null)
 const isWaving = ref(false)
-const flagWidth = ref(300)
+const flagWidth = ref(282)
 
 const bgUrl = computed(() => {
   if (props.flag === '') return ''
@@ -81,8 +81,8 @@ onUnmounted(() => {
 .flag {
   margin: 0 auto;
   cursor: pointer;
-  width: 3rem;
-  height: 2rem;
+  width: 2.82rem;
+  height: 1.87rem;
 }
 
 .flag-container {
@@ -91,7 +91,7 @@ onUnmounted(() => {
   display: flex;
 }
 .flag-img {
-  @include bgCenter(3rem 100%);
+  @include bgCenter(2.82rem 100%);
   aspect-ratio: 3/2;
 }
 .flag-name {

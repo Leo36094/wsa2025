@@ -156,6 +156,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     traffic_title: 'Transportation',
     transportation_suggestion: 'Transportation suggestion:',
     medic_title: 'Medical Map',
+    medic_desc: 'The following hospitals are categorized as either large general hospitals or top-tier medical centers, all offering emergency services and comprehensive multi-specialty medical care. Estimated distances and travel time may vary depending on traffic.',
     tourist_title: 'Tourist Attractions',
     map_button: 'View on Google Map',
     muslim_title: 'Muslim Restaurants',
@@ -217,7 +218,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
     members_title: 'WSA Member Countries',
     members_desc: 'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 29 countries.',
-    competitors_title: '3rd WorldSkills Asia Competition Participating Countries',
+    competitors_title: '3rd WorldSkills Asia Competition <span class="title_tag">Participating Countries</span>',
     competitors_desc: 'The 3rd WorldSkills Asia Competition has registered a total of 31 participating countries, including 21 member countries and 10 non-member countries.',
   },
   skills: {

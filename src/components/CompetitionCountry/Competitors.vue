@@ -5,20 +5,28 @@
     id="competitors"
   >
     <div class="competitors-container">
-      <div class="title-group">
-        <BaseTitle
-          :style="{ color: '#fff' }"
-          class="competitors__title"
-          :title="$t('competition.competitors_title')"
-        />
-        <p class="competitors__desc">
-          {{ $t('competition.competitors_desc') }}
-        </p>
+      <div class="member-header">
+        <div class="header-content">
+          <div class="title-group">
+            <h2 class="members__title" v-html="$t('competition.competitors_title')"></h2>
+            <p class="members__desc">
+              {{ $t('competition.competitors_desc') }}
+            </p>
+          </div>
+          <div class="wsa-icon">
+            <img src="/images/host/wsa.png" alt="wsa-icon" />
+          </div>
+        </div>
       </div>
       <div class="competitors__content">
         <div class="countries-grid">
           <div v-for="country in countries" :key="country.code" class="country-flag">
-            <Flag :waving="waving" :flag="country.flag" :name="lang === 'en' ? country.nameEn : country.name" :link="country.link" />
+            <Flag
+              :waving="waving"
+              :flag="country.flag"
+              :name="lang === 'en' ? country.nameEn : country.name"
+              :link="country.link"
+            />
           </div>
         </div>
       </div>
@@ -30,7 +38,6 @@
 import { computed, inject, type Ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Flag from '@/components/Flag.vue'
-import BaseTitle from '@/components/BaseTitle.vue'
 
 import { PARTICIPATING_COUNTRIES } from './constants'
 
@@ -55,21 +62,22 @@ const countries = Object.entries(PARTICIPATING_COUNTRIES).map(([code, info]) => 
 </script>
 
 <style lang="scss" scoped>
-@use "sass:map";
+@use 'sass:map';
 $block-bg-color: #fff;
 $note-bg-color: #c8e14b;
-$title-bg-color: #18475b;
+
+$primary-dark: #18475b;
 
 $font-size-title: (
-  pc: 0.28rem,
-  tablet: 0.2rem,
-  mobile: 0.16rem,
+  pc: 0.36rem,
+  tablet: 0.36rem,
+  mobile: 0.36rem,
 );
 
 $font-size-info: (
   pc: 0.16rem,
-  tablet: 0.14rem,
-  mobile: 0.12rem,
+  tablet: 0.16rem,
+  mobile: 0.16rem,
 );
 
 .competitors {
@@ -79,25 +87,62 @@ $font-size-info: (
   .competitors-container {
     width: 12rem;
     margin: 0 auto;
-
-    .title-group {
+    .member-header {
       display: flex;
-      padding: 0.64rem;
-      flex-direction: column;
-      align-items: center;
-      align-self: stretch;
-      border-radius: 0.4rem;
-      background: $title-bg-color;
-      border-radius: 40px;
-      color: #fff;
-      .competitors__title h2 {
-        color: #fff !important;
-        margin-bottom: 0.4rem;
+      border-radius: 0.25rem;
+      background: $primary-dark;
+      padding: 0.08rem;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0.8rem;
+        width: 2.45rem;
+        height: 2.45rem;
+        background: url(/images/competition/background_circle.png);
+        @include bgCenter(contain);
       }
-      .competitors__desc {
-        text-align: center;
-        font-size: map.get($font-size-info, pc);
-        font-weight: 400;
+    }
+    .header-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 0.17rem;
+      border: 0.01rem solid #fff;
+      padding: 0.64rem 0.72rem;
+      .title-group {
+        width: 8.17rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        text-align: left;
+        color: #fff;
+        .members__title {
+          font-weight: 700;
+          margin-bottom: 0.24rem;
+          font-size: map.get($font-size-title, pc);
+          :deep(.title_tag) {
+            color: $note-bg-color;
+          }
+        }
+        .members__desc {
+          font-size: map.get($font-size-info, pc);
+          font-weight: 400;
+        }
+      }
+      .wsa-icon {
+        width: 2.89rem;
+        height: 2.2rem;
+        position: absolute;
+        right: 0.08rem;
+        bottom: 0.08rem;
+        transform: rotateY(180deg);
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -105,6 +150,7 @@ $font-size-info: (
     margin-bottom: 0.4rem;
   }
   .competitors__content {
+    width: 100%;
     margin-top: 0.4rem;
     .countries-grid {
       display: grid;
@@ -118,13 +164,29 @@ $font-size-info: (
     .competitors-container {
       width: 100%;
       padding: 0 0.4rem;
-      .title-group {
-        padding: 0.4rem;
-        .competitors__title {
-          margin-bottom: 0.24rem;
+      .member-header {
+        &:before {
+          width: 2.67rem;
+          height: 2.67rem;
+          left: 0.4rem;
         }
-        .competitors__desc {
-          font-size: map.get($font-size-info, tablet);
+      }
+      .header-content {
+        padding: 0.32rem;
+        .title-group {
+          width: 3.93rem;
+          .members__title {
+            margin-bottom: 0.16rem;
+          }
+          .members__desc {
+            font-size: map.get($font-size-info, tablet);
+          }
+        }
+        .wsa-icon {
+          width: 1.83rem;
+          height: 1.39rem;
+          bottom: 0.08rem;
+          top: unset;
         }
       }
     }
@@ -136,19 +198,41 @@ $font-size-info: (
     }
   }
 }
+
 @include mobile {
   .competitors {
     .competitors-container {
       width: 100%;
       padding: 0 0.24rem;
-      .title-group {
-        padding: 0.16rem;
 
-        .competitors__title {
-          margin-bottom: 0.16rem;
+      .member-header {
+        &:before {
+          width: 1.82rem;
+          height: 1.82rem;
+          left: 0.45rem;
         }
-        .competitors__desc {
-          font-size: map.get($font-size-info, mobile);
+      }
+
+      .header-content {
+        padding: 0.16rem;
+        flex-direction: column;
+        .title-group {
+          width: 100%;
+          min-height: 2.92rem;
+          margin-bottom: auto;
+          .members__title {
+            margin-bottom: 0.16rem;
+          }
+          .members__desc {
+            margin-bottom: 1rem;
+            font-size: map.get($font-size-info, mobile);
+          }
+        }
+        .wsa-icon {
+          width: 1.3rem;
+          height: 0.99rem;
+          bottom: 0.08rem;
+          top: unset;
         }
       }
     }

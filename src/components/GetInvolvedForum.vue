@@ -38,8 +38,8 @@ import BaseTitle from '@/components/BaseTitle.vue'
 import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
 
-// •中文版面：報名連結: https://forms.gle/GJ5Ty6jZiwFpZVHMA
-// •英文版面： Registration Link:
+// 中文版面：報名連結: https://forms.gle/GJ5Ty6jZiwFpZVHMA
+// •英文版面： Registration Link: https://forms.gle/GJ5Ty6jZiwFpZVHMA
 
 const registrationLink = computed(() => {
   return locale.value === 'en'

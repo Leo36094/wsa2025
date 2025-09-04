@@ -382,12 +382,12 @@ export default {
     visa_arrival_TSA_link: 'https://www.tsa.gov.tw/layout?id=421f4be9-cb97-4993-a181-520cf59de332',
     visa_attachment_title: '簽證資訊檔案',
     visa_attachment_link: '下載',
-    forum_title: '2025國際技職教育及培訓研討會',
+    forum_title: '2025國際技能教育研討會',
     forum_desc: `<p>誠摯邀請各界先進踴躍參與</p><br>
     <p>為促進職業技術教育和訓練之發展與國際交流，誠摯邀請您參與即將於2025年11月27日（星期四）下午13:30至17:00在臺北南港展覽館一館舉行的「2025國際技職教育及培訓研討會」！</p>
     <p>本次「2025國際技職教育及培訓研討會」特別邀請重量級講者：亞太經合會（APEC）人力資源發展工作小組（HRDWG）美國籍總主席 Zhao Li，分享國際職業訓練現況趨勢及產業發展。同時，我們邀請國內專家學者一同進行交流對談。</p>
     `,
-    forum_desc_aria_label: '2025國際技職教育及培訓研討會',
+    forum_desc_aria_label: '2025國際技能教育研討會',
     forum_conference_capacity: '參加者名額',
     forum_conference_capacity_value:
       '正取100位，候補20位 (依報名先後順序錄取，額滿將提前截止報名。)',

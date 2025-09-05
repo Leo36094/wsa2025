@@ -156,7 +156,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     traffic_title: 'Transportation',
     transportation_suggestion: 'Transportation suggestion:',
     medic_title: 'Medical Map',
-    medic_desc: 'The following hospitals are categorized as either large general hospitals or top-tier medical centers, all offering emergency services and comprehensive multi-specialty medical care. Estimated distances and travel time may vary depending on traffic.',
+    medic_desc: 'The following hospitals all offer emergency services and comprehensive multi-specialty medical care. Estimated distances and travel time may vary depending on traffic.',
     tourist_title: 'Tourist Attractions',
     map_button: 'View on Google Map',
     muslim_title: 'Muslim Restaurants',

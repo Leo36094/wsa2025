@@ -153,7 +153,7 @@ export default {
     transportation_suggestion: '交通建議：',
     medic_title: '鄰近醫院',
     medic_desc:
-      '以下醫院分為「大型綜合醫院」及「最高等級醫學中心」，皆具備急診與多科別完整醫療服務。距離與車程為預估值，實際狀況可能因交通影響而異。',
+      '以下醫院皆具備急診與多科別完整醫療服務。距離與車程為預估值，實際狀況可能因交通影響而異。',
     tourist_title: '觀光景點',
     map_button: '於Google Map查看',
     vegan_title: '素食',

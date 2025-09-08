@@ -9,7 +9,7 @@ export const SECTION_ID = {
   Visa: 'visa',
   TryOut: 'try-out',
   Forum: 'forum',
-  Toruisum: 'toruisum',
+  Toruisum: 'tourism',
   Notice: 'notice',
 } as const;
 

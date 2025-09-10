@@ -25,7 +25,7 @@
             <iframe
               class="map-card-content-iframe"
               :src="`https://www.google.com/maps/${card.iframeKey}`"
-              width="378"
+              width="auto"
               height="219"
               style="border: 0"
               allowfullscreen="true"
@@ -258,14 +258,22 @@ const data = computed(() => {
     gap: 0.48rem 0.16rem;
     .map-card {
       width: 3.78rem;
+      align-self: stretch;
       .text-row {
         margin-bottom: 0.16rem;
       }
       .map-card-content {
+        height: 3.64rem;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         .map-card-content-item {
           display: flex;
+        }
+        .map-card-content-iframe {
+          margin-top: auto;
+          flex-grow: 1;
+          max-height: 80%;
         }
       }
     }

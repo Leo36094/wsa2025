@@ -47,7 +47,7 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'KR', name: '韓國', nameEn: 'Korea', flag: 'KR_flag', link: 'https://meister.hrdkorea.or.kr/eng/main.do' },
   { code: 'KW', name: '科威特', nameEn: 'Kuwait', flag: 'KW_flag', link: 'https://www.paaet.edu.kw/en/main/vision-and-mission/' },
   { code: 'KG', name: '吉爾吉斯', nameEn: 'Kyrgyzstan', flag: 'KG_flag', link: 'https://www.instagram.com/worldskillskyrgyzstan' },
-  { code: 'LI', name: '列支敦斯登', nameEn: 'Pincipality Of Liechtenstein', flag: 'LI_flag', link: 'https://www.worldskills.li/' },
+  { code: 'LI', name: '列支敦斯登', nameEn: 'Principality of Liechtenstein', flag: 'LI_flag', link: 'https://www.worldskills.li/' },
   { code: 'MY', name: '馬來西亞', nameEn: 'Malaysia', flag: 'MY_flag', link: 'https://www.skillsmalaysia.gov.my/ms/' },
   { code: 'MN', name: '蒙古', nameEn: 'Mongolia', flag: 'MN_flag', link: 'https://www.facebook.com/VETPartnership/about' },
   { code: 'NL', name: '荷蘭', nameEn: 'Netherlands', flag: 'NL_flag', link: 'https://worldskillsnetherlands.nl/teamnl/' },

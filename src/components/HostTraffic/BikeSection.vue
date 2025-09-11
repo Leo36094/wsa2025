@@ -283,7 +283,7 @@ const data = computed(() => {
   .host-traffic__info-block {
     margin-top: 0.8rem;
     .map-cards {
-      gap: 0.4rem 0.24rem;
+      gap: 0.4rem 0.16rem;
       justify-content: space-between;
       .map-card {
         width: 2.88rem;

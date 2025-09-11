@@ -146,7 +146,7 @@ const HSRBlockEn = {
   imageSource: 'Photo by C.L. Kao (eddie5150), licensed under CC BY-SA 3.0',
   location: {
     title: 'Nangang High-Speed Rail Station/Nangang Railway Station',
-    map: 'embed?pb=!1m18!1m12!1m3!1d3614.426052767504!2d121.604474577085!3d25.053544777803683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5e75055adb%3A0xadddb88c2f06b36!2z5Y2X5riv!5e0!3m2!1szh-TW!2stw!4v1756145599027!5m2!1szh-TW!2stw',
+    map: 'embed?pb=!1m18!1m12!1m3!1d3614.426052767504!2d121.604474577085!3d25.053544777803683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5e75055adb%3A0xadddb88c2f06b36!2z5Y2X5riv!5e0!3m2!1szh-TW!2stw!4v1756145599027!5m2!1sen!2sus',
     list: [
       {
         icon: import.meta.env.BASE_URL + 'images/host/icons/map-icon.svg',

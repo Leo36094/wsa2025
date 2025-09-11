@@ -88,7 +88,6 @@ import { useI18n } from 'vue-i18n'
 
 import BaseTitle from '@/components/BaseTitle.vue'
 
-const { t } = useI18n()
 const { locale } = useI18n()
 
 const muslim = [
@@ -243,8 +242,8 @@ const muslimEn = [
   {
     name: 'Fried Chicken Master',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.3509722768313!2d121.6150150770416!3d25.05609077780203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aca81a280a7f%3A0x940c4b25932d02d9!2z54K46Zue5aSn542FIOWMl-W4guWNl-a4r-S4gOmkqOW6lw!5e0!3m2!1szh-TW!2stw!4v1756749237572!5m2!1szh-TW!2stw',
-      'embed?pb=!1m18!1m12!1m3!1d3614.344286641235!2d121.6132554770849!3d25.05631747780192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab2e781b06ff%3A0xe0292216ca92cd4b!2z54K46beE5aSn542F5YyX5biC5Y2X5riv5LqM6aSo5bqX!5e0!3m2!1szh-TW!2stw!4v1756231648843!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.3509722768313!2d121.6150150770416!3d25.05609077780203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aca81a280a7f%3A0x940c4b25932d02d9!2z54K46Zue5aSn542FIOWMl-W4guWNl-a4r-S4gOmkqOW6lw!5e0!3m2!1szh-TW!2stw!4v1756749237572!5m2!1sen!2sus',
+      'embed?pb=!1m18!1m12!1m3!1d3614.344286641235!2d121.6132554770849!3d25.05631747780192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab2e781b06ff%3A0xe0292216ca92cd4b!2z54K46beE5aSn542F5YyX5biC5Y2X5riv5LqM6aSo5bqX!5e0!3m2!1sen!2sus!4v1756231648843!5m2!1sen!2sus',
     ],
     tel: [
       { label: 'Nangang Exhibition Hall 1(02)7746-2978', value: '+886-2-77462978' },
@@ -268,7 +267,7 @@ const muslimEn = [
   {
     name: '1001 Nights Kitchen',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.5369146681064!2d121.57113307708487!3d25.049784977806297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab408c304ce5%3A0x2efaf0d65483adcd!2z5LiA5Y2D6Zu25LiA5aSc5bua5oi_!5e0!3m2!1szh-TW!2stw!4v1756231795531!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.5369146681064!2d121.57113307708487!3d25.049784977806297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab408c304ce5%3A0x2efaf0d65483adcd!2z5LiA5Y2D6Zu25LiA5aSc5bua5oi_!5e0!3m2!1szh-TW!2stw!4v1756231795531!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)2767-1661', value: '+886-2-27671661' }],
     socialMedia: [
@@ -290,7 +289,7 @@ Road—it’s about a 7-minute walk.`,
   {
     name: 'Khana Khazana-Halal Food',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.962260716576!2d121.55806027600124!3d25.035354777815456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb62bc466df%3A0x4513ce85e0f5db05!2z6aWX5Y2w5Y2w5bqm5paZ55CGS2hhbmFraGF6YW5hIGhhbGFsIHJlc3RhdXJhbnQ!5e0!3m2!1szh-TW!2stw!4v1756232202652!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.962260716576!2d121.55806027600124!3d25.035354777815456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb62bc466df%3A0x4513ce85e0f5db05!2z6aWX5Y2w5Y2w5bqm5paZ55CGS2hhbmFraGF6YW5hIGhhbGFsIHJlc3RhdXJhbnQ!5e0!3m2!1szh-TW!2stw!4v1756232202652!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)8786-9366', value: '+886-2-87869366' }],
     socialMedia: [
@@ -309,7 +308,7 @@ Road—it’s about a 7-minute walk.`,
   {
     name: 'Kunming Islamic Restaurant',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.499108057304!2d121.54029508579276!3d25.0510672205781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdd9952edd9%3A0x4d5e331728f1473a!2z5piG5piO5ZySIEt1bm1pbmcgSXNsYW1pYyBSZXN0YXVyYW50!5e0!3m2!1szh-TW!2stw!4v1756232363713!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.499108057304!2d121.54029508579276!3d25.0510672205781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdd9952edd9%3A0x4d5e331728f1473a!2z5piG5piO5ZySIEt1bm1pbmcgSXNsYW1pYyBSZXN0YXVyYW50!5e0!3m2!1szh-TW!2stw!4v1756232363713!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)2751-6776', value: '+886-2-27516776' }],
     socialMedia: [
@@ -328,7 +327,7 @@ Road—it’s about a 7-minute walk.`,
   {
     name: 'TAJ Indian Restaurant',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.685759689287!2d121.5432673760015!3d25.04473617780946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc5642aca47%3A0x93340bf02e06e7d5!2zVEFKIOazsOWnrOWNsOW6pumkkOW7syAoVEFKIEluZGlhbiBSZXN0YXVyYW50KQ!5e0!3m2!1szh-TW!2stw!4v1756232484263!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.685759689287!2d121.5432673760015!3d25.04473617780946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc5642aca47%3A0x93340bf02e06e7d5!2zVEFKIOazsOWnrOWNsOW6pumkkOW7syAoVEFKIEluZGlhbiBSZXN0YXVyYW50KQ!5e0!3m2!1szh-TW!2stw!4v1756232484263!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)8773-0175', value: '+886-2-87730175' }],
     socialMedia: [
@@ -347,7 +346,7 @@ Road—it’s about a 7-minute walk.`,
   {
     name: 'Halal Beef Noodle Restaurant',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.6599331638145!2d121.50821017708465!3d25.04561227780893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90c5d084873%3A0x1100bf99d89ef9c6!2z5riF55yf6buD54mb6IKJ6bq16aSo!5e0!3m2!1szh-TW!2stw!4v1756750026901!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.6599331638145!2d121.50821017708465!3d25.04561227780893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90c5d084873%3A0x1100bf99d89ef9c6!2z5riF55yf6buD54mb6IKJ6bq16aSo!5e0!3m2!1szh-TW!2stw!4v1756750026901!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)2331-8203', value: '+886-2-23318203' }],
     socialMedia: [
@@ -366,7 +365,7 @@ Road—it’s about a 7-minute walk.`,
   {
     name: 'Gusto Pizza',
     iframeKey: [
-      'embed?pb=!1m18!1m12!1m3!1d3614.993932455979!2d121.52737547708458!3d25.03427997781619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9820b1f2095%3A0x7db2767efae8af3c!2sGusto%20Pizza!5e0!3m2!1szh-TW!2stw!4v1756750281799!5m2!1szh-TW!2stw',
+      'embed?pb=!1m18!1m12!1m3!1d3614.993932455979!2d121.52737547708458!3d25.03427997781619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9820b1f2095%3A0x7db2767efae8af3c!2sGusto%20Pizza!5e0!3m2!1szh-TW!2stw!4v1756750281799!5m2!1sen!2sus',
     ],
     tel: [{ label: '(02)2358-7001', value: '+886-2-23587001' }],
     socialMedia: [

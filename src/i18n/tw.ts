@@ -18,8 +18,15 @@ export default {
     host_tab_02: '中華台北',
     host_tab_03: '關於勞動力發展署',
     host_tab_04: '競賽場地',
+    host_tab_05: '交通資訊',
+    host_tab_06: '醫療地圖',
+    host_tab_07: '觀光景點',
+    host_tab_08: '素食',
+    host_tab_09: '穆斯林餐廳',
     competition_tab_01: '競賽',
     competition_tab_02: '日程',
+    competition_tab_03: '會員國',
+    competition_tab_04: '參賽國',
     involved_tab_01: '贊助商',
     involved_tab_02: '簽證',
     involved_tab_03: '論壇',
@@ -142,6 +149,16 @@ export default {
 技能競賽是該署的重要推動項目之一，旨在建立技能價值觀，鼓勵青年積極參與職業教育與訓練，並提升社會對技職教育的重視。競賽不僅為年輕人提供展示技能的舞台，也促進各行業間的技術交流與合作，進一步提升國家勞動力的國際競爭力。透過這些努力，勞動力發展署不僅提升國內勞動力素質，也為國家經濟發展提供穩定的技術人才支援。
 `,
     location_visit_website: '訪問網站',
+    traffic_title: '交通資訊',
+    transportation_suggestion: '交通建議：',
+    medic_title: '鄰近醫院',
+    medic_desc:
+      '以下醫院皆具備急診與多科別完整醫療服務。距離與車程為預估值，實際狀況可能因交通影響而異。',
+    tourist_title: '觀光景點',
+    map_button: '於Google Map查看',
+    vegan_title: '素食',
+    muslim_title: '穆斯林餐廳（具清真認證）',
+    illustration_title: '僅供示意圖',
   },
   competition: {
     title: '關於競賽',
@@ -195,6 +212,10 @@ export default {
     location_hall2_floor2_list2: '藝術與時尚',
     location_hall2_floor3: '職類項目及主題展示區',
     location_hall2_floor3_list1: '製造工程技術',
+    members_title: '國際技能組織亞洲分會(WorldSkills Asia, WSA)會員國',
+    members_desc: 'WSA 由亞洲地區的技能推廣機構組成,目前成員國包括 29 個國家。',
+    competitors_title: '第三屆亞洲技能競賽<span class="title_tag">參賽國</span>',
+    competitors_desc: '本屆亞洲技能競賽已報名國家共計 31 國,其中包括 21 個會員國、10 個非會員國。',
   },
   skills: {
     category_image: '技能圖片 {index}',
@@ -374,7 +395,8 @@ export default {
       </ol>
       `,
     visa_arrival_procedures: '抵達手續',
-    visa_arrival_procedures_desc: '外來旅客於抵達臺灣前三天內，須至移民署TWAC網站填寫<a href="https://twac.immigration.gov.tw/" target="_blank">入國登記表</a>。',
+    visa_arrival_procedures_desc:
+      '外來旅客於抵達臺灣前三天內，須至移民署TWAC網站填寫<a href="https://twac.immigration.gov.tw/" target="_blank">入國登記表</a>。',
     visa_arrival_entry: '',
     visa_arrival_TPE: '桃園機場',
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=ch',
@@ -408,7 +430,8 @@ export default {
     theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     tour_title: '參加/團體導覽資訊',
-    tour_article_main_title: '🎉 2025亞洲技能競賽 WorldSkills Asia Taipei 2025 團體導覽熱烈開放報名！',
+    tour_article_main_title:
+      '🎉 2025亞洲技能競賽 WorldSkills Asia Taipei 2025 團體導覽熱烈開放報名！',
     tour_article_main_desc: `
     <div class='group'>
     <p>亞洲最大技能競技盛事即將登場！</p>
@@ -431,7 +454,8 @@ export default {
     <p> 👉 手刀預約報名：<a href="https://forms.gle/71ruxmVACj18mnit6" target="_blank">連結</a></p>
     `,
     notice_title: '入境須知',
-    notice_desc: ' 入境旅客攜帶動植物或其產品，請於事先洽詢臺灣農業部動植物防疫檢疫署相關檢疫規定，並於入境時誠實向海關或本署申請檢疫，以免受罰。',
+    notice_desc:
+      ' 入境旅客攜帶動植物或其產品，請於事先洽詢臺灣農業部動植物防疫檢疫署相關檢疫規定，並於入境時誠實向海關或本署申請檢疫，以免受罰。',
     notice_detail_block: `
     <div class='group'>
     請注意，旅客（含託運行李）以下種類均不得攜帶：
@@ -442,8 +466,8 @@ export default {
     <p>4. 列屬禁止輸入疫區之寄主植物或其產品。</p>
     <p>5. 列屬禁止輸入之應施檢疫動物及動物產品(例如來自近三年發生非洲豬瘟國家之豬肉及豬肉製品等)。</p>
     `,
-    notice_detail_source: '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
-    registration_link: '報名連結: ',
+    notice_detail_source:
+      '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',

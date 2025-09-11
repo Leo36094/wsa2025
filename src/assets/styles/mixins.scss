@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use "sass:map";
 
 /* region query */
 @mixin withRegion($specificRegion) {
@@ -215,7 +216,7 @@
 
 /* z-index */
 @mixin zIndex($key) {
-  z-index: map-get($z-index-map, $key);
+  z-index: map.get($z-index-map, $key);
 }
 
 @mixin textGradient($values...) {

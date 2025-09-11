@@ -1,5 +1,5 @@
 <template>
-  <section class="climate" id="climate" :aria-labelledby="$t('host.climate_title')">
+  <section class="climate" :aria-labelledby="$t('host.climate_title')">
     <div class="climate-container">
       <div class="title-light" aria-hidden="true"></div>
       <h2 id="climate-title" class="climate-title">

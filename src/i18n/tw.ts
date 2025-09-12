@@ -469,6 +469,17 @@ export default {
     notice_detail_source:
       '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
   },
+  notFound: {
+    title: '找不到頁面',
+    description: '您所尋找的頁面不存在。',
+    backToHome: '回到首頁',
+    suggestedLinks: '您可能想要瀏覽'
+  },
+  nav: {
+    competition: '關於競賽',
+    skills: '職類介紹',
+    news: '最新消息'
+  },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',

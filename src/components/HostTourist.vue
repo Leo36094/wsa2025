@@ -35,27 +35,31 @@
                 </p>
 
                 <p class="card-row card-description">
-                  <img class="icon" src="/images/host/icons/distance-icon.svg" alt="distance-icon" />
+                  <img
+                    class="icon"
+                    src="/images/host/icons/distance-icon.svg"
+                    alt="distance-icon"
+                  />
                   {{ item.distance }}
                 </p>
               </div>
               <div class="card-map">
                 <iframe
-                width="200"
-                height="120"
-                style="border: 0"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                :src="`https://www.google.com/maps/${item.iframeKey}`"
-              >
-              </iframe>
+                  width="200"
+                  height="120"
+                  style="border: 0"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  :src="`https://www.google.com/maps/${item.iframeKey}`"
+                >
+                </iframe>
               </div>
             </div>
 
-            <p class="card-footer card-group">
+            <div class="card-footer card-group">
               <div class="footer-title">{{ $t('host.transportation_suggestion') }}</div>
               <div class="footer-content">{{ item.traffic }}</div>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -73,7 +77,8 @@ const { locale } = useI18n()
 const tourist = [
   {
     name: 'LaLaport南港店',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.2549696695237!2d121.6175823!3d25.059345900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad0038e0034b%3A0x3ca02f9afeace511!2sMitsui%20Shopping%20Park%20LaLaport%20%E5%8D%97%E6%B8%AF!5e0!3m2!1szh-TW!2stw!4v1756057632898!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.2549696695237!2d121.6175823!3d25.059345900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad0038e0034b%3A0x3ca02f9afeace511!2sMitsui%20Shopping%20Park%20LaLaport%20%E5%8D%97%E6%B8%AF!5e0!3m2!1szh-TW!2stw!4v1756057632898!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_01.jpg',
     tel: { label: '(02)-2653-2888', value: '+886-2-26532888' },
     socialMedia: [
@@ -88,7 +93,8 @@ const tourist = [
   },
   {
     name: '松山文創園區',
-    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d903.6766131655214!2d121.5603766!3d25.0440342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1756057695253!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m14!1m8!1m3!1d903.6766131655214!2d121.5603766!3d25.0440342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1756057695253!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_02.jpg',
     tel: { label: '(02)2765-1388', value: '+886-2-27651388' },
     socialMedia: [
@@ -104,7 +110,8 @@ const tourist = [
   },
   {
     name: '台北101',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3615.0250041138825!2d121.5648684!3d25.0332255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe10238cb87%3A0x8c0ca929f18c0d23!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1756057738579!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3615.0250041138825!2d121.5648684!3d25.0332255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe10238cb87%3A0x8c0ca929f18c0d23!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1756057738579!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_03.jpg',
     tel: { label: '(02)8101-8800', value: '+886-2-81018800' },
     socialMedia: [
@@ -120,7 +127,8 @@ const tourist = [
   },
   {
     name: '華山1914文化創意產業園區',
-    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d3614.707171917994!2d121.5269967!3d25.0440098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96523e0246d%3A0xf1c9276707165c71!2z6I-v5bGxMTkxNOaWh-WMluWJteaEj-eUoualreWckuWNgA!5e0!3m2!1szh-TW!2stw!4v1756057777193!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m14!1m8!1m3!1d3614.707171917994!2d121.5269967!3d25.0440098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96523e0246d%3A0xf1c9276707165c71!2z6I-v5bGxMTkxNOaWh-WMluWJteaEj-eUoualreWckuWNgA!5e0!3m2!1szh-TW!2stw!4v1756057777193!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_04.jpg',
     tel: { label: '(02)2358-1914', value: '+886-2-23581914' },
     socialMedia: [
@@ -137,7 +145,8 @@ const tourist = [
   {
     name: '饒河街觀光夜市',
     mapUrl: 'https://maps.app.goo.gl/TuqfKHHtrmTbKB9YA',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.5044691022017!2d121.5774891!3d25.0508854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c0db4a583%3A0x3da21183815df6f6!2z6aWS5rKz6KGX6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1756057811604!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.5044691022017!2d121.5774891!3d25.0508854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c0db4a583%3A0x3da21183815df6f6!2z6aWS5rKz6KGX6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1756057811604!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_05.jpg',
     tel: { label: '', value: '' },
     socialMedia: [
@@ -157,7 +166,8 @@ const tourist = [
   },
   {
     name: '中正紀念堂（Chiang Kai-shek Memorial Hall）',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.95792233815!2d121.5201832!3d25.035501999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2z5ZyL56uL5Lit5q2j57SA5b-15aCC!5e0!3m2!1szh-TW!2stw!4v1756057846981!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.95792233815!2d121.5201832!3d25.035501999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2z5ZyL56uL5Lit5q2j57SA5b-15aCC!5e0!3m2!1szh-TW!2stw!4v1756057846981!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_06.jpg',
     tel: { label: '(02)2343-1100', value: '+886-2-23431100' },
     socialMedia: [
@@ -173,7 +183,8 @@ const tourist = [
   },
   {
     name: '西門町商圈',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.741839864972!2d121.5077445!3d25.0428337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90970cf4007%3A0x95aa06583d52d4c0!2z6KW_6ZaA55S65ZWG5ZyI!5e0!3m2!1szh-TW!2stw!4v1756057878642!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.741839864972!2d121.5077445!3d25.0428337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90970cf4007%3A0x95aa06583d52d4c0!2z6KW_6ZaA55S65ZWG5ZyI!5e0!3m2!1szh-TW!2stw!4v1756057878642!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_07.jpg',
     tel: { label: '(02)2375-3096', value: '+886-2-23753096' },
     socialMedia: [
@@ -189,7 +200,8 @@ const tourist = [
   },
   {
     name: '西門紅樓',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.7660042416856!2d121.5068592!3d25.0420139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4acec8b%3A0x7c34275cfedcc1c5!2z6KW_6ZaA57SF5qiT!5e0!3m2!1szh-TW!2stw!4v1756057905970!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.7660042416856!2d121.5068592!3d25.0420139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4acec8b%3A0x7c34275cfedcc1c5!2z6KW_6ZaA57SF5qiT!5e0!3m2!1szh-TW!2stw!4v1756057905970!5m2!1szh-TW!2stw',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_08.jpg',
     tel: { label: '(02)2375-3096', value: '+886-2-23753096' },
     socialMedia: [
@@ -207,7 +219,8 @@ const tourist = [
 const touristEn = [
   {
     name: 'LaLaport  Nangang Branch',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.2549696695237!2d121.6175823!3d25.059345900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad0038e0034b%3A0x3ca02f9afeace511!2sMitsui%20Shopping%20Park%20LaLaport%20%E5%8D%97%E6%B8%AF!5e0!3m2!1szh-TW!2stw!4v1756057632898!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.2549696695237!2d121.6175823!3d25.059345900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad0038e0034b%3A0x3ca02f9afeace511!2sMitsui%20Shopping%20Park%20LaLaport%20%E5%8D%97%E6%B8%AF!5e0!3m2!1szh-TW!2stw!4v1756057632898!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_01.jpg',
     tel: { label: '(02)-2653-2888', value: '+886-2-26532888' },
     socialMedia: [
@@ -222,7 +235,8 @@ const touristEn = [
   },
   {
     name: 'Songshan Cultural and Creative Park',
-    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d903.6766131655214!2d121.5603766!3d25.0440342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1756057695253!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m14!1m8!1m3!1d903.6766131655214!2d121.5603766!3d25.0440342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1756057695253!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_02.jpg',
     tel: { label: '(02)2765-1388', value: '+886-2-27651388' },
     socialMedia: [
@@ -238,7 +252,8 @@ const touristEn = [
   },
   {
     name: 'Taipei 101',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3615.0250041138825!2d121.5648684!3d25.0332255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe10238cb87%3A0x8c0ca929f18c0d23!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1756057738579!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3615.0250041138825!2d121.5648684!3d25.0332255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe10238cb87%3A0x8c0ca929f18c0d23!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1756057738579!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_03.jpg',
     tel: { label: '(02)8101-8800', value: '+886-2-81018800' },
     socialMedia: [
@@ -254,7 +269,8 @@ const touristEn = [
   },
   {
     name: 'Huashan 1914 Creative Park ',
-    iframeKey: 'embed?pb=!1m14!1m8!1m3!1d3614.707171917994!2d121.5269967!3d25.0440098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96523e0246d%3A0xf1c9276707165c71!2z6I-v5bGxMTkxNOaWh-WMluWJteaEj-eUoualreWckuWNgA!5e0!3m2!1szh-TW!2stw!4v1756057777193!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m14!1m8!1m3!1d3614.707171917994!2d121.5269967!3d25.0440098!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96523e0246d%3A0xf1c9276707165c71!2z6I-v5bGxMTkxNOaWh-WMluWJteaEj-eUoualreWckuWNgA!5e0!3m2!1szh-TW!2stw!4v1756057777193!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_04.jpg',
     tel: { label: '(02)2358-1914', value: '+886-2-23581914' },
     socialMedia: [
@@ -271,7 +287,8 @@ const touristEn = [
   {
     name: 'Raohe Street Night Market',
     mapUrl: 'https://maps.app.goo.gl/TuqfKHHtrmTbKB9YA',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.5044691022017!2d121.5774891!3d25.0508854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c0db4a583%3A0x3da21183815df6f6!2z6aWS5rKz6KGX6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1756057811604!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.5044691022017!2d121.5774891!3d25.0508854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c0db4a583%3A0x3da21183815df6f6!2z6aWS5rKz6KGX6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1756057811604!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_05.jpg',
     tel: { label: '', value: '' },
     socialMedia: [
@@ -291,7 +308,8 @@ const touristEn = [
   },
   {
     name: 'Chiang Kai-shek Memorial Hall',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.95792233815!2d121.5201832!3d25.035501999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2z5ZyL56uL5Lit5q2j57SA5b-15aCC!5e0!3m2!1szh-TW!2stw!4v1756057846981!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.95792233815!2d121.5201832!3d25.035501999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2z5ZyL56uL5Lit5q2j57SA5b-15aCC!5e0!3m2!1szh-TW!2stw!4v1756057846981!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_06.jpg',
     tel: { label: '(02)2343-1100', value: '+886-2-23431100' },
     socialMedia: [
@@ -307,7 +325,8 @@ const touristEn = [
   },
   {
     name: 'Ximending Shopping District',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.741839864972!2d121.5077445!3d25.0428337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90970cf4007%3A0x95aa06583d52d4c0!2z6KW_6ZaA55S65ZWG5ZyI!5e0!3m2!1szh-TW!2stw!4v1756057878642!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.741839864972!2d121.5077445!3d25.0428337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90970cf4007%3A0x95aa06583d52d4c0!2z6KW_6ZaA55S65ZWG5ZyI!5e0!3m2!1szh-TW!2stw!4v1756057878642!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_07.jpg',
     tel: { label: '(02)2375-3096', value: '+886-2-23753096' },
     socialMedia: [
@@ -323,7 +342,8 @@ const touristEn = [
   },
   {
     name: 'The Red House (Ximen Red House)',
-    iframeKey: 'embed?pb=!1m18!1m12!1m3!1d3614.7660042416856!2d121.5068592!3d25.0420139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4acec8b%3A0x7c34275cfedcc1c5!2z6KW_6ZaA57SF5qiT!5e0!3m2!1szh-TW!2stw!4v1756057905970!5m2!1szh-TW!2stw',
+    iframeKey:
+      'embed?pb=!1m18!1m12!1m3!1d3614.7660042416856!2d121.5068592!3d25.0420139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4acec8b%3A0x7c34275cfedcc1c5!2z6KW_6ZaA57SF5qiT!5e0!3m2!1szh-TW!2stw!4v1756057905970!5m2!1sen!2sus',
     imageUrl: import.meta.env.BASE_URL + 'images/host/tourist/tourist_08.jpg',
     tel: { label: '(02)2375-3096', value: '+886-2-23753096' },
     socialMedia: [
@@ -340,12 +360,12 @@ const touristEn = [
 ]
 
 const data = computed(() => {
-  return locale.value === 'en' ? touristEn : tourist;
-});
+  return locale.value === 'en' ? touristEn : tourist
+})
 </script>
 
 <style lang="scss" scoped>
-@use "sass:map";
+@use 'sass:map';
 $block-bg-color: #fff;
 
 $font-size-title: (
@@ -432,7 +452,7 @@ $font-size-info: (
         display: flex;
         flex-direction: column;
         .footer-title {
-          color: #899CA4;
+          color: #899ca4;
           margin-bottom: 0.08rem;
         }
       }

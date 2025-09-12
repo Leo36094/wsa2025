@@ -7,6 +7,7 @@ import NewsInnerView from '@/views/NewsInnerView.vue'
 import SkillsView from '@/views/SkillsView.vue'
 import GetInvolvedView from '@/views/GetInvolvedView.vue'
 import SkillsCategoriesView from '@/views/SkillsCategoriesView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 import { nextTick } from 'vue'
 
 export enum SkillsRouteEnum {
@@ -50,7 +51,7 @@ const router = createRouter({
     {
       path: '/news/:id',
       name: 'news-detail',
-        component: NewsInnerView,
+      component: NewsInnerView,
     },
     {
       path: '/skills',
@@ -105,6 +106,12 @@ const router = createRouter({
       path: '/get-involved',
       name: 'get-involved',
       component: GetInvolvedView,
+    },
+    // Catch-all route for 404 errors - must be last
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFoundView,
     }
   ],
   async scrollBehavior(to, from, savedPosition) {
@@ -121,6 +128,24 @@ const router = createRouter({
       return { top: 0, behavior: 'instant' }
     }
   }
+})
+
+// Navigation guard to handle route errors and provide better UX
+router.beforeEach((to, from, next) => {
+  // Check if the route exists (not a catch-all route)
+  if (to.matched.length === 0) {
+    // Route not found, redirect to 404 page
+    next({ name: 'not-found', replace: true })
+  } else {
+    // Route found, proceed normally
+    next()
+  }
+})
+
+// Global error handler for route navigation errors
+router.onError((error) => {
+  console.error('Router navigation error:', error)
+  // You could also show a toast notification or other error handling here
 })
 
 export default router

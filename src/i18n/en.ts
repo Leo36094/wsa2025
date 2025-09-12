@@ -504,6 +504,17 @@ The skilled painter and decorator offers a range of services, from interpreting 
 Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swine Fever Information Section > Promotional Materials > Print Media > "Are you sure? Check again!" <a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">promotional leaflet</a> or scan the QR code.`,
     registration_link: 'Registration Link: ',
   },
+  notFound: {
+    title: 'Page Not Found',
+    description: 'The page you are looking for does not exist.',
+    backToHome: 'Back to Home',
+    suggestedLinks: 'You might want to visit'
+  },
+  nav: {
+    competition: 'Competition',
+    skills: 'Skills',
+    news: 'News'
+  },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',

@@ -6,17 +6,12 @@
       :active-tab="activeTab"
       @update:active-tab="handleActiveTabChange"
     />
-    <CompetitionMembers v-if="activeTab === PageSectionEnum.Member" />
-    <CompetitionCompetitors v-else-if="activeTab === PageSectionEnum.Competitor" />
-    <CompetitionSchedule v-else-if="activeTab === PageSectionEnum.Schedule" />
-    <div v-else class="competition-banner-container">
-      <CompetitionBanner />
-    </div>
+    <component :is="components[activeTab as CompetitionSectionValue]" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, type Component } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 // components
@@ -26,34 +21,33 @@ import CompetitionSchedule from '@/components/CompetitionSchedule.vue'
 import CompetitionMembers from '@/components/CompetitionCountry/Members.vue'
 import CompetitionCompetitors from '@/components/CompetitionCountry/Competitors.vue'
 
-import { PageSectionEnum, type PageValue } from '@/types/page_section'
+import { COMPETITION_SECTION_ENUM, type CompetitionSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
 
-const tabs = computed(() => [
-  {
-    label: t('page_tabs.competition_tab_01'),
-    value: PageSectionEnum.Competition,
-  },
-  {
-    label: t('page_tabs.competition_tab_02'),
-    value: PageSectionEnum.Schedule,
-  },
-  {
-    label: t('page_tabs.competition_tab_03'),
-    value: PageSectionEnum.Member,
-  },
-  {
-    label: t('page_tabs.competition_tab_04'),
-    value: PageSectionEnum.Competitor,
-  },
-])
+const competitionNavSections = Object.values(COMPETITION_SECTION_ENUM)
+const tabs = computed(() =>
+  competitionNavSections.map((section, index) => ({
+    label: t(`page_tabs.competition_tab_${(index + 1).toString().padStart(2, '0')}`),
+    value: section,
+  })),
+)
 
 const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'competition')
 
+const components: Record<CompetitionSectionValue, Component> = {
+  [COMPETITION_SECTION_ENUM.Competition]: CompetitionBanner,
+  [COMPETITION_SECTION_ENUM.Schedule]: CompetitionSchedule,
+  [COMPETITION_SECTION_ENUM.Member]: CompetitionMembers,
+  [COMPETITION_SECTION_ENUM.Competitor]: CompetitionCompetitors,
+}
+
 const phase2Content = computed(() => {
-  const phase2Sections: PageValue[] = [PageSectionEnum.Member, PageSectionEnum.Competitor]
+  const phase2Sections: CompetitionSectionValue[] = [
+    COMPETITION_SECTION_ENUM.Member,
+    COMPETITION_SECTION_ENUM.Competitor,
+  ]
   return phase2Sections.includes(activeTab.value)
 })
 </script>

@@ -491,5 +491,6 @@ export default {
   },
   media: {
     title: '影音專區',
+    theme_ad_title: '主題廣告',
   }
 }

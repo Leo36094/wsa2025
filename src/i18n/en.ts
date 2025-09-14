@@ -518,4 +518,8 @@ Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swi
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',
   },
+  media: {
+    title: 'Media',
+    theme_ad_title: 'Theme Ad',
+  }
 }

@@ -48,7 +48,7 @@ const phase2Content = computed(() => {
     COMPETITION_SECTION_ENUM.Member,
     COMPETITION_SECTION_ENUM.Competitor,
   ]
-  return phase2Sections.includes(activeTab.value)
+  return phase2Sections.includes(activeTab.value as CompetitionSectionValue)
 })
 </script>
 <style lang="scss" scoped>

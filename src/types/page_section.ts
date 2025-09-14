@@ -17,6 +17,10 @@ export const SECTION_ID = {
   Tourist: 'tourist',
   Vegan: 'vegan',
   Muslim: 'muslim',
+  ThemeAd: 'theme_ad',
+  OccupationIntro: 'occupation_intro',
+  LiveStream: 'live_stream',
+  VOD: 'vod',
 } as const;
 
 export const HOST_SECTION_ENUM = {
@@ -55,6 +59,18 @@ export const INVOLVED_SECTION_ENUM = {
 
 export type InvolvedSection = keyof typeof INVOLVED_SECTION_ENUM;
 export type InvolvedSectionValue = typeof INVOLVED_SECTION_ENUM[keyof typeof INVOLVED_SECTION_ENUM];
+
+export const MEDIA_SECTION_ENUM = {
+  ThemeAd: `#${SECTION_ID.ThemeAd}`,
+  OccupationIntro: `#${SECTION_ID.OccupationIntro}`,
+  LiveStream: `#${SECTION_ID.LiveStream}`,
+  VOD: `#${SECTION_ID.VOD}`,
+} as const;
+
+export type MediaSection = keyof typeof MEDIA_SECTION_ENUM;
+export type MediaSectionValue = typeof MEDIA_SECTION_ENUM[keyof typeof MEDIA_SECTION_ENUM];
+
+export type PageValue = HostSectionValue | CompetitionSectionValue | InvolvedSectionValue | MediaSectionValue;
 
 
 // export const PageSectionEnum = {

@@ -7,109 +7,41 @@
       @update:active-tab="handleActiveTabChange"
     />
     <div class="section-container">
-      <div v-if="activeTab === INVOLVED_SECTION_ENUM.Sponsorship" class="section-sponsor">
-        <BaseTitle class="get-involved__title" :title="$t('involved.sponsorship')" />
-        <p class="section-sponsor__desc" data-aos="fade-up">
-          {{ $t('involved.sponsorship_desc') }}
-        </p>
-        <p
-          class="section-sponsor__desc"
-          data-aos="fade-up"
-          v-html="$t('involved.sponsorship_desc_appendix')"
-        ></p>
-
-        <div class="section-sponsor__reach" data-aos="fade-up">
-          <h3 class="section-sponsor__reach-title">{{ $t('involved.sponsorship_reach') }}</h3>
-          <div
-            v-for="sponsor in sponsorList"
-            :key="sponsor.title"
-            class="section-sponsor__reach-item"
-          >
-            <div class="section-sponsor__reach-number">{{ sponsor.number }}</div>
-            <p class="section-sponsor__reach-item-title">
-              {{ sponsor.title }}
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-info" data-aos="fade-up">
-          <h3 class="contact-info__title">{{ $t('involved.sponsorship_contact') }}</h3>
-          <p class="contact-info__desc">
-            李宜霖 Yiling Li 小姐
-            <br />
-            <a href="mailto:yiling_li@nasme.org.tw">yiling_li@nasme.org.tw</a>
-          </p>
-
-          <p class="contact-info__desc">
-            巫承穎 Sandy Wu 小姐
-            <br />
-            <a href="mailto:sandy_wu@wda.gov.tw">sandy_wu@wda.gov.tw</a>
-          </p>
-        </div>
-      </div>
-      <GetInvolvedVisa v-if="activeTab === INVOLVED_SECTION_ENUM.Visa" />
-      <GetInvolvedForum v-if="activeTab === INVOLVED_SECTION_ENUM.Forum" />
-      <GetInvolvedTour v-if="activeTab === INVOLVED_SECTION_ENUM.Tourguide" />
-      <GetInvolvedNotice v-if="activeTab === INVOLVED_SECTION_ENUM.Notice" />
+      <component :is="components[activeTab as MediaSectionValue]" />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { INVOLVED_SECTION_ENUM } from '@/types/page_section'
-import { computed } from 'vue'
+import { computed, type Component } from 'vue'
 import { useI18n } from 'vue-i18n'
-import BaseTitle from '@/components/BaseTitle.vue'
-import PageTab from '@/components/PageTab.vue'
-import GetInvolvedVisa from '@/components/GetInvolvedVisa.vue'
-import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
-import GetInvolvedTour from '@/components/GetInvolvedTour.vue'
-import GetInvolvedNotice from '@/components/GetInvolvedNotice.vue'
 
+import PageTab from '@/components/PageTab.vue'
+import MediaThemeAd from '@/components/Media/ThemeAd.vue'
+import MediaOccupationIntro from '@/components/Media/OccupationIntro.vue'
+import MediaLiveStream from '@/components/Media/LiveStream.vue'
+import MediaVOD from '@/components/Media/VOD.vue'
+import { MEDIA_SECTION_ENUM, type MediaSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
 
-const tabs = computed(() => [
-  {
-    label: t('page_tabs.involved_tab_01'),
-    value: INVOLVED_SECTION_ENUM.Sponsorship,
-  },
-  {
-    label: t('page_tabs.involved_tab_02'),
-    value: INVOLVED_SECTION_ENUM.Visa,
-  },
-  {
-    label: t('page_tabs.involved_tab_03'),
-    value: INVOLVED_SECTION_ENUM.Forum,
-  },
-  {
-    label: t('page_tabs.involved_tab_04'),
-    value: INVOLVED_SECTION_ENUM.Tourguide,
-  },
-  {
-    label: t('page_tabs.involved_tab_05'),
-    value: INVOLVED_SECTION_ENUM.Notice,
-  },
-])
+const MEDIA_SECTION_VALUES = Object.values(MEDIA_SECTION_ENUM)
 
-const sponsorList = computed(() => {
-  return [
-    {
-      number: '500+',
-      title: t('involved.sponsorship_visitor'),
-    },
-    {
-      number: '30+',
-      title: t('involved.sponsorship_government'),
-    },
-    {
-      number: '28+',
-      title: t('involved.sponsorship_educational'),
-    },
-  ]
-})
+const tabs = computed(() =>
+  MEDIA_SECTION_VALUES.map((section, index) => ({
+    label: t(`page_tabs.media_tab_${(index + 1).toString().padStart(2, '0')}`),
+    value: section,
+  })),
+)
 
-const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'get-involved')
+const components: Record<MediaSectionValue, Component> = {
+  [MEDIA_SECTION_ENUM.ThemeAd]: MediaThemeAd,
+  [MEDIA_SECTION_ENUM.OccupationIntro]: MediaOccupationIntro,
+  [MEDIA_SECTION_ENUM.LiveStream]: MediaLiveStream,
+  [MEDIA_SECTION_ENUM.VOD]: MediaVOD,
+}
+
+const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')
 </script>
 
 <style lang="scss">
@@ -161,7 +93,7 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'get-involve
   }
   .section-container {
     @include flexCenter(column);
-    width: 12rem;
+    width: 12.6rem;
     margin: 0 auto;
   }
   .section-sponsor {

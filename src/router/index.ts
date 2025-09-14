@@ -7,7 +7,9 @@ import NewsInnerView from '@/views/NewsInnerView.vue'
 import SkillsView from '@/views/SkillsView.vue'
 import GetInvolvedView from '@/views/GetInvolvedView.vue'
 import SkillsCategoriesView from '@/views/SkillsCategoriesView.vue'
+import MediaView from '@/views/MediaView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+
 import { nextTick } from 'vue'
 
 export enum SkillsRouteEnum {
@@ -112,7 +114,12 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: NotFoundView,
-    }
+    },
+    {
+      path: '/media',
+      name: 'media',
+      component: MediaView,
+    },
   ],
   async scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

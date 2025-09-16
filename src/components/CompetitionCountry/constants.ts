@@ -57,6 +57,7 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'QA', name: '卡達', nameEn: 'Qatar', flag: 'QA_flag', link: 'https://www.edu.gov.qa/en/News/Details/8812800' },
   { code: 'RO', name: '羅馬尼亞', nameEn: 'Romania', flag: 'RO_flag', link: 'https://www.worldskills.ro/' },
   { code: 'SA', name: '沙烏地阿拉伯', nameEn: 'Saudi Arabia', flag: 'SA_flag', link: 'https://tvtc.gov.sa/En/Pages/default.aspx' },
+  { code: 'SE', name: '瑞典', nameEn: 'Sweden', flag: 'SE_flag', link: 'https://www.worldskills.se/' },
   { code: 'CH', name: '瑞士', nameEn: 'Switzerland', flag: 'CH_flag', link: 'https://swiss-skills.ch/de' },
   { code: 'TH', name: '泰國', nameEn: 'Thailand', flag: 'TH_flag', link: 'https://www.facebook.com/worldskillsthailand/' },
   { code: 'TL', name: '東帝汶', nameEn: 'Timor-Leste', flag: 'TL_flag', link: 'https://indmo.gov.tl/east-timor-promotional-skills/' },

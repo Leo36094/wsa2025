@@ -36,7 +36,7 @@ export default {
     media_tab_01: '主題廣告',
     media_tab_02: '職類介紹',
     media_tab_03: '開閉幕直播',
-    media_tab_04: '直播影片',
+    media_tab_04: '競賽影片',
   },
   footer: {
     address: '展館地圖',
@@ -492,5 +492,9 @@ export default {
   media: {
     title: '影音專區',
     theme_ad_title: '主題廣告',
+    occupation_intro_title: '職類介紹',
+    live_stream_title: '開閉幕直播',
+    live_stream_placeholder: '直播即將開始，敬請期待',
+    vod_title: '競賽影片',
   }
 }

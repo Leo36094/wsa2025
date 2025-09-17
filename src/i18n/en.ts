@@ -11,6 +11,7 @@ export default {
     wsa_logo: 'WorldSkills Asia Taipei 2025 Logo',
     wda_logo: 'Workforce Development Agency Logo',
     title: 'WorldSkills Asia Taipei 2025',
+    media: 'Media',
   },
   page_tabs: {
     page_tab_aria_label: 'Page tabs',
@@ -32,6 +33,10 @@ export default {
     involved_tab_03: 'Forum',
     involved_tab_04: 'Guided Group Tours Registration',
     involved_tab_05: 'Notice for Inbound Travelers',
+    media_tab_01: 'Theme Ad',
+    media_tab_02: 'Skills Introduction',
+    media_tab_03: 'Opening and Closing Live Stream',
+    media_tab_04: 'Competition Video',
   },
   footer: {
     address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
@@ -521,5 +526,9 @@ Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swi
   media: {
     title: 'Media',
     theme_ad_title: 'Theme Ad',
+    occupation_intro_title: 'Skills Introduction',
+    live_stream_title: 'Opening and Closing Live Stream',
+    live_stream_placeholder: 'Live stream will start soon, stay tuned',
+    vod_title: 'Competition Video',
   }
 }

@@ -24,8 +24,8 @@ const adList = computed(() =>
     .fill(0)
     .map((_, index) => ({
       imgUrl: `https://dummyimage.com/393x221/000/fff&text=${index + 1}`,
-      title: `title ${index + 1}`,
-      desc: `臺北流行音樂中心是臺北市成立的第一個行政法人，位於台灣臺北市南港區的流行音樂園區。園區內包括表演廳、流行音樂文化館、產業區及戶外開放空間。 ${index + 1}`,
+      title: `Comming Soon...`,
+      desc: `臺北流行音樂中心是臺北市成立的第一個行政法人，位於台灣臺北市南港區的流行音樂園區。園區內包括表演廳、流行音樂文化館、產業區及戶外開放空間。`,
     })),
 )
 </script>

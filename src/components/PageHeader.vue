@@ -61,67 +61,45 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import LangButton from './LangButton.vue'
 import NavMenubar from './NavMenubar.vue'
-import { SECTION_ID } from '@/types/page_section'
+import { SECTION_ID, HOST_SECTION_ENUM, COMPETITION_SECTION_ENUM, INVOLVED_SECTION_ENUM } from '@/types/page_section'
 
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 const router = useRouter()
 
+const hostNavSections = Object.values(HOST_SECTION_ENUM)
+const competitionNavSections = Object.values(COMPETITION_SECTION_ENUM)
+const involvedNavSections = Object.values(INVOLVED_SECTION_ENUM)
+
 const nav = computed(() => [
   {
     name: t('header.host'),
     path: '/host',
-    subNav: [
-      { name: t('page_tabs.host_tab_01'), path: '' },
-      { name: t('page_tabs.host_tab_02'), path: `#${SECTION_ID.Taipei}` },
-      { name: t('page_tabs.host_tab_03'), path: `#${SECTION_ID.WDA}` },
-      { name: t('page_tabs.host_tab_04'), path: `#${SECTION_ID.Location}` },
-      { name: t('page_tabs.host_tab_05'), path: `#${SECTION_ID.Traffic}` },
-      { name: t('page_tabs.host_tab_06'), path: `#${SECTION_ID.Medic}` },
-      { name: t('page_tabs.host_tab_07'), path: `#${SECTION_ID.Tourist}` },
-      { name: t('page_tabs.host_tab_08'), path: `#${SECTION_ID.Vegan}` },
-      { name: t('page_tabs.host_tab_09'), path: `#${SECTION_ID.Muslim}` },
-    ],
+    subNav: hostNavSections.map((section, index) => ({
+      name: t(`page_tabs.host_tab_${(index + 1).toString().padStart(2, '0')}`),
+      path: section,
+    })),
   },
   {
     name: t('header.competition'),
     path: '/competition',
-    subNav: [
-      { name: t('page_tabs.competition_tab_01'), path: '' },
-      { name: t('page_tabs.competition_tab_02'), path: `#${SECTION_ID.Schedule}` },
-      { name: t('page_tabs.competition_tab_03'), path: `#${SECTION_ID.Member}` },
-      { name: t('page_tabs.competition_tab_04'), path: `#${SECTION_ID.Competitor}` },
-    ],
+    subNav: competitionNavSections.map((section, index) => ({
+      name: t(`page_tabs.competition_tab_${(index + 1).toString().padStart(2, '0')}`),
+      path: section,
+    })),
   },
   { name: t('header.skill'), path: '/skills', subNav: [] },
   {
     name: t('header.involved'),
     path: '/get-involved',
-    subNav: [
-      {
-        name: t('page_tabs.involved_tab_01'),
-        path: `#${SECTION_ID.Sponsorship}`,
-      },
-      {
-        name: t('page_tabs.involved_tab_02'),
-        path: `#${SECTION_ID.Visa}`,
-      },
-      {
-        name: t('page_tabs.involved_tab_03'),
-        path: `#${SECTION_ID.Forum}`,
-      },
-      {
-        name: t('page_tabs.involved_tab_04'),
-        path: `#${SECTION_ID.Tourguide}`,
-      },
-      {
-        name: t('page_tabs.involved_tab_05'),
-        path: `#${SECTION_ID.Notice}`,
-      },
-    ],
+    subNav: involvedNavSections.map((section, index) => ({
+      name: t(`page_tabs.involved_tab_${(index + 1).toString().padStart(2, '0')}`),
+      path: section,
+    })),
   },
   { name: t('header.news'), path: '/news', subNav: [] },
+  { name: t('header.media'), path: '/media', subNav: [] },
 ])
 
 const isMenuOpen = ref(false)

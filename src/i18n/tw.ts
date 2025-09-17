@@ -5,6 +5,7 @@ export default {
     skill: '職類介紹',
     involved: '參與活動',
     news: '最新消息',
+    media: '影音專區',
     lang_en: '英文',
     lang_tw: '繁體中文',
     switch_to_lang: '切換到 {lang} 語言',
@@ -32,6 +33,10 @@ export default {
     involved_tab_03: '論壇',
     involved_tab_04: '參加/團體導覽資訊',
     involved_tab_05: '入境須知',
+    media_tab_01: '主題廣告',
+    media_tab_02: '職類介紹',
+    media_tab_03: '開閉幕直播',
+    media_tab_04: '競賽影片',
   },
   footer: {
     address: '展館地圖',
@@ -484,4 +489,12 @@ export default {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',
   },
+  media: {
+    title: '影音專區',
+    theme_ad_title: '主題廣告',
+    occupation_intro_title: '職類介紹',
+    live_stream_title: '開閉幕直播',
+    live_stream_placeholder: '直播即將開始，敬請期待',
+    vod_title: '競賽影片',
+  }
 }

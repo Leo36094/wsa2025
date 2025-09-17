@@ -68,11 +68,7 @@ const phase2Content = computed(() => {
     position: fixed;
     top: 0.76rem;
     height: 1.44rem;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.85) 70% rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
     backdrop-filter: blur(10px);
     padding-bottom: 0.2rem;
     @include zIndex(topbar);

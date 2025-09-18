@@ -38,7 +38,7 @@ export enum ConstructionIconEnum {
 export enum ITIconEnum {
   InformationNetworkCabling = 'Information Network Cabling',
   MobileApplicationDevelopment = 'Mobile Application Development',
-  SoftwareDevelopment = 'IT Software Solutions for Business',
+  SoftwareDevelopment = 'Software Applications Development',
   WebDevelopment = 'Web Technologies',
   ITNetworkSystems = 'IT Network Systems Administration',
   CloudComputing = 'Cloud Computing',

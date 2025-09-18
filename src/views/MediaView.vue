@@ -73,11 +73,7 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')
     position: fixed;
     top: 0.76rem;
     height: 1.44rem;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.85) 70% rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     @include zIndex(topbar);

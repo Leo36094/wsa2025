@@ -67,7 +67,7 @@ export default {
     quick_fact_cube_title_3: '選手與裁判',
     //---
     title: '亞洲技能競賽在台北',
-    banner_date: '2025年11月27 – 2025年11月29日',
+    banner_date: '2025年11月27日 – 2025年11月29日',
     split_title1: '亞洲技能競賽',
     split_title2: '在',
     split_title3: '台北',

@@ -2,7 +2,7 @@ export default {
   header: {
     host: '關於主辦',
     competition: '關於競賽',
-    skill: '職類介紹',
+    skill: '競賽職類',
     involved: '參與活動',
     news: '最新消息',
     lang_en: '英文',
@@ -477,7 +477,7 @@ export default {
   },
   nav: {
     competition: '關於競賽',
-    skills: '職類介紹',
+    skills: '競賽職類',
     news: '最新消息'
   },
   swiper: {

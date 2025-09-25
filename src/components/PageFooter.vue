@@ -19,16 +19,8 @@
           </div>
           <div class="social-media-group">
             <div class="social-media">
-              <a
-                class="col"
-                href="https://www.wda.gov.tw/"
-                target="_blank"
-              >
-                <img
-                  class="social-media__icon wda"
-                  src="/images/labor_logo.png"
-                  alt="wda-icon"
-                />
+              <a class="col" href="https://www.wda.gov.tw/" target="_blank">
+                <img class="social-media__icon wda" src="/images/labor_logo.png" alt="wda-icon" />
               </a>
               <a
                 class="col"

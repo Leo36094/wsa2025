@@ -1,7 +1,7 @@
 <template>
   <section class="host-wda" :id="SECTION_ID.WDA" :aria-labelledby="$t('host.wda_title')">
     <div class="host-wda-container">
-      <img src="/images/host/wda_logo.png" alt="wda-logo" class="host-logo" />
+      <img src="/images/wda.png" alt="wda-logo" class="host-logo" />
       <div class="host-wda-title">
         <h2 :id="`${SECTION_ID.WDA}-title`">{{ $t('host.wda_title') }}</h2>
       </div>

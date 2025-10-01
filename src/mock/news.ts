@@ -40,7 +40,7 @@ Official Skills (36 skills in total) :
   <li>Cloud Computing</li>
   <li>Cybersecurity</li>
   <li>IT Network Systems Administration</li>
-  <li>IT Software Solutions for Business</li>
+  <li>Software Applications Development</li>
   <li>Mobile Applications Development</li>
   <li>Mechanical Engineering CAD</li>
   <li>Autonomous Mobile Robotics</li>

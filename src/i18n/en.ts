@@ -282,7 +282,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
 1. Work organization and management: Organizing and maintaining a safe and efficient workspace; meeting or exceeding client satisfaction through self-awareness, expectation management, and personal efficiency and effectiveness.<br><br>
 2. Communication and interpersonal skills required to fulfill project requirements: Ability to gather, clarify, and confirm client requirements, as well as discuss time, costs, and fees with clients to achieve mutual acceptance.<br><br>
 3. Initial planning, design, and testing framework: Utilizing UI application specifications for iOS or Android systems; Using UI design software; planning test cases and design specifications for writing test reports.`,
-    it_SoftwareDevelopment: 'IT Software Solutions for Business',
+    it_SoftwareDevelopment: 'Software Applications Development',
     it_SoftwareDevelopment_copy: `Software Applications Development often work as part of a team of software professionals responsible for the requirement specification, writing algorithms, system analysis and design, construction, testing, training, and implementation, as well as maintenance of a business software system.
 <br><br>
 The design deliverables include project design presentations, system analysis reports, databases, business application softwares, websites, digital dashboards, Web APIs, mobile apps, etc.`,

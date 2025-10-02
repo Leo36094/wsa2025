@@ -158,12 +158,12 @@ $swiper-bullet-active-color: #455861;
         }
         .banner-img {
           @include bgCenter(cover);
-          background-position: center 15%;
+          background-position: top center;
           height: 100%;
           width: 100%;
 
           &-0 {
-            background-image: url('/images/wsa/homepage_herosection_00.png');
+            background-image: url('/images/wsa/homepage_herosection_00_m.png');
           }
         }
       }

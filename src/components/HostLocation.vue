@@ -113,8 +113,10 @@ const currentMap = computed(() => {
 <style lang="scss" scoped>
 $title-color: #fb773c;
 $pin-color: $green-primary;
+$bg-color: #f3f4f5;
+$section-bg-color: #fff;
 .location {
-  background: #fff;
+  background: $bg-color;
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -128,7 +130,7 @@ $pin-color: $green-primary;
   }
   .location-container {
     @include withContainer;
-    padding: 1.6rem 0;
+    padding: 0 0 1.6rem 0;
     .location-header {
       font-weight: 700;
       margin: auto;
@@ -146,7 +148,8 @@ $pin-color: $green-primary;
       padding: 0.4rem;
       width: 12rem;
       min-height: 4.36rem;
-      background: #f3f4f5;
+      background: $section-bg-color;
+      box-shadow: 0rem 0.08rem 0.16rem 0rem rgba(0, 0, 0, 0.1);
       border-radius: 0.4rem;
       margin: 0 auto;
       display: flex;
@@ -255,7 +258,7 @@ $pin-color: $green-primary;
 @include tablet {
   .location {
     .location-container {
-      padding: 1.6rem 0.4rem;
+      padding: 0rem 0.4rem;
       .location-header {
         margin-bottom: 0.32rem;
         line-height: normal;

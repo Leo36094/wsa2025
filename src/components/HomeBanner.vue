@@ -92,13 +92,15 @@ $swiper-bullet-active-color: #455861;
       position: relative;
       .banner-img {
         @include bgCenter(cover);
-        background-position: center 15%;
         height: 100%;
         width: 100%;
         @for $i from 0 through 7 {
           &-#{$i} {
             background-image: url('/images/wsa/homepage_herosection_0#{$i}.jpg');
           }
+        }
+        &-0 {
+          background-image: url('/images/wsa/homepage_herosection_00.png');
         }
       }
       .title-container {
@@ -156,12 +158,12 @@ $swiper-bullet-active-color: #455861;
         }
         .banner-img {
           @include bgCenter(cover);
-          background-position: center 15%;
+          background-position: top center;
           height: 100%;
           width: 100%;
 
           &-0 {
-            background-image: url('/images/wsa/homepage_herosection_00_m.jpg');
+            background-image: url('/images/wsa/homepage_herosection_00_m.png');
           }
         }
       }

@@ -5,7 +5,6 @@
     <HomeGallery />
     <HomeQuickFact />
     <HomeNews />
-    <!-- <HomeSponsors /> -->
   </div>
 </template>
 
@@ -14,7 +13,13 @@ import HomeBanner from '@/components/HomeBanner.vue'
 import HomeGallery from '@/components/HomeGallery.vue'
 import HomeNews from '@/components/HomeNews.vue'
 import HomeCountdown from '@/components/HomeCountdown.vue'
-// import HomeSponsors from '@/components/HomeSponsors.vue'
 import HomeQuickFact from '@/components/HomeQuickFact.vue'
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home {
+  padding-top: 0.76rem;
+  @include queryMinWidth($queryMD) {
+    padding-top: 0;
+  }
+}
+</style>

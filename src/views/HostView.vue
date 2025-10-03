@@ -6,37 +6,15 @@
       :active-tab="activeTab"
       @update:active-tab="handleActiveTabChange"
     />
-
-    <template v-if="activeTab === PageSectionEnum.Skill">
-      <HostSkill />
-    </template>
-    <template v-else-if="activeTab === PageSectionEnum.Taipei">
-      <HostBanner />
-      <HostIntroduction />
-      <HostCurrency />
-      <HostPower />
-      <HostClimate />
-    </template>
-    <HostWDA v-else-if="activeTab === PageSectionEnum.WDA" />
-    <HostLocation v-else-if="activeTab === PageSectionEnum.Location" />
-    <HostTraffic v-else-if="activeTab === PageSectionEnum.Traffic" />
-    <HostMedic v-else-if="activeTab === PageSectionEnum.Medic" />
-    <HostTourist v-else-if="activeTab === PageSectionEnum.Tourist" />
-    <HostVegan v-else-if="activeTab === PageSectionEnum.Vegan" />
-    <HostMuslim v-else="activeTab === PageSectionEnum.Muslim" />
+    <component :is="components[activeTab as HostSectionValue]" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, type Component } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import PageTab from '@/components/PageTab.vue'
-import HostBanner from '@/components/HostBanner.vue'
-import HostIntroduction from '@/components/HostIntroduction.vue'
-import HostCurrency from '@/components/HostCurrency.vue'
-import HostPower from '@/components/HostPower.vue'
-import HostClimate from '@/components/HostClimate.vue'
 import HostSkill from '@/components/HostSkill.vue'
 import HostWDA from '@/components/HostWDA.vue'
 import HostLocation from '@/components/HostLocation.vue'
@@ -45,25 +23,35 @@ import HostMedic from '@/components/HostMedic.vue'
 import HostTourist from '@/components/HostTourist.vue'
 import HostVegan from '@/components/HostVegan.vue'
 import HostMuslim from '@/components/HostMuslim.vue'
+import HostTaipei from '@/components/HostTaipei.vue'
 
-import { PageSectionEnum } from '@/types/page_section'
+import { HOST_SECTION_ENUM, type HostSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
 
-const tabs = computed(() => [
-  { label: t('page_tabs.host_tab_01'), value: PageSectionEnum.Skill },
-  { label: t('page_tabs.host_tab_02'), value: PageSectionEnum.Taipei },
-  { label: t('page_tabs.host_tab_03'), value: PageSectionEnum.WDA },
-  { label: t('page_tabs.host_tab_04'), value: PageSectionEnum.Location },
-  { label: t('page_tabs.host_tab_05'), value: PageSectionEnum.Traffic },
-  { label: t('page_tabs.host_tab_06'), value: PageSectionEnum.Medic },
-  { label: t('page_tabs.host_tab_07'), value: PageSectionEnum.Tourist },
-  { label: t('page_tabs.host_tab_08'), value: PageSectionEnum.Vegan },
-  { label: t('page_tabs.host_tab_09'), value: PageSectionEnum.Muslim },
-])
+const HOST_SECTION_VALUES = Object.values(HOST_SECTION_ENUM)
+
+const tabs = computed(() =>
+  HOST_SECTION_VALUES.map((section, index) => ({
+    label: t(`page_tabs.host_tab_${(index + 1).toString().padStart(2, '0')}`),
+    value: section,
+  })),
+)
 
 const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'host')
+
+const components: Record<HostSectionValue, Component> = {
+  [HOST_SECTION_ENUM.Skill]: HostSkill,
+  [HOST_SECTION_ENUM.Taipei]: HostTaipei,
+  [HOST_SECTION_ENUM.WDA]: HostWDA,
+  [HOST_SECTION_ENUM.Location]: HostLocation,
+  [HOST_SECTION_ENUM.Traffic]: HostTraffic,
+  [HOST_SECTION_ENUM.Medic]: HostMedic,
+  [HOST_SECTION_ENUM.Tourist]: HostTourist,
+  [HOST_SECTION_ENUM.Vegan]: HostVegan,
+  [HOST_SECTION_ENUM.Muslim]: HostMuslim,
+}
 
 const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === activeTab.value))
 </script>
@@ -86,9 +74,6 @@ const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === acti
   &.white-bg {
     background-color: #fff;
   }
-  .host-currency {
-    @include withContainer;
-  }
 
   .host-tab {
     position: fixed;
@@ -106,6 +91,13 @@ const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === acti
 
     // 增加 padding 讓漸變效果更自然
     padding-bottom: 0.2rem;
+  }
+}
+@include mobile {
+  .host {
+    .host-tab {
+      height: 1rem;
+    }
   }
 }
 </style>

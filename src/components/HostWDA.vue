@@ -22,7 +22,7 @@ import { SECTION_ID } from '@/types/page_section'
   .host-wda-container {
     width: 14.4rem;
     height: 100%;
-    margin: 1.6rem auto;
+    margin: 0 auto 1.6rem auto;
     @include bgCenter(14.4rem 8.46rem);
     background-image: url('/images/wsa/host_wda_desktop.png');
     padding: 0.8rem 3.2rem;

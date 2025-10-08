@@ -1,8 +1,10 @@
 <template>
   <div class="section-forum" aria-labelledby="forum-title" data-aos="fade-up">
     <BaseTitle class="section-forum__title" :title="$t('involved.forum_title')" />
-    <img src="/images/getInvolved/forum/forum_01.jpg" alt="forum" />
-    <img src="/images/getInvolved/forum/forum_02.jpg" alt="forum" />
+    <div class="image-group">
+      <img src="/images/getInvolved/forum/forum_01_1008.jpg" alt="forum" />
+      <img src="/images/getInvolved/forum/forum_02_1008.jpg" alt="forum" />
+    </div>
     <div class="section-forum__desc">
       <p>
         {{ $t('involved.registration_link') }}
@@ -36,7 +38,7 @@ import { computed } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 
 import { useI18n } from 'vue-i18n'
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 
 // 中文版面：報名連結: https://forms.gle/GJ5Ty6jZiwFpZVHMA
 // •英文版面： Registration Link: https://forms.gle/GJ5Ty6jZiwFpZVHMA
@@ -47,28 +49,28 @@ const registrationLink = computed(() => {
     : 'https://forms.gle/GJ5Ty6jZiwFpZVHMA'
 })
 
-const conferenceList = computed(() => [
-  {
-    label: t('involved.forum_conference_capacity'),
-    value: t('involved.forum_conference_capacity_value'),
-    insertHTML: false,
-  },
-  {
-    label: t('involved.forum_conference_date'),
-    value: t('involved.forum_conference_date_value'),
-    insertHTML: false,
-  },
-  {
-    label: t('involved.forum_conference_application'),
-    value: t('involved.forum_conference_application_value'),
-    insertHTML: false,
-  },
-  {
-    label: t('involved.forum_conference_contact'),
-    value: t('involved.forum_conference_contact_value'),
-    insertHTML: true,
-  },
-])
+// const conferenceList = computed(() => [
+//   {
+//     label: t('involved.forum_conference_capacity'),
+//     value: t('involved.forum_conference_capacity_value'),
+//     insertHTML: false,
+//   },
+//   {
+//     label: t('involved.forum_conference_date'),
+//     value: t('involved.forum_conference_date_value'),
+//     insertHTML: false,
+//   },
+//   {
+//     label: t('involved.forum_conference_application'),
+//     value: t('involved.forum_conference_application_value'),
+//     insertHTML: false,
+//   },
+//   {
+//     label: t('involved.forum_conference_contact'),
+//     value: t('involved.forum_conference_contact_value'),
+//     insertHTML: true,
+//   },
+// ])
 </script>
 <style lang="scss" scoped>
 $block-bg: #fafcf2;
@@ -124,6 +126,15 @@ $label-bg: #c8e14b;
     }
   }
   @include listStyle();
+  @include flexCenter(column);
+  max-width: 12rem;
+  .image-group {
+    @include flexCenter(row);
+    width: 100%;
+    img {
+      width: 50%;
+    }
+  }
 }
 @include mobile {
   .section-forum {
@@ -154,6 +165,12 @@ $label-bg: #c8e14b;
       }
       :deep(ul) {
         font-size: 0.16rem;
+      }
+    }
+    .image-group {
+      flex-direction: column;
+      img {
+        width: 100%;
       }
     }
   }

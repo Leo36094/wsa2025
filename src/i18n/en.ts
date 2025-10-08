@@ -527,9 +527,17 @@ Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swi
   media: {
     title: 'Media',
     theme_ad_title: 'Theme Ad',
+    theme_ad_coming_soon: 'Coming Soon',
+    theme_ad_coming_soon_subtitle: 'Theme Ad content will be available soon',
     occupation_intro_title: 'Skills Introduction',
+    occupation_intro_coming_soon: 'Coming Soon',
+    occupation_intro_coming_soon_subtitle: 'Skills Introduction content will be available soon',
     live_stream_title: 'Opening and Closing Live Stream',
+    live_stream_coming_soon: 'Coming Soon',
+    live_stream_coming_soon_subtitle: 'Live stream will be available soon',
     live_stream_placeholder: 'Live stream will start soon, stay tuned',
     vod_title: 'Competition Video',
+    vod_coming_soon: 'Coming Soon',
+    vod_coming_soon_subtitle: 'Competition videos will be available soon',
   }
 }

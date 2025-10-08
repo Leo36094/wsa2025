@@ -1,7 +1,16 @@
 <template>
   <section class="media-vod" id="vod" :aria-labelledby="`${$t('media.vod_title')}`">
     <div class="media-vod-container">
-      <BaseTitle class="media-vod-title" :title="$t('media.vod_title')" />
+      <!-- <BaseTitle class="media-vod-title" :title="$t('media.vod_title')" /> -->
+
+      <!-- Coming Soon Display -->
+      <div class="coming-soon-container">
+        <h2 class="coming-soon-title">{{ $t('media.vod_coming_soon') }}</h2>
+        <p class="coming-soon-subtitle">{{ $t('media.vod_coming_soon_subtitle') }}</p>
+      </div>
+
+      <!-- Original content - commented out -->
+      <!--
       <div class="vod-grid">
         <div
           v-for="(video, index) in videoList"
@@ -25,9 +34,11 @@
           <h3 class="video-title">{{ video.title }}</h3>
         </div>
       </div>
+      -->
     </div>
 
-    <!-- Video Modal -->
+    <!-- Video Modal - commented out -->
+    <!--
     <div v-if="selectedVideo" class="video-modal" @click="closeVideoModal">
       <div class="modal-content" @click.stop>
         <button class="close-button" @click="closeVideoModal" aria-label="關閉影片">
@@ -52,10 +63,13 @@
         </div>
       </div>
     </div>
+    -->
   </section>
 </template>
 
 <script lang="ts" setup>
+// Temporarily commented out for Coming Soon display
+/*
 import { ref, reactive } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 
@@ -120,6 +134,9 @@ const handleImageError = (event: Event) => {
   const videoId = img.alt.match(/vi\/([^\/]+)\//)?.[1] || img.alt
   img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 }
+*/
+
+// import BaseTitle from '@/components/BaseTitle.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -137,6 +154,32 @@ const handleImageError = (event: Event) => {
     padding: 0 0.2rem;
   }
 
+  // Coming Soon Styles
+  .coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.2rem;  // 40px 20px
+    text-align: center;
+    min-height: 50vh;
+  }
+
+  .coming-soon-title {
+    font-size: 0.32rem;  // 32px
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.16rem;  // 16px
+  }
+
+  .coming-soon-subtitle {
+    font-size: 0.18rem;  // 18px
+    color: #666;
+    opacity: 0.8;
+  }
+
+  // Original styles - commented out
+  /*
   .vod-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -326,5 +369,6 @@ const handleImageError = (event: Event) => {
       }
     }
   }
+  */
 }
 </style>

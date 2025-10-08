@@ -492,9 +492,17 @@ export default {
   media: {
     title: '影音專區',
     theme_ad_title: '主題廣告',
+    theme_ad_coming_soon: '敬請期待',
+    theme_ad_coming_soon_subtitle: '主題廣告內容即將推出',
     occupation_intro_title: '職類介紹',
+    occupation_intro_coming_soon: '敬請期待',
+    occupation_intro_coming_soon_subtitle: '職類介紹內容即將推出',
     live_stream_title: '開閉幕直播',
+    live_stream_coming_soon: '敬請期待',
+    live_stream_coming_soon_subtitle: '直播內容即將推出',
     live_stream_placeholder: '直播即將開始，敬請期待',
     vod_title: '競賽影片',
+    vod_coming_soon: '敬請期待',
+    vod_coming_soon_subtitle: '競賽影片即將推出',
   }
 }

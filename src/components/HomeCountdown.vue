@@ -6,7 +6,7 @@
     tabindex="0"
   >
     <div data-aos="fade" class="club-decoration" aria-hidden="true"></div>
-    <div class="countdown-container">
+    <div v-show="!isTimeUp" class="countdown-container">
       <h2
         data-aos="fade-right"
         data-aos-duration="500"
@@ -80,11 +80,22 @@ const remainHours = ref(['0'])
 const remainMins = ref(['0'])
 const remainSecs = ref(['0'])
 const timeInterval = ref<null | ReturnType<typeof setInterval>>(null)
+const isTimeUp = ref(false)
 
 function updateTimeRemaining() {
   const target = dayjs('2025-11-27')
   const now = dayjs()
   const diff = target.diff(now, 'day')
+
+  // Check if time is up (only consider days)
+  if (diff < 0) {
+    isTimeUp.value = true
+    if (timeInterval.value) {
+      clearInterval(timeInterval.value)
+    }
+    return
+  }
+
   const hours = target.diff(now, 'hour') % 24
   const mins = target.diff(now, 'minute') % 60
   const secs = target.diff(now, 'second') % 60
@@ -95,6 +106,7 @@ function updateTimeRemaining() {
   remainSecs.value = secs.toString().padStart(2, '0').split('')
 }
 
+updateTimeRemaining()
 onMounted(() => {
   timeInterval.value = setInterval(updateTimeRemaining, 1000)
 })

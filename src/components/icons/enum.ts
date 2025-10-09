@@ -72,7 +72,7 @@ export enum JuniorsIconEnum {
   ElectricalInstallation = 'Electrical Installation for Juniors',
   PaintingAndDecorating = 'Painting and Decorating for Juniors',
   Web = 'Web Development for Juniors',
-  HairDressing = 'Hair Dressing for Juniors',
-  RestaurantService = 'Restaurant Service for Juniors',
+  // HairDressing = 'Hair Dressing for Juniors',
+  // RestaurantService = 'Restaurant Service for Juniors',
   GraphicDesign = 'Graphic Design for Juniors',
 }

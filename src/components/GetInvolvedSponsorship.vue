@@ -1,6 +1,9 @@
 <template>
   <div class="section-sponsor">
-    <BaseTitle class="get-involved__title" :title="$t('involved.sponsorship')" />
+    <div class="coming-soon-container">
+      <h2 class="coming-soon-title">{{ $t('involved.sponsorship_coming_soon') }}</h2>
+    </div>
+    <!-- <BaseTitle class="get-involved__title" :title="$t('involved.sponsorship')" />
     <p class="section-sponsor__desc" data-aos="fade-up">
       {{ $t('involved.sponsorship_desc') }}
     </p>
@@ -33,33 +36,33 @@
         <br />
         <a href="mailto:sandy_wu@wda.gov.tw">sandy_wu@wda.gov.tw</a>
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 <script lang="ts" setup>
-import { INVOLVED_SECTION_ENUM } from '@/types/page_section'
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import BaseTitle from '@/components/BaseTitle.vue'
+// import { INVOLVED_SECTION_ENUM } from '@/types/page_section'
+// import { computed } from 'vue'
+// import { useI18n } from 'vue-i18n'
+// import BaseTitle from '@/components/BaseTitle.vue'
 
-const { t } = useI18n()
+// const { t } = useI18n()
 
-const sponsorList = computed(() => {
-  return [
-    {
-      number: '500+',
-      title: t('involved.sponsorship_visitor'),
-    },
-    {
-      number: '30+',
-      title: t('involved.sponsorship_government'),
-    },
-    {
-      number: '28+',
-      title: t('involved.sponsorship_educational'),
-    },
-  ]
-})
+// const sponsorList = computed(() => {
+//   return [
+//     {
+//       number: '500+',
+//       title: t('involved.sponsorship_visitor'),
+//     },
+//     {
+//       number: '30+',
+//       title: t('involved.sponsorship_government'),
+//     },
+//     {
+//       number: '28+',
+//       title: t('involved.sponsorship_educational'),
+//     },
+//   ]
+// })
 </script>
 
 <style lang="scss" scoped>
@@ -120,6 +123,23 @@ const sponsorList = computed(() => {
         margin-bottom: 0.16rem;
       }
     }
+  }
+  // Coming Soon Styles
+  .coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.2rem; // 40px 20px
+    text-align: center;
+    min-height: 50vh;
+  }
+
+  .coming-soon-title {
+    font-size: 0.32rem; // 32px
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.16rem; // 16px
   }
 }
 @include tablet {

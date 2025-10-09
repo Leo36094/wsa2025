@@ -54,7 +54,6 @@
         <li>Wall and Floor Tiling</li>
         <li>Plastering and Drywall System</li>
         <li>Digital Construction</li>
-        <li>Painting and Decorating</li>
         <li>Painting and Decorating(Youth Team & Junior Team)</li>
       </ul>
       <h3>Junior Skills (5 skills in total) :</h3>
@@ -124,7 +123,6 @@
         <li>建築舖面</li>
         <li>粉刷技術與乾牆系統</li>
         <li>數位建築BIM</li>
-        <li>漆作裝潢</li>
         <li>漆作裝潢（青年組/青少年組）</li>
       </ul>
       <h3>青少年職類（共5項）</h3>

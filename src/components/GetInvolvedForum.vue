@@ -83,6 +83,7 @@ $label-bg: #c8e14b;
   &__desc {
     font-size: 0.18rem;
     margin-bottom: 0.24rem;
+    margin-top: 0.24rem;
   }
   &__content {
     background: $block-bg;

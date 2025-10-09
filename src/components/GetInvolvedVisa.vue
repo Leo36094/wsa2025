@@ -1,5 +1,5 @@
 <template>
-  <div class="section-visa" :id="SECTION_ID.Visa" aria-labelledby="visa-title" data-aos="fade-up">
+  <div class="section-visa" aria-labelledby="visa-title" data-aos="fade-up">
     <BaseTitle class="section-visa__title" :title="$t('involved.visa_title')" />
     <p class="section-visa__desc">{{ $t('involved.visa_desc') }}</p>
     <div class="step-block" v-for="item in visaMethodList" :key="item.title">
@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { SECTION_ID } from '@/types/page_section'
+// import { SECTION_ID } from '@/types/page_section'
 import BaseTitle from '@/components/BaseTitle.vue'
 import { useI18n } from 'vue-i18n'
 

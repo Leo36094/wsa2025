@@ -7,7 +7,7 @@
 
 import { execSync } from 'child_process'
 import { readFileSync } from 'fs'
-import { resolve, relative } from 'path'
+import { resolve } from 'path'
 
 // Color codes for terminal output
 const colors = {
@@ -81,7 +81,7 @@ function getStagedFiles() {
     })
     return output.trim().split('\n').filter(Boolean)
   } catch (error) {
-    log('Error getting staged files', 'red')
+    log('Error getting staged files', 'red', error)
     return []
   }
 }

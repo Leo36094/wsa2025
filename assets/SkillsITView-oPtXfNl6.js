@@ -1,0 +1,1 @@
+import{S as e,I as n}from"./SkillsInnerViewTemplate-BoAKmfGD.js";import{d as a,c as r,u as o,o as s}from"./index-1xl8X5r4.js";const p=a({__name:"SkillsITView",setup(t){return(i,m)=>(s(),r(e,{"view-name":o(n).IT},null,8,["view-name"]))}});export{p as default};

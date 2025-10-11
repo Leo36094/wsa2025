@@ -234,7 +234,6 @@ const data = computed(() => {
 
 const showModal = ref(false)
 const toggleModal = (show: boolean) => {
-  console.log(show)
   showModal.value = show
 }
 </script>

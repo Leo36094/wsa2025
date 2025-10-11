@@ -17,6 +17,7 @@
     "deploy-gh-pages": "yarn run build && node ./.ghpages.js",
     "build-live": "BUILD_ENV=live yarn run build",
     "check:test-data": "node scripts/check-test-data.js",
+    "check:all-files": "node scripts/check-all-files.js",
     "prepare": "husky"
   },
   "dependencies": {

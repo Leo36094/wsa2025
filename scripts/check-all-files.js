@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Pre-push check script
- * Checks for test data, debug code, and other unwanted content before pushing to remote
+ * Check all files in the project
+ * This scans ALL files in the project, not just staged ones
+ * Use this to audit the entire codebase for test data
  */
 
-import { execSync } from 'child_process'
-import { readFileSync } from 'fs'
-import { resolve } from 'path'
+import { readdirSync, readFileSync, statSync } from 'fs'
+import { resolve, join, relative } from 'path'
 
 // Color codes for terminal output
 const colors = {
@@ -49,12 +49,6 @@ const rules = [
     severity: 'warning',
     message: 'Consider resolving TODO/FIXME comments',
   },
-  {
-    name: 'unused imports (obvious)',
-    pattern: /import\s+.*\s+from\s+['"].*['"]\s*\/\/\s*unused/gi,
-    severity: 'warning',
-    message: 'Remove unused imports',
-  },
 ]
 
 // File patterns to check
@@ -64,28 +58,16 @@ const excludePatterns = [
   'dist/',
   '.git/',
   'coverage/',
-  'scripts/',        // Exclude all scripts
-  '*.md',           // Exclude all Markdown files
-  'README',         // Exclude README files
-  'CHANGELOG',      // Exclude CHANGELOG files
-  '.husky/',        // Exclude Husky hooks
-  '.ghpages.js',    // Exclude deployment script
+  'scripts/',
+  '*.md',
+  'README',
+  'CHANGELOG',
+  '.husky/',
+  '.ghpages.js',
 ]
 
 function log(message, color = 'reset') {
   console.log(`${colors[color]}${message}${colors.reset}`)
-}
-
-function getStagedFiles() {
-  try {
-    const output = execSync('git diff --cached --name-only --diff-filter=ACM', {
-      encoding: 'utf-8',
-    })
-    return output.trim().split('\n').filter(Boolean)
-  } catch (error) {
-    log('Error getting staged files', 'red', error)
-    return []
-  }
 }
 
 function shouldCheckFile(filePath) {
@@ -98,6 +80,29 @@ function shouldCheckFile(filePath) {
   if (isExcluded) return false
 
   return true
+}
+
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = readdirSync(dirPath)
+
+  files.forEach((file) => {
+    const filePath = join(dirPath, file)
+
+    // Skip if excluded
+    const relativePath = relative(process.cwd(), filePath)
+    const isExcluded = excludePatterns.some((pattern) => relativePath.includes(pattern))
+    if (isExcluded) return
+
+    if (statSync(filePath).isDirectory()) {
+      arrayOfFiles = getAllFiles(filePath, arrayOfFiles)
+    } else {
+      if (shouldCheckFile(relativePath)) {
+        arrayOfFiles.push(relativePath)
+      }
+    }
+  })
+
+  return arrayOfFiles
 }
 
 function checkFile(filePath) {
@@ -138,27 +143,20 @@ function checkFile(filePath) {
 }
 
 function main() {
-  log('\n🔍 Checking for test data and debug code...\n', 'cyan')
+  log('\n🔍 Checking ALL files in the project for test data and debug code...\n', 'cyan')
 
-  const stagedFiles = getStagedFiles()
+  const allFiles = getAllFiles(process.cwd())
 
-  if (stagedFiles.length === 0) {
+  if (allFiles.length === 0) {
     log('No files to check', 'yellow')
     process.exit(0)
   }
 
-  const filesToCheck = stagedFiles.filter(shouldCheckFile)
-
-  if (filesToCheck.length === 0) {
-    log('No relevant files to check', 'green')
-    process.exit(0)
-  }
-
-  log(`Checking ${filesToCheck.length} file(s)...\n`, 'cyan')
+  log(`Checking ${allFiles.length} file(s)...\n`, 'cyan')
 
   const allIssues = []
 
-  filesToCheck.forEach((file) => {
+  allFiles.forEach((file) => {
     const issues = checkFile(file)
     if (issues.length > 0) {
       allIssues.push({ file, issues })
@@ -166,13 +164,13 @@ function main() {
   })
 
   if (allIssues.length === 0) {
-    log('✅ All checks passed!\n', 'green')
+    log('✅ All checks passed! No issues found.\n', 'green')
     process.exit(0)
   }
 
   // Display issues
-  let hasErrors = false
-  let hasWarnings = false
+  let errorCount = 0
+  let warningCount = 0
 
   allIssues.forEach(({ file, issues }) => {
     log(`\n📄 ${file}`, 'cyan')
@@ -181,8 +179,8 @@ function main() {
       const icon = issue.severity === 'error' ? '❌' : '⚠️'
       const color = issue.severity === 'error' ? 'red' : 'yellow'
 
-      if (issue.severity === 'error') hasErrors = true
-      if (issue.severity === 'warning') hasWarnings = true
+      if (issue.severity === 'error') errorCount++
+      if (issue.severity === 'warning') warningCount++
 
       log(`  ${icon} Line ${issue.line}: ${issue.rule}`, color)
       log(`     ${issue.content}`, 'reset')
@@ -193,31 +191,22 @@ function main() {
   // Summary
   log('\n' + '='.repeat(70), 'cyan')
   log(`\n📊 Summary:`, 'cyan')
+  log(`   Found ${errorCount} error(s) and ${warningCount} warning(s) in ${allIssues.length} file(s)`, 'yellow')
+  log(`   Total files scanned: ${allFiles.length}`, 'cyan')
 
-  let errorCount = 0
-  let warningCount = 0
-  allIssues.forEach(({ issues }) => {
-    issues.forEach(issue => {
-      if (issue.severity === 'error') errorCount++
-      if (issue.severity === 'warning') warningCount++
-    })
+  log('\n📝 Files that need to be fixed:', 'cyan')
+  allIssues.forEach(({ file, issues }) => {
+    const errorIssues = issues.filter(i => i.severity === 'error')
+    if (errorIssues.length > 0) {
+      log(`   - ${file} (${errorIssues.length} issue${errorIssues.length > 1 ? 's' : ''})`, 'red')
+    }
   })
 
-  log(`   Found ${errorCount} error(s) and ${warningCount} warning(s) in ${allIssues.length} file(s)`, 'yellow')
-  log(`   Total files checked: ${filesToCheck.length}`, 'cyan')
-
-  if (hasErrors) {
-    log('\n📝 Files that need to be fixed:', 'cyan')
-    allIssues.forEach(({ file, issues }) => {
-      const errorIssues = issues.filter(i => i.severity === 'error')
-      if (errorIssues.length > 0) {
-        log(`   - ${file} (${errorIssues.length} issue${errorIssues.length > 1 ? 's' : ''})`, 'red')
-      }
-    })
-    log('\n❌ Commit blocked: Please fix the errors above before committing\n', 'red')
+  if (errorCount > 0) {
+    log('\n❌ Action required: Please fix these issues before pushing to production\n', 'red')
     process.exit(1)
-  } else if (hasWarnings) {
-    log('\n⚠️  Warnings found but commit is allowed\n', 'yellow')
+  } else if (warningCount > 0) {
+    log('\n⚠️  Warnings found - review recommended\n', 'yellow')
     process.exit(0)
   }
 }

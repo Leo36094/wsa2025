@@ -848,4 +848,51 @@ const MRTBlockEn = {
 
 ---
 
+## 測試資料檢查
+
+### 自動檢查機制
+
+專案已設置 Git pre-commit hook，會在 commit 前自動檢查代碼中是否有不應該被提交的內容。
+
+#### 檢查項目
+
+**錯誤 (會阻止 commit)**:
+- `console.log()` 語句（除非有 `eslint-disable` 註解）
+- `debugger` 語句
+- 測試/Demo 資料標記（如 `// TEST DATA`, `// DEMO CODE`）
+
+**警告 (允許但會提醒)**:
+- `TODO`/`FIXME` 註解
+- 標記為 `// unused` 的 import
+
+#### 使用方式
+
+**自動執行** (推薦):
+```bash
+git add .
+git commit -m "your message"
+# 腳本會自動檢查
+```
+
+**手動檢查**:
+```bash
+yarn check:test-data
+```
+
+#### 例外處理
+
+如果某些 console.log 是必要的：
+```typescript
+// ❌ 會被阻止
+console.log('debug info')
+
+// ✅ 會被允許
+// eslint-disable-next-line no-console
+console.error('Critical error:', error)
+```
+
+詳細說明請參考: [scripts/README.md](../scripts/README.md)
+
+---
+
 **最後更新**: 2025-10-11

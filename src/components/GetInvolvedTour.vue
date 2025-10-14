@@ -19,9 +19,9 @@ const { locale } = useI18n()
 
 const dmImg = computed(() => {
   if (locale.value === 'en') {
-    return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_en.png'
+    return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_en_1014.png'
   }
-  return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_zh.png'
+  return import.meta.env.BASE_URL + 'images/getInvolved/tour/tour_dm_zh_1014.png'
 })
 const visaMethodList = computed(() => [
   {

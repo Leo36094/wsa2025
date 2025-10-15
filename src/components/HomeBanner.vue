@@ -23,6 +23,9 @@
             />
           </SwiperSlide>
           <div class="banner-pagination" tabindex="0"></div>
+          <Transition name="fade">
+            <HomeBannerTitle v-if="activeIndex !== 0" class="banner__title" />
+          </Transition>
         </Swiper>
       </div>
     </div>
@@ -35,6 +38,7 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
+import HomeBannerTitle from '@/components/HomeBannerTitle.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import type { Swiper as SwiperType } from 'swiper'
 const { t } = useI18n()
@@ -44,6 +48,14 @@ const swiperConfig = {
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
+  },
+  pagination: {
+    el: '.banner-pagination',
+    clickable: true,
+    horizontalClass: 'swiper-pagination-horizontal', // 添加這行
+    renderBullet: function (index: number, className: string) {
+      return `<button class="${className}" aria-label="${t('home.aria_banner_swiper_pagination', { index })}"></button>`
+    },
   },
   a11y: {
     enabled: true,
@@ -66,7 +78,6 @@ const getImageSrc = (index: number) => {
   }
   return `${import.meta.env.BASE_URL}images/wsa/homepage_herosection_0${index}.jpg`
 }
-
 </script>
 <style lang="scss" scoped>
 $swiper-bullet-color: $white-bg;
@@ -89,10 +100,6 @@ $swiper-bullet-active-color: #455861;
       @include flexCenter;
       object-fit: contain;
       position: relative;
-      img {
-        object-fit: cover;
-        width: 100%;
-      }
       .title-container {
         @include withContainer;
         position: relative;
@@ -115,7 +122,7 @@ $swiper-bullet-active-color: #455861;
       }
       .banner-pagination {
         position: absolute;
-        bottom: 0.32rem;
+        bottom: 0.24rem;
         top: unset;
         @include flexCenter;
         z-index: 5;
@@ -162,7 +169,14 @@ $swiper-bullet-active-color: #455861;
           transform: translateX(0);
           line-height: normal;
           left: 0.56rem;
-          bottom: 0.56rem;
+          bottom: 0.2rem;
+          font-size: 0.48rem;
+          :deep(.splits) {
+            font-size: 0.32rem;
+          }
+          :deep(.banner-year) {
+            line-height: 0.32rem;
+          }
         }
         .banner-img {
           @include bgCenter(contain);
@@ -173,10 +187,11 @@ $swiper-bullet-active-color: #455861;
           min-height: 500px;
         }
         .banner-pagination {
+          bottom: 0.1rem;
           :deep(.swiper-pagination-bullet) {
             opacity: 1;
-            width: 0.08rem;
-            height: 0.08rem;
+            width: 0.06rem;
+            height: 0.06rem;
           }
         }
       }
@@ -197,7 +212,19 @@ $swiper-bullet-active-color: #455861;
 
         &__title {
           left: 0.24rem;
-          bottom: 0.44rem;
+          bottom: 0.1rem;
+          width: 2.3rem;
+          :deep(.date) {
+            font-size: 0.12rem;
+            line-height: 0.12rem;
+          }
+          :deep(.splits) {
+            font-size: 0.22rem;
+          }
+          :deep(.banner-year) {
+            font-size: 0.22rem;
+            line-height: 0.22rem;
+          }
         }
 
         .banner-img {

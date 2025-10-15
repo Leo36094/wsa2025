@@ -119,7 +119,7 @@ onUnmounted(() => {
 </script>
 <style lang="scss" scoped>
 .home-countdown {
-  padding: 1.6rem 0;
+  padding: 0.8rem 1.6rem 0;
   @include flexCenter;
   border-radius: 0.18rem;
   position: relative;

@@ -81,8 +81,7 @@ $swiper-bullet-active-color: #455861;
     transition: opacity 0.5s ease;
     position: relative;
     width: 100%;
-    height: 100%;
-    max-height: 100vh;
+    min-height: 800px;
     &.hide {
       opacity: 0;
     }
@@ -92,6 +91,7 @@ $swiper-bullet-active-color: #455861;
       position: relative;
       img {
         object-fit: cover;
+        width: 100%;
       }
       .title-container {
         @include withContainer;
@@ -141,6 +141,7 @@ $swiper-bullet-active-color: #455861;
     .main-banner-container {
       // Maintain 16:9 aspect ratio for tablet
       height: auto;
+      min-height: auto;
 
       .banner {
         @include flexCenter;

@@ -81,7 +81,7 @@ $swiper-bullet-active-color: #455861;
     transition: opacity 0.5s ease;
     position: relative;
     width: 100%;
-    min-height: 800px;
+    min-height: 600px;
     &.hide {
       opacity: 0;
     }

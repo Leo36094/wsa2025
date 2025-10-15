@@ -26,6 +26,7 @@
               :flag="country.flag"
               :name="lang === 'en' ? country.nameEn : country.name"
               :link="country.link"
+              :code="country.code"
             />
           </div>
         </div>

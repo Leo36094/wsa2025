@@ -6,7 +6,7 @@
         <div
           v-for="i in flagWidth"
           :key="i"
-          class="flag-img flag-waving"
+          :class="['flag-img', 'flag-waving', { QA: code === '21' }]"
           :style="{
             backgroundImage: `url(${bgUrl})`,
             backgroundPosition: `${-(i - 1)}px 0`,
@@ -16,9 +16,10 @@
       </div>
 
       <!-- Still flag -->
+
       <div
         v-else
-        class="flag-img flag-still"
+        :class="['flag-img', 'flag-still', { QA: code === '21' }]"
         :style="{
           backgroundImage: `url(${bgUrl})`,
         }"
@@ -37,6 +38,7 @@ interface Props {
   waving: boolean
   name: string
   link: string
+  code?: string
 }
 
 const props = defineProps<Props>()
@@ -83,16 +85,25 @@ onUnmounted(() => {
   cursor: pointer;
   width: 2.82rem;
   height: 1.87rem;
+  @include flexCenter(column);
 }
 
 .flag-container {
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
 }
 .flag-img {
-  @include bgCenter(2.82rem 100%);
+  width: 2.82rem;
+  height: 1.87rem;
+  @include bgCenter(2.82rem 1.87rem);
   aspect-ratio: 3/2;
+  &.QA {
+    // height: 0.73rem;
+    @include bgCenter(2.82rem 0.68rem);
+    aspect-ratio: 25/6;
+  }
 }
 .flag-name {
   margin-top: 0.16rem;
@@ -107,29 +118,48 @@ onUnmounted(() => {
   height: 100%;
   width: 1px;
   display: inline-block;
+  &.QA {
+    height: 0.68rem;
+  }
 }
 
 .flag-still {
   width: 100%;
   height: 100%;
+  &.QA {
+    height: 0.68rem;
+    margin: auto;
+  }
 }
 
 @include tablet {
   .flag {
     width: 2.05rem;
-    height: 1.36rem;
+    min-height: 1.36rem;
     .flag-img {
       @include bgCenter(2.05rem 100%);
+      &.QA {
+        @include bgCenter(2.05rem 0.49rem);
+      }
+    }
+    .flag-waving.QA {
+      height: 0.49rem;
     }
   }
 }
 @include mobile {
   .flag {
     width: 1.28rem;
-    height: 0.85rem;
+    min-height: 0.85rem;
     .flag-img {
       animation: none;
       @include bgCenter(1.28rem 100%);
+      &.QA {
+        @include bgCenter(1.28rem 0.31rem);
+      }
+    }
+    .flag-waving.QA {
+      height: 0.31rem;
     }
   }
   .flag-name {

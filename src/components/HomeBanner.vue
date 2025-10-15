@@ -16,17 +16,17 @@
             :aria-label="$t('home.aria_banner_swiper_slide', { index: index - 1 })"
             tabindex="0"
           >
-            <div
-              :class="['banner-img', `banner-img-${index - 1}`]"
-              role="img"
-              :aria-label="$t('home.aria_banner_swiper_slide', { index: index - 1 })"
-            ></div>
+            <img
+              :src="getImageSrc(index - 1)"
+              :alt="$t('home.aria_banner_swiper_slide', { index: index - 1 })"
+              loading="lazy"
+            />
           </SwiperSlide>
           <div class="banner-pagination" tabindex="0"></div>
+          <Transition name="fade">
+            <HomeBannerTitle v-if="activeIndex !== 0" class="banner__title" />
+          </Transition>
         </Swiper>
-        <Transition name="fade">
-          <HomeBannerTitle v-if="activeIndex !== 0" class="banner__title" />
-        </Transition>
       </div>
     </div>
   </div>
@@ -34,11 +34,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import HomeBannerTitle from './HomeBannerTitle.vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import { A11y, Autoplay, Pagination } from 'swiper/modules'
+import HomeBannerTitle from '@/components/HomeBannerTitle.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import type { Swiper as SwiperType } from 'swiper'
 const { t } = useI18n()
@@ -71,6 +71,13 @@ const activeIndex = ref(0)
 const handleSlideChange = (swiper: SwiperType) => {
   activeIndex.value = swiper.realIndex
 }
+
+const getImageSrc = (index: number) => {
+  if (index === 0) {
+    return `${import.meta.env.BASE_URL}images/wsa/homepage_herosection_00.png`
+  }
+  return `${import.meta.env.BASE_URL}images/wsa/homepage_herosection_0${index}.jpg`
+}
 </script>
 <style lang="scss" scoped>
 $swiper-bullet-color: $white-bg;
@@ -78,31 +85,21 @@ $swiper-bullet-active-color: #455861;
 
 .home-banner {
   position: relative;
-  top: 0;
+  padding-top: 0.76rem;
+  max-width: 19.2rem;
+  margin: auto;
   .main-banner-container {
-    height: 100vh;
     transition: opacity 0.5s ease;
     position: relative;
+    width: 100%;
+    min-height: 600px;
     &.hide {
       opacity: 0;
     }
     .banner {
       @include flexCenter;
-      height: 100%;
+      object-fit: contain;
       position: relative;
-      .banner-img {
-        @include bgCenter(cover);
-        height: 100%;
-        width: 100%;
-        @for $i from 0 through 7 {
-          &-#{$i} {
-            background-image: url('/images/wsa/homepage_herosection_0#{$i}.jpg');
-          }
-        }
-        &-0 {
-          background-image: url('/images/wsa/homepage_herosection_00.png');
-        }
-      }
       .title-container {
         @include withContainer;
         position: relative;
@@ -118,9 +115,14 @@ $swiper-bullet-active-color: #455861;
         white-space: nowrap;
         pointer-events: none;
       }
+      img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
       .banner-pagination {
         position: absolute;
-        bottom: 0.32rem;
+        bottom: 0.24rem;
         top: unset;
         @include flexCenter;
         z-index: 5;
@@ -141,29 +143,55 @@ $swiper-bullet-active-color: #455861;
 @include tablet() {
   .home-banner {
     position: relative;
-    top: 0;
+    padding-top: 0rem;
 
     .main-banner-container {
+      // Maintain 16:9 aspect ratio for tablet
+      height: auto;
+      min-height: auto;
+
       .banner {
         @include flexCenter;
         height: 100%;
         position: relative;
+
+        .slide {
+          aspect-ratio: 16 / 9;
+          width: 100%;
+          height: auto;
+          outline: 2px solid #fff;
+          // min-height: 500px;
+        }
+
         &__title {
           white-space: normal;
           text-align: left;
           transform: translateX(0);
           line-height: normal;
           left: 0.56rem;
-          bottom: 0.56rem;
+          bottom: 0.2rem;
+          font-size: 0.48rem;
+          :deep(.splits) {
+            font-size: 0.32rem;
+          }
+          :deep(.banner-year) {
+            line-height: 0.32rem;
+          }
         }
         .banner-img {
-          @include bgCenter(cover);
-          background-position: top center;
+          @include bgCenter(contain);
+          background-position: center center;
+          background-color: #000;
           height: 100%;
           width: 100%;
-
-          &-0 {
-            background-image: url('/images/wsa/homepage_herosection_00_m.png');
+          min-height: 500px;
+        }
+        .banner-pagination {
+          bottom: 0.1rem;
+          :deep(.swiper-pagination-bullet) {
+            opacity: 1;
+            width: 0.06rem;
+            height: 0.06rem;
           }
         }
       }
@@ -172,11 +200,38 @@ $swiper-bullet-active-color: #455861;
 }
 @include mobile {
   .home-banner {
+    .home-banner-container {
+      height: auto;
+    }
+
     .main-banner-container {
       .banner {
+        .slide {
+          width: 100%;
+        }
+
         &__title {
           left: 0.24rem;
-          bottom: 0.44rem;
+          bottom: 0.1rem;
+          width: 2.3rem;
+          :deep(.date) {
+            font-size: 0.12rem;
+            line-height: 0.12rem;
+          }
+          :deep(.splits) {
+            font-size: 0.22rem;
+          }
+          :deep(.banner-year) {
+            font-size: 0.22rem;
+            line-height: 0.22rem;
+          }
+        }
+
+        .banner-img {
+          @include bgCenter(contain);
+          background-position: center center;
+          background-color: #000;
+          min-height: 400px;
         }
       }
     }

@@ -137,9 +137,9 @@ onUnmounted(() => {
     width: 2.05rem;
     min-height: 1.36rem;
     .flag-img {
-      @include bgCenter(2.05rem 100%);
+      @include bgCenter(2.05rem auto);
       &.QA {
-        @include bgCenter(2.05rem 0.49rem);
+        @include bgCenter(2.05rem auto);
       }
     }
     .flag-waving.QA {
@@ -153,9 +153,9 @@ onUnmounted(() => {
     min-height: 0.85rem;
     .flag-img {
       animation: none;
-      @include bgCenter(1.28rem 100%);
+      @include bgCenter(1.28rem auto);
       &.QA {
-        @include bgCenter(1.28rem 0.31rem);
+        @include bgCenter(1.28rem auto);
       }
     }
     .flag-waving.QA {

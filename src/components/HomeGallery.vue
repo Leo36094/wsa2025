@@ -129,6 +129,8 @@ const baseURL = import.meta.env.BASE_URL
     img {
       object-fit: cover;
       aspect-ratio: 16/9;
+      height: 100%;
+      width: 100%;
     }
     &:focus-within {
       outline: 0.03rem solid #4a90e2;
@@ -167,13 +169,22 @@ const baseURL = import.meta.env.BASE_URL
     }
     .photo-row {
       width: 100%;
+
       &.first-row {
         padding-top: 0;
       }
     }
     .photo-item {
       width: 33.33%;
-      background-size: cover;
+      position: relative;
+      aspect-ratio: 16/9;
+      height: 1.5rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
       &:not(:last-child) {
         margin-right: 0rem;
       }

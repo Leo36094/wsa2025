@@ -160,7 +160,16 @@ $swiper-bullet-active-color: #455861;
           width: 100%;
           height: auto;
           outline: 2px solid #fff;
-          // min-height: 500px;
+          position: relative;
+          @include flexCenter;
+          padding-top: 56.25%;
+          img {
+            position: absolute;
+            aspect-ratio: 16 / 9;
+            @include autoCenter;
+            width: 100%;
+            height: 100%;
+          }
         }
 
         &__title {

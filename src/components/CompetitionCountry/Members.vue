@@ -22,6 +22,7 @@
               :flag="country.flag"
               :name="lang === 'en' ? country.nameEn : country.name"
               :link="country.link"
+              :ratio="country.ratio"
             />
           </div>
         </div>
@@ -54,6 +55,7 @@ const countries = Object.entries(COUNTRIES_MAP).map(([code, info]) => ({
   flag: info.flag,
   link: info.link,
   nameEn: info.nameEn,
+  ratio: (info as { ratio: string }).ratio || '3/2',
 }))
 </script>
 

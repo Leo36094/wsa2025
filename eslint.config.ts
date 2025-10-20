@@ -37,4 +37,9 @@ export default defineConfigWithVueTs(
     ],
   },
   skipFormatting,
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    }
+  }
 )

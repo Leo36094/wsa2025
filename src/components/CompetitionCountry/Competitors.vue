@@ -27,6 +27,7 @@
               :name="lang === 'en' ? country.nameEn : country.name"
               :link="country.link"
               :code="country.code"
+              :ratio="country.ratio"
             />
           </div>
         </div>
@@ -53,12 +54,13 @@ const waving = computed(() => {
 })
 
 // Convert to array for easier iteration
-const countries = Object.entries(PARTICIPATING_COUNTRIES).map(([code, info]) => ({
-  code,
+const countries = PARTICIPATING_COUNTRIES.map((info) => ({
+  code: info.code,
   name: info.name,
   nameEn: info.nameEn,
   flag: info.flag,
   link: info.link,
+  ratio: info?.ratio || '3/2'
 }))
 </script>
 

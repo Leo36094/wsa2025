@@ -22,6 +22,7 @@
               :flag="country.flag"
               :name="lang === 'en' ? country.nameEn : country.name"
               :link="country.link"
+              :ratio="country.ratio"
             />
           </div>
         </div>
@@ -38,13 +39,13 @@ import Flag from '@/components/Flag.vue'
 import { COUNTRIES_MAP } from './constants'
 
 const { locale } = useI18n()
-const isMobile = inject('isMobile') as Ref<boolean>
+const isDesktop = inject('isDesktop') as Ref<boolean>
 const lang = computed(() => {
   return locale.value === 'en' ? 'en' : 'zh-TW'
 })
 
 const waving = computed(() => {
-  return !isMobile.value
+  return isDesktop.value
 })
 
 // Convert to array for easier iteration
@@ -54,6 +55,7 @@ const countries = Object.entries(COUNTRIES_MAP).map(([code, info]) => ({
   flag: info.flag,
   link: info.link,
   nameEn: info.nameEn,
+  ratio: (info as { ratio: string }).ratio || '3/2',
 }))
 </script>
 

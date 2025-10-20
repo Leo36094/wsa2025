@@ -7,11 +7,7 @@
         from November 27 to 29, 2025. The event will feature 34 official skills, 5 junior skills,
         and 5 exhibition skills, attracting thousands of experts and competitors from all over Asia.
       </p>
-      <img
-        src="/images/news/news_01.jpg"
-        alt="The 3rd WorldSkills Asia Competition Skills"
-        style="width: 100%"
-      />
+
       <h3>Official Skills (34 skills in total) :</h3>
       <ul>
         <li>Robot System Integration</li>
@@ -76,11 +72,6 @@
       <p>
         第三屆亞洲技能競賽將於2025年11月27日至29日在<strong>臺北南港展覽館</strong>舉行。本次賽事將包含<strong>34項正式職類、5項青少年職類及5項示範職類</strong>，吸引來自亞洲各地的專家與選手參與。
       </p>
-      <img
-        src="/images/news/news_01.jpg"
-        alt="The 3rd WorldSkills Asia Competition Skills"
-        style="width: 100%"
-      />
       <h3>正式職類（共34項）</h3>
       <ul>
         <li>機器人系統整合</li>

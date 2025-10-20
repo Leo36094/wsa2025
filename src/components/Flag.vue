@@ -6,11 +6,13 @@
         <div
           v-for="i in flagWidth"
           :key="i"
-          :class="['flag-img', 'flag-waving', { QA: code === '21' }]"
+          :class="['flag-img', 'flag-waving', { QA: code === 'QA' }]"
           :style="{
             backgroundImage: `url(${bgUrl})`,
             backgroundPosition: `${-(i - 1)}px 0`,
             animationDelay: `${(i - 1) * 4}ms`,
+            aspectRatio: props.ratio ? props.ratio : '3/2',
+            backgroundSize: wavingBackgroundSize
           }"
         />
       </div>
@@ -19,9 +21,10 @@
 
       <div
         v-else
-        :class="['flag-img', 'flag-still', { QA: code === '21' }]"
+        :class="['flag-img', 'flag-still', { QA: code === 'QA' }]"
         :style="{
           backgroundImage: `url(${bgUrl})`,
+          aspectRatio: props.ratio ? props.ratio : '3/2',
         }"
       />
     </div>
@@ -39,6 +42,7 @@ interface Props {
   name: string
   link: string
   code?: string
+  ratio?: string
 }
 
 const props = defineProps<Props>()
@@ -58,6 +62,20 @@ function thrttle(fn: () => void, delay: number) {
     timer = setTimeout(fn, delay)
   }
 }
+
+
+
+const wavingBackgroundSize = computed(() => {
+  // 使用 CSS 變數來處理 RWD，讓 CSS 來決定實際尺寸
+  if (props.code === 'QA') {
+    return 'var(--flag-width) calc(var(--flag-width) * 6 / 25)'
+  } else if (props.ratio) {
+    const [widthRatio, heightRatio] = props.ratio.split('/').map(Number)
+    return `var(--flag-width) calc(var(--flag-width) * ${heightRatio} / ${widthRatio})`
+  } else {
+    return 'var(--flag-width) calc(var(--flag-width) * 2 / 3)'
+  }
+})
 
 const resizeHandler = thrttle(() => {
   if (flagRef.value) {
@@ -81,11 +99,13 @@ onUnmounted(() => {
   @include flexCenter(column);
 }
 .flag {
+  --flag-width: 2.82rem;
   margin: 0 auto;
   cursor: pointer;
-  width: 2.82rem;
-  height: 1.87rem;
+  width: var(--flag-width);
+  height: var(--flag-width);
   @include flexCenter(column);
+  align-items: stretch;
 }
 
 .flag-container {
@@ -93,31 +113,33 @@ onUnmounted(() => {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .flag-img {
-  width: 2.82rem;
-  height: 1.87rem;
-  @include bgCenter(2.82rem 1.87rem);
-  aspect-ratio: 3/2;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  @include bgCenter(var(--flag-width) auto);
   &.QA {
-    // height: 0.73rem;
-    @include bgCenter(2.82rem 0.68rem);
+    @include bgCenter(var(--flag-width) auto);
     aspect-ratio: 25/6;
   }
 }
 .flag-name {
-  margin-top: 0.16rem;
+  margin-top: 0.05rem;
   text-align: center;
   font-size: 0.18rem;
   font-weight: 700;
 }
 
 .flag-waving {
+  transform-origin: bottom center;
   animation: oscill 0.7s ease-in-out infinite alternate;
   position: relative;
   height: 100%;
   width: 1px;
   display: inline-block;
+  margin: 0 auto;
   &.QA {
     height: 0.68rem;
   }
@@ -126,21 +148,21 @@ onUnmounted(() => {
 .flag-still {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   &.QA {
     height: 0.68rem;
-    margin: auto;
   }
 }
 
 @include tablet {
   .flag {
-    width: 2.05rem;
-    min-height: 1.36rem;
+    --flag-width: 2.05rem;
+    width: var(--flag-width);
+    height: var(--flag-width);
     .flag-img {
-      @include bgCenter(2.05rem auto);
-      &.QA {
-        @include bgCenter(2.05rem auto);
-      }
+      width: 100%;
+      height: 100%;
+      @include bgCenter(--flag-width auto);
     }
     .flag-waving.QA {
       height: 0.49rem;
@@ -149,14 +171,13 @@ onUnmounted(() => {
 }
 @include mobile {
   .flag {
-    width: 1.28rem;
-    min-height: 0.85rem;
+    --flag-width: 1.28rem;
+    width: var(--flag-width);
+    height: var(--flag-width);
+    min-height: 1rem;
     .flag-img {
       animation: none;
-      @include bgCenter(1.28rem auto);
-      &.QA {
-        @include bgCenter(1.28rem auto);
-      }
+      @include bgCenter(contain);
     }
     .flag-waving.QA {
       height: 0.31rem;
@@ -164,6 +185,7 @@ onUnmounted(() => {
   }
   .flag-name {
     font-size: 0.16rem;
+    margin-top: 0;
   }
 }
 

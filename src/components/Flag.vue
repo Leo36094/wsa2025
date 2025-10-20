@@ -12,7 +12,7 @@
             backgroundPosition: `${-(i - 1)}px 0`,
             animationDelay: `${(i - 1) * 4}ms`,
             aspectRatio: props.ratio ? props.ratio : '3/2',
-            backgroundSize: wavingBackgroundSize,
+            backgroundSize: wavingBackgroundSize
           }"
         />
       </div>
@@ -25,7 +25,6 @@
         :style="{
           backgroundImage: `url(${bgUrl})`,
           aspectRatio: props.ratio ? props.ratio : '3/2',
-          backgroundSize: wavingBackgroundSize,
         }"
       />
     </div>
@@ -64,11 +63,7 @@ function thrttle(fn: () => void, delay: number) {
   }
 }
 
-const resizeHandler = thrttle(() => {
-  if (flagRef.value) {
-    flagWidth.value = flagRef.value.offsetWidth || 300
-  }
-}, 100)
+
 
 const wavingBackgroundSize = computed(() => {
   // 使用 CSS 變數來處理 RWD，讓 CSS 來決定實際尺寸
@@ -81,6 +76,12 @@ const wavingBackgroundSize = computed(() => {
     return 'var(--flag-width) calc(var(--flag-width) * 2 / 3)'
   }
 })
+
+const resizeHandler = thrttle(() => {
+  if (flagRef.value) {
+    flagWidth.value = flagRef.value.offsetWidth || 300
+  }
+}, 100)
 
 onMounted(() => {
   if (flagRef.value) {
@@ -117,19 +118,15 @@ onUnmounted(() => {
 .flag-img {
   width: 100%;
   height: 100%;
-  // width: 2.82rem;
-  // height: 1.87rem;
-  @include bgCenter(contain);
-  background-position: bottom center;
   margin: auto;
-  // aspect-ratio: 3/2;
-  // &.QA {
-  //   @include bgCenter(2.82rem 0.68rem);
-  //   aspect-ratio: 25/6;
-  // }
+  @include bgCenter(var(--flag-width) auto);
+  &.QA {
+    @include bgCenter(var(--flag-width) auto);
+    aspect-ratio: 25/6;
+  }
 }
 .flag-name {
-  margin-top: 0.16rem;
+  margin-top: 0.05rem;
   text-align: center;
   font-size: 0.18rem;
   font-weight: 700;
@@ -165,11 +162,7 @@ onUnmounted(() => {
     .flag-img {
       width: 100%;
       height: 100%;
-      @include bgCenter(2.05rem auto);
-      background-position: bottom center;
-      &.QA {
-        @include bgCenter(contain);
-      }
+      @include bgCenter(--flag-width auto);
     }
     .flag-waving.QA {
       height: 0.49rem;
@@ -185,10 +178,6 @@ onUnmounted(() => {
     .flag-img {
       animation: none;
       @include bgCenter(contain);
-      background-position: bottom center;
-      &.QA {
-        @include bgCenter(contain);
-      }
     }
     .flag-waving.QA {
       height: 0.31rem;
@@ -196,6 +185,7 @@ onUnmounted(() => {
   }
   .flag-name {
     font-size: 0.16rem;
+    margin-top: 0;
   }
 }
 

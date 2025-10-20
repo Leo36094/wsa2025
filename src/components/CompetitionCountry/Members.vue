@@ -39,13 +39,13 @@ import Flag from '@/components/Flag.vue'
 import { COUNTRIES_MAP } from './constants'
 
 const { locale } = useI18n()
-const isMobile = inject('isMobile') as Ref<boolean>
+const isDesktop = inject('isDesktop') as Ref<boolean>
 const lang = computed(() => {
   return locale.value === 'en' ? 'en' : 'zh-TW'
 })
 
 const waving = computed(() => {
-  return !isMobile.value
+  return isDesktop.value
 })
 
 // Convert to array for easier iteration

@@ -9,7 +9,7 @@
           :aria-label="$t('home.aria_banner_swiper')"
         >
           <SwiperSlide
-            v-for="index in 8"
+            v-for="index in bannerImages.length"
             :key="index"
             class="slide"
             role="group"
@@ -72,11 +72,19 @@ const handleSlideChange = (swiper: SwiperType) => {
   activeIndex.value = swiper.realIndex
 }
 
+const bannerImgWidthPrefx = (path: string) => `${import.meta.env.BASE_URL}images/wsa/${path}`;
+
+const bannerImages = [
+  bannerImgWidthPrefx('homepage_herosection_00.png'),
+  bannerImgWidthPrefx('homepage_herosection_01.jpg'),
+  bannerImgWidthPrefx('homepage_herosection_03.jpg'),
+  bannerImgWidthPrefx('homepage_herosection_04.jpg'),
+  bannerImgWidthPrefx('homepage_herosection_05.jpg'),
+  bannerImgWidthPrefx('homepage_herosection_07.jpg'),
+]
+
 const getImageSrc = (index: number) => {
-  if (index === 0) {
-    return `${import.meta.env.BASE_URL}images/wsa/homepage_herosection_00.png`
-  }
-  return `${import.meta.env.BASE_URL}images/wsa/homepage_herosection_0${index}.jpg`
+  return bannerImages[index]
 }
 </script>
 <style lang="scss" scoped>

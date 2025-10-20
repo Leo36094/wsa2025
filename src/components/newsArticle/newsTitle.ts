@@ -14,7 +14,7 @@ const titles = {
     },
     {
       title: '第三屆亞洲技能競賽職類公布',
-      image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
+      image: `${import.meta.env.BASE_URL}images/news/news_01.png`,
       date: '2025年1月21日',
       id: 1,
     },
@@ -34,7 +34,7 @@ const titles = {
     },
     {
       title: 'The 3<sup>rd </sup>  Worldskills Asia Competition Skills ',
-      image: `${import.meta.env.BASE_URL}images/news/news_01.jpg`,
+      image: `${import.meta.env.BASE_URL}images/news/news_01.png`,
       date: '21 Jan 2025',
       id: 1,
     },

@@ -8,7 +8,7 @@
       <!-- Background Image with Overlay -->
       <div class="background-overlay">
         <img
-          src="/images/media/media_banner.png"
+          :src="imageURL"
           alt="Background"
           class="background-image"
         />
@@ -49,6 +49,7 @@
 
 <script lang="ts" setup>
 // Component for Occupation Introduction section
+const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
 </script>
 
 <style lang="scss" scoped>
@@ -71,13 +72,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
 
     .background-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      filter: brightness(0.6);
     }
   }
 

@@ -71,10 +71,12 @@ const goSkillDetail = (skill: SkillIconEnum) => {
       animation: title-slide-up 0.5s forwards;
     }
     .skill-list {
-      padding: 0 0.8rem 0.72rem 0.8rem;
+      padding: 0 0.32rem 0.72rem 0.32rem;
       display: flex;
-      align-items: center;
+      max-width: 12.8rem;
+      margin: 0 auto;
       flex-wrap: wrap;
+      align-items: flex-start;
       gap: 0.16rem;
       .skill-item {
         cursor: pointer;

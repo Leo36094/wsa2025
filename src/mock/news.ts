@@ -83,7 +83,7 @@ Official Skills (36 skills in total) :
 <li>工業設計技術</li>
 <li>機電整合</li>
 <li>工業控制</li>
-<li>CNC車銑</li>
+<li>CNC車床</li>
 <li>CNC銑床</li>
 <li>西餐烹飪</li>
 <li>美髮</li>
@@ -97,7 +97,7 @@ Official Skills (36 skills in total) :
 <li>電氣裝配</li>
 <li>粉刷技術與乾牆系統</li>
 <li>冷凍空調</li>
-<li>數位建築BIM</li>
+<li>數位建設BIM</li>
 <li>家具木工</li>
 <li>門窗木工</li>
 <li>資訊網路布建</li>

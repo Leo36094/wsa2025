@@ -2855,6 +2855,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/youtube@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "@types/youtube@npm:0.1.2"
+  checksum: 10c0/d6bd93983f0a5d00730082a2b2963c812849bcff1bc9b482b1ad3fc2d23fd36be384fb4e921cb8448a315892e5f9c28138e6136150cf6b746bafb99acc95b6b4
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:8.21.0":
   version: 8.21.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.21.0"
@@ -9205,6 +9212,7 @@ __metadata:
     "@types/jsdom": "npm:^21.1.7"
     "@types/locomotive-scroll": "npm:^4.1.4"
     "@types/node": "npm:^22.13.0"
+    "@types/youtube": "npm:^0.1.2"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     "@vitejs/plugin-vue-jsx": "npm:^4.1.1"
     "@vitest/eslint-plugin": "npm:1.1.25"

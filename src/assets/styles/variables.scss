@@ -14,6 +14,9 @@ $z-index-map: (
   topbar: 15,
   sidePanel: 15,
   modal: 20,
+  dialog-overlay: 9999,
+  dialog-content: 10000,
+  dialog-close: 10001,
 );
 
 $main-bg: #18475b;

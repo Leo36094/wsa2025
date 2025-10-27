@@ -140,6 +140,7 @@ onUnmounted(() => {
   width: 1px;
   display: inline-block;
   margin: 0 auto;
+  transform: translateY(25%);
   &.QA {
     height: 0.68rem;
   }
@@ -191,10 +192,10 @@ onUnmounted(() => {
 
 @keyframes oscill {
   0% {
-    transform: translateY(5%);
+    transform: translateY(calc(25% + 5%));
   }
   100% {
-    transform: translateY(-5%);
+    transform: translateY(calc(25% - 5%));
   }
 }
 </style>

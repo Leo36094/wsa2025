@@ -1,6 +1,6 @@
 // Countries map with Chinese and English names, sorted by English names
 export const COUNTRIES_MAP = {
-  AM: { name: '亞美尼亞', nameEn: 'Armenia', flag: 'AM_flag', link: 'https://www.facebook.com/WorldSkillsArmenia/', ratio: '3 / 2' },
+  AM: { name: '亞美尼亞', nameEn: 'Armenia', flag: 'AM_flag', link: 'https://www.facebook.com/WorldSkillsArmenia/', ratio: '2 / 1' },
   AZ: { name: '亞塞拜然', nameEn: 'Azerbaijan', flag: 'AZ_flag', link: 'https://www.instagram.com/worldskillsazerbaijan/', ratio: '2 / 1' },
   BH: { name: '巴林', nameEn: 'Kingdom of Bahrain', flag: 'BH_flag', link: 'https://www.facebook.com/skillsbahrain', ratio: '5 / 3' },
   BD: { name: '孟加拉', nameEn: 'Bangladesh', flag: 'BD_flag', link: 'https://www.skillsportal.gov.bd/#/', ratio: '5 / 3' },

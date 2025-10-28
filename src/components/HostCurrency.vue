@@ -202,18 +202,12 @@ $border-color: #18475b;
     overflow: hidden;
     .row {
       display: flex;
-      &:not(:last-child) {
-        border-bottom: 0.01rem solid $border-color;
-      }
       .col {
         padding: 0.24rem;
         flex: 1;
         min-height: 1.6rem;
         background-color: #fff;
         @include flexCenter;
-        &:not(:last-child) {
-          border-right: 0.01rem solid $border-color;
-        }
       }
     }
   }

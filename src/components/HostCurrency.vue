@@ -261,21 +261,11 @@ $border-color: #18475b;
       .currency-table.currency-table--mb {
         .row {
           flex-wrap: wrap;
+          border: none;
         }
-        .col {
-          border-right: none;
+        .col, .col:not(:last-child) {
+          border: none;
         }
-      }
-    }
-    .bill-content .col {
-      &:not(:nth-child(n + 5)) {
-        border-right: none;
-        border-bottom: 1px solid #000;
-      }
-    }
-    .coin-content .col {
-      &:not(:nth-child(n + 4)) {
-        border-bottom: 1px solid #000;
       }
     }
   }

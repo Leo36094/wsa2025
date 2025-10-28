@@ -2,8 +2,8 @@
   <div class="section-forum" aria-labelledby="forum-title" data-aos="fade-up">
     <BaseTitle class="section-forum__title" :title="$t('involved.forum_title')" />
     <div class="image-group">
-      <img src="/images/getInvolved/forum/forum_01_1008.jpg" alt="forum" />
-      <img src="/images/getInvolved/forum/forum_02_1008.jpg" alt="forum" />
+      <img src="/images/getInvolved/forum/forum_01_1028.jpg" alt="forum" />
+      <img src="/images/getInvolved/forum/forum_02_1028.jpg" alt="forum" />
     </div>
     <div class="section-forum__desc">
       <p>

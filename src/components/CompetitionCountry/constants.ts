@@ -27,7 +27,7 @@ export const COUNTRIES_MAP = {
   TH: { name: '泰國', nameEn: 'Thailand', flag: 'TH_flag', link: 'https://www.facebook.com/worldskillsthailand/' },
   TL: { name: '東帝汶', nameEn: 'Timor-Leste', flag: 'TL_flag', link: 'https://indmo.gov.tl/east-timor-promotional-skills/', ratio: '2 / 1' },
   AE: { name: '阿拉伯聯合大公國', nameEn: 'United Arab Emirates', flag: 'AE_flag', link: 'https://www.emiratesskills.ae/en/Pages/default.aspx', ratio: '2 / 1' },
-  UZ: { name: '烏茲別克斯坦', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
+  UZ: { name: '烏茲別克', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
   YE: { name: '葉門', nameEn: 'Yemen', flag: 'YE_flag', link: 'https://reurl.cc/2Qam46' },
 }
 
@@ -63,6 +63,6 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'TL', name: '東帝汶', nameEn: 'Timor-Leste', flag: 'TL_flag', link: 'https://indmo.gov.tl/east-timor-promotional-skills/', ratio: '2 / 1' },
   { code: 'AE', name: '阿拉伯聯合大公國', nameEn: 'United Arab Emirates', flag: 'AE_flag', link: 'https://www.emiratesskills.ae/en/Pages/default.aspx', ratio: '2 / 1' },
   { code: 'UK', name: '英國', nameEn: 'United Kingdom', flag: 'UK_flag', link: 'https://www.worldskillsuk.org/', ratio: '2 / 1' },
-  { code: 'UZ', name: '烏茲別克斯坦', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
+  { code: 'UZ', name: '烏茲別克', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
   { code: 'VN', name: '越南', nameEn: 'Vietnam', flag: 'VN_flag', link: 'https://english.molisa.gov.vn/topic/242157' },
 ]

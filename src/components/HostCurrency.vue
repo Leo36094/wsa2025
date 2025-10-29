@@ -14,8 +14,8 @@
       </aside>
       <div class="column right-pansel">
         <!-- 右邊的內容 -->
-        <section class="content" aria-label="Coins">
-          <div v-if="!isMobile" class="currency-table">
+        <section class="content coin-content" aria-label="Coins">
+          <div v-if="isDesktop" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencyCoin :label="$t('host.coin50')" :imgs="[coinImages[4]]" />
@@ -56,8 +56,8 @@
             </div>
           </div>
         </section>
-        <section ref="lastCurrency" class="content" aria-label="Bills">
-          <div v-if="!isMobile" class="currency-table">
+        <section ref="lastCurrency" class="content bill-content" aria-label="Bills">
+          <div v-if="isDesktop" class="currency-table">
             <div class="row">
               <div class="col">
                 <HostCurrencBill :label="$t('host.banknote2000')" :img="billImages[4]" />
@@ -113,7 +113,6 @@ import HostCurrencBill from './HostCurrencBill.vue'
 const lastCurrency = ref<HTMLElement | null>(null)
 const cancelSticky = ref(false)
 const isDesktop = inject<Ref<boolean>>('isDesktop')
-const isMobile = inject<Ref<boolean>>('isMobile')
 
 const coinImages = [
   `${import.meta.env.BASE_URL}images/wsa/host_section02_1.png`,
@@ -203,18 +202,12 @@ $border-color: #18475b;
     overflow: hidden;
     .row {
       display: flex;
-      &:not(:last-child) {
-        border-bottom: 0.01rem solid $border-color;
-      }
       .col {
         padding: 0.24rem;
         flex: 1;
         min-height: 1.6rem;
         background-color: #fff;
         @include flexCenter;
-        &:not(:last-child) {
-          border-right: 0.01rem solid $border-color;
-        }
       }
     }
   }
@@ -258,6 +251,17 @@ $border-color: #18475b;
         margin-bottom: 0.32rem;
       }
     }
+    .content {
+      .currency-table.currency-table--mb {
+        .row {
+          flex-wrap: wrap;
+          border: none;
+        }
+        .col, .col:not(:last-child) {
+          border: none;
+        }
+      }
+    }
   }
 }
 @include mobile {
@@ -272,8 +276,11 @@ $border-color: #18475b;
         .row {
           flex-direction: column;
           .col {
-            padding: 0.16rem;
-            border-bottom: 1px solid #000;
+            padding: 0rem;
+            border-right: none;
+            &:not(:last-child) {
+              border-bottom: 1px solid #000;
+            }
           }
         }
       }

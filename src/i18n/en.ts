@@ -12,6 +12,7 @@ export default {
     wda_logo: 'Workforce Development Agency Logo',
     title: 'WorldSkills Asia Taipei 2025',
     media: 'Media',
+    regulation: 'Media Accreditation and Guidelines',
   },
   page_tabs: {
     page_tab_aria_label: 'Page tabs',
@@ -541,5 +542,37 @@ Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swi
     vod_title: 'Competition Video',
     vod_coming_soon: 'Coming Soon',
     vod_coming_soon_subtitle: 'Competition videos will be available soon',
+    regulation_title: 'Media Accreditation Notice – WorldSkills Asia Taipei 2025',
+    regulation_desc: 'To ensure the proper conduct of the competition and protect the rights of competitors, all media personnel wishing to conduct interviews or photography during the 2025 WorldSkills Asia Competition must apply for a Media Identification Badge.',
+    regulation_application_title: 'Application Period & Procedure',
+    regulation_application_online: 'Online Application',
+    regulation_application_online_desc: 'Media personnel can download and sign the “WorldSkills Asia Taipei 2025 Media Application and Compliance Agreement” from the official website and complete the online application from now until November 15, 2025.',
+    regulation_application_onsite: 'On-site Application',
+    regulation_application_onsite_desc: 'Media personnel who have not applied in advance may apply in person at the Media Center, 4th Floor, Hall 2, Nangang Exhibition Center, during the competition period (November 26–30, 2025, 08:00–18:00).',
+    regulation_onsite_guideline_title: 'On-site Guidelines',
+    regulation_onsite_guideline_desc: `
+    <ul>
+    <li>Media badges and vests must be worn at all times when entering the venue.</li>
+    <li>All personnel must comply with safety and photography regulations (e.g., no flash photography, no entry into competition areas) to maintain fairness and order.</li>
+    <li>Please carefully review the “WorldSkills Asia Taipei 2025 - Media Guidelines” prior to application to understand interview scope, equipment usage, and image authorization.</li>
+    </ul>
+    `,
+    regulation_brief_title: 'WorldSkills Asia Taipei 2025 Media Briefing',
+    regulation_brief_desc: `
+    <ul>
+    <li>The organizer will hold a Media Guidelines Briefing at 1:30 PM on the afternoon of November 26, 2025, during the opening ceremony, introducing overall competition activities and media procedures. Media are encouraged to attend.</li>
+    <li>Detailed information will be announced on the official website after confirmation.</li>
+    </ul>
+    `,
+    regulation_contact_title: 'Contact Information',
+    regulation_contact_name1: 'Ms. Chuang',
+    regulation_contact_info1: `Tel: <a href="tel:+886-2-8995-6007">+886-2-8995-6007</a> {'|'} Email: <a href="mailto:wanyu_chuang{'@'}wda.gov.tw">wanyu_chuang{'@'}wda.gov.tw</a>`,
+    regulation_contact_department1: ' Workforce Development Agency, Ministry of Labor',
+    regulation_contact_name2: 'Ms. Li',
+    regulation_contact_info2: `Tel: <a href="tel:+886-2-2366-0812">+886-2-2366-0812</a> ext. 378 {'|'} Email: <a href="mailto:yiling_li{'@'}nasme.org.tw">yiling_li{'@'}nasme.org.tw</a>`,
+    regulation_contact_department2: 'National Association of Small and Medium Enterprises',
+    regulation_attachment_title: '2025 WorldSkills Asia Taipei – Media Regulations',
+    regulation_application_form_title: 'Media Badge Application Form Upload',
+    regulation_application_form_link: ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">File Upload Here</a>',
   }
 }

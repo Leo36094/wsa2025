@@ -20,6 +20,7 @@ import MediaThemeAd from '@/components/Media/ThemeAd.vue'
 import MediaOccupationIntro from '@/components/Media/OccupationIntro.vue'
 import MediaLiveStream from '@/components/Media/LiveStream.vue'
 import MediaVOD from '@/components/Media/VOD.vue'
+import MediaRegulation from '@/components/Media/Regulation.vue'
 import { MEDIA_SECTION_ENUM, type MediaSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
 
@@ -35,6 +36,7 @@ const tabs = computed(() =>
 )
 
 const components: Record<MediaSectionValue, Component> = {
+  [MEDIA_SECTION_ENUM.Regulation]: MediaRegulation,
   [MEDIA_SECTION_ENUM.ThemeAd]: MediaThemeAd,
   [MEDIA_SECTION_ENUM.OccupationIntro]: MediaOccupationIntro,
   [MEDIA_SECTION_ENUM.LiveStream]: MediaLiveStream,

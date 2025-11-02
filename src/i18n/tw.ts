@@ -5,7 +5,7 @@ export default {
     skill: '競賽職類',
     involved: '參與活動',
     news: '最新消息',
-    media: '影音專區',
+    media: '媒體專區',
     lang_en: '英文',
     lang_tw: '繁體中文',
     switch_to_lang: '切換到 {lang} 語言',
@@ -493,7 +493,7 @@ export default {
     aria_label_group: 'Swiper Group',
   },
   media: {
-    title: '影音專區',
+    title: '媒體專區',
     theme_ad_title: '主題廣告',
     theme_ad_coming_soon: '敬請期待',
     theme_ad_coming_soon_subtitle: '主題廣告內容即將推出',

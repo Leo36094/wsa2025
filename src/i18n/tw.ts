@@ -536,7 +536,7 @@ export default {
     regulation_contact_title: '聯絡窗口',
     regulation_contact_name1: '莊小姐',
     regulation_contact_info1: `電話：<a href="tel:+886-2-8995-6007">+886-2-8995-6007</a> {'|'} Email: <a href="mailto:wanyu_chuang{'@'}wda.gov.tw">wanyu_chuang{'@'}wda.gov.tw</a>`,
-    regulation_contact_department1: '勞動力發展署',
+    regulation_contact_department1: '勞動部勞動力發展署',
     regulation_contact_name2: '李小姐',
     regulation_contact_info2: `電話：<a href="tel:+886-2-2366-0812">+886-2-2366-0812</a> 分機378 {'|'} Email: <a href="mailto:yiling_li{'@'}nasme.org.tw">yiling_li{'@'}nasme.org.tw</a>`,
     regulation_contact_department2: '全國中小企業總會',

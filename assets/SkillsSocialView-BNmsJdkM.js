@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-BoAKmfGD.js";import{d as a,c as o,u as r,o as i}from"./index-1xl8X5r4.js";const p=a({__name:"SkillsSocialView",setup(s){return(l,t)=>(i(),o(e,{"view-name":r(n).Social},null,8,["view-name"]))}});export{p as default};

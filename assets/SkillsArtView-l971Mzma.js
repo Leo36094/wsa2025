@@ -1,1 +1,0 @@
-import{S as e,I as n}from"./SkillsInnerViewTemplate-DPIstN8p.js";import{d as r,c as a,u as t,o}from"./index-mLjVQkyu.js";const p=r({__name:"SkillsArtView",setup(s){return(i,m)=>(o(),a(e,{"view-name":t(n).Art},null,8,["view-name"]))}});export{p as default};

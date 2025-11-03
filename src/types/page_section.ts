@@ -22,6 +22,7 @@ export const SECTION_ID = {
   OccupationIntro: 'occupation_intro',
   LiveStream: 'live_stream',
   VOD: 'vod',
+  Regulation: 'regulation',
 } as const;
 
 export const HOST_SECTION_ENUM = {
@@ -62,6 +63,7 @@ export type InvolvedSection = keyof typeof INVOLVED_SECTION_ENUM;
 export type InvolvedSectionValue = typeof INVOLVED_SECTION_ENUM[keyof typeof INVOLVED_SECTION_ENUM];
 
 export const MEDIA_SECTION_ENUM = {
+  Regulation: `#${SECTION_ID.Regulation}`,
   ThemeAd: `#${SECTION_ID.ThemeAd}`,
   OccupationIntro: `#${SECTION_ID.OccupationIntro}`,
   LiveStream: `#${SECTION_ID.LiveStream}`,

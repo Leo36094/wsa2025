@@ -5,7 +5,7 @@ export default {
     skill: '競賽職類',
     involved: '參與活動',
     news: '最新消息',
-    media: '影音專區',
+    media: '媒體專區',
     lang_en: '英文',
     lang_tw: '繁體中文',
     switch_to_lang: '切換到 {lang} 語言',
@@ -33,10 +33,11 @@ export default {
     involved_tab_03: '論壇',
     involved_tab_04: '參加/團體導覽資訊',
     involved_tab_05: '入境須知',
-    media_tab_01: '主題廣告',
-    media_tab_02: '職類介紹',
-    media_tab_03: '開閉幕直播',
-    media_tab_04: '競賽影片',
+    media_tab_01: '媒體申請及規範',
+    media_tab_02: '主題廣告',
+    media_tab_03: '職類介紹',
+    media_tab_04: '開閉幕直播',
+    media_tab_05: '競賽影片',
   },
   footer: {
     address: '展館地圖',
@@ -480,19 +481,19 @@ export default {
     title: '找不到頁面',
     description: '您所尋找的頁面不存在。',
     backToHome: '回到首頁',
-    suggestedLinks: '您可能想要瀏覽'
+    suggestedLinks: '您可能想要瀏覽',
   },
   nav: {
     competition: '關於競賽',
     skills: '競賽職類',
-    news: '最新消息'
+    news: '最新消息',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
     aria_label_group: 'Swiper Group',
   },
   media: {
-    title: '影音專區',
+    title: '媒體專區',
     theme_ad_title: '主題廣告',
     theme_ad_coming_soon: '敬請期待',
     theme_ad_coming_soon_subtitle: '主題廣告內容即將推出',
@@ -507,5 +508,40 @@ export default {
     vod_title: '競賽影片',
     vod_coming_soon: '敬請期待',
     vod_coming_soon_subtitle: '競賽影片即將推出',
-  }
+    regulation_title: '2025亞洲技能競賽 媒體識別證申請須知',
+    regulation_desc:
+      '為維護競賽秩序與選手權益，所有媒體人員欲於2025亞洲技能競賽期間進行採訪或拍攝，均須申請媒體識別證。',
+    regulation_application_title: '申請期間與方式',
+    regulation_application_online: '線上申請',
+    regulation_application_online_desc:
+      '媒體人員可自即日起至11月15日，至官方網站下載並簽署「2025亞洲技能競賽媒體申請暨規範同意書」，完成線上申請。',
+    regulation_application_onsite: '現場申請',
+    regulation_application_onsite_desc:
+      '未事前申請者，可於競賽期間 11月26日至30日，08:00–18:00，至 南港展覽館2館4樓媒體中心 辦理。',
+    regulation_onsite_guideline_title: '會場規範',
+    regulation_onsite_guideline_desc: `
+    <ul>
+    <li>進入會場時，請全程佩戴媒體證與媒體背心。</li>
+    <li>遵守各項安全及拍攝規範（如禁止使用閃光燈、不得進入競賽區等），以維持賽事公平與現場秩序。</li>
+    <li>申請前請詳閱 〈2025亞洲技能競賽媒體規範〉，瞭解採訪範圍、器材使用及影像授權等事項。</li>
+    </ul>
+    `,
+    regulation_brief_title: '2025亞洲技能競賽媒體規範說明會',
+    regulation_brief_desc: `
+    <ul>
+    <li>主辦單位預計於 11月26日開幕典禮當日下午 1:30 舉辦2025亞洲技能競賽媒體規範說明會，介紹亞洲賽整體活動與媒體作業須知，歡迎媒體朋友踴躍參加。</li>
+    <li>詳細資訊將於核定後公告於官方網站。</li>
+    </ul>
+    `,
+    regulation_contact_title: '聯絡窗口',
+    regulation_contact_name1: '莊小姐',
+    regulation_contact_info1: `電話：<a href="tel:+886-2-8995-6007">+886-2-8995-6007</a> {'|'} Email: <a href="mailto:wanyu_chuang{'@'}wda.gov.tw">wanyu_chuang{'@'}wda.gov.tw</a>`,
+    regulation_contact_department1: '勞動部勞動力發展署',
+    regulation_contact_name2: '李小姐',
+    regulation_contact_info2: `電話：<a href="tel:+886-2-2366-0812">+886-2-2366-0812</a> 分機378 {'|'} Email: <a href="mailto:yiling_li{'@'}nasme.org.tw">yiling_li{'@'}nasme.org.tw</a>`,
+    regulation_contact_department2: '全國中小企業總會',
+    regulation_attachment_title: '2025亞洲技能競賽媒體規範',
+    regulation_application_form_title: '2025亞洲技能競賽媒體識別證申請表',
+    regulation_application_form_link: ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">檔案上傳位置</a>',
+  },
 }

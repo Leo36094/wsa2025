@@ -6,8 +6,11 @@
       :active-tab="activeTab"
       @update:active-tab="handleActiveTabChange"
     />
-    <div class="section-container">
+    <div class="section-container" v-if="activeTab !== INVOLVED_SECTION_ENUM.Try">
       <component :is="components[activeTab as InvolvedSectionValue]" />
+    </div>
+    <div class="section-container--try" v-else>
+      <GetInvolvedTry />
     </div>
   </div>
 </template>
@@ -21,7 +24,7 @@ import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
 import GetInvolvedTour from '@/components/GetInvolvedTour.vue'
 import GetInvolvedNotice from '@/components/GetInvolvedNotice.vue'
 import GetInvolvedSponsorship from '@/components/GetInvolvedSponsorship.vue'
-
+import GetInvolvedTry from '@/components/GetInvolvedTry.vue'
 import useHashTabChange from '@/composables/useHashTabChange'
 
 const { t } = useI18n()
@@ -47,6 +50,10 @@ const tabs = computed(() => [
     label: t('page_tabs.involved_tab_05'),
     value: INVOLVED_SECTION_ENUM.Notice,
   },
+  {
+    label: t('page_tabs.involved_tab_06'),
+    value: INVOLVED_SECTION_ENUM.Try,
+  },
 ])
 
 const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'get-involved')
@@ -57,6 +64,7 @@ const components: Record<InvolvedSectionValue, Component> = {
   [INVOLVED_SECTION_ENUM.Forum]: GetInvolvedForum,
   [INVOLVED_SECTION_ENUM.Tourguide]: GetInvolvedTour,
   [INVOLVED_SECTION_ENUM.Notice]: GetInvolvedNotice,
+  [INVOLVED_SECTION_ENUM.Try]: GetInvolvedTry,
 }
 </script>
 
@@ -72,7 +80,7 @@ const components: Record<InvolvedSectionValue, Component> = {
 
 <style lang="scss" scoped>
 .get-involved {
-  padding-top: calc(0.76rem + 1.16rem + 0.3rem);
+  padding-top: calc(0.76rem + 0.55rem + 0.3rem);
   padding-bottom: 1.4rem;
   background-color: #fff;
   &__title {
@@ -88,7 +96,7 @@ const components: Record<InvolvedSectionValue, Component> = {
   &__tab {
     position: fixed;
     top: 0.76rem;
-    height: 1.44rem;
+    height: auto;
     background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -108,11 +116,30 @@ const components: Record<InvolvedSectionValue, Component> = {
     width: 12rem;
     margin: 0 auto;
   }
+  .section-container--try {
+    @include flexCenter(column);
+    width: 14.4rem;
+    margin: 0 auto;
+    .club-decoration {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      @include bgCenter(contain);
+      background-image: url('/images/club_empty_green.png');
+      width: 3.5rem;
+      height: 3.5rem;
+      animation: rotate 10s linear infinite;
+    }
+  }
 }
 @include tablet {
   .get-involved {
+    padding-top: calc(0.76rem + 0.8rem);
     .section-container {
       width: 6.64rem;
+    }
+    .section-container--try {
+      width: 100%;
     }
   }
 }

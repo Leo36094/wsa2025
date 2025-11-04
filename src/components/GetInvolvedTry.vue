@@ -37,17 +37,17 @@ const bannerTextList = ['TRY', 'A', 'SKILL']
 const galleryData = [
   {
     id: 1,
-    src: `${import.meta.env.BASE_URL}/images/host/trySkill/try a skill 1.jpg`,
+    src: `${import.meta.env.BASE_URL}images/host/trySkill/try a skill 1.jpg`,
     alt: 'Try a skill 1',
   },
   {
     id: 2,
-    src: `${import.meta.env.BASE_URL}/images/host/trySkill/try a skill 2.jpg`,
+    src: `${import.meta.env.BASE_URL}images/host/trySkill/try a skill 2.jpg`,
     alt: 'Try a skill 2',
   },
   {
     id: 3,
-    src: `${import.meta.env.BASE_URL}/images/host/trySkill/try a skill 3.jpg`,
+    src: `${import.meta.env.BASE_URL}images/host/trySkill/try a skill 3.jpg`,
     alt: 'Try a skill 3',
   },
 ]

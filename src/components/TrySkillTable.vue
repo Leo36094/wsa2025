@@ -164,62 +164,8 @@ const tableData = computed(() => {
     padding: 0rem;
   }
 
-  .table-container {
-    height: auto;
-    background: transparent;
-    box-shadow: none;
-  }
-
   .try-skill-table {
-    display: block;
     font-size: 0.12rem;
-
-    thead {
-      display: none; // Hide headers on mobile
-    }
-
-    tbody {
-      display: block;
-
-      tr {
-        display: block;
-        margin-bottom: 0.16rem;
-        border: 0.02rem solid rgba(200, 225, 75, 0.3);
-        border-radius: 0.08rem;
-        padding: 0.16rem;
-      }
-
-      td {
-        display: block;
-        text-align: left;
-        padding: 0.08rem 0;
-        border: none;
-
-        &:before {
-          content: attr(data-label);
-          font-weight: 700;
-          display: inline-block;
-          width: 1rem;
-          color: #18475b;
-        }
-
-        &:first-child {
-          text-align: left;
-          font-size: 0.14rem;
-          font-weight: 700;
-          color: #18475b;
-          margin-bottom: 0.08rem;
-          padding-bottom: 0.08rem;
-          border-bottom: 0.02rem solid #c8e14b;
-
-          &:before {
-            width: auto;
-            margin-right: 0.04rem;
-          }
-        }
-      }
-    }
   }
 }
 </style>
-

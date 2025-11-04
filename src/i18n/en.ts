@@ -231,7 +231,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
   skills: {
     category_image: 'Skill Image {index}',
     aria_label_skills_navigation: 'Skills Navigation',
-    skill_category_title: 'Skills',
+    skill_category_title: 'Skill Categories',
     category_manufacturing: 'Manufacturing and Engineering Technology',
     category_construction: 'Construction and Building Technology',
     category_it: 'Information and Communication Technology',

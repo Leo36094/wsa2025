@@ -2,7 +2,7 @@
   <SelectRoot :value="selectedValue" @update:model-value="handleClick">
     <SelectTrigger class="SelectTrigger" aria-label="Skill Dropdown">
       <SelectValue :placeholder="props.placeholder" />
-      <IconSelectArrow />
+      <IconSelectArrow class="select-arrow-icon" />
     </SelectTrigger>
 
     <SelectPortal>
@@ -59,4 +59,9 @@ const handleClick = (value: string) => {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.select-arrow-icon--open {
+  transform: rotate(180deg);
+}
+
+</style>

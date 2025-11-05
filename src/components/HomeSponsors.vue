@@ -16,6 +16,7 @@
           :key="sponsor.name"
           tabindex="0"
           :aria-label="`${$t('home.sponsors_title')} ${index + 1}`"
+          @click="goSponsorPage"
         >
           <img
             :src="sponsor.image"
@@ -58,6 +59,7 @@
 import { computed } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { A11y, FreeMode } from 'swiper/modules'
+import { useRouter } from 'vue-router'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 
@@ -74,6 +76,8 @@ const swiperConfig = {
   modules: [FreeMode, A11y],
 }
 
+const router = useRouter()
+
 // Generate sponsor image paths using BASE_URL
 const sponsors = computed(() => {
   const sponsorImages = []
@@ -86,6 +90,11 @@ const sponsors = computed(() => {
   }
   return sponsorImages
 })
+
+const goSponsorPage = () => {
+  router.push('/get-involved/#sponsorship')
+}
+
 </script>
 
 <style lang="scss" scoped>

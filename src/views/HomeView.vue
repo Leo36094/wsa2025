@@ -5,6 +5,7 @@
     <HomeGallery />
     <HomeQuickFact />
     <HomeNews />
+    <HomeSponsors />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import HomeGallery from '@/components/HomeGallery.vue'
 import HomeNews from '@/components/HomeNews.vue'
 import HomeCountdown from '@/components/HomeCountdown.vue'
 import HomeQuickFact from '@/components/HomeQuickFact.vue'
+import HomeSponsors from '@/components/HomeSponsors.vue'
 </script>
 <style lang="scss" scoped>
 .home {

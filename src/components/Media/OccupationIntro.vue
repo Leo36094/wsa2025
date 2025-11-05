@@ -5,8 +5,11 @@
     :aria-labelledby="`${$t('media.occupation_intro_title')}`"
   >
     <div class="occupation-intro-container">
-      <!-- Background Image with Overlay -->
-      <div class="background-overlay">
+      <div class="coming-soon-container">
+        <h2 class="coming-soon-title">{{ $t('media.occupation_intro_coming_soon') }}</h2>
+        <p class="coming-soon-subtitle">{{ $t('media.occupation_intro_coming_soon_subtitle') }}</p>
+      </div>
+      <!-- <div class="background-overlay">
         <img
           :src="imageURL"
           alt="Background"
@@ -14,7 +17,7 @@
         />
       </div>
 
-      <!-- Content -->
+
       <div class="content">
         <h2 class="title">{{ $t('media.occupation_intro_title') }}</h2>
 
@@ -42,19 +45,42 @@
             />
           </svg>
         </a>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 // Component for Occupation Introduction section
-const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
+// const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
 </script>
 
 <style lang="scss" scoped>
 .media-occupation-intro {
   width: 100%;
+  // Coming Soon Styles
+  .coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.2rem; // 40px 20px
+    text-align: center;
+    min-height: 50vh;
+  }
+
+  .coming-soon-title {
+    font-size: 0.32rem; // 32px
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.16rem; // 16px
+  }
+
+  .coming-soon-subtitle {
+    font-size: 0.18rem; // 18px
+    color: #666;
+    opacity: 0.8;
+  }
 
   .occupation-intro-container {
     position: relative;
@@ -94,7 +120,7 @@ const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
   .title {
     font-size: 0.28rem; // 28px
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     line-height: 1;
   }
@@ -106,12 +132,12 @@ const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
     gap: 0.16rem; // 16px
     padding: 0 0.24rem; // 0 24px
     height: 0.44rem; // 44px
-    background-color: #C8E14B;
-    border: 1px solid #101E24;
+    background-color: #c8e14b;
+    border: 1px solid #101e24;
     border-radius: 0.08rem; // 8px
     font-size: 0.16rem; // 16px
     font-weight: 400;
-    color: #101E24;
+    color: #101e24;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;

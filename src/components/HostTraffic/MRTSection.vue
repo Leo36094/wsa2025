@@ -24,25 +24,16 @@
           </Text>
         </li>
       </ul>
-      <div class="modal-trigger" @click="toggleModal(true)">
+      <div class="modal-trigger" @click="show">
         <Text tag="p" variant="p" align="left">
           {{ data.modal.name }}
         </Text>
-        <Teleport to="body">
-          <div v-if="showModal" class="modal">
-            <div class="modal-background" @click="showModal = false"></div>
-            <div class="modal-content">
-              <div class="close-button" @click="showModal = false"></div>
-              <img
-                class="modal-image-container"
-                :src="data.modal.image"
-                :alt="data.modal.name"
-              />
-              <div class="click-to-close"></div>
-            </div>
-          </div>
-        </Teleport>
       </div>
+      <vue-easy-lightbox
+        :visible="visibleRef"
+        :imgs="imgsRef"
+        @hide="onHide"
+      />
     </div>
     <div class="content-section">
       <Text tag="h3" variant="h3" align="left">
@@ -95,8 +86,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useEasyLightbox } from 'vue-easy-lightbox'
 
 import HostTrafficInfoBlock from '@/components/HostTraffic/InfoBlock.vue'
 import Text from '@/components/HostTraffic/Text.vue'
@@ -232,10 +224,22 @@ const data = computed(() => {
   return locale.value === 'en' ? MRTBlockEn : MRTBlock;
 });
 
-const showModal = ref(false)
-const toggleModal = (show: boolean) => {
-  showModal.value = show
-}
+const imgSrc = computed(() => data.value.modal.image)
+
+const {
+  show,
+  onHide,
+  visibleRef,
+  imgsRef
+} = useEasyLightbox({
+  imgs: imgSrc.value,
+  initIndex: 0
+})
+
+// Update image source when language changes
+watch(imgSrc, (newSrc) => {
+  imgsRef.value = newSrc
+})
 </script>
 
 <style lang="scss" scoped>
@@ -325,82 +329,6 @@ const toggleModal = (show: boolean) => {
             text-align: center;
           }
         }
-      }
-    }
-  }
-}
-</style>
-<style lang="scss" scoped>
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 200;
-  @include flexCenter;
-  .modal-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-  }
-  .modal-content {
-    position: relative;
-    width: 12.8rem;
-    height: 100vh;
-    @include flexCenter;
-    background-color: #fff;
-    border-radius: 0.1rem;
-    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.1);
-    z-index: 15;
-    .close-button {
-      position: absolute;
-      top: 0.2rem;
-      right: 0.2rem;
-      width: 0.24rem;
-      height: 0.24rem;
-      &::after {
-        cursor: pointer;
-        content: '\00d7'; /* This will render the 'X' */
-        position: absolute;
-        top: 0.2rem;
-        right: 0.05rem;
-        font-size: 0.4rem;
-        line-height: 0.24rem;
-        color: #000;
-      }
-    }
-    .modal-image-container {
-      width: 100%;
-      height: 90%;
-      object-fit: contain;
-    }
-  }
-}
-@include tablet {
-  .modal {
-    .modal-content {
-      width: 6.56rem;
-      height: 5.4rem;
-      .close-button {
-        right: 0.24rem;
-      }
-    }
-  }
-}
-@include mobile {
-  .modal {
-    .modal-content {
-      width: 100%;
-      height: 5rem;
-      padding: 0.16rem;
-      .close-button {
-        right: 0.08rem;
-        top: 2%;
       }
     }
   }

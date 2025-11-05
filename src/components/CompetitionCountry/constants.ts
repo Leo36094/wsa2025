@@ -65,5 +65,5 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'AE', name: '阿拉伯聯合大公國', nameEn: 'United Arab Emirates', flag: 'AE_flag', link: 'https://www.emiratesskills.ae/en/Pages/default.aspx', ratio: '2 / 1' },
   { code: 'UK', name: '英國', nameEn: 'United Kingdom', flag: 'UK_flag', link: 'https://www.worldskillsuk.org/', ratio: '2 / 1' },
   { code: 'UZ', name: '烏茲別克', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
-  { code: 'VN', name: '越南', nameEn: 'Vietnam', flag: 'VN_flag', link: 'https://english.molisa.gov.vn/topic/242157' },
+  // { code: 'VN', name: '越南', nameEn: 'Vietnam', flag: 'VN_flag', link: 'https://english.molisa.gov.vn/topic/242157' },
 ]

@@ -1,0 +1,1 @@
+import{S as e,I as n}from"./SkillsInnerViewTemplate-CVZmJv4G.js";import{d as s,c as a,u as i,o}from"./index-DLj8cLpg.js";const p=s({__name:"SkillsLogisticView",setup(r){return(t,c)=>(o(),a(e,{"view-name":i(n).Logistics},null,8,["view-name"]))}});export{p as default};

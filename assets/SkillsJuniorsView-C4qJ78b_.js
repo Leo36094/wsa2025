@@ -1,0 +1,1 @@
+import{S as e,I as n}from"./SkillsInnerViewTemplate-CVZmJv4G.js";import{d as r,c as a,u as o,o as s}from"./index-DLj8cLpg.js";const c=r({__name:"SkillsJuniorsView",setup(i){return(t,m)=>(s(),a(e,{"view-name":o(n).Juniors},null,8,["view-name"]))}});export{c as default};

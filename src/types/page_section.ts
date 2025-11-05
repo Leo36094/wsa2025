@@ -23,6 +23,7 @@ export const SECTION_ID = {
   LiveStream: 'live_stream',
   VOD: 'vod',
   Regulation: 'regulation',
+  Try: 'try',
 } as const;
 
 export const HOST_SECTION_ENUM = {
@@ -57,6 +58,7 @@ export const INVOLVED_SECTION_ENUM = {
   Forum: `#${SECTION_ID.Forum}`,
   Tourguide: `#${SECTION_ID.Tourguide}`,
   Notice: `#${SECTION_ID.Notice}`,
+  Try: `#${SECTION_ID.Try}`,
 } as const;
 
 export type InvolvedSection = keyof typeof INVOLVED_SECTION_ENUM;

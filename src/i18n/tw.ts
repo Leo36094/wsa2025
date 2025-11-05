@@ -33,6 +33,7 @@ export default {
     involved_tab_03: '論壇',
     involved_tab_04: '參加/團體導覽資訊',
     involved_tab_05: '入境須知',
+    involved_tab_06: '技能體驗站',
     media_tab_01: '媒體申請及規範',
     media_tab_02: '主題廣告',
     media_tab_03: '職類介紹',
@@ -476,6 +477,15 @@ export default {
       '宣導圖文出處:<br>農業部動植物防疫檢疫署>非洲豬瘟資訊專區>宣導資料>平面文宣>「確定嗎?再檢查一次吧！」<a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">宣導摺頁</a>  或掃 QR code。',
     registration_link: '報名連結 Registration Link:',
     sponsorship_coming_soon: '即將推出',
+    try_title: '技能體驗站',
+    try_content_desc: `
+    不是選手，也能親身體驗世界級技能的樂趣？<br>
+    2025 亞洲技能競賽「Try a Skill」歡迎大家前往！<br>
+    適合學生、親子，或任何對技能感到好奇的夥伴一同參與<br>
+    銲接、拋光、3D 列印、美容到互動式遊戲等多種領域實作<br>
+    <br><br>
+    體驗全程免費！參加還有機會獲得亞洲技能競賽限定紀念品（數量有限，送完為止）<br>
+    快來解鎖體驗吧！`,
   },
   notFound: {
     title: '找不到頁面',

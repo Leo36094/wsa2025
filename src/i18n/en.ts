@@ -34,6 +34,7 @@ export default {
     involved_tab_03: 'Forum',
     involved_tab_04: 'Guided Group Tours Registration',
     involved_tab_05: 'Notice for Inbound Travelers',
+    involved_tab_06: 'Try a Skill',
     media_tab_02: 'Theme Ad',
     media_tab_03: 'Skills Introduction',
     media_tab_04: 'Opening and Closing Live Stream',
@@ -511,6 +512,20 @@ The skilled painter and decorator offers a range of services, from interpreting 
 Animal and Plant Health Inspection Agency, Ministry of Agriculture > African Swine Fever Information Section > Promotional Materials > Print Media > "Are you sure? Check again!" <a href="https://asf.aphia.gov.tw/ws.php?id=22698" target="_blank">promotional leaflet</a> or scan the QR code.`,
     registration_link: '報名連結 Registration Link:',
     sponsorship_coming_soon: 'Coming Soon',
+    try_title: 'Try a Skill',
+    try_content_desc: `
+    <p>Not a competitor? You can still experience the excitement of world-class skills!</p>
+    <p>The “Try a Skill” Zone at the 2025 Worldskills Asia welcomes everyone to join.</p>
+    <p>Perfect for students, families, and anyone curious about the world of skills —
+    try hands-on activities across various fields such as welding, polishing, 3D printing,
+    beauty, and interactive games.
+    </p>
+    <br>
+    <p>Admission is free!
+Participants will also have the chance to receive exclusive 2025 Worldskills Asia souvenirs (limited quantities — while supplies last).</p>
+<p>Come and unlock your experience today!
+</p>
+    `,
   },
   notFound: {
     title: 'Page Not Found',

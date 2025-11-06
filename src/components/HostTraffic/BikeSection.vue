@@ -74,7 +74,8 @@ const { locale } = useI18n()
 
 const BikeBlock = {
   title: 'YouBike',
-  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
+  // imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
+  imageUrl: '',
   location: {
     title: '站點資訊',
     cards: [
@@ -150,7 +151,8 @@ const BikeBlock = {
 }
 const BikeBlockEn = {
   title: 'YouBike',
-  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
+  // imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
+  imageUrl: '',
   location: {
     title: 'Station Information',
     cards: [

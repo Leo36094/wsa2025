@@ -227,7 +227,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     members_title: 'WSA Member Countries',
     members_desc: 'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 29 countries.',
     competitors_title: '3rd WorldSkills Asia Competition <span class="title_tag">Participating Countries</span>',
-    competitors_desc: 'The 3rd WorldSkills Asia Competition has registered a total of 31 participating countries, including 19 member countries and 12 non-member countries.',
+    competitors_desc: 'The 3rd WorldSkills Asia Competition has registered a total of 29 participating countries, including 18 member countries and 11 non-member countries.',
   },
   skills: {
     category_image: 'Skill Image {index}',

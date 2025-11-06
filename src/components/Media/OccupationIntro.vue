@@ -5,11 +5,11 @@
     :aria-labelledby="`${$t('media.occupation_intro_title')}`"
   >
     <div class="occupation-intro-container">
-      <div class="coming-soon-container">
+      <!-- <div class="coming-soon-container">
         <h2 class="coming-soon-title">{{ $t('media.occupation_intro_coming_soon') }}</h2>
         <p class="coming-soon-subtitle">{{ $t('media.occupation_intro_coming_soon_subtitle') }}</p>
-      </div>
-      <!-- <div class="background-overlay">
+      </div> -->
+      <div class="background-overlay">
         <img
           :src="imageURL"
           alt="Background"
@@ -45,14 +45,14 @@
             />
           </svg>
         </a>
-      </div> -->
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 // Component for Occupation Introduction section
-// const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
+const imageURL = `${import.meta.env.BASE_URL}images/media/media_s02.jpg`
 </script>
 
 <style lang="scss" scoped>

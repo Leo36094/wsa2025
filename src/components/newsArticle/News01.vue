@@ -10,7 +10,7 @@
 
       <h3>Official Skills (31 skills in total) :</h3>
       <ul>
-        <li>Robot System Integration</li>
+        <li>Robot Systems Integration</li>
         <li>Industrial Design Technology</li>
         <li>Mechatronics</li>
         <li>Industrial Control</li>
@@ -33,7 +33,7 @@
         <li>Floristry</li>
         <li>Web Technologies</li>
         <li>Cloud Computing</li>
-        <li>Cybersecurity</li>
+        <li>Cyber Security</li>
         <li>IT Network Systems Administration</li>
         <li>Software Applications Development</li>
         <li>Mobile Applications Development</li>
@@ -45,7 +45,7 @@
       <h3>Exhibition Skills (7 skills in total) :</h3>
       <ul>
         <li>Wall and Floor Tiling</li>
-        <li>Plastering and Drywall System</li>
+        <li>Plastering and Drywall Systems</li>
         <li>Digital Construction</li>
         <li>Painting and Decorating</li>
         <li>Information Network Cabling</li>
@@ -84,7 +84,7 @@
         <li>美髮</li>
         <li>美容</li>
         <li>餐飲服務</li>
-        <li>健康照護</li>
+        <li>健康照顧</li>
         <li>汽車技術</li>
         <li>汽車噴漆</li>
         <li>砌磚</li>

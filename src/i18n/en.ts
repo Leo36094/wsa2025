@@ -77,6 +77,7 @@ export default {
     split_title2: 'Asia',
     split_title3: 'Taipei',
     year: '2025',
+    youtube_title: 'Official Video',
     news_title: 'News',
     news_more: 'More',
     sponsors_title: 'Sponsors & Partners',
@@ -304,7 +305,7 @@ The design deliverables include project design presentations, system analysis re
 <br><br>
 Skilled Systems Administrators aren't just adept in specific services. They can dynamically utilize resources on demand, rather than waiting for allocations from other departments. This adaptability enables them to handle the ever-changing world of cloud services and respond well to changing market demands and challenges.`,
     it_CyberSecurity: 'Cyber Security',
-    it_CyberSecurity_copy: `Cybersecurity aims to protect systems and users from both intentional and unintentional breaches to the security of data and entire systems. It also works to prevent hackers from accessing and/or stealing sensitive information and data. It encompasses the following aspects:
+    it_CyberSecurity_copy: `Cyber Security aims to protect systems and users from both intentional and unintentional breaches to the security of data and entire systems. It also works to prevent hackers from accessing and/or stealing sensitive information and data. It encompasses the following aspects:
 <br><br>
 1. Enhancing computer and network security systems.<br>
 2. Collecting and analyzing intelligence to identify network abnormalities.<br>
@@ -573,11 +574,13 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     <li>Please carefully review the “WorldSkills Asia Taipei 2025 - Media Guidelines” prior to application to understand interview scope, equipment usage, and image authorization.</li>
     </ul>
     `,
-    regulation_brief_title: 'WorldSkills Asia Taipei 2025 Media Briefing',
+    regulation_brief_title: 'Media Guidelines Briefing Session',
     regulation_brief_desc: `
     <ul>
     <li>The organizer will hold a Media Guidelines Briefing at 1:30 PM on the afternoon of November 26, 2025, during the opening ceremony, introducing overall competition activities and media procedures. Media are encouraged to attend.</li>
-    <li>Detailed information will be announced on the official website after confirmation.</li>
+    <li>Agenda – WorldSkills Asia Taipei 2025 Media Guidelines Briefing Session：</li>
+    <img class="regulation__brief_agenda" src="{img}" alt="2025亞洲技能競賽 媒體規範說明會 活動議程">
+    <li>Registration Link – <a href="https://forms.gle/VuvjZrfGh32bjk9Z6" target="_blank">Media Guidelines Briefing Session (11/26)</a></li>
     </ul>
     `,
     regulation_contact_title: 'Contact Information',

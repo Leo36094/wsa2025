@@ -79,6 +79,7 @@ export default {
     split_title2: '在',
     split_title3: '台北',
     year: '2025',
+    youtube_title: '官方影片',
     news_title: '最新消息',
     news_more: '更多資訊',
     sponsors_title: '贊助單位',
@@ -540,9 +541,12 @@ export default {
     regulation_brief_desc: `
     <ul>
     <li>主辦單位預計於 11月26日開幕典禮當日下午 1:30 舉辦2025亞洲技能競賽媒體規範說明會，介紹亞洲賽整體活動與媒體作業須知，歡迎媒體朋友踴躍參加。</li>
-    <li>詳細資訊將於核定後公告於官方網站。</li>
+    <li>2025亞洲技能競賽 媒體規範說明會 活動議程</li>
+    <img class="regulation__brief_agenda" src="{img}" alt="2025亞洲技能競賽 媒體規範說明會 活動議程">
+    <li>2025亞洲技能競賽 媒體規範說明會(11/26)<a href="https://forms.gle/VuvjZrfGh32bjk9Z6" target="_blank">活動報名連結</a></li>
     </ul>
     `,
+    // regulation_brief_agenda: '2025亞洲技能競賽 媒體規範說明會 活動議程 {agenda}',
     regulation_contact_title: '聯絡窗口',
     regulation_contact_name1: '莊小姐',
     regulation_contact_info1: `電話：<a href="tel:+886-2-8995-6007">+886-2-8995-6007</a> {'|'} Email: <a href="mailto:wanyu_chuang{'@'}wda.gov.tw">wanyu_chuang{'@'}wda.gov.tw</a>`,

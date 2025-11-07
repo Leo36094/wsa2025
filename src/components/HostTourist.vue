@@ -464,6 +464,9 @@ $font-size-info: (
     .host-tourist-container {
       width: 100%;
     }
+    .host-tourist__title {
+      margin-top: 0.64rem;
+    }
     .host-tourist__content {
       margin-bottom: 0.4rem;
       .card {
@@ -491,6 +494,9 @@ $font-size-info: (
   .host-tourist {
     .host-tourist-container {
       width: 100%;
+    }
+    .host-tourist__title {
+      margin: 0.24rem auto;
     }
     .host-tourist__content {
       padding: 0 0.16rem;

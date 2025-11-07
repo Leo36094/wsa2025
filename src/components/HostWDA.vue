@@ -1,5 +1,5 @@
 <template>
-  <section class="host-wda" :id="SECTION_ID.WDA" :aria-labelledby="$t('host.wda_title')">
+  <section class="host-wda" :aria-labelledby="$t('host.wda_title')">
     <div class="host-wda-container">
       <img src="/images/wda.png" alt="wda-logo" class="host-logo" />
       <div class="host-wda-title">
@@ -26,6 +26,7 @@ import { SECTION_ID } from '@/types/page_section'
     @include bgCenter(14.4rem 8.46rem);
     background-image: url('/images/wsa/host_wda_desktop.png');
     padding: 0.8rem 3.2rem;
+    padding-top: 0;
     border-radius: 0rem;
     color: $black-primary;
     .host-logo {
@@ -71,7 +72,7 @@ import { SECTION_ID } from '@/types/page_section'
     width: 100%;
     .host-wda-container {
       padding: 0.24rem;
-      margin: 0.8rem auto;
+      margin: 0 auto 0.8rem auto;
       background-image: url('/images/wsa/host_wda_mobile.png');
       border-radius: 0.2rem;
       .host-logo {

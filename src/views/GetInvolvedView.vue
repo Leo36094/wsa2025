@@ -96,14 +96,9 @@ const components: Record<InvolvedSectionValue, Component> = {
   &__tab {
     position: fixed;
     top: 0.76rem;
-    height: auto;
-    background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    height: 1.2rem;
+    background: #ffffff;
     @include zIndex(topbar);
-
-    // 增加 padding 讓漸變效果更自然
-    padding-bottom: 0.2rem;
     :deep(.page-tab-container) {
       margin: 0.16rem auto;
     }
@@ -135,6 +130,9 @@ const components: Record<InvolvedSectionValue, Component> = {
 @include tablet {
   .get-involved {
     padding-top: calc(0.76rem + 0.8rem);
+    &__tab {
+      height: 0.8rem;
+    }
     .section-container {
       width: 6.64rem;
     }
@@ -148,7 +146,7 @@ const components: Record<InvolvedSectionValue, Component> = {
     padding-top: 1.64rem;
     padding-bottom: 0.72rem;
     &__tab {
-      height: 1rem;
+      height: 0.7rem;
     }
     &__title {
       margin-top: 0.16rem;

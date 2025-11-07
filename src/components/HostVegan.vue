@@ -414,6 +414,9 @@ $font-size-info: (
     .host-vegan-container {
       width: 100%;
     }
+    .host-vegan__title {
+      margin-top: 0.64rem;
+    }
     .host-vegan__content {
       margin-bottom: 0.4rem;
       .card {
@@ -441,6 +444,9 @@ $font-size-info: (
   .host-vegan {
     .host-vegan-container {
       width: 100%;
+    }
+    .host-vegan__title {
+      margin: 0.24rem auto;
     }
     .host-vegan__content {
       padding: 0 0.16rem;

@@ -61,20 +61,22 @@ const phase2Content = computed(() => {
   &__tab {
     position: fixed;
     top: 0.76rem;
-    height: 1.44rem;
-    background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
-    backdrop-filter: blur(10px);
-    padding-bottom: 0.2rem;
+    height: 1.2rem;
+    background: #ffffff;
     @include zIndex(topbar);
   }
 }
 @include tablet {
   .competition {
     &__tab {
-      top: 0.76rem;
-      height: 1rem;
-      backdrop-filter: blur(8px);
-      padding-bottom: 0.16rem;
+      height: 0.8rem;
+    }
+  }
+}
+@include mobile {
+  .competition {
+    &__tab {
+      height: 0.7rem;
     }
   }
 }

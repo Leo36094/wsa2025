@@ -317,6 +317,7 @@ watch(imgSrc, (newSrc) => {
 }
 @include mobile {
   .host-traffic__info-block {
+    margin-top: 0.24rem;
     .purchase-method-container {
       width: 100%;
       flex-direction: row;

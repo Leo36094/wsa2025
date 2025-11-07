@@ -368,6 +368,7 @@ $font-size-info: (
       width: 100%;
     }
     .host-medic__title {
+      margin-top: 0.64rem;
       margin-bottom: 0.4rem;
     }
     .host-medic__content {
@@ -391,6 +392,9 @@ $font-size-info: (
   .host-medic {
     .host-medic-container {
       width: 100%;
+    }
+    .host-medic__title {
+      margin: 0.24rem auto;
     }
     .host-medic__content {
       .host-medic__content-item {

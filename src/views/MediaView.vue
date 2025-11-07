@@ -74,14 +74,9 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')
   &__tab {
     position: fixed;
     top: 0.76rem;
-    height: 1.44rem;
-    background: linear-gradient(180deg, #fffffff2, #ffffffd9 70%, #fff0);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    height: 1.2rem;
+    background: #ffffff;
     @include zIndex(topbar);
-
-    // 增加 padding 讓漸變效果更自然
-    padding-bottom: 0.2rem;
     :deep(.page-tab-container) {
       margin: 0.16rem auto;
     }
@@ -156,6 +151,9 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')
 }
 @include tablet {
   .get-involved {
+    &__tab {
+      height: 0.8rem;
+    }
     .section-container {
       width: 6.64rem;
     }
@@ -166,7 +164,7 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')
     padding-top: 1.64rem;
     padding-bottom: 0.72rem;
     &__tab {
-      height: 1rem;
+      height: 0.7rem;
     }
     &__title {
       margin-top: 0.16rem;

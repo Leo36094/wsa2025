@@ -207,7 +207,7 @@ $tab-text-color: #455861;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
   border: 0.01rem solid rgba(#455861, 0.2);
   border-radius: 50%;
   width: 0.32rem;
@@ -218,10 +218,9 @@ $tab-text-color: #455861;
   color: $tab-text-color;
   z-index: 10;
   transition: all 0.2s ease;
-  box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background: rgba(255, 255, 255, 1);
+    background: #ffffff;
     color: $black-primary;
     border-color: rgba(#455861, 0.4);
   }
@@ -291,8 +290,8 @@ $tab-text-color: #455861;
 
     .page-tab {
       align-items: stretch;
-      padding-right: 0.16rem;
-      padding-left: 0.16rem;
+      padding-right: 0.04rem;
+      padding-left: 0.04rem;
       &__item {
         min-width: unset;
         font-size: 0.16rem;

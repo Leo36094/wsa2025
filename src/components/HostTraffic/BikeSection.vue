@@ -44,7 +44,9 @@
           <Text v-if="item.type === 'text'" tag="p" variant="p" align="left">
             {{ item.value }}
           </Text>
-          <Text v-else tag="p" variant="p" align="left" v-html="item.value"> </Text>
+          <Text v-else tag="p" variant="p" align="left">
+            <p v-html="item.value"></p>
+          </Text>
         </li>
       </ul>
     </div>
@@ -74,8 +76,7 @@ const { locale } = useI18n()
 
 const BikeBlock = {
   title: 'YouBike',
-  // imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
-  imageUrl: '',
+  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
   location: {
     title: '站點資訊',
     cards: [
@@ -139,8 +140,7 @@ const BikeBlock = {
       },
       {
         type: 'link',
-        value:
-          `需使用YouBike App進行信用卡綁定，租借教學請見：<a class="link" href="https://en.youbike.com.tw/region/main/" target="_blank">點擊查看</a>。`,
+        value: `需使用YouBike App進行信用卡綁定，租借教學請見：<a class="link" href="https://en.youbike.com.tw/region/main/" target="_blank">點擊查看</a>。`,
       },
     ],
   },
@@ -151,8 +151,7 @@ const BikeBlock = {
 }
 const BikeBlockEn = {
   title: 'YouBike',
-  // imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
-  imageUrl: '',
+  imageUrl: import.meta.env.BASE_URL + 'images/host/transportation/transportation_02.jpg',
   location: {
     title: 'Station Information',
     cards: [
@@ -222,12 +221,14 @@ const BikeBlockEn = {
   },
   reminder: {
     title: 'Friendly Reminder',
-    list: ['During exhibitions, events, or competitions, bikes may be in short supply. We recommend planning your pick-up and return locations in advance. '],
+    list: [
+      'During exhibitions, events, or competitions, bikes may be in short supply. We recommend planning your pick-up and return locations in advance. ',
+    ],
   },
 }
 const data = computed(() => {
-  return locale.value === 'en' ? BikeBlockEn : BikeBlock;
-});
+  return locale.value === 'en' ? BikeBlockEn : BikeBlock
+})
 </script>
 
 <style lang="scss" scoped>

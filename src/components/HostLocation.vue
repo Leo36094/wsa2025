@@ -258,7 +258,7 @@ $section-bg-color: #fff;
 @include tablet {
   .location {
     .location-container {
-      padding: 0rem 0.4rem;
+      padding: 0.64rem 0.4rem 0 0.4rem;
       .location-header {
         margin-bottom: 0.32rem;
         line-height: normal;
@@ -297,7 +297,7 @@ $section-bg-color: #fff;
 @include mobile {
   .location {
     .location-container {
-      padding: 0.8rem 0;
+      padding: 0.24rem 0 0.8rem 0;
       .location-header {
         padding: 0 0.24rem;
         margin-bottom: 0.24rem;

@@ -493,6 +493,9 @@ $font-size-info: (
     .host-muslim-container {
       width: 100%;
     }
+    .host-muslim__title {
+      margin-top: 0.64rem;
+    }
     .host-muslim__content {
       margin-bottom: 0.4rem;
       .card {
@@ -520,6 +523,9 @@ $font-size-info: (
   .host-muslim {
     .host-muslim-container {
       width: 100%;
+    }
+    .host-muslim__title {
+      margin: 0.24rem auto;
     }
     .host-muslim__content {
       padding: 0 0.16rem;

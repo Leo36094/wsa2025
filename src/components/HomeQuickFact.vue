@@ -35,12 +35,12 @@ const cubes = computed(() => {
       plusSign: false,
     },
     {
-      number: '30',
+      number: '29',
       title: t('home.quick_fact_cube_title_2'),
       plusSign: true,
     },
     {
-      number: '500',
+      number: '300',
       title: t('home.quick_fact_cube_title_3'),
       plusSign: true,
     },

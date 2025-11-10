@@ -28,7 +28,7 @@
       <div class="text-group" v-html="$t('media.regulation_onsite_guideline_desc')"></div>
     </TextBlock>
     <TextBlock class="content-block" :title="$t('media.regulation_brief_title')">
-      <div class="text-group" v-html="$t('media.regulation_brief_desc')"></div>
+      <div class="text-group" v-html="$t('media.regulation_brief_desc', { img: agendaImg })"></div>
     </TextBlock>
     <TextBlock class="content-block" :title="$t('media.regulation_contact_title')">
       <div class="text-group">
@@ -65,6 +65,8 @@ const attachmentLink = computed(() => {
     ? '/files/2025_WSA_Media_Regulations_EN.pdf'
     : '/files/2025_WSA_Media_Regulations_CN.pdf'
 })
+
+const agendaImg = `${import.meta.env.BASE_URL}images/media/agenda.png`
 </script>
 
 <style lang="scss" scoped>

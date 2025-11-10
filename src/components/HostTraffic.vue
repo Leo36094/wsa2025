@@ -28,8 +28,18 @@ import HostTrafficBusSection from '@/components/HostTraffic/BusSection.vue'
 }
 @include tablet {
   .host-traffic {
+    .host-traffic__title {
+      margin-top: 0.8rem;
+    }
     .host-traffic-container {
       width: 100%;
+    }
+  }
+}
+@include mobile {
+  .host-traffic {
+    .host-traffic__title {
+      margin-top: 0.24rem;
     }
   }
 }

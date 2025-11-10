@@ -60,7 +60,7 @@ const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === acti
   section,
   main,
   div[id] {
-    scroll-margin-top: calc(0.76rem + 1.16rem + 0.3rem + 0.2rem);
+    scroll-margin-top: calc(0.76rem + 0.8rem);
   }
 }
 </style>
@@ -78,25 +78,23 @@ const tabIndex = computed(() => tabs.value.findIndex((tab) => tab.value === acti
   .host-tab {
     position: fixed;
     top: 0.76rem;
-    height: 1.44rem;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.85) 70%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    height: 1.2rem;
+    background: #ffffff;
     @include zIndex(topbar);
-
-    // 增加 padding 讓漸變效果更自然
-    padding-bottom: 0.2rem;
+  }
+}
+@include tablet {
+  .host {
+    padding-top: calc(0.76rem + 0.8rem);
+    .host-tab {
+      height: 0.8rem;
+    }
   }
 }
 @include mobile {
   .host {
     .host-tab {
-      height: 1rem;
+      height: 0.7rem;
     }
   }
 }

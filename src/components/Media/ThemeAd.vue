@@ -5,6 +5,9 @@
     <div class="media-theme-ad-container">
       <AdItem embed-id="MADffwpeixI" />
       <AdItem embed-id="vI3ynWG0XxI" />
+      <AdItem embed-id="mL4wucM_Gd0" />
+      <AdItem embed-id="u_e0AQ8zmKs" />
+      <AdItem embed-id="ZlkJbbDhYcY" />
     </div>
   </section>
 </template>

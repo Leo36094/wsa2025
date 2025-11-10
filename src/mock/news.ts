@@ -10,7 +10,7 @@ The 3rd WorldSkills Asia Competition will take place in Taipei Nangang Exhibitio
 Official Skills (36 skills in total) :
 </p>
 <ul>
-<li>Robot System Integration</li>
+<li>Robot Systems Integration</li>
 <li>Industrial Design Technology</li>
 <li>Mechatronics</li>
 <li>Industrial Control</li>
@@ -26,7 +26,7 @@ Official Skills (36 skills in total) :
 <li>Autobody Repair</li>
 <li>Bricklaying</li>
 <li>Electrical Installations</li>
-<li>Plastering and Drywall System</li>
+<li>Plastering and Drywall Systems</li>
 <li>Refrigeration and Air Conditioning</li>
 <li>Digital Construction</li>
 <li>Cabinetmaking</li>
@@ -38,7 +38,7 @@ Official Skills (36 skills in total) :
 <li>Floristry</li>
 <li>Web Technologies</li>
   <li>Cloud Computing</li>
-  <li>Cybersecurity</li>
+  <li>Cyber Security</li>
   <li>IT Network Systems Administration</li>
   <li>Software Applications Development</li>
   <li>Mobile Applications Development</li>
@@ -89,7 +89,7 @@ Official Skills (36 skills in total) :
 <li>美髮</li>
 <li>美容</li>
 <li>餐飲服務</li>
-<li>健康照護</li>
+<li>健康照顧</li>
 <li>汽車技術</li>
 <li>汽車噴漆</li>
 <li>汽車板金</li>

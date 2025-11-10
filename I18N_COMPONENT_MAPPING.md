@@ -451,7 +451,7 @@ export default titles
       <img src="/images/news/news_01.jpg" alt="..." />
       <h3>Official Skills (34 skills in total):</h3>
       <ul>
-        <li>Robot System Integration</li>
+        <li>Robot Systems Integration</li>
         <li>Industrial Design Technology</li>
         <!-- ... -->
       </ul>

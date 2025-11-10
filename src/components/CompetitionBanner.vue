@@ -27,18 +27,33 @@
     <div class="venue-swiper-container" data-aos="fade-up">
       <Swiper class="venue-swiper" v-bind="swiperConfig">
         <SwiperSlide v-for="(image, index) in venueImages" :key="index" class="venue-slide">
-          <img :src="image" :alt="`Venue floor plan ${index + 1}`" class="venue-image" />
+          <img
+            :src="image"
+            :alt="`Venue floor plan ${index + 1}`"
+            class="venue-image"
+            @click="showLightbox(index)"
+          />
         </SwiperSlide>
       </Swiper>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
+    <vue-easy-lightbox
+      :visible="visibleRef"
+      :imgs="imgsRef"
+      :index="indexRef"
+      @hide="onHide"
+      :max-zoom="1.2"
+      :min-zoom="1"
+      teleport="body"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useEasyLightbox } from 'vue-easy-lightbox'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation'
@@ -75,6 +90,29 @@ const swiperConfig = {
     nextEl: '.swiper-button-next',
   },
   modules: [Autoplay, Navigation, A11y],
+}
+
+// Lightbox setup
+const {
+  show,
+  onHide,
+  visibleRef,
+  indexRef,
+  imgsRef
+} = useEasyLightbox({
+  imgs: venueImages.value,
+  initIndex: 0
+})
+
+// Update lightbox images when language changes
+watch(venueImages, (newImages) => {
+  imgsRef.value = newImages
+})
+
+// Show lightbox at specific index
+const showLightbox = (index: number) => {
+  indexRef.value = index
+  show()
 }
 </script>
 <style lang="scss" scoped>
@@ -165,6 +203,12 @@ const swiperConfig = {
       height: auto;
       object-fit: contain;
       border-radius: 0.12rem;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
   :deep(.swiper-button-prev),

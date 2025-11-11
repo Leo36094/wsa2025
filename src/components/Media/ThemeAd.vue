@@ -3,17 +3,26 @@
     <!-- Original content - commented out -->
 
     <div class="media-theme-ad-container">
-      <AdItem embed-id="MADffwpeixI" />
-      <AdItem embed-id="vI3ynWG0XxI" />
-      <AdItem embed-id="mL4wucM_Gd0" />
-      <AdItem embed-id="u_e0AQ8zmKs" />
-      <AdItem embed-id="ZlkJbbDhYcY" />
+      <AdItem
+        v-for="video in videos"
+        :key="video.id"
+        :embed-id="video.embedId"
+        :title="video.title"
+      />
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
 import AdItem from '@/components/Media/AdItem.vue'
+
+const videos = [
+  { id: 1, embedId: 'MADffwpeixI', title: '2025亞洲技能競賽 宣傳動畫  星火點燃：亞洲舞台的序曲' },
+  { id: 2, embedId: 'vI3ynWG0XxI', title: '2025亞洲技能競賽 宣傳動畫  光影鑄就：巔峰技藝的刻印' },
+  { id: 3, embedId: 'mL4wucM_Gd0', title: '2025亞洲技能競賽 宣傳動畫  競逐榮耀：夢想綻放的篇章' },
+  { id: 4, embedId: 'u_e0AQ8zmKs', title: '2025亞洲技能競賽 宣傳動畫  熱浪不息：超越勝負的傳承' },
+  { id: 5, embedId: 'ZlkJbbDhYcY', title: '2025亞洲技能競賽 宣傳動畫  聚光燈下：決戰時刻的屏息' },
+]
 </script>
 
 <style lang="scss" scoped>

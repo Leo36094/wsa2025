@@ -22,16 +22,98 @@
         <img class="image-item" :src="competitionImages[1]" alt="banner6" />
       </div>
     </div>
+
+    <!-- Venue Map Swiper -->
+    <!-- <div class="venue-swiper-container" data-aos="fade-up">
+      <Swiper class="venue-swiper" v-bind="swiperConfig">
+        <SwiperSlide v-for="(image, index) in venueImages" :key="index" class="venue-slide">
+          <img
+            :src="image"
+            :alt="`Venue floor plan ${index + 1}`"
+            class="venue-image"
+            @click="showLightbox(index)"
+          />
+        </SwiperSlide>
+      </Swiper>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <vue-easy-lightbox
+      :visible="visibleRef"
+      :imgs="imgsRef"
+      :index="indexRef"
+      @hide="onHide"
+      :max-zoom="1.2"
+      :min-zoom="1"
+      teleport="body"
+    /> -->
   </div>
 </template>
 
 <script lang="ts" setup>
+// import { computed, watch } from 'vue'
+// import { useI18n } from 'vue-i18n'
+// import { useEasyLightbox } from 'vue-easy-lightbox'
+// import 'swiper/css'
+// import 'swiper/css/autoplay'
+// import 'swiper/css/navigation'
+// import { A11y, Autoplay, Navigation } from 'swiper/modules'
+// import { Swiper, SwiperSlide } from 'swiper/vue'
 import { SECTION_ID } from '@/types/page_section'
+
+// const { locale } = useI18n({ useScope: 'global' })
+
 const competitionImages = Array.from(
   { length: 6 },
   (_, i) =>
     `${import.meta.env.BASE_URL}images/wsa/competition_section01_${(i + 1).toString().padStart(2, '0')}.jpg`,
 )
+
+// Venue images based on language
+// const venueImages = computed(() => {
+//   const lang = locale.value === 'tw' ? 'zh' : 'en'
+//   return [
+//     `${import.meta.env.BASE_URL}images/competition/hall1_1f_${lang}.png`,
+//     `${import.meta.env.BASE_URL}images/competition/hall2_1f_${lang}.png`,
+//     `${import.meta.env.BASE_URL}images/competition/hall2_4f_${lang}.png`,
+//   ]
+// })
+
+// const swiperConfig = {
+//   loop: true,
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: true,
+//   },
+//   navigation: {
+//     prevEl: '.swiper-button-prev',
+//     nextEl: '.swiper-button-next',
+//   },
+//   modules: [Autoplay, Navigation, A11y],
+// }
+
+// Lightbox setup
+// const {
+//   show,
+//   onHide,
+//   visibleRef,
+//   indexRef,
+//   imgsRef
+// } = useEasyLightbox({
+//   imgs: venueImages.value,
+//   initIndex: 0
+// })
+
+// // Update lightbox images when language changes
+// watch(venueImages, (newImages) => {
+//   imgsRef.value = newImages
+// })
+
+// // Show lightbox at specific index
+// const showLightbox = (index: number) => {
+//   indexRef.value = index
+//   show()
+// }
 </script>
 <style lang="scss" scoped>
 .host-copy {
@@ -70,7 +152,9 @@ const competitionImages = Array.from(
 .second-slide {
   width: 100%;
   @include withContainer;
-  margin-bottom: 1.2rem;
+  &:last-child {
+    padding-bottom: 1.2rem;
+  }
   .image-row {
     display: flex;
     justify-content: space-between;
@@ -97,6 +181,69 @@ const competitionImages = Array.from(
   .bottom-rest {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.venue-swiper-container {
+  @include withContainer;
+  max-width: 19.2rem;
+  padding: 1.2rem 0;
+
+  .venue-swiper {
+    width: 100%;
+    max-width: 12rem;
+    margin: 0 auto;
+    position: relative;
+
+    .venue-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .venue-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.12rem;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  :deep(.swiper-button-prev),
+  :deep(.swiper-button-next) {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after {
+      font-size: 0.2rem;
+      font-weight: 700;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  :deep(.swiper-button-prev) {
+    left: 0.24rem;
+  }
+
+  :deep(.swiper-button-next) {
+    right: 0.24rem;
+  }
+
+  :deep(.swiper-button-disabled) {
+    opacity: 0.3;
   }
 }
 
@@ -162,7 +309,9 @@ const competitionImages = Array.from(
   }
   .second-slide {
     width: 100%;
-    margin-bottom: 1.6rem;
+    &:last-child {
+      padding-bottom: 0.8rem;
+    }
     .image-row {
       display: flex;
       justify-content: space-between;
@@ -175,6 +324,33 @@ const competitionImages = Array.from(
         flex: 1;
         aspect-ratio: 16/9;
       }
+    }
+  }
+
+  .venue-swiper-container {
+    max-width: 90%;
+    padding: 0.8rem 0.24rem;
+
+    .venue-swiper {
+      max-width: 100%;
+    }
+
+    :deep(.swiper-button-prev),
+    :deep(.swiper-button-next) {
+      width: 0.4rem;
+      height: 0.4rem;
+
+      &::after {
+        font-size: 0.18rem;
+      }
+    }
+
+    :deep(.swiper-button-prev) {
+      left: -0.2rem;
+    }
+
+    :deep(.swiper-button-next) {
+      right: -0.2rem;
     }
   }
 }
@@ -205,7 +381,9 @@ const competitionImages = Array.from(
     }
   }
   .second-slide {
-    margin-bottom: 0.8rem;
+    &:last-child {
+      padding-bottom: 0.24rem;
+    }
     .image-row {
       border: 1px solid #fff;
       border-left: none;
@@ -228,6 +406,21 @@ const competitionImages = Array.from(
       transform: translate(0, 0);
       opacity: 1;
       scale: 1;
+    }
+  }
+
+  .venue-swiper-container {
+    padding: 0.24rem 0rem;
+    .venue-swiper {
+      max-width: 100%;
+    }
+    :deep(.swiper-button-prev),
+    :deep(.swiper-button-next) {
+      display: none;
+
+      &::after {
+        font-size: 0.16rem;
+      }
     }
   }
 }

@@ -27,7 +27,7 @@
         <div class="video-container">
           <iframe
             :src="`https://www.youtube.com/embed/${embedId}?autoplay=1`"
-            :title="title"
+            :title="displayTitle"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
@@ -46,9 +46,10 @@ import IconClose from '@/components/icons/IconClose.vue'
 
 const props = defineProps<{
   embedId: string
+  title?: string
 }>()
 
-const title = ref('')
+const displayTitle = ref('')
 
 // Generate YouTube thumbnail URL
 const thumbnailUrl = computed(() => {
@@ -136,7 +137,7 @@ const loadVideoTitle = () => {
     events: {
       onReady: (event) => {
         const data = event.target.getVideoData()
-        title.value = data.title
+        displayTitle.value = props.title || data.title
         // Clean up the temporary player
         event.target.destroy()
         document.body.removeChild(tempDiv)

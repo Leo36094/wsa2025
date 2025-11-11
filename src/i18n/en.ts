@@ -80,7 +80,7 @@ export default {
     youtube_title: 'Official Video',
     news_title: 'News',
     news_more: 'More',
-    sponsors_title: 'Sponsors & Partners',
+    sponsors_title: 'Premium Sponsor',
     banner_desc_aria: 'Banner description',
     banner_desc: `Taipei will host the 3rd WorldSkills Asia Competition from November 27 to November 29, 2025 at Nangang Exhibition Center. This event will provide valuable opportunities to promote local education, economy, tourism and international exchanges.
 
@@ -218,10 +218,10 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_hall1_floor2_list3: 'Construction and Building Technology 11 skills',
     location_hall2: 'Hall 2',
     location_hall2_floor1: 'Opening and Closing Ceremony',
-    location_hall2_floor2: 'Skill / Skill Out',
+    location_hall2_floor2: 'Skills / Skill Out',
     location_hall2_floor2_list1: 'Social and Personal Services 7 skills',
     location_hall2_floor2_list2: 'Creative Arts and Fashion 5 skills',
-    location_hall2_floor3: 'Skill / Theme Exhibition',
+    location_hall2_floor3: 'Skills / Theme Exhibition',
     location_hall2_floor3_list1: 'Manufacturing and Engineering Technology 12 skills',
     location_hall2_floor3_list2: '',
     location_hall2_floor4: 'Information and Communication Technology 4 skills',

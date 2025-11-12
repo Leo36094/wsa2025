@@ -16,7 +16,7 @@ export default {
   page_tabs: {
     page_tab_aria_label: '頁面導航選項卡',
     host_tab_01: '亞洲技能競賽',
-    host_tab_02: '中華台北',
+    host_tab_02: '主辦國',
     host_tab_03: '關於勞動力發展署',
     host_tab_04: '競賽場地',
     host_tab_05: '交通資訊',

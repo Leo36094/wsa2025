@@ -17,7 +17,7 @@ export default {
   page_tabs: {
     page_tab_aria_label: 'Page tabs',
     host_tab_01: 'WorldSkills Asia',
-    host_tab_02: 'WorldSkills Taipei 2025',
+    host_tab_02: 'WorldSkills Taipei',
     host_tab_03: 'About Workforce Development Agency(WDA)',
     host_tab_04: 'The Venue',
     host_tab_05: 'Transportation',

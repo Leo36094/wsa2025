@@ -26,7 +26,7 @@
         memory.
       </p>
       <p>
-        Chinese Taipei has long engaged in activities of WorldSkills International and WorldSkills
+        We have has long engaged in activities of WorldSkills International and WorldSkills
         Asia. The WorldSkills Asia Competition 2025 will be a unique opportunity to further skills
         exchange, share skills practices, as well as in-depth exploration of Taipei. We extend our
         warm and early welcome to all partners to join us in Taipei for the WorldSkills Asia

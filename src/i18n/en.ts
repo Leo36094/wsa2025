@@ -418,7 +418,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     visa_visa_assistance_desc: `<p>Available to nationals who do not qualify for Visa-Exempt Entry or the standard e-Visa categories.</p>
     <p>Application Procedure for e-Visa Assistance:</p>
       <ol>
-        <li><strong>By the end of July</strong>, delegations must confirm whether they require e-Visa assistance for <strong>e-Visa application</strong>. Instead, delegations may apply for the appropriate visa at Chinese Taipei overseas missions.</li>
+        <li><strong>By the end of July</strong>, delegations must confirm whether they require e-Visa assistance for <strong>e-Visa application</strong>. Instead, delegations may apply for the appropriate visa at our overseas missions.</li>
         <li>Once the assistance procedure is completed, delegations will receive emails from the organizer starting October 2025. Using the E-code provided, delegations should then apply for <a href="https://visawebapp.boca.gov.tw" target="_blank">e-Visa online</a>.
           <ul style="margin: 0;">
           <li>The e-Visa is valid for <strong>3 months</strong>, and applicants must ensure their passport is valid for <strong>at least 6 months</strong> at the time of application.</li>

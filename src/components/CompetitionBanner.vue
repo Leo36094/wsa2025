@@ -24,7 +24,7 @@
     </div>
 
     <!-- Venue Map Swiper -->
-    <!-- <div class="venue-swiper-container" data-aos="fade-up">
+    <div class="venue-swiper-container" data-aos="fade-up">
       <Swiper class="venue-swiper" v-bind="swiperConfig">
         <SwiperSlide v-for="(image, index) in venueImages" :key="index" class="venue-slide">
           <img
@@ -46,22 +46,22 @@
       :max-zoom="1.2"
       :min-zoom="1"
       teleport="body"
-    /> -->
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-// import { computed, watch } from 'vue'
-// import { useI18n } from 'vue-i18n'
-// import { useEasyLightbox } from 'vue-easy-lightbox'
-// import 'swiper/css'
-// import 'swiper/css/autoplay'
-// import 'swiper/css/navigation'
-// import { A11y, Autoplay, Navigation } from 'swiper/modules'
-// import { Swiper, SwiperSlide } from 'swiper/vue'
+import { computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useEasyLightbox } from 'vue-easy-lightbox'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/navigation'
+import { A11y, Autoplay, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import { SECTION_ID } from '@/types/page_section'
 
-// const { locale } = useI18n({ useScope: 'global' })
+const { locale } = useI18n({ useScope: 'global' })
 
 const competitionImages = Array.from(
   { length: 6 },
@@ -70,50 +70,50 @@ const competitionImages = Array.from(
 )
 
 // Venue images based on language
-// const venueImages = computed(() => {
-//   const lang = locale.value === 'tw' ? 'zh' : 'en'
-//   return [
-//     `${import.meta.env.BASE_URL}images/competition/hall1_1f_${lang}.png`,
-//     `${import.meta.env.BASE_URL}images/competition/hall2_1f_${lang}.png`,
-//     `${import.meta.env.BASE_URL}images/competition/hall2_4f_${lang}.png`,
-//   ]
-// })
+const venueImages = computed(() => {
+  const lang = locale.value === 'tw' ? 'zh' : 'en'
+  return [
+    `${import.meta.env.BASE_URL}images/competition/hall1_1f_${lang}.png`,
+    `${import.meta.env.BASE_URL}images/competition/hall2_1f_${lang}.png`,
+    `${import.meta.env.BASE_URL}images/competition/hall2_4f_${lang}.png`,
+  ]
+})
 
-// const swiperConfig = {
-//   loop: true,
-//   autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: true,
-//   },
-//   navigation: {
-//     prevEl: '.swiper-button-prev',
-//     nextEl: '.swiper-button-next',
-//   },
-//   modules: [Autoplay, Navigation, A11y],
-// }
+const swiperConfig = {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+  modules: [Autoplay, Navigation, A11y],
+}
 
 // Lightbox setup
-// const {
-//   show,
-//   onHide,
-//   visibleRef,
-//   indexRef,
-//   imgsRef
-// } = useEasyLightbox({
-//   imgs: venueImages.value,
-//   initIndex: 0
-// })
+const {
+  show,
+  onHide,
+  visibleRef,
+  indexRef,
+  imgsRef
+} = useEasyLightbox({
+  imgs: venueImages.value,
+  initIndex: 0
+})
 
-// // Update lightbox images when language changes
-// watch(venueImages, (newImages) => {
-//   imgsRef.value = newImages
-// })
+// Update lightbox images when language changes
+watch(venueImages, (newImages) => {
+  imgsRef.value = newImages
+})
 
-// // Show lightbox at specific index
-// const showLightbox = (index: number) => {
-//   indexRef.value = index
-//   show()
-// }
+// Show lightbox at specific index
+const showLightbox = (index: number) => {
+  indexRef.value = index
+  show()
+}
 </script>
 <style lang="scss" scoped>
 .host-copy {

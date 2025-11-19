@@ -487,6 +487,8 @@ export default {
     快來解鎖體驗吧！`,
     theme_exhibition: '主題展示區',
     theme_exhibition_desc: '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
+    redeem_location_title: '兌換位置',
+    skill_mission_title: '技能出任務',
   },
   notFound: {
     title: '找不到頁面',

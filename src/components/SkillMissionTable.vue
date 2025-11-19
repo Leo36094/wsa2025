@@ -1,5 +1,6 @@
 <template>
   <div class="skill-mission-table-wrapper">
+    <h2 class="skill-mission-title">{{ $t('involved.skill_mission_title') }}</h2>
     <div class="table-container">
       <table class="skill-mission-table">
         <thead>
@@ -12,72 +13,60 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Row 1 & 2 (merged first column) -->
+          <!-- Row 1: 休閒區 first row -->
           <tr>
-            <td :data-label="tableData.headers.experienceArea" rowspan="2" class="merged-cell preserve-line-breaks">
+            <td :data-label="tableData.headers.experienceArea" rowspan="2" colspan="2" class="merged-cell preserve-line-breaks">
               {{ tableData.items[0].experienceArea }}
-            </td>
-            <td :data-label="tableData.headers.redemptionArea" rowspan="2" class="merged-cell">
-              {{ tableData.items[0].redemptionArea }}
             </td>
             <td :data-label="tableData.headers.howToParticipate" rowspan="2" class="merged-cell">
               {{ tableData.items[0].howToParticipate }}
             </td>
-            <td :data-label="tableData.headers.howToRedeem" rowspan="2" class="merged-cell">
+            <td :data-label="tableData.headers.howToRedeem">
               {{ tableData.items[0].howToRedeem }}
             </td>
-            <td :data-label="tableData.headers.giftGiveaways" rowspan="2" class="merged-cell">
+            <td :data-label="tableData.headers.giftGiveaways">
               {{ tableData.items[0].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 2 (placeholder for rowspan) -->
+          <!-- Row 2: 休閒區 second row -->
           <tr class="continuation-row">
-          </tr>
-          <!-- Row 3 -->
-          <tr>
-            <td :data-label="tableData.headers.experienceArea"></td>
-            <td
-              :data-label="tableData.headers.redemptionArea"
-              class="preserve-line-breaks"
-              colspan="3"
-            >
+            <td :data-label="tableData.headers.howToRedeem" class="preserve-line-breaks">
               {{ tableData.items[1].howToRedeem }}
             </td>
-            <td
-              :data-label="tableData.headers.giftGiveaways"
-              class="preserve-line-breaks gift-list"
-            >
+            <td :data-label="tableData.headers.giftGiveaways" class="preserve-line-breaks gift-list">
               {{ tableData.items[1].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 4 -->
+          <!-- Row 3: 主題展示區 first row -->
           <tr>
             <td :data-label="tableData.headers.experienceArea" rowspan="2" class="merged-cell">
               {{ tableData.items[2].experienceArea }}
             </td>
-            <td :data-label="tableData.headers.redemptionArea" rowspan="2" class="merged-cell">
-              {{ tableData.items[2].redemptionArea }}
-            </td>
-            <td :data-label="tableData.headers.howToParticipate" rowspan="2" class="merged-cell">
+            <td
+              :data-label="tableData.headers.redemptionArea"
+              colspan="3"
+              class="preserve-line-breaks"
+            >
               {{ tableData.items[2].howToParticipate }}
-            </td>
-            <td :data-label="tableData.headers.howToRedeem">
-              {{ tableData.items[2].howToRedeem }}
             </td>
             <td :data-label="tableData.headers.giftGiveaways">
               {{ tableData.items[2].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 5 -->
+          <!-- Row 4: 主題展示區 second row -->
           <tr class="continuation-row">
-            <td :data-label="tableData.headers.howToRedeem" class="preserve-line-breaks">
-              {{ tableData.items[3].howToRedeem }}
+            <td
+              :data-label="tableData.headers.redemptionArea"
+              colspan="3"
+              class="preserve-line-breaks"
+            >
+              {{ tableData.items[3].howToParticipate }}
             </td>
             <td :data-label="tableData.headers.giftGiveaways" class="preserve-line-breaks">
               {{ tableData.items[3].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 6 -->
+          <!-- Row 5: Try A Skill ① -->
           <tr>
             <td :data-label="tableData.headers.experienceArea" class="preserve-line-breaks">
               {{ tableData.items[4].experienceArea }}
@@ -95,7 +84,7 @@
               {{ tableData.items[4].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 7 -->
+          <!-- Row 6: Try A Skill ④ -->
           <tr>
             <td :data-label="tableData.headers.experienceArea" class="preserve-line-breaks">
               {{ tableData.items[5].experienceArea }}
@@ -113,7 +102,7 @@
               {{ tableData.items[5].giftGiveaways }}
             </td>
           </tr>
-          <!-- Row 8 -->
+          <!-- Row 7: Try A Skill ⑤ -->
           <tr>
             <td :data-label="tableData.headers.experienceArea" class="preserve-line-breaks">
               {{ tableData.items[6].experienceArea }}
@@ -156,6 +145,15 @@ const tableData = computed(() => {
   max-width: 12rem; // 1200px
   margin: 0 auto;
   padding: 0.4rem;
+}
+
+.skill-mission-title {
+  font-size: 0.48rem;
+  font-weight: 700;
+  line-height: normal;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.4rem;
 }
 
 .table-container {
@@ -278,8 +276,13 @@ const tableData = computed(() => {
     padding: 0.3rem;
   }
 
+  .skill-mission-title {
+    font-size: 0.4rem;
+    margin-bottom: 0.3rem;
+  }
+
   .skill-mission-table {
-    font-size: 0.13rem;
+    font-size: 0.14rem;
 
     thead th {
       padding: 0.14rem 0.1rem;
@@ -291,64 +294,35 @@ const tableData = computed(() => {
   }
 }
 
-// Mobile styles - Card layout
+// Mobile styles - Keep table format with horizontal scroll
 @include mobile {
   .skill-mission-table-wrapper {
     max-width: 100%;
-    padding: 0rem;
+    padding: 0.16rem;
+  }
+
+  .skill-mission-title {
+    font-size: 0.32rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .table-container {
+    // Enable horizontal scrolling
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
   }
 
   .skill-mission-table {
-    font-size: 0.12rem;
+    font-size: 0.13rem;
+    min-width: 8rem; // Minimum width to ensure table doesn't get too compressed
 
-    thead {
-      display: none; // Hide header on mobile for card layout
+    thead th {
+      padding: 0.12rem 0.08rem;
+      font-size: 0.13rem;
     }
 
-    tbody {
-      tr {
-        display: block;
-        margin-bottom: 0.16rem;
-        border: 0.01rem solid #e0e0e0;
-        border-radius: 0.08rem;
-        box-shadow: 0 0.02rem 0.04rem rgba(0, 0, 0, 0.1);
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        &.continuation-row {
-          display: none; // Hide continuation rows on mobile
-        }
-      }
-
-      td {
-        display: block;
-        padding: 0.08rem 0.12rem;
-        border: none;
-        border-bottom: 0.01rem solid #f0f0f0;
-        text-align: left !important;
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &::before {
-          content: attr(data-label);
-          font-weight: 700;
-          color: #18475b;
-          display: block;
-          margin-bottom: 0.04rem;
-        }
-
-        &:empty {
-          display: none;
-        }
-
-        &[colspan] {
-          padding-left: 0.12rem;
-        }
-      }
+    tbody td {
+      padding: 0.1rem 0.08rem;
     }
   }
 }

@@ -140,7 +140,7 @@ const tableData = computed(() => {
   }
 
   .theme-exhibition-table {
-    font-size: 0.13rem;
+    font-size: 0.14rem;
 
     thead th {
       padding: 0.14rem 0.1rem;
@@ -152,62 +152,30 @@ const tableData = computed(() => {
   }
 }
 
-// Mobile styles - Card layout
+// Mobile styles - Keep table format with horizontal scroll
 @include mobile {
   .theme-exhibition-table-wrapper {
     max-width: 100%;
-    padding: 0rem;
+    padding: 0.16rem;
+  }
+
+  .table-container {
+    // Enable horizontal scrolling
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
   }
 
   .theme-exhibition-table {
-    font-size: 0.12rem;
+    font-size: 0.13rem;
+    min-width: 6rem; // Minimum width to ensure table doesn't get too compressed
 
-    thead {
-      display: none; // Hide header on mobile for card layout
+    thead th {
+      padding: 0.12rem 0.08rem;
+      font-size: 0.13rem;
     }
 
-    tbody {
-      tr {
-        display: block;
-        margin-bottom: 0.16rem;
-        border: 0.01rem solid #e0e0e0;
-        border-radius: 0.08rem;
-        box-shadow: 0 0.02rem 0.04rem rgba(0, 0, 0, 0.1);
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      td {
-        display: block;
-        padding: 0.08rem 0.12rem;
-        border-bottom: 0.01rem solid #f0f0f0;
-        text-align: left !important;
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &::before {
-          content: attr(data-label);
-          font-weight: 700;
-          color: #18475b;
-          display: block;
-          margin-bottom: 0.04rem;
-        }
-
-        &:first-child {
-          background-color: #18475b;
-          color: #fff;
-          font-weight: 700;
-          text-align: center !important;
-
-          &::before {
-            color: #c8e14b;
-          }
-        }
-      }
+    tbody td {
+      padding: 0.1rem 0.08rem;
     }
   }
 }

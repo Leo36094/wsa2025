@@ -529,6 +529,8 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     `,
     theme_exhibition: 'Theme Exhibition',
     theme_exhibition_desc: 'Partnering with twenty of Taiwan’s leading technology and flagship enterprises, this themed exhibition showcases a grand display centered around Artificial Intelligence (AI). Spanning smart manufacturing, healthcare, and digital content, the exhibition integrates the six major skill-competition categories and highlights Taiwan’s cutting-edge advancements in AI technology, demonstrating the nation’s forward-looking technological strength.',
+    redeem_location_title: 'Prize Redemption Area',
+    skill_mission_title: 'Skill Mission',
   },
   notFound: {
     title: 'Page Not Found',

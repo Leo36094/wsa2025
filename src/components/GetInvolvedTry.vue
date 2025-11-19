@@ -3,6 +3,23 @@
     <div class="section-try-info">
       <div class="club-decoration"></div>
       <div class="banner-text">
+        <span class="banner-text__text" v-for="text in themeTextList" :key="text">{{ text }}</span>
+      </div>
+      <div class="title-divider"></div>
+      <h2 class="title">{{ $t('involved.theme_exhibition') }}</h2>
+      <div class="content">
+        <p class="content-desc" v-html="$t('involved.theme_exhibition_desc')"></p>
+      </div>
+      <div class="theme-item">
+        <img src="/images/host/trySkill/try-banner.png" alt="Theme Exhibition" />
+      </div>
+    </div>
+    <div class="section-try-table">
+      <ThemeExhibitionTable />
+    </div>
+    <div class="section-try-info">
+      <div class="club-decoration"></div>
+      <div class="banner-text">
         <span class="banner-text__text" v-for="text in bannerTextList" :key="text">{{ text }}</span>
       </div>
       <div class="title-divider"></div>
@@ -25,13 +42,19 @@
     <div class="section-try-table">
       <TrySkillTable />
     </div>
+    <div class="section-try-table">
+      <SkillMissionTable />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
 import TrySkillTable from './TrySkillTable.vue'
+import ThemeExhibitionTable from './ThemeExhibitionTable.vue'
+import SkillMissionTable from './SkillMissionTable.vue'
 
 const bannerTextList = ['TRY', 'A', 'SKILL']
+const themeTextList = ['Theme', 'Exhibit']
 
 // Gallery data - completely data-driven approach
 const galleryData = [
@@ -75,7 +98,7 @@ $divider-color: #c8e14b;
   color: #fff;
   text-align: left;
   .section-try-info {
-  background-color: $bg-color;
+    background-color: $bg-color;
     padding: 0.8rem;
     display: flex;
     flex-direction: column;
@@ -134,7 +157,14 @@ $divider-color: #c8e14b;
     gap: 0.16rem;
     position: relative;
   }
-
+  .theme-item {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: contain;
+      aspect-ratio: 4/1;
+    }
+  }
   .gallery-item {
     display: flex;
     flex-direction: column;

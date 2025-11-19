@@ -434,7 +434,6 @@ export default {
     <li>懇請有意參與者留意後續發布之詳細資訊。</li>
     </ul>
     `,
-    theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     tour_title: '參加/團體導覽資訊',
     tour_article_main_title:
@@ -486,6 +485,8 @@ export default {
     <br><br>
     體驗全程免費！參加還有機會獲得亞洲技能競賽限定紀念品（數量有限，送完為止）<br>
     快來解鎖體驗吧！`,
+    theme_exhibition: '主題展示區',
+    theme_exhibition_desc: '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
   },
   notFound: {
     title: '找不到頁面',

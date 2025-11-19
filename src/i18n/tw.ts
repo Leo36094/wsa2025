@@ -29,7 +29,7 @@ export default {
     competition_tab_03: '會員國',
     competition_tab_04: '參與國',
     involved_tab_01: '贊助商',
-    involved_tab_02: '協辦方',
+    involved_tab_02: '協辦單位',
     involved_tab_03: '簽證',
     involved_tab_04: '論壇',
     involved_tab_05: '參加/團體導覽資訊',

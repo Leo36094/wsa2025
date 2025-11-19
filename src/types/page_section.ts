@@ -8,6 +8,7 @@ export const SECTION_ID = {
   Member: 'member',
   Competitor: 'competitor',
   Sponsorship: 'sponsorship',
+  CoOrganizer: 'co-organizer',
   Visa: 'visa',
   Forum: 'forum',
   Toruisum: 'tourism',
@@ -54,6 +55,7 @@ export type CompetitionSectionValue = typeof COMPETITION_SECTION_ENUM[keyof type
 
 export const INVOLVED_SECTION_ENUM = {
   Sponsorship: `#${SECTION_ID.Sponsorship}`,
+  CoOrganizer: `#${SECTION_ID.CoOrganizer}`,
   Visa: `#${SECTION_ID.Visa}`,
   Forum: `#${SECTION_ID.Forum}`,
   Tourguide: `#${SECTION_ID.Tourguide}`,

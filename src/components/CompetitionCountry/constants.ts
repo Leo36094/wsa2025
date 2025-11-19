@@ -34,7 +34,6 @@ export const COUNTRIES_MAP = {
 // All participating countries sorted by English names (31 countries total)
 export const PARTICIPATING_COUNTRIES = [
   { code: 'AU', name: '澳洲', nameEn: 'Australia', flag: 'AU_flag', link: 'https://www.worldskills.org.au/', ratio: '2 / 1' },
-  // { code: 'AZ', name: '亞塞拜然', nameEn: 'Azerbaijan', flag: 'AZ_flag', link: 'https://www.instagram.com/worldskillsazerbaijan/', ratio: '2 / 1' },
   { code: 'BN', name: '汶萊', nameEn: 'Brunei Darussalam', flag: 'BN_flag', link: 'https://ibte.edu.bn/', ratio: '2 / 1' },
   { code: 'TW', name: '中華台北', nameEn: 'Chinese Taipei', flag: 'TW_flag', link: 'https://reurl.cc/ekV0nR', ratio: '6250 / 4167' },
   { code: 'SZ', name: '史瓦帝尼', nameEn: 'Eswatini', flag: 'SZ_flag', link: 'https://reurl.cc/1kxyoD', ration: '3/2' },
@@ -42,11 +41,9 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'HU', name: '匈牙利', nameEn: 'Hungary', flag: 'HU_flag', link: 'https://mkik.hu/kepzes-oktatas', ratio: '2 / 1' },
   { code: 'IN', name: '印度', nameEn: 'India', flag: 'IN_flag', link: 'https://nsdcindia.org/' },
   { code: 'ID', name: '印尼', nameEn: 'Indonesia', flag: 'ID_flag', link: 'https://www.instagram.com/puspresnas/' },
-  // { code: 'IR', name: '伊朗', nameEn: 'Iran', flag: 'IR_flag', link: 'https://www.facebook.com/WorldSkillsIran/', ratio: '7 / 4' },
   { code: 'JP', name: '日本', nameEn: 'Japan', flag: 'JP_flag', link: 'https://worldskills.jp/en/' },
-  // { code: 'JO', name: '約旦', nameEn: 'Hashemite Kingdom of Jordan', flag: 'JO_flag', link: 'https://reurl.cc/5R3GVR', ratio: '2 / 1' },
   { code: 'KR', name: '韓國', nameEn: 'Korea', flag: 'KR_flag', link: 'https://meister.hrdkorea.or.kr/eng/main.do' },
-  { code: 'KW', name: '科威特', nameEn: 'Kuwait', flag: 'KW_flag', link: 'https://www.paaet.edu.kw/en/main/vision-and-mission/', ratio: '2 / 1' },
+  { code: 'BH', name: '巴林', nameEn: 'Kingdom of Bahrain', flag: 'BH_flag', link: 'https://www.facebook.com/skillsbahrain' },
   { code: 'KG', name: '吉爾吉斯', nameEn: 'Kyrgyzstan', flag: 'KG_flag', link: 'https://www.instagram.com/worldskillskyrgyzstan', ratio: '5 / 3' },
   { code: 'LI', name: '列支敦斯登', nameEn: 'Principality of Liechtenstein', flag: 'LI_flag', link: 'https://www.worldskills.li/', ratio: '5 / 3' },
   { code: 'MY', name: '馬來西亞', nameEn: 'Malaysia', flag: 'MY_flag', link: 'https://www.skillsmalaysia.gov.my/ms/', ratio: '2 / 1' },
@@ -65,5 +62,4 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'AE', name: '阿拉伯聯合大公國', nameEn: 'United Arab Emirates', flag: 'AE_flag', link: 'https://www.emiratesskills.ae/en/Pages/default.aspx', ratio: '2 / 1' },
   { code: 'UK', name: '英國', nameEn: 'United Kingdom', flag: 'UK_flag', link: 'https://www.worldskillsuk.org/', ratio: '2 / 1' },
   { code: 'UZ', name: '烏茲別克', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
-  // { code: 'VN', name: '越南', nameEn: 'Vietnam', flag: 'VN_flag', link: 'https://english.molisa.gov.vn/topic/242157' },
 ]

@@ -3,6 +3,11 @@ import type { CountryBySkillData } from '@/types/try_skill'
 // Traditional Chinese data
 export const countryBySkillDataTw: CountryBySkillData = {
   title: '各職類參賽國家',
+  timeInfo: {
+    startTime: '09:00',
+    breakTime: '11:30 ~ 14:00',
+    endTime: '18:00'
+  },
   headers: {
     code: '代號',
     skill: '職類',
@@ -60,6 +65,11 @@ export const countryBySkillDataTw: CountryBySkillData = {
 // English data
 export const countryBySkillDataEn: CountryBySkillData = {
   title: 'Participating Countries by Skill Category',
+  timeInfo: {
+    startTime: '09:00',
+    breakTime: '11:30 ~ 14:00',
+    endTime: '18:00'
+  },
   headers: {
     code: 'Code',
     skill: 'Skill',
@@ -102,7 +112,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
     { code: '50', skill: '3D Digital Game Art', memberCountries: 'Chinese Taipei, South Korea, Japan, Thailand, Malaysia', nonMemberCountries: 'United Kingdom' },
     { code: '53', skill: 'Cloud Computing', memberCountries: 'Chinese Taipei, South Korea, Japan, India, Qatar', nonMemberCountries: 'Australia' },
     { code: '54', skill: 'Cyber Security', memberCountries: 'Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Qatar', nonMemberCountries: 'Australia' },
-    { code: '58', skill: 'Digital Construction', memberCountries: 'Chinese Taipei, Japan, Malaysia, Saudi Arabia (10/30)', nonMemberCountries: 'Germany' },
+    { code: '58', skill: 'Digital Construction', memberCountries: 'Chinese Taipei, Japan, Malaysia, Saudi Arabia', nonMemberCountries: 'Germany' },
     { code: '59', skill: 'Industrial Design Technology', memberCountries: 'United Arab Emirates, Chinese Taipei, South Korea, Uzbekistan, India', nonMemberCountries: '' },
     { code: '63', skill: 'Robot Systems Integration', memberCountries: 'Chinese Taipei, South Korea, Japan, Malaysia, India', nonMemberCountries: '' },
     { code: 'J16', skill: 'Electronics for Junior', memberCountries: 'United Arab Emirates, Chinese Taipei, Saudi Arabia, Qatar', nonMemberCountries: '' },

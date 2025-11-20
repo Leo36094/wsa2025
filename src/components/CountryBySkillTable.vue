@@ -1,6 +1,25 @@
 <template>
   <div class="country-by-skill-table-wrapper">
     <h2 class="table-title">{{ tableData.title }}</h2>
+
+    <!-- Time Information Card -->
+    <div class="time-info-card">
+      <div class="time-info-item">
+        <span class="time-label">{{ $t('page_tabs.country_by_skill_start_time') }}</span>
+        <span class="time-value">{{ tableData.timeInfo.startTime }}</span>
+      </div>
+      <div class="time-info-divider"></div>
+      <div class="time-info-item">
+        <span class="time-label">{{ $t('page_tabs.country_by_skill_break_time') }}</span>
+        <span class="time-value">{{ tableData.timeInfo.breakTime }}</span>
+      </div>
+      <div class="time-info-divider"></div>
+      <div class="time-info-item">
+        <span class="time-label">{{ $t('page_tabs.country_by_skill_end_time') }}</span>
+        <span class="time-value">{{ tableData.timeInfo.endTime }}</span>
+      </div>
+    </div>
+
     <div class="table-container">
       <table class="country-by-skill-table">
         <thead>
@@ -51,6 +70,45 @@ const tableData = computed(() => {
   color: #18475b;
   text-align: center;
   margin-bottom: 0.24rem;
+}
+
+.time-info-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.24rem;
+  padding: 0.2rem 0.24rem;
+  margin-bottom: 0.24rem;
+  background: linear-gradient(135deg, #18475b 0%, #2a5f75 100%);
+  border-radius: 0.08rem;
+  box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.1);
+}
+
+.time-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.08rem;
+}
+
+.time-label {
+  font-size: 0.14rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.time-value {
+  font-size: 0.18rem;
+  color: #c8e14b;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.time-info-divider {
+  width: 0.01rem;
+  height: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .table-container {
@@ -165,6 +223,23 @@ const tableData = computed(() => {
     margin-bottom: 0.2rem;
   }
 
+  .time-info-card {
+    gap: 0.16rem;
+    padding: 0.16rem 0.2rem;
+  }
+
+  .time-label {
+    font-size: 0.13rem;
+  }
+
+  .time-value {
+    font-size: 0.16rem;
+  }
+
+  .time-info-divider {
+    height: 0.36rem;
+  }
+
   .country-by-skill-table {
     font-size: 0.14rem;
 
@@ -188,6 +263,25 @@ const tableData = computed(() => {
   .table-title {
     font-size: 0.2rem;
     margin-bottom: 0.16rem;
+  }
+
+  .time-info-card {
+    flex-direction: column;
+    gap: 0.12rem;
+    padding: 0.16rem;
+  }
+
+  .time-label {
+    font-size: 0.12rem;
+  }
+
+  .time-value {
+    font-size: 0.15rem;
+  }
+
+  .time-info-divider {
+    width: 100%;
+    height: 0.01rem;
   }
 
   .table-container {

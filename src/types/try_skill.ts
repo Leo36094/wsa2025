@@ -62,6 +62,11 @@ export interface CountryBySkillItem {
 
 export interface CountryBySkillData {
   title: string
+  timeInfo: {
+    startTime: string
+    breakTime: string
+    endTime: string
+  }
   headers: {
     code: string
     skill: string

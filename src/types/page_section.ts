@@ -7,6 +7,7 @@ export const SECTION_ID = {
   Competition: 'competition',
   Member: 'member',
   Competitor: 'competitor',
+  CountryBySkill: 'country-by-skill',
   Sponsorship: 'sponsorship',
   CoOrganizer: 'co-organizer',
   Visa: 'visa',
@@ -48,6 +49,7 @@ export const COMPETITION_SECTION_ENUM = {
   Schedule: `#${SECTION_ID.Schedule}`,
   Member: `#${SECTION_ID.Member}`,
   Competitor: `#${SECTION_ID.Competitor}`,
+  CountryBySkill: `#${SECTION_ID.CountryBySkill}`,
 } as const;
 
 export type CompetitionSection = keyof typeof COMPETITION_SECTION_ENUM;

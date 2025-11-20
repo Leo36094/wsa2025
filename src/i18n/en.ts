@@ -28,6 +28,7 @@ export default {
     competition_tab_02: 'Schedule',
     competition_tab_03: 'WSA Member Countries',
     competition_tab_04: 'Participating Countries',
+    competition_tab_05: 'Participating Countries by Skill Category',
     involved_tab_01: 'Sponsorship',
     involved_tab_02: 'Co-Organizer',
     involved_tab_03: 'VISA',

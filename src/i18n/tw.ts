@@ -28,6 +28,7 @@ export default {
     competition_tab_02: '日程',
     competition_tab_03: '會員國',
     competition_tab_04: '參與國',
+    competition_tab_05: '各職類參賽國家',
     involved_tab_01: '贊助商',
     involved_tab_02: '協辦單位',
     involved_tab_03: '簽證',

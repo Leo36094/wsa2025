@@ -52,3 +52,22 @@ export interface SkillMissionData {
   items: SkillMissionItem[]
 }
 
+// Country by Skill table data types
+export interface CountryBySkillItem {
+  code: string
+  skill: string
+  memberCountries: string
+  nonMemberCountries: string
+}
+
+export interface CountryBySkillData {
+  title: string
+  headers: {
+    code: string
+    skill: string
+    memberCountries: string
+    nonMemberCountries: string
+  }
+  items: CountryBySkillItem[]
+}
+

@@ -24,6 +24,7 @@ import GetInvolvedForum from '@/components/GetInvolvedForum.vue'
 import GetInvolvedTour from '@/components/GetInvolvedTour.vue'
 import GetInvolvedNotice from '@/components/GetInvolvedNotice.vue'
 import GetInvolvedSponsorship from '@/components/GetInvolvedSponsorship.vue'
+import GetInvolvedCoOrganizer from '@/components/GetInvolvedCoOrganizer.vue'
 import GetInvolvedTry from '@/components/GetInvolvedTry.vue'
 import useHashTabChange from '@/composables/useHashTabChange'
 
@@ -36,22 +37,26 @@ const tabs = computed(() => [
   },
   {
     label: t('page_tabs.involved_tab_02'),
-    value: INVOLVED_SECTION_ENUM.Visa,
+    value: INVOLVED_SECTION_ENUM.CoOrganizer,
   },
   {
     label: t('page_tabs.involved_tab_03'),
-    value: INVOLVED_SECTION_ENUM.Forum,
+    value: INVOLVED_SECTION_ENUM.Visa,
   },
   {
     label: t('page_tabs.involved_tab_04'),
-    value: INVOLVED_SECTION_ENUM.Tourguide,
+    value: INVOLVED_SECTION_ENUM.Forum,
   },
   {
     label: t('page_tabs.involved_tab_05'),
-    value: INVOLVED_SECTION_ENUM.Notice,
+    value: INVOLVED_SECTION_ENUM.Tourguide,
   },
   {
     label: t('page_tabs.involved_tab_06'),
+    value: INVOLVED_SECTION_ENUM.Notice,
+  },
+  {
+    label: t('page_tabs.involved_tab_07'),
     value: INVOLVED_SECTION_ENUM.Try,
   },
 ])
@@ -60,6 +65,7 @@ const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'get-involve
 
 const components: Record<InvolvedSectionValue, Component> = {
   [INVOLVED_SECTION_ENUM.Sponsorship]: GetInvolvedSponsorship,
+  [INVOLVED_SECTION_ENUM.CoOrganizer]: GetInvolvedCoOrganizer,
   [INVOLVED_SECTION_ENUM.Visa]: GetInvolvedVisa,
   [INVOLVED_SECTION_ENUM.Forum]: GetInvolvedForum,
   [INVOLVED_SECTION_ENUM.Tourguide]: GetInvolvedTour,

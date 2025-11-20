@@ -2,8 +2,8 @@
   <div class="section-forum" aria-labelledby="forum-title" data-aos="fade-up">
     <BaseTitle class="section-forum__title" :title="$t('involved.forum_title')" />
     <div class="image-group">
-      <img src="/images/getInvolved/forum/forum_01_1028.jpg" alt="forum" />
-      <img src="/images/getInvolved/forum/forum_02_1028.jpg" alt="forum" />
+      <img src="/images/getInvolved/forum/forum_01.jpg" alt="forum" />
+      <img src="/images/getInvolved/forum/forum_02.jpg" alt="forum" />
     </div>
     <div class="section-forum__desc">
       <p>
@@ -13,24 +13,6 @@
         }}</a>
       </p>
     </div>
-    <!-- <p
-      class="section-forum__desc"
-      v-html="$t('involved.forum_desc')"
-      role="region"
-      :aria-label="$t('involved.forum_desc_aria_label')"
-    ></p>
-    <div class="section-forum__content">
-      <div class="section-forum__content-item" v-for="item in conferenceList" :key="item.label">
-        <div class="label">{{ item.label }}</div>
-        <div class="value" v-if="!item.insertHTML">{{ item.value }}</div>
-        <div class="value" v-if="item.insertHTML" v-html="item.value" />
-      </div>
-      <p class="section-forum__conference-note">{{ $t('involved.forum_conference_note') }}</p>
-    </div>
-    <div class="section-forum__notice">
-      <h3>{{ $t('involved.forum_notice_title') }}</h3>
-      <div v-html="$t('involved.forum_notice_desc')" />
-    </div> -->
   </div>
 </template>
 <script setup lang="ts">

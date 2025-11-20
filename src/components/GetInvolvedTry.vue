@@ -3,6 +3,23 @@
     <div class="section-try-info">
       <div class="club-decoration"></div>
       <div class="banner-text">
+        <span class="banner-text__text" v-for="text in themeTextList" :key="text">{{ text }}</span>
+      </div>
+      <div class="title-divider"></div>
+      <h2 class="title">{{ $t('involved.theme_exhibition') }}</h2>
+      <div class="content">
+        <p class="content-desc" v-html="$t('involved.theme_exhibition_desc')"></p>
+      </div>
+      <div class="theme-item">
+        <img src="/images/host/trySkill/try-banner.png" alt="Theme Exhibition" />
+      </div>
+    </div>
+    <div class="section-try-table">
+      <ThemeExhibitionTable />
+    </div>
+    <div class="section-try-info">
+      <div class="club-decoration"></div>
+      <div class="banner-text">
         <span class="banner-text__text" v-for="text in bannerTextList" :key="text">{{ text }}</span>
       </div>
       <div class="title-divider"></div>
@@ -25,13 +42,44 @@
     <div class="section-try-table">
       <TrySkillTable />
     </div>
+    <div class="section-try-table">
+      <SkillMissionTable />
+    </div>
+    <div class="section-redeem-info">
+      <div class="redeem-container">
+        <h2 class="redeem-title">{{ $t('involved.redeem_location_title') }}</h2>
+        <div class="redeem-images">
+          <div
+            v-for="(image, index) in redeemImages"
+            :key="image.id"
+            class="redeem-image-item"
+            @click="showLightbox(index)"
+          >
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+        </div>
+      </div>
+      <vue-easy-lightbox
+        :visible="visibleRef"
+        :imgs="lightboxImages"
+        :index="indexRef"
+        @hide="onHide"
+      />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useEasyLightbox } from 'vue-easy-lightbox'
 import TrySkillTable from './TrySkillTable.vue'
+import ThemeExhibitionTable from './ThemeExhibitionTable.vue'
+import SkillMissionTable from './SkillMissionTable.vue'
+
+const { locale } = useI18n()
 
 const bannerTextList = ['TRY', 'A', 'SKILL']
+const themeTextList = ['Theme', 'Exhibit']
 
 // Gallery data - completely data-driven approach
 const galleryData = [
@@ -65,6 +113,48 @@ const galleryImages = computed(() =>
     offset: offsetConfig.desktop[index] || 0,
   })),
 )
+
+// Redeem images - i18n based image selection
+const redeemImages = computed(() => {
+  const lang = locale.value === 'en' ? 'en' : 'zh'
+  return [
+    {
+      id: 1,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_1_${lang}.jpg`,
+      alt: 'Redeem information 1',
+    },
+    {
+      id: 2,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_2_${lang}.jpg`,
+      alt: 'Redeem information 2',
+    },
+    {
+      id: 3,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_3_${lang}.jpg`,
+      alt: 'Redeem information 3',
+    },
+  ]
+})
+
+// Lightbox images array for vue-easy-lightbox
+const lightboxImages = computed(() => redeemImages.value.map(img => img.src))
+
+// Setup lightbox
+const {
+  show,
+  onHide,
+  visibleRef,
+  indexRef
+} = useEasyLightbox({
+  imgs: lightboxImages.value,
+  initIndex: 0
+})
+
+// Show lightbox with specific image index
+const showLightbox = (index: number) => {
+  indexRef.value = index
+  show()
+}
 </script>
 <style lang="scss" scoped>
 $bg-color: #18475b;
@@ -75,7 +165,7 @@ $divider-color: #c8e14b;
   color: #fff;
   text-align: left;
   .section-try-info {
-  background-color: $bg-color;
+    background-color: $bg-color;
     padding: 0.8rem;
     display: flex;
     flex-direction: column;
@@ -134,7 +224,14 @@ $divider-color: #c8e14b;
     gap: 0.16rem;
     position: relative;
   }
-
+  .theme-item {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: contain;
+      aspect-ratio: 4/1;
+    }
+  }
   .gallery-item {
     display: flex;
     flex-direction: column;
@@ -161,6 +258,64 @@ $divider-color: #c8e14b;
     padding: 0.8rem 0.8rem 0 0.8rem;
     display: flex;
     justify-content: center;
+  }
+
+  // Redeem info section
+  .section-redeem-info {
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .redeem-container {
+    width: 100%;
+    max-width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .redeem-title {
+    font-size: 0.48rem;
+    font-weight: 700;
+    line-height: normal;
+    color: #333;
+    text-align: left;
+  }
+
+  .redeem-images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.16rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .redeem-image-item {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.08rem);
+
+      img {
+        box-shadow: 0 0.08rem 0.24rem rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.08rem;
+      box-shadow: 0 0.04rem 0.16rem rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
   }
 }
 @include tablet {
@@ -196,6 +351,28 @@ $divider-color: #c8e14b;
 
     .section-try-table {
       padding: 0.4rem;
+    }
+
+    .section-redeem-info {
+      padding: 0.4rem;
+    }
+
+    .redeem-container {
+      gap: 0.3rem;
+    }
+
+    .redeem-title {
+      font-size: 0.4rem;
+    }
+
+    .redeem-images {
+      gap: 0.12rem;
+    }
+
+    .redeem-image-item {
+      img {
+        border-radius: 0.06rem;
+      }
     }
   }
 }
@@ -241,6 +418,31 @@ $divider-color: #c8e14b;
 
     .section-try-table {
       padding: 0.2rem;
+    }
+
+    .section-redeem-info {
+      padding: 0.2rem;
+    }
+
+    .redeem-container {
+      gap: 0.2rem;
+    }
+
+    .redeem-title {
+      font-size: 0.32rem;
+    }
+
+    .redeem-images {
+      flex-direction: column;
+      gap: 0.16rem;
+    }
+
+    .redeem-image-item {
+      width: 100%;
+
+      img {
+        border-radius: 0.04rem;
+      }
     }
   }
 }

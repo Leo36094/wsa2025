@@ -28,12 +28,18 @@ export default {
     competition_tab_02: '日程',
     competition_tab_03: '會員國',
     competition_tab_04: '參與國',
+    competition_tab_05: '各職類參賽國家',
+    country_by_skill_date: '競賽日期',
+    country_by_skill_start_time: '競賽開始時間',
+    country_by_skill_break_time: '中午休息時間',
+    country_by_skill_end_time: '競賽結束時間',
     involved_tab_01: '贊助商',
-    involved_tab_02: '簽證',
-    involved_tab_03: '論壇',
-    involved_tab_04: '參加/團體導覽資訊',
-    involved_tab_05: '入境須知',
-    involved_tab_06: '技能體驗站',
+    involved_tab_02: '協辦單位',
+    involved_tab_03: '簽證',
+    involved_tab_04: '論壇',
+    involved_tab_05: '參加/團體導覽資訊',
+    involved_tab_06: '入境須知',
+    involved_tab_07: '技能體驗站',
     media_tab_01: '媒體申請及規範',
     media_tab_02: '主題廣告',
     media_tab_03: '職類介紹',
@@ -433,7 +439,6 @@ export default {
     <li>懇請有意參與者留意後續發布之詳細資訊。</li>
     </ul>
     `,
-    theme_exhibition: 'Theme Exhibition',
     try_out: 'Try A Skill',
     tour_title: '參加/團體導覽資訊',
     tour_article_main_title:
@@ -485,6 +490,11 @@ export default {
     <br><br>
     體驗全程免費！參加還有機會獲得亞洲技能競賽限定紀念品（數量有限，送完為止）<br>
     快來解鎖體驗吧！`,
+    theme_exhibition: '主題展示區',
+    theme_exhibition_desc: '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
+    redeem_location_title: '兌換位置',
+    skill_mission_title: '技能出任務',
+    competition_time: '競賽時間 11/27 ~ 11/29',
   },
   notFound: {
     title: '找不到頁面',

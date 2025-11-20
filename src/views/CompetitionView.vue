@@ -20,6 +20,7 @@ import CompetitionBanner from '@/components/CompetitionBanner.vue'
 import CompetitionSchedule from '@/components/CompetitionSchedule.vue'
 import CompetitionMembers from '@/components/CompetitionCountry/Members.vue'
 import CompetitionCompetitors from '@/components/CompetitionCountry/Competitors.vue'
+import CompetitionCountryBySkill from '@/components/CompetitionCountryBySkill.vue'
 
 import { COMPETITION_SECTION_ENUM, type CompetitionSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
@@ -41,12 +42,14 @@ const components: Record<CompetitionSectionValue, Component> = {
   [COMPETITION_SECTION_ENUM.Schedule]: CompetitionSchedule,
   [COMPETITION_SECTION_ENUM.Member]: CompetitionMembers,
   [COMPETITION_SECTION_ENUM.Competitor]: CompetitionCompetitors,
+  [COMPETITION_SECTION_ENUM.CountryBySkill]: CompetitionCountryBySkill,
 }
 
 const phase2Content = computed(() => {
   const phase2Sections: CompetitionSectionValue[] = [
     COMPETITION_SECTION_ENUM.Member,
     COMPETITION_SECTION_ENUM.Competitor,
+    COMPETITION_SECTION_ENUM.CountryBySkill,
   ]
   return phase2Sections.includes(activeTab.value as CompetitionSectionValue)
 })

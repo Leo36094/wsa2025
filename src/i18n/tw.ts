@@ -29,6 +29,7 @@ export default {
     competition_tab_03: '會員國',
     competition_tab_04: '參與國',
     competition_tab_05: '各職類參賽國家',
+    country_by_skill_date: '競賽日期',
     country_by_skill_start_time: '競賽開始時間',
     country_by_skill_break_time: '中午休息時間',
     country_by_skill_end_time: '競賽結束時間',
@@ -493,6 +494,7 @@ export default {
     theme_exhibition_desc: '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
     redeem_location_title: '兌換位置',
     skill_mission_title: '技能出任務',
+    competition_time: '競賽時間 11/27 ~ 11/29',
   },
   notFound: {
     title: '找不到頁面',

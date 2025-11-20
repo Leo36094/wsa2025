@@ -4,6 +4,7 @@ import type { CountryBySkillData } from '@/types/try_skill'
 export const countryBySkillDataTw: CountryBySkillData = {
   title: '各職類參賽國家',
   timeInfo: {
+    competitionDate: '11/27 ~ 11/29',
     startTime: '09:00',
     breakTime: '11:30 ~ 14:00',
     endTime: '18:00'
@@ -66,6 +67,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
 export const countryBySkillDataEn: CountryBySkillData = {
   title: 'Participating Countries by Skill Category',
   timeInfo: {
+    competitionDate: '11/27 ~ 11/29',
     startTime: '09:00',
     breakTime: '11:30 ~ 14:00',
     endTime: '18:00'

@@ -29,6 +29,7 @@ export default {
     competition_tab_03: 'WSA Member Countries',
     competition_tab_04: 'Participating Countries',
     competition_tab_05: 'Participating Countries by Skill Category',
+    country_by_skill_date: 'Competition Date',
     country_by_skill_start_time: 'Competition Start Time',
     country_by_skill_break_time: 'Lunch Break',
     country_by_skill_end_time: 'Competition End Time',
@@ -535,6 +536,7 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     theme_exhibition_desc: 'Partnering with twenty of Taiwan’s leading technology and flagship enterprises, this themed exhibition showcases a grand display centered around Artificial Intelligence (AI). Spanning smart manufacturing, healthcare, and digital content, the exhibition integrates the six major skill-competition categories and highlights Taiwan’s cutting-edge advancements in AI technology, demonstrating the nation’s forward-looking technological strength.',
     redeem_location_title: 'Prize Redemption Area',
     skill_mission_title: 'Skill Mission',
+    competition_time: 'Competition Time 11/27 ~ 11/29',
   },
   notFound: {
     title: 'Page Not Found',

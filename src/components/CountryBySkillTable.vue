@@ -5,6 +5,11 @@
     <!-- Time Information Card -->
     <div class="time-info-card">
       <div class="time-info-item">
+        <span class="time-label">{{ $t('page_tabs.country_by_skill_date') }}</span>
+        <span class="time-value">{{ tableData.timeInfo.competitionDate }}</span>
+      </div>
+      <div class="time-info-divider"></div>
+      <div class="time-info-item">
         <span class="time-label">{{ $t('page_tabs.country_by_skill_start_time') }}</span>
         <span class="time-value">{{ tableData.timeInfo.startTime }}</span>
       </div>

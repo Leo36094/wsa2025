@@ -22,6 +22,7 @@ export const COUNTRIES_MAP = {
   PS: { name: '巴勒斯坦', nameEn: 'Palestine', flag: 'PS_flag', link: 'https://www.facebook.com/Palestineskills/', ratio: '2 / 1' },
   PG: { name: '巴布亞新幾內亞', nameEn: 'Papua New Guinea', flag: 'PG_flag', link: 'https://web.dherst.gov.pg/', ratio: '4 / 3' },
   PH: { name: '菲律賓', nameEn: 'Philippines', flag: 'PH_flag', link: 'https://www.facebook.com/worldskillsphofficial/', ratio: '2 / 1' },
+  QA: { name: '卡達', nameEn: 'Qatar', flag: 'QA_flag', link: 'https://www.edu.gov.qa/en/News/Details/8812800', ratio: '25 / 6' },
   SA: { name: '沙烏地阿拉伯', nameEn: 'Saudi Arabia', flag: 'SA_flag', link: 'https://tvtc.gov.sa/En/Pages/default.aspx' },
   LK: { name: '斯里蘭卡', nameEn: 'Sri Lanka', flag: 'LK_flag', link: 'https://course.vta.lk/', ratio: '2 / 1' },
   TH: { name: '泰國', nameEn: 'Thailand', flag: 'TH_flag', link: 'https://www.facebook.com/worldskillsthailand/' },

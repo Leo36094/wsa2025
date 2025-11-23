@@ -39,7 +39,7 @@ export default {
     involved_tab_04: '論壇',
     involved_tab_05: '參加/團體導覽資訊',
     involved_tab_06: '入境須知',
-    involved_tab_07: '技能體驗站',
+    involved_tab_07: '主題展示/技能體驗站',
     media_tab_01: '媒體申請及規範',
     media_tab_02: '主題廣告',
     media_tab_03: '職類介紹',

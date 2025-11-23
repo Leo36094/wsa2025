@@ -39,7 +39,7 @@ export default {
     involved_tab_04: 'Forum',
     involved_tab_05: 'Guided Group Tours Registration',
     involved_tab_06: 'Notice for Inbound Travelers',
-    involved_tab_07: 'Try a Skill',
+    involved_tab_07: 'Theme Exhibition/Try a Skill',
     media_tab_01: 'Media Accreditation and Guidelines',
     media_tab_02: 'Theme Ad',
     media_tab_03: 'Skills Introduction',

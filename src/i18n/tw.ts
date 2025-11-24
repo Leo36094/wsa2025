@@ -491,7 +491,8 @@ export default {
     體驗全程免費！參加還有機會獲得亞洲技能競賽限定紀念品（數量有限，送完為止）<br>
     快來解鎖體驗吧！`,
     theme_exhibition: '主題展示區',
-    theme_exhibition_desc: '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
+    theme_exhibition_desc:
+      '攜手我國二十家頂尖科技、指標企業於主題展示區盛大展出，以人工智慧(AI)為核心，橫跨智慧製造、健康照護、數位內容等領域，結合技能競賽六大類群，跨足我國AI科技領域，展現台灣科技前瞻實力。',
     redeem_location_title: '兌換位置',
     skill_mission_title: '技能出任務',
     competition_time: '競賽時間 11/27 ~ 11/29',
@@ -564,6 +565,7 @@ export default {
     regulation_contact_department2: '全國中小企業總會',
     regulation_attachment_title: '2025亞洲技能競賽媒體規範',
     regulation_application_form_title: '2025亞洲技能競賽媒體識別證申請表',
-    regulation_application_form_link: ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">檔案上傳位置</a>',
+    regulation_application_form_link:
+      ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">檔案上傳位置</a>',
   },
 }

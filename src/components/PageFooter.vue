@@ -14,7 +14,7 @@
             </div>
             <div class="col address__street">
               <img class="icon" src="/images/ri_map-pin-fill-white.svg" alt="map-icon" />
-              <span>{{ $t('footer.address') }}</span>
+              <span class="link" @click="goVenueMap">{{ $t('footer.address') }}</span>
             </div>
           </div>
           <div class="social-media-group">
@@ -70,7 +70,20 @@
     </div>
   </footer>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const goVenueMap = async () => {
+  // 先跳轉到 competition tab
+  await router.push('/competition#competition')
+
+  // 短暫延遲後修改 hash 為地圖位置，讓瀏覽器自動滾動
+  setTimeout(() => {
+    window.location.hash = '#venue-map'
+  }, 100)
+}
+</script>
 <style lang="scss" scoped>
 .page-footer-wrapper {
   background-color: #180161;
@@ -86,6 +99,9 @@
     width: 0.24rem;
     height: 0.24rem;
     margin-right: 0.08rem;
+  }
+  .link {
+    cursor: pointer;
   }
   .row {
     @include flexCenter(column);

@@ -24,7 +24,7 @@
     </div>
 
     <!-- Venue Map Swiper -->
-    <div class="venue-swiper-container" data-aos="fade-up">
+    <div id="venue-map" class="venue-swiper-container" data-aos="fade-up">
       <Swiper class="venue-swiper" v-bind="swiperConfig">
         <SwiperSlide v-for="(image, index) in venueImages" :key="index" class="venue-slide">
           <img
@@ -93,15 +93,9 @@ const swiperConfig = {
 }
 
 // Lightbox setup
-const {
-  show,
-  onHide,
-  visibleRef,
-  indexRef,
-  imgsRef
-} = useEasyLightbox({
+const { show, onHide, visibleRef, indexRef, imgsRef } = useEasyLightbox({
   imgs: venueImages.value,
-  initIndex: 0
+  initIndex: 0,
 })
 
 // Update lightbox images when language changes

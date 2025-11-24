@@ -47,7 +47,7 @@ export default {
     media_tab_05: 'Competition Video',
   },
   footer: {
-    address: 'WorldSkills Asia P.O. Box: 108800 Abu Dhabi, UAE',
+    address: 'Venue Map',
     copyrights: 'Copyright © 2025 Worldskills Asia',
     download_brandbook: 'Download brandbook',
   },
@@ -170,7 +170,8 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     traffic_title: 'Transportation',
     transportation_suggestion: 'Transportation suggestion:',
     medic_title: 'Medical Map',
-    medic_desc: 'The following hospitals all offer emergency services and comprehensive multi-specialty medical care. Estimated distances and travel time may vary depending on traffic.',
+    medic_desc:
+      'The following hospitals all offer emergency services and comprehensive multi-specialty medical care. Estimated distances and travel time may vary depending on traffic.',
     tourist_title: 'Tourist Attractions',
     map_button: 'View on Google Map',
     muslim_title: 'Muslim Restaurants',
@@ -181,8 +182,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     title: 'Competition',
     title_tag: 'About',
     title_competition: 'Competition',
-    content:
-      `WorldSkills Asia Competitions are prestigious regional events where young professionals demonstrate their skills and technical expertise in various vocational trades. The competitions aim to benchmark skills excellence, promote technical and vocational education and training (TVET), and prepare participants for global events like WorldSkills International.<br><br>
+    content: `WorldSkills Asia Competitions are prestigious regional events where young professionals demonstrate their skills and technical expertise in various vocational trades. The competitions aim to benchmark skills excellence, promote technical and vocational education and training (TVET), and prepare participants for global events like WorldSkills International.<br><br>
       Competitors showcase their abilities in diverse skill categories with assessments conducted by industry experts and TVET professionals. These events strengthen TVET systems, address skills shortages, and provide participants with personal growth, career advancement, and international recognition. <br><br>
       By fostering collaboration among governments, industry, and educational institutions, the competitions contribute to developing a future-ready, skilled workforce across Asia.`,
     schedule_title: 'Competition Main Schedule',
@@ -231,9 +231,12 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_hall2_floor3_list2: '',
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
     members_title: 'WSA Member Countries',
-    members_desc: 'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 29 countries.',
-    competitors_title: '3rd WorldSkills Asia Competition <span class="title_tag">Participating Countries</span>',
-    competitors_desc: 'The 3rd WorldSkills Asia Competition has registered a total of 29 participating countries, including 18 member countries and 11 non-member countries.',
+    members_desc:
+      'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 29 countries.',
+    competitors_title:
+      '3rd WorldSkills Asia Competition <span class="title_tag">Participating Countries</span>',
+    competitors_desc:
+      'The 3rd WorldSkills Asia Competition has registered a total of 29 participating countries, including 18 member countries and 11 non-member countries.',
   },
   skills: {
     category_image: 'Skill Image {index}',
@@ -440,7 +443,8 @@ The skilled painter and decorator offers a range of services, from interpreting 
       <p>For further details, visit the <a href="https://www.boca.gov.tw/lp-181-2-xCat-2.html" target="_blank">Bureau of Consular Affairs, Ministry of Foreign Affairs</a></p>
       `,
     visa_arrival_procedures: 'Arrival Procedures',
-    visa_arrival_procedures_desc: 'Within three days prior to arriving in Taiwan, please complete an online immigration arrival card on the website of <a href="https://twac.immigration.gov.tw" target="_blank">the National Immigration Agency</a>',
+    visa_arrival_procedures_desc:
+      'Within three days prior to arriving in Taiwan, please complete an online immigration arrival card on the website of <a href="https://twac.immigration.gov.tw" target="_blank">the National Immigration Agency</a>',
     visa_arrival_entry: 'For entry procedures at ',
     visa_arrival_TPE: 'Taiwan Taoyuan International Airport',
     visa_arrival_TPE_link: 'https://www.taoyuan-airport.com/entry?lang=en',
@@ -462,8 +466,7 @@ The skilled painter and decorator offers a range of services, from interpreting 
     forum_conference_application: 'Registration Method',
     forum_conference_application_value: 'Online registration',
     forum_conference_contact: 'Contact Person',
-    forum_conference_contact_value:
-      `Ms. Amy Huang (<a href="mailto:amy_huang{'@'}nasme.org.tw" target="_blank">amy_huang{'@'}nasme.org.tw</a>)`,
+    forum_conference_contact_value: `Ms. Amy Huang (<a href="mailto:amy_huang{'@'}nasme.org.tw" target="_blank">amy_huang{'@'}nasme.org.tw</a>)`,
     forum_conference_note: 'Agenda & Full Registration Details: To be announced—please stay tuned!',
     forum_notice_title: 'Important Notes',
     forum_notice_desc: `
@@ -473,7 +476,8 @@ The skilled painter and decorator offers a range of services, from interpreting 
     </ul>
     `,
     tour_title: 'Guided Group Tours Registration',
-    tour_article_main_title: '🎉 WorldSkills Asia Taipei 2025 – Guided Group Tours Registration Now Open!',
+    tour_article_main_title:
+      '🎉 WorldSkills Asia Taipei 2025 – Guided Group Tours Registration Now Open!',
     tour_article_main_desc: `
     <p class="group">Asia’s largest skills competition is coming soon! </p>
     <div class="group">
@@ -503,7 +507,8 @@ The skilled painter and decorator offers a range of services, from interpreting 
     </div>
     `,
     notice_title: 'Notice for Inbound Travelers',
-    notice_desc: 'If you are carrying animals, plants, or their products into Taiwan, please consult the Animal and Plant Health Inspection Agency (APHIA), Ministry of Agriculture, in advance to understand relevant quarantine regulations. Upon arrival, please truthfully declare these items or apply for quarantine inspection to Customs or APHIA to avoid penalties.',
+    notice_desc:
+      'If you are carrying animals, plants, or their products into Taiwan, please consult the Animal and Plant Health Inspection Agency (APHIA), Ministry of Agriculture, in advance to understand relevant quarantine regulations. Upon arrival, please truthfully declare these items or apply for quarantine inspection to Customs or APHIA to avoid penalties.',
     notice_detail_block: `
     <div class='group'>
     Please note that travelers (including checked baggage) are strictly prohibited from bringing the following items into Taiwan:
@@ -533,7 +538,8 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
 </p>
     `,
     theme_exhibition: 'Theme Exhibition',
-    theme_exhibition_desc: 'Partnering with twenty of Taiwan’s leading technology and flagship enterprises, this themed exhibition showcases a grand display centered around Artificial Intelligence (AI). Spanning smart manufacturing, healthcare, and digital content, the exhibition integrates the six major skill-competition categories and highlights Taiwan’s cutting-edge advancements in AI technology, demonstrating the nation’s forward-looking technological strength.',
+    theme_exhibition_desc:
+      'Partnering with twenty of Taiwan’s leading technology and flagship enterprises, this themed exhibition showcases a grand display centered around Artificial Intelligence (AI). Spanning smart manufacturing, healthcare, and digital content, the exhibition integrates the six major skill-competition categories and highlights Taiwan’s cutting-edge advancements in AI technology, demonstrating the nation’s forward-looking technological strength.',
     redeem_location_title: 'Prize Redemption Area',
     skill_mission_title: 'Skill Mission',
     competition_time: 'Competition Time 11/27 ~ 11/29',
@@ -542,12 +548,12 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     title: 'Page Not Found',
     description: 'The page you are looking for does not exist.',
     backToHome: 'Back to Home',
-    suggestedLinks: 'You might want to visit'
+    suggestedLinks: 'You might want to visit',
   },
   nav: {
     competition: 'Competition',
     skills: 'Skills',
-    news: 'News'
+    news: 'News',
   },
   swiper: {
     aria_label_swiper_image: 'Swiper Image {index}',
@@ -570,12 +576,15 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     vod_coming_soon: 'Coming Soon',
     vod_coming_soon_subtitle: 'Competition videos will be available soon',
     regulation_title: 'Media Accreditation Notice – WorldSkills Asia Taipei 2025',
-    regulation_desc: 'To ensure the proper conduct of the competition and protect the rights of competitors, all media personnel wishing to conduct interviews or photography during the 2025 WorldSkills Asia Competition must apply for a Media Identification Badge.',
+    regulation_desc:
+      'To ensure the proper conduct of the competition and protect the rights of competitors, all media personnel wishing to conduct interviews or photography during the 2025 WorldSkills Asia Competition must apply for a Media Identification Badge.',
     regulation_application_title: 'Application Period & Procedure',
     regulation_application_online: 'Online Application',
-    regulation_application_online_desc: 'Media personnel can download and sign the “WorldSkills Asia Taipei 2025 Media Application and Compliance Agreement” from the official website and complete the online application from now until November 15, 2025.',
+    regulation_application_online_desc:
+      'Media personnel can download and sign the “WorldSkills Asia Taipei 2025 Media Application and Compliance Agreement” from the official website and complete the online application from now until November 15, 2025.',
     regulation_application_onsite: 'On-site Application',
-    regulation_application_onsite_desc: 'Media personnel who have not applied in advance may apply in person at the Media Center, 4th Floor, Hall 2, Nangang Exhibition Center, during the competition period (November 26–30, 2025, 08:00–18:00).',
+    regulation_application_onsite_desc:
+      'Media personnel who have not applied in advance may apply in person at the Media Center, 4th Floor, Hall 2, Nangang Exhibition Center, during the competition period (November 26–30, 2025, 08:00–18:00).',
     regulation_onsite_guideline_title: 'On-site Guidelines',
     regulation_onsite_guideline_desc: `
     <ul>
@@ -602,6 +611,7 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     regulation_contact_department2: 'National Association of Small and Medium Enterprises',
     regulation_attachment_title: '2025 WorldSkills Asia Taipei – Media Regulations',
     regulation_application_form_title: 'Media Badge Application Form Upload',
-    regulation_application_form_link: ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">File Upload Here</a>',
-  }
+    regulation_application_form_link:
+      ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">File Upload Here</a>',
+  },
 }

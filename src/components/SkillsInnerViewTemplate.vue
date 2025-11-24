@@ -169,7 +169,7 @@ const imageList = computed(() => {
   return Array(6)
     .fill('')
     .map((_, index) => {
-      return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_group_0${index + 1}.jpg`
+      return `${import.meta.env.BASE_URL}images/wsa/Skills/skills_group_0${index + 1}.jpg?${Date.now()}`
     })
 })
 

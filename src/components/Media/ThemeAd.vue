@@ -4,7 +4,7 @@
 
     <div class="media-theme-ad-container">
       <AdItem
-        v-for="video in videos"
+        v-for="video in videoList"
         :key="video.id"
         :embed-id="video.embedId"
         :title="video.title"
@@ -14,15 +14,36 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import AdItem from '@/components/Media/AdItem.vue'
 
+const { locale } = useI18n()
+
 const videos = [
+  { id: 6, embedId: '6plkbO0C7qw', title: '2025亞洲技能競賽形象影片「技能在手，未來看我」' },
   { id: 1, embedId: 'MADffwpeixI', title: '2025亞洲技能競賽 宣傳動畫  星火點燃：亞洲舞台的序曲' },
   { id: 2, embedId: 'vI3ynWG0XxI', title: '2025亞洲技能競賽 宣傳動畫  光影鑄就：巔峰技藝的刻印' },
   { id: 3, embedId: 'mL4wucM_Gd0', title: '2025亞洲技能競賽 宣傳動畫  競逐榮耀：夢想綻放的篇章' },
   { id: 4, embedId: 'u_e0AQ8zmKs', title: '2025亞洲技能競賽 宣傳動畫  熱浪不息：超越勝負的傳承' },
   { id: 5, embedId: 'ZlkJbbDhYcY', title: '2025亞洲技能競賽 宣傳動畫  聚光燈下：決戰時刻的屏息' },
 ]
+const videosEn = [
+  {
+    id: 6,
+    embedId: 'GB_lAKBUnpI',
+    title: '2025 WorldSkills Asia Competition Image Video “Hands on, Future on”',
+  },
+  { id: 1, embedId: 'MADffwpeixI', title: '2025亞洲技能競賽 宣傳動畫  星火點燃：亞洲舞台的序曲' },
+  { id: 2, embedId: 'vI3ynWG0XxI', title: '2025亞洲技能競賽 宣傳動畫  光影鑄就：巔峰技藝的刻印' },
+  { id: 3, embedId: 'mL4wucM_Gd0', title: '2025亞洲技能競賽 宣傳動畫  競逐榮耀：夢想綻放的篇章' },
+  { id: 4, embedId: 'u_e0AQ8zmKs', title: '2025亞洲技能競賽 宣傳動畫  熱浪不息：超越勝負的傳承' },
+  { id: 5, embedId: 'ZlkJbbDhYcY', title: '2025亞洲技能競賽 宣傳動畫  聚光燈下：決戰時刻的屏息' },
+]
+
+const videoList = computed(() => {
+  return locale.value === 'en' ? videosEn : videos
+})
 </script>
 
 <style lang="scss" scoped>
@@ -33,6 +54,7 @@ const videos = [
   .media-theme-ad-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
     gap: 0.4rem;
     width: 100%;
 

@@ -4,7 +4,7 @@
     <HomeCountdown />
     <HomeGallery />
     <HomeQuickFact />
-    <!-- <HomeYoutubeVideo /> -->
+    <HomeYoutubeVideo />
     <HomeNews />
     <HomeSponsors />
   </div>
@@ -16,7 +16,7 @@ import HomeGallery from '@/components/HomeGallery.vue'
 import HomeNews from '@/components/HomeNews.vue'
 import HomeCountdown from '@/components/HomeCountdown.vue'
 import HomeQuickFact from '@/components/HomeQuickFact.vue'
-// import HomeYoutubeVideo from '@/components/HomeYoutubeVideo.vue'
+import HomeYoutubeVideo from '@/components/HomeYoutubeVideo.vue'
 import HomeSponsors from '@/components/HomeSponsors.vue'
 </script>
 <style lang="scss" scoped>

@@ -25,6 +25,13 @@
       </div>
     </div>
 
+    <!-- Schedule Button -->
+    <div class="schedule-button-wrapper">
+      <router-link to="/competition#schedule" class="schedule-button">
+        {{ $t('page_tabs.country_by_skill_view_schedule') }}
+      </router-link>
+    </div>
+
     <div class="table-container">
       <table class="country-by-skill-table">
         <thead>
@@ -114,6 +121,38 @@ const tableData = computed(() => {
   width: 0.01rem;
   height: 0.4rem;
   background: rgba(255, 255, 255, 0.2);
+}
+
+.schedule-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.24rem;
+}
+
+.schedule-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.12rem 0.32rem;
+  background: linear-gradient(135deg, #c8e14b 0%, #a8c639 100%);
+  color: #18475b;
+  font-size: 0.16rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0.08rem;
+  box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #a8c639 0%, #8ea62f 100%);
+    box-shadow: 0 0.04rem 0.12rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.02rem);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.02rem 0.06rem rgba(0, 0, 0, 0.15);
+  }
 }
 
 .table-container {
@@ -245,6 +284,15 @@ const tableData = computed(() => {
     height: 0.36rem;
   }
 
+  .schedule-button-wrapper {
+    margin-bottom: 0.2rem;
+  }
+
+  .schedule-button {
+    padding: 0.1rem 0.28rem;
+    font-size: 0.15rem;
+  }
+
   .country-by-skill-table {
     font-size: 0.14rem;
 
@@ -287,6 +335,15 @@ const tableData = computed(() => {
   .time-info-divider {
     width: 100%;
     height: 0.01rem;
+  }
+
+  .schedule-button-wrapper {
+    margin-bottom: 0.16rem;
+  }
+
+  .schedule-button {
+    padding: 0.1rem 0.24rem;
+    font-size: 0.14rem;
   }
 
   .table-container {

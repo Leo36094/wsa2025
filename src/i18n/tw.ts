@@ -33,6 +33,7 @@ export default {
     country_by_skill_start_time: '競賽開始時間',
     country_by_skill_break_time: '中午休息時間',
     country_by_skill_end_time: '競賽結束時間',
+    country_by_skill_view_schedule: '查看賽程',
     involved_tab_01: '贊助商',
     involved_tab_02: '協辦單位',
     involved_tab_03: '簽證',

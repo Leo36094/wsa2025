@@ -33,6 +33,7 @@ export default {
     country_by_skill_start_time: 'Competition Start Time',
     country_by_skill_break_time: 'Lunch Break',
     country_by_skill_end_time: 'Competition End Time',
+    country_by_skill_view_schedule: 'View Schedule',
     involved_tab_01: 'Sponsorship',
     involved_tab_02: 'Co-Organizer',
     involved_tab_03: 'VISA',

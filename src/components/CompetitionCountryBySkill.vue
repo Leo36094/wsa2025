@@ -44,7 +44,7 @@ import CountryBySkillTable from '@/components/CountryBySkillTable.vue'
   font-size: 0.15rem;
   line-height: 1.8;
   color: #18475b;
-  text-align: justify;
+  text-align: left;
 }
 
 @include tablet {

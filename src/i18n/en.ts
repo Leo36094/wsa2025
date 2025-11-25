@@ -41,7 +41,7 @@ export default {
     involved_tab_06: 'Notice for Inbound Travelers',
     involved_tab_07: 'Theme Exhibition/Try a Skill',
     media_tab_01: 'Media Accreditation and Guidelines',
-    media_tab_02: 'Theme Ad',
+    media_tab_02: 'Image Video/Theme Ad',
     media_tab_03: 'Skills Introduction',
     media_tab_04: 'Opening and Closing Live Stream',
     media_tab_05: 'Competition Video',

@@ -24,7 +24,7 @@ const { locale } = useI18n()
 // YouTube video IDs based on locale
 const youtubeVideoIds = {
   tw: 'ZBJ5f9hCMOU',
-  en: 'wJkcZVe9WVY'
+  en: 'ad4sc2REsVY',
 }
 
 // Compute the YouTube embed URL based on current locale
@@ -90,4 +90,3 @@ const youtubeEmbedUrl = computed(() => {
   }
 }
 </style>
-

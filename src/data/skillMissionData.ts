@@ -22,7 +22,8 @@ export const skillMissionDataTw: SkillMissionData = {
       redemptionArea: '',
       howToParticipate: '',
       howToRedeem: '競賽後統一抽出，以親領為原則若需運送費用自付',
-      giftGiveaways: '1. ASUS Expert Book 1\n2. ASUS護眼螢幕 電競套組\n3. 山水65吋液晶電視',
+      giftGiveaways:
+        '1. ASUS Expert Book1 筆電\n2. ASUS護眼電競螢幕(VA279HG)\n3. 電競套組\n4. 山水65吋液晶電視(SUTV-QG65220)',
     },
     {
       experienceArea: '主題展示區',
@@ -86,7 +87,7 @@ export const skillMissionDataEn: SkillMissionData = {
       howToRedeem:
         'The raffle will take place after the competition. Please note that prizes should be collected in person. Shipping costs will be charged if delivery is required.',
       giftGiveaways:
-        '1. ASUS Expert Book 1\n2. ASUS Eye Care Monitor Gaming Set\n3. Sansui 65" LCD TV',
+        '1. ASUS Expert Book B1\n2. ASUS Eye Care Gaming Monitor(VA279HG)\n3. Gaming Set\n4. Sansui QLED TV (SUTV-QG65220)',
     },
     {
       experienceArea: 'Theme\nExhibition',

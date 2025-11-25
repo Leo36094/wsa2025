@@ -34,6 +34,8 @@ export default {
     country_by_skill_break_time: 'Lunch Break',
     country_by_skill_end_time: 'Competition End Time',
     country_by_skill_view_schedule: 'View Schedule',
+    country_by_skill_note:
+      'The 2025 WorldSkills Asia Competition features 44 skills, and competitors will compete simultaneously throughout the competition period. The actual detailed schedule for each skill will be flexibly adjusted by the International Chief Expert appointed by WorldSkills Asia according to the test project content and on-site conditions. Therefore, the official website only provides the overall start and end times for public reference.',
     involved_tab_01: 'Sponsorship',
     involved_tab_02: 'Co-Organizer',
     involved_tab_03: 'VISA',

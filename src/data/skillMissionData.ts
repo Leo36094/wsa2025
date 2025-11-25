@@ -7,7 +7,7 @@ export const skillMissionDataTw: SkillMissionData = {
     redemptionArea: '兌換位置',
     howToParticipate: '活動方式',
     howToRedeem: '兌換機制',
-    giftGiveaways: '好禮贈品'
+    giftGiveaways: '好禮贈品',
   },
   items: [
     {
@@ -15,51 +15,52 @@ export const skillMissionDataTw: SkillMissionData = {
       redemptionArea: '',
       howToParticipate: '填寫心得卡',
       howToRedeem: '獲取Line@兌換券1張',
-      giftGiveaways: '徽章'
+      giftGiveaways: '徽章',
     },
     {
       experienceArea: '',
       redemptionArea: '',
       howToParticipate: '',
       howToRedeem: '競賽後統一抽出，以親領為原則若需運送費用自付',
-      giftGiveaways: '2021 ASUS TUF Gaming A15筆電 / TUF Gaming VG27AQL3A-W 電競螢幕 / ROG Strix Scope II RX 電競鍵盤\nROG Gladius III Core 有線電競滑鼠\nROG Delta S Core 電競耳機 /\n山水SANSUI  SUTV-QG65220\n65吋液晶電視'
+      giftGiveaways:
+        '1. ASUS Expert Book1 筆電\n2. ASUS護眼電競螢幕(VA279HG)\n3. 電競套組\n4. 山水65吋液晶電視(SUTV-QG65220)',
     },
     {
       experienceArea: '主題展示區',
       redemptionArea: '',
       howToParticipate: '體驗滿五個項目',
       howToRedeem: '獲取專屬好禮',
-      giftGiveaways: '環保購物袋'
+      giftGiveaways: '環保購物袋',
     },
     {
       experienceArea: '',
       redemptionArea: '',
       howToParticipate: '體驗滿十個項目',
       howToRedeem: '現場抽',
-      giftGiveaways: '扣式行李束帶/\n3D列印花盆 / 電競鍵盤'
+      giftGiveaways: '扣式行李束帶/\n3D列印花盆 / 電競鍵盤',
     },
     {
       experienceArea: 'Try A Skill\n2館1樓',
       redemptionArea: 'Try A Skill ①',
       howToParticipate: '體驗一個項目',
       howToRedeem: '獲取Line@抽獎券1張',
-      giftGiveaways: '窗花杯墊'
+      giftGiveaways: '窗花杯墊',
     },
     {
       experienceArea: 'Try A Skill\n2館4樓',
       redemptionArea: 'Try A Skill ④',
       howToParticipate: '體驗一個項目',
       howToRedeem: '獲取Line@抽獎券1張',
-      giftGiveaways: '亞洲賽紀念悠遊卡'
+      giftGiveaways: '亞洲賽紀念悠遊卡',
     },
     {
       experienceArea: 'Try A Skill\n1館1樓',
       redemptionArea: 'Try A Skill ⑤',
       howToParticipate: '體驗一個項目',
       howToRedeem: '獲取Line@抽獎券1張',
-      giftGiveaways: '亞洲賽紋樣水壺'
-    }
-  ]
+      giftGiveaways: '亞洲賽紋樣水壺',
+    },
+  ],
 }
 
 // English data
@@ -69,7 +70,7 @@ export const skillMissionDataEn: SkillMissionData = {
     redemptionArea: 'Redemption\nArea',
     howToParticipate: 'How to\nParticipate',
     howToRedeem: 'How to Redeem',
-    giftGiveaways: 'Gift Giveaways'
+    giftGiveaways: 'Gift Giveaways',
   },
   items: [
     {
@@ -77,50 +78,51 @@ export const skillMissionDataEn: SkillMissionData = {
       redemptionArea: '',
       howToParticipate: 'Fill out a feedback card',
       howToRedeem: 'Get one Line@ redemption coupon',
-      giftGiveaways: 'Pin'
+      giftGiveaways: 'Pin',
     },
     {
       experienceArea: '',
       redemptionArea: '',
       howToParticipate: '',
-      howToRedeem: 'The raffle will take place after the competition. Please note that prizes should be collected in person. Shipping costs will be charged if delivery is required.',
-      giftGiveaways: '2021 ASUS TUF Gaming A15 / TUF Gaming VG27AQL3A-W / ROG Strix Scope II RX\nROG Gladius III Core\nROG Delta S Core /\nSANSUI SUTV-QG65220\n65" LCD TV'
+      howToRedeem:
+        'The raffle will take place after the competition. Please note that prizes should be collected in person. Shipping costs will be charged if delivery is required.',
+      giftGiveaways:
+        '1. ASUS Expert Book B1\n2. ASUS Eye Care Gaming Monitor(VA279HG)\n3. Gaming Set\n4. Sansui QLED TV (SUTV-QG65220)',
     },
     {
       experienceArea: 'Theme\nExhibition',
       redemptionArea: '',
       howToParticipate: 'Complete five experience activities',
       howToRedeem: 'Get one Exclusive Gift',
-      giftGiveaways: 'Reusable shopping bag'
+      giftGiveaways: 'Reusable shopping bag',
     },
     {
       experienceArea: '',
       redemptionArea: '',
       howToParticipate: 'Complete ten experience activities',
       howToRedeem: 'On-site Lucky Draw',
-      giftGiveaways: 'Buckle Luggage Strap/\n3D Printed Flowerpot/ Gaming Keyboard'
+      giftGiveaways: 'Buckle Luggage Strap/\n3D Printed Flowerpot/ Gaming Keyboard',
     },
     {
       experienceArea: 'Try A Skill\n(2H1F)',
       redemptionArea: 'Try A Skill ①',
       howToParticipate: 'Experience one activity',
       howToRedeem: 'Get one Line@ raffle ticket',
-      giftGiveaways: 'Window Grille Coaster'
+      giftGiveaways: 'Window Grille Coaster',
     },
     {
       experienceArea: 'Try A Skill\n(2H4F)',
       redemptionArea: 'Try A Skill ④',
       howToParticipate: 'Experience one activity',
       howToRedeem: 'Get one Line@ raffle ticket',
-      giftGiveaways: 'Asia Competition EasyCard'
+      giftGiveaways: 'Asia Competition EasyCard',
     },
     {
       experienceArea: 'Try A Skill\n(1H1F)',
       redemptionArea: 'Try A Skill ⑤',
       howToParticipate: 'Experience one activity',
       howToRedeem: 'Get one Line@ raffle ticket',
-      giftGiveaways: 'Asia Competition Water Bottle'
-    }
-  ]
+      giftGiveaways: 'Asia Competition Water Bottle',
+    },
+  ],
 }
-

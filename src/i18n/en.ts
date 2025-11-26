@@ -37,7 +37,7 @@ export default {
     country_by_skill_note:
       'WorldSkills Asia Taipei 2025 Competition comprises 44 skills, with competitors undertaking their respective events concurrently throughout the competition period. The detailed schedules for each skill are subject to adjustment by the Chief Experts appointed by WorldSkills Asia, based on the requirements of the test projects and prevailing on-site conditions. Accordingly, the official website provides only the overall commencement and conclusion times of the competition for public reference.',
     involved_tab_01: 'Sponsorship',
-    involved_tab_02: 'Co-Organizer',
+    involved_tab_02: 'Event Partner',
     involved_tab_03: 'VISA',
     involved_tab_04: 'Forum',
     involved_tab_05: 'Guided Group Tours Registration',

@@ -6,19 +6,11 @@
   >
     <!-- <BaseTitle class="media-live-stream-title" :title="$t('media.live_stream_title')" /> -->
 
-    <!-- Coming Soon Display -->
-    <div class="coming-soon-container">
-      <h2 class="coming-soon-title">{{ $t('media.live_stream_coming_soon') }}</h2>
-      <p class="coming-soon-subtitle">{{ $t('media.live_stream_coming_soon_subtitle') }}</p>
-    </div>
-
-    <!-- Original content - commented out -->
-    <!--
     <div class="media-live-stream-container">
       <div class="yt-iframe" :class="{ loading: isLoading }">
         <iframe
           v-if="youtubeId"
-          :src="`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1`"
+          :src="`https://www.youtube.com/embed/${youtubeId}?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1`"
           :title="$t('media.live_stream_title')"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -31,35 +23,20 @@
         </div>
       </div>
     </div>
-    -->
   </section>
 </template>
 
 <script lang="ts" setup>
-// Temporarily commented out for Coming Soon display
-/*
-import { ref, onMounted } from 'vue'
-import BaseTitle from '@/components/BaseTitle.vue'
+import { ref } from 'vue'
 
-// Temporary variable for YouTube ID - will be replaced with actual ID later
-const youtubeId = ref<string>('')
+// YouTube live stream ID for Opening and Closing ceremony
+const youtubeId = ref<string>('U4-gKl5NI9k')
 const isLoading = ref<boolean>(false)
-
-// Example: const youtubeId = ref<string>('dQw4w9WgXcQ') // Replace with actual live stream ID
 
 // Handle iframe load event
 const onIframeLoad = () => {
   isLoading.value = false
 }
-
-// Watch for youtubeId changes (for future implementation)
-onMounted(() => {
-  // Simulate loading for demo purposes
-  // In real implementation, this would be triggered when youtubeId is set
-})
-*/
-
-// import BaseTitle from '@/components/BaseTitle.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -71,32 +48,6 @@ onMounted(() => {
     margin-bottom: 0.72rem;
   }
 
-  // Coming Soon Styles
-  .coming-soon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem 0.2rem;  // 40px 20px
-    text-align: center;
-    min-height: 50vh;
-  }
-
-  .coming-soon-title {
-    font-size: 0.32rem;  // 32px
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.16rem;  // 16px
-  }
-
-  .coming-soon-subtitle {
-    font-size: 0.18rem;  // 18px
-    color: #666;
-    opacity: 0.8;
-  }
-
-  // Original styles - commented out
-  /*
   .media-live-stream-container {
     @include flexCenter(row);
     padding: 0 0.2rem;
@@ -203,11 +154,8 @@ onMounted(() => {
       }
     }
   }
-  */
 }
 
-// Original animations - commented out
-/*
 // Shimmer animation for placeholder
 @keyframes shimmer {
   0% {
@@ -241,5 +189,4 @@ onMounted(() => {
     transform: rotate(360deg);
   }
 }
-*/
 </style>

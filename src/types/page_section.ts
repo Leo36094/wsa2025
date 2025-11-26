@@ -9,7 +9,7 @@ export const SECTION_ID = {
   Competitor: 'competitor',
   CountryBySkill: 'country-by-skill',
   Sponsorship: 'sponsorship',
-  CoOrganizer: 'co-organizer',
+  CoOrganizer: 'event-partner',
   Visa: 'visa',
   Forum: 'forum',
   Toruisum: 'tourism',

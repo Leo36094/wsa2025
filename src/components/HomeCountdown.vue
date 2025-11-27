@@ -6,7 +6,7 @@
     tabindex="0"
   >
     <div data-aos="fade" class="club-decoration" aria-hidden="true"></div>
-    <div v-show="!isTimeUp" class="countdown-container">
+    <!-- <div v-show="!isTimeUp" class="countdown-container">
       <h2
         data-aos="fade-right"
         data-aos-duration="500"
@@ -67,7 +67,7 @@
         {{ remainHours.join('') }} {{ $t('home.countdown_hours') }} {{ remainMins.join('') }}
         {{ $t('home.countdown_mins') }} {{ remainSecs.join('') }} {{ $t('home.countdown_secs') }}
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 <script setup lang="ts">

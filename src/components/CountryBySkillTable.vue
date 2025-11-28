@@ -18,11 +18,6 @@
         <span class="time-label">{{ $t('page_tabs.country_by_skill_break_time') }}</span>
         <span class="time-value">{{ tableData.timeInfo.breakTime }}</span>
       </div>
-      <div class="time-info-divider"></div>
-      <div class="time-info-item">
-        <span class="time-label">{{ $t('page_tabs.country_by_skill_end_time') }}</span>
-        <span class="time-value">{{ tableData.timeInfo.endTime }}</span>
-      </div>
     </div>
 
     <!-- Schedule Button -->
@@ -166,6 +161,7 @@ const tableData = computed(() => {
   background: #fff;
   border-radius: 0.08rem;
   box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.1);
+  position: relative; // For sticky positioning
 
   // Custom scrollbar styling
   &::-webkit-scrollbar {
@@ -249,6 +245,11 @@ const tableData = computed(() => {
 
       &:nth-child(2) {
         font-weight: 600;
+        position: sticky;
+        left: 0;
+        z-index: 5;
+        background: #fff;
+        box-shadow: 0.02rem 0 0.04rem rgba(0, 0, 0, 0.05);
       }
 
       &:nth-child(3),
@@ -256,6 +257,20 @@ const tableData = computed(() => {
         line-height: 1.6;
       }
     }
+  }
+
+  // Maintain hover effect on rows with sticky column
+  tbody tr:hover td:nth-child(2) {
+    background-color: #e8f5e9;
+  }
+
+  // Sticky skill column in header
+  thead th:nth-child(2) {
+    position: sticky;
+    left: 0;
+    z-index: 12;
+    background: #18475b;
+    box-shadow: 0.02rem 0 0.04rem rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -354,19 +369,52 @@ const tableData = computed(() => {
     // Enable horizontal scrolling
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+    position: relative;
   }
 
   .country-by-skill-table {
     font-size: 0.13rem;
-    min-width: 7rem; // Minimum width to ensure table doesn't get too compressed
+    min-width: 6rem; // Reduced from 7rem for better mobile fit
 
     thead th {
       padding: 0.12rem 0.08rem;
       font-size: 0.13rem;
+
+      // Sticky skill column with reduced width
+      &:nth-child(2) {
+        position: sticky;
+        left: 0;
+        z-index: 12; // Higher than thead's z-index (10)
+        background: #18475b;
+        box-shadow: 0.02rem 0 0.04rem rgba(0, 0, 0, 0.1);
+        min-width: 1.2rem; // Reduced from 2rem
+        max-width: 1.5rem;
+        white-space: normal; // Allow text wrapping
+        line-height: 1.4;
+      }
     }
 
     tbody td {
       padding: 0.1rem 0.08rem;
+
+      // Sticky skill column with reduced width
+      &:nth-child(2) {
+        position: sticky;
+        left: 0;
+        z-index: 5;
+        background: #fff;
+        box-shadow: 0.02rem 0 0.04rem rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+        min-width: 1.2rem; // Reduced from 2rem
+        max-width: 1.5rem;
+        white-space: normal; // Allow text wrapping
+        line-height: 1.4;
+      }
+    }
+
+    // Maintain hover effect on rows with sticky column
+    tbody tr:hover td:nth-child(2) {
+      background-color: #e8f5e9;
     }
   }
 }

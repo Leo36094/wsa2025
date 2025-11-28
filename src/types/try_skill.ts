@@ -67,7 +67,6 @@ export interface CountryBySkillData {
     competitionDate: string
     startTime: string
     breakTime: string
-    endTime: string
   }
   headers: {
     code: string

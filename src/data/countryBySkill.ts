@@ -7,7 +7,6 @@ export const countryBySkillDataTw: CountryBySkillData = {
     competitionDate: '11/27 ~ 11/29',
     startTime: '09:00',
     breakTime: '11:30 ~ 14:00',
-    endTime: '18:00',
   },
   headers: {
     code: '代號',
@@ -343,7 +342,6 @@ export const countryBySkillDataEn: CountryBySkillData = {
     competitionDate: '11/27 ~ 11/29',
     startTime: '09:00',
     breakTime: '11:30 ~ 14:00',
-    endTime: '18:00',
   },
   headers: {
     code: 'Code',

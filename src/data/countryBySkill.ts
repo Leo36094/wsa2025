@@ -173,7 +173,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '美髮',
       memberCountries: '中華臺北、南韓、泰國、馬來西亞、沙烏地阿拉伯、巴勒斯坦、印度',
       nonMemberCountries: '澳洲',
-      endTime: '15:30（每天都晚1小時）',
+      endTime: '15:30',
     },
     {
       code: '30',
@@ -511,7 +511,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Palestine, India',
       nonMemberCountries: 'Australia',
-      endTime: '15:30 (1 hour later each day)',
+      endTime: '15:30',
     },
     {
       code: '30',

@@ -40,6 +40,7 @@
             <th>{{ tableData.headers.skill }}</th>
             <th>{{ tableData.headers.memberCountries }}</th>
             <th>{{ tableData.headers.nonMemberCountries }}</th>
+            <th>{{ tableData.headers.endTime }}</th>
           </tr>
         </thead>
         <tbody>
@@ -47,7 +48,10 @@
             <td :data-label="tableData.headers.code">{{ item.code }}</td>
             <td :data-label="tableData.headers.skill">{{ item.skill }}</td>
             <td :data-label="tableData.headers.memberCountries">{{ item.memberCountries }}</td>
-            <td :data-label="tableData.headers.nonMemberCountries">{{ item.nonMemberCountries }}</td>
+            <td :data-label="tableData.headers.nonMemberCountries">
+              {{ item.nonMemberCountries }}
+            </td>
+            <td :data-label="tableData.headers.endTime">{{ item.endTime }}</td>
           </tr>
         </tbody>
       </table>
@@ -367,4 +371,3 @@ const tableData = computed(() => {
   }
 }
 </style>
-

@@ -85,10 +85,10 @@ const isTimeUp = ref(false)
 function updateTimeRemaining() {
   const target = dayjs('2025-11-27')
   const now = dayjs()
-  const diff = target.diff(now, 'day')
 
-  // Check if time is up (only consider days)
-  if (diff < 0) {
+  // Check if time is up (check total difference in seconds)
+  const totalDiff = target.diff(now, 'second')
+  if (totalDiff < 0) {
     isTimeUp.value = true
     if (timeInterval.value) {
       clearInterval(timeInterval.value)
@@ -96,6 +96,7 @@ function updateTimeRemaining() {
     return
   }
 
+  const diff = target.diff(now, 'day')
   const hours = target.diff(now, 'hour') % 24
   const mins = target.diff(now, 'minute') % 60
   const secs = target.diff(now, 'second') % 60

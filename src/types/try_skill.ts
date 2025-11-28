@@ -58,6 +58,7 @@ export interface CountryBySkillItem {
   skill: string
   memberCountries: string
   nonMemberCountries: string
+  endTime: string
 }
 
 export interface CountryBySkillData {
@@ -73,7 +74,7 @@ export interface CountryBySkillData {
     skill: string
     memberCountries: string
     nonMemberCountries: string
+    endTime: string
   }
   items: CountryBySkillItem[]
 }
-

@@ -202,7 +202,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       memberCountries:
         '中華臺北、南韓、泰國、馬來西亞、吉爾吉斯、汶萊、巴勒斯坦、菲律賓、烏茲別克、印度',
       nonMemberCountries: '羅馬尼亞、澳洲、史瓦帝尼',
-      endTime: '15:00',
+      endTime: '16:00',
     },
     {
       code: '35',
@@ -246,7 +246,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '健康照顧',
       memberCountries: '阿拉伯聯合大公國、中華臺北、泰國、烏茲別克、印度',
       nonMemberCountries: '澳洲',
-      endTime: '17:30',
+      endTime: '16:30',
     },
     {
       code: '50',
@@ -542,7 +542,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'Chinese Taipei, South Korea, Thailand, Malaysia, Kyrgyzstan, Brunei, Palestine, Philippines, Uzbekistan, India',
       nonMemberCountries: 'Romania, Australia, Eswatini',
-      endTime: '15:00',
+      endTime: '16:00',
     },
     {
       code: '35',
@@ -586,7 +586,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Health and Social Care',
       memberCountries: 'United Arab Emirates, Chinese Taipei, Thailand, Uzbekistan, India',
       nonMemberCountries: 'Australia',
-      endTime: '17:30',
+      endTime: '16:30',
     },
     {
       code: '50',

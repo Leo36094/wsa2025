@@ -166,7 +166,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '花藝',
       memberCountries: '中華臺北、日本、南韓、泰國',
       nonMemberCountries: '澳洲',
-      endTime: '14:30',
+      endTime: '14:00',
     },
     {
       code: '29',
@@ -216,7 +216,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '汽車噴漆',
       memberCountries: '阿拉伯聯合大公國、中華臺北、南韓、馬來西亞、烏茲別克',
       nonMemberCountries: '德國',
-      endTime: '13:00',
+      endTime: '13:30',
     },
     {
       code: '38',
@@ -503,7 +503,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Floristry',
       memberCountries: 'Chinese Taipei, Japan, South Korea, Thailand',
       nonMemberCountries: 'Australia',
-      endTime: '14:30',
+      endTime: '14:00',
     },
     {
       code: '29',
@@ -556,7 +556,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Car Painting',
       memberCountries: 'United Arab Emirates, Chinese Taipei, South Korea, Malaysia, Uzbekistan',
       nonMemberCountries: 'Germany',
-      endTime: '13:00',
+      endTime: '13:30',
     },
     {
       code: '38',

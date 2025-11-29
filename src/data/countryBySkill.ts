@@ -72,7 +72,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       memberCountries:
         '阿拉伯聯合大公國、中華臺北、南韓、泰國、馬來西亞、沙烏地阿拉伯、吉爾吉斯、阿曼、東帝汶、烏茲別克、卡達',
       nonMemberCountries: '',
-      endTime: '13:00',
+      endTime: '14:00',
     },
     {
       code: '12',
@@ -180,7 +180,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '美容',
       memberCountries: '中華臺北、南韓、馬來西亞、烏茲別克、印度',
       nonMemberCountries: '',
-      endTime: '12:30',
+      endTime: '12:00',
     },
     {
       code: '31',
@@ -408,7 +408,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'United Arab Emirates, Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Kyrgyzstan, Oman, East Timor, Uzbekistan, Qatar',
       nonMemberCountries: '',
-      endTime: '13:00',
+      endTime: '14:00',
     },
     {
       code: '12',
@@ -518,7 +518,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Beauty Therapy',
       memberCountries: 'Chinese Taipei, South Korea, Malaysia, Uzbekistan, India',
       nonMemberCountries: '',
-      endTime: '12:30',
+      endTime: '12:00',
     },
     {
       code: '31',

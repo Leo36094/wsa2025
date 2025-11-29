@@ -49,43 +49,18 @@
       </div>
     </div>
     <div class="section-try-table">
-      <TrySkillTable />
+      <TrySkillTables />
     </div>
     <div class="section-try-table">
       <SkillMissionTable />
-    </div>
-    <div class="section-redeem-info">
-      <div class="redeem-container">
-        <h2 class="redeem-title">{{ $t('involved.redeem_location_title') }}</h2>
-        <div class="redeem-images">
-          <div
-            v-for="(image, index) in redeemImages"
-            :key="image.id"
-            class="redeem-image-item"
-            @click="showLightbox(index)"
-          >
-            <img :src="image.src" :alt="image.alt" />
-          </div>
-        </div>
-      </div>
-      <vue-easy-lightbox
-        :visible="visibleRef"
-        :imgs="lightboxImages"
-        :index="indexRef"
-        @hide="onHide"
-      />
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useEasyLightbox } from 'vue-easy-lightbox'
-import TrySkillTable from './TrySkillTable.vue'
+import TrySkillTables from './TrySkillTables.vue'
 import ThemeExhibitionTable from './ThemeExhibitionTable.vue'
 import SkillMissionTable from './SkillMissionTable.vue'
-
-const { locale } = useI18n()
 
 const bannerTextList = ['TRY', 'A', 'SKILL']
 const themeTextList = ['Theme', 'Exhibit']
@@ -122,48 +97,6 @@ const galleryImages = computed(() =>
     offset: offsetConfig.desktop[index] || 0,
   })),
 )
-
-// Redeem images - i18n based image selection
-const redeemImages = computed(() => {
-  const lang = locale.value === 'en' ? 'en' : 'zh'
-  return [
-    {
-      id: 1,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_1_${lang}.jpg`,
-      alt: 'Redeem information 1',
-    },
-    {
-      id: 2,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_2_${lang}.jpg`,
-      alt: 'Redeem information 2',
-    },
-    {
-      id: 3,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_3_${lang}.jpg`,
-      alt: 'Redeem information 3',
-    },
-  ]
-})
-
-// Lightbox images array for vue-easy-lightbox
-const lightboxImages = computed(() => redeemImages.value.map(img => img.src))
-
-// Setup lightbox
-const {
-  show,
-  onHide,
-  visibleRef,
-  indexRef
-} = useEasyLightbox({
-  imgs: lightboxImages.value,
-  initIndex: 0
-})
-
-// Show lightbox with specific image index
-const showLightbox = (index: number) => {
-  indexRef.value = index
-  show()
-}
 </script>
 <style lang="scss" scoped>
 $bg-color: #18475b;
@@ -310,66 +243,6 @@ $divider-color: #c8e14b;
     font-weight: 700;
     white-space: nowrap;
   }
-
-  // Redeem info section
-  .section-redeem-info {
-    width: 100%;
-    padding: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .redeem-container {
-    width: 100%;
-    max-width: 12rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .redeem-title {
-    font-size: 0.48rem;
-    font-weight: 700;
-    line-height: normal;
-    color: #333;
-    text-align: left;
-  }
-
-  .redeem-images {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 0.16rem;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .redeem-image-item {
-    flex: 1;
-    min-width: 0;
-    cursor: pointer;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-
-    &:hover {
-      transform: translateY(-0.08rem);
-
-      img {
-        box-shadow: 0 0.08rem 0.24rem rgba(0, 0, 0, 0.15);
-      }
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 0.08rem;
-      box-shadow: 0 0.04rem 0.16rem rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-  }
 }
 @include tablet {
   .section-try {
@@ -421,28 +294,6 @@ $divider-color: #c8e14b;
 
     .location-value {
       font-size: 0.16rem;
-    }
-
-    .section-redeem-info {
-      padding: 0.4rem;
-    }
-
-    .redeem-container {
-      gap: 0.3rem;
-    }
-
-    .redeem-title {
-      font-size: 0.4rem;
-    }
-
-    .redeem-images {
-      gap: 0.12rem;
-    }
-
-    .redeem-image-item {
-      img {
-        border-radius: 0.06rem;
-      }
     }
   }
 }
@@ -505,31 +356,6 @@ $divider-color: #c8e14b;
 
     .location-value {
       font-size: 0.15rem;
-    }
-
-    .section-redeem-info {
-      padding: 0.2rem;
-    }
-
-    .redeem-container {
-      gap: 0.2rem;
-    }
-
-    .redeem-title {
-      font-size: 0.32rem;
-    }
-
-    .redeem-images {
-      flex-direction: column;
-      gap: 0.16rem;
-    }
-
-    .redeem-image-item {
-      width: 100%;
-
-      img {
-        border-radius: 0.04rem;
-      }
     }
   }
 }

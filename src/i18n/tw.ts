@@ -499,6 +499,8 @@ export default {
     redeem_location_title: '兌換位置',
     skill_mission_title: '技能出任務',
     competition_time: '競賽時間 11/27 ~ 11/29',
+    try_skill_location_label: '展示位置',
+    try_skill_location_value: '南港二館1樓',
   },
   notFound: {
     title: '找不到頁面',

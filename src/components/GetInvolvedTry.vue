@@ -15,6 +15,15 @@
       </div>
     </div>
     <div class="section-try-table">
+      <!-- Location Information Card -->
+      <div class="location-info-wrapper">
+        <div class="location-info-card">
+          <div class="location-info-item">
+            <span class="location-label">{{ $t('involved.try_skill_location_label') }}</span>
+            <span class="location-value">{{ $t('involved.try_skill_location_value') }}</span>
+          </div>
+        </div>
+      </div>
       <ThemeExhibitionTable />
     </div>
     <div class="section-try-info">
@@ -257,7 +266,49 @@ $divider-color: #c8e14b;
     width: 100%;
     padding: 0.8rem 0.8rem 0 0.8rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  // Location Information Card Wrapper
+  .location-info-wrapper {
+    width: 100%;
+    max-width: 12rem;
+    margin: 0 auto 0.24rem;
+    padding: 0 0.4rem;
+  }
+
+  .location-info-card {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 0.2rem 0.32rem;
+    background: linear-gradient(135deg, #18475b 0%, #2a5f75 100%);
+    border-radius: 0.08rem;
+    box-shadow: 0 0.02rem 0.08rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .location-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.08rem;
+  }
+
+  .location-label {
+    font-size: 0.14rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .location-value {
+    font-size: 0.18rem;
+    color: #c8e14b;
+    font-weight: 700;
+    white-space: nowrap;
   }
 
   // Redeem info section
@@ -298,7 +349,9 @@ $divider-color: #c8e14b;
     flex: 1;
     min-width: 0;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-0.08rem);
@@ -351,6 +404,23 @@ $divider-color: #c8e14b;
 
     .section-try-table {
       padding: 0.4rem;
+    }
+
+    .location-info-wrapper {
+      padding: 0 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .location-info-card {
+      padding: 0.16rem 0.28rem;
+    }
+
+    .location-label {
+      font-size: 0.13rem;
+    }
+
+    .location-value {
+      font-size: 0.16rem;
     }
 
     .section-redeem-info {
@@ -418,6 +488,23 @@ $divider-color: #c8e14b;
 
     .section-try-table {
       padding: 0.2rem;
+    }
+
+    .location-info-wrapper {
+      padding: 0 0.16rem;
+      margin-bottom: 0.16rem;
+    }
+
+    .location-info-card {
+      padding: 0.16rem 0.24rem;
+    }
+
+    .location-label {
+      font-size: 0.12rem;
+    }
+
+    .location-value {
+      font-size: 0.15rem;
     }
 
     .section-redeem-info {

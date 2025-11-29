@@ -546,6 +546,8 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     redeem_location_title: 'Prize Redemption Area',
     skill_mission_title: 'Skill Mission',
     competition_time: 'Competition Time 11/27 ~ 11/29',
+    try_skill_location_label: 'Location',
+    try_skill_location_value: 'TaiNEX 2 (Hall 2), 1st Floor',
   },
   notFound: {
     title: 'Page Not Found',

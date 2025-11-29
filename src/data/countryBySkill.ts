@@ -86,7 +86,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '汽車板金',
       memberCountries: '中華臺北、南韓、泰國、烏茲別克',
       nonMemberCountries: '英國、澳洲',
-      endTime: '15:00',
+      endTime: '14:00',
     },
     {
       code: '16',
@@ -422,7 +422,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Autobody Repair',
       memberCountries: 'Chinese Taipei, South Korea, Thailand, Uzbekistan',
       nonMemberCountries: 'United Kingdom, Australia',
-      endTime: '15:00',
+      endTime: '14:00',
     },
     {
       code: '16',

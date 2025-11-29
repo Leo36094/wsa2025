@@ -3,14 +3,8 @@
     <div class="media-vod-container">
       <!-- <BaseTitle class="media-vod-title" :title="$t('media.vod_title')" /> -->
 
-      <!-- Coming Soon Display -->
-      <div class="coming-soon-container">
-        <h2 class="coming-soon-title">{{ $t('media.vod_coming_soon') }}</h2>
-        <p class="coming-soon-subtitle">{{ $t('media.vod_coming_soon_subtitle') }}</p>
-      </div>
+      <BaseTitle class="media-vod-title" :title="$t('media.vod_title')" />
 
-      <!-- Original content - commented out -->
-      <!--
       <div class="vod-grid">
         <div
           v-for="(video, index) in videoList"
@@ -34,11 +28,8 @@
           <h3 class="video-title">{{ video.title }}</h3>
         </div>
       </div>
-      -->
     </div>
 
-    <!-- Video Modal - commented out -->
-    <!--
     <div v-if="selectedVideo" class="video-modal" @click="closeVideoModal">
       <div class="modal-content" @click.stop>
         <button class="close-button" @click="closeVideoModal" aria-label="關閉影片">
@@ -63,13 +54,10 @@
         </div>
       </div>
     </div>
-    -->
   </section>
 </template>
 
 <script lang="ts" setup>
-// Temporarily commented out for Coming Soon display
-/*
 import { ref, reactive } from 'vue'
 import BaseTitle from '@/components/BaseTitle.vue'
 
@@ -80,37 +68,17 @@ interface VideoItem {
   title: string
 }
 
-// Sample video data - replace with actual video IDs
+// Video data
 const videoList = reactive<VideoItem[]>([
   {
     id: '1',
-    youtubeId: 'VIDEO_ID_1', // Replace with actual video ID
-    title: '競賽精彩回顧 - 開幕典禮',
+    youtubeId: '9Rh1NuRMGhI',
+    title: '《拚了！一秒都不能浪費》',
   },
   {
     id: '2',
-    youtubeId: 'VIDEO_ID_2', // Replace with actual video ID
-    title: '技能展示 - 製造工程技術',
-  },
-  {
-    id: '3',
-    youtubeId: 'VIDEO_ID_3', // Replace with actual video ID
-    title: '競賽花絮 - 選手專訪',
-  },
-  {
-    id: '4',
-    youtubeId: 'VIDEO_ID_4', // Replace with actual video ID
-    title: '閉幕典禮 - 頒獎典禮',
-  },
-  {
-    id: '5',
-    youtubeId: 'VIDEO_ID_5', // Replace with actual video ID
-    title: '技能競賽 - 資訊技術類',
-  },
-  {
-    id: '6',
-    youtubeId: 'VIDEO_ID_6', // Replace with actual video ID
-    title: '國際交流 - 文化交流活動',
+    youtubeId: 'sHH5EUBtC-A',
+    title: '《氣氛拉滿，誰能超前？》',
   },
 ])
 
@@ -134,9 +102,6 @@ const handleImageError = (event: Event) => {
   const videoId = img.alt.match(/vi\/([^\/]+)\//)?.[1] || img.alt
   img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 }
-*/
-
-// import BaseTitle from '@/components/BaseTitle.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -146,45 +111,50 @@ const handleImageError = (event: Event) => {
 .media-vod {
   .media-vod-title {
     margin-bottom: 0.72rem;
+
+    @include tablet() {
+      margin-bottom: 0.48rem;
+    }
+
+    @include mobile() {
+      margin-bottom: 0.32rem;
+    }
   }
 
   .media-vod-container {
     max-width: 12.6rem;
     margin: 0 auto;
     padding: 0 0.2rem;
+
+    @include tablet() {
+      padding: 0 0.16rem;
+    }
+
+    @include mobile() {
+      padding: 0 0.12rem;
+    }
   }
 
-  // Coming Soon Styles
-  .coming-soon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem 0.2rem;  // 40px 20px
-    text-align: center;
-    min-height: 50vh;
-  }
-
-  .coming-soon-title {
-    font-size: 0.32rem;  // 32px
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.16rem;  // 16px
-  }
-
-  .coming-soon-subtitle {
-    font-size: 0.18rem;  // 18px
-    color: #666;
-    opacity: 0.8;
-  }
-
-  // Original styles - commented out
-  /*
   .vod-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.24rem;
     width: 100%;
+
+    @include tablet() {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.16rem;
+    }
+
+    @include mobile() {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.12rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 0.12rem;
+    }
   }
 
   .vod-item {
@@ -198,6 +168,10 @@ const handleImageError = (event: Event) => {
     &:hover {
       transform: translateY(-0.02rem);
       box-shadow: 0 0.04rem 0.16rem rgba(0, 0, 0, 0.15);
+    }
+
+    @include mobile() {
+      border-radius: 0.06rem;
     }
   }
 
@@ -231,6 +205,26 @@ const handleImageError = (event: Event) => {
         height: 0.24rem;
         margin-left: 0.02rem;
       }
+
+      @include tablet() {
+        width: 0.4rem;
+        height: 0.4rem;
+
+        svg {
+          width: 0.2rem;
+          height: 0.2rem;
+        }
+      }
+
+      @include mobile() {
+        width: 0.36rem;
+        height: 0.36rem;
+
+        svg {
+          width: 0.18rem;
+          height: 0.18rem;
+        }
+      }
     }
 
     &:hover {
@@ -249,12 +243,25 @@ const handleImageError = (event: Event) => {
     padding: 0.16rem;
     margin: 0;
     color: $default-color;
+    font-size: 0.16rem;
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include tablet() {
+      padding: 0.12rem;
+      font-size: 0.14rem;
+    }
+
+    @include mobile() {
+      padding: 0.1rem;
+      font-size: 0.13rem;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
   }
 
   // Video Modal
@@ -318,19 +325,6 @@ const handleImageError = (event: Event) => {
 
   // Tablet responsive
   @include tablet() {
-    .media-vod-container {
-      padding: 0 0.16rem;
-    }
-
-    .vod-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.16rem;
-    }
-
-    .video-title {
-      padding: 0.12rem;
-    }
-
     .modal-content {
       width: 95%;
       max-width: 8rem;
@@ -339,19 +333,6 @@ const handleImageError = (event: Event) => {
 
   // Mobile responsive
   @include mobile() {
-    .media-vod-container {
-      padding: 0 0.12rem;
-    }
-
-    .vod-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.12rem;
-    }
-
-    .video-title {
-      padding: 0.08rem;
-    }
-
     .modal-content {
       width: 98%;
       max-width: 6rem;
@@ -369,6 +350,5 @@ const handleImageError = (event: Event) => {
       }
     }
   }
-  */
 }
 </style>

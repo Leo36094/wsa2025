@@ -224,7 +224,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       memberCountries:
         '中華臺北、南韓、日本、泰國、馬來西亞、印尼、沙烏地阿拉伯、阿曼、菲律賓、烏茲別克、巴林',
       nonMemberCountries: '澳洲',
-      endTime: '15:00',
+      endTime: '16:19',
     },
     {
       code: '39',
@@ -246,7 +246,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '健康照顧',
       memberCountries: '阿拉伯聯合大公國、中華臺北、泰國、烏茲別克、印度',
       nonMemberCountries: '澳洲',
-      endTime: '16:30',
+      endTime: '17:30',
     },
     {
       code: '50',
@@ -274,7 +274,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '數位建設BIM',
       memberCountries: '中華臺北、日本、馬來西亞、沙烏地阿拉伯',
       nonMemberCountries: '德國',
-      endTime: '17:30',
+      endTime: '16:27',
     },
     {
       code: '59',
@@ -564,7 +564,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'Chinese Taipei, South Korea, Japan, Thailand, Malaysia, Indonesia, Saudi Arabia, Oman, Philippines, Uzbekistan, Bahrain',
       nonMemberCountries: 'Australia',
-      endTime: '15:00',
+      endTime: '16:19',
     },
     {
       code: '39',
@@ -586,7 +586,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Health and Social Care',
       memberCountries: 'United Arab Emirates, Chinese Taipei, Thailand, Uzbekistan, India',
       nonMemberCountries: 'Australia',
-      endTime: '16:30',
+      endTime: '17:30',
     },
     {
       code: '50',
@@ -614,7 +614,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Digital Construction',
       memberCountries: 'Chinese Taipei, Japan, Malaysia, Saudi Arabia',
       nonMemberCountries: 'Germany',
-      endTime: '17:30',
+      endTime: '16:27',
     },
     {
       code: '59',

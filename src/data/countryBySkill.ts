@@ -316,7 +316,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '漆作裝潢-青少年',
       memberCountries: '阿拉伯聯合大公國、中華臺北',
       nonMemberCountries: '',
-      endTime: '14:00',
+      endTime: '14:30',
     },
     {
       code: 'J23',
@@ -656,7 +656,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Painting and Decorating for Junior',
       memberCountries: 'United Arab Emirates, Chinese Taipei',
       nonMemberCountries: '',
-      endTime: '14:00',
+      endTime: '14:30',
     },
     {
       code: 'J23',

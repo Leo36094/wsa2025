@@ -28,7 +28,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '機電整合',
       memberCountries: '中華臺北、南韓、泰國、菲律賓、印度',
       nonMemberCountries: '澳洲',
-      endTime: '14:30 - 15:00',
+      endTime: '16:00',
     },
     {
       code: '05',
@@ -363,7 +363,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Mechatronics',
       memberCountries: 'Chinese Taipei, South Korea, Thailand, Philippines, India',
       nonMemberCountries: 'Australia',
-      endTime: '14:30 - 15:00',
+      endTime: '16:00',
     },
     {
       code: '05',

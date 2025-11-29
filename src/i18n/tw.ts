@@ -34,6 +34,7 @@ export default {
     country_by_skill_break_time: '中午休息時間',
     country_by_skill_end_time: '競賽結束時間',
     country_by_skill_view_schedule: '查看大會競賽日程',
+    country_by_skill_c3_note: 'C3 結束時間會視賽程有些微變動。',
     country_by_skill_note:
       '2025亞洲技能競賽共44個職類，選手將於競賽期間同步進行比賽。各職類實際詳細賽程由國際技能組織亞洲分會聘任之國際裁判長依試題內容及現場狀況彈性調整。故官網僅提供整體競賽之開始及結束時間供民眾參考。',
     involved_tab_01: '贊助商',

@@ -27,6 +27,11 @@
       </router-link>
     </div>
 
+    <!-- C3 Note -->
+    <div class="c3-note">
+      {{ $t('page_tabs.country_by_skill_c3_note') }}
+    </div>
+
     <div class="table-container">
       <table class="country-by-skill-table">
         <thead>
@@ -152,6 +157,17 @@ const tableData = computed(() => {
     transform: translateY(0);
     box-shadow: 0 0.02rem 0.06rem rgba(0, 0, 0, 0.15);
   }
+}
+
+.c3-note {
+  text-align: center;
+  font-size: 0.14rem;
+  color: #666;
+  padding: 0.12rem 0.16rem;
+  margin-bottom: 0.16rem;
+  background: #f8f9fa;
+  border-radius: 0.06rem;
+  line-height: 1.5;
 }
 
 .table-container {
@@ -312,6 +328,12 @@ const tableData = computed(() => {
     font-size: 0.15rem;
   }
 
+  .c3-note {
+    font-size: 0.13rem;
+    padding: 0.1rem 0.14rem;
+    margin-bottom: 0.14rem;
+  }
+
   .country-by-skill-table {
     font-size: 0.14rem;
 
@@ -363,6 +385,12 @@ const tableData = computed(() => {
   .schedule-button {
     padding: 0.1rem 0.24rem;
     font-size: 0.14rem;
+  }
+
+  .c3-note {
+    font-size: 0.12rem;
+    padding: 0.1rem 0.12rem;
+    margin-bottom: 0.12rem;
   }
 
   .table-container {

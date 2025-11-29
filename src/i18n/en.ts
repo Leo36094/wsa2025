@@ -34,6 +34,7 @@ export default {
     country_by_skill_break_time: 'Lunch Break',
     country_by_skill_end_time: 'Competition End Time',
     country_by_skill_view_schedule: 'View Schedule',
+    country_by_skill_c3_note: 'C3 finishing time will be changed depending on each skill schedule differences.',
     country_by_skill_note:
       'WorldSkills Asia Taipei 2025 Competition comprises 44 skills, with competitors undertaking their respective events concurrently throughout the competition period. The detailed schedules for each skill are subject to adjustment by the Chief Experts appointed by WorldSkills Asia, based on the requirements of the test projects and prevailing on-site conditions. Accordingly, the official website provides only the overall commencement and conclusion times of the competition for public reference.',
     involved_tab_01: 'Sponsorship',

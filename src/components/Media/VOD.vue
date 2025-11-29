@@ -111,12 +111,28 @@ const handleImageError = (event: Event) => {
 .media-vod {
   .media-vod-title {
     margin-bottom: 0.72rem;
+
+    @include tablet() {
+      margin-bottom: 0.48rem;
+    }
+
+    @include mobile() {
+      margin-bottom: 0.32rem;
+    }
   }
 
   .media-vod-container {
     max-width: 12.6rem;
     margin: 0 auto;
     padding: 0 0.2rem;
+
+    @include tablet() {
+      padding: 0 0.16rem;
+    }
+
+    @include mobile() {
+      padding: 0 0.12rem;
+    }
   }
 
   .vod-grid {
@@ -124,6 +140,21 @@ const handleImageError = (event: Event) => {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.24rem;
     width: 100%;
+
+    @include tablet() {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.16rem;
+    }
+
+    @include mobile() {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.12rem;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 0.12rem;
+    }
   }
 
   .vod-item {
@@ -137,6 +168,10 @@ const handleImageError = (event: Event) => {
     &:hover {
       transform: translateY(-0.02rem);
       box-shadow: 0 0.04rem 0.16rem rgba(0, 0, 0, 0.15);
+    }
+
+    @include mobile() {
+      border-radius: 0.06rem;
     }
   }
 
@@ -170,6 +205,26 @@ const handleImageError = (event: Event) => {
         height: 0.24rem;
         margin-left: 0.02rem;
       }
+
+      @include tablet() {
+        width: 0.4rem;
+        height: 0.4rem;
+
+        svg {
+          width: 0.2rem;
+          height: 0.2rem;
+        }
+      }
+
+      @include mobile() {
+        width: 0.36rem;
+        height: 0.36rem;
+
+        svg {
+          width: 0.18rem;
+          height: 0.18rem;
+        }
+      }
     }
 
     &:hover {
@@ -188,12 +243,25 @@ const handleImageError = (event: Event) => {
     padding: 0.16rem;
     margin: 0;
     color: $default-color;
+    font-size: 0.16rem;
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include tablet() {
+      padding: 0.12rem;
+      font-size: 0.14rem;
+    }
+
+    @include mobile() {
+      padding: 0.1rem;
+      font-size: 0.13rem;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
   }
 
   // Video Modal
@@ -257,19 +325,6 @@ const handleImageError = (event: Event) => {
 
   // Tablet responsive
   @include tablet() {
-    .media-vod-container {
-      padding: 0 0.16rem;
-    }
-
-    .vod-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.16rem;
-    }
-
-    .video-title {
-      padding: 0.12rem;
-    }
-
     .modal-content {
       width: 95%;
       max-width: 8rem;
@@ -278,19 +333,6 @@ const handleImageError = (event: Event) => {
 
   // Mobile responsive
   @include mobile() {
-    .media-vod-container {
-      padding: 0 0.12rem;
-    }
-
-    .vod-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.12rem;
-    }
-
-    .video-title {
-      padding: 0.08rem;
-    }
-
     .modal-content {
       width: 98%;
       max-width: 6rem;

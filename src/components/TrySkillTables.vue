@@ -67,21 +67,20 @@ const headers = computed(() => {
 
 // Redeem images - i18n based image selection
 const redeemImages = computed(() => {
-  const lang = locale.value === 'en' ? 'en' : 'zh'
   return [
     {
       tableNumber: 1,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_1_${lang}.jpg`,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/skill-map1.jpg`,
       alt: 'Redeem information 1',
     },
     {
       tableNumber: 4,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_2_${lang}.jpg`,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/skill-map2.jpg`,
       alt: 'Redeem information 2',
     },
     {
       tableNumber: 5,
-      src: `${import.meta.env.BASE_URL}images/host/trySkill/redeem_3_${lang}.jpg`,
+      src: `${import.meta.env.BASE_URL}images/host/trySkill/skill-map3.jpg`,
       alt: 'Redeem information 3',
     },
   ]

@@ -57,7 +57,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '行動應用開發',
       memberCountries: '中華臺北、南韓、日本、馬來西亞、印度',
       nonMemberCountries: '荷蘭',
-      endTime: '15:30',
+      endTime: '12:30',
     },
     {
       code: '09',
@@ -72,14 +72,14 @@ export const countryBySkillDataTw: CountryBySkillData = {
       memberCountries:
         '阿拉伯聯合大公國、中華臺北、南韓、泰國、馬來西亞、沙烏地阿拉伯、吉爾吉斯、阿曼、東帝汶、烏茲別克、卡達',
       nonMemberCountries: '',
-      endTime: '14:00',
+      endTime: '13:00',
     },
     {
       code: '12',
       skill: '建築舖面',
       memberCountries: '中華臺北、印度',
       nonMemberCountries: '',
-      endTime: '12:15',
+      endTime: '12:10',
     },
     {
       code: '13',
@@ -117,7 +117,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '工業控制',
       memberCountries: '阿拉伯聯合大公國、中華臺北、南韓、印尼、印度',
       nonMemberCountries: '澳洲',
-      endTime: '13:00',
+      endTime: '12:30',
     },
     {
       code: '20',
@@ -131,7 +131,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '粉刷技術與乾牆系統',
       memberCountries: '中華臺北、烏茲別克、印度',
       nonMemberCountries: '',
-      endTime: '15:00',
+      endTime: '15:30',
     },
     {
       code: '22',
@@ -166,28 +166,28 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '花藝',
       memberCountries: '中華臺北、日本、南韓、泰國',
       nonMemberCountries: '澳洲',
-      endTime: '14:20',
+      endTime: '14:30',
     },
     {
       code: '29',
       skill: '美髮',
       memberCountries: '中華臺北、南韓、泰國、馬來西亞、沙烏地阿拉伯、巴勒斯坦、印度',
       nonMemberCountries: '澳洲',
-      endTime: '15:30',
+      endTime: '16:30',
     },
     {
       code: '30',
       skill: '美容',
       memberCountries: '中華臺北、南韓、馬來西亞、烏茲別克、印度',
       nonMemberCountries: '',
-      endTime: '12:30 - 12:40',
+      endTime: '12:30',
     },
     {
       code: '31',
       skill: '服裝創作',
       memberCountries: '中華臺北、南韓、日本、馬來西亞、沙烏地阿拉伯、吉爾吉斯、汶萊、馬爾地夫',
       nonMemberCountries: '澳洲',
-      endTime: '13:40',
+      endTime: '13:00',
     },
     {
       code: '33',
@@ -209,7 +209,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '餐飲服務',
       memberCountries: '中華臺北、日本、泰國、東帝汶、印度',
       nonMemberCountries: '',
-      endTime: '18:00',
+      endTime: '15:30',
     },
     {
       code: '36',
@@ -239,14 +239,14 @@ export const countryBySkillDataTw: CountryBySkillData = {
       memberCountries:
         '阿拉伯聯合大公國、中華臺北、南韓、日本、沙烏地阿拉伯、阿曼、蒙古、菲律賓、烏茲別克、馬爾地夫、卡達',
       nonMemberCountries: '',
-      endTime: '16:00',
+      endTime: '12:40',
     },
     {
       code: '41',
       skill: '健康照顧',
       memberCountries: '阿拉伯聯合大公國、中華臺北、泰國、烏茲別克、印度',
       nonMemberCountries: '澳洲',
-      endTime: '15:00',
+      endTime: '17:30',
     },
     {
       code: '50',
@@ -260,14 +260,14 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '雲端運算',
       memberCountries: '中華臺北、南韓、日本、印度、卡達',
       nonMemberCountries: '澳洲',
-      endTime: '18:30',
+      endTime: '16:00',
     },
     {
       code: '54',
       skill: '網路安全',
       memberCountries: '中華臺北、南韓、泰國、馬來西亞、沙烏地阿拉伯、卡達',
       nonMemberCountries: '澳洲',
-      endTime: '16:00',
+      endTime: '16:10',
     },
     {
       code: '58',
@@ -295,7 +295,7 @@ export const countryBySkillDataTw: CountryBySkillData = {
       skill: '電子-青少年',
       memberCountries: '阿拉伯聯合大公國、中華臺北、沙烏地阿拉伯、卡達',
       nonMemberCountries: '',
-      endTime: '12:30',
+      endTime: '12:00',
     },
     {
       code: 'J17',
@@ -392,7 +392,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Mobile Applications Development',
       memberCountries: 'Chinese Taipei, South Korea, Japan, Malaysia, India',
       nonMemberCountries: 'Netherlands',
-      endTime: '15:30',
+      endTime: '12:30',
     },
     {
       code: '09',
@@ -408,14 +408,14 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'United Arab Emirates, Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Kyrgyzstan, Oman, East Timor, Uzbekistan, Qatar',
       nonMemberCountries: '',
-      endTime: '14:00',
+      endTime: '13:00',
     },
     {
       code: '12',
       skill: 'Wall and Floor Tiling (Exhibition Skill)',
       memberCountries: 'Chinese Taipei, India',
       nonMemberCountries: '',
-      endTime: '12:15',
+      endTime: '12:10',
     },
     {
       code: '13',
@@ -453,7 +453,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Industrial Control',
       memberCountries: 'United Arab Emirates, Chinese Taipei, South Korea, Indonesia, India',
       nonMemberCountries: 'Australia',
-      endTime: '13:00',
+      endTime: '12:30',
     },
     {
       code: '20',
@@ -467,7 +467,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Plastering and Drywall Systems',
       memberCountries: 'Chinese Taipei, Uzbekistan, India',
       nonMemberCountries: '',
-      endTime: '15:00',
+      endTime: '15:30',
     },
     {
       code: '22',
@@ -503,7 +503,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Floristry',
       memberCountries: 'Chinese Taipei, Japan, South Korea, Thailand',
       nonMemberCountries: 'Australia',
-      endTime: '14:20',
+      endTime: '14:30',
     },
     {
       code: '29',
@@ -511,14 +511,14 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Palestine, India',
       nonMemberCountries: 'Australia',
-      endTime: '15:30',
+      endTime: '16:30',
     },
     {
       code: '30',
       skill: 'Beauty Therapy',
       memberCountries: 'Chinese Taipei, South Korea, Malaysia, Uzbekistan, India',
       nonMemberCountries: '',
-      endTime: '12:30 - 12:40',
+      endTime: '12:30',
     },
     {
       code: '31',
@@ -526,7 +526,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'Chinese Taipei, South Korea, Japan, Malaysia, Saudi Arabia, Kyrgyzstan, Brunei, Maldives',
       nonMemberCountries: 'Australia',
-      endTime: '13:40',
+      endTime: '13:00',
     },
     {
       code: '33',
@@ -549,7 +549,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Restaurant Service',
       memberCountries: 'Chinese Taipei, Japan, Thailand, East Timor, India',
       nonMemberCountries: '',
-      endTime: '18:00',
+      endTime: '15:30',
     },
     {
       code: '36',
@@ -579,14 +579,14 @@ export const countryBySkillDataEn: CountryBySkillData = {
       memberCountries:
         'United Arab Emirates, Chinese Taipei, South Korea, Japan, Saudi Arabia, Oman, Mongolia, Philippines, Uzbekistan, Maldives, Qatar',
       nonMemberCountries: '',
-      endTime: '16:00',
+      endTime: '12:40',
     },
     {
       code: '41',
       skill: 'Health and Social Care',
       memberCountries: 'United Arab Emirates, Chinese Taipei, Thailand, Uzbekistan, India',
       nonMemberCountries: 'Australia',
-      endTime: '15:00',
+      endTime: '17:30',
     },
     {
       code: '50',
@@ -600,14 +600,14 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Cloud Computing',
       memberCountries: 'Chinese Taipei, South Korea, Japan, India, Qatar',
       nonMemberCountries: 'Australia',
-      endTime: '18:30',
+      endTime: '16:00',
     },
     {
       code: '54',
       skill: 'Cyber Security',
       memberCountries: 'Chinese Taipei, South Korea, Thailand, Malaysia, Saudi Arabia, Qatar',
       nonMemberCountries: 'Australia',
-      endTime: '16:00',
+      endTime: '16:10',
     },
     {
       code: '58',
@@ -635,7 +635,7 @@ export const countryBySkillDataEn: CountryBySkillData = {
       skill: 'Electronics for Junior',
       memberCountries: 'United Arab Emirates, Chinese Taipei, Saudi Arabia, Qatar',
       nonMemberCountries: '',
-      endTime: '12:30',
+      endTime: '12:00',
     },
     {
       code: 'J17',

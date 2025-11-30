@@ -90,8 +90,8 @@ const onIframeLoadClosing = () => {
     flex-direction: column;
     gap: 0.16rem;
     flex: 1;
-    min-width: 6rem;
-    max-width: 12.98rem;
+    min-width: 8rem;
+    max-width: none;
 
     .video-title {
       @include textMixin($size: 0.2rem, $weight: 600, $align: center);
@@ -103,7 +103,7 @@ const onIframeLoadClosing = () => {
 
   .yt-iframe {
     width: 100%;
-    height: 7.3rem;
+    aspect-ratio: 16 / 9;
     border-radius: 0.08rem;
     overflow: hidden;
     box-shadow: 0 0.04rem 0.2rem rgba(0, 0, 0, 0.15);
@@ -159,19 +159,25 @@ const onIframeLoadClosing = () => {
   // Tablet responsive
   @include tablet() {
     .media-live-stream-container {
-      padding: 0 0.16rem;
-      gap: 0.24rem;
+      padding: 0;
+      gap: 0.32rem;
+      flex-direction: column;
     }
 
     .video-wrapper {
+      min-width: 5rem;;
+      max-width: 100%;
+      width: 100%;
+
       .video-title {
-        @include textMixin($size: 0.16rem, $weight: 600);
+        @include textMixin($size: 0.18rem, $weight: 600);
+        padding: 0.16rem 0.08rem;
       }
     }
 
     .yt-iframe {
-      height: 3.8rem;
-      border-radius: 0.06rem;
+      aspect-ratio: 16 / 9;
+      border-radius: 0;
 
       .placeholder {
         @include textMixin($size: $supplement-font-size-m);
@@ -183,7 +189,7 @@ const onIframeLoadClosing = () => {
   // Mobile responsive
   @include mobile() {
     .media-live-stream-container {
-      padding: 0 0.12rem;
+      padding: 0;
       gap: 0.24rem;
       flex-direction: column;
     }
@@ -191,16 +197,19 @@ const onIframeLoadClosing = () => {
     .video-wrapper {
       max-width: 100%;
       width: 100%;
+      padding: 0 0.16rem;
+      min-width: auto;
 
       .video-title {
-        @include textMixin($size: 0.14rem, $weight: 600);
+        @include textMixin($size: 0.16rem, $weight: 600);
+        padding: 0.12rem 0.08rem;
       }
     }
 
     .yt-iframe {
-      border-radius: 0.04rem;
+      border-radius: 0;
       width: 100%;
-      height: 1.9rem;
+      aspect-ratio: 16 / 9;
       box-shadow: 0 0.02rem 0.12rem rgba(0, 0, 0, 0.1);
 
       .placeholder {

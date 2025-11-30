@@ -80,6 +80,11 @@ const videoList = reactive<VideoItem[]>([
     youtubeId: 'sHH5EUBtC-A',
     title: '《氣氛拉滿，誰能超前？》',
   },
+  {
+    id: '3',
+    youtubeId: '1XJNALHdAHs',
+    title: '《全力衝刺，誰與爭鋒！》',
+  },
 ])
 
 const selectedVideo = ref<VideoItem | null>(null)

@@ -7,19 +7,43 @@
     <!-- <BaseTitle class="media-live-stream-title" :title="$t('media.live_stream_title')" /> -->
 
     <div class="media-live-stream-container">
-      <div class="yt-iframe" :class="{ loading: isLoading }">
-        <iframe
-          v-if="youtubeId"
-          :src="`https://www.youtube.com/embed/${youtubeId}?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1`"
-          :title="$t('media.live_stream_title')"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          class="youtube-iframe"
-          @load="onIframeLoad"
-        ></iframe>
-        <div v-else class="placeholder">
-          <p>{{ $t('media.live_stream_placeholder') }}</p>
+      <!-- Opening Ceremony Video -->
+      <div class="video-wrapper">
+        <h3 class="video-title">{{ $t('media.live_stream_opening_ceremony') }}</h3>
+        <div class="yt-iframe" :class="{ loading: isLoadingOpening }">
+          <iframe
+            v-if="openingYoutubeId"
+            :src="`https://www.youtube.com/embed/${openingYoutubeId}?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1`"
+            :title="$t('media.live_stream_opening_ceremony')"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="youtube-iframe"
+            @load="onIframeLoadOpening"
+          ></iframe>
+          <div v-else class="placeholder">
+            <p>{{ $t('media.live_stream_placeholder') }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Ceremony Video -->
+      <div class="video-wrapper">
+        <h3 class="video-title">{{ $t('media.live_stream_closing_ceremony') }}</h3>
+        <div class="yt-iframe" :class="{ loading: isLoadingClosing }">
+          <iframe
+            v-if="closingYoutubeId"
+            :src="`https://www.youtube.com/embed/${closingYoutubeId}?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&enablejsapi=1`"
+            :title="$t('media.live_stream_closing_ceremony')"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="youtube-iframe"
+            @load="onIframeLoadClosing"
+          ></iframe>
+          <div v-else class="placeholder">
+            <p>{{ $t('media.live_stream_placeholder') }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -29,13 +53,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-// YouTube live stream ID for Opening and Closing ceremony
-const youtubeId = ref<string>('U4-gKl5NI9k')
-const isLoading = ref<boolean>(false)
+// YouTube live stream IDs for Opening and Closing ceremonies
+const openingYoutubeId = ref<string>('U4-gKl5NI9k')
+const closingYoutubeId = ref<string>('bjhGP-mZjJs')
+const isLoadingOpening = ref<boolean>(false)
+const isLoadingClosing = ref<boolean>(false)
 
-// Handle iframe load event
-const onIframeLoad = () => {
-  isLoading.value = false
+// Handle iframe load events
+const onIframeLoadOpening = () => {
+  isLoadingOpening.value = false
+}
+
+const onIframeLoadClosing = () => {
+  isLoadingClosing.value = false
 }
 </script>
 
@@ -50,12 +80,30 @@ const onIframeLoad = () => {
 
   .media-live-stream-container {
     @include flexCenter(row);
+    gap: 0.4rem;
     padding: 0 0.2rem;
+    flex-wrap: wrap;
+  }
+
+  .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.16rem;
+    flex: 1;
+    min-width: 8rem;
+    max-width: none;
+
+    .video-title {
+      @include textMixin($size: 0.2rem, $weight: 600, $align: center);
+      color: $default-color;
+      margin: 0;
+      padding: 0.12rem 0;
+    }
   }
 
   .yt-iframe {
-    width: 12.98rem;
-    height: 7.3rem;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 0.08rem;
     overflow: hidden;
     box-shadow: 0 0.04rem 0.2rem rgba(0, 0, 0, 0.15);
@@ -111,13 +159,25 @@ const onIframeLoad = () => {
   // Tablet responsive
   @include tablet() {
     .media-live-stream-container {
-      padding: 0 0.16rem;
+      padding: 0;
+      gap: 0.32rem;
+      flex-direction: column;
+    }
+
+    .video-wrapper {
+      min-width: 5rem;;
+      max-width: 100%;
+      width: 100%;
+
+      .video-title {
+        @include textMixin($size: 0.18rem, $weight: 600);
+        padding: 0.16rem 0.08rem;
+      }
     }
 
     .yt-iframe {
-      width: 6.8rem;
-      height: 3.8rem;
-      border-radius: 0.06rem;
+      aspect-ratio: 16 / 9;
+      border-radius: 0;
 
       .placeholder {
         @include textMixin($size: $supplement-font-size-m);
@@ -129,13 +189,27 @@ const onIframeLoad = () => {
   // Mobile responsive
   @include mobile() {
     .media-live-stream-container {
-      padding: 0 0.12rem;
+      padding: 0;
+      gap: 0.24rem;
+      flex-direction: column;
+    }
+
+    .video-wrapper {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 0.16rem;
+      min-width: auto;
+
+      .video-title {
+        @include textMixin($size: 0.16rem, $weight: 600);
+        padding: 0.12rem 0.08rem;
+      }
     }
 
     .yt-iframe {
-      border-radius: 0.04rem;
+      border-radius: 0;
       width: 100%;
-      height: 1.9rem;
+      aspect-ratio: 16 / 9;
       box-shadow: 0 0.02rem 0.12rem rgba(0, 0, 0, 0.1);
 
       .placeholder {

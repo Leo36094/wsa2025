@@ -575,6 +575,8 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     occupation_intro_coming_soon_subtitle: 'Skills Introduction content will be available soon',
     occupation_intro_view_button: 'View More',
     live_stream_title: 'Opening and Closing Live Stream',
+    live_stream_opening_ceremony: 'Opening Ceremony',
+    live_stream_closing_ceremony: 'Closing Ceremony',
     live_stream_coming_soon: 'Coming Soon',
     live_stream_coming_soon_subtitle: 'Live stream will be available soon',
     live_stream_placeholder: 'Live stream will start soon, stay tuned',

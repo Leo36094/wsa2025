@@ -528,6 +528,8 @@ export default {
     occupation_intro_coming_soon_subtitle: '職類介紹內容即將推出',
     occupation_intro_view_button: '前往查看',
     live_stream_title: '開閉幕直播',
+    live_stream_opening_ceremony: '開幕典禮',
+    live_stream_closing_ceremony: '閉幕典禮',
     live_stream_coming_soon: '敬請期待',
     live_stream_coming_soon_subtitle: '直播內容即將推出',
     live_stream_placeholder: '直播即將開始，敬請期待',

@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="section-try-table">
-      <TrySkillTable />
+      <TrySkillTables />
     </div>
     <div class="section-try-table">
       <SkillMissionTable />
@@ -81,7 +81,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useEasyLightbox } from 'vue-easy-lightbox'
-import TrySkillTable from './TrySkillTable.vue'
+import TrySkillTables from './TrySkillTables.vue'
 import ThemeExhibitionTable from './ThemeExhibitionTable.vue'
 import SkillMissionTable from './SkillMissionTable.vue'
 

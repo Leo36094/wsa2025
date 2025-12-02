@@ -21,6 +21,7 @@ import MediaOccupationIntro from '@/components/Media/OccupationIntro.vue'
 import MediaLiveStream from '@/components/Media/LiveStream.vue'
 import MediaVOD from '@/components/Media/VOD.vue'
 import MediaRegulation from '@/components/Media/Regulation.vue'
+import MediaBehindTheScenes from '@/components/Media/BehindTheScenes.vue'
 import { MEDIA_SECTION_ENUM, type MediaSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
 
@@ -41,6 +42,7 @@ const components: Record<MediaSectionValue, Component> = {
   [MEDIA_SECTION_ENUM.OccupationIntro]: MediaOccupationIntro,
   [MEDIA_SECTION_ENUM.LiveStream]: MediaLiveStream,
   [MEDIA_SECTION_ENUM.VOD]: MediaVOD,
+  [MEDIA_SECTION_ENUM.BehindTheScenes]: MediaBehindTheScenes,
 }
 
 const { activeTab, handleActiveTabChange } = useHashTabChange(tabs, 'media')

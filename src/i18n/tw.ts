@@ -49,6 +49,7 @@ export default {
     media_tab_03: '職類介紹',
     media_tab_04: '開閉幕直播',
     media_tab_05: '競賽影片',
+    media_tab_06: '幕後花絮',
   },
   footer: {
     address: '展館地圖',

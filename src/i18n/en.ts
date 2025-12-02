@@ -49,6 +49,7 @@ export default {
     media_tab_03: 'Skills Introduction',
     media_tab_04: 'Opening and Closing Live Stream',
     media_tab_05: 'Competition Video',
+    media_tab_06: 'Behind the Scenes',
   },
   footer: {
     address: 'Venue Map',

@@ -26,6 +26,7 @@ export const SECTION_ID = {
   VOD: 'vod',
   Regulation: 'regulation',
   Try: 'try',
+  BehindTheScenes: 'behind_the_scenes',
 } as const;
 
 export const HOST_SECTION_ENUM = {
@@ -74,6 +75,7 @@ export const MEDIA_SECTION_ENUM = {
   OccupationIntro: `#${SECTION_ID.OccupationIntro}`,
   LiveStream: `#${SECTION_ID.LiveStream}`,
   VOD: `#${SECTION_ID.VOD}`,
+  BehindTheScenes: `#${SECTION_ID.BehindTheScenes}`,
 } as const;
 
 export type MediaSection = keyof typeof MEDIA_SECTION_ENUM;

@@ -576,5 +576,13 @@ export default {
     regulation_application_form_title: '2025亞洲技能競賽媒體識別證申請表',
     regulation_application_form_link:
       ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">檔案上傳位置</a>',
+    cloud_album_text: '更多照片請見雲端相簿',
+    cloud_album_button: '前往查看',
+    cloud_album_button_aria: '前往查看雲端相簿',
+    closing_ceremony_abu_dhabi_award: '阿布達比獎',
+    closing_ceremony_speech: '致詞',
+    closing_ceremony_awards: '頒獎',
+    closing_ceremony_best_of_nation: '國家最佳獎',
+    closing_ceremony_select_category: '選擇分類',
   },
 }

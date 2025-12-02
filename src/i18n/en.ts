@@ -622,5 +622,13 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     regulation_application_form_title: 'Media Badge Application Form Upload',
     regulation_application_form_link:
       ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">File Upload Here</a>',
+    cloud_album_text: 'More photos available in cloud album',
+    cloud_album_button: 'View More',
+    cloud_album_button_aria: 'View cloud album',
+    closing_ceremony_abu_dhabi_award: 'Abu Dhabi Award',
+    closing_ceremony_speech: 'Speech',
+    closing_ceremony_awards: 'Awards',
+    closing_ceremony_best_of_nation: 'Best of Nation',
+    closing_ceremony_select_category: 'Select Category',
   },
 }

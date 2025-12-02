@@ -16,9 +16,9 @@ const __dirname = dirname(__filename);
 
 // 三個日期資料夾
 const dateFolders = [
-  '1127各職類精選照片 Skills Area Highlights Photo',
-  '1128各職類精選照片 Skills Area Highlights Photo',
-  '1129各職類精選照片 Skills Area Highlights Photo',
+  'WorkPhotos',
+  // '1128各職類精選照片 Skills Area Highlights Photo',
+  // '1129各職類精選照片 Skills Area Highlights Photo',
 ];
 
 // 基礎路徑

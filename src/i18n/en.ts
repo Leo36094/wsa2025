@@ -635,5 +635,7 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     competition_date_1127: 'November 27',
     competition_date_1128: 'November 28',
     competition_date_1129: 'November 29',
+    work_photos_title: 'Work Photos',
+    work_photos_select_skill: 'Select Skill',
   },
 }

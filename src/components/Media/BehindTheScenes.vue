@@ -19,6 +19,10 @@
         v-else-if="isCompetition"
         @back="handleBackClick"
       />
+      <WorkPhotosGrid
+        v-else-if="isWorkPhotos"
+        @back="handleBackClick"
+      />
       <SceneImageGrid
         v-else
         :title="currentSceneTitle"
@@ -36,6 +40,7 @@ import SceneCardList from './SceneCardList.vue'
 import SceneImageGrid from './SceneImageGrid.vue'
 import ClosingCeremonyGrid from './ClosingCeremonyGrid.vue'
 import CompetitionPhotosGrid from './CompetitionPhotosGrid.vue'
+import WorkPhotosGrid from './WorkPhotosGrid.vue'
 
 // Background image from Figma (temporary URL, valid for 7 days)
 const backgroundImageUrl = ref<string>(
@@ -59,6 +64,9 @@ const isClosingCeremony = computed(() => selectedScene.value === 'closing')
 
 // Check if current scene is competition
 const isCompetition = computed(() => selectedScene.value === 'competition')
+
+// Check if current scene is work photos
+const isWorkPhotos = computed(() => selectedScene.value === 'works')
 
 // Generate image URLs for a given folder (standard format: image-001 to image-005)
 const getImageUrls = (folder: string): string[] => {
@@ -94,7 +102,7 @@ const currentSceneLinkUrl = computed(() => {
 // Handle card click
 const handleCardClick = (sceneId: string) => {
   const scene = sceneItems.find((item) => item.id === sceneId)
-  if (scene && (scene.folder || sceneId === 'closing' || sceneId === 'competition')) {
+  if (scene && (scene.folder || sceneId === 'closing' || sceneId === 'competition' || sceneId === 'works')) {
     selectedScene.value = sceneId
   }
 }

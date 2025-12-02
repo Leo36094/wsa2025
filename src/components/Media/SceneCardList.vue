@@ -61,8 +61,8 @@ const i18nItems = computed(() => {
 const isCardClickable = (item: SceneItem): boolean => {
   // Cards with folders are clickable
   if (item.folder) return true
-  // Special cards (closing, competition) are clickable even without folders
-  return item.id === 'closing' || item.id === 'competition'
+  // Special cards (closing, competition, works) are clickable even without folders
+  return item.id === 'closing' || item.id === 'competition' || item.id === 'works'
 }
 </script>
 

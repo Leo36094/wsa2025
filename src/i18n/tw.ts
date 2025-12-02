@@ -584,5 +584,10 @@ export default {
     closing_ceremony_awards: '頒獎',
     closing_ceremony_best_of_nation: '國家最佳獎',
     closing_ceremony_select_category: '選擇分類',
+    competition_date_placeholder: '選擇日期',
+    competition_skill_placeholder: '選擇職類',
+    competition_date_1127: '11月27日',
+    competition_date_1128: '11月28日',
+    competition_date_1129: '11月29日',
   },
 }

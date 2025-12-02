@@ -8,10 +8,15 @@
       @card-click="handleCardClick"
     />
 
+
     <!-- Image Grid View -->
     <template v-else>
       <ClosingCeremonyGrid
         v-if="isClosingCeremony"
+        @back="handleBackClick"
+      />
+      <CompetitionPhotosGrid
+        v-else-if="isCompetition"
         @back="handleBackClick"
       />
       <SceneImageGrid
@@ -30,6 +35,7 @@ import { ref, computed } from 'vue'
 import SceneCardList from './SceneCardList.vue'
 import SceneImageGrid from './SceneImageGrid.vue'
 import ClosingCeremonyGrid from './ClosingCeremonyGrid.vue'
+import CompetitionPhotosGrid from './CompetitionPhotosGrid.vue'
 
 // Background image from Figma (temporary URL, valid for 7 days)
 const backgroundImageUrl = ref<string>(
@@ -38,11 +44,11 @@ const backgroundImageUrl = ref<string>(
 
 // Scene items with IDs and folder paths
 const sceneItems = [
-  { id: 'opening', title: '開幕典禮', folder: 'OpeningCeremonyHighlights', linkUrl: 'https://drive.google.com/drive/u/1/folders/1EIW6K5YxBG0wtyn7r676uE5rrEKnPP45' },
-  { id: 'tvet', title: '國際技能教育研討會', folder: 'TVETConference ', linkUrl: 'https://drive.google.com/drive/u/1/folders/1btUhPmvlt83OK66sqIcmWQnuUHc4xjjQ' },
-  { id: 'competition', title: '競賽照片', folder: null, linkUrl: 'https://www.google.com' },
-  { id: 'works', title: '各職類作品', folder: null, linkUrl: 'https://www.google.com' },
-  { id: 'closing', title: '閉幕典禮', folder: 'closing', linkUrl: 'https://www.google.com' },
+  { id: 'opening', title: '開幕典禮', titleEn: 'Opening Ceremony', folder: 'OpeningCeremonyHighlights', linkUrl: 'https://drive.google.com/drive/u/1/folders/1EIW6K5YxBG0wtyn7r676uE5rrEKnPP45' },
+  { id: 'tvet', title: '國際技能教育研討會', titleEn: 'TVET Conference Highlights', folder: 'TVETConference ', linkUrl: 'https://drive.google.com/drive/u/1/folders/1btUhPmvlt83OK66sqIcmWQnuUHc4xjjQ' },
+  { id: 'competition', title: '競賽照片', titleEn: 'Skills Area Highlights', folder: null, linkUrl: '#' },
+  { id: 'works', title: '各職類作品', titleEn: 'Work Photos', folder: null, linkUrl: '#' },
+  { id: 'closing', title: '閉幕典禮', titleEn: 'Closing Ceremony', folder: 'closing', linkUrl: '#' },
 ]
 
 // State management: track selected scene
@@ -50,6 +56,9 @@ const selectedScene = ref<string | null>(null)
 
 // Check if current scene is closing ceremony
 const isClosingCeremony = computed(() => selectedScene.value === 'closing')
+
+// Check if current scene is competition
+const isCompetition = computed(() => selectedScene.value === 'competition')
 
 // Generate image URLs for a given folder (standard format: image-001 to image-005)
 const getImageUrls = (folder: string): string[] => {
@@ -85,7 +94,7 @@ const currentSceneLinkUrl = computed(() => {
 // Handle card click
 const handleCardClick = (sceneId: string) => {
   const scene = sceneItems.find((item) => item.id === sceneId)
-  if (scene && (scene.folder || sceneId === 'closing')) {
+  if (scene && (scene.folder || sceneId === 'closing' || sceneId === 'competition')) {
     selectedScene.value = sceneId
   }
 }

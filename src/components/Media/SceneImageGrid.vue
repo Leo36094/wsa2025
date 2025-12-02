@@ -145,11 +145,15 @@ const showLightbox = (index: number) => {
       position: relative;
       width: 100%;
       width: 2.36rem;
+      height: 1.42rem; // Fixed height to maintain 16:9 aspect ratio (2.36 / 16 * 9 ≈ 1.33)
       overflow: hidden;
       border-radius: 0.04rem;
       background-color: #899ca4;
       cursor: pointer;
       transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         transform: scale(1.02);
@@ -158,7 +162,7 @@ const showLightbox = (index: number) => {
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transition: transform 0.3s ease;
       }
 

@@ -630,5 +630,10 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     closing_ceremony_awards: 'Awards',
     closing_ceremony_best_of_nation: 'Best of Nation',
     closing_ceremony_select_category: 'Select Category',
+    competition_date_placeholder: 'Select Date',
+    competition_skill_placeholder: 'Select Skill',
+    competition_date_1127: 'November 27',
+    competition_date_1128: 'November 28',
+    competition_date_1129: 'November 29',
   },
 }

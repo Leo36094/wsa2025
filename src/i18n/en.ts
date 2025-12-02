@@ -236,7 +236,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     location_hall2_floor4: 'Information and Communication Technology 4 skills',
     members_title: 'WSA Member Countries',
     members_desc:
-      'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 29 countries.',
+      'The WorldSkills Asia (WSA) is composed of national skills promotion organizations from across Asia, with a current membership of 30 countries.',
     competitors_title:
       '3rd WorldSkills Asia Competition <span class="title_tag">Participating Countries</span>',
     competitors_desc:

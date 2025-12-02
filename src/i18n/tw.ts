@@ -228,10 +228,10 @@ export default {
     location_hall2_floor2_list2: '藝術與時尚',
     location_hall2_floor3: '職類項目及主題展示區',
     location_hall2_floor3_list1: '製造工程技術',
-    members_title: '國際技能組織亞洲分會(WorldSkills Asia, WSA)會員國',
-    members_desc: 'WSA 由亞洲地區的技能推廣機構組成,目前成員國包括 29 個國家。',
+    members_title: '亞洲技能組織(WorldSkills Asia, WSA)會員國',
+    members_desc: 'WSA 由亞洲地區的技能推廣機構組成,目前成員國包括 30 個國家。',
     competitors_title: '第三屆亞洲技能競賽<span class="title_tag">參與國</span>',
-    competitors_desc: '本屆亞洲技能競賽已報名國家共計 29 國,其中包括 18 個會員國、11 個非會員國。',
+    competitors_desc: '本屆亞洲技能競賽已報名國家共計 30 國,其中包括 19 個會員國、11 個非會員國。',
   },
   skills: {
     category_image: '技能圖片 {index}',

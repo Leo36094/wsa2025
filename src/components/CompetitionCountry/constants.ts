@@ -44,10 +44,11 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'ID', name: '印尼', nameEn: 'Indonesia', flag: 'ID_flag', link: 'https://www.instagram.com/puspresnas/' },
   { code: 'JP', name: '日本', nameEn: 'Japan', flag: 'JP_flag', link: 'https://worldskills.jp/en/' },
   { code: 'KR', name: '韓國', nameEn: 'Korea', flag: 'KR_flag', link: 'https://meister.hrdkorea.or.kr/eng/main.do' },
-  { code: 'BH', name: '巴林', nameEn: 'Kingdom of Bahrain', flag: 'BH_flag', link: 'https://www.facebook.com/skillsbahrain' },
+  // { code: 'BH', name: '巴林', nameEn: 'Kingdom of Bahrain', flag: 'BH_flag', link: 'https://www.facebook.com/skillsbahrain' },
   { code: 'KG', name: '吉爾吉斯', nameEn: 'Kyrgyzstan', flag: 'KG_flag', link: 'https://www.instagram.com/worldskillskyrgyzstan', ratio: '5 / 3' },
   { code: 'LI', name: '列支敦斯登', nameEn: 'Principality of Liechtenstein', flag: 'LI_flag', link: 'https://www.worldskills.li/', ratio: '5 / 3' },
   { code: 'MY', name: '馬來西亞', nameEn: 'Malaysia', flag: 'MY_flag', link: 'https://www.skillsmalaysia.gov.my/ms/', ratio: '2 / 1' },
+  { code: 'MV', name: '馬爾地夫', nameEn: 'Maldives', flag: 'MV_flag', link: 'http://instagram.com/p/DRmVTUlDQ6C/', ratio: '3 / 2' },
   { code: 'MN', name: '蒙古', nameEn: 'Mongolia', flag: 'MN_flag', link: 'https://www.facebook.com/VETPartnership/about', ratio: '2 / 1' },
   { code: 'NL', name: '荷蘭', nameEn: 'Netherlands', flag: 'NL_flag', link: 'https://worldskillsnetherlands.nl/teamnl/' },
   { code: 'OM', name: '阿曼', nameEn: 'Oman', flag: 'OM_flag', link: 'https://www.instagram.com/oman_skills/?hl=en', ratio: '2 / 1' },
@@ -63,4 +64,5 @@ export const PARTICIPATING_COUNTRIES = [
   { code: 'AE', name: '阿拉伯聯合大公國', nameEn: 'United Arab Emirates', flag: 'AE_flag', link: 'https://www.emiratesskills.ae/en/Pages/default.aspx', ratio: '2 / 1' },
   { code: 'UK', name: '英國', nameEn: 'United Kingdom', flag: 'UK_flag', link: 'https://www.worldskillsuk.org/', ratio: '2 / 1' },
   { code: 'UZ', name: '烏茲別克', nameEn: 'Uzbekistan', flag: 'UZ_flag', link: 'https://worldskills.uz/en', ratio: '2 / 1' },
+  { code: 'VN', name: '越南', nameEn: 'Vietnam', flag: 'VN_flag', link: 'https://english.molisa.gov.vn/topic/242157', ratio: '3 / 2' },
 ]

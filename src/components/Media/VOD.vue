@@ -72,18 +72,38 @@ interface VideoItem {
 const videoList = reactive<VideoItem[]>([
   {
     id: '1',
-    youtubeId: '9Rh1NuRMGhI',
-    title: '《拚了！一秒都不能浪費》',
+    youtubeId: 'IVFVLmCyQxc',
+    title: '1125《打造專業場域，倒數準備中》C-2賽前準備活動',
   },
   {
     id: '2',
-    youtubeId: 'sHH5EUBtC-A',
-    title: '《氣氛拉滿，誰能超前？》',
+    youtubeId: 'RXs4eqOeenk',
+    title: '1126《榮耀啟程，為夢想出發！》C-1開幕日',
   },
   {
     id: '3',
-    youtubeId: '1XJNALHdAHs',
-    title: '《全力衝刺，誰與爭鋒！》',
+    youtubeId: 'hkj66g2cxBY',
+    title: '1127《拚了！一秒都不能浪費》C1競賽首日',
+  },
+  {
+    id: '4',
+    youtubeId: 'dJ9soupOMwo',
+    title: '1128《氣氛拉滿，誰能超前？》C2競賽日二',
+  },
+  {
+    id: '5',
+    youtubeId: 'e5VIwVoeihQ',
+    title: '1129《全力衝刺，誰與爭鋒！》C3競賽日三',
+  },
+  {
+    id: '6',
+    youtubeId: '7RE7PBf7pOg',
+    title: '1129《燃亮此刻｜Ignite the Moment》活動精華-閉幕影片',
+  },
+  {
+    id: '7',
+    youtubeId: '5U-5ZPm4BLs',
+    title: '1130《眼淚、掌聲與榮耀》C+1閉幕日',
   },
 ])
 

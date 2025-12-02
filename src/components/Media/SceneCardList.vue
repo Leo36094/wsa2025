@@ -11,14 +11,14 @@
       :aria-label="item.title"
       @click="isCardClickable(item) ? $emit('card-click', item.id) : undefined"
     >
-      <div class="scene-card-border"></div>
-      <div class="scene-card-background">
+      <div class="scene-card-background-wrapper">
         <img
           v-if="backgroundImageUrl"
           :src="backgroundImageUrl"
           alt=""
-          class="scene-card-ellipse"
+          class="scene-card-background-img"
         />
+        <div class="scene-card-overlay"></div>
       </div>
       <p class="scene-card-title">{{ item.title }}</p>
     </div>
@@ -70,13 +70,14 @@ const isCardClickable = (item: SceneItem): boolean => {
 .scene-card-list-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.24rem;
+  gap: 0.2rem;
   width: 100%;
-  max-width: 12.8rem;
   margin: 0 auto;
 
   @include tablet() {
     padding: 0 0.16rem;
+    justify-content: space-between;
+    gap: 0.3rem;
   }
 
   @include mobile() {
@@ -86,25 +87,17 @@ const isCardClickable = (item: SceneItem): boolean => {
 
 .scene-card {
   position: relative;
-  background-color: #18475b;
   border-radius: 0.06rem;
-  padding: 0.4rem;
+  padding: 0.32rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 0.97rem;
   overflow: hidden;
   box-sizing: border-box;
   transition: opacity 0.2s ease;
-  flex: 1 1 calc(50% - 0.12rem);
-  min-width: calc(50% - 0.12rem);
+  width: 4rem;
+  height: 2.46rem;
 
-  // Last card (5th card) - centered
-  &.scene-card-last {
-    flex: 0 0 6.28rem;
-    min-width: 6.28rem;
-    margin: 0 auto;
-  }
 
   &.scene-card-clickable {
     cursor: pointer;
@@ -114,33 +107,26 @@ const isCardClickable = (item: SceneItem): boolean => {
     }
   }
 
-  .scene-card-border {
+  .scene-card-background-wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 0.1rem);
-    height: calc(100% - 0.1rem);
-    border: 1px solid #ffffff;
-    border-radius: 0.04rem;
-    opacity: 0.6;
-    pointer-events: none;
-  }
-
-  .scene-card-background {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 2.53rem;
-    height: 2.53rem;
+    inset: 0;
+    border-radius: 0.06rem;
+    overflow: hidden;
     pointer-events: none;
 
-    .scene-card-ellipse {
+    .scene-card-background-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      transform: scale(1.59);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .scene-card-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(24, 71, 91, 0.85);
     }
   }
 
@@ -162,47 +148,25 @@ const isCardClickable = (item: SceneItem): boolean => {
 
   // Tablet responsive
   @include tablet() {
-    flex: 1 1 100%;
-    min-width: 100%;
+    width: 3rem;
+    height: 1.92rem;
     padding: 0.32rem;
-    min-height: 0.8rem;
 
-    &.scene-card-last {
-      flex: 1 1 100%;
-      min-width: 100%;
-      margin: 0;
-    }
 
     .scene-card-title {
       font-size: 0.24rem;
-    }
-
-    .scene-card-background {
-      width: 2rem;
-      height: 2rem;
     }
   }
 
   // Mobile responsive
   @include mobile() {
-    flex: 1 1 100%;
-    min-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 554 / 332; // Use aspect-ratio for responsive to maintain proportion
     padding: 0.24rem;
-    min-height: 0.7rem;
-
-    &.scene-card-last {
-      flex: 1 1 100%;
-      min-width: 100%;
-      margin: 0;
-    }
 
     .scene-card-title {
       font-size: 0.2rem;
-    }
-
-    .scene-card-background {
-      width: 1.5rem;
-      height: 1.5rem;
     }
   }
 }

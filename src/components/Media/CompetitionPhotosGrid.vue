@@ -33,7 +33,7 @@ import { useI18n } from 'vue-i18n'
 import SceneImageGrid from './SceneImageGrid.vue'
 import FilterDropdown from '../FilterDropdown.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 defineEmits<{
   back: []
@@ -118,10 +118,14 @@ const skillCategories = [
 ]
 
 // Skill options with proper folder names
+// Display based on current language - Chinese for 'tw', English for 'en'
 const skillOptions = computed(() => {
+  const isEnglish = locale.value === 'en'
   return skillCategories.map((skill) => ({
     id: skill.id,
-    label: `${skill.id}-${skill.name} ${skill.en}`,
+    label: isEnglish
+      ? `${skill.id}-${skill.en}`
+      : `${skill.id}-${skill.name}`,
   }))
 })
 
@@ -180,29 +184,42 @@ const handleSkillChange = (skillId: string) => {
 <style lang="scss" scoped>
 .dropdown-container {
   display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
+  gap: 0.24rem;
   flex-shrink: 0;
-  width: 4.5rem; // Fixed width to prevent jumping
 }
 
 .date-dropdown,
 .skill-dropdown {
-  width: 100%;
+  min-width: 2.77rem; // Fixed width 277px as per design
 }
 
 // Tablet responsive
 @include tablet() {
   .dropdown-container {
-    width: 3.5rem;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.24rem;
+  }
+
+  .date-dropdown,
+  .skill-dropdown {
+    flex: 1; // Equal width on tablet
+    width: auto;
   }
 }
 
 // Mobile responsive
 @include mobile() {
   .dropdown-container {
+    flex-direction: column;
     width: 100%;
     margin-top: 0.12rem;
+    gap: 0.12rem;
+  }
+
+  .date-dropdown,
+  .skill-dropdown {
+    width: 100%;
   }
 }
 </style>

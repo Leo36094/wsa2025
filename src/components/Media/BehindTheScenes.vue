@@ -42,9 +42,9 @@ import ClosingCeremonyGrid from './ClosingCeremonyGrid.vue'
 import CompetitionPhotosGrid from './CompetitionPhotosGrid.vue'
 import WorkPhotosGrid from './WorkPhotosGrid.vue'
 
-// Background image from Figma (temporary URL, valid for 7 days)
+// Background image for scene cards
 const backgroundImageUrl = ref<string>(
-  'https://www.figma.com/api/mcp/asset/495a75ca-f477-430c-805d-6808450add7a'
+  `${import.meta.env.BASE_URL}images/media/media-tab-bg.png`
 )
 
 // Scene items with IDs and folder paths

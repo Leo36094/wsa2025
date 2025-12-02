@@ -124,11 +124,10 @@ const showLightbox = (index: number) => {
     .grid-title {
       font-family: 'Inter', 'Noto Sans JP', sans-serif;
       font-weight: 700;
-      font-size: 0.36rem;
+      font-size: 0.48rem;
       line-height: normal;
       color: #101e24;
       margin: 0;
-      flex: 1;
       min-width: 0;
     }
   }
@@ -175,7 +174,7 @@ const showLightbox = (index: number) => {
   // Tablet responsive
   @include tablet() {
     .grid-header {
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.17rem;
 
       .back-button {
         width: 0.4rem;
@@ -183,13 +182,18 @@ const showLightbox = (index: number) => {
       }
 
       .grid-title {
-        font-size: 0.28rem;
+        font-size: 0.36rem;
       }
     }
 
     .image-grid {
-      justify-content: center;
+      justify-content: flex-start;
       gap: 0.16rem;
+
+      .image-grid-item {
+        // Calculate width for 3 columns layout with gap
+        width: calc((100% - 2 * 0.16rem) / 3);
+      }
     }
   }
 
@@ -210,7 +214,11 @@ const showLightbox = (index: number) => {
 
     .image-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 0.16rem;
+      gap: 0.08rem;
+      .image-grid-item {
+        width: 1.4rem;
+        height: 0.83rem;
+      }
     }
   }
 }

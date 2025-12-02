@@ -21,7 +21,7 @@ import { useI18n } from 'vue-i18n'
 import SceneImageGrid from './SceneImageGrid.vue'
 import FilterDropdown from '../FilterDropdown.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 defineEmits<{
   back: []
@@ -70,10 +70,14 @@ const skillCategories = [
 ]
 
 // Skill options for dropdown
+// Display based on current language - Chinese for 'tw', English for 'en'
 const skillOptions = computed(() => {
+  const isEnglish = locale.value === 'en'
   return skillCategories.map((skill) => ({
     id: skill.id,
-    label: `${skill.id}-${skill.name} ${skill.en}`,
+    label: isEnglish
+      ? `${skill.id}-${skill.en}`
+      : `${skill.id}-${skill.name}`,
   }))
 })
 
@@ -92,7 +96,7 @@ const getImageUrls = (): string[] => {
   if (!skill) return []
 
   const folderName = `${skill.id}-${skill.name} ${skill.en}`
-  
+
   return Array.from({ length: 5 }, (_, i) => {
     const imageNumber = (i + 1).toString().padStart(3, '0')
     return `${import.meta.env.BASE_URL}images/media/scene/WorkPhotos/${folderName}/image-${imageNumber}.jpeg`
@@ -113,13 +117,13 @@ const handleSkillChange = (skillId: string) => {
 <style lang="scss" scoped>
 .skill-dropdown {
   flex-shrink: 0;
-  width: 4.5rem; // Fixed width to prevent jumping
+  min-width: 2.77rem; // Fixed width 277px as per design
 }
 
 // Tablet responsive
 @include tablet() {
   .skill-dropdown {
-    width: 3.5rem;
+    width: 100%;
   }
 }
 

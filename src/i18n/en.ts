@@ -49,6 +49,7 @@ export default {
     media_tab_03: 'Skills Introduction',
     media_tab_04: 'Opening and Closing Live Stream',
     media_tab_05: 'Competition Video',
+    media_tab_06: 'Behind the Scenes',
   },
   footer: {
     address: 'Venue Map',
@@ -621,5 +622,20 @@ Participants will also have the chance to receive exclusive 2025 Worldskills Asi
     regulation_application_form_title: 'Media Badge Application Form Upload',
     regulation_application_form_link:
       ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">File Upload Here</a>',
+    cloud_album_text: 'More photos available in cloud album',
+    cloud_album_button: 'View More',
+    cloud_album_button_aria: 'View cloud album',
+    closing_ceremony_abu_dhabi_award: 'Abu Dhabi Award',
+    closing_ceremony_speech: 'Speech',
+    closing_ceremony_awards: 'Awards',
+    closing_ceremony_best_of_nation: 'Best of Nation',
+    closing_ceremony_select_category: 'Select Category',
+    competition_date_placeholder: 'Select Date',
+    competition_skill_placeholder: 'Select Skill',
+    competition_date_1127: 'November 27',
+    competition_date_1128: 'November 28',
+    competition_date_1129: 'November 29',
+    work_photos_title: 'Work Photos',
+    work_photos_select_skill: 'Select Skill',
   },
 }

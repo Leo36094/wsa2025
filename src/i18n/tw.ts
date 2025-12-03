@@ -49,6 +49,7 @@ export default {
     media_tab_03: '職類介紹',
     media_tab_04: '開閉幕直播',
     media_tab_05: '競賽影片',
+    media_tab_06: '幕後花絮',
   },
   footer: {
     address: '展館地圖',
@@ -575,5 +576,20 @@ export default {
     regulation_application_form_title: '2025亞洲技能競賽媒體識別證申請表',
     regulation_application_form_link:
       ' <a href="https://forms.gle/xjajg1FDziwKmkVx9" target="_blank" rel="noopener noreferrer">檔案上傳位置</a>',
+    cloud_album_text: '更多照片請見雲端相簿',
+    cloud_album_button: '前往查看',
+    cloud_album_button_aria: '前往查看雲端相簿',
+    closing_ceremony_abu_dhabi_award: '阿布達比獎',
+    closing_ceremony_speech: '致詞',
+    closing_ceremony_awards: '頒獎',
+    closing_ceremony_best_of_nation: '國家最佳獎',
+    closing_ceremony_select_category: '選擇分類',
+    competition_date_placeholder: '選擇日期',
+    competition_skill_placeholder: '選擇職類',
+    competition_date_1127: '11月27日',
+    competition_date_1128: '11月28日',
+    competition_date_1129: '11月29日',
+    work_photos_title: '各職類作品',
+    work_photos_select_skill: '選擇職類',
   },
 }

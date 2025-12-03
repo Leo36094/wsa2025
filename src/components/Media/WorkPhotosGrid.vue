@@ -88,7 +88,7 @@ const currentSkillLabel = computed(() => {
 })
 
 // Link URL (can be customized per skill if needed)
-const linkUrl = computed(() => '#')
+const linkUrl = computed(() => 'https://drive.google.com/drive/u/1/folders/1JlbcqIriqtn1ZvxlS0KWsqUxXSfeZok5')
 
 // Generate image URLs based on selected skill
 const getImageUrls = (): string[] => {

@@ -24,6 +24,7 @@ import CompetitionCountryBySkill from '@/components/CompetitionCountryBySkill.vu
 
 import { COMPETITION_SECTION_ENUM, type CompetitionSectionValue } from '@/types/page_section'
 import useHashTabChange from '@/composables/useHashTabChange'
+import CompetitionResults from '@/components/CompetitionResults.vue'
 
 const { t } = useI18n()
 
@@ -43,6 +44,7 @@ const components: Record<CompetitionSectionValue, Component> = {
   [COMPETITION_SECTION_ENUM.Member]: CompetitionMembers,
   [COMPETITION_SECTION_ENUM.Competitor]: CompetitionCompetitors,
   [COMPETITION_SECTION_ENUM.CountryBySkill]: CompetitionCountryBySkill,
+  [COMPETITION_SECTION_ENUM.CompetitionResult]: CompetitionResults,
 }
 
 const phase2Content = computed(() => {

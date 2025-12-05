@@ -29,6 +29,7 @@ export default {
     competition_tab_03: '會員國',
     competition_tab_04: '參與國',
     competition_tab_05: '各職類參賽國家',
+    competition_tab_06: '競賽結果',
     country_by_skill_date: '競賽日期',
     country_by_skill_start_time: '競賽開始時間',
     country_by_skill_break_time: '中午休息時間',
@@ -233,6 +234,11 @@ export default {
     members_desc: 'WSA 由亞洲地區的技能推廣機構組成,目前成員國包括 30 個國家。',
     competitors_title: '第三屆亞洲技能競賽<span class="title_tag">參與國</span>',
     competitors_desc: '本屆亞洲技能競賽已報名國家共計 30 國,其中包括 19 個會員國、11 個非會員國。',
+    results_title: "競賽結果",
+    results_item1: "Official Skills",
+    results_item2: "Junior Skills",
+    results_desc1: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Official_Skills_CH.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results',
+    results_desc2: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Junior_Skills_CH.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results'
   },
   skills: {
     category_image: '技能圖片 {index}',

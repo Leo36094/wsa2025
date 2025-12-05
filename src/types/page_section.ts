@@ -27,6 +27,7 @@ export const SECTION_ID = {
   Regulation: 'regulation',
   Try: 'try',
   BehindTheScenes: 'behind_the_scenes',
+  CompetitionResult: 'competition_result'
 } as const;
 
 export const HOST_SECTION_ENUM = {
@@ -51,6 +52,7 @@ export const COMPETITION_SECTION_ENUM = {
   Member: `#${SECTION_ID.Member}`,
   Competitor: `#${SECTION_ID.Competitor}`,
   CountryBySkill: `#${SECTION_ID.CountryBySkill}`,
+  CompetitionResult: `#${SECTION_ID.CompetitionResult}`
 } as const;
 
 export type CompetitionSection = keyof typeof COMPETITION_SECTION_ENUM;

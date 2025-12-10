@@ -1,6 +1,12 @@
 const titles = {
   zh: [
     {
+      title: '2025亞洲技能競賽【技能出任務】得獎名單',
+      image: ``,
+      date: '2025年12月10日',
+      id: 4,
+    },
+    {
       title: '2025亞洲技能競賽團體導覽熱烈開放報名！',
       image: `${import.meta.env.BASE_URL}images/news/news_03_zh.png`,
       date: '2025年7月2日',
@@ -20,6 +26,12 @@ const titles = {
     },
   ],
   en: [
+    {
+      title: '2025 Asian Skills Competition – "Skill Mission" Prize Winners Announcement',
+      image: ``,
+      date: '10 Dec 2025',
+      id: 4,
+    },
     {
       title: 'Guided Group Tours Registration Now Open!',
       image: `${import.meta.env.BASE_URL}images/news/news_03_en.png`,

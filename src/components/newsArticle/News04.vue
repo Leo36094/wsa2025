@@ -60,7 +60,7 @@
 
       <h3>VA279HG Eye Care Gaming Monitor 護眼電競螢幕</h3>
       <p>林O嫻 0978***809</p>
-      <p>黃O慧 0933***250</p>
+      <p>黃O瑟 0933***250</p>
 
       <h3>Gaming Set 電競套組</h3>
       <p>林O川 0926***560</p>

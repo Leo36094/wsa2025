@@ -2,7 +2,7 @@ const titles = {
   zh: [
     {
       title: '2025亞洲技能競賽【技能出任務】得獎名單',
-      image: ``,
+      image: `${import.meta.env.BASE_URL}images/news/news_04_zh.jpg`,
       date: '2025年12月10日',
       id: 4,
     },
@@ -28,7 +28,7 @@ const titles = {
   en: [
     {
       title: '2025 Asian Skills Competition – "Skill Mission" Prize Winners Announcement',
-      image: ``,
+      image: `${import.meta.env.BASE_URL}images/news/news_04_en.jpg`,
       date: '10 Dec 2025',
       id: 4,
     },

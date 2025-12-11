@@ -99,7 +99,7 @@ const getImageUrls = (): string[] => {
 
   return Array.from({ length: 5 }, (_, i) => {
     const imageNumber = (i + 1).toString().padStart(3, '0')
-    return `${import.meta.env.BASE_URL}images/media/scene/WorkPhotos/${folderName}/image-${imageNumber}.jpeg`
+    return `${import.meta.env.BASE_URL}images/media/scene/WorkPhotos/${folderName}/image-${imageNumber}.jpeg?20251211`
   })
 }
 

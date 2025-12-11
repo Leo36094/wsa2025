@@ -25,7 +25,7 @@
       />
       <SceneImageGrid
         v-else
-        :title="currentSceneTitle"
+        :title="currentSceneTitle || ''"
         :images="currentSceneImages"
         :link-url="currentSceneLinkUrl"
         @back="handleBackClick"
@@ -41,6 +41,9 @@ import SceneImageGrid from './SceneImageGrid.vue'
 import ClosingCeremonyGrid from './ClosingCeremonyGrid.vue'
 import CompetitionPhotosGrid from './CompetitionPhotosGrid.vue'
 import WorkPhotosGrid from './WorkPhotosGrid.vue'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
 
 // Background image for scene cards
 const backgroundImageUrl = ref<string>(
@@ -89,7 +92,7 @@ const currentSceneImages = computed(() => {
 const currentSceneTitle = computed(() => {
   if (!selectedScene.value) return ''
   const scene = sceneItems.find((item) => item.id === selectedScene.value)
-  return scene?.title || ''
+  return locale.value === 'en' ? scene?.titleEn : scene?.title
 })
 
 // Get current scene's link URL

@@ -40,7 +40,7 @@ defineEmits<{
 }>()
 
 // Competition photos title
-const title = computed(() => '競賽照片')
+const title = computed(() => t('media.competition_photos_title'))
 
 // State management
 const selectedDate = ref<string>('1127')

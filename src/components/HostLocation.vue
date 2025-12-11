@@ -187,7 +187,6 @@ $section-bg-color: #fff;
         width: 6rem;
         height: 3.56rem;
         @include bgCenter;
-        background-image: url('https://fakeimg.pl/600x356/');
         &--hall1 {
           background-image: url('/images/wsa/host_section01_02.jpg');
         }

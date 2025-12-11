@@ -597,5 +597,6 @@ export default {
     competition_date_1129: '11月29日',
     work_photos_title: '各職類作品',
     work_photos_select_skill: '選擇職類',
+    competition_photos_title: '競賽照片',
   },
 }

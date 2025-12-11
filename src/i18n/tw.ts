@@ -235,10 +235,7 @@ export default {
     competitors_title: '第三屆亞洲技能競賽<span class="title_tag">參與國</span>',
     competitors_desc: '本屆亞洲技能競賽已報名國家共計 30 國,其中包括 19 個會員國、11 個非會員國。',
     results_title: "競賽結果",
-    results_item1: "Official Skills",
-    results_item2: "Junior Skills",
-    results_desc1: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Official_Skills_CH.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results',
-    results_desc2: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Junior_Skills_CH.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results'
+    results_desc: 'Click <a tabindex="0" href="https://www.worldskillsasia.net/en/AboutUs/Documents/WSAsia%20Taipei%202025%20-%20COMPETITION%20RESULTS.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results',
   },
   skills: {
     category_image: '技能圖片 {index}',

@@ -14,27 +14,7 @@
             <div class="item__divider" />
 
             <div class="item__download-area">
-              <div class="item__category">
-                {{ $t('competition.results_item1') }}
-              </div>
-
-              <div v-html="$t('competition.results_desc1')" />
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__image">
-              <img src="/images/wsa_logo.svg" :alt="$t('header.wsa_logo')" />
-            </div>
-
-            <div class="item__divider" />
-
-            <div class="item__download-area">
-              <div class="item__category">
-                {{ $t('competition.results_item2') }}
-              </div>
-
-              <div v-html="$t('competition.results_desc2')" />
+              <div v-html="$t('competition.results_desc')" />
             </div>
           </div>
         </div>
@@ -43,13 +23,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style scoped lang="scss">
 .competition-results {
   .results-container {
     @include withContainer;
-    padding-bottom: 1.6rem;
+    padding-bottom: 2.5rem;
   }
   .results {
     width: 100%;
@@ -63,12 +44,14 @@
     .item-container {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      align-items: center;
       gap: 0.32rem;
     }
     .item {
-      flex: 1;
       display: flex;
       flex-direction: column;
+      max-width: 5.63rem;
       background-color: white;
       box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
       border-radius: 0.1rem;
@@ -101,15 +84,6 @@
           color: rgba(0, 145, 229, 1);
         }
       }
-      &__category {
-        padding: 0.08rem 0.16rem;
-        font-weight: 700;
-        width: fit-content;
-        font-size: 0.36rem;
-        color: rgba(16, 30, 36, 1);
-        background-color: rgba(200, 225, 75, 1);
-        border-radius: 0.1rem;
-      }
     }
   }
 }
@@ -132,10 +106,6 @@
 
         &__download-area {
           font-size: 0.18rem;
-        }
-
-        &__category {
-          font-size: 0.28rem;
         }
       }
     }
@@ -166,10 +136,6 @@
 
         &__download-area {
           font-size: 0.18rem;
-        }
-
-        &__category {
-          font-size: 0.24rem;
         }
       }
     }

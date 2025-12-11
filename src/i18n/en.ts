@@ -244,10 +244,7 @@ Skills competitions are one of the agency’s key initiatives, aimed at establis
     competitors_desc:
       'The 3rd WorldSkills Asia Competition has registered a total of 29 participating countries, including 18 member countries and 11 non-member countries.',
     results_title: "Competitions Results",
-    results_item1: "Official Skills",
-    results_item2: "Junior Skills",
-    results_desc1: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Official_Skills.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results',
-    results_desc2: 'Click <a tabindex="0" href="/files/WSAsia_Taipei_2025_Junior_Skills.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results'
+    results_desc: 'Click <a tabindex="0" href="https://www.worldskillsasia.net/en/AboutUs/Documents/WSAsia%20Taipei%202025%20-%20COMPETITION%20RESULTS.pdf" target="_blank">here</a> to download WorldSkills Asia Taipei 2025 Competition Results',
   },
   skills: {
     category_image: 'Skill Image {index}',

@@ -17,7 +17,7 @@
               :src="`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`"
               :alt="video.title"
               class="thumbnail-image"
-              @error="handleImageError"
+              @error="(event) => handleImageError(event, video.youtubeId)"
             />
             <div class="play-button">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -122,10 +122,10 @@ const closeVideoModal = () => {
 }
 
 // Handle image error - fallback to default thumbnail
-const handleImageError = (event: Event) => {
+const handleImageError = (event: Event, youtubeId: string) => {
   const img = event.target as HTMLImageElement
-  const videoId = img.alt.match(/vi\/([^\/]+)\//)?.[1] || img.alt
-  img.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+
+  img.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
 }
 </script>
 
